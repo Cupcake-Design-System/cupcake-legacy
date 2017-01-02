@@ -1,0 +1,219 @@
+@import "mixins";
+
+// Base typography styles (tags only)
+html {
+  font-size: $global-font-size;
+}
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+.ipreo-body-text,
+.ipreo-p {
+  font-size: $body-font-size;
+  color: $body-font-color;
+  line-height: $body-lineheight;
+  margin-bottom: $body-margin-bottom;
+  text-rendering: $body-text-rendering;
+
+  &-lg {
+    font-size: $body-font-size-lg;
+  }
+}
+
+// Emphasized text
+.ipreo-text-em,
+.ipreo-text-italic {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+.ipreo-text-strong,
+.ipreo-text-bold {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+.ipreo-a,
+.ipreo-link {
+  color: $anchor-color;
+  text-decoration: $anchor-text-decoration;
+  line-height: inherit;
+  cursor: pointer;
+
+  &-active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $anchor-color-hover;
+
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// Horizontal rule
+.ipreo-hr {
+  max-width: $hr-width;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: $hr-border;
+  border-left: 0;
+  margin: $hr-margin;
+  clear: both;
+}
+
+
+ul.ipreo-ul,
+ol.ipreo-ol,
+dl.ipreo-dl {
+  line-height: $list-lineheight;
+  margin-bottom: $list-margin-bottom;
+  list-style-position: $list-style-position;
+  font-size: $list-font-size;
+  color: $list-color;
+
+  li ul {
+    margin-bottom: 0;
+  }
+}
+
+ol.ipreo-ol li {
+  margin-left: $list-side-margin;
+}
+
+ul.ipreo-ul {
+  li {
+    list-style-type: $list-style-type;
+    margin-left: $list-side-margin;
+
+    & & {
+      margin-left: $list-nested-side-margin;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// List items
+.ipreo-li {
+  font-size: inherit;
+}
+
+// Unordered lists
+// Ordered lists
+.ipreo-ol {
+  margin-left: $list-side-margin;
+
+  // Nested lists
+  & & {
+    margin-left: $list-nested-side-margin;
+    margin-bottom: 0;
+  }
+}
+
+ul.ipreo-ul-unstyled,
+ol.ipreo-ol-unstyled,
+dl.ipreo-dl-unstyled {
+  &,
+  & li {
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+
+// Definition lists
+.ipreo-dl {
+  margin-bottom: $defnlist-margin-bottom;
+
+  .ipreo-dt {
+    margin-bottom: $defnlist-term-margin-bottom;
+    font-weight: $defnlist-term-weight;
+  }
+}
+
+// Blockquotes
+.ipreo-blockquote {
+  font-size: $blockquote-font-size;
+  margin: 0 0 $body-margin-bottom;
+  padding: $blockquote-padding;
+  border-left: $blockquote-border;
+}
+
+// Citations
+.ipreo-cite {
+  display: block;
+  font-size: $cite-font-size;
+  color: $cite-color;
+  font-weight: bold;
+  font-style: normal;
+
+  &::before {
+    content: '\2014 \0020';
+  }
+}
+
+// Helpers
+// Use to remove the bullets from an unordered list
+.ipreo-no-bullet {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Emphasized text
+.ipreo-text-em,
+.ipreo-text-italic {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+.ipreo-text-strong,
+.ipreo-text-bold {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+// Small text
+.ipreo-text-small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+
+//simple mixin example
+.ipreo-header-primary {
+  @include header-styles(45px, blue, 900);
+}
+
+.ipreo-subheader-secondary {
+  @include header-styles(35px, green, bold);
+}

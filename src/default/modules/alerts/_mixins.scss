@@ -1,0 +1,80 @@
+@mixin ipreo-alert-base() {
+  position: relative;
+  margin: $alert-margin;
+  padding: $alert-padding $alert-padding * 1.8;
+  border: $alert-border;
+  border-radius: $alert-radius;
+  color: $alert-font-color;
+  font-size: $alert-font-size;
+
+  &.ipreo-alert-dismissible {
+    padding-right: $alert-padding * 4;
+  }
+
+  .ipreo-alert-close {
+    position: absolute;
+    top: $alert-padding;
+    right: $alert-padding;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    -webkit-appearance: none;
+    opacity: 0.6;
+    font-size: $alert-font-size;
+    padding: rem-calc(0 5);
+  }
+
+  a {
+    color: $alert-font-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($alert-font-color, 20%);
+    }
+  }
+
+  &.ipreo-alert-has-icon {
+    padding-left: $alert-icon-width + $alert-padding * 2.5;
+    min-height: $alert-icon-width + $alert-padding * 2;
+  }
+
+  .ipreo-alert-icon {
+    position: absolute;
+    top: $alert-padding;
+    left: $alert-padding;
+    bottom: $alert-padding;
+    width: $alert-icon-width;
+  }
+
+  // Respect the padding, fool.
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/// Generate quick styles for a ipreo-alert using a single color as a baseline.
+/// [$alert-background] - Color to use.
+@mixin ipreo-alert-style($color: $alert-background) {
+  $background: mix($color, $white, $alert-background-mix);
+
+  background-color: $background;
+}
+
+/* stylelint-disable */
+@mixin ipreo-alert-size($padding) {
+  padding-top: $padding;
+  padding-right: $padding;
+  padding-bottom: $padding;
+  padding-left: $padding;
+}
+/* stylelint-enable */
+/// Adds styles for a ipreo-alert.
+@mixin ipreo-alert($color: $alert-background) {
+  @include ipreo-alert-base;
+  @include ipreo-alert-style($color);
+}

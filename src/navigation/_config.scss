@@ -1,0 +1,79 @@
+//==========================================================================
+//  Horizontal Nav GLOBAL Configs
+//==========================================================================
+$fontAwesome                          : "FontAwesome";
+$nav-logo-width                       : 100px !default;
+$nav-logo-height                      : 100% !default;
+$nav-font                             : $body-font-family !default;
+$dividers                             : $light-gray !default;
+$nav-base-text-color                  : $white !default;
+$nav-link-text-color                  : $nav-base-text-color !default;
+
+$main-nav-color                       : $primary !default;
+$level-2-nav-color                    : darken($main-nav-color, 10%) !default;
+$nav-base-font-size                   : 12px !default;
+
+$search-bg                            : $main-nav-color !default;
+$header-bg                            : $main-nav-color !default;
+$header-text                          : $nav-base-text-color !default;
+$header-text-hover                    : darken($nav-base-text-color, 10%) !default;
+$header-height                        : 50px !default;
+$nav-level-2-height                   : auto !default;
+$nav-level-2-link-padding             : 8px 20px !default;
+$nav-search-bg                        : darken($main-nav-color, 10%) !default;
+$nav-search-text                      : rgba($nav-base-text-color, .7) !default;
+$nav-search-font-size                 : $nav-base-font-size !default;
+$nav-base-font-size                   : $nav-base-font-size !default;
+$nav-search-border                    : $main-nav-color !default;
+$nav-level-2-bg                       : $level-2-nav-color !default;
+$nav-level-2-text                     : $nav-base-text-color !default;
+$nav-level-2-font-size                : $nav-base-font-size !default;
+$nav-level-2-active-bg                : rgba(23, 23, 23, 0.4) !default;
+$nav-tab-bar-bg                       : $white !default;
+$nav-tab-bar-active                   : $main-nav-color !default;
+$nav-tab-bar-text                     : $main-nav-color !default;
+$nav-tab-bar-text-active              : $level-2-nav-color !default;
+$nav-border-radius                    : $global-radius !default;
+$nav-app-select-bg                    : $white !default;
+$nav-app-select-shadow                : 1px 3px 6px rgba(129, 138, 145, 0.25) !default;
+$nav-app-select-dropdown-color        : $nav-base-text-color !default;
+$nav-app-select-dropdown-text-is-open : $level-2-nav-color !default;
+$nav-app-select-item-text             : $level-2-nav-color !default;
+$nav-app-select-font-size             : 14px !default;
+$nav-app-select-line-height           : 2 !default;
+$nav-app-select-dropdown-bg           : transparent !default;
+$nav-app-select-item-text-hover       : $main-nav-color !default;
+$nav-app-select-item-bg-hover         : darken($white, 10%) !default;
+$nav-app-select-open-text             : $main-nav-color !default;
+$nav-user-menu-link-text              : $nav-base-text-color !default;
+$nav-user-select-bg                   : $white !default;
+$nav-user-select-shadow               : 1px 3px 6px rgba(129, 138, 145, 0.25) !default;
+$nav-user-select-dropdown-text        : $nav-base-text-color !default;
+$nav-user-select-dropdown-text-is-open: $level-2-nav-color !default;
+$nav-user-select-dropdown-text        : $nav-base-text-color !default;
+$nav-user-select-item-text            : $level-2-nav-color !default;
+$nav-user-select-item-text-hover      : $main-nav-color !default;
+$nav-user-select-item-bg-hover        : darken($white, 10%) !default;
+$nav-user-select-open-text            : $main-nav-color !default;
+$nav-user-select-font-size            : $nav-base-font-size !default;
+$nav-user-select-dropdown-text-hover  : $nav-base-text-color !default;
+
+//NAV DROPDOWN ---
+$nav-dropdown-bg                      : $level-2-nav-color !default;
+$nav-dropdown-active-bg               : $main-nav-color !default;
+$nav-dropdown-max-width               : 225px !default;
+$nav-dropdown-font-size               : $nav-base-font-size !default;
+$nav-dropdown-bg-hover                : rgba(23, 23, 23, 0.4) !default;
+$nav-dropdown-text-hover              : $nav-base-text-color !default;
+$nav-dropdown-active                  : rgba(23, 23, 23, 0.4) !default;
+
+//NAV TAB BAR ---
+$nav-tab-bar-bg                       : $white !default;
+$nav-tab-bar-shadow                   : 1px 3px 6px rgba(129, 138, 145, 0.25) !default;
+$nav-tab-bar-font-size                : $nav-base-font-size !default;
+$nav-tab-bar-underline-hover          : $main-nav-color !default;
+$nav-tab-bar-border                   : $dividers !default;
+$nav-tab-bar-text                     : $level-2-nav-color !default;
+$nav-tab-bar-text-hover               : $main-nav-color !default;
+$nav-tab-bar-bg-hover                 : darken($white, 10%) !default;
+$nav-tab-bar-open-text                : $main-nav-color !default;

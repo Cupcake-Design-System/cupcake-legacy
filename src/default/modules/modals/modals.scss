@@ -1,0 +1,113 @@
+/*
+* Required Files
+* These files include the variables and options
+* and base css styles that are required to generate modals.
+*/
+
+@mixin ipreo-modal-mixin() {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 0 none;
+  overflow: hidden;
+  z-index: $modals-z-index;
+
+  &-fade {
+    opacity: 0;
+    transition: $modal-transition;
+
+    &.ipreo-modal-in {
+      opacity: 1;
+    }
+  }
+
+  &-open {
+    overflow: hidden;
+
+    .ipreo-modal {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  &-dialog {
+    margin: $modals-dialog-top-magin auto;
+    max-width: $modals-width;
+  }
+
+  &-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: $modals-border;
+    border-radius: $modals-border-radius;
+    outline: 0 none;
+  }
+
+  &-header {
+    border-bottom: $modals-header-border;
+    padding: $modals-padding;
+
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+
+  &-close {
+    float: right;
+    color: #000000;
+    margin-top: -2px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    transition: all 0.1s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    // button element reset
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
+
+  &-title {
+    margin: 0;
+  }
+
+  &-body {
+    position: relative;
+    padding: $modals-padding;
+  }
+
+  &-backdrop {
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $modals-z-index - 10;
+
+    &.ipreo-modal-fade {
+      opacity: 0;
+    }
+
+    &.ipreo-modal-fade.ipreo-modal-in {
+      opacity: 0.5;
+    }
+  }
+}
+
+.ipreo-modal {
+  @include ipreo-modal-mixin;
+}

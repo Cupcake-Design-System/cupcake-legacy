@@ -1,0 +1,114 @@
+.ipreo-nav-left {
+  @extend %col-4;
+
+  float: left;
+  text-align: left;
+
+  @include bp-phone {
+    @include mq-col(6);
+  }
+}
+
+.ipreo-nav-logo {
+  margin: 0 10px;
+  padding: 12px 0;
+  display: block;
+  float: left;
+  position: relative;
+  background-repeat: no-repeat;
+  width: $nav-logo-width;
+  height: $nav-logo-height;
+  border-right: 1px solid rgba(245, 245, 245, 0.07);
+}
+
+.ipreo-nav-app-select {
+  position: relative;
+  display: inline-block;
+  padding: rem-calc(15 0);
+  min-width: rem-calc(90);
+  border-radius: $nav-border-radius $nav-border-radius 0 0;
+  vertical-align: middle;
+  text-align: left;
+  border-right: 1px solid rgba(245, 245, 245, 0.07);
+  text-decoration: none;
+  text-transform: none;
+  font-size: $nav-app-select-font-size;
+  user-select: none;
+  -webkit-appearance: none;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  @include bp-until-desktop {
+    display: none;
+    min-width: 0;
+  }
+}
+
+.ipreo-nav-app-select-list {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  padding: 6px 0;
+  top: 8px;
+  width: 100%;
+  border-radius: 0 0 $nav-border-radius $nav-border-radius;
+  background: $nav-app-select-bg;
+  box-shadow: $nav-app-select-shadow;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+
+  .ipreo-nav-app-select.is-open & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.ipreo-nav-app-select-list-item {
+  overflow: hidden;
+  padding: 6px 12px;
+  color: $nav-app-select-item-text;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: $nav-app-select-font-size;
+  cursor: pointer;
+  transition: background-color 0.25s linear;
+
+  &:hover {
+    background-color: $nav-app-select-item-bg-hover;
+    color: $nav-app-select-item-text-hover;
+  }
+}
+
+.ipreo-nav-app-select-dropdown {
+  padding: 0 5px 6px 12px;
+  border-radius: 3px;
+  background-color: $nav-app-select-dropdown-bg;
+  color: $nav-app-select-dropdown-color;
+  font-weight: bold;
+  text-align: left;
+  font-size: $nav-app-select-font-size;
+
+  @include bp-until-desktop {
+    display: none;
+    min-width: 0;
+  }
+}
+
+.js-dropdown.is-open {
+  background: $nav-app-select-bg;
+  transition: background-color 0.25s linear;
+
+  span {
+    color: $nav-app-select-dropdown-text-is-open;
+  }
+}

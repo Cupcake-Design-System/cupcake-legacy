@@ -1,0 +1,36 @@
+/*
+* ==========================================================================
+* Cards
+* ==========================================================================
+*/
+
+@import 'mixins';
+
+.ipreo-card {
+  @include card;
+
+  &-header {
+    @include card-header;
+  }
+
+  &-content {
+    @include card-content;
+  }
+
+  &-footer {
+    @include card-footer;
+  }
+}
+
+
+
+@each $card-color in $card-colors {
+  $card-color-namespace: nth($card-color, 1);
+  $card-bg-color: nth($card-color, 2);
+  $card-color: nth($card-color, 3);
+
+  .ipreo-card-#{$card-color-namespace} {
+    @include card-variant($card-bg-color, $card-color, $white);
+
+  }
+}

@@ -1,0 +1,117 @@
+/*
+* ==========================================================================
+* Switches
+* ==========================================================================
+*/
+@import 'mixins';
+
+.ipreo-switch {
+  @include switch;
+
+  @if $switch-style == material {
+    width: $material-switch-height * 4;
+    height: $material-switch-height;
+  }
+}
+
+.ipreo-switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.ipreo-switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  text-transform: uppercase;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease-out;
+  transition-property: opacity background;
+}
+
+.ipreo-switch-label::after,
+.ipreo-switch-label::before {
+  position: absolute;
+  top: 50%;
+  margin-top: -.45em;
+  line-height: 1;
+  transition: inherit;
+}
+
+.ipreo-switch-label::before {
+  content: attr(data-off);
+  right: 6px;
+  color: $switch-label-off;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.ipreo-switch-label::after {
+  content: attr(data-on);
+  left: 8px;
+  color: $switch-label-on;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.ipreo-switch-input:checked ~ .ipreo-switch-label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.ipreo-switch-input:checked ~ .ipreo-switch-label::before {
+  opacity: 0;
+}
+
+.ipreo-switch-input:checked ~ .ipreo-switch-label::after {
+  opacity: 1;
+}
+
+.ipreo-switch-handle {
+  position: absolute;
+  border-radius: 50%;
+  background: $white;
+  transition: left 0.15s ease-out;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+
+  @if $switch-style == material {
+    top: -6px;
+    left: 0;
+    width: $material-switch-height + 10;
+    height: $material-switch-height + 10;
+  }
+
+  @else {
+    @include vertical-center;
+    
+    left: .15rem;
+    width: $default-switch-height - .1rem;
+    height: $default-switch-height - .25rem;
+  }
+}
+
+.ipreo-switch-input:checked ~ .ipreo-switch-handle {
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
+
+  @if $switch-style == material {
+    left: $material-switch-height * 2 + 5;
+  }
+
+  @else {
+    left: $default-switch-height;
+  }
+}
+
+.ipreo-switch-disabled {
+  pointer-events: none;
+  background: $disabled;
+
+  &.ipreo-switch-input:checked,
+  .ipreo-switch-label,
+  .ipreo-switch-handle {
+    background: $disabled;
+    pointer-events: none;
+  }
+}
+

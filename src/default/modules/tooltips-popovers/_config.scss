@@ -1,0 +1,21 @@
+/* stylelint-disable */
+$popover-bg          : white !default;
+$popover-max-width   : 300px !default;
+$popover-padding     : 8px 14px !default;
+$popover-fs          : 14px !default;
+$popover-bd-width    : 1px !default;
+$popover-bd-c        : #D2D0D0 !default;
+$popover-bd-radius   : 6px !default;
+$popover-shadow      : 0 0px 9px 0 rgba(0, 0, 0, 0.2) !default;
+$popover-zindex      : 1 !default;
+
+$popover-arrow-width       : 10px !default;
+$popover-arrow-inner-width : 9px !default;
+
+// class name(eg. .ipreo-popover-success), text-color, border-color
+$popover-colors:
+("success", $success, lighten($success, 11%))
+("warning", $warning, lighten($warning, 11%))
+("danger", $danger, lighten($danger, 11%))
+!default;
+/* stylelint-enable */

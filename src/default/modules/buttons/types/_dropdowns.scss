@@ -1,0 +1,70 @@
+/*
+* ==========================================================================
+* Button Dropdowns
+* ==========================================================================
+*/
+
+.ipreo-btn-dropdown {
+  @include btn-base();
+
+  box-shadow: none;
+  margin: 0;
+}
+
+.ipreo-dropdown {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+
+  &-right {
+    float: right;
+  }
+}
+
+.ipreo-dropdown-list {
+  @include dropdown-list;
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-below {
+    top: 100%;
+    border-radius: 0 0 $global-radius $global-radius;
+  }
+
+  &-above {
+    bottom: 100%;
+    margin-bottom: 0;
+    top: auto;
+    border-bottom: none;
+    border-radius: $global-radius $global-radius 0 0;
+    box-shadow: $dropdown-box-shadow;
+  }
+}
+
+.ipreo-dropdown-list > li {
+  padding: 0;
+  margin: 0;
+  display: block;
+
+  > a {
+    display: block;
+    font-size: $dropdown-font-size;
+    padding: $dropdown-padding;
+    font-weight: $dropdown-font-weight;
+    color: $dropdown-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $dropdown-color-hover;
+      background: $dropdown-background-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.ipreo-dropdown-divider {
+  border-top: $dropdown-border;
+}

@@ -1,0 +1,64 @@
+/*
+* ==========================================================================
+* Button Base
+* ==========================================================================
+*/
+@mixin btn-base($background: $default, $font: $btn-font-size) {
+  background-color: $background;
+  font-weight: $btn-font-weight;
+  font-size: $font;
+  font-family: $btn-font-family;
+  line-height: $btn-line-height;
+  padding: $btn-default-padding-v $btn-default-padding-h;
+  text-decoration: none;
+  text-align: center;
+  border-radius: $btn-radius;
+  white-space: nowrap;
+  display: inline-block;
+  border: $btn-border-width solid $light-gray;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  @if $btn-shadows == true {
+    box-shadow: $btn-shadow;
+  }
+
+  @else {
+    box-shadow: none;
+  }
+}
+
+@mixin btn-active {
+  text-decoration: none;
+  background-color: desaturate($default, 10%);
+  border-color: darken($default, 15%);
+  transition-duration: 0s;
+  box-shadow: $btn-shadow-active;
+}
+
+
+/*
+* ==========================================================================
+* dropdown-list
+* ==========================================================================
+*/
+@mixin dropdown-list {
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: $dropdown-width;
+  list-style-type: none;
+  background: $dropdown-background-color;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  box-shadow: $dropdown-box-shadow;
+  border-radius: $global-radius;
+  box-sizing: border-box;
+  z-index: map-get($zindex, dropdown);
+}
+
+

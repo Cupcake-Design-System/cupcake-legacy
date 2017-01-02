@@ -1,0 +1,53 @@
+// Headers
+@mixin header-styles($font-size: null, $color: $header-color, $font-weight: $header-font-weight) {
+  font-family: $header-font-family;
+  font-weight: $font-weight;
+  font-style: $header-font-style;
+  color: $color;
+  text-rendering: $header-text-rendering;
+  margin-top: 0;
+  margin-bottom: $header-margin-bottom;
+  line-height: $header-lineheight;
+  font-size: $font-size;
+
+  small {
+    font-size: $small-font-size;
+    line-height: inherit;
+    color: $header-small-font-color;
+  }
+}
+
+// Heading sizes
+@each $size, $headers in $header-sizes {
+  @include breakpoint($size) {
+    @each $header, $font-size in $headers {
+      .ipreo-header-#{$header} {
+        @include header-styles;
+
+        font-size: rem-calc($font-size);
+      }
+    }
+  }
+}
+
+
+
+// .ipreo-sm-text-center or .ipreo-text-center
+@each $size in $breakpoint-classes {
+  @include breakpoint($size) {
+    @each $align in (left, right, center, justify) {
+      @if $size != $-ipreo-zero-breakpoint {
+        .ipreo-#{$size}-text-#{$align} {
+          text-align: $align;
+        }
+      }
+
+      @else {
+        .ipreo-text-#{$align} {
+          text-align: $align;
+        }
+      }
+    }
+  }
+}
+

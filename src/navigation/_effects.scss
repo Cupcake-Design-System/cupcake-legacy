@@ -1,0 +1,50 @@
+@include bp-tablet-and-up {
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown,
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown-tab-bar,
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown-multilevel,
+  .ipreo-nav-links li.hoverTrigger > .ipreo-nav-dropdown,
+  .ipreo-nav-links li.hoverTrigger > .ipreo-nav-dropdown-tab-bar,
+  .ipreo-nav-links li.hoverTrigger > .ipreo-nav-dropdown-multilevel {
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+
+    &.effect-scale {
+      transform: scale(0.8);
+    }
+
+    &.effect-expand-top {
+      transform: rotateX(90deg);
+      transform-origin: 0 0;
+    }
+
+    &.effect-expand-bottom {
+      transform: rotateX(90deg);
+      transform-origin: 0 100%;
+    }
+
+    &.effect-expand-left {
+      transform: rotateY(90deg);
+      transform-origin: 0 0;
+    }
+
+    &.effect-expand-right {
+      transform: rotateY(90deg);
+      transform-origin: 100% 0;
+    }
+  }
+
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown,
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown-tab-bar,
+  .ipreo-nav-level-2-links li.hoverTrigger > .ipreo-nav-dropdown-multilevel,
+  .ipreo-nav-links li.hoverTrigger:hover > .ipreo-nav-dropdown,
+  .ipreo-nav-links li.hoverTrigger:hover > .ipreo-nav-dropdown-tab-bar,
+  .ipreo-nav-links li.hoverTrigger:hover > .ipreo-nav-dropdown-multilevel {
+    transition-delay: 200ms !important;
+    display: block;
+
+    &.effect-fade {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

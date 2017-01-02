@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.ipreo-avatar {
+  @include avatar;
+}
+
+@each $avatar-color in $avatar-colors {
+  $avatar-color-namespace: nth($avatar-color, 1);
+  $avatar-bg-color: nth($avatar-color, 2);
+
+  .ipreo-avatar-#{$avatar-color-namespace} {
+    background: $avatar-bg-color;
+  }
+}

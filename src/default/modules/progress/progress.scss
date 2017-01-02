@@ -1,0 +1,27 @@
+/*
+* ==========================================================================
+* Progress
+* ==========================================================================
+*/
+@import 'mixins';
+
+.ipreo-progress {
+  @include progress-container;
+
+  @each $name, $color in $progress-colors {
+    &-#{$name} {
+      .ipreo-progress-meter {
+        @include progress-meter;
+        @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
+
+        &-animated {
+          @include loader-stripe($color);
+        }
+      }
+    }
+  }
+}
+
+.ipreo-progress-meter-text {
+  @include progress-meter-text;
+}

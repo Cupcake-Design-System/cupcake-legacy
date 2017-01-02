@@ -1,0 +1,23 @@
+.ipreo-file-upload {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: $file-upload-bd-radius;
+  border: $file-upload-bd;
+  background-color: $file-upload-bg-color;
+  padding: $file-upload-padding;
+  color: $primary;
+  font-weight: bold;
+  font-size: $file-upload-fs;
+
+  .ipreo-btn {
+    margin-left: $file-upload-margin;
+  }
+
+  .fa {
+    margin-right: $file-upload-margin;
+    font-size: $file-upload-fa-fs;
+  }
+}

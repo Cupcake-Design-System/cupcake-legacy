@@ -1,0 +1,77 @@
+@mixin avatar {
+  position: relative;
+  display: inline-block;
+  width: $avatar-size;
+  height: $avatar-size;
+  color: $white;
+  background: $primary;
+  border-radius: 50%;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: $avatar-fs;
+  margin: 0;
+  vertical-align: middle;
+
+  &[data-text]::after {
+    content: attr(data-text);
+
+    @include absolute-center();
+  }
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .fa {
+    font-size: $avatar-fs;
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: $avatar-icon-margin;
+    width: $avatar-icon-size;
+    height: $avatar-icon-size;
+    border-width: $avatar-bd-size;
+    border-style: solid;
+    border-radius: 50%;
+
+    &.right {
+      right: 0;
+      left: auto;
+    }
+
+    &.bottom {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: auto;
+    }
+
+    &.left {
+      top: auto;
+      bottom: 0;
+    }
+
+    &.success {
+      background-color: $success;
+    }
+
+    &.primary {
+      background-color: $primary;
+    }
+
+    &.warning {
+      background-color: $warning;
+    }
+
+    &.danger {
+      background-color: $danger;
+    }
+  }
+}
+
+

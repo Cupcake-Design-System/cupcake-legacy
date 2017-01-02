@@ -1,0 +1,14 @@
+/*
+* ==========================================================================
+* Button Sizes
+* ==========================================================================
+*/
+@each $btn-size in $btn-sizes {
+  $btn-size-name: nth($btn-size, 1);
+  $btn-size-font: nth($btn-size, 2);
+  $btn-size-namespace: #{$btn-size-name};
+
+  &.#{$btn-size-namespace} {
+    font-size: $btn-size-font;
+  }
+}

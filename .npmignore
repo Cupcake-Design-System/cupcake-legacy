@@ -1,0 +1,7 @@
+.github
+.gitignore
+.npmignore
+.stylelintrc
+backstop.conf.js
+package.json
+test

@@ -1,0 +1,90 @@
+@mixin loader-stripe($color) {
+  background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
+  height: $progress-height;
+  background-size: $progress-height $progress-height;
+  animation: stripes 3s linear infinite;
+  border-radius: inherit;
+}
+
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@mixin progress-container {
+  background-color: $progress-background;
+  height: $progress-height;
+  margin-bottom: $progress-margin-bottom;
+  border-radius: $progress-radius;
+}
+
+/// Adds styles for the inner meter of a progress bar.
+@mixin progress-meter {
+  position: relative;
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: $progress-radius;
+}
+
+/// Adds styles for text in the progress meter.
+@mixin progress-meter-text {
+  @include absolute-center;
+  position: absolute;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: $white;
+  white-space: nowrap;
+  border-radius: $progress-radius;
+}
+
+@mixin full-progress(
+  $height: $progress-height,
+  $bg: $progress-background,
+  $color: purple,
+  $radius: $progress-radius
+) {
+  background-color: $bg;
+  height: $height;
+  border-radius: $radius;
+  margin-bottom: $progress-margin-bottom;
+
+  .ipreo-progress-meter {
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 100%;
+    height: $height;
+    border-radius: $radius;
+
+    @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
+
+    &-animated {
+      background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
+      height: $height;
+      background-size: $height $height;
+      animation: stripes 3s linear infinite;
+      border-radius: inherit;
+    }
+  }
+
+  .ipreo-progress-meter-text {
+    @include absolute-center;
+
+    margin: 0;
+    font-size: .75rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+  }
+}
+
+.ipreo-progress-full {
+  @include full-progress(3rem, grey, purple, 3px);
+}

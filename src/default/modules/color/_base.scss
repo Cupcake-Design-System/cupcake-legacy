@@ -1,0 +1,36 @@
+@each $name, $color in $ipreo-palette {
+  .ipreo-bg-#{$name} {
+    background: $color;
+    color: $white;
+  }
+
+  .ipreo-text-#{$name} {
+    color: $color;
+  }
+
+  .ipreo-border-#{$name} {
+    border: 1px solid $color;
+  }
+}
+
+@if $generate-chart-colors == true {
+  @each $name, $color in $chart-colors {
+    .ipreo-#{$name} {
+      background: $color;
+    }
+  }
+}
+
+@if $generate-ticker-colors == true {
+  @each $pair in $ticker-colors {
+    .ipreo-#{nth($pair, 1)} {
+      $color: nth($pair, 2);
+
+      background: $color;
+    }
+  }
+}
+
+.ipreo-bg-none {
+  background-color: transparent !important;
+}

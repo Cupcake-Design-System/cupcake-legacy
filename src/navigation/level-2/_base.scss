@@ -1,0 +1,73 @@
+.ipreo-nav-level-2 {
+  height: $nav-level-2-height;
+  margin: 0;
+  background-color: $nav-level-2-bg;
+  z-index: -1;
+  position: inherit;
+
+  .ipreo-nav-level-2-links {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  > li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    transition: background-color 200ms ease;
+    font-size: em(16);
+
+    &.active {
+      background-color: $nav-level-2-active-bg;
+    }
+
+    &:hover {
+      background-color: $nav-level-2-active-bg;
+    }
+
+    > a {
+      margin: 0;
+      padding: 0 20px;
+      display: inline-block;
+      float: none;
+      color: $nav-level-2-text;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 50px;
+      position: relative;
+
+      @include bp-until-desktop {
+        width: auto;
+        line-height: normal;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: static;
+        padding-right: 10px;
+        z-index: 20;
+      }
+
+      i.fa {
+        font-size: 15px;
+        line-height: 1;
+        padding-right: 2px;
+      }
+
+      i.fa.fa-indicator {
+        padding-right: 0;
+        padding-left: 2px;
+
+        @include bp-until-desktop {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          bottom: 0;
+          line-height: 50px;
+          height: 50px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

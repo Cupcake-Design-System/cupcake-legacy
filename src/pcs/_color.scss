@@ -1,0 +1,47 @@
+/*
+Color Variables
+*/
+$primary          : #0082de;
+$default          : #eeeeee;
+$secondary        : #777777;
+$success          : #42bd41;
+$warning          : #fe9e52;
+$danger           : #d2335c;
+$disabled         : #ededed;
+$light-gray       : #f5f5f5;
+$medium-gray      : #cacaca;
+$dark-gray        : #8a8a8a;
+$darkest-gray     : #484848;
+$black            : #0a0a0a;
+$white            : #fefefe;
+$body-background  : $white;
+$body-font-color  : #414152;
+$text-dim         : #a0a0a8;
+
+$ipreo-palette: (
+  primary  : $primary,
+  default  : $default,
+  secondary: $secondary,
+  success  : $success,
+  warning  : $warning,
+  danger   : $danger,
+  disabled : $disabled,
+  black    : $black,
+  white    : $white,
+);
+
+$chart-colors:(
+  chart-light-blue  : #c2d4ea,
+  chart-medium-blue : #88abd4,
+  chart-blue        : #4e86d0,
+  chart-light-orange: #f9d2b2,
+  chart-orange      : #f59c51,
+);
+
+$ticker-colors:(
+  ticker-blue  : #83c0ef,
+  ticker-pink  : #e0c4f1,
+  ticker-green : #c7e086,
+  ticker-orange: #f3a57e,
+  ticker-grey  : #bababa,
+);

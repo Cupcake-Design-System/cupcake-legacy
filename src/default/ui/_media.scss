@@ -1,0 +1,45 @@
+.ipreo-media {
+  display: flex;
+}
+
+.ipreo-media-body {
+  flex: 1;
+  min-width: 1px;
+}
+
+.ipreo-media-middle {
+  align-self: center;
+}
+
+.ipreo-media-bottom {
+  align-self: flex-end;
+}
+
+.ipreo-media-object {
+  display: block;
+
+  &-thumbnail {
+    max-width: none;
+  }
+}
+
+//
+// Alignment
+//
+.ipreo-media-right {
+  @extend %p-left-md;
+}
+
+.ipreo-media-left {
+  @extend %p-right-md;
+}
+
+.ipreo-media-heading {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.ipreo-media-list {
+  padding-left: 0;
+  list-style: none;
+}

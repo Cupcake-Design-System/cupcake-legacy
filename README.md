@@ -1,5 +1,4 @@
-
-<img alt="cupcake-logo" src="new.png">
+<img alt="cupcake-logo" src="extra/cupcake-horizontal-logo.png">
 
 Project Cupcake is the internal Ipreo design system that brings together UX guidelines, an HTML/CSS framework, and Angular 2 components. This repository includes everything you need to build, customize, test, and deploy Cupcake. For complete documentation, visit the Cupcake website.
 
@@ -20,4 +19,3 @@ Refer to **[User Guide](docs/user_guide.md)** for more details on how to use Cup
 
 ### Contribution
 We welcome contributions from the community. Contact us for any questions: @ .
-

@@ -1,0 +1,128 @@
+@import 'mixins';
+
+.ipreo-tabs {
+  @include tabs;
+
+  .ipreo-tab-item {
+    @include tab-item;
+  }
+
+  .ipreo-tab-item-link {
+    @include tab-item-link;
+  }
+
+  .ipreo-tab-item-link-active {
+    @include tab-item-active;
+  }
+}
+
+.ipreo-tabs-bordered {
+  .ipreo-tab-item {
+    .ipreo-tab-item-link {
+      border: $tabs-borders;
+      border-bottom: none;
+      background: $tabs-bg;
+      color: $tabs-color;
+      margin-right: $tabs-bordered-space-between;
+      margin-bottom: 0;
+      border-radius: $tabs-border-radius $tabs-border-radius 0 0;
+
+      &:hover {
+        background: $tabs-bg-hover;
+        transition: $tabs-hover-tranisition;
+        color: $tabs-color-hover;
+      }
+    }
+
+    .ipreo-tab-item-link-active {
+      background: $tabs-bg-active;
+      color: $tabs-color-active;
+    }
+  }
+
+  .ipreo-tabs-right,
+  .ipreo-tab-item {
+    &:last-child {
+      margin-right: -$tabs-bordered-space-between;
+    }
+  }
+}
+
+.ipreo-tabs-toggle {
+  border-bottom: none;
+
+  .ipreo-tab-item {
+    border: $tabs-borders;
+    margin-left: -1px;
+    color: $tabs-color;
+
+    &:first-child {
+      border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $tabs-border-radius $tabs-border-radius 0;
+    }
+
+    &:hover {
+      background-color: $tabs-bg;
+      z-index: 2;
+      transition: $tabs-hover-tranisition;
+
+      &:first-child {
+        border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
+      }
+
+      &:last-child {
+        border-radius: 0 $tabs-border-radius $tabs-border-radius 0;
+      }
+    }
+  }
+
+  .ipreo-tab-item-link {
+    margin: 0;
+    width: 100%;
+    border-bottom: 0;
+    text-align: center;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
+  .ipreo-tab-item-link-active {
+    border: none;
+    background-color: $tabs-bg-active;
+
+    &:hover {
+      background-color: $tabs-bg-active;
+      transition: $tabs-hover-tranisition;
+    }
+  }
+}
+
+@each $tab-size in $tab-sizes {
+  $tab-size-name: nth($tab-size, 1);
+  $tab-size-font: nth($tab-size, 2);
+
+  .ipreo-tabs-#{$tab-size-name} {
+    .ipreo-tab-item-link {
+      font-size: $tab-size-font;
+    }
+  }
+}
+
+.ipreo-tabs-fullwidth {
+  .ipreo-tab-item {
+    flex: 1;
+  }
+}
+
+.ipreo-tabs-right {
+  justify-content: flex-end;
+}
+
+.ipreo-tabs-center {
+  flex: none;
+  justify-content: center;
+}

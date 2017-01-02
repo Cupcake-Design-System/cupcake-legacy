@@ -1,0 +1,71 @@
+/*
+* Required Files
+*
+* These files include the variables and options
+* and base css styles that are required for notifications.
+*/
+
+@mixin ipreo-notify-logs-slide($direction) {
+  $sign: '';
+
+  @if $direction == left {
+    $sign: '-';
+  }
+
+  .ipreo-alert {
+    transform: translateX(calc(#{$sign}110% + #{$notify-screen-spacing}));
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin ipreo-notify-logs-base {
+  position: fixed;
+  z-index: $notify-z-index;
+  width: $notify-width;
+  min-width: $notify-min-width;
+
+  &.top, {
+    top: $notify-screen-spacing;
+  }
+
+  &.bottom, {
+    bottom: $notify-screen-spacing;
+  }
+
+  &.left, {
+    left: $notify-screen-spacing;
+
+    @include ipreo-notify-logs-slide(left);
+  }
+
+  &.right, {
+    right: $notify-screen-spacing;
+
+    @include ipreo-notify-logs-slide(right);
+  }
+
+  .ipreo-alert {
+    position: relative;
+    pointer-events: none;
+    opacity: 0;
+    transition: $notify-transition;
+
+    @include drop-shadow(md);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.show {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.ipreo-notify-logs {
+  @include ipreo-notify-logs-base;
+}

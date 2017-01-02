@@ -1,0 +1,38 @@
+@mixin stripe-animated($color, $height) {
+  background: linear-gradient(135deg, $color 25%, lighten($color, 30%) 25%, lighten($color, 30%) 50%, $color 50%, $color 75%, lighten($color, 30%) 75%);
+  position: absolute;
+  height: $height;
+  background-size: 20px 20px;
+  animation: stripes 3s linear infinite;
+  opacity: .1;
+}
+
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+
+
+/*@mixin stripe-animated($color: $primary, $height: 100%) {
+  background: linear-gradient(135deg, $color, 25%, lighten($color, 30%) 25%, lighten($color, 30%) 50%, $color, 50%, $color, 75%, lighten($color, 30%) 75%);
+  height: $height;
+  background-size: 20px 20px;
+  animation: stripes 3s linear infinite;
+  opacity: 1;
+}
+
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 50px 50px;
+  }
+}*/

@@ -1,0 +1,406 @@
+//  Base Global Settings
+//  -----------------------------
+//
+/* stylelint-disable */
+@import '../default/utility/utility';
+
+// 1. Global
+// ---------
+$global-font-size             : 16px !default;
+$global-width                 : 100% !default;
+$global-lineheight            : 1.5 !default;
+$generate-chart-colors        : false !default;
+$generate-ticker-colors       : false !default;
+
+$body-font-family             : Arial, sans-serif !default;
+$body-font-color              : #484848 !default;
+$body-font-size               : rem-calc(16) !default;
+$body-font-size-lg            : rem-calc(18) !default;
+$body-lineheight              : 1.5 !default;
+$body-margin-bottom           : 1rem !default;
+$body-antialiased             : true !default;
+$body-text-rendering          : optimizeLegibility !default;
+
+$global-margin                : 1rem !default;
+$global-padding               : 1rem !default;
+$global-weight-normal         : normal !default;
+$global-weight-bold           : bold !default;
+$global-radius                : 3px !default;
+$global-text-direction        : ltr !default;
+$global-flexbox               : true !default;
+$print-transparent-backgrounds: true !default;
+
+$global-sidebar-max-width     : 260px !default;
+$global-sidebar-background-color: #f5f5f5 !default;
+
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  sm: 0,
+  md: 640px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+$breakpoint-classes: (sm md lg);
+
+// 3. The Grid
+// -----------
+$grid-row-width: $global-width ;
+$grid-column-count: 12 ;
+$grid-column-gutter: (
+  sm: 20px,
+  md: 30px,
+);
+$grid-column-align-edge: true ;
+$block-grid-max: 8 ;
+
+// 4. Base Typography
+// ------------------
+$header-font-family   : $body-font-family ;
+$header-font-weight   : $global-weight-bold ;
+$header-font-style    : normal ;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$header-sizes: (
+  sm: (
+    'h1': 22,
+    'h2': 20,
+    'h3': 18,
+    'h4': 16,
+    'h5': 15,
+    'h6': 14,
+  ),
+  md: (
+    'h1': 30,
+    'h2': 26,
+    'h3': 22,
+    'h4': 18,
+    'h5': 15,
+    'h6': 14,
+  ),
+);
+
+$header-color                : inherit ;
+$header-lineheight           : 1.4 ;
+$header-margin-bottom        : 0.5rem ;
+$header-text-rendering       : optimizeLegibility ;
+$small-font-size             : 80% ;
+$header-small-font-color     : $medium-gray ;
+$paragraph-lineheight        : 1.5 ;
+$paragraph-margin-bottom     : 1rem ;
+$paragraph-text-rendering    : optimizeLegibility ;
+$anchor-color                : $primary ;
+$anchor-color-hover          : lighten($primary, 10%) ;
+$anchor-text-decoration      : none ;
+$anchor-text-decoration-hover: none ;
+$hr-width                    : $global-width ;
+$hr-border                   : 1px solid #f2f2f2;
+$hr-margin                   : rem-calc(20) auto ;
+$list-font-size              : rem-calc(14);
+$list-lineheight             : $paragraph-lineheight ;
+$list-margin-bottom          : $paragraph-margin-bottom ;
+$list-style-type             : disc ;
+$list-style-position         : outside ;
+$list-ul-side-margin         : .6rem ;
+$list-nested-side-margin     : 1.25rem ;
+$list-color                  : #414152 ;
+$list-padding                : 1.5rem ;
+$list-ul-padding             : 2rem ;
+$list-side-margin            : 1.25rem ;
+$defnlist-margin-bottom      : 1rem ;
+$defnlist-term-weight        : $global-weight-bold ;
+$defnlist-term-margin-bottom : 0.3rem ;
+$blockquote-color            : #414152 ;
+$blockquote-padding          : rem-calc(9 20 0 19) ;
+$blockquote-border           : 3px solid $primary ;
+$blockquote-font-size        : rem-calc(28) ;
+$cite-font-size              : rem-calc(18) ;
+$cite-color                  : $darkest-gray ;
+$keystroke-font              : $font-family-monospace ;
+$keystroke-color             : $black ;
+$keystroke-background        : $light-gray ;
+$keystroke-padding           : rem-calc(2 4 0) ;
+$keystroke-radius            : $global-radius ;
+$abbr-underline              : 1px dotted $black ;
+
+// 5. Typography Helpers
+// ---------------------
+$lead-font-size                 : $global-font-size * 1.25 ;
+$lead-lineheight                : 1.6 ;
+$subheader-lineheight           : 1.4 ;
+$subheader-color                : #414152 ;
+$subheader-font-weight          : $global-weight-normal ;
+$subheader-margin-top           : 0.2rem ;
+$subheader-margin-bottom        : 0.5rem ;
+$subheader-primary-font-size    : rem-calc(18);
+$subheader-secondary-font-size  : rem-calc(16);
+$paragraph-font-color           : #414152 ;
+$paragraph-font-size            : rem-calc(14);
+
+// 10. Breadcrumbs
+// ---------------
+$breadcrumbs-margin             : 0 0 $global-margin 0 ;
+$breadcrumbs-item-font-size     : rem-calc(11) ;
+$breadcrumbs-item-color         : $primary ;
+$breadcrumbs-item-color-current : $black ;
+$breadcrumbs-item-color-disabled: $medium-gray ;
+$breadcrumbs-item-margin        : 0.75rem ;
+$breadcrumbs-item-uppercase     : true ;
+$breadcrumbs-item-slash         : true ;
+
+
+//==========================================================================
+//  Button GLOBAL Configs
+//==========================================================================
+$btn-font-family    : $body-font-family;
+$btn-font-size      : rem-calc(14);
+$btn-default-padding: .65em 1.6em !default;
+$btn-font-weight    : bold;
+$btn-radius         : rem-calc(3) ;
+
+// Button shadows add box-shadow to buttons
+$btn-shadows        : true ;
+
+// Button gradients (true = gradients - false = solid)
+$btn-gradients      : false ;
+
+// Button outlines - if true outline btns will be generated (eg. .ipreo-btn-primary-outline)
+$btn-outlines       : true ;
+
+// BUTTON SIZES
+// This map is used to generate the different button sizes.
+// Edit or add sizes to the list below and recompile.
+// Each block contains the arguments (name, padding, font-size).
+// The class is generated using the name: (ex .ipreo-btn-sm).
+$btn-sizes:
+("ipreo-btn-sm", rem-calc(12))
+("ipreo-btn-lg", rem-calc(16));
+
+
+// BUTTON COLORS
+// This map is used to generate the different button colors.
+// Edit or add colors to the list below and recompile.
+// Each block contains the (name, background, color)
+// The class is generated using the name: (ex .ipreo-btn-primary)
+$btn-colors:
+("primary", $primary, $white)
+("success", $success, $white)
+("default", $default, #414152)
+("warning", $warning, $white)
+("danger", $danger, $white)
+;
+
+
+// Outline Button Colors
+// The class is generated using the name: (ex .ipreo-btn-primary-outline)
+$outline-btn-colors:
+("primary", $primary, $white)
+("success", $success, $white)
+("default", $secondary, $white)
+("warning", $warning, $white)
+("danger",  $danger, $white);
+
+
+// BUTTON SHAPES
+// This map is used to generate the different button shapes.
+// Edit or add shapes to the list below and recompile.
+// Each block contains the (name, border-radius).
+// The class is generated using the name: (ex .ipreo-btn-square).
+//
+$btn-shapes: (
+  square: 0,
+  box: $global-radius,
+  rounded: $global-radius,
+  pill: 200px,
+  circle: 100%
+);
+
+
+
+//==========================================================================
+//  Alerts GLOBAL Configs
+//==========================================================================
+$alert-background        : $white;
+$alert-background-mix    : 4%;
+$alert-border            : 1px solid rgba($black, 0.25);
+$alert-margin            : 0 0 1rem 0;
+$alert-padding           : 0.5rem;
+$alert-font-size         : rem-calc(14);
+$alert-font-color        : $body-font-color;
+$alert-font-color-alt    : $body-background;
+$alert-radius            : $global-radius;
+$alert-shadows           : true;
+$alert-style             : 'outline';
+$alert-icon-width        : rem-calc(35);
+
+$alert-colors:
+("primary", $primary)
+("success", $success)
+("default", $default)
+("warning", $warning)
+("danger", $danger)
+;
+
+
+// Dropdowns
+// ------------
+$dropdown-padding          : rem-calc(6) ;
+$dropdown-border           : 1px solid $light-gray ;
+$dropdown-color            : #484848 ;
+$dropdown-color-hover      : #484848 ;
+$dropdown-background-color : $white ;
+$dropdown-background-hover : lighten($default, 2%) ;
+$dropdown-box-shadow       : 0 2px 4px rgba(0, 0, 0, 0.06) ;
+$dropdown-font-size        : rem-calc(12) ;
+$dropdown-font-weight     : normal;
+$dropdown-width            : 150px ;
+$dropdown-radius           : $global-radius;
+
+$card-header-font-size  : rem-calc(15);
+$card-body-font-size    : rem-calc(14);
+$card-title-font-size   : rem-calc(20);
+$card-subtitle-font-size: rem-calc(16);
+$card-body-text-color   : #414152;
+$card-border-color      : $light-gray ;
+$card-header-bg         : $white ;
+$card-footer-bg         : $white ;
+$card-bg                : $white ;
+$card-shadow            : 1px 2px 5px $light-gray ;
+$card-max-width         : 30rem ;
+
+
+//==========================================================================
+//  Switch GLOBAL Configs
+//==========================================================================
+$default-switch-height: rem-calc(30);
+$default-switch-font-size: rem-calc(10);
+$large-switch-font-size: rem-calc(15);
+$switch-label-off: $medium-gray;
+$switch-label-on: $white;
+$switch-handle: $white;
+$switch-sizes: (
+  xs: rem-calc(30),
+  sm: rem-calc(40),
+  lg: rem-calc(80)
+);
+
+
+$switch-colors:
+("primary", $primary)
+("success", $success)
+("default", $secondary)
+("warning", $warning)
+("danger",  $danger)
+;
+
+//NOTE: Material height must remain px value
+$material-switch-height: 15px ;
+
+
+//==========================================================================
+//  Tabs GLOBAL Configs
+//==========================================================================
+$tabs-background               : $medium-gray;
+$tabs-background-active        : $white;
+$tabs-toggle-background        : $medium-gray;
+$tabs-toggle-background-active : $white;
+$tabs-border                   : $medium-gray;
+$tabs-font-color               : $body-font-color;
+$tabs-font-color-active        : #414152;
+$tabs-border-active            : 3px solid $primary;
+$tabs-color-active             : $primary;
+$tabs-boxed-radius             : 4px 4px 0 0;
+$tabs-boxed-font-color         : #414152;
+$tabs-toggle-font-color        : #414152;
+$tabs-toggle-radius            : 0;
+$tabs-boxed-default-padding    : rem-calc(10 60);
+$tabs-text-default-padding     : rem-calc(6 12);
+$tab-sizes:
+("sm", rem-calc(3 6), rem-calc(11))
+("lg", rem-calc(12 24), rem-calc(18))
+;
+
+
+//==========================================================================
+//  Table GLOBAL Configs
+//==========================================================================
+$table-background        : $white!default;
+$table-border-color      : $white;
+$table-border-radius     : 0 !default;
+$table-border            : none;
+$table-padding           : rem-calc(8 10 10)!default;
+$table-cell-padding      : rem-calc(12 0)!default;
+$table-cell-padding-sm   : rem-calc(2 12)!default;
+$table-row-hover         : none;
+$table-row-stripe-hover  : $table-row-hover!default;
+$table-striped-background: darken($white, 3%)!default;
+$table-stripe            : odd!default;
+$table-head-background   : $white;
+$table-transparent-head-background   : $white;
+$table-foot-background   : $medium-gray!default;
+$table-header-font-size  : rem-calc(12)!default;
+$table-cell-font-size  : rem-calc(12)!default;
+$table-head-font-color   : $body-font-color!default;
+$table-foot-font-color   : $body-font-color!default;
+$show-header-for-stacked : false!default;
+
+//==========================================================================
+//  Horizontal Nav GLOBAL Configs
+//==========================================================================
+$fontAwesome                          : "FontAwesome";
+$nav-logo-width                       : 100px;
+$nav-logo-height                      : 100%;
+$nav-base-text-color                  : $white;
+$nav-link-text-color                  : $nav-base-text-color;
+$main-nav-color                       : $primary;
+$level-2-nav-color                    : #324655;
+$nav-base-font-size                   : 12px;
+
+//==========================================================================
+//  Vertical Nav GLOBAL Configs
+//==========================================================================
+$vertical-nav-width              : 120px;
+$vertical-nav-padding            : 1.3em;
+$vertical-nav-button-size        : 6.25em;
+$vertical-nav-background         : #000000;
+$vertical-nav-link-color         : #e5e5e5;
+$vertical-nav-separator-color    : #333333;
+$vertical-nav-hover-color        : #3f3f3f;
+$vertical-nav-active-color       : #c5c5c5;
+$vertical-nav-disabled-color     : #666666;
+$vertical-nav-active-shadow-color: #1b1b1b;
+
+
+//==========================================================================
+//  Nav Tree GLOBAL Configs
+//==========================================================================
+$nav-tree-font: Arial !default;
+$nav-tree-title-font-size: 10px !default;
+$nav-tree-item-font-size: 20px !default;
+$nav-tree-item-color: #484848 !default;
+$nav-tree-item-color-hover: #0aa5ff !default;
+$nav-tree-font-weight: bold !default;
+$nav-tree-title-color: #a0a0a0 !default;
+
+
+//==========================================================================
+//  Footer GLOBAL Configs
+//==========================================================================
+$ipreo-footer-font-size       : rem-calc(12);
+$ipreo-footer-color           : $white;
+$ipreo-footer-background-color: $primary;
+$ipreo-footer-padding         : rem-calc(12 24);
+$ipreo-footer-trans-font-size : rem-calc(14);
+$ipreo-footer-trans-color     : $black;
+
+
+//==========================================================================
+//  Forms GLOBAL Configs
+//==========================================================================
+$control-font-size          : 14px;
+$control-placeholder-c      : #a0a0a8;
+$control-border             : #bababa;
+/* stylelint-enable */

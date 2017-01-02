@@ -1,0 +1,59 @@
+{
+  "name": "cupcake",
+  "version": "1.0.0",
+  "description": "A CSS framework.",
+  "repository": "Cupcake",
+  "main": "dist/default.css",
+  "ignore": [
+    ".github",
+    ".gitignore",
+    ".npmignore",
+    ".stylelintrc",
+    "backstop.conf.js",
+    "package.json",
+    "src"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "backstopjs": "^2.3.5",
+    "browser-sync": "^2.18.5",
+    "copy": "^0.3.0",
+    "download-cli": "^1.0.1",
+    "node-sass": "^3.13.1",
+    "npm-run-all": "^2.3.0",
+    "onchange": "^2.5.0",
+    "postcss-cli": "^2.6.0",
+    "rimraf": "^2.5.4",
+    "stylefmt": "^5.0.3",
+    "stylelint": "^7.7.1",
+    "stylelint-config-standard": "^15.0.1",
+    "stylelint-declaration-use-variable": "^1.6.0",
+    "stylelint-scss": "^1.4.1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "run-p build watch watch-html serve",
+    "build": "run-s clean copy sass autoprefixer",
+    "clean": "rimraf dist",
+    "sync-style": "download https://assets.brand.ai/ipreo/primary-brand/_style-params.scss?key=HklVhNWBx > src/base/tokens.scss",
+    "sass-default": "node-sass --output-style expanded src/default/default.scss dist/default/default.css && node-sass --output-style compressed src/default/default.scss dist/default/default.min.css",
+    "sass-bd": "node-sass --output-style expanded src/bd/bd.scss dist/bd/bd.css && node-sass --output-style compressed src/bd/bd.scss dist/bd/bd.min.css",
+    "sass-pcs": "node-sass --output-style expanded src/pcs/pcs.scss dist/pcs/pcs.css && node-sass --output-style compressed src/pcs/pcs.scss dist/pcs/pcs.min.css",
+    "copy": "copy src/bd/fonts/* dist/bd/fonts/",
+    "sass": "run-s sass-default && run-s sass-bd && run-s sass-pcs",
+    "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
+    "watch": "onchange 'src' -- run-s build reload",
+    "watch-html": "onchange 'index.html' -- run-s reload",
+    "reload": "browser-sync reload",
+    "serve": "browser-sync start --no-notify -s ./ --ss dist -f dist",
+    "test": "run-s lint",
+    "lint": "stylelint src/**/*.scss --syntax scss --config .stylelintrc.json",
+    "backstop": "run-s build && run-p serve compare",
+    "reference": "backstop reference --configPath=backstop.conf.js",
+    "compare": "backstop test --configPath=backstop.conf.js",
+    "prestart": "npm install",
+    "pretest": "npm install"
+  }
+}
