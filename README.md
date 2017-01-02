@@ -16,7 +16,7 @@ Cupcake is currently published as two npm packages:
 
 ### Installing Cupcake Core
 
-1. Install Clarity UI package through npm:
+1. Install Cupcake-core package through npm:
     ```bash
     npm install cupcake --save
     ```
