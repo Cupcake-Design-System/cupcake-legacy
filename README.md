@@ -50,7 +50,7 @@ The Cupacake team welcomes & encourages contributions. For more detailed informa
 ## Feedback 
 
 If you find a bug or want to request a new feature, please open a [GitHub issue](link).
-If possible please provide a minimal demo illustrating the issue with https://cupcake.io
+If possible please provide a minimal demo illustrating the issue with https://codepen.io
 - Fork the Cupcake [codepen template](link) here and submit your link with the issue.
 - 
 ### Community
