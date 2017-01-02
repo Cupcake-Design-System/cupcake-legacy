@@ -5270,8 +5270,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #343434 #343434 #343434;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #575757, #484848 66%, #3e3e3e);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #575757, #484848 66%, #3e3e3e);
+  background: #484848;
 }
 
 .ipreo-btn-primary:focus {
@@ -5296,8 +5295,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #349e40 #349e40 #349e40;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #53c760, #3ebd4c 66%, #39ae46);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #53c760, #3ebd4c 66%, #39ae46);
+  background: #3ebd4c;
 }
 
 .ipreo-btn-success:focus {
@@ -5322,8 +5320,7 @@ dl.ipreo-dl-unstyled li {
   color: #777777;
   border-color: #dadada #dadada #dadada;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #fdfdfd, #eeeeee 66%, #e4e4e4);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #fdfdfd, #eeeeee 66%, #e4e4e4);
+  background: #eeeeee;
 }
 
 .ipreo-btn-default:focus {
@@ -5348,8 +5345,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #e27b09 #e27b09 #e27b09;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #f79e3b, #f68f1e 66%, #f5850a);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #f79e3b, #f68f1e 66%, #f5850a);
+  background: #f68f1e;
 }
 
 .ipreo-btn-warning:focus {
@@ -5374,8 +5370,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #ca372c #ca372c #ca372c;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #dc6a61, #d75248 66%, #d34237);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #dc6a61, #d75248 66%, #d34237);
+  background: #d75248;
 }
 
 .ipreo-btn-danger:focus {
@@ -5839,8 +5834,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #343434 #343434 #343434;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #575757, #484848 66%, #3e3e3e);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #575757, #484848 66%, #3e3e3e);
+  background: #484848;
 }
 
 .ipreo-btn-primary-stepper:hover {
@@ -5858,8 +5852,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #349e40 #349e40 #349e40;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #53c760, #3ebd4c 66%, #39ae46);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #53c760, #3ebd4c 66%, #39ae46);
+  background: #3ebd4c;
 }
 
 .ipreo-btn-success-stepper:hover {
@@ -5877,8 +5870,7 @@ dl.ipreo-dl-unstyled li {
   color: #777777;
   border-color: #dadada #dadada #dadada;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #fdfdfd, #eeeeee 66%, #e4e4e4);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #fdfdfd, #eeeeee 66%, #e4e4e4);
+  background: #eeeeee;
 }
 
 .ipreo-btn-default-stepper:hover {
@@ -5896,8 +5888,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #e27b09 #e27b09 #e27b09;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #f79e3b, #f68f1e 66%, #f5850a);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #f79e3b, #f68f1e 66%, #f5850a);
+  background: #f68f1e;
 }
 
 .ipreo-btn-warning-stepper:hover {
@@ -5915,8 +5906,7 @@ dl.ipreo-dl-unstyled li {
   color: #fefefe;
   border-color: #ca372c #ca372c #ca372c;
   border-radius: 4px;
-  background-image: linear-gradient(to bottom, #dc6a61, #d75248 66%, #d34237);
-  background-image: linear-gradient(to inverse-side(to) inverse-side(bottom), #dc6a61, #d75248 66%, #d34237);
+  background: #d75248;
 }
 
 .ipreo-btn-danger-stepper:hover {

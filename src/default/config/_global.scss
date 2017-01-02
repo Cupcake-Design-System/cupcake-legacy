@@ -166,7 +166,7 @@ $btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48);
 $btn-shadows: true !default;
 
 // Button gradients (true = gradients - false = solid)
-$btn-gradients: true !default;
+$btn-gradients: false !default;
 
 // Button outlines - if true outline btns will be generated (eg. .ipreo-btn-primary-outline)
 $btn-outlines: true !default;
