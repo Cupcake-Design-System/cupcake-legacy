@@ -5,3 +5,4 @@ Thumbs.db
 logs
 node_modules
 npm-debug.log*
+dist

@@ -4,6 +4,7 @@
   "description": "A CSS framework.",
   "repository": "Cupcake",
   "main": "dist/default.css",
+  "publishConfig":{"registry":"https://ipreo.jfrog.io/ipreo/api/npm/npm"},
   "ignore": [
     ".github",
     ".gitignore",
@@ -41,7 +42,7 @@
     "sass-default": "node-sass --output-style expanded src/default/default.scss dist/default/default.css && node-sass --output-style compressed src/default/default.scss dist/default/default.min.css",
     "sass-bd": "node-sass --output-style expanded src/bd/bd.scss dist/bd/bd.css && node-sass --output-style compressed src/bd/bd.scss dist/bd/bd.min.css",
     "sass-pcs": "node-sass --output-style expanded src/pcs/pcs.scss dist/pcs/pcs.css && node-sass --output-style compressed src/pcs/pcs.scss dist/pcs/pcs.min.css",
-    "copy": "copy src/bd/fonts/* dist/bd/fonts/",
+    "copy": "copy src/fonts/* dist/fonts/",
     "sass": "run-s sass-default && run-s sass-bd && run-s sass-pcs",
     "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
     "watch": "onchange 'src' -- run-s build reload",

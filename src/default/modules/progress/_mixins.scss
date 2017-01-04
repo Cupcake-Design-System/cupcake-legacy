@@ -85,6 +85,9 @@
   }
 }
 
+
+
+//height, bg, color, radius
 .ipreo-progress-full {
-  @include full-progress(3rem, grey, purple, 3px);
+  @include full-progress();
 }
