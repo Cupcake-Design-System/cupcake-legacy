@@ -1,0 +1,43 @@
+{
+    "non-interactive": false,
+    "dry-run": false,
+    "verbose": false,
+    "force": false,
+    "pkgFiles": ["package.json"],
+    "increment": "patch",
+    "prereleaseId": null,
+    "commitMessage": "Release %s",
+    "tagName": "%s",
+    "tagAnnotation": "Release %s",
+    "buildCommand": false,
+    "changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
+    "requireCleanWorkingDir": false,
+    "src": {
+        "pushRepo": "git@code.ipreo.com:Ipreo/Cupcake.git",
+        "beforeStartCommand": false,
+        "beforeStageCommand": false,
+        "afterReleaseCommand": false
+    },
+    "dist": {
+        "repo": "git@code.ipreo.com:Ipreo/cupcake.git#gh-pages",
+        "stageDir": ".stage",
+        "baseDir": "dist",
+        "files": ["**/*"],
+        "pkgFiles": null,
+        "beforeStageCommand": false,
+        "afterReleaseCommand": false
+    },
+    "npm": {
+        "publish": false,
+        "publishPath": ".",
+        "tag": "latest",
+        "private": false,
+        "forcePublishSourceRepo": false
+    },
+    "github": {
+        "release": false,
+        "releaseName": "Release %s",
+        "tokenRef": ""
+  },
+  "changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]"
+}
