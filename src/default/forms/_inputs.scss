@@ -69,8 +69,8 @@ select.ipreo-input {
 }
 
 @each $ng-state, $color in $control-ng-validation {
-  .ipreo-ng-validate.#{$ng-state},
-  .ipreo-ng-validate-form .#{$ng-state} {
+  .ipreo-ng-validate.ng-dirty.#{$ng-state},
+  .ipreo-ng-validate-form .ng-dirty.#{$ng-state} {
     @extend .ipreo-input-#{$color};
   }
 }

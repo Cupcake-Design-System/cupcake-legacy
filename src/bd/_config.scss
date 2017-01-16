@@ -148,10 +148,16 @@ $breadcrumbs-item-slash         : true ;
 //==========================================================================
 //  Button GLOBAL Configs
 //==========================================================================
-$btn-font-family    : $body-font-family;
-$btn-font-size      : rem-calc(14);
-$btn-font-weight    : 600;
-$btn-radius         : rem-calc(3) ;
+$btn-font-family          : $body-font-family ;
+$btn-font-size            : rem-calc(14) ;
+$btn-font-weight          : 600 ;
+$btn-radius               : rem-calc(3) ;
+
+$btn-disabled-c           : rgba($darkest-gray, 0.35) ;
+$btn-disabled-bg          : #f9f9f9 ;
+$btn-disabled-bd          : 1px solid #d9d9d9 ;
+$btn-disabled-text-shadow : none ;
+$btn-disabled-opacity     : 1 ;
 
 // Button shadows add box-shadow to buttons
 $btn-shadows        : false ;
