@@ -1,0 +1,62 @@
+@mixin label {
+  display: block;
+  width: 100%;
+  padding: $control-label-padding;
+  cursor: pointer;
+}
+
+@mixin input {
+  display: block;
+  width: 100%;
+  padding: $control-padding;
+  border: $control-border-width solid $control-border;
+  border-radius: $control-border-radius;
+  outline: 0;
+  background-color: $control-background;
+  font-family: inherit;
+  font-size: $control-font-size;
+  font-weight: $control-font-weight;
+  resize: vertical;
+  appearance: none;
+  transition: $control-transition;
+
+  &::placeholder {
+    color: $control-placeholder-c;
+  }
+
+  &:hover,
+  &#{&}-hover {
+    border-color: $control-hover-border;
+  }
+
+  &:focus,
+  &#{&}-focus {
+    border-color: $control-active-border;
+  }
+
+  &[disabled],
+  &-disabled {
+    &,
+    &:hover {
+      @include input-disabled;
+    }
+
+    & ~ .c-input-icon {
+      color: $control-disabled-border;
+    }
+  }
+
+  &-inline {
+    display: inline;
+  }
+
+  &-container {
+    position: relative;
+  }
+}
+
+@mixin input-disabled {
+  border-color: $control-disabled-border;
+  background-color: $control-disabled-background;
+  cursor: not-allowed;
+}

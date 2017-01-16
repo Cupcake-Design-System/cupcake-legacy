@@ -1,0 +1,124 @@
+// Display
+$displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex';
+
+@each $display in $displays {
+  .c-display-#{$display} {
+    display: #{$display};
+  }
+
+  .c-display-#{$display}-mobile {
+    @include mobile {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-tablet {
+    @include tablet {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-tablet-only {
+    @include tablet-only {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-touch {
+    @include touch {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-desktop {
+    @include desktop {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-desktop-only {
+    @include desktop-only {
+      display: #{$display} !important;
+    }
+  }
+
+  .c-display-#{$display}-widescreen {
+    @include widescreen {
+      display: #{$display} !important;
+    }
+  }
+}
+
+// Float
+
+.c-display-clearfix {
+  @include clearfix;
+}
+
+.c-display-pulled-left {
+  float: left;
+}
+
+.c-display-pulled-right {
+  float: right;
+}
+
+// Overflow
+
+.c-display-clipped {
+  overflow: hidden !important;
+}
+
+// Overlay
+
+.c-display-overlay {
+  @include overlay;
+}
+
+.c-display-hidden {
+  display: none !important;
+}
+
+.c-display-hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-tablet-only {
+  @include tablet-only {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-touch {
+  @include touch {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-desktop-only {
+  @include desktop-only {
+    display: none !important;
+  }
+}
+
+.c-display-hidden-widescreen {
+  @include widescreen {
+    display: none !important;
+  }
+}
+
+// Other

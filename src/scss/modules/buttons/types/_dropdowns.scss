@@ -1,0 +1,70 @@
+/*
+* ==========================================================================
+* Button Dropdowns
+* ==========================================================================
+*/
+
+.c-btn-dropdown {
+  @include btn-base();
+
+  box-shadow: none;
+  margin: 0;
+}
+
+.c-dropdown {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+
+  &-right {
+    float: right;
+  }
+}
+
+.c-dropdown-list {
+  @include dropdown-list;
+
+  &-right {
+    right: 0;
+    left: auto;
+  }
+
+  &-below {
+    top: 100%;
+    border-radius: 0 0 $global-radius $global-radius;
+  }
+
+  &-above {
+    bottom: 100%;
+    margin-bottom: 0;
+    top: auto;
+    border-bottom: 0;
+    border-radius: $global-radius $global-radius 0 0;
+    box-shadow: $dropdown-box-shadow;
+  }
+}
+
+.c-dropdown-list > li {
+  padding: 0;
+  margin: 0;
+  display: block;
+
+  > a {
+    display: block;
+    font-size: $dropdown-font-size;
+    padding: $dropdown-padding;
+    font-weight: $dropdown-font-weight;
+    color: $dropdown-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $dropdown-color-hover;
+      background: $dropdown-background-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.c-dropdown-divider {
+  border-top: $dropdown-border;
+}

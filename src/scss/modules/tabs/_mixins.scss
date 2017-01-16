@@ -1,0 +1,54 @@
+@mixin tabs {
+  align-items: stretch;
+  display: flex;
+  white-space: nowrap;
+  border-bottom: $tabs-borders;
+  font-size: $tabs-font-size-default;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin tab-item {
+  align-items: center;
+  color: $tabs-color;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@mixin tab-item-link {
+  margin: 0;
+  text-align: center;
+  color: $tabs-color;
+  flex: auto;
+  justify-content: center;
+  padding: $tabs-text-default-padding;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+
+  a {
+    color: $tabs-color-active;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $tabs-color-active;
+    transition: $tabs-hover-tranisition;
+    color: $tabs-color-active;
+  }
+}
+
+@mixin tab-item-active {
+  border-bottom: 2px solid $tabs-color-active;
+  color: $tabs-color-active;
+
+  a {
+    color: $tabs-color-active;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $tabs-color-active;
+  }
+}
+
+

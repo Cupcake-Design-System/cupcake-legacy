@@ -1,0 +1,47 @@
+.c-footer {
+  @include create-row();
+  @include row-justify(space-between);
+
+  color: $ipreo-footer-color;
+  font-size: $ipreo-footer-font-size;
+  background-color: $ipreo-footer-background-color;
+  padding: $ipreo-footer-padding;
+  z-index: map-get($zindex, footer);
+  width: 100%;
+
+  &-link {
+    margin-left: rem-calc(10);
+    display: inline-block;
+    background-color: transparent;
+
+    a {
+      color: $ipreo-footer-color;
+    }
+
+    @include breakpoint(sm) {
+      text-align: center;
+    }
+  }
+
+  @include breakpoint(md down) {
+    text-align: center;
+    display: inline-block;
+  }
+
+  &.c-footer-transparent {
+    color: $ipreo-footer-trans-color;
+    font-size: $ipreo-footer-trans-font-size;
+    background-color: transparent;
+    z-index: map-get($zindex, footer);
+
+    .c-footer-right {
+      .c-footer-link {
+        a {
+          color: $ipreo-footer-trans-color;
+        }
+      }
+    }
+  }
+}
+
+

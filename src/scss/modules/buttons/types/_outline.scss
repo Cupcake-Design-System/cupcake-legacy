@@ -1,0 +1,84 @@
+/*
+* ==========================================================================
+* Button Outlines
+* ==========================================================================
+*/
+@mixin btn-outline($color, $border-color, $color-hover, $border-color-hover) {
+  border: 1px solid $border-color;
+  background-color: transparent;
+  color: $color;
+
+  &.c-btn-outline-active {
+    border-color: $border-color-hover;
+    color: $color-hover;
+    background-color: transparent;
+    box-shadow: $btn-shadow-outline;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: transparent;
+      color: $color-hover;
+      border: 1px solid $border-color-hover;
+    }
+
+    &:active {
+      border-color: $border-color-hover;
+      color: $color-hover;
+      background-color: transparent;
+      box-shadow: $btn-shadow-outline;
+    }
+  }
+}
+
+@if $btn-outlines == true {
+  @each $pair in $outline-btn-colors {
+    .c-btn-#{nth($pair, 1)}-outline {
+      $font-color: nth($pair, 2);
+      $color: nth($pair, 2);
+      $hover-font-color: nth($pair, 3);
+
+      background: transparent;
+      color: $font-color;
+      border: 1px solid $color;
+      transition: all 0.4s ease 0s;
+
+      &:hover {
+        background: $font-color;
+        color: $hover-font-color;
+      }
+
+      &.c-btn-active {
+        background: $color;
+        color: $hover-font-color;
+        border-color: darken($color, 20%);
+        opacity: 1;
+      }
+    }
+  }
+
+  @each $pair in $outline-btn-colors {
+    .c-btn-#{nth($pair, 1)}-outline-stepper {
+      $font-color: nth($pair, 2);
+      $color: nth($pair, 2);
+      $hover-font-color: nth($pair, 3);
+
+      background: transparent;
+      color: $font-color;
+      border: 1px solid $color;
+      transition: all 0.4s ease 0s;
+
+      &:hover {
+        background: $font-color;
+        color: $hover-font-color;
+      }
+
+      &.c-btn-active {
+        background: $color;
+        color: $hover-font-color;
+        border-color: darken($color, 20%);
+        opacity: 1;
+      }
+    }
+  }
+}
