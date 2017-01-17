@@ -65,15 +65,9 @@ select.c-input {
 }
 
 @each $ng-state, $color in $control-ng-validation {
-<<<<<<< HEAD:src/default/forms/_inputs.scss
-  .ipreo-ng-validate.ng-dirty.#{$ng-state},
-  .ipreo-ng-validate-form .ng-dirty.#{$ng-state} {
-    @extend .ipreo-input-#{$color};
-=======
   .c-ng-validate.#{$ng-state},
   .c-ng-validate-form .#{$ng-state} {
     @extend .c-input-#{$color};
->>>>>>> gulpANDc-:src/scss/forms/_inputs.scss
   }
 }
 
