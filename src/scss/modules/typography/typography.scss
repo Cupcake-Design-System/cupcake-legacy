@@ -1,0 +1,195 @@
+@import "mixins";
+
+// Base typography styles (tags only)
+
+.c-body-text,
+.c-p {
+  font-size: $body-font-size;
+  color: $body-font-color;
+  line-height: $body-lineheight;
+  margin: 0;
+  padding: 0;  
+  margin-bottom: $body-margin-bottom;
+  text-rendering: $body-text-rendering;
+
+  &-lg {
+    font-size: $body-font-size-lg;
+  }
+}
+
+// Emphasized text
+.c-text-em,
+.c-text-italic {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+.c-text-strong,
+.c-text-bold {
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.c-a,
+.c-link {
+  color: $anchor-color;
+  text-decoration: $anchor-text-decoration;
+  line-height: inherit;
+  cursor: pointer;
+
+  &-active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $anchor-color-hover;
+
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// Horizontal rule
+.c-hr {
+  max-width: $hr-width;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: $hr-border;
+  border-left: 0;
+  margin: $hr-margin;
+  clear: both;
+}
+
+
+ul.c-ul,
+ol.c-ol,
+dl.c-dl {
+  line-height: $list-lineheight;
+  margin-bottom: $list-margin-bottom;
+  list-style-position: $list-style-position;
+  font-size: $list-font-size;
+  color: $list-color;
+
+  li ul {
+    margin-bottom: 0;
+  }
+}
+
+ol.c-ol li {
+  margin-left: $list-side-margin;
+}
+
+ul.c-ul {
+  li {
+    list-style-type: $list-style-type;
+    margin-left: $list-side-margin;
+
+    & & {
+      margin-left: $list-nested-side-margin;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// List items
+.c-li {
+  font-size: inherit;
+}
+
+// Unordered lists
+// Ordered lists
+.c-ol {
+  margin-left: $list-side-margin;
+
+  // Nested lists
+  & & {
+    margin-left: $list-nested-side-margin;
+    margin-bottom: 0;
+  }
+}
+
+ul.c-ul-unstyled,
+ol.c-ol-unstyled,
+dl.c-dl-unstyled {
+  &,
+  & li {
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+
+// Definition lists
+.c-dl {
+  margin-bottom: $defnlist-margin-bottom;
+
+  .c-dt {
+    margin-bottom: $defnlist-term-margin-bottom;
+    font-weight: $defnlist-term-weight;
+  }
+}
+
+// Blockquotes
+.c-blockquote {
+  font-size: $blockquote-font-size;
+  margin: 0 0 $body-margin-bottom;
+  padding: $blockquote-padding;
+  border-left: $blockquote-border;
+}
+
+// Citations
+.c-cite {
+  display: block;
+  font-size: $cite-font-size;
+  color: $cite-color;
+  font-weight: bold;
+  font-style: normal;
+
+  &::before {
+    content: '\2014 \0020';
+  }
+}
+
+// Helpers
+// Use to remove the bullets from an unordered list
+.c-no-bullet {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Emphasized text
+.c-text-em,
+.c-text-italic {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+.c-text-strong,
+.c-text-bold {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+// Small text
+.c-text-small {
+  font-size: $small-font-size;
+  line-height: inherit;
+}
+
+
+//simple mixin example
+.c-header-primary {
+  @include header-styles(45px, blue, 900);
+}
+
+.c-subheader-secondary {
+  @include header-styles(35px, green, bold);
+}

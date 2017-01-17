@@ -1,0 +1,221 @@
+@mixin responsive-spaces {
+  // Spaces based on breakpoints
+  // $spaces: (xs: 5, sm: 10, md: 15, lg: 30, xl: 45,);
+  $spaces: (sm: 10, md: 15,);
+  $directions: (top, right, bottom, left);
+
+  // Responsive stepped percentages
+  $xs-percentage: .5;
+  $sm-percentage: $xs-percentage / 3 + $xs-percentage;
+  $md-percentage: $sm-percentage / 3 + $sm-percentage;
+
+  @each $direction in $directions {
+    @each $name, $space in $spaces {
+      // .c-m-top-md
+      .c-m-#{$direction}-#{$name},
+      %m-#{$direction}-#{$name} {
+        margin-#{$direction}: rem($space * $xs-percentage);
+
+        @include breakpoint(sm) {
+          margin-#{$direction}: rem($space * $sm-percentage);
+        }
+
+        @include breakpoint(md) {
+          margin-#{$direction}: rem($space * $md-percentage);
+        }
+
+        @include breakpoint(lg) {
+          margin-#{$direction}: rem($space);
+        }
+      }
+
+      // .c-m-md
+      .c-m-#{$name},
+      %m-#{$name} {
+        margin: rem($space * $xs-percentage);
+
+        @include breakpoint(sm) {
+          margin: rem($space * $sm-percentage);
+        }
+
+        @include breakpoint(md) {
+          margin: rem($space * $md-percentage);
+        }
+
+        @include breakpoint(lg) {
+          margin: rem($space);
+        }
+      }
+
+      // .c-p-top-sm
+      .c-p-#{$direction}-#{$name},
+      %p-#{$direction}-#{$name} {
+        padding-#{$direction}: rem($space * $xs-percentage);
+
+        @include breakpoint(sm) {
+          padding-#{$direction}: rem($space * $sm-percentage);
+        }
+
+        @include breakpoint(md) {
+          padding-#{$direction}: rem($space * $md-percentage);
+        }
+
+        @include breakpoint(lg) {
+          padding-#{$direction}: rem($space);
+        }
+      }
+
+      // .c-p-sm
+      .c-p-h-#{$name},
+      %p-#{$name} {
+        padding: 0 rem($space * $xs-percentage);
+
+        @include breakpoint(sm) {
+          padding: 0 rem($space * $sm-percentage);
+        }
+
+        @include breakpoint(md) {
+          padding: 0 rem($space * $md-percentage);
+        }
+
+        @include breakpoint(lg) {
+          padding: 0 rem($space);
+        }
+      }
+
+      // .c-p-sm
+      .c-p-#{$name},
+      %p-#{$name} {
+        padding: rem($space * $xs-percentage);
+
+        @include breakpoint(sm) {
+          padding: rem($space * $sm-percentage);
+        }
+
+        @include breakpoint(md) {
+          padding: rem($space * $md-percentage);
+        }
+
+        @include breakpoint(lg) {
+          padding: rem($space);
+        }
+      }
+    }
+  }
+}
+
+// px to rem converter
+
+@function rem($pxval) {
+  $default-font-size-base: 16;
+
+  @return ($pxval / $default-font-size-base) * 1rem;
+}
+
+// breakpoint helper
+@mixin breakpoint($point: xs) {
+  $screen-xs-max-width: 767;
+  $screen-sm-min-width: 768;
+  $screen-sm-max-width: 991;
+  $screen-md-min-width: 992;
+  $screen-md-max-width: 1199;
+  $screen-lg-min-width: 1200;
+
+  @if $point == xs {
+    @media (max-width: rem($screen-xs-max-width)) {
+      @content;
+    }
+  }
+
+  @else if $point == sm {
+    @media (min-width: rem($screen-sm-min-width)) {
+      @content;
+    }
+  }
+
+  @else if $point == md {
+    @media (min-width: rem($screen-md-min-width)) {
+      @content;
+    }
+  }
+
+  @else if $point == lg {
+    @media (min-width: rem($screen-lg-min-width)) {
+      @content;
+    }
+  }
+}
+
+@mixin spaces-padding {
+  // Spaces based on breakpoints
+  $spaces: (xs: 5, sm: 10, md: 15, lg: 30, xl: 45,);
+  $directions: (top, right, bottom, left);
+
+  // Responsive stepped percentages
+  $xs-percentage: .5;
+  $sm-percentage: $xs-percentage / 3 + $xs-percentage;
+  $md-percentage: $sm-percentage / 3 + $sm-percentage;
+
+  @each $direction in $directions {
+    @each $name, $space in $spaces {
+      // .c-p-{top,right,bottom,left}-sm
+      .c-padding-#{$direction}-#{$name} {
+        padding-#{$direction}: rem($space * $xs-percentage);
+      }
+
+      // .c-p-h-sm
+      .c-padding-horizontal-#{$name} {
+        padding: 0 rem($space * $xs-percentage);
+      }
+
+      // .c-p-v-sm
+      .c-padding-vertical-#{$name} {
+        padding: rem($space * $xs-percentage) 0;
+      }
+
+      // .c-p-sm
+      .c-padding-#{$name} {
+        padding: rem($space * $xs-percentage);
+      }
+    }
+  }
+}
+
+@mixin spaces-margin {
+  // Spaces based on breakpoints
+  $spaces: (xs: 5, sm: 10, md: 15, lg: 30, xl: 45,);
+  $directions: (top, right, bottom, left);
+
+  // Responsive stepped percentages
+  $xs-percentage: .5;
+  $sm-percentage: $xs-percentage / 3 + $xs-percentage;
+  $md-percentage: $sm-percentage / 3 + $sm-percentage;
+
+  @each $direction in $directions {
+    @each $name, $space in $spaces {
+      // .c-p-{top,right,bottom,left}-sm
+      .c-margin-#{$direction}-#{$name} {
+        padding-#{$direction}: rem($space * $xs-percentage);
+      }
+
+      // .c-p-h-sm
+      .c-margin-horizontal-#{$name} {
+        padding: 0 rem($space * $xs-percentage);
+      }
+
+      // .c-p-v-sm
+      .c-margin-vertical-#{$name} {
+        padding: rem($space * $xs-percentage) 0;
+      }
+
+      // .c-p-sm
+      .c-margin-#{$name} {
+        padding: rem($space * $xs-percentage);
+      }
+    }
+  }
+}
+
+@include responsive-spaces;
+@include spaces-padding;
+@include spaces-margin;

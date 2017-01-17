@@ -1,0 +1,113 @@
+.c-input-label {
+  @include label;
+}
+
+.c-input {
+  @include input;
+
+  // input icons padding
+  &-right-icon {
+    padding-right: $control-padding * 4;
+  }
+
+  .c-input-icon + & {
+    padding-left: $control-padding * 4;
+  }
+}
+
+.c-input-icon {
+  @include vertical-center;
+  left: $control-padding;
+  color: $control-border;
+
+  .c-input ~ & {
+    left: auto;
+    right: $control-padding;
+  }
+}
+
+
+// SELECTS
+select.c-input {
+  cursor: pointer;
+
+  &:not([multiple]) {
+    line-height: normal;
+    padding-right: $control-select-padding-r;
+    // separate bg props - not to override default background
+    background-image: $control-select-background-img;
+    background-position: $control-select-background-pos;
+    background-repeat: no-repeat;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+
+// VALIDATION COLORS
+@each $name, $color in $control-colors {
+  .c-input-#{$name} {
+    &,
+    &:hover {
+      border-color: $color;
+    }
+
+    &:focus {
+      border-color: $control-active-border;
+    }
+
+    & ~ .c-input-icon {
+      color: $color;
+    }
+  }
+}
+
+@each $ng-state, $color in $control-ng-validation {
+<<<<<<< HEAD:src/default/forms/_inputs.scss
+  .ipreo-ng-validate.ng-dirty.#{$ng-state},
+  .ipreo-ng-validate-form .ng-dirty.#{$ng-state} {
+    @extend .ipreo-input-#{$color};
+=======
+  .c-ng-validate.#{$ng-state},
+  .c-ng-validate-form .#{$ng-state} {
+    @extend .c-input-#{$color};
+>>>>>>> gulpANDc-:src/scss/forms/_inputs.scss
+  }
+}
+
+@each $name, $size in $control-sizes {
+  .c-input-#{$name},
+  .c-input-label-#{$name} {
+    font-size: $size;
+  }
+}
+
+.c-input-addon {
+  display: flex;
+  align-items: center; // verticaly align all child elements
+  padding: 0 $control-padding;
+  font-size: $control-font-size;
+  border: 1px solid $control-border;
+  background-color: $control-addon-background;
+
+  &:first-child {
+    border-radius: $global-radius 0 0 $global-radius;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    border-left: 0;
+    border-radius: 0 $global-radius $global-radius 0;
+  }
+}
+
+.c-form-element {
+  position: relative;
+  padding: $control-element-padding;
+
+  .c-label:first-child {
+    padding: $control-element-label-padding;
+  }
+}

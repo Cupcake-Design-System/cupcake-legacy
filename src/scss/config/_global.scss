@@ -1,0 +1,610 @@
+//  Base Global Settings
+//  -----------------------------
+//
+/* stylelint-disable */
+@import '../utility/utility';
+
+// 1. Global
+// ---------
+$global-width                 : 100% !default;
+$global-lineheight            : 1.5 !default;
+$generate-chart-colors        : true !default;
+$generate-ticker-colors       : true !default;
+
+$body-font-family             : Arial, sans-serif !default;
+$body-font-color              : $body-font-color !default;
+$body-font-size               : rem-calc(16) !default;
+$body-font-size-lg            : rem-calc(18) !default;
+$body-lineheight              : 1.5 !default;
+$body-margin-bottom           : 1rem !default;
+$body-antialiased             : true !default;
+$body-text-rendering          : optimizeLegibility !default;
+
+$global-margin                : 1rem !default;
+$global-padding               : 1rem !default;
+$global-weight-normal         : normal !default;
+$global-weight-bold           : bold !default;
+$global-radius                : 3px !default;
+$global-text-direction        : ltr !default;
+$global-flexbox               : true !default;
+$print-transparent-backgrounds: true !default;
+
+$global-sidebar-max-width: 260px !default;
+$global-sidebar-background-color: #f5f5f5 !default;
+
+
+// 2. Breakpoints
+// --------------
+$breakpoints: (
+  sm: 0,
+  md: 640px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1440px,
+)!default;
+
+$breakpoint-classes: (sm md lg xl xxl)!default;
+
+
+// 4. Base Typography
+// ------------------
+$header-font-family   : $body-font-family !default;
+$header-font-weight   : $global-weight-bold !default;
+$header-font-style    : normal !default;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace!default;
+
+$header-sizes: (
+  sm: (
+    'xl': 24,
+    'lg': 20,
+    'md': 19,
+    'sm': 18,
+    'xs': 17,
+    'xxs': 16,
+    ),
+  md: (
+    'xl': 48,
+    'lg': 36,
+    'md': 28,
+    'sm': 18,
+    'xs': 16,
+    'xxs': 14,
+    ),
+)!default;
+
+$header-color                : inherit !default;
+$header-lineheight           : 1.4 !default;
+$header-margin-bottom        : 0.5rem !default;
+$header-text-rendering       : optimizeLegibility !default;
+$small-font-size             : 80% !default;
+$header-small-font-color     : $dark-gray !default;
+
+$anchor-color                : $primary !default;
+$anchor-color-hover          : lighten($primary, 14%) !default;
+$anchor-text-decoration      : none !default;
+$anchor-text-decoration-hover: none !default;
+$hr-width                    : $global-width !default;
+$hr-border                   : 1px solid #f2f2f2 !default;
+$hr-margin                   : rem-calc(20) auto !default;
+$list-font-size              : .9rem !default;
+$list-lineheight             : $body-lineheight !default;
+$list-margin-bottom          : $body-margin-bottom !default;
+$list-style-type             : disc !default;
+$list-style-position         : outside !default;
+$list-font-size              : .9rem !default;
+$list-ul-side-margin         : .6rem !default;
+$list-nested-side-margin     : 1.25rem !default;
+$list-color                  : $dark-gray !default;
+$list-padding                : 1.5rem !default;
+$list-ul-padding             : 1.9rem !default;
+$list-side-margin            : 1.25rem !default;
+$defnlist-margin-bottom      : 1rem !default;
+$defnlist-term-weight        : $global-weight-bold !default;
+$defnlist-term-margin-bottom : 0.3rem !default;
+$blockquote-color            : $darkest-gray !default;
+$blockquote-padding          : rem-calc(9 20 0 19) !default;
+$blockquote-border           : 3px solid $primary !default;
+$blockquote-font-size        : rem-calc(28) !default;
+$cite-font-size              : rem-calc(18) !default;
+$cite-color                  : $darkest-gray !default;
+
+//==========================================================================
+//  Badges GLOBAL Configs
+//==========================================================================
+$badge-padding: .25em .5em !default;
+$badge-border-width: 1px;
+$badge-border-style: solid;
+$badge-border-radius: 3px !default;
+$badge-border-radius-rounded: 30em !default;
+$badge-font-size: 1rem;
+$badge-font-weight: bold;
+$badge-line-height: 1.2;
+
+$badge-sizes:
+("xs", .5rem)
+("sm", .7rem)
+("lg", 1.25rem)
+("xl", 1.5rem)
+!default;
+
+$badge-colors: 
+("primary", $primary, $primary)
+("success", $success, $success)
+("danger", $danger, $danger) 
+("warning", $warning, $warning) 
+!default;
+
+// . Breadcrumbs
+// ---------------
+$breadcrumbs-margin             : 0 0 $global-margin 0 !default;
+$breadcrumbs-item-font-size     : rem-calc(11) !default;
+$breadcrumbs-item-color         : $primary !default;
+$breadcrumbs-item-color-current : $black !default;
+$breadcrumbs-item-color-disabled: $medium-gray !default;
+$breadcrumbs-item-margin        : 0.75rem !default;
+$breadcrumbs-item-uppercase     : true !default;
+$breadcrumbs-item-slash         : true !default;
+
+//==========================================================================
+//  Button GLOBAL Configs
+//==========================================================================
+$btn-font-family      : $body-font-family !default;
+$btn-font-size        : rem-calc(14) !default;
+$btn-line-height      : 1 !default;
+$btn-default-padding-v: .5em !default;
+$btn-default-padding-h: 1.25em !default;
+$btn-font-weight      : bold !default;
+$btn-border-width     : 1px !default;
+$btn-radius           : 4px !default;
+$btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05);
+$btn-shadow-active    : inset 0 0 4px rgba(black, .54);
+$btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48);
+
+// Button shadows add box-shadow to buttons
+$btn-shadows: true !default;
+
+// Button gradients (true = gradients - false = solid)
+$btn-gradients: false !default;
+
+// Button outlines - if true outline btns will be generated (eg. .c-btn-primary-outline)
+$btn-outlines: true !default;
+
+// Button disabled state
+$btn-disabled-c           : #ccc !default;
+$btn-disabled-bg          : #eee !default;
+$btn-disabled-bd          : 1px solid #ddd !default;
+$btn-disabled-text-shadow : 0 1px 1px rgba(255, 255, 255, 1) !default;
+$btn-disabled-opacity     : .8 !default;
+
+// BUTTON SIZES
+// This map is used to generate the different button sizes.
+// Edit or add sizes to the list below and recompile.
+// Each block contains the arguments (name, font-size).
+// The class is generated using the name: (ex .c-btn-sm).
+$btn-sizes:
+("c-btn-sm", rem-calc(10))
+("c-btn-lg", rem-calc(18))
+!default;
+
+// BUTTON COLORS
+// This map is used to generate the different button colors.
+// Edit or add colors to the list below and recompile.
+// Each block contains the (name, background, color)
+// The class is generated using the name: (ex .c-btn-primary)
+$btn-colors:
+("primary", $primary, $white)
+("success", $success, $white)
+("default", $default, $secondary)
+("warning", $warning, $white)
+("danger", $danger, $white)
+!default;
+
+// Button colors without a border
+// Some button colors may be without a border
+// Add a color you want to be borderless, ex: ("primary")
+$btn-no-border:
+()
+!default;
+
+
+// Outline Button Colors
+// The class is generated using the name: (ex .c-btn-primary-outline)
+$outline-btn-colors:
+("primary", $primary, $white)
+("success", $success, $white)
+("default", $secondary, $white)
+("warning", $warning, $white)
+("danger", $danger, $white)
+!default;
+
+// BUTTON SHAPES
+// This map is used to generate the different button shapes.
+// Edit or add shapes to the list below and recompile.
+// Each block contains the (name, border-radius).
+// The class is generated using the name: (ex .c-btn-square).
+//
+$btn-shapes: (
+  square: 0,
+  box: $global-radius,
+  rounded: $global-radius,
+  pill: 200px,
+  circle: 100%
+) !default;
+
+//==========================================================================
+//  Alerts GLOBAL Configs
+//==========================================================================
+$alert-background    : $white !default;
+$alert-background-mix: 4% !default;
+$alert-border        : 1px solid rgba($black, 0.25) !default;
+$alert-margin        : 0 0 1rem 0 !default;
+$alert-padding       : 0.5rem !default;
+$alert-font-size     : rem-calc(14)!default;
+$alert-font-color    : $secondary !default;
+$alert-font-color-alt: $body-background !default;
+$alert-radius        : $global-radius !default;
+$alert-shadows       : true !default;
+$alert-style         : 'outline' !default;
+$alert-icon-width    : rem-calc(40) !default;
+$alert-colors        : ("primary", $primary)
+("success", $success)
+("warning", $warning)
+("danger", $danger)
+!default;
+
+//==========================================================================
+//  Notifications GLOBAL Configs
+//==========================================================================
+$notify-z-index       : 99999;
+$notify-min-width     : rem-calc(390);
+$notify-width         : 25vw;
+$notify-screen-spacing: rem-calc(16);
+$notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Dropdowns
+// ------------
+$dropdown-padding         : 1rem !default;
+$dropdown-border          : 1px solid $light-gray !default;
+$dropdown-color           : $dark-gray !default;
+$dropdown-color-hover     : $primary !default;
+$dropdown-background-color: $white !default;
+$dropdown-background-hover: darken($default, 2%) !default;
+$dropdown-box-shadow      : 0 2px 7px rgba(0, 0, 0, 0.2) !default;
+$dropdown-font-size       : rem-calc(12) !default;
+$dropdown-font-weight     : bold !default;
+$dropdown-width           : 100% !default;
+$dropdown-radius          : $global-radius !default;
+
+
+//==========================================================================
+//  Cards GLOBAL Configs
+//==========================================================================
+$card-header-font-size    : rem-calc(14)!default;
+$card-body-font-size      : rem-calc(12)!default;
+$card-title-font-size     : rem-calc(18)!default;
+$card-subtitle-font-size  : rem-calc(16)!default;
+$card-text-color          : #4a4a4a!default;
+$card-header-text-color   : #a0a0a0!default;
+$card-border-color        : $light-gray !default;
+$card-bg                  : $white !default;
+$card-padding             : 0.9375rem !default;
+$card-shadow              : 1px 2px 5px $light-gray !default;
+$card-header-border-bottom: 1px solid rgba(177, 177, 177, 0.15)!default;
+$card-colors: 
+("primary", $primary, $primary)
+("success", $success, $success)
+("danger", $danger, $danger) 
+("warning", $warning, $warning) 
+!default;
+
+
+//==========================================================================
+//  Switch GLOBAL Configs
+//==========================================================================
+$switch-style            : "default";
+$default-switch-height   : rem-calc(30);
+$default-switch-font-size: rem-calc(10);
+$large-switch-font-size  : rem-calc(15);
+$switch-label-off        : $medium-gray;
+$switch-label-on         : $white;
+$switch-handle           : $white;
+
+$switch-sizes: (
+  xs: rem-calc(30),
+  sm: rem-calc(40),
+  lg: rem-calc(80)
+)!default;
+
+$switch-colors: ("primary", $primary)
+("success", $success)
+("default", $secondary)
+("warning", $warning)
+("danger", $danger)
+!default;
+
+//NOTE: Material height must remain px value
+$material-switch-height: 15px !default;
+
+//==========================================================================
+//  Tabs GLOBAL Configs
+//==========================================================================
+$tabs-borders: 1px solid #cecece!default;
+$tabs-border-radius: $global-radius!default;
+$tabs-color: $body-font-color!default;
+$tabs-color-hover: $primary!default;
+$tabs-color-active: $primary!default;
+$tabs-text-default-padding: rem-calc(6 12)!default;
+$tabs-bg: #eaeaea!default;
+$tabs-bg-hover: lighten($tabs-bg, 5%)!default;
+$tabs-bg-active: lighten($tabs-bg, 5%)!default;
+$tabs-bordered-space-between: 3px!default;
+$tabs-font-size-default: rem-calc(14)!default;
+$tabs-hover-tranisition: all 0.4s ease 0s;
+$tab-sizes:
+("xs", rem-calc(10))
+("sm", rem-calc(12))
+("lg", rem-calc(20))!default;
+
+//==========================================================================
+//  Table GLOBAL Configs
+//==========================================================================
+$table-background        : $white!default;
+$table-border-color      : $medium-gray!default;
+$table-border-radius     : 0 !default;
+$table-border            : 1px solid $table-border-color!default;
+$table-padding           : rem-calc(8 10 10)!default;
+$table-cell-padding      : rem-calc(12 12)!default;
+$table-cell-padding-sm   : rem-calc(2 12)!default;
+$table-row-hover         : #fff2cf!default;
+$table-row-stripe-hover  : $table-row-hover!default;
+$table-striped-background: darken($white, 3%)!default;
+$table-stripe            : odd!default;
+$table-head-background   : $light-gray!default;
+$table-transparent-head-background   : $light-gray!default;
+$table-foot-background   : $medium-gray!default;
+$table-head-font-color   : $body-font-color!default;
+$table-foot-font-color   : $body-font-color!default;
+$table-header-font-size  : rem-calc(12)!default;
+$table-cell-font-size    : rem-calc(12)!default;
+$show-header-for-stacked : false!default;
+
+$table-colors: ("primary", $primary)
+("success", $success)
+("default", $secondary)
+("warning", $warning)
+("danger", $danger)
+!default;
+
+//==========================================================================
+//  Horizontal Nav GLOBAL Configs
+//==========================================================================
+$fontAwesome        : "FontAwesome"!default;
+$nav-logo-width     : 100px!default;
+$nav-logo-height    : 100%!default;
+$nav-base-text-color: $white!default;
+$nav-link-text-color: $nav-base-text-color!default;
+$main-nav-color     : $primary!default;
+$level-2-nav-color  : darken($main-nav-color, 10%)!default;
+$nav-base-font-size : 12px!default;
+
+//==========================================================================
+//  Vertical Nav GLOBAL Configs
+//==========================================================================
+$vertical-nav-width              : 120px!default;
+$vertical-nav-padding            : 1.3em!default;
+$vertical-nav-button-size        : 6.25em!default;
+$vertical-nav-background         : #000000!default;
+$vertical-nav-link-color         : #e5e5e5!default;
+$vertical-nav-separator-color    : #333333!default;
+$vertical-nav-hover-color        : #3f3f3f!default;
+$vertical-nav-active-color       : #c5c5c5!default;
+$vertical-nav-disabled-color     : #666666!default;
+$vertical-nav-active-shadow-color: #1b1b1b!default;
+
+
+//==========================================================================
+//  Nav Tree GLOBAL Configs
+//==========================================================================
+$nav-tree-font:  Arial !default;
+$nav-tree-title-font-size: 10px !default;
+$nav-tree-item-font-size: 20px !default;
+$nav-tree-item-color: #484848 !default;
+$nav-tree-item-color-hover: #0aa5ff !default;
+$nav-tree-font-weight: bold !default;
+$nav-tree-title-color: #a0a0a0 !default;
+
+//==========================================================================
+//  Progress GLOBAL Configs
+//==========================================================================
+$progress-height: 1rem !default;
+$progress-background: #cccccc !default;
+$progress-margin-bottom: 1rem !default;
+$progress-radius: 100px !default;
+$progress-colors: 
+  ("primary", $primary)
+  ("success", $success)
+  ("default", $default) !default;
+
+//==========================================================================
+//  Pagination GLOBAL Configs
+//==========================================================================
+$pagination-margin-bottom        : $global-margin !default;
+$pagination-gradients            : true !default;
+$pagination-item-spacing         : rem-calc(4) !default;
+$pagination-font-size            : rem-calc(12) !default;
+$pagination-font-size-sm         : rem-calc(12) !default;
+$pagination-font-size-lg         : rem-calc(14) !default;
+$pagination-item-padding         : rem-calc(3 10) !default;
+$pagination-item-padding-sm      : rem-calc(1 5) !default;
+$pagination-item-padding-lg      : rem-calc(5) !default;
+$pagination-item-current-padding : rem-calc(3 10) !default;
+$pagination-item-border-radius   : 3px !default;
+$pagination-item-color           : #0a0a0a !default;
+$pagination-item-bg              : #eeeeee !default;
+$pagination-item-current-bg      : $primary !default;
+$pagination-item-current-color   : $white !default;
+$pagination-item-color-disabled  : #d8d8d8 !default;
+$pagination-item-color-sm        : #0a0a0a !default;
+$pagination-item-color-hover-sm  : #0082de !default;
+$pagination-item-current-color-sm: #0082de !default;
+
+//==========================================================================
+//  Footer GLOBAL Configs
+//==========================================================================
+$ipreo-footer-font-size       : rem-calc(12)!default;
+$ipreo-footer-color           : $white!default;
+$ipreo-footer-background-color: $primary!default;
+$ipreo-footer-padding         : rem-calc(12 24)!default;
+$ipreo-footer-trans-font-size : rem-calc(14)!default;
+$ipreo-footer-trans-color     : $black!default;
+
+
+//==========================================================================
+//  Forms GLOBAL Configs
+//==========================================================================
+$control-font-size              : 16px !default;
+$control-font-weight            : normal !default;
+$control-placeholder-c          : $dark-gray !default;
+$control-background             : $white !default;
+$control-padding                : .5em !default;
+$control-border                 : #e0e0e0 !default;
+$control-border-width           : 1px !default;
+$control-border-radius          : $global-radius !default;
+$control-border-radius-rounded  : 30em !default;
+$control-transition             : border-color 0.1s ease-in !default;
+
+$control-hover                  : $primary !default;
+$control-hover-border           : $primary !default;
+
+$control-active                 : $primary !default;
+//$control-active-background      : $primary !default;
+$control-active-border          : #0079bd !default;
+
+$control-disabled-border        : $light-gray !default;
+$control-disabled-background    : $disabled !default;
+
+$control-hint-color             : $header-small-font-color !default;
+$control-hint-font-size         : $small-font-size !default;
+$control-hint-transition        : all .2s ease !default;
+
+$control-label-padding          : $control-padding 0 !default;
+
+$control-addon-background       : #eeeeee !default;
+
+$control-element-padding        : 1em 0 !default;
+$control-element-label-padding  : 0 0 $control-padding 0 !default;
+
+$control-select-padding-r       : 1em !default;
+$control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+$control-select-background-pos  : 99% 50% !default;
+
+$fieldset-padding               : 0 !default;
+$fieldset-margin                : $control-padding 0 !default;
+$fieldset-width                 : 100% !default;
+$fieldset-border                : 0 !default;
+$fieldset-legend-padding        : .3em 0 !default;
+
+// FORM SIZES
+// This map is used to generate form input sizes. 
+// Arguments (name, font-size). Sizes tied to font-size.
+// The class is generated using the name: (ex .c-input-sm).
+$control-sizes:
+("xs", .67em)
+("sm", .83em)
+("lg", 1.17em)
+("xl", 1.5em)
+("xxl", 2em)
+!default;
+
+// FORM COLORS
+// This map is used to generate form validation colors.
+// Arguments (name, color).
+// The class is generated using the name: (ex .c-input-success).
+$control-colors:
+("success", $success)
+("warning", $warning)
+("error", $danger)
+!default;
+
+// Connect ng-validation states with form validation colors ($control-colors)
+$control-ng-validation:
+("ng-valid", "success")
+("ng-invalid", "error")
+!default;
+
+
+//==========================================================================
+//  Modals GLOBAL Configs
+//==========================================================================
+$modals-z-index            : 1050 !default;
+$modals-dialog-top-magin   : rem-calc(30);
+$modals-padding            : rem-calc(15) !default;
+$modals-width              : rem-calc(600) !default;
+$modals-border             : 1px solid rgba(0, 0, 0, 0.2) !default;
+$modals-border-radius      : 0.3rem !default;
+$modals-header-border      : 1px solid #e5e5e5 !default;
+$modal-transition          : opacity 0.35s linear 0s !default;
+
+//==========================================================================
+//  UI Configs
+//==========================================================================
+
+// UI Avatar
+// ------------------
+$avatar-size          : rem-calc(40) !default;
+$avatar-fs            : rem-calc(12) !default;
+$avatar-icon-margin   : 1px !default;
+$avatar-icon-size     : rem-calc(10) !default;
+$avatar-bd-size       : 2px !default;
+
+$avatar-colors: 
+("primary", $primary)
+("success", $success)
+("danger", $danger) 
+("warning", $warning) 
+!default;
+
+
+// UI Checks/Radios
+// ------------------
+// UI Checkbox
+// ------------------
+$checkbox-size            : 18px !default;
+$checkbox-size-sm         : 12px !default;
+$checkbox-size-lg         : 26px !default;
+$checkbox-icon-bd         : 1px solid #9e9e9e !default;
+$checkbox-icon-radius     : 2px !default;
+$checkbox-transition      : all 0.2s !default;
+$checkbox-disabled-opacity: 0.5 !default;
+
+
+// UI File upload
+// ------------------
+$file-upload-padding    : .5rem 1rem !default;
+$file-upload-margin     : .5rem !default;
+$file-upload-bg-color   : #f5fafd !default;
+$file-upload-bd         : 2px dashed #c8def0 !default;
+$file-upload-bd-radius  : 6px !default;
+$file-upload-fs         : .8rem !default;
+$file-upload-fa-fs      : 1.25rem !default;
+
+
+// UI Lists
+// ------------------
+$ui-list-radius               : true !default;
+$ui-list-shadows              : false !default;
+$ui-list-box-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 0 7px rgba(black, .15) !default;
+$ui-list-noborder-spacing     : rem-calc(10) !default;
+$ui-list-item-padding         : 12px 16px !default;
+$ui-list-item-noborder-spacing: rem-calc(8) !default;
+$ui-list-img-size             : $avatar-size;
+$ui-list-left-margin-t        : 3px !default;
+$ui-list-left-body-spacing    : rem-calc(56) !default;
+$ui-list-fs                   : rem-calc(16) !default;
+$ui-list-margin               : 0 !default;
+$ui-list-inset-after-offset   : rem-calc(72) !default;
+$ui-list-a-list-item-bd       : 1px solid rgba(199, 199, 199, 0.19) !default;
+$ui-list-a-list-item-bg-c     : rgba(130, 130, 130, 0.08) !default;
+
+
+/* stylelint-enable */

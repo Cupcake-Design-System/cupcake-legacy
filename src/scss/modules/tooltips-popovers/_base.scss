@@ -1,0 +1,127 @@
+@mixin popover-base {
+  position: absolute;
+  max-width: $popover-max-width;
+  padding: $popover-padding;
+  color: $body-font-color;
+  line-height: $body-lineheight;
+  font-family: $body-font-family;
+  font-size: $popover-fs;
+  text-align: left;
+  background: $popover-bg;
+  border: $popover-bd-width solid $popover-bd-c;
+  border-radius: $popover-bd-radius;
+  box-shadow: $popover-shadow;
+  z-index: $popover-zindex;
+
+  &-top {
+    margin-top: -$popover-arrow-width;
+  }
+
+  &-left {
+    margin-left: -$popover-arrow-width;
+  }
+
+  &-right {
+    margin-left: $popover-arrow-width;
+  }
+
+  &-bottom {
+    margin-top: $popover-arrow-width;
+  }
+
+  // align arrows relative to popover
+  &-top > &-arrow,
+  &-bottom > &-arrow {
+    &,
+    &::after {
+      @include horizontal-center;
+    }
+  }
+
+  &-left > &-arrow,
+  &-right > &-arrow {
+    &,
+    &::after {
+      @include vertical-center;
+    }
+  }
+
+  // generate and align arrow triangles
+  &-top > &-arrow {
+    bottom: -$popover-arrow-width;
+
+    @include css-triangle($popover-arrow-width, $popover-bd-c, down);
+
+    &::after {
+      bottom: $popover-arrow-width - $popover-arrow-inner-width;
+
+      @include css-triangle($popover-arrow-inner-width, $popover-bg, down);
+    }
+  }
+
+  &-right > &-arrow {
+    left: -$popover-arrow-width;
+
+    @include css-triangle($popover-arrow-width, $popover-bd-c, left);
+
+    &::after {
+      left: $popover-arrow-width - $popover-arrow-inner-width;
+
+      @include css-triangle($popover-arrow-inner-width, $popover-bg, left);
+    }
+  }
+
+  &-bottom > &-arrow {
+    top: -$popover-arrow-width;
+
+    @include css-triangle($popover-arrow-width, $popover-bd-c, up);
+
+    &::after {
+      top: $popover-arrow-width - $popover-arrow-inner-width;
+
+      @include css-triangle($popover-arrow-inner-width, $popover-bg, up);
+    }
+  }
+
+  &-left > &-arrow {
+    right: -$popover-arrow-width;
+
+    @include css-triangle($popover-arrow-width, $popover-bd-c, right);
+
+    &::after {
+      right: $popover-arrow-width - $popover-arrow-inner-width;
+
+      @include css-triangle($popover-arrow-inner-width, $popover-bg, right);
+    }
+  }
+}
+
+@mixin popover-colors {
+  @each $color in $popover-colors {
+    &-#{nth($color, 1)} {
+      color: nth($color, 2);
+      font-weight: bold;
+      border-color: nth($color, 3);
+    }
+
+    &-#{nth($color, 1)}#{&}-top > &-arrow,
+    &-#{nth($color, 1)}#{&}-bottom > &-arrow {
+      border-color: nth($color, 3) transparent;
+    }
+
+    &-#{nth($color, 1)}#{&}-left > &-arrow,
+    &-#{nth($color, 1)}#{&}-right > &-arrow {
+      border-color: transparent nth($color, 3);
+    }
+  }
+}
+
+.c-popover {
+  @include popover-base;
+  @include popover-colors;
+}
+
+.c-tooltip {
+  @include popover-base;
+  @include popover-colors;
+}

@@ -1,0 +1,128 @@
+@import 'mixins';
+
+.c-tabs {
+  @include tabs;
+
+  .c-tab-item {
+    @include tab-item;
+  }
+
+  .c-tab-item-link {
+    @include tab-item-link;
+  }
+
+  .c-tab-item-link-active {
+    @include tab-item-active;
+  }
+}
+
+.c-tabs-bordered {
+  .c-tab-item {
+    .c-tab-item-link {
+      border: $tabs-borders;
+      border-bottom: none;
+      background: $tabs-bg;
+      color: $tabs-color;
+      margin-right: $tabs-bordered-space-between;
+      margin-bottom: 0;
+      border-radius: $tabs-border-radius $tabs-border-radius 0 0;
+
+      &:hover {
+        background: $tabs-bg-hover;
+        transition: $tabs-hover-tranisition;
+        color: $tabs-color-hover;
+      }
+    }
+
+    .c-tab-item-link-active {
+      background: $tabs-bg-active;
+      color: $tabs-color-active;
+    }
+  }
+
+  .c-tabs-right,
+  .c-tab-item {
+    &:last-child {
+      margin-right: -$tabs-bordered-space-between;
+    }
+  }
+}
+
+.c-tabs-toggle {
+  border-bottom: none;
+
+  .c-tab-item {
+    border: $tabs-borders;
+    margin-left: -1px;
+    color: $tabs-color;
+
+    &:first-child {
+      border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $tabs-border-radius $tabs-border-radius 0;
+    }
+
+    &:hover {
+      background-color: $tabs-bg;
+      z-index: 2;
+      transition: $tabs-hover-tranisition;
+
+      &:first-child {
+        border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
+      }
+
+      &:last-child {
+        border-radius: 0 $tabs-border-radius $tabs-border-radius 0;
+      }
+    }
+  }
+
+  .c-tab-item-link {
+    margin: 0;
+    width: 100%;
+    border-bottom: 0;
+    text-align: center;
+
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+
+  .c-tab-item-link-active {
+    border: none;
+    background-color: $tabs-bg-active;
+
+    &:hover {
+      background-color: $tabs-bg-active;
+      transition: $tabs-hover-tranisition;
+    }
+  }
+}
+
+@each $tab-size in $tab-sizes {
+  $tab-size-name: nth($tab-size, 1);
+  $tab-size-font: nth($tab-size, 2);
+
+  .c-tabs-#{$tab-size-name} {
+    .c-tab-item-link {
+      font-size: $tab-size-font;
+    }
+  }
+}
+
+.c-tabs-fullwidth {
+  .c-tab-item {
+    flex: 1;
+  }
+}
+
+.c-tabs-right {
+  justify-content: flex-end;
+}
+
+.c-tabs-center {
+  flex: none;
+  justify-content: center;
+}

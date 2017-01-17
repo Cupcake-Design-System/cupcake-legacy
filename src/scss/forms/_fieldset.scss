@@ -1,0 +1,25 @@
+
+.c-fieldset {
+  &,
+  &.c-list {
+    display: block;
+    width: $fieldset-width;
+    margin: $fieldset-margin;
+    padding: $fieldset-padding;
+    border: $fieldset-border;
+  }
+
+  &-legend {
+    @include label;
+
+    padding: $fieldset-legend-padding;
+  }
+
+  &:disabled,
+  &-disabled {
+    .c-input {
+      @include input-disabled;
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+/*
+* ==========================================================================
+* Checkboxes
+* ==========================================================================
+*/
+@import 'mixins';
+
+.c-checkbox,
+.c-radio {
+  @include checkbox;
+}
+
+.c-radio-lg,
+.c-checkbox-lg {
+  @include checkbox($checkbox-size-lg);
+}
+
+.c-radio-sm,
+.c-checkbox-sm {
+  @include checkbox($checkbox-size-sm);
+}

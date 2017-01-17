@@ -1,0 +1,13 @@
+.c-btn.c-btn-disabled,
+.c-btn[disabled] {
+  top: 0;
+  background: $btn-disabled-bg;
+  border: $btn-disabled-bd;
+  text-shadow: $btn-disabled-text-shadow;
+  color: $btn-disabled-c;
+  line-height: 1;
+  cursor: not-allowed;
+  appearance: none;
+  box-shadow: none;
+  opacity: $btn-disabled-opacity;
+}

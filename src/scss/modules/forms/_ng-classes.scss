@@ -1,0 +1,19 @@
+.ng-valid {
+  @extend .c-input-success;
+}
+
+.ng-invalid {
+  @extend .c-input-danger;
+}
+
+.ng-pristine {
+  @extend .c-input-success;
+}
+
+.ng-dirty {
+  @extend .c-input-danger;
+}
+
+.ng-touched {
+  @extend .c-input-primary;
+}

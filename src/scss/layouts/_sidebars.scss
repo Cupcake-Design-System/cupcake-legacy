@@ -1,0 +1,26 @@
+@mixin sidebar {
+  background-color: $global-sidebar-background-color;
+  flex: 1 0 15%;
+  max-width: $global-sidebar-max-width;
+  padding: rem-calc(50);
+}
+
+.c-sidebar {
+  @include sidebar;
+
+  order: -1;
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    padding: rem-calc(15);
+  }
+}
+
+.c-sidebar-right {
+  @include sidebar;
+
+  order: 2;
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    padding: rem-calc(15);
+  }
+}

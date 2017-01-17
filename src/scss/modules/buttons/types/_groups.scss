@@ -1,0 +1,82 @@
+/*
+* ==========================================================================
+* Button Group
+* ==========================================================================
+*/
+.c-btn-group {
+  font-size: 0;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .fa {
+    text-align: center;
+  }
+}
+
+.c-btn-group-item:not(:first-child):not(:last-child) > .c-btn {
+  border-radius: 0 !important;
+}
+
+.c-btn-group-item > .c-btn {
+  display: block;
+  width: 100%;
+}
+
+.c-btn-group-item > .c-btn:hover,
+.c-btn-group-item > .c-btn:focus,
+.c-btn-group-item > .c-btn:active {
+  z-index: 1;
+}
+
+.c-btn-group-horizontal > .c-btn-group-item {
+  display: inline-flex;
+  margin-left: -1px;
+}
+
+.c-btn-group-horizontal > .c-btn-group-item:first-child:not(:only-child) {
+  margin-left: 0;
+}
+
+.c-btn-group-horizontal > .c-btn-group-item:first-child:not(:only-child) > .c-btn {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.c-btn-group-horizontal > .c-btn-group-item:last-child:not(:only-child) > .c-btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.c-btn-group-vertical {
+  display: inline-block;
+}
+
+.c-btn-group-vertical > .c-btn-group-item {
+  display: block;
+  margin-top: -1px;
+}
+
+.c-btn-group-vertical > .c-btn-group-item:first-child:not(:only-child) {
+  margin-top: 0;
+}
+
+.c-btn-group-vertical > .c-btn-group-item:first-child:not(:only-child) > .c-btn {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  /* stylelint-disable */
+  border-radius: $global-radius;
+}
+
+.c-btn-group-vertical > .c-btn-group-item:last-child:not(:only-child) > .c-btn {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-radius: $global-radius;
+  /* stylelint-enable */
+}
+
+.c-btn-group-vertical > .c-btn-group-item > .c-btn {
+  text-align: left;
+  margin-bottom: 0;
+}
