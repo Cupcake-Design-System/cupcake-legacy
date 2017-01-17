@@ -1,16 +1,31 @@
 {
   "name": "cupcake",
-  "title": "cupcake",
-  "description": "",
-  "version": "0.1.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/"
+  "version": "1.0.1",
+  "description": "A CSS framework.",
+  "repository": "Cupcake",
+  "main": "dist/default.css",
+  "publishConfig": {
+    "registry": "https://ipreo.jfrog.io/ipreo/api/npm/npm"
   },
-  "bugs": {
-    "url"
+  "ignore": [
+    ".github",
+    ".gitignore",
+    ".npmignore",
+    ".stylelintrc",
+    "backstop.conf.js",
+    "package.json",
+    "src"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp deploy",
+    "sync-style": "download https://assets.brand.ai/ipreo/primary-brand/_style-params.scss?key=HklVhNWBx > src/base/tokens.scss",
+    "test": "gulp lint",
+    "backstop": "run-s build && run-p serve compare",
+    "reference": "backstop reference --configPath=backstop.conf.js",
+    "compare": "backstop test --configPath=backstop.conf.js"
   },
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.0.0-rc4",
     "colors": "^1.1.2",
@@ -29,8 +44,11 @@
     "run-sequence": "^1.2.2",
     "stylelint-config-standard": "^15.0.1",
     "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-scss": "^1.4.1",    
+    "stylelint-scss": "^1.4.1",
     "gulp-sourcemaps": "^2.4.0",
     "vinyl-paths": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-downloader": "^1.0.4"
   }
 }

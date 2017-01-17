@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 // Set box-sizing globally to handle padding and border widths
@@ -56,15 +59,6 @@ button {
   line-height: 1;
 }
 
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
 
 article,
 aside,

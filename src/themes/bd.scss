@@ -169,8 +169,8 @@ $btn-outlines       : true ;
 // Each block contains the arguments (name, padding, font-size).
 // The class is generated using the name: (ex .ipreo-btn-sm).
 $btn-sizes:
-("ipreo-btn-sm", rem-calc(12))
-("ipreo-btn-lg", rem-calc(18));
+("c-btn-sm", rem-calc(12))
+("c-btn-lg", rem-calc(18));
 
 
 // BUTTON COLORS
@@ -322,8 +322,7 @@ $tabs-boxed-default-padding    : rem-calc(10 60) ;
 $tabs-text-default-padding     : rem-calc(6 12) ;
 $tab-sizes:
 ("sm", rem-calc(3 6), rem-calc(11))
-("lg", rem-calc(12 24), rem-calc(18))
-;
+("lg", rem-calc(12 24), rem-calc(18));
 
 
 //==========================================================================

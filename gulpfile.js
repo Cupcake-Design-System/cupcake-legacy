@@ -16,7 +16,7 @@ var gulp          = require('gulp'),
     vinylPaths    = require('vinyl-paths'),
     colors        = require('colors'),
     fileExists    = require('file-exists');
-
+    download      = require('gulp-downloader');    
 
 var bases = {
     app:  'src/',
@@ -92,7 +92,6 @@ gulp.task('styles', function() {
     .pipe(reload({stream:true}))    
 });
 
-
 gulp.task('themes', function() {
   return gulp.src(bases.app + 'themes/*.scss')
     .pipe(plumber({errorHandler: onError}))
@@ -104,7 +103,7 @@ gulp.task('themes', function() {
     .pipe(reload({stream:true}))
 });
 
-gulp.task('styles:prod', function() {
+gulp.task('styles:build', function() {
   return gulp.src(bases.dist + 'css/*.css')
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -123,8 +122,6 @@ gulp.task('deploy', function() {
   return gulp.src(bases.dist)
     .pipe(deploy());
 });
-
-
 
 gulp.task('copy', function() {
 
@@ -146,8 +143,6 @@ gulp.src(bases.app + 'img/*')
     .pipe(gulp.dest(bases.dist + 'themes'))
     .pipe(reload({stream:true}));      
 });
-
-
 
 gulp.task('lint', function() {
   return gulp.src('./src/scss/**/*.scss')
@@ -175,7 +170,6 @@ gulp.task('watch', function() {
   gulp.watch(bases.app + './*.html', ['html']);
   gulp.watch(bases.app + 'img/*', ['img']);
 });
-
 
 
 gulp.task('prompt', function () {
@@ -213,9 +207,9 @@ gulp.task('theme', function(done) {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:prod', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:build', 'browser-sync', 'watch', done);
 });
 
-gulp.task('prod', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:prod', done);
+gulp.task('build', function(done) {
+  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:build', done);
 });

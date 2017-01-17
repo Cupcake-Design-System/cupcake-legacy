@@ -112,7 +112,6 @@ $cite-color                  : $darkest-gray !default;
 //  Badges GLOBAL Configs
 //==========================================================================
 $badge-padding: .25em .5em !default;
-$badge-margin: 0 !default;
 $badge-border-width: 1px;
 $badge-border-style: solid;
 $badge-border-radius: 3px !default;
@@ -183,8 +182,8 @@ $btn-disabled-opacity     : .8 !default;
 // Each block contains the arguments (name, font-size).
 // The class is generated using the name: (ex .c-btn-sm).
 $btn-sizes:
-("ipreo-btn-sm", rem-calc(10))
-("ipreo-btn-lg", rem-calc(18))
+("c-btn-sm", rem-calc(10))
+("c-btn-lg", rem-calc(18))
 !default;
 
 // BUTTON COLORS
