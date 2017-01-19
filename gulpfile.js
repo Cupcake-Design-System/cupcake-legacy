@@ -88,26 +88,26 @@ gulp.task('styles', function() {
     .pipe(prefix(prefixerOptions))    
     .pipe(rename('default.css'))
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest(bases.dist + 'css'))
+    .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))    
 });
 
-gulp.task('themes', function() {
-  return gulp.src(bases.app + 'themes/*.scss')
+gulp.task('flavors', function() {
+  return gulp.src(bases.app + 'flavors/*.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(prefix(prefixerOptions))
     .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest(bases.dist + 'css'))
+    .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))
 });
 
 gulp.task('styles:build', function() {
-  return gulp.src(bases.dist + 'css/*.css')
+  return gulp.src(bases.dist + '*.css')
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(bases.dist + 'css/min'))
+    .pipe(gulp.dest(bases.dist))
 });
 
 gulp.task('browser-sync', function() {
@@ -133,15 +133,7 @@ gulp.task('copy', function() {
   gulp.src(bases.app + 'fonts/**/*.*')
     .pipe(gulp.dest(bases.dist + 'fonts'))
     .pipe(reload({stream:true}));
-
-    // copy icons to dist directly
-  gulp.src(bases.app + 'scss/**/*.*')
-    .pipe(gulp.dest(bases.dist + 'scss'))
-    .pipe(reload({stream:true}));    
-
-  gulp.src(bases.app + 'themes/*.*')
-    .pipe(gulp.dest(bases.dist + 'themes'))
-    .pipe(reload({stream:true}));      
+  
 });
 
 gulp.task('lint', function() {
@@ -176,40 +168,40 @@ gulp.task('prompt', function () {
   return gulp.src('')
   .pipe(prompt.prompt({
         type: 'input',
-        message: 'What would you like to name your new theme?',
-        name: 'themename',
+        message: 'What would you like to name your new flavor?',
+        name: 'flavorname',
         default: 'demo'
       },
        function(response){
 
-        themename = response.themename;
+        flavorname = response.flavorname;
         
     })
   )
 })
 
-gulp.task('create-theme', function(){
+gulp.task('copy-flavor', function(){
 
-  if (fileExists(`src/themes/${themename}.scss`))
+  if (fileExists(`src/flavors/${flavorname}.scss`))
     throw 'Theme with that name already exists'
 
-  return gulp.src('src/themes/bd.scss')
-    .pipe(rename(`${themename}.scss`))
-    .pipe(gulp.dest('src/themes', {overwrite: false}))
+  return gulp.src('src/flavors/bd.scss')
+    .pipe(rename(`${flavorname}.scss`))
+    .pipe(gulp.dest('src/flavors', {overwrite: false}))
 })
 
 
-gulp.task('theme', function(done) {
-   runSequence('prompt', 'create-theme', 'default', done);
+gulp.task('create-flavor', function(done) {
+   runSequence('prompt', 'copy-flavor', 'default', done);
 });
 
 // BUILD TASKS
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:build', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'themes', 'copy', 'styles:build', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', done);
 });
