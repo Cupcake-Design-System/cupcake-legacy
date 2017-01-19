@@ -119,15 +119,15 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src(bases.dist)
+  return gulp.src(bases.dist + '**/*.*')
     .pipe(deploy());
 });
 
 gulp.task('copy', function() {
 
-gulp.src(bases.app + 'img/*')
-    .pipe(gulp.dest(bases.dist + 'img'))
-    .pipe(reload({stream:true}));
+// gulp.src(bases.app + 'img/*')
+//     .pipe(gulp.dest(bases.dist + 'img'))
+//     .pipe(reload({stream:true}));
   
     // copy icons to dist directly
   gulp.src(bases.app + 'fonts/**/*.*')
