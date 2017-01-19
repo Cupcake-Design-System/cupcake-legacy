@@ -46,9 +46,8 @@
     "stylelint-declaration-use-variable": "^1.6.0",
     "stylelint-scss": "^1.4.1",
     "gulp-sourcemaps": "^2.4.0",
-    "vinyl-paths": "^2.0.0"
-  },
-  "dependencies": {
-    "gulp-downloader": "^1.0.4"
+    "vinyl-paths": "^2.0.0",
+    "gulp-downloader": "^1.0.4",
+    "minimist": "^1.2.0"
   }
 }

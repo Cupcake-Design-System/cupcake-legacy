@@ -5,7 +5,8 @@ var gulp          = require('gulp'),
     deploy        = require('gulp-gh-pages'),    
     notify        = require('gulp-notify'),
     plumber       = require('gulp-plumber'),
-    prompt        = require('gulp-prompt'), 
+    prompt        = require('gulp-prompt'),
+    minimist      = require('minimist'); 
     rename        = require('gulp-rename'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
@@ -164,6 +165,8 @@ gulp.task('watch', function() {
 });
 
 
+
+
 gulp.task('prompt', function () {
   return gulp.src('')
   .pipe(prompt.prompt({
@@ -194,6 +197,23 @@ gulp.task('copy-flavor', function(){
 gulp.task('create-flavor', function(done) {
    runSequence('prompt', 'copy-flavor', 'default', done);
 });
+
+
+
+
+gulp.task('new-flavor', () => {
+  var opts = minimist(process.argv.slice(2), {
+    string: 'name'
+  })
+
+  if (fileExists(`src/flavors/${opts.name}.scss`))
+    throw 'A flavor with that name already exists'
+
+  return gulp.src('src/flavors/bd.scss')
+    .pipe(rename(`${opts.name}.scss`))
+    .pipe(gulp.dest('src/flavors', {overwrite: false}))
+});
+
 
 // BUILD TASKS
 // ------------
