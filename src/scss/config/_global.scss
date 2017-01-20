@@ -6,6 +6,23 @@
 
 // 1. Global
 // ---------
+$primary          : #484848 !default;
+$default          : #eeeeee !default;
+$secondary        : #777777 !default;
+$success          : #3ebd4c !default;
+$warning          : #f68f1e !default;
+$danger           : #d75248 !default;
+$disabled         : #ededed !default;
+$light-gray       : #e6e6e6 !default;
+$medium-gray      : #cacaca !default;
+$dark-gray        : #8d8d97 !default;
+$darkest-gray     : #414152 !default;
+$black            : #0a0a0a !default;
+$white            : #fefefe !default;
+$body-background  : $white    !default;
+$body-font-color  : #333333 !default;
+
+
 $global-width                 : 100% !default;
 $global-lineheight            : 1.5 !default;
 $generate-chart-colors        : true !default;

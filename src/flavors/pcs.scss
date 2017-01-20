@@ -3,10 +3,27 @@
 //
 /* stylelint-disable */
 @import '../scss/utility/utility';
-@import '../scss/config/color';
 
 // 1. Global
 // ---------
+
+$primary          : #0079bd;
+$default          : #eeeeee;
+$secondary        : #777777;
+$success          : #42bd41;
+$warning          : #fe9e52;
+$danger           : #d2335c;
+$disabled         : #ededed;
+$light-gray       : #e6e6e6;
+$medium-gray      : #cacaca;
+$dark-gray        : #8a8a8a;
+$darkest-gray     : #414152;
+$black            : #0a0a0a;
+$white            : #fefefe;
+$body-background  : $white;
+$body-font-color  : $black;
+
+
 $global-width                 : 100% !default;
 $global-lineheight            : 1.5 !default;
 $generate-chart-colors        : false !default;
