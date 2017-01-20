@@ -4,15 +4,6 @@
   background-color: $card-bg;
   color: $card-text-color;
   box-shadow: $card-shadow;
-
-  a {
-    padding-left: .25rem;
-    color: $card-text-color;
-
-    &:hover {
-      color: black;
-    }
-  }
 }
 
 @mixin card-header {
@@ -21,17 +12,6 @@
   font-weight: bold;
   border-bottom: $card-header-border-bottom;
   border-radius: $global-radius $global-radius 0 0;
-
-  &-menu {
-    font-size: $card-subtitle-font-size;
-    display: inline;
-    float: right;
-
-    &-icon,
-    a {
-      padding-left: .25rem;
-    }
-  }
 }
 
 @mixin card-content {
@@ -68,15 +48,6 @@
     background-color: transparent;
     color: $color;
     border-bottom: 1px solid darken($background, 5%);
-
-    a {
-      padding-left: .25rem;
-      color: $color;
-
-      &:hover {
-        color: darken($color, 10%);
-      }
-    }
   }
 
   .c-card-footer {
@@ -93,9 +64,4 @@
   .c-card-content-subtitle {
     color: $color;
   }
-}
-
-@mixin card-size($max-width: 32rem, $min-width: 26rem) {
-  max-width: $max-width;
-  min-width: $min-width;
 }
