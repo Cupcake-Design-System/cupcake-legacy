@@ -5,7 +5,7 @@
 */
 
 .c-btn-dropdown {
-  @include btn-base();
+  @include dropdown-base();
 
   box-shadow: none;
   margin: 0;

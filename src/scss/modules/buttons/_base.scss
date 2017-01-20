@@ -23,7 +23,6 @@
   .c-btn-#{nth($pair, 1)} {
     $color: nth($pair, 2);
     $font-color: nth($pair, 3);
-
     font-size: $btn-font-size;
     background: $color;
     color: $font-color;
@@ -32,10 +31,6 @@
 
     @if $btn-gradients == true {
       @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
-    }
-
-    @else {
-      background: $color;
     }
 
     @each $exclude in $btn-no-border {
