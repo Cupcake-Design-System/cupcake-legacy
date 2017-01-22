@@ -66,7 +66,6 @@
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-element-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
-    "sh-waqar/declaration-use-variable": [["/color/", "z-index", "font-size"]],
     "stylelint-disable-reason": "always-before",
     "value-no-vendor-prefix": true,
     "at-rule-no-unknown": [ true, {
