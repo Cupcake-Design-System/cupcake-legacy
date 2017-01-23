@@ -3,80 +3,60 @@
 * Button Group
 * ==========================================================================
 */
+
 .c-btn-group {
-  font-size: 0;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex;
 
-  .fa {
-    text-align: center;
+  .c-btn {
+    position: relative;
+    float: left;
+    border-right-width: 0;
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: $global-radius;
+      border-bottom-left-radius: $global-radius;
+    }
+
+    &:last-child {
+      border-right-width: 1px;
+      border-top-right-radius: $global-radius;
+      border-bottom-right-radius: $global-radius;
+
+      &.selected,
+      &:focus,
+      &:active,
+      &:hover {
+        border-right-width: 1px;
+      }
+    }
   }
-}
-
-.c-btn-group-item:not(:first-child):not(:last-child) > .c-btn {
-  border-radius: 0 !important;
-}
-
-.c-btn-group-item > .c-btn {
-  display: block;
-  width: 100%;
-}
-
-.c-btn-group-item > .c-btn:hover,
-.c-btn-group-item > .c-btn:focus,
-.c-btn-group-item > .c-btn:active {
-  z-index: 1;
-}
-
-.c-btn-group-horizontal > .c-btn-group-item {
-  display: inline-flex;
-  margin-left: -1px;
-}
-
-.c-btn-group-horizontal > .c-btn-group-item:first-child:not(:only-child) {
-  margin-left: 0;
-}
-
-.c-btn-group-horizontal > .c-btn-group-item:first-child:not(:only-child) > .c-btn {
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-.c-btn-group-horizontal > .c-btn-group-item:last-child:not(:only-child) > .c-btn {
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
 }
 
 .c-btn-group-vertical {
   display: inline-block;
-}
 
-.c-btn-group-vertical > .c-btn-group-item {
-  display: block;
-  margin-top: -1px;
-}
+  .c-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    margin-top: -1px;
 
-.c-btn-group-vertical > .c-btn-group-item:first-child:not(:only-child) {
-  margin-top: 0;
-}
+    &:first-child:not(:only-child) {
+      margin-top: 0;
+    }
 
-.c-btn-group-vertical > .c-btn-group-item:first-child:not(:only-child) > .c-btn {
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  /* stylelint-disable */
-  border-radius: $global-radius;
-}
+    &:first-child:not(:only-child) {
+      border-radius: $global-radius;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
-.c-btn-group-vertical > .c-btn-group-item:last-child:not(:only-child) > .c-btn {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-radius: $global-radius;
-  /* stylelint-enable */
-}
-
-.c-btn-group-vertical > .c-btn-group-item > .c-btn {
-  text-align: left;
-  margin-bottom: 0;
+    &:last-child:not(:only-child) {
+      border-radius: $global-radius;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
 }

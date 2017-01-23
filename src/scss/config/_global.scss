@@ -199,8 +199,8 @@ $btn-disabled-opacity     : .8 !default;
 // Each block contains the arguments (name, font-size).
 // The class is generated using the name: (ex .c-btn-sm).
 $btn-sizes:
-("c-btn-sm", rem-calc(10))
-("c-btn-lg", rem-calc(18))
+("sm", rem-calc(10))
+("lg", rem-calc(18))
 !default;
 
 // BUTTON COLORS
@@ -263,7 +263,8 @@ $alert-radius        : $global-radius !default;
 $alert-shadows       : true !default;
 $alert-style         : 'outline' !default;
 $alert-icon-width    : rem-calc(40) !default;
-$alert-colors        : ("primary", $primary)
+$alert-colors        : 
+("primary", $primary)
 ("success", $success)
 ("warning", $warning)
 ("danger", $danger)
