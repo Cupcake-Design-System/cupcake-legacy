@@ -9,9 +9,6 @@ table.c-table {
   @include table();
 }
 
-table.c-table-striped {
-  @include table-striped();
-}
 
 table.c-table-stack {
   @include breakpoint(md down) {
@@ -30,17 +27,16 @@ table.c-table-hover {
 .c-table-scroll {
   overflow-x: auto;
 
-  table.ipreo {
+  table.c {
     width: auto;
   }
 }
 
 .c-table-transparent {
-  .c-tbody {
-    .c-tr,
-    .c-td {
+  tbody {
+    tr,td, tr:nth-child(odd), tr:nth-child(even) {
       background-color: transparent;
-    }
+    }    
   }
 }
 
