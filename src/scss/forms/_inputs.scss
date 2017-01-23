@@ -65,8 +65,8 @@ select.c-input {
 }
 
 @each $ng-state, $color in $control-ng-validation {
-  .c-ng-validate.#{$ng-state},
-  .c-ng-validate-form .#{$ng-state} {
+  .c-ng-validate.ng-dirty.#{$ng-state},
+  .c-ng-validate-form .ng-dirty.#{$ng-state} {
     @extend .c-input-#{$color};
   }
 }
