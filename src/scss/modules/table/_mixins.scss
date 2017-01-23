@@ -1,4 +1,5 @@
 @mixin ipreo-table-children-styles($stripe: $table-stripe) {
+  .c-table {
   thead,
   tbody,
   tfoot {
@@ -60,6 +61,7 @@
     border-right: $table-border;
     padding: $table-padding;
   }
+}
 }
 
 /// Adds the general styles for tables.
