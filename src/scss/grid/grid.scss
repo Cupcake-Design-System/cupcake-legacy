@@ -10,24 +10,51 @@ $columns: 12 !default;
 
 // Breakpoints
 // Please note that adding more breakpoints adds quite a lot of extra css depending on the optional features
-$ipreo-breakpoints: (
-  'xs':25rem,
-  'sm':37.5rem,
-  'md':60rem,
-  'lg':90rem ) !default;
+
+
 
 // Optional row features - Set to true to enable
-$row-align: true !default;
-$row-justify: true !default;
-$row-wrap: true !default;
-$col-order: true !default;
-$col-offset: true !default;
-$col-align: true !default;
+$row-align:       true !default;
+$row-justify:     true !default;
+$row-wrap:        true !default;
+$col-order:       true !default;
+$col-offset:      true !default;
+$col-align:       true !default;
 $gutter-collapse: true !default;
 
 
-// row generator - 
+// Container Generator
 // ==========================================================================
+@mixin make-container($gutters: $gutter) {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+      padding-right: ($gutter);
+      padding-left:  ($gutter);
+    }
+  }
+}
+
+@mixin make-container-max-widths() {
+  @each $breakpoint, $size in $breakpoints {
+   @media (min-width: $size) {
+      width: $size - 2;
+      max-width: 100%;
+    }
+  }
+}
+
+.c-container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.c-container-fluid {
+  @include make-container();
+}
 
 
 // Utils
@@ -416,7 +443,7 @@ $gutter-collapse: true !default;
 // Create responsive classes for all additional options
 // ==========================================================================
 @mixin create-responsive-classes() {
-  @each $breakpoint, $size in $ipreo-breakpoints {
+  @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
       // $base
 
