@@ -22,7 +22,7 @@ $darkest-gray     : #414152;
 $black            : #0a0a0a;
 $white            : #fefefe;
 $body-background  : $white;
-$body-font-color  : $black;
+$body-font-color  : $darkest-gray;
 
 
 
@@ -33,7 +33,7 @@ $generate-chart-colors        : true ;
 $generate-ticker-colors       : true ;
 
 $body-font-family             : Source Sans Pro, sans-serif ;
-$body-font-size               : rem-calc(16);
+$body-font-size               : rem-calc(14);
 $body-antialiased             : true ;
 $global-margin                : 1rem ;
 $global-padding               : 1rem ;
@@ -85,69 +85,73 @@ $header-sizes: (
   ),
   md: (
     'xl': 30,
-    'lg': 26,
-    'md': 22,
-    'sm': 18,
-    'xs': 15,
-    'xxs': 14,
+    'lg': 22,
+    'md': 18,
+    'sm': 15,
+    'xs': 14,
+    'xxs': 12,
   ),
 );
 
-$header-color                : inherit ;
-$header-lineheight           : 1.4 ;
-$header-margin-bottom        : 0.5rem ;
-$header-text-rendering       : optimizeLegibility ;
-$small-font-size             : 85% ;
-$header-small-font-color     : $medium-gray ;
-$paragraph-lineheight        : 1.5 ;
-$paragraph-margin-bottom     : 1rem ;
-$paragraph-text-rendering    : optimizeLegibility ;
-$anchor-color                : $primary ;
-$anchor-color-hover          : lighten($primary, 14%) ;
-$anchor-text-decoration      : none ;
-$anchor-text-decoration-hover: none ;
-$hr-width                    : $global-width ;
-$hr-border                   : 1px solid $medium-gray ;
-$hr-margin                   : rem-calc(20) auto ;
-$list-font-size              : rem-calc(14);
-$list-lineheight             : $paragraph-lineheight ;
-$list-margin-bottom          : $paragraph-margin-bottom ;
-$list-style-type             : disc ;
-$list-style-position         : outside ;
-$list-ul-side-margin         : .6rem ;
-$list-nested-side-margin     : 1.25rem ;
-$list-color                  : #414152 ;
-$list-padding                : 1.5rem ;
-$list-ul-padding             : 2rem ;
-$list-side-margin            : 1.25rem ;
-$defnlist-margin-bottom      : 1rem ;
-$defnlist-term-weight        : $global-weight-bold ;
-$defnlist-term-margin-bottom : 0.3rem ;
-$blockquote-color            : #414152 ;
-$blockquote-padding          : rem-calc(9 20 0 19) ;
-$blockquote-border           : 3px solid $primary ;
-$blockquote-font-size        : rem-calc(28) ;
-$cite-font-size              : rem-calc(18) ;
-$cite-color                  : $darkest-gray ;
-$keystroke-font              : $font-family-monospace ;
-$keystroke-color             : $black ;
-$keystroke-background        : $light-gray ;
-$keystroke-padding           : rem-calc(2 4 0) ;
-$keystroke-radius            : $global-radius ;
-$abbr-underline              : 1px dotted $black ;
+$header-color                   : $body-font-color ;
+$header-lineheight              : 1.4 ;
+$header-margin-bottom           : 0.5rem ;
+$header-text-rendering          : optimizeLegibility ;
+$small-font-size                : 85% ;
+$header-small-font-color        : $medium-gray ;
+$paragraph-lineheight           : 1.5 ;
+$paragraph-margin-bottom        : 1rem ;
+$paragraph-text-rendering       : optimizeLegibility ;
+$anchor-color                   : $primary ;
+$anchor-color-hover             : #0091e3 ;
+$anchor-color-active            : $primary ;
+$anchor-color-disabled          : #7f7f7f ;
+$anchor-text-decoration         : none ;
+$anchor-text-decoration-hover   : none ;
+$anchor-text-decoration-active  : underline ;
+$anchor-text-decoration-disabled: none ;
+$hr-width                       : $global-width ;
+$hr-border                      : 1px solid $medium-gray ;
+$hr-margin                      : rem-calc(20) auto ;
+$list-font-size                 : rem-calc(14);
+$list-lineheight                : $paragraph-lineheight ;
+$list-margin-bottom             : $paragraph-margin-bottom ;
+$list-style-type                : disc ;
+$list-style-position            : outside ;
+$list-ul-side-margin            : .6rem ;
+$list-nested-side-margin        : 1.25rem ;
+$list-color                     : $darkest-gray ;
+$list-padding                   : 1.5rem ;
+$list-ul-padding                : 2rem ;
+$list-side-margin               : 1.25rem ;
+$defnlist-margin-bottom         : 1rem ;
+$defnlist-term-weight           : $global-weight-bold ;
+$defnlist-term-margin-bottom    : 0.3rem ;
+$blockquote-color               : $darkest-gray ;
+$blockquote-padding             : rem-calc(9 20 0 19) ;
+$blockquote-border              : 3px solid $primary ;
+$blockquote-font-size           : rem-calc(28) ;
+$cite-font-size                 : rem-calc(18) ;
+$cite-color                     : $darkest-gray ;
+$keystroke-font                 : $font-family-monospace ;
+$keystroke-color                : $black ;
+$keystroke-background           : $light-gray ;
+$keystroke-padding              : rem-calc(2 4 0) ;
+$keystroke-radius               : $global-radius ;
+$abbr-underline                 : 1px dotted $black ;
 
 // 5. Typography Helpers
 // ---------------------
 $lead-font-size                 : $body-font-size * 1.25 ;
 $lead-lineheight                : 1.6 ;
 $subheader-lineheight           : 1.4 ;
-$subheader-color                : #414152 ;
+$subheader-color                : $darkest-gray ;
 $subheader-font-weight          : $global-weight-normal ;
 $subheader-margin-top           : 0.2rem ;
 $subheader-margin-bottom        : 0.5rem ;
 $subheader-primary-font-size    : rem-calc(18);
 $subheader-secondary-font-size  : rem-calc(16);
-$paragraph-font-color           : #414152 ;
+$paragraph-font-color           : $darkest-gray ;
 $paragraph-font-size            : rem-calc(14);
 
 
@@ -192,8 +196,11 @@ $btn-outlines       : true ;
 // Each block contains the arguments (name, padding, font-size).
 // The class is generated using the name: (ex .ipreo-btn-sm).
 $btn-sizes:
-("c-btn-sm", rem-calc(12))
-("c-btn-lg", rem-calc(18));
+("xs", rem-calc(12))
+("sm", rem-calc(13))
+("md", rem-calc(14))
+("ml", rem-calc(15))
+("lg", rem-calc(16));
 
 
 // BUTTON COLORS
@@ -203,10 +210,12 @@ $btn-sizes:
 // The class is generated using the name: (ex .ipreo-btn-primary)
 $btn-colors:
 ("primary", $primary, $white)
-("success", $success, $white)
-("default", $default, #414152)
+("success", #00a663, $white)
+("default", $default, $darkest-gray)
 ("warning", $warning, $white)
-("danger", $danger, $white)
+("danger", #d13426, $white)
+("info", #44a7c4, $white)
+("ghost", $white, $darkest-gray)
 ;
 
 // Button colors without a border
@@ -217,8 +226,18 @@ $btn-no-border:
 ("success")
 ("warning")
 ("danger")
+("info")
 ;
 
+// Button sizes with custom padding
+// For adjusting padding sizes
+// Add a btn size and padding, ex: (lg: .5em 1.25em)
+$btn-size-padding: (
+  lg: .688em 1.25em,
+  ml: .6em 1.25em,
+  sm: .385em 1.25em,
+  xs: .25em 1.25em,
+) !default;
 
 // Outline Button Colors
 // The class is generated using the name: (ex .ipreo-btn-primary-outline)
@@ -273,16 +292,22 @@ $alert-colors:
 
 // Dropdowns
 // ------------
-$dropdown-padding          : 1rem ;
-$dropdown-border           : 1px solid $light-gray ;
-$dropdown-color            : $dark-gray ;
+$dropdown-glued            : false ;
+$dropdown-list-margin      : 5px 0 0 ;
+$dropdown-list-padding     : 5px 0 ;
+$dropdown-padding          : 5px 15px ;
+$dropdown-border           : 1px solid rgba(0, 0, 0, 0.18) ;
+$dropdown-color            : $body-font-color ;
 $dropdown-color-hover      : $primary ;
 $dropdown-background-color : $white ;
-$dropdown-background-hover : darken($default, 2%) ;
-$dropdown-box-shadow       : 0 2px 7px rgba(0, 0, 0, 0.2) ;
-$dropdown-font-size        : rem-calc(12) ;
+$dropdown-background-hover : #f9f9f9 ;
+$dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2) ;
+$dropdown-font-size        : $body-font-size ;
+$dropdown-font-weight      : normal;
 $dropdown-width            : 100% ;
-$dropdown-radius           : $global-radius ;
+$dropdown-radius           : 4px ;
+$dropdown-divider-margin   : 5px ;
+
 
 $card-header-font-size  : rem-calc(15);
 $card-body-font-size    : rem-calc(14);
@@ -413,7 +438,7 @@ $control-border           : #d9d9d9;
 $control-hover-border     : #bababa;
 $control-active-border    : $primary;
 
-$control-padding          : .44em;
+$control-padding          : .429em;
 /* stylelint-enable */
 
 @import "../scss/default";

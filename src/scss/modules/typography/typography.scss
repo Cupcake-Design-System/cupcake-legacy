@@ -38,14 +38,37 @@
   line-height: inherit;
   cursor: pointer;
 
-  &-active,
-  &:hover,
-  &:focus {
+  &-hover,
+  &:hover {
     text-decoration: none;
     color: $anchor-color-hover;
 
     @if $anchor-text-decoration-hover != $anchor-text-decoration {
       text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  &-active,
+  &:active {
+    color: $anchor-color-active;
+
+    @if $anchor-text-decoration-active != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-active;
+    }
+  }
+
+  &-disabled,
+  &[disabled],
+  &:disabled {
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $anchor-color-disabled;
+      text-decoration: $anchor-text-decoration-disabled;
+      cursor: not-allowed;
     }
   }
 

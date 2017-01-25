@@ -38,5 +38,9 @@
 
   .c-btn-#{$btn-size-namespace} {
     font-size: $btn-size-font;
+
+    @if map-has-key($btn-size-padding, $btn-size-name) {
+      padding: map-get($btn-size-padding, $btn-size-name);
+    }
   }
 }

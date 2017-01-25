@@ -89,41 +89,45 @@ $header-sizes: (
     ),
 )!default;
 
-$header-color                : inherit !default;
-$header-lineheight           : 1.4 !default;
-$header-margin-bottom        : 0.5rem !default;
-$header-text-rendering       : optimizeLegibility !default;
-$small-font-size             : 80% !default;
-$header-small-font-color     : $dark-gray !default;
+$header-color                   : inherit !default;
+$header-lineheight              : 1.4 !default;
+$header-margin-bottom           : 0.5rem !default;
+$header-text-rendering          : optimizeLegibility !default;
+$small-font-size                : 80% !default;
+$header-small-font-color        : $dark-gray !default;
 
-$anchor-color                : $primary !default;
-$anchor-color-hover          : lighten($primary, 14%) !default;
-$anchor-text-decoration      : none !default;
-$anchor-text-decoration-hover: none !default;
-$hr-width                    : $global-width !default;
-$hr-border                   : 1px solid #f2f2f2 !default;
-$hr-margin                   : rem-calc(20) auto !default;
-$list-font-size              : .9rem !default;
-$list-lineheight             : $body-lineheight !default;
-$list-margin-bottom          : $body-margin-bottom !default;
-$list-style-type             : disc !default;
-$list-style-position         : outside !default;
-$list-font-size              : .9rem !default;
-$list-ul-side-margin         : .6rem !default;
-$list-nested-side-margin     : 1.25rem !default;
-$list-color                  : $dark-gray !default;
-$list-padding                : 1.5rem !default;
-$list-ul-padding             : 1.9rem !default;
-$list-side-margin            : 1.25rem !default;
-$defnlist-margin-bottom      : 1rem !default;
-$defnlist-term-weight        : $global-weight-bold !default;
-$defnlist-term-margin-bottom : 0.3rem !default;
-$blockquote-color            : $darkest-gray !default;
-$blockquote-padding          : rem-calc(9 20 0 19) !default;
-$blockquote-border           : 3px solid $primary !default;
-$blockquote-font-size        : rem-calc(28) !default;
-$cite-font-size              : rem-calc(18) !default;
-$cite-color                  : $darkest-gray !default;
+$anchor-color                   : $primary !default;
+$anchor-color-hover             : lighten($primary, 14%) !default;
+$anchor-color-active            : $primary !default;
+$anchor-color-disabled          : $secondary !default;
+$anchor-text-decoration         : none !default;
+$anchor-text-decoration-hover   : none !default;
+$anchor-text-decoration-active  : none !default;
+$anchor-text-decoration-disabled: none !default;
+$hr-width                       : $global-width !default;
+$hr-border                      : 1px solid #f2f2f2 !default;
+$hr-margin                      : rem-calc(20) auto !default;
+$list-font-size                 : .9rem !default;
+$list-lineheight                : $body-lineheight !default;
+$list-margin-bottom             : $body-margin-bottom !default;
+$list-style-type                : disc !default;
+$list-style-position            : outside !default;
+$list-font-size                 : .9rem !default;
+$list-ul-side-margin            : .6rem !default;
+$list-nested-side-margin        : 1.25rem !default;
+$list-color                     : $dark-gray !default;
+$list-padding                   : 1.5rem !default;
+$list-ul-padding                : 1.9rem !default;
+$list-side-margin               : 1.25rem !default;
+$defnlist-margin-bottom         : 1rem !default;
+$defnlist-term-weight           : $global-weight-bold !default;
+$defnlist-term-margin-bottom    : 0.3rem !default;
+$blockquote-color               : $darkest-gray !default;
+$blockquote-padding             : rem-calc(9 20 0 19) !default;
+$blockquote-border              : 3px solid $primary !default;
+$blockquote-font-size           : rem-calc(28) !default;
+$cite-font-size                 : rem-calc(18) !default;
+$cite-color                     : $darkest-gray !default;
 
 //==========================================================================
 //  Badges GLOBAL Configs
@@ -223,6 +227,11 @@ $btn-no-border:
 ()
 !default;
 
+// Button sizes with custom padding
+// For adjusting padding sizes
+// Add a btn size and padding, ex: (lg: ".5em 1.25em")
+$btn-size-padding: (
+) !default;
 
 // Outline Button Colors
 // The class is generated using the name: (ex .c-btn-primary-outline)
@@ -281,6 +290,9 @@ $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 // Dropdowns
 // ------------
+$dropdown-glued           : true !default;
+$dropdown-list-margin     : 0 !default;
+$dropdown-list-padding    : 0 !default;
 $dropdown-padding         : 1rem !default;
 $dropdown-border          : 1px solid $light-gray !default;
 $dropdown-color           : $dark-gray !default;
@@ -292,6 +304,7 @@ $dropdown-font-size       : rem-calc(12) !default;
 $dropdown-font-weight     : bold !default;
 $dropdown-width           : 100% !default;
 $dropdown-radius          : $global-radius !default;
+$dropdown-divider-margin  : 0 !default;
 
 
 //==========================================================================

@@ -87,8 +87,8 @@
 @mixin dropdown-list {
   display: none;
   position: absolute;
-  padding: 0;
-  margin: 0;
+  padding: $dropdown-list-padding;
+  margin: $dropdown-list-margin;
   top: 0;
   left: 0;
   width: $dropdown-width;
@@ -97,7 +97,7 @@
   color: $dropdown-color;
   border: $dropdown-border;
   box-shadow: $dropdown-box-shadow;
-  border-radius: $global-radius;
+  border-radius: $dropdown-radius;
   box-sizing: border-box;
   z-index: map-get($zindex, dropdown);
 }
