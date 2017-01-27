@@ -108,7 +108,6 @@
 @mixin table-hover {
   tr {
     &:hover {
-      cursor: pointer;
       background-color: $table-row-hover;
     }
 

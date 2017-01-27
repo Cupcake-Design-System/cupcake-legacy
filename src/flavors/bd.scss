@@ -311,15 +311,19 @@ $dropdown-divider-margin   : 5px ;
 
 
 $card-header-font-size  : rem-calc(15);
+$card-header-font-weight: 600;
 $card-body-font-size    : rem-calc(14);
 $card-title-font-size   : rem-calc(20);
 $card-subtitle-font-size: rem-calc(16);
 $card-body-text-color   : #414152;
-$card-border-color      : $light-gray ;
+$card-border-color      : transparent ;
+$card-border-radius     : 1px ;
 $card-header-bg         : $white ;
 $card-footer-bg         : $white ;
 $card-bg                : $white ;
-$card-shadow            : 1px 2px 5px $light-gray ;
+$card-padding           : 10px 15px;
+$card-shadow            : 0 2px 2px 0 rgba(65, 65, 81, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.14) ;
+$card-shadow-hover      : 0 4px 4px 0 rgba(0, 122, 194, 0.07), 0 1px 4px 0 rgba(0, 0, 0, 0.14) ;
 $card-max-width         : 30rem ;
 
 
@@ -378,16 +382,17 @@ $tab-sizes:
 //  Table GLOBAL Configs
 //==========================================================================
 $table-background        : $white;
-$table-border            : 1px solid $medium-gray;
-$table-padding           : rem-calc(8 10 10);
-$table-row-hover         : $light-gray;
-$table-row-stripe-hover  : $light-gray;
-$table-striped-background: $light-gray;
+$table-border            : 0;
+$table-padding           : rem-calc(7 10 8);
+$table-row-hover         : rgba(214, 240, 255, 0.5);
+$table-row-stripe-hover  : rgba(214, 240, 255, 0.5);
+$table-striped-background: #f9f9f9;
 $table-stripe            : odd;
 $table-head-background   : $white;
 $table-foot-background   : $medium-gray;
 $table-head-font-color   : $body-font-color;
 $table-foot-font-color   : $body-font-color;
+$table-shadow            : none;
 $show-header-for-stacked : false;
 
 //==========================================================================

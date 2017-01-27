@@ -34,7 +34,10 @@ table.c-table-hover {
 
 .c-table-transparent {
   tbody {
-    tr,td, tr:nth-child(odd), tr:nth-child(even) {
+    tr,
+    td,
+    tr:nth-child(odd),
+    tr:nth-child(even) {
       background-color: transparent;
     }    
   }
@@ -47,7 +50,7 @@ table.c-table-hover {
   border-radius: $table-border-radius;
   border: $table-border;
   position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: $table-shadow;
   display: table;
 
   .c-table-row:nth-of-type(even) {
