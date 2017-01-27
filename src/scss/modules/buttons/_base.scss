@@ -45,6 +45,7 @@
     }
 
     &:hover,
+    &.c-btn-hover,
     a:hover,
     a:focus {
       background: lighten($color, 4%);
@@ -56,5 +57,25 @@
       background: $color;
       border-color: darken($color, 15%) darken($color, 10%) darken($color, 10%);
     }
+  }
+}
+
+.c-btn.c-btn-disabled,
+.c-btn[disabled] {
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    top: 0;
+    background: $btn-disabled-bg;
+    border: $btn-disabled-bd;
+    text-shadow: $btn-disabled-text-shadow;
+    color: $btn-disabled-c;
+    line-height: 1;
+    cursor: not-allowed;
+    appearance: none;
+    box-shadow: none;
+    opacity: $btn-disabled-opacity;
   }
 }

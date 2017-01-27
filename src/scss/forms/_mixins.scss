@@ -16,17 +16,23 @@
   font-family: inherit;
   font-size: $control-font-size;
   font-weight: $control-font-weight;
+  line-height: $control-line-height;
   resize: vertical;
   appearance: none;
   transition: $control-transition;
 
   &::placeholder {
     color: $control-placeholder-c;
+    transition: $control-transition;
   }
 
   &:hover,
   &#{&}-hover {
     border-color: $control-hover-border;
+
+    &::placeholder {
+      color: $control-placeholder-hover-c;
+    }
   }
 
   &:focus,
@@ -59,4 +65,8 @@
   border-color: $control-disabled-border;
   background-color: $control-disabled-background;
   cursor: not-allowed;
+
+  &::placeholder {
+    color: $control-placeholder-c;
+  }
 }

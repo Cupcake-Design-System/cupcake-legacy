@@ -177,9 +177,9 @@ $btn-default-padding-h: 1.25em !default;
 $btn-font-weight      : bold !default;
 $btn-border-width     : 1px !default;
 $btn-radius           : 4px !default;
-$btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05);
-$btn-shadow-active    : inset 0 0 4px rgba(black, .54);
-$btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48);
+$btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05) !default;
+$btn-shadow-active    : inset 0 0 4px rgba(black, .54) !default;
+$btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48) !default;
 
 // Button shadows add box-shadow to buttons
 $btn-shadows: true !default;
@@ -495,7 +495,9 @@ $ipreo-footer-trans-color     : $black!default;
 //==========================================================================
 $control-font-size              : 16px !default;
 $control-font-weight            : normal !default;
+$control-line-height            : normal !default;
 $control-placeholder-c          : $dark-gray !default;
+$control-placeholder-hover-c    : $control-placeholder-c !default;
 $control-background             : $white !default;
 $control-padding                : .5em !default;
 $control-border                 : #e0e0e0 !default;
@@ -545,6 +547,13 @@ $control-sizes:
 ("lg", 1.17em)
 ("xl", 1.5em)
 ("xxl", 2em)
+!default;
+
+// Input sizes with custom padding
+// For adjusting padding sizes
+// Add a input size and padding, ex: (lg: ".5em 1.25em")
+$control-sizes-padding:
+()
 !default;
 
 // FORM COLORS
