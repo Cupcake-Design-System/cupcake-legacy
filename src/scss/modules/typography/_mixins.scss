@@ -31,23 +31,22 @@
 }
 
 
-
+  
+    
 // .c-sm-text-center or .c-text-center
-@each $size in $breakpoint-classes {
-  @include breakpoint($size) {
+@each $size, $breakpoint in $breakpoints {
     @each $align in (left, right, center, justify) {
-      @if $size != $-ipreo-zero-breakpoint {
         .c-#{$size}-text-#{$align} {
+           @include breakpoint($size) {
           text-align: $align;
         }
-      }
-
-      @else {
-        .c-text-#{$align} {
-          text-align: $align;
-        }
-      }
     }
   }
+}
+
+@each $align in (left, right, center, justify) {
+    .c-text-#{$align} {
+      text-align: $align;
+    }
 }
 

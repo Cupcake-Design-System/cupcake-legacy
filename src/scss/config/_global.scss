@@ -53,14 +53,11 @@ $global-sidebar-background-color: #f5f5f5 !default;
 // 2. Breakpoints
 // --------------
 $breakpoints: (
-  sm: 0,
-  md: 640px,
-  lg: 1024px,
-  xl: 1200px,
-  xxl: 1440px,
-)!default;
-
-$breakpoint-classes: (sm md lg xl xxl)!default;
+  'xs': 0,
+  'sm': 25rem,
+  'md': 37.5rem,
+  'lg': 60rem,
+  'xl': 90rem ) !default;
 
 
 // 4. Base Typography
