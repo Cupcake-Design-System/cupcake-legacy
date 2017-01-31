@@ -25,6 +25,10 @@
         @include header-styles;
 
         font-size: rem-calc($font-size);
+
+        @if map-has-key($header-weight, $header) {
+          font-weight: map-get($header-weight, $header);
+        }
       }
     }
   }

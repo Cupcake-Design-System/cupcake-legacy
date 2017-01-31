@@ -51,15 +51,8 @@ table.c-table-border {
   }
 
   &-both {
-    tr {
-      border-bottom: 1px solid $table-border-color;
-    }
-    th,
-    td {
-      &:not(:last-child) {
-        border-right: 1px solid $table-border-color;
-      }
-    }
+    @extend table.c-table-border-horizontal;
+    @extend table.c-table-border-vertical;
   }
 
   &-full {

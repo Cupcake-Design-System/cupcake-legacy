@@ -93,6 +93,11 @@ $header-sizes: (
   ),
 );
 
+$header-weight: (
+  'xl': normal,
+  'lg': normal
+);
+
 $header-color                   : $body-font-color ;
 $header-lineheight              : 1.4 ;
 $header-margin-bottom           : 0.5rem ;
@@ -450,7 +455,7 @@ $control-hover-border     : #bababa;
 $control-active-border    : $primary;
 
 $control-padding          : .358em;
-$control-transition       : border-color 0.1s ease-in, color 0.1s ease-in;
+$control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
 /* stylelint-enable */
 
 $control-sizes:
@@ -466,6 +471,12 @@ $control-sizes-padding: (
   sm: .27em .54em,
   xs: .125em .220em,
 );
+
+$control-colors:
+("success", #4DAA0B, #F3F8EF)
+("warning", #F8C000, #FCFBE7)
+("error", #E98F88, #FFF6F5)
+;
 
 
 @import "../scss/default";

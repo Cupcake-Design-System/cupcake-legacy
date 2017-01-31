@@ -86,6 +86,8 @@ $header-sizes: (
     ),
 )!default;
 
+$header-weight: ()!default;
+
 $header-color                   : inherit !default;
 $header-lineheight              : 1.4 !default;
 $header-margin-bottom           : 0.5rem !default;
@@ -560,12 +562,12 @@ $control-sizes-padding:
 
 // FORM COLORS
 // This map is used to generate form validation colors.
-// Arguments (name, color).
+// Arguments (name, color, background).
 // The class is generated using the name: (ex .c-input-success).
 $control-colors:
-("success", $success)
-("warning", $warning)
-("error", $danger)
+("success", $success, false)
+("warning", $warning, false)
+("error", $danger, false)
 !default;
 
 // Connect ng-validation states with form validation colors ($control-colors)
