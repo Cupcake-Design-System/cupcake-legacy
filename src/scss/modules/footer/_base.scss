@@ -18,12 +18,12 @@
       color: $ipreo-footer-color;
     }
 
-    @include breakpoint(sm) {
+    @include bp(sm) {
       text-align: center;
     }
   }
 
-  @include breakpoint(md down) {
+  @include bp($until: md) {
     text-align: center;
     display: inline-block;
   }

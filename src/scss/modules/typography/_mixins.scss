@@ -19,7 +19,7 @@
 
 // Heading sizes
 @each $size, $headers in $header-sizes {
-  @include breakpoint($size) {
+   @include bp($size) {
     @each $header, $font-size in $headers {
       .c-header-#{$header} {
         @include header-styles;
@@ -41,7 +41,7 @@
 @each $size, $breakpoint in $breakpoints {
     @each $align in (left, right, center, justify) {
         .c-#{$size}-text-#{$align} {
-           @include breakpoint($size) {
+            @include bp($size) {
           text-align: $align;
         }
     }

@@ -11,7 +11,7 @@ table.c-table {
 
 
 table.c-table-stack {
-  @include breakpoint(md down) {
+  @include bp($until: lg) {
     @include table-stack;
   }
 }
@@ -27,42 +27,18 @@ table.c-table-hover {
 .c-table-scroll {
   overflow-x: auto;
 
-  table.c-table {
+  table.c {
     width: auto;
   }
 }
 
-// Different table borders
-table.c-table-border {
-
-  &-horizontal {
-    tr {
-      border-bottom: 1px solid $table-border-color;
-    }
+.c-table-transparent {
+  tbody {
+    tr,td, tr:nth-child(odd), tr:nth-child(even) {
+      background-color: transparent;
+    }    
   }
-
-  &-vertical {
-    th,
-    td {
-      &:not(:last-child) {
-        border-right: 1px solid $table-border-color;
-      }
-    }
-  }
-
-  &-both {
-    @extend table.c-table-border-horizontal;
-    @extend table.c-table-border-vertical;
-  }
-
-  &-full {
-    th,
-    td {
-      border: 1px solid $table-border-color;
-    }
-  }  
 }
-
 
 // CSS Table
 
@@ -71,7 +47,7 @@ table.c-table-border {
   border-radius: $table-border-radius;
   border: $table-border;
   position: relative;
-  box-shadow: $table-shadow;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: table;
 
   .c-table-row:nth-of-type(even) {
@@ -112,7 +88,7 @@ table.c-table-border {
   @include last-child() {
     border-radius: 0 0 0 $table-border-radius;
 
-    @include breakpoint(sm down) {
+    @include bp($until: md) {
       border-radius: 0 0 $table-border-radius $table-border-radius;
     }
 
@@ -134,7 +110,7 @@ table.c-table-border {
     background: $table-row-hover;
   }
 
-  @include breakpoint(sm down) {
+  @include bp($until: md) {
     padding: 8px 0;
     display: block;
   }
@@ -164,7 +140,7 @@ table.c-table-border {
   @include first-child() {
     border-radius: $table-border-radius;
 
-    @include breakpoint(sm down) {
+    @include bp($until: md) {
       border-radius: $table-border-radius $table-border-radius 0 0;
     }
 
@@ -179,7 +155,7 @@ table.c-table-border {
     }
   }
 
-  @include breakpoint(sm down) {
+  @include bp($until: md) {
     padding: 8px 0;
     display: block;
     border-radius: $table-border-radius $table-border-radius 0 0;
@@ -198,7 +174,7 @@ table.c-table-border {
     border-right: none;
   }
 
-  @include breakpoint(sm down) {
+  @include bp($until: md) {
     padding: $table-cell-padding-sm;
     display: block;
     border-right: none;

@@ -4,13 +4,8 @@
 $auto-generate: true !default;
 $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
-$gutter: .8rem !default;
+$gutter: 1rem !default;
 $columns: 12 !default;
-
-
-// Breakpoints
-// Please note that adding more breakpoints adds quite a lot of extra css depending on the optional features
-
 
 
 // Optional row features - Set to true to enable
@@ -22,6 +17,14 @@ $col-offset:      true !default;
 $col-align:       true !default;
 $gutter-collapse: true !default;
 
+$container-max-widths: (
+  640px: 610px,
+  1024px: 980px,
+  1200px: 1140px,
+  1440px: 1380px
+) !default;
+
+
 
 // Container Generator
 // ==========================================================================
@@ -32,20 +35,24 @@ $gutter-collapse: true !default;
 
   @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
-      padding-right: ($gutter);
-      padding-left:  ($gutter);
+      padding-right: $gutter;
+      padding-left: $gutter;
     }
-  }
+ }
 }
 
+
 @mixin make-container-max-widths() {
-  @each $breakpoint, $size in $breakpoints {
-   @media (min-width: $size) {
-      width: $size - 2;
+@each $container-max-width in $container-max-widths {
+  $bp: nth($container-max-width, 1);
+  $width: nth($container-max-width, 2);    
+   @media (min-width: $bp) {  
+      width: $width;
       max-width: 100%;
     }
   }
 }
+
 
 .c-container {
   @include make-container();
@@ -499,8 +506,8 @@ $gutter-collapse: true !default;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -($gutter / 2);
-  margin-left: -($gutter / 2);
+  margin-right: -$gutter;
+  margin-left: -$gutter;
 }
 
 @mixin create-row-col() {
@@ -515,7 +522,7 @@ $gutter-collapse: true !default;
   // Child items of a row section also have display flex to allow same-height (stretched) modules within multiple cols
   // display: flex;
   // max-width: 100%;
-  padding: $gutter / 2;
+  padding: $gutter;
 
   > * {
     // 	// All direct child elements within a col try to use up the maximum (and same) amount of available space

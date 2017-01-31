@@ -27,11 +27,11 @@
 // Alignment
 //
 .c-media-right {
-  @extend %p-left-md;
+  padding-left: $space-md;
 }
 
 .c-media-left {
-  @extend %p-right-md;
+  padding-right: $space-md;
 }
 
 .c-media-heading {
