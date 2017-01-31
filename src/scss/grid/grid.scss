@@ -17,13 +17,13 @@ $col-offset:      true !default;
 $col-align:       true !default;
 $gutter-collapse: true !default;
 
+// These indicate breakpoint: width at breakpoint
 $container-max-widths: (
   640px: 610px,
   1024px: 980px,
   1200px: 1140px,
   1440px: 1380px
 ) !default;
-
 
 
 // Container Generator

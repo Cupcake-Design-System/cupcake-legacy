@@ -34,20 +34,20 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.7",
+    "gulp-downloader": "^1.0.4",
     "gulp-gh-pages": "^0.5.4",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-prompt": "^0.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
     "gulp-stylelint": "^3.7.0",
+    "minimist": "^1.2.0",
     "run-sequence": "^1.2.2",
     "stylelint-config-standard": "^15.0.1",
     "stylelint-declaration-use-variable": "^1.6.0",
     "stylelint-scss": "^1.4.1",
-    "gulp-sourcemaps": "^2.4.0",
-    "vinyl-paths": "^2.0.0",
-    "gulp-downloader": "^1.0.4",
-    "minimist": "^1.2.0"
+    "vinyl-paths": "^2.0.0"
   }
 }

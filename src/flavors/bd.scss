@@ -55,18 +55,6 @@ $breakpoints: (
   xxl: 1440px,
 );
 
-$breakpoint-classes: (sm md lg);
-
-// 3. The Grid
-// -----------
-$grid-row-width: $global-width ;
-$grid-column-count: 12 ;
-$grid-column-gutter: (
-  sm: 20px,
-  md: 30px,
-);
-$grid-column-align-edge: true ;
-$block-grid-max: 8 ;
 
 // 4. Base Typography
 // ------------------
@@ -292,8 +280,7 @@ $alert-colors:
 ("success", $success)
 ("default", $default)
 ("warning", $warning)
-("danger", $danger)
-;
+("danger", $danger);
 
 
 // Dropdowns
