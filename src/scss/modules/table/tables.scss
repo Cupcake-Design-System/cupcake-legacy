@@ -27,21 +27,49 @@ table.c-table-hover {
 .c-table-scroll {
   overflow-x: auto;
 
-  table.c {
+  table.c-table {
     width: auto;
   }
 }
 
-.c-table-transparent {
-  tbody {
-    tr,
-    td,
-    tr:nth-child(odd),
-    tr:nth-child(even) {
-      background-color: transparent;
-    }    
+// Different table borders
+table.c-table-border {
+
+  &-horizontal {
+    tr {
+      border-bottom: 1px solid $table-border-color;
+    }
   }
+
+  &-vertical {
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-both {
+    tr {
+      border-bottom: 1px solid $table-border-color;
+    }
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-full {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }  
 }
+
 
 // CSS Table
 

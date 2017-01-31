@@ -383,6 +383,7 @@ $table-background        : $white!default;
 $table-border-color      : $medium-gray!default;
 $table-border-radius     : 0 !default;
 $table-border            : 1px solid $table-border-color!default;
+$table-head-border-bottom: 0 !default;
 $table-padding           : rem-calc(8 10 10)!default;
 $table-cell-padding      : rem-calc(12 12)!default;
 $table-cell-padding-sm   : rem-calc(2 12)!default;
