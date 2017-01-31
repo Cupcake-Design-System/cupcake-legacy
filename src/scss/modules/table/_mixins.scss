@@ -1,5 +1,5 @@
 @mixin ipreo-table-children-styles($stripe: $table-stripe) {
-  .c-table {
+.c-table {
   thead,
   tbody,
   tfoot {
@@ -11,9 +11,10 @@
   thead {
     background: $table-head-background;
     color: $table-head-font-color;
+    border-bottom: $table-head-border-bottom;
 
-    tr:hover {
-      background-color: transparent !important;
+    th {
+      font-size: $table-header-font-size;
     }
   }
 
@@ -40,18 +41,22 @@
   }
 
   // Table rows
-  tbody {
-    tr {
-      // If stripe is set to even, darken the even rows.
-      @if $stripe == even {
-        &:nth-child(even) {
+
+  &:not(.c-table-transparent) {
+
+    tbody {
+      tr {
+        // If stripe is set to even, darken the even rows.
+        @if $stripe == even {
+          &:nth-child(even) {
+            background-color: $table-striped-background;
+          }
+        }
+
+        // If stripe is set to odd, darken the odd rows. @else if $stripe == odd {
+        &:nth-child(odd) {
           background-color: $table-striped-background;
         }
-      }
-
-      // If stripe is set to odd, darken the odd rows. @else if $stripe == odd {
-      &:nth-child(odd) {
-        background-color: $table-striped-background;
       }
     }
   }
@@ -72,12 +77,10 @@
   border-radius: $global-radius;
   text-align: left;
 
-  label {
-    width: 20px;
-    height: 20px;
-    line-height: 2;
+  &-layout-fixed {
+    table-layout: fixed;
   }
-
+  
   @if $nest {
     @include ipreo-table-children-styles($stripe);
   }
@@ -106,22 +109,23 @@
 
 /// Slightly darkens the table rows on hover.
 @mixin table-hover {
-  tr {
-    &:hover {
-      cursor: pointer;
-      background-color: $table-row-hover;
-    }
-
-    //Darkens the even striped table rows.
-    @if ($table-stripe == even) {
-      &:nth-of-type(even):hover {
+  tbody {
+    tr {
+      &:hover {
         background-color: $table-row-hover;
       }
-    }
 
-    //Darkens the odd striped table rows. @else if($table-stripe == odd) {
-    &:nth-of-type(odd):hover {
-      background-color: $table-row-hover;
+      //Darkens the even striped table rows.
+      @if ($table-stripe == even) {
+        &:nth-of-type(even):hover {
+          background-color: $table-row-hover;
+        }
+      }
+
+      //Darkens the odd striped table rows. @else if($table-stripe == odd) {
+      &:nth-of-type(odd):hover {
+        background-color: $table-row-hover;
+      }
     }
   }
 }

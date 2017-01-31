@@ -41,20 +41,6 @@
   box-shadow: $btn-shadow-active;
 }
 
-.c-btn.c-btn-disabled,
-.c-btn[disabled] {
-  top: 0;
-  background: $btn-disabled-bg;
-  border: $btn-disabled-bd;
-  text-shadow: $btn-disabled-text-shadow;
-  color: $btn-disabled-c;
-  line-height: 1;
-  cursor: not-allowed;
-  appearance: none;
-  box-shadow: none;
-  opacity: $btn-disabled-opacity;
-}
-
 
 /*
 * ==========================================================================
@@ -64,7 +50,6 @@
 @mixin dropdown-base() {
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
-  line-height: $btn-line-height;
   padding: $btn-default-padding-v $btn-default-padding-h;
   text-decoration: none;
   text-align: center;
@@ -87,8 +72,8 @@
 @mixin dropdown-list {
   display: none;
   position: absolute;
-  padding: 0;
-  margin: 0;
+  padding: $dropdown-list-padding;
+  margin: $dropdown-list-margin;
   top: 0;
   left: 0;
   width: $dropdown-width;
@@ -97,7 +82,7 @@
   color: $dropdown-color;
   border: $dropdown-border;
   box-shadow: $dropdown-box-shadow;
-  border-radius: $global-radius;
+  border-radius: $dropdown-radius;
   box-sizing: border-box;
   z-index: map-get($zindex, dropdown);
 }

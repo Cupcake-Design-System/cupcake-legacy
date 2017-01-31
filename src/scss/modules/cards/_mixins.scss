@@ -1,17 +1,21 @@
 @mixin card {
-  border-radius: $global-radius;
+  border-radius: $card-border-radius;
   border: 1px solid $card-border-color;
   background-color: $card-bg;
   color: $card-text-color;
   box-shadow: $card-shadow;
+
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
 }
 
 @mixin card-header {
   padding: $card-padding;
   font-size: $card-header-font-size;
-  font-weight: bold;
+  font-weight: $card-header-font-weight;
   border-bottom: $card-header-border-bottom;
-  border-radius: $global-radius $global-radius 0 0;
+  border-radius: $card-border-radius $card-border-radius 0 0;
 }
 
 @mixin card-content {
@@ -36,7 +40,7 @@
 @mixin card-footer {
   padding: $card-padding;
   border-top: 1px solid $card-border-color;
-  border-radius: 0 0 $global-radius $global-radius;
+  border-radius: 0 0 $card-border-radius $card-border-radius;
 }
 
 @mixin card-variant($background, $border, $color) {

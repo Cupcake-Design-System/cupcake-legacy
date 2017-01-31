@@ -47,15 +47,25 @@ select.c-input {
 
 
 // VALIDATION COLORS
-@each $name, $color in $control-colors {
+@each $name, $color, $bg in $control-colors {
   .c-input-#{$name} {
     &,
     &:hover {
       border-color: $color;
+
+      @if $bg {
+        background-color: $bg;
+      }
     }
 
     &:focus {
-      border-color: $control-active-border;
+
+      @if $bg {
+        border-color: $color;
+        background-color: transparent;
+      } @else {
+        border-color: $control-active-border;
+      }
     }
 
     & ~ .c-input-icon {
@@ -75,6 +85,10 @@ select.c-input {
   .c-input-#{$name},
   .c-input-label-#{$name} {
     font-size: $size;
+
+    @if map-has-key($control-sizes-padding, $name) {
+      padding: map-get($control-sizes-padding, $name);
+    }
   }
 }
 

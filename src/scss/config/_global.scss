@@ -86,41 +86,47 @@ $header-sizes: (
     ),
 )!default;
 
-$header-color                : inherit !default;
-$header-lineheight           : 1.4 !default;
-$header-margin-bottom        : 0.5rem !default;
-$header-text-rendering       : optimizeLegibility !default;
-$small-font-size             : 80% !default;
-$header-small-font-color     : $dark-gray !default;
+$header-weight: ()!default;
 
-$anchor-color                : $primary !default;
-$anchor-color-hover          : lighten($primary, 14%) !default;
-$anchor-text-decoration      : none !default;
-$anchor-text-decoration-hover: none !default;
-$hr-width                    : $global-width !default;
-$hr-border                   : 1px solid #f2f2f2 !default;
-$hr-margin                   : rem-calc(20) auto !default;
-$list-font-size              : .9rem !default;
-$list-lineheight             : $body-lineheight !default;
-$list-margin-bottom          : $body-margin-bottom !default;
-$list-style-type             : disc !default;
-$list-style-position         : outside !default;
-$list-font-size              : .9rem !default;
-$list-ul-side-margin         : .6rem !default;
-$list-nested-side-margin     : 1.25rem !default;
-$list-color                  : $dark-gray !default;
-$list-padding                : 1.5rem !default;
-$list-ul-padding             : 1.9rem !default;
-$list-side-margin            : 1.25rem !default;
-$defnlist-margin-bottom      : 1rem !default;
-$defnlist-term-weight        : $global-weight-bold !default;
-$defnlist-term-margin-bottom : 0.3rem !default;
-$blockquote-color            : $darkest-gray !default;
-$blockquote-padding          : rem-calc(9 20 0 19) !default;
-$blockquote-border           : 3px solid $primary !default;
-$blockquote-font-size        : rem-calc(28) !default;
-$cite-font-size              : rem-calc(18) !default;
-$cite-color                  : $darkest-gray !default;
+$header-color                   : inherit !default;
+$header-lineheight              : 1.4 !default;
+$header-margin-bottom           : 0.5rem !default;
+$header-text-rendering          : optimizeLegibility !default;
+$small-font-size                : 80% !default;
+$header-small-font-color        : $dark-gray !default;
+
+$anchor-color                   : $primary !default;
+$anchor-color-hover             : lighten($primary, 14%) !default;
+$anchor-color-active            : $primary !default;
+$anchor-color-disabled          : $secondary !default;
+$anchor-text-decoration         : none !default;
+$anchor-text-decoration-hover   : none !default;
+$anchor-text-decoration-active  : none !default;
+$anchor-text-decoration-disabled: none !default;
+$hr-width                       : $global-width !default;
+$hr-border                      : 1px solid #f2f2f2 !default;
+$hr-margin                      : rem-calc(20) auto !default;
+$list-font-size                 : .9rem !default;
+$list-lineheight                : $body-lineheight !default;
+$list-margin-bottom             : $body-margin-bottom !default;
+$list-style-type                : disc !default;
+$list-style-position            : outside !default;
+$list-font-size                 : .9rem !default;
+$list-ul-side-margin            : .6rem !default;
+$list-nested-side-margin        : 1.25rem !default;
+$list-color                     : $dark-gray !default;
+$list-padding                   : 1.5rem !default;
+$list-ul-padding                : 1.9rem !default;
+$list-side-margin               : 1.25rem !default;
+$defnlist-margin-bottom         : 1rem !default;
+$defnlist-term-weight           : $global-weight-bold !default;
+$defnlist-term-margin-bottom    : 0.3rem !default;
+$blockquote-color               : $darkest-gray !default;
+$blockquote-padding             : rem-calc(9 20 0 19) !default;
+$blockquote-border              : 3px solid $primary !default;
+$blockquote-font-size           : rem-calc(28) !default;
+$cite-font-size                 : rem-calc(18) !default;
+$cite-color                     : $darkest-gray !default;
 
 //==========================================================================
 //  Badges GLOBAL Configs
@@ -170,9 +176,9 @@ $btn-default-padding-h: 1.25em !default;
 $btn-font-weight      : bold !default;
 $btn-border-width     : 1px !default;
 $btn-radius           : 4px !default;
-$btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05);
-$btn-shadow-active    : inset 0 0 4px rgba(black, .54);
-$btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48);
+$btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05) !default;
+$btn-shadow-active    : inset 0 0 4px rgba(black, .54) !default;
+$btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48) !default;
 
 // Button shadows add box-shadow to buttons
 $btn-shadows: true !default;
@@ -220,6 +226,11 @@ $btn-no-border:
 ()
 !default;
 
+// Button sizes with custom padding
+// For adjusting padding sizes
+// Add a btn size and padding, ex: (lg: ".5em 1.25em")
+$btn-size-padding: (
+) !default;
 
 // Outline Button Colors
 // The class is generated using the name: (ex .c-btn-primary-outline)
@@ -278,6 +289,9 @@ $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 // Dropdowns
 // ------------
+$dropdown-glued           : true !default;
+$dropdown-list-margin     : 0 !default;
+$dropdown-list-padding    : 0 !default;
 $dropdown-padding         : 1rem !default;
 $dropdown-border          : 1px solid $light-gray !default;
 $dropdown-color           : $dark-gray !default;
@@ -289,21 +303,25 @@ $dropdown-font-size       : rem-calc(12) !default;
 $dropdown-font-weight     : bold !default;
 $dropdown-width           : 100% !default;
 $dropdown-radius          : $global-radius !default;
+$dropdown-divider-margin  : 0 !default;
 
 
 //==========================================================================
 //  Cards GLOBAL Configs
 //==========================================================================
 $card-header-font-size    : rem-calc(14)!default;
+$card-header-font-weight  : bold!default;
 $card-body-font-size      : rem-calc(12)!default;
 $card-title-font-size     : rem-calc(18)!default;
 $card-subtitle-font-size  : rem-calc(16)!default;
 $card-text-color          : #4a4a4a!default;
 $card-header-text-color   : #a0a0a0!default;
 $card-border-color        : $light-gray !default;
+$card-border-radius       : $global-radius !default;
 $card-bg                  : $white !default;
 $card-padding             : 0.9375rem !default;
 $card-shadow              : 1px 2px 5px $light-gray !default;
+$card-shadow-hover        : $card-shadow !default;
 $card-header-border-bottom: 1px solid rgba(177, 177, 177, 0.15)!default;
 $card-colors: 
 ("primary", $primary, $primary)
@@ -367,6 +385,7 @@ $table-background        : $white!default;
 $table-border-color      : $medium-gray!default;
 $table-border-radius     : 0 !default;
 $table-border            : 1px solid $table-border-color!default;
+$table-head-border-bottom: 0 !default;
 $table-padding           : rem-calc(8 10 10)!default;
 $table-cell-padding      : rem-calc(12 12)!default;
 $table-cell-padding-sm   : rem-calc(2 12)!default;
@@ -381,6 +400,7 @@ $table-head-font-color   : $body-font-color!default;
 $table-foot-font-color   : $body-font-color!default;
 $table-header-font-size  : rem-calc(12)!default;
 $table-cell-font-size    : rem-calc(12)!default;
+$table-shadow            : 0 1px 3px rgba(0, 0, 0, 0.2)!default;
 $show-header-for-stacked : false!default;
 
 $table-colors: ("primary", $primary)
@@ -479,7 +499,9 @@ $ipreo-footer-trans-color     : $black!default;
 //==========================================================================
 $control-font-size              : 16px !default;
 $control-font-weight            : normal !default;
+$control-line-height            : normal !default;
 $control-placeholder-c          : $dark-gray !default;
+$control-placeholder-hover-c    : $control-placeholder-c !default;
 $control-background             : $white !default;
 $control-padding                : .5em !default;
 $control-border                 : #e0e0e0 !default;
@@ -531,14 +553,21 @@ $control-sizes:
 ("xxl", 2em)
 !default;
 
+// Input sizes with custom padding
+// For adjusting padding sizes
+// Add a input size and padding, ex: (lg: ".5em 1.25em")
+$control-sizes-padding:
+()
+!default;
+
 // FORM COLORS
 // This map is used to generate form validation colors.
-// Arguments (name, color).
+// Arguments (name, color, background).
 // The class is generated using the name: (ex .c-input-success).
 $control-colors:
-("success", $success)
-("warning", $warning)
-("error", $danger)
+("success", $success, false)
+("warning", $warning, false)
+("error", $danger, false)
 !default;
 
 // Connect ng-validation states with form validation colors ($control-colors)
