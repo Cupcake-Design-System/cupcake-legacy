@@ -24,9 +24,9 @@ $space-prefixes : (
   m-left : margin-left,
 ) !default;
 
-@mixin make-space($values, $prefixes) {
-  @each $attr-short, $attr-long in $prefixes {
-    @each $value-name, $value-size in $values {
+@mixin space-class-export{
+  @each $attr-short, $attr-long in $space-prefixes {
+    @each $value-name, $value-size in $space-values {
       .c-#{$attr-short}-#{$value-name} {
         #{$attr-long}: #{$value-size};
       }

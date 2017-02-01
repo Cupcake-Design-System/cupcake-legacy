@@ -57,6 +57,7 @@ $flex-align: (
   align-self: $y;
 }
 
+@mixin flex-class-export {
   @each $hdir, $prop in map-remove($flex-justify, left) {
     .c-justify-#{$hdir} {
       @include flex-align($x: $hdir);
@@ -72,3 +73,4 @@ $flex-align: (
       @include flex-align-self($y: $vdir);
     }
   }
+}

@@ -6,4 +6,5 @@
 @import "forms/forms";
 @import "modules/modules";
 @import "ui/ui";
-@include make-space($space-values, $space-prefixes);
+@include space-class-export;
+@include flex-class-export;
