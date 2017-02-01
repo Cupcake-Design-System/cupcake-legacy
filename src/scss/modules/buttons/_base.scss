@@ -23,7 +23,6 @@
   .c-btn-#{nth($pair, 1)} {
     $color: nth($pair, 2);
     $font-color: nth($pair, 3);
-    font-size: $btn-font-size;
     background: $color;
     color: $font-color;
     border-color: darken($color, 8%) darken($color, 8%) darken($color, 8%);
