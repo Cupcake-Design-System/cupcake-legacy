@@ -1,5 +1,4 @@
-//justify is horizontal this mixin gives us .c-justify-{value}
-$-ipreo-flex-justify: (
+$flex-justify: (
   'start': flex-start,
   'end': flex-end,
   'center': center,
@@ -7,27 +6,22 @@ $-ipreo-flex-justify: (
   'space-around': space-around,
 );
 
-//align is vertical cols this mixin gives us .c-align-{value}
-$-ipreo-flex-align: (
+$flex-align: (
   'top': flex-start,
   'bottom': flex-end,
   'center': center,
   'stretch': stretch,
 );
 
-/// Enables flexbox by adding `display: flex` to the element.
 @mixin flex {
   display: flex;
 }
 
 /// Horizontally or vertically aligns the items within a flex container.
-///
-/// Horizontal alignment to use. Can be `left`, `right`, `center`, `justify`, or `spaced`. Or, set it to `null` (the default) to not set horizontal alignment.
-/// Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
 @mixin flex-align($x: null, $y: null) {
   @if $x {
-    @if map-has-key($-ipreo-flex-justify, $x) {
-      $x: map-get($-ipreo-flex-justify, $x);
+    @if map-has-key($flex-justify, $x) {
+      $x: map-get($flex-justify, $x);
     }
 
     @else {
@@ -36,8 +30,8 @@ $-ipreo-flex-align: (
   }
 
   @if $y {
-    @if map-has-key($-ipreo-flex-align, $y) {
-      $y: map-get($-ipreo-flex-align, $y);
+    @if map-has-key($flex-align, $y) {
+      $y: map-get($flex-align, $y);
     }
 
     @else {
@@ -49,12 +43,10 @@ $-ipreo-flex-align: (
   align-items: $y;
 }
 
-/// Vertically align a single column within a flex row. Apply this mixin to a flex column.
-/// Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
 @mixin flex-align-self($y: null) {
   @if $y {
-    @if map-has-key($-ipreo-flex-align, $y) {
-      $y: map-get($-ipreo-flex-align, $y);
+    @if map-has-key($flex-align, $y) {
+      $y: map-get($flex-align, $y);
     }
 
     @else {
@@ -65,15 +57,13 @@ $-ipreo-flex-align: (
   align-self: $y;
 }
 
-/* stylelint-disable */
-  @each $hdir, $prop in map-remove($-ipreo-flex-justify, left) {
+  @each $hdir, $prop in map-remove($flex-justify, left) {
     .c-justify-#{$hdir} {
       @include flex-align($x: $hdir);
     }
   }
 
-  // Vertical alignment using align-items and align-self
-  @each $vdir, $prop in $-ipreo-flex-align {
+  @each $vdir, $prop in $flex-align {
     .c-align-#{$vdir} {
       @include flex-align($y: $vdir);
     }
@@ -82,5 +72,3 @@ $-ipreo-flex-align: (
       @include flex-align-self($y: $vdir);
     }
   }
-
-

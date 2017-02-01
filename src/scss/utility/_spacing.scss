@@ -1,11 +1,4 @@
-$space-none: 0 !default;
-$space-xs: .25rem !default;
-$space-sm: .5rem !default;
-$space-md: 1rem !default;
-$space-lg: 2rem !default;
-$space-xl: 4rem !default;
-$space-xxl: 8rem !default;
-$space-xxxl: 16rem !default;
+@import '../config/global';
 
 $space-values : (
   0: $space-none,

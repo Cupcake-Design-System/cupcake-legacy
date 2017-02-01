@@ -1,6 +1,8 @@
-$bp-responsive: true !default;
-$bp-static-breakpoint: lg !default;
-$bp-show-breakpoints: () !default;
+
+@import '../config/global';
+
+$show-breakpoints: false;
+$bp-show-breakpoints: (xs, sm, md, lg, xl, xxl);
 $bp-media-type: all !default;
 /// Get a breakpoint's width
 ///  $tablet-width: bp-get-breakpoint-width(tablet);
@@ -15,25 +17,8 @@ $bp-media-type: all !default;
   }
 }
 
-/// Media Query mixin
-/// @example scss
-///  .element {
-///    @include bp($from: mobile) {
-///      color: red;
-///    }
-///    @include bp($until: tablet) {
-///      color: blue;
-///    }
-///    @include bp(mobile, tablet) {
-///      color: green;
-///    }
-///    @include bp($from: tablet, $and: '(orientation: landscape)') {
-///      color: teal;
-///    }
-///    @include bp(950px) {
-///      color: hotpink;
 
-@mixin bp( $from: false, $until: false, $and: false, $media-type: $bp-media-type, $breakpoint: $breakpoints, $responsive: $bp-responsive, $static-breakpoint: $bp-static-breakpoint) {
+@mixin bp( $from: false, $until: false, $and: false, $media-type: $bp-media-type, $breakpoint: $breakpoints) {
   $min-width: 0;
   $max-width: 0;
   $media-query: '';
@@ -57,18 +42,7 @@ $bp-media-type: all !default;
             $max-width: bp-get-breakpoint-width($until, $breakpoint) - 10;
         }
     }
-    // Responsive support is disabled, rasterize the output outside @media blocks
-    // The browser will rely on the cascade itself.
-    @if $responsive==false {
-        $static-breakpoint-width: mq-get-breakpoint-width($static-breakpoint, $breakpoints);
-        $target-width: $static-breakpoint-width;
-        // Output only rules that start at or span our target width
-        @if ( $and==false and $min-width <=$target-width and ( $until==false or $max-width >=$target-width)) {
-            @content;
-        }
-    }
-    // Responsive support is enabled, output rules inside @media queries
-    @else {
+
         @if $min-width !=0 {
             $media-query: '#{$media-query} and (min-width: #{$min-width})';
         }
@@ -86,25 +60,17 @@ $bp-media-type: all !default;
         @media #{$media-type + $media-query} {
             @content;
         }
-    }
-}
-
-/// Add a breakpoint
-///  @include bp-add-breakpoint(tvscreen, 1920px);
-///  @include bp(tvscreen) {}
-@mixin bp-add-breakpoint($name, $width) {
-  $new-breakpoint: ($name: $width);
-  $breakpoints: map-merge($breakpoints, $new-breakpoint) !global;
+    
 }
 
 ///  @include bp-show-breakpoints;
 ///  @include bp-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));
 @mixin bp-show-breakpoints($show-breakpoints: $bp-show-breakpoints, $breakpoint: $breakpoints) {
   body:before {
-    background-color: #FCF8E3;
-    border-bottom: 1px solid #FBEED5;
-    border-left: 1px solid #FBEED5;
-    color: #C09853;
+    background-color: lighten(#0082de, 60%);
+    border-bottom: 1px solid lighten(#0082de, 50%);
+    border-left: 1px solid lighten(#0082de, 50%);
+    color: #0082de;
     font: small-caption;
     padding: 3px 6px;
     pointer-events: none;
@@ -123,6 +89,25 @@ $bp-media-type: all !default;
   }
 }
 
-@if length($bp-show-breakpoints)>0 {
+@if $show-breakpoints {
   @include bp-show-breakpoints;
 }
+
+// .element {
+//   @include bp($from: lg) {
+//   color: red;
+// }
+// }
+
+// .element2 {
+//   @include bp($until: lg) {
+//   color: red;
+// }
+// }
+
+// .element3 {
+//   @include bp(sm, xl) {
+//   color: red;
+// }
+// }
+

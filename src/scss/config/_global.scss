@@ -2,7 +2,7 @@
 ///  -----------------------------
 //
 /* stylelint-disable */
-@import '../utility/utility';
+
 
 //// 1. Global
 /// ---------
@@ -53,11 +53,21 @@ $global-sidebar-background-color: #f5f5f5 !default;
 /// 2. Breakpoints
 /// --------------
 $breakpoints: (
-  'xs': 0,
-  'sm': 25rem,
-  'md': 37.5rem,
-  'lg': 60rem,
-  'xl': 90rem ) !default;
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px) !default;
+
+$space-none: 0 !default;
+$space-xs: .25rem !default;
+$space-sm: .5rem !default;
+$space-md: 1rem !default;
+$space-lg: 2rem !default;
+$space-xl: 4rem !default;
+$space-xxl: 8rem !default;
+$space-xxxl: 16rem !default;
 
 
 /// 4. Base Typography
