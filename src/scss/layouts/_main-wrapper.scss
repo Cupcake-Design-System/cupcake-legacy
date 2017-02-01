@@ -6,10 +6,10 @@
 
 .c-main-content {
   background-color: $white;
-  color: #484848;
+  color: $black;
   flex-direction: row;
-  flex: 1 0 75%;
-  padding: rem-calc(32 50);
+  flex: 1;
+  padding: $gutter;
 
   @media (min-width: 480px) and (max-width: 1024px) {
     padding: 20px;

@@ -6,6 +6,7 @@ $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
 $gutter: 1rem !default;
 $columns: 12 !default;
+$container-fixed-width: 1200px;
 
 
 // Optional row features - Set to true to enable
@@ -17,14 +18,6 @@ $col-offset:      true !default;
 $col-align:       true !default;
 $gutter-collapse: true !default;
 
-// These indicate breakpoint: width at breakpoint
-$container-max-widths: (
-  640px: 610px,
-  1024px: 980px,
-  1200px: 1140px,
-  1440px: 1380px
-) !default;
-
 
 // Container Generator
 // ==========================================================================
@@ -32,35 +25,19 @@ $container-max-widths: (
   position: relative;
   margin-left: auto;
   margin-right: auto;
-
-  @each $breakpoint, $size in $breakpoints {
-    @media (min-width: $size) {
-      padding-right: $gutter;
-      padding-left: $gutter;
-    }
+  padding-right: $gutter;
+  padding-left: $gutter;
+  flex: 1;
  }
-}
-
-
-@mixin make-container-max-widths() {
-@each $container-max-width in $container-max-widths {
-  $bp: nth($container-max-width, 1);
-  $width: nth($container-max-width, 2);    
-   @media (min-width: $bp) {  
-      width: $width;
-      max-width: 100%;
-    }
-  }
-}
-
 
 .c-container {
   @include make-container();
-  @include make-container-max-widths();
 }
 
-.c-container-fluid {
+.c-container-fixed {
   @include make-container();
+  width: $container-fixed-width;
+  max-width: 100%;
 }
 
 
