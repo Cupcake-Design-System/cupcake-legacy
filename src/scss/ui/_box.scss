@@ -7,31 +7,6 @@
 }
 
 
-@mixin box-content {
-  padding: $card-padding;
-  font-weight: normal;
-
-  &-title {
-    font-size: $card-title-font-size;
-    font-weight: bold;
-    line-height: 1;
-  }
-
-  &-subtitle {
-    font-size: $card-subtitle-font-size;
-  }
-
-  &-body {
-    font-size: $card-body-font-size;
-  }
-}
-
-
 .c-box {
-  @include card;
-
-  &-content {
-    @include card-content;
-  }
-
+  @include box;
 }
