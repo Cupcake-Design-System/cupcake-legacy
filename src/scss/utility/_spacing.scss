@@ -1,57 +1,44 @@
 $space-none: 0 !default;
-$space-xs: .125rem !default;
-$space-sm: .25rem !default;
-$space-md: .5rem !default;
-$space-lg: 1rem !default;
-$space-xl: 1.5rem !default;
-$space-xxl: 2rem !default;
-$directions: (top, right, bottom, left);
+$space-xs: .25rem !default;
+$space-sm: .5rem !default;
+$space-md: 1rem !default;
+$space-lg: 2rem !default;
+$space-xl: 4rem !default;
+$space-xxl: 8rem !default;
+$space-xxxl: 16rem !default;
 
 $space-values : (
   0: $space-none,
+  xs: $space-xs,
   sm: $space-sm,
   md: $space-md,
   lg: $space-lg,
   xl: $space-xl,
   xxl: $space-xxl,
-);
+  xxxl: $space-xxxl,
+) !default;
 
-@each $direction in $directions {
-  @each $name, $space in $space-values {
-    .c-p-#{$direction}-#{$name} {
-      padding-#{$direction}: $space;
-    }
+$space-prefixes : (
+  p  : padding,
+  p-top : padding-top,
+  p-right : padding-right,
+  p-bottom : padding-bottom,
+  p-left : padding-left,
+  m   : margin,
+  m-top : margin-top,
+  m-right : margin-right,
+  m-bottom : margin-bottom,
+  m-left : margin-left,
+) !default;
 
-    .c-p-#{$name} {
-      padding: $space;
-    }
-
-    .c-p-h-#{$name} {
-      padding: 0 $space;
-    }
-
-    .c-p-v-#{$name} {
-      padding: $space 0;
-    }
-  }
-}
-
-@each $direction in $directions {
-  @each $name, $space in $space-values {
-    .c-m-#{$direction}-#{$name} {
-      margin-#{$direction}: $space;
-    }
-
-    .c-m-#{$name} {
-      margin: $space;
-    }
-
-    .c-m-h-#{$name} {
-      margin: 0 $space;
-    }
-
-    .c-m-v-#{$name} {
-      margin: $space 0;
+@mixin make-space($values, $prefixes) {
+  @each $attr-short, $attr-long in $prefixes {
+    @each $value-name, $value-size in $values {
+      .c-#{$attr-short}-#{$value-name} {
+        #{$attr-long}: #{$value-size};
+      }
     }
   }
 }
+
+@include make-space($space-values, $space-prefixes);
