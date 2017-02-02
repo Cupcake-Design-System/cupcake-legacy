@@ -44,18 +44,6 @@ $global-text-direction        : ltr ;
 $global-flexbox               : true ;
 $print-transparent-backgrounds: true ;
 
-// 2. Breakpoints
-// --------------
-
-$breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1440px,
-);
-
 
 // 4. Base Typography
 // ------------------
