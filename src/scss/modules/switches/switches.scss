@@ -8,98 +8,39 @@
 .c-switch {
   @include switch;
 
-  @if $switch-style == material {
-    width: $material-switch-height * 4;
-    height: $material-switch-height;
-  }
-}
-
-.c-switch-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.c-switch-label {
-  position: relative;
-  display: block;
-  height: inherit;
-  text-transform: uppercase;
-  border-radius: inherit;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 0 2px rgba(0, 0, 0, 0.15);
-  transition: 0.25s ease-out;
-  transition-property: opacity background;
-}
-
-.c-switch-label::after,
-.c-switch-label::before {
-  position: absolute;
-  top: 50%;
-  margin-top: -.45em;
-  line-height: 1;
-  transition: inherit;
-}
-
-.c-switch-label::before {
-  content: attr(data-off);
-  right: 6px;
-  color: $switch-label-off;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
-
-.c-switch-label::after {
-  content: attr(data-on);
-  left: 8px;
-  color: $switch-label-on;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-}
-
-.c-switch-input:checked ~ .c-switch-label {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-}
-
-.c-switch-input:checked ~ .c-switch-label::before {
-  opacity: 0;
-}
-
-.c-switch-input:checked ~ .c-switch-label::after {
-  opacity: 1;
-}
-
-.c-switch-handle {
-  position: absolute;
-  border-radius: 50%;
-  background: $white;
-  transition: left 0.15s ease-out;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-
-  @if $switch-style == material {
-    top: -6px;
-    left: 0;
-    width: $material-switch-height + 10;
-    height: $material-switch-height + 10;
+  &-handle {
+    @include switch-handle;
   }
 
-  @else {
-    @include vertical-center;
-    
-    left: .15rem;
-    width: $default-switch-height - .1rem;
-    height: $default-switch-height - .25rem;
-  }
-}
-
-.c-switch-input:checked ~ .c-switch-handle {
-  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
-
-  @if $switch-style == material {
-    left: $material-switch-height * 2 + 5;
-  }
-
-  @else {
+  .c-switch-input:checked ~ .c-switch-handle {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
     left: $default-switch-height;
+  }
+}
+
+.c-switch-square {
+  @include switch(square);
+
+  .c-switch-handle {
+    @include switch-handle(square);
+  }
+
+  .c-switch-input:checked ~ .c-switch-handle {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
+    left: 2.15rem;
+  }
+}
+
+.c-switch-material {
+  @include switch(material);
+
+  .c-switch-handle {
+    @include switch-handle(material);
+  }
+
+  .c-switch-input:checked ~ .c-switch-handle {
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
+    left: $material-switch-height * 2 + 5;
   }
 }
 
@@ -114,4 +55,33 @@
     pointer-events: none;
   }
 }
+
+@each $name, $size in $switch-sizes {
+  .c-switch-#{$name} {
+    width: $size;
+    height: $size / 2;
+
+    .c-switch-handle {
+      @include vertical-center;
+
+      left: .15rem;
+      width: $size / 2 - .2rem;
+      height: $size / 2 - .25rem;
+    }
+
+    .c-switch-input:checked ~ .c-switch-handle {
+      left: $size / 2 + .1rem;
+    }
+
+    .c-switch-label {
+      font-size: $size / 6;
+    }
+  }
+}
+
+
+
+
+
+
 
