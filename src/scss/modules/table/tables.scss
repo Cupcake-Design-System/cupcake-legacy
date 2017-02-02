@@ -27,18 +27,42 @@ table.c-table-hover {
 .c-table-scroll {
   overflow-x: auto;
 
-  table.c {
+  table.c-table {
     width: auto;
   }
 }
 
-.c-table-transparent {
-  tbody {
-    tr,td, tr:nth-child(odd), tr:nth-child(even) {
-      background-color: transparent;
-    }    
+// Different table borders
+table.c-table-border {
+
+  &-horizontal {
+    tr {
+      border-bottom: 1px solid $table-border-color;
+    }
   }
+
+  &-vertical {
+    th,
+    td {
+      &:not(:last-child) {
+        border-right: 1px solid $table-border-color;
+      }
+    }
+  }
+
+  &-both {
+    @extend table.c-table-border-horizontal;
+    @extend table.c-table-border-vertical;
+  }
+
+  &-full {
+    th,
+    td {
+      border: 1px solid $table-border-color;
+    }
+  }  
 }
+
 
 // CSS Table
 
@@ -47,7 +71,7 @@ table.c-table-hover {
   border-radius: $table-border-radius;
   border: $table-border;
   position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: $table-shadow;
   display: table;
 
   .c-table-row:nth-of-type(even) {
