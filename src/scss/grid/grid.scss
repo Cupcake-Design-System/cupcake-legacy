@@ -6,7 +6,7 @@ $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
 $gutter: 1rem !default;
 $columns: 12 !default;
-$container-fixed-width: 1200px;
+$container-fixed-width: 1200px !default;
 
 
 // Optional row features - Set to true to enable
