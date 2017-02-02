@@ -2,11 +2,11 @@
   @include create-row();
   @include row-justify(space-between);
 
-  color: $ipreo-footer-color;
-  font-size: $ipreo-footer-font-size;
-  background-color: $ipreo-footer-background-color;
-  padding: $ipreo-footer-padding;
-  z-index: map-get($zindex, footer);
+  color: $footer-color;
+  font-size: $footer-font-size;
+  background-color: $footer-background-color;
+  padding: $footer-padding;
+  z-index: z(footer);
   width: 100%;
 
   &-link {
@@ -15,7 +15,7 @@
     background-color: transparent;
 
     a {
-      color: $ipreo-footer-color;
+      color: $footer-color;
     }
 
     @include bp(sm) {
@@ -29,15 +29,15 @@
   }
 
   &.c-footer-transparent {
-    color: $ipreo-footer-trans-color;
-    font-size: $ipreo-footer-trans-font-size;
+    color: $footer-trans-color;
+    font-size: $footer-trans-font-size;
     background-color: transparent;
     z-index: map-get($zindex, footer);
 
     .c-footer-right {
       .c-footer-link {
         a {
-          color: $ipreo-footer-trans-color;
+          color: $footer-trans-color;
         }
       }
     }

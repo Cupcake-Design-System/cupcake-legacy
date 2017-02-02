@@ -5,14 +5,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-// Set box-sizing globally to handle padding and border widths
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-// Default body styles
 body {
   padding: 0;
   margin: 0;
@@ -27,24 +25,19 @@ body {
 }
 
 img {
-  //ipreo-grid defaults to get images and embeds to work properly
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
-
-  // Get rid of gap under images by making them display: inline-block; by default
   display: inline-block;
   vertical-align: middle;
 }
 
-// Make sure textarea takes on height automatically
 textarea {
   height: auto;
   min-height: 50px;
   border-radius: $global-radius;
 }
 
-// Make select elements are 100% width by default
 select {
   width: 100%;
   border-radius: $global-radius;
@@ -144,7 +137,7 @@ sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 img {

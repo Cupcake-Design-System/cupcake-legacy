@@ -35,9 +35,10 @@
 /// Adds styles for text in the progress meter.
 @mixin progress-meter-text {
   @include absolute-center;
+
   position: absolute;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-weight: bold;
   color: $white;
   white-space: nowrap;
@@ -84,8 +85,6 @@
     white-space: nowrap;
   }
 }
-
-
 
 //height, bg, color, radius
 .c-progress-full {

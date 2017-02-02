@@ -4,6 +4,7 @@
 * ==========================================================================
 */
 @import 'mixins';
+
 .c-pagination {
   @include pagination-container;
 
@@ -92,7 +93,7 @@
 
   a {
     background: transparent;
-    border: none;
+    border: 0;
     display: block;
     color: $pagination-item-color-sm;
     padding: $pagination-item-padding-sm;
@@ -105,7 +106,6 @@
 }
 
 .c-pagination-lg {
-
   @include pagination-container;
 
   .c-pagination-current {
@@ -121,7 +121,6 @@
   }
 
   .c-pagination-disabled {
-
     @include pagination-item-disabled;
   }
 

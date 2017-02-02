@@ -1,19 +1,21 @@
-.c-fa {
+$icon-sizes: (
+  xs: 10px,
+  sm: 12px,
+  md: 14px,
+  lg: 16px,
+  xl: 18px
+) !default;
+
+.c-icon {
   font-size: 14px;
+}
 
-  &-xs {
-    font-size: 10px;
-  }
-
-  &-sm {
-    font-size: 12px;
-  }
-
-  &-lg {
-    font-size: 16px;
-  }
-
-  &-xl {
-    font-size: 20px;
+@mixin icon-class-export {
+  @each $size, $icon-size in $icon-sizes {
+    .c-icon-#{$size} {
+      font-size: #{$icon-size};
+    }
   }
 }
+
+

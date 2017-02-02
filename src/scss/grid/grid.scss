@@ -28,7 +28,7 @@ $gutter-collapse: true !default;
   padding-right: $gutter;
   padding-left: $gutter;
   flex: 1;
- }
+}
 
 .c-container {
   @include make-container();
@@ -36,6 +36,7 @@ $gutter-collapse: true !default;
 
 .c-container-fixed {
   @include make-container();
+
   width: $container-fixed-width;
   max-width: 100%;
 }
