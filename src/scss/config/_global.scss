@@ -1,11 +1,6 @@
-///  Base Global Settings
-///  -----------------------------
-//
-/* stylelint-disable */
+//  Base Global Settings
+//  -----------------------------
 
-
-//// 1. Global
-/// ---------
 $primary          : #484848 !default;
 $default          : #eeeeee !default;
 $secondary        : #777777 !default;
@@ -50,8 +45,8 @@ $global-sidebar-max-width: 260px !default;
 $global-sidebar-background-color: #f5f5f5 !default;
 
 
-/// 2. Breakpoints
-/// --------------
+// 2. Breakpoints
+// --------------
 $breakpoints: (
   xs: 0,
   sm: 576px,
@@ -70,8 +65,8 @@ $space-xxl: 8rem !default;
 $space-xxxl: 16rem !default;
 
 
-/// 4. Base Typography
-/// ------------------
+// 4. Base Typography
+// ------------------
 $header-font-family   : $body-font-family !default;
 $header-font-weight   : $global-weight-bold !default;
 $header-font-style    : normal !default;
@@ -139,7 +134,7 @@ $cite-font-size                 : rem-calc(18) !default;
 $cite-color                     : $darkest-gray !default;
 
 //==========================================================================
-///  Badges GLOBAL Configs
+//  Badges GLOBAL Configs
 //==========================================================================
 $badge-padding: .25em .5em !default;
 $badge-border-width: 1px;
@@ -164,19 +159,9 @@ $badge-colors:
 ("warning", $warning, $warning) 
 !default;
 
-/// . Breadcrumbs
-/// ---------------
-$breadcrumbs-margin             : 0 0 $global-margin 0 !default;
-$breadcrumbs-item-font-size     : rem-calc(11) !default;
-$breadcrumbs-item-color         : $primary !default;
-$breadcrumbs-item-color-current : $black !default;
-$breadcrumbs-item-color-disabled: $medium-gray !default;
-$breadcrumbs-item-margin        : 0.75rem !default;
-$breadcrumbs-item-uppercase     : true !default;
-$breadcrumbs-item-slash         : true !default;
 
 //==========================================================================
-///  Button GLOBAL Configs
+//  Button GLOBAL Configs
 //==========================================================================
 $btn-font-family      : $body-font-family !default;
 $btn-font-size        : rem-calc(14) !default;
@@ -190,37 +175,37 @@ $btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white,
 $btn-shadow-active    : inset 0 0 4px rgba(black, .54) !default;
 $btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48) !default;
 
-/// Button shadows add box-shadow to buttons
+// Button shadows add box-shadow to buttons
 $btn-shadows: true !default;
 
-/// Button gradients (true = gradients - false = solid)
+// Button gradients (true = gradients - false = solid)
 $btn-gradients: false !default;
 
-/// Button outlines - if true outline btns will be generated (eg. .c-btn-primary-outline)
+// Button outlines - if true outline btns will be generated (eg. .c-btn-primary-outline)
 $btn-outlines: true !default;
 
-/// Button disabled state
+// Button disabled state
 $btn-disabled-c           : #ccc !default;
 $btn-disabled-bg          : #eee !default;
 $btn-disabled-bd          : 1px solid #ddd !default;
 $btn-disabled-text-shadow : 0 1px 1px rgba(255, 255, 255, 1) !default;
 $btn-disabled-opacity     : .8 !default;
 
-/// BUTTON SIZES
-/// This map is used to generate the different button sizes.
-/// Edit or add sizes to the list below and recompile.
-/// Each block contains the arguments (name, font-size).
-/// The class is generated using the name: (ex .c-btn-sm).
+// BUTTON SIZES
+// This map is used to generate the different button sizes.
+// Edit or add sizes to the list below and recompile.
+// Each block contains the arguments (name, font-size).
+// The class is generated using the name: (ex .c-btn-sm).
 $btn-sizes:
 ("sm", rem-calc(10))
 ("lg", rem-calc(18))
 !default;
 
-/// BUTTON COLORS
-/// This map is used to generate the different button colors.
-/// Edit or add colors to the list below and recompile.
-/// Each block contains the (name, background, color)
-/// The class is generated using the name: (ex .c-btn-primary)
+// BUTTON COLORS
+// This map is used to generate the different button colors.
+// Edit or add colors to the list below and recompile.
+// Each block contains the (name, background, color)
+// The class is generated using the name: (ex .c-btn-primary)
 $btn-colors:
 ("primary", $primary, $white)
 ("success", $success, $white)
@@ -229,21 +214,21 @@ $btn-colors:
 ("danger", $danger, $white)
 !default;
 
-/// Button colors without a border
-/// Some button colors may be without a border
-/// Add a color you want to be borderless, ex: ("primary")
+// Button colors without a border
+// Some button colors may be without a border
+// Add a color you want to be borderless, ex: ("primary")
 $btn-no-border:
 ()
 !default;
 
-/// Button sizes with custom padding
-/// For adjusting padding sizes
-/// Add a btn size and padding, ex: (lg: ".5em 1.25em")
+// Button sizes with custom padding
+// For adjusting padding sizes
+// Add a btn size and padding, ex: (lg: ".5em 1.25em")
 $btn-size-padding: (
 ) !default;
 
-/// Outline Button Colors
-/// The class is generated using the name: (ex .c-btn-primary-outline)
+// Outline Button Colors
+// The class is generated using the name: (ex .c-btn-primary-outline)
 $outline-btn-colors:
 ("primary", $primary, $white)
 ("success", $success, $white)
@@ -252,11 +237,11 @@ $outline-btn-colors:
 ("danger", $danger, $white)
 !default;
 
-/// BUTTON SHAPES
-/// This map is used to generate the different button shapes.
-/// Edit or add shapes to the list below and recompile.
-/// Each block contains the (name, border-radius).
-/// The class is generated using the name: (ex .c-btn-square).
+// BUTTON SHAPES
+// This map is used to generate the different button shapes.
+// Edit or add shapes to the list below and recompile.
+// Each block contains the (name, border-radius).
+// The class is generated using the name: (ex .c-btn-square).
 //
 $btn-shapes: (
   square: 0,
@@ -267,7 +252,7 @@ $btn-shapes: (
 ) !default;
 
 //==========================================================================
-///  Alerts GLOBAL Configs
+//  Alerts GLOBAL Configs
 //==========================================================================
 $alert-background    : $white !default;
 $alert-background-mix: 4% !default;
@@ -288,17 +273,17 @@ $alert-colors        :
 ("danger", $danger)
 !default;
 
-/// ==========================================================================
-///  Notifications GLOBAL Configs
-/// ==========================================================================
+// ==========================================================================
+//  Notifications GLOBAL Configs
+// ==========================================================================
 $notify-z-index       : 99999;
 $notify-min-width     : rem-calc(390);
 $notify-width         : 25vw;
 $notify-screen-spacing: rem-calc(16);
 $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-/// Dropdowns
-/// ------------
+// Dropdowns
+// ------------
 $dropdown-glued           : true !default;
 $dropdown-list-margin     : 0 !default;
 $dropdown-list-padding    : 0 !default;
@@ -316,9 +301,9 @@ $dropdown-radius          : $global-radius !default;
 $dropdown-divider-margin  : 0 !default;
 
 
-/// ==========================================================================
-///  Cards GLOBAL Configs
-/// ==========================================================================
+// ==========================================================================
+//  Cards GLOBAL Configs
+// ==========================================================================
 $card-header-font-size    : rem-calc(14)!default;
 $card-header-font-weight  : bold!default;
 $card-body-font-size      : rem-calc(12)!default;
@@ -352,10 +337,11 @@ $box-shadow        : $card-shadow !default;
 
 
 //==========================================================================
-///  Switch GLOBAL Configs
+//  Switch GLOBAL Configs
 //==========================================================================
 $switch-style            : "default";
 $default-switch-height   : rem-calc(30);
+$default-switch-radius   : rem-calc(50);
 $default-switch-font-size: rem-calc(10);
 $large-switch-font-size  : rem-calc(15);
 $switch-label-off        : $medium-gray;
@@ -379,7 +365,7 @@ $switch-colors: ("primary", $primary)
 $material-switch-height: 15px !default;
 
 //==========================================================================
-///  Tabs GLOBAL Configs
+//  Tabs GLOBAL Configs
 //==========================================================================
 $tabs-borders: 1px solid #cecece!default;
 $tabs-border-radius: $global-radius!default;
@@ -399,7 +385,7 @@ $tab-sizes:
 ("lg", rem-calc(20))!default;
 
 //==========================================================================
-///  Table GLOBAL Configs
+//  Table GLOBAL Configs
 //==========================================================================
 $table-background        : $white!default;
 $table-border-color      : $medium-gray!default;
@@ -430,9 +416,9 @@ $table-colors: ("primary", $primary)
 ("danger", $danger)
 !default;
 
-/// ==========================================================================
-///  Horizontal Nav GLOBAL Configs
-/// ==========================================================================
+// ==========================================================================
+//  Horizontal Nav GLOBAL Configs
+// ==========================================================================
 $fontAwesome        : "FontAwesome"!default;
 $nav-logo-width     : 100px!default;
 $nav-logo-height    : 100%!default;
@@ -442,9 +428,9 @@ $main-nav-color     : $primary!default;
 $level-2-nav-color  : darken($main-nav-color, 10%)!default;
 $nav-base-font-size : 12px!default;
 
-/// ==========================================================================
-///  Vertical Nav GLOBAL Configs
-/// ==========================================================================
+// ==========================================================================
+//  Vertical Nav GLOBAL Configs
+// ==========================================================================
 $vertical-nav-width              : 120px!default;
 $vertical-nav-padding            : 1.3em!default;
 $vertical-nav-button-size        : 6.25em!default;
@@ -458,7 +444,7 @@ $vertical-nav-active-shadow-color: #1b1b1b!default;
 
 
 //==========================================================================
-///  Nav Tree GLOBAL Configs
+//  Nav Tree GLOBAL Configs
 //==========================================================================
 $nav-tree-font:  Arial !default;
 $nav-tree-title-font-size: 10px !default;
@@ -469,7 +455,7 @@ $nav-tree-font-weight: bold !default;
 $nav-tree-title-color: #a0a0a0 !default;
 
 //==========================================================================
-///  Progress GLOBAL Configs
+//  Progress GLOBAL Configs
 //==========================================================================
 $progress-height: 1rem !default;
 $progress-background: #cccccc !default;
@@ -481,7 +467,7 @@ $progress-colors:
   ("default", $default) !default;
 
 //==========================================================================
-///  Pagination GLOBAL Configs
+//  Pagination GLOBAL Configs
 //==========================================================================
 $pagination-margin-bottom        : $global-margin !default;
 $pagination-gradients            : true !default;
@@ -504,18 +490,18 @@ $pagination-item-color-hover-sm  : #0082de !default;
 $pagination-item-current-color-sm: #0082de !default;
 
 //==========================================================================
-///  Footer GLOBAL Configs
+//  Footer GLOBAL Configs
 //==========================================================================
-$ipreo-footer-font-size       : rem-calc(12)!default;
-$ipreo-footer-color           : $white!default;
-$ipreo-footer-background-color: $primary!default;
-$ipreo-footer-padding         : rem-calc(12 24)!default;
-$ipreo-footer-trans-font-size : rem-calc(14)!default;
-$ipreo-footer-trans-color     : $black!default;
+$footer-font-size       : rem-calc(12)!default;
+$footer-color           : $white!default;
+$footer-background-color: $primary!default;
+$footer-padding         : rem-calc(12 24)!default;
+$footer-trans-font-size : rem-calc(14)!default;
+$footer-trans-color     : $black!default;
 
 
 //==========================================================================
-///  Forms GLOBAL Configs
+//  Forms GLOBAL Configs
 //==========================================================================
 $control-font-size              : 16px !default;
 $control-font-weight            : normal !default;
@@ -564,10 +550,10 @@ $fieldset-width                 : 100% !default;
 $fieldset-border                : 0 !default;
 $fieldset-legend-padding        : .3em 0 !default;
 
-/// FORM SIZES
-/// This map is used to generate form input sizes. 
-/// Arguments (name, font-size). Sizes tied to font-size.
-/// The class is generated using the name: (ex .c-input-sm).
+// FORM SIZES
+// This map is used to generate form input sizes. 
+// Arguments (name, font-size). Sizes tied to font-size.
+// The class is generated using the name: (ex .c-input-sm).
 $control-sizes:
 ("xs", .67em)
 ("sm", .83em)
@@ -576,24 +562,24 @@ $control-sizes:
 ("xxl", 2em)
 !default;
 
-/// Input sizes with custom padding
-/// For adjusting padding sizes
-/// Add a input size and padding, ex: (lg: ".5em 1.25em")
+// Input sizes with custom padding
+// For adjusting padding sizes
+// Add a input size and padding, ex: (lg: ".5em 1.25em")
 $control-sizes-padding:
 ()
 !default;
 
-/// FORM COLORS
-/// This map is used to generate form validation colors.
-/// Arguments (name, color, background).
-/// The class is generated using the name: (ex .c-input-success).
+// FORM COLORS
+// This map is used to generate form validation colors.
+// Arguments (name, color, background).
+// The class is generated using the name: (ex .c-input-success).
 $control-colors:
 ("success", $success, false)
 ("warning", $warning, false)
 ("error", $danger, false)
 !default;
 
-/// Connect ng-validation states with form validation colors ($control-colors)
+// Connect ng-validation states with form validation colors ($control-colors)
 $control-ng-validation:
 ("ng-valid", "success")
 ("ng-invalid", "error")
@@ -601,7 +587,7 @@ $control-ng-validation:
 
 
 //==========================================================================
-///  Modals GLOBAL Configs
+//  Modals GLOBAL Configs
 //==========================================================================
 $modals-z-index            : 1050 !default;
 $modals-dialog-top-magin   : rem-calc(30);
@@ -613,11 +599,11 @@ $modals-header-border      : 1px solid #e5e5e5 !default;
 $modal-transition          : opacity 0.35s linear 0s !default;
 
 //==========================================================================
-///  UI Configs
+//  UI Configs
 //==========================================================================
 
-/// UI Avatar
-/// ------------------
+// UI Avatar
+// ------------------
 $avatar-size          : rem-calc(40) !default;
 $avatar-fs            : rem-calc(12) !default;
 $avatar-icon-margin   : 1px !default;
@@ -632,10 +618,10 @@ $avatar-colors:
 !default;
 
 
-/// UI Checks/Radios
-/// ------------------
-/// UI Checkbox
-/// ------------------
+// UI Checks/Radios
+// ------------------
+// UI Checkbox
+// ------------------
 $checkbox-size            : 18px !default;
 $checkbox-size-sm         : 12px !default;
 $checkbox-size-lg         : 26px !default;
@@ -645,8 +631,8 @@ $checkbox-transition      : all 0.2s !default;
 $checkbox-disabled-opacity: 0.5 !default;
 
 
-/// UI File upload
-/// ------------------
+// UI File upload
+// ------------------
 $file-upload-padding    : .5rem 1rem !default;
 $file-upload-margin     : .5rem !default;
 $file-upload-bg-color   : #f5fafd !default;
@@ -656,8 +642,8 @@ $file-upload-fs         : .8rem !default;
 $file-upload-fa-fs      : 1.25rem !default;
 
 
-/// UI Lists
-/// ------------------
+// UI Lists
+// ------------------
 $ui-list-radius               : true !default;
 $ui-list-shadows              : false !default;
 $ui-list-box-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 0 7px rgba(black, .15) !default;
@@ -672,6 +658,3 @@ $ui-list-margin               : 0 !default;
 $ui-list-inset-after-offset   : rem-calc(72) !default;
 $ui-list-a-list-item-bd       : 1px solid rgba(199, 199, 199, 0.19) !default;
 $ui-list-a-list-item-bg-c     : rgba(130, 130, 130, 0.08) !default;
-
-
-/* stylelint-enable */

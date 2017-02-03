@@ -13,3 +13,11 @@ $default-shadows: (
     }
   }
 }
+
+@mixin shadow-class-export {
+  @each $size, $shadow in $default-shadows {
+    .c-depth-#{$size} {
+      box-shadow: #{$shadow};
+    }
+  }
+}

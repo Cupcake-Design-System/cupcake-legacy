@@ -20,7 +20,7 @@
   .c-tab-item {
     .c-tab-item-link {
       border: $tabs-borders;
-      border-bottom: none;
+      border-bottom: 0;
       background: $tabs-bg;
       color: $tabs-color;
       margin-right: $tabs-bordered-space-between;
@@ -49,7 +49,7 @@
 }
 
 .c-tabs-toggle {
-  border-bottom: none;
+  border-bottom: 0;
 
   .c-tab-item {
     border: $tabs-borders;
@@ -58,6 +58,7 @@
 
     &:first-child {
       border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
+      margin-left: 1px;
     }
 
     &:last-child {
@@ -91,7 +92,7 @@
   }
 
   .c-tab-item-link-active {
-    border: none;
+    border: 0;
     background-color: $tabs-bg-active;
 
     &:hover {

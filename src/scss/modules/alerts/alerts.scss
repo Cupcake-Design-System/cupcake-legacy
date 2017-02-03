@@ -9,7 +9,7 @@
   @include ipreo-alert;
 
   &-small {
-    @include ipreo-alert-size(0.25rem);
+    @include ipreo-alert-size(.25rem);
   }
 
   &-large {
