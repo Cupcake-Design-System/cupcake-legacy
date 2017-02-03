@@ -312,6 +312,8 @@ $dropdown-divider-margin  : 0 ;
 ///  Cards GLOBAL Configs
 /// ==========================================================================
 $card-header-font-size    : rem-calc(14);
+$card-header-icon-color:       $secondary;
+$card-header-icon-hover-color: lighten($secondary, 10%);
 $card-header-font-weight  : bold;
 $card-body-font-size      : rem-calc(12);
 $card-title-font-size     : rem-calc(18);

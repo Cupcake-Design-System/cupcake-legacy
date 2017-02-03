@@ -158,8 +158,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
-  gulp.watch(bases.app + 'flavors/*.scss', ['flavors']);
+  gulp.watch(bases.app + 'scss/**/*.scss', ['styles', 'flavors']);
+  gulp.watch(bases.app + 'flavors/*.scss', ['styles', 'flavors']);
   gulp.watch(bases.app + './*.html', ['html']);
   gulp.watch(bases.app + 'img/*', ['img']);
 });

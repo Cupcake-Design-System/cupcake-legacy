@@ -16,6 +16,19 @@
   font-weight: $card-header-font-weight;
   border-bottom: $card-header-border-bottom;
   border-radius: $card-border-radius $card-border-radius 0 0;
+
+  &-menu {
+    float: right;
+
+    &-icon {
+      padding-right: $space-xs;
+      color: $card-header-icon-color;
+
+      &:hover {
+        color: $card-header-icon-hover-color;
+      }
+    }
+  }
 }
 
 @mixin card-content {

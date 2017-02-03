@@ -19,7 +19,7 @@
 
 // Heading sizes
 @each $size, $headers in $header-sizes {
-   @include bp($size) {
+  @include bp($size) {
     @each $header, $font-size in $headers {
       .c-header-#{$header} {
         @include header-styles;
@@ -35,22 +35,25 @@
 }
 
 
-  
-    
 // .c-sm-text-center or .c-text-center
 @each $size, $breakpoint in $breakpoints {
-    @each $align in (left, right, center, justify) {
-        .c-#{$size}-text-#{$align} {
-            @include bp($size) {
-          text-align: $align;
-        }
+  @each $align in (left, right, center, justify) {
+    .c-#{$size}-text-#{$align} {
+      @include bp($size) {
+        text-align: $align;
+      }
     }
   }
 }
 
 @each $align in (left, right, center, justify) {
-    .c-text-#{$align} {
-      text-align: $align;
-    }
+  .c-text-#{$align} {
+    text-align: $align;
+  }
 }
 
+@each $pull in (left, right) {
+  .c-pull-#{$pull} {
+    float: $pull;
+  }
+}
