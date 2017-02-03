@@ -1,9 +1,9 @@
 @mixin box {
-  border-radius: $card-border-radius;
-  border: 1px solid $card-border-color;
-  background-color: $card-bg;
-  color: $card-text-color;
-  box-shadow: $card-shadow;
+  border-radius: $box-border-radius;
+  border: 1px solid $box-border-color;
+  background-color: $box-bg;
+  color: $box-text-color;
+  box-shadow: $box-shadow;
 }
 
 
