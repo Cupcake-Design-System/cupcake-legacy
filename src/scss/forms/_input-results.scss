@@ -10,8 +10,8 @@
     left: 0;
     right: 0;
     background: $white;
-    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgb(204, 204, 204);
+    box-shadow: $control-results-shadow;
+    border: $control-results-border;
     border-top: 0;
     list-style: none;
     margin-left: 0;
@@ -22,7 +22,7 @@
       padding: 0.5em;
 
       &:not(:last-child) {
-        border-bottom: 1px solid rgb(204, 204, 204);
+        border-bottom: $control-results-border;
       }
     }
   }

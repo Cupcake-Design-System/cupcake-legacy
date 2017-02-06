@@ -328,6 +328,16 @@ $card-colors:
 !default;
 
 
+/// ==========================================================================
+///  Box GLOBAL Configs
+/// ==========================================================================
+$box-border-radius : $card-border-radius !default;
+$box-border-color  : $card-border-color !default;
+$box-bg            : $card-bg !default;
+$box-text-color    : $card-text-color !default;
+$box-shadow        : $card-shadow !default;
+
+
 //==========================================================================
 //  Switch GLOBAL Configs
 //==========================================================================
@@ -532,6 +542,9 @@ $control-element-label-padding  : 0 0 $control-padding 0 !default;
 $control-select-padding-r       : 1em !default;
 $control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
 $control-select-background-pos  : 99% 50% !default;
+
+$control-results-border         : 1px solid rgb(204, 204, 204) !default;
+$control-results-shadow         : 2px 5px 4px rgba(0, 0, 0, 0.05) !default;
 
 $fieldset-padding               : 0 !default;
 $fieldset-margin                : $control-padding 0 !default;
