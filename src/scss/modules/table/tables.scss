@@ -24,6 +24,10 @@ table.c-table-hover {
   @include table-hover;
 }
 
+table.c-table-condensed {
+  @include table-condensed;
+}
+
 .c-table-scroll {
   overflow-x: auto;
 
@@ -63,6 +67,26 @@ table.c-table-border {
   }  
 }
 
+// Table row and cell states
+.c-table {
+  //raising specificity to overrie table stripes
+  &#{&} {
+
+    @each $state, $color in $table-states {
+      .c-table-row-#{$state},
+      .c-table-cell-#{$state} {
+        background-color: $color;
+      }
+
+      // hover state for rows and cells
+      .c-table-row-#{$state}:hover,
+      tr:hover > .c-table-cell-#{$state},
+      .c-table-row:hover > .c-table-cell-#{$state} {
+        background-color: darken($color, 7%);
+      }
+    }
+  }
+}
 
 // CSS Table
 

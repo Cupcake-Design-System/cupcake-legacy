@@ -375,6 +375,7 @@ $table-border            : 0;
 $table-border-color      : $light-gray;
 $table-head-border-bottom: 2px solid #8d8d97;
 $table-padding           : rem-calc(7 10 8);
+$table-padding-sm        : rem-calc(5 10 6);
 $table-row-hover         : #EAF7FF;
 $table-row-stripe-hover  : $table-row-hover;
 $table-striped-background: #f9f9f9;
@@ -384,8 +385,16 @@ $table-foot-background   : $medium-gray;
 $table-head-font-color   : $body-font-color;
 $table-head-font-size    : rem-calc(12);
 $table-foot-font-color   : $body-font-color;
+$table-sm-font-size      : rem-calc(13);
 $table-shadow            : none;
 $show-header-for-stacked : false;
+
+$table-states: 
+("selected", #FAFAD2)
+("active", #FAFAD2)
+("success", lighten($success, 20%))
+("warning", lighten($warning, 20%))
+("danger", lighten($danger, 20%));
 
 //==========================================================================
 //  Horizontal Nav GLOBAL Configs

@@ -395,6 +395,7 @@ $table-border-radius     : 0 !default;
 $table-border            : 1px solid $table-border-color!default;
 $table-head-border-bottom: 0 !default;
 $table-padding           : rem-calc(8 10 10)!default;
+$table-padding-sm        : rem-calc(6 10 8)!default;
 $table-cell-padding      : rem-calc(12 12)!default;
 $table-cell-padding-sm   : rem-calc(2 12)!default;
 $table-row-hover         : #fff2cf!default;
@@ -408,6 +409,7 @@ $table-head-font-color   : $body-font-color!default;
 $table-foot-font-color   : $body-font-color!default;
 $table-header-font-size  : rem-calc(12)!default;
 $table-cell-font-size    : rem-calc(12)!default;
+$table-sm-font-size      : rem-calc(13)!default;
 $table-shadow            : 0 1px 3px rgba(0, 0, 0, 0.2)!default;
 $show-header-for-stacked : false!default;
 
@@ -416,6 +418,14 @@ $table-colors: ("primary", $primary)
 ("default", $secondary)
 ("warning", $warning)
 ("danger", $danger)
+!default;
+
+$table-states: 
+("selected", #FAFAD2)
+("active", #FAFAD2)
+("success", lighten($success, 20%))
+("warning", lighten($warning, 20%))
+("danger", lighten($danger, 20%))
 !default;
 
 // ==========================================================================
