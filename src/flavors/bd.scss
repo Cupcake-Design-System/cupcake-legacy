@@ -392,9 +392,9 @@ $show-header-for-stacked : false;
 $table-states: 
 ("selected", #FAFAD2)
 ("active", #FAFAD2)
-("success", lighten($success, 20%))
-("warning", lighten($warning, 20%))
-("danger", lighten($danger, 20%));
+("success", #e6f8dd)
+("warning", #fef7e3)
+("danger", #fedbd8);
 
 //==========================================================================
 //  Horizontal Nav GLOBAL Configs
