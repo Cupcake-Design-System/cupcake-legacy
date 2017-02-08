@@ -94,7 +94,8 @@ ul.c-ul,
 ol.c-ol,
 dl.c-dl {
   line-height: $list-lineheight;
-  margin-bottom: $list-margin-bottom;
+  margin: 0 0 $list-margin-bottom;
+  padding: 0;
   list-style-position: $list-style-position;
   font-size: $list-font-size;
   color: $list-color;
@@ -137,18 +138,6 @@ ul.c-ul {
   }
 }
 
-ul.c-ul-unstyled,
-ol.c-ol-unstyled,
-dl.c-dl-unstyled {
-  &,
-  & li {
-    margin-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-}
-
-
 // Definition lists
 .c-dl {
   margin-bottom: $defnlist-margin-bottom;
@@ -158,6 +147,20 @@ dl.c-dl-unstyled {
     font-weight: $defnlist-term-weight;
   }
 }
+
+ul.c-ul-unstyled,
+ol.c-ol-unstyled,
+dl.c-dl-unstyled {
+  &,
+  & li,
+  & dt,
+  & dd {
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
 
 // Blockquotes
 .c-blockquote {
