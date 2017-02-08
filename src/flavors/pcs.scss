@@ -204,8 +204,10 @@ $btn-disabled-opacity     : .8 ;
 /// Each block contains the arguments (name, font-size).
 /// The class is generated using the name: (ex .c-btn-sm).
 $btn-sizes:
+("xs", rem-calc(9))
 ("sm", rem-calc(10))
 ("lg", rem-calc(18))
+("xl", rem-calc(20))
 ;
 
 /// BUTTON COLORS

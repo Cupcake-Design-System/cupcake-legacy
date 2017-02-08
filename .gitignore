@@ -1,6 +1,7 @@
 .DS_Store
 .node_repl_history
 .npm
+.vscode
 Thumbs.db
 logs
 node_modules
