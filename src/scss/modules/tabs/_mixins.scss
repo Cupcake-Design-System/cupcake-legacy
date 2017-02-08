@@ -2,11 +2,14 @@
   align-items: stretch;
   display: flex;
   white-space: nowrap;
-  border-bottom: $tabs-borders;
   font-size: $tabs-font-size-default;
   margin: 0;
   padding: 0;
   overflow: hidden;
+
+  @if $tabs-full-width-border {
+    border-bottom: $tabs-borders;
+  }
 }
 
 @mixin tab-item {
@@ -23,6 +26,7 @@
   flex: auto;
   justify-content: center;
   padding: $tabs-text-default-padding;
+  margin-right: $tabs-text-default-spacing;
   margin-bottom: -1px;
   border-bottom: 2px solid transparent;
 

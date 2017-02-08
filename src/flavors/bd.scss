@@ -313,6 +313,7 @@ $card-max-width:               30rem ;
 $box-border-radius : $dropdown-radius;
 $box-border-color  : rgba(0, 0, 0, 0.18);
 $box-bg            : $card-bg;
+$box-padding       : $card-padding;
 $box-text-color    : $card-text-color;
 $box-shadow        : $dropdown-box-shadow;
 
@@ -347,24 +348,24 @@ $material-switch-height: 15px ;
 //==========================================================================
 //  Tabs GLOBAL Configs
 //==========================================================================
-$tabs-background               : $medium-gray ;
-$tabs-background-active        : $white ;
-$tabs-toggle-background        : $medium-gray ;
-$tabs-toggle-background-active : $white ;
-$tabs-border                   : $medium-gray ;
-$tabs-font-color               : $body-font-color ;
-$tabs-font-color-active        : #414152 ;
-$tabs-border-active            : 3px solid $primary ;
-$tabs-color-active             : $primary;
-$tabs-boxed-radius             : 4px 4px 0 0 ;
-$tabs-boxed-font-color         : #414152;
-$tabs-toggle-font-color        : #414152;
-$tabs-toggle-radius            : 0 ;
-$tabs-boxed-default-padding    : rem-calc(10 60) ;
-$tabs-text-default-padding     : rem-calc(6 12) ;
+$tabs-borders: 1px solid #cecece;
+$tabs-border-radius: $global-radius;
+$tabs-full-width-border: false;
+$tabs-color: $primary;
+$tabs-color-hover: $primary;
+$tabs-color-active: $body-font-color;
+$tabs-text-default-padding: rem-calc(10 0);
+$tabs-text-default-spacing: rem-calc(15);
+$tabs-bg: #eaeaea;
+$tabs-bg-hover: lighten($tabs-bg, 5%);
+$tabs-bg-active: lighten($tabs-bg, 5%);
+$tabs-bordered-space-between: 3px;
+$tabs-font-size-default: rem-calc(14);
+$tabs-hover-tranisition: all 0.4s ease 0s;
 $tab-sizes:
-("sm", rem-calc(3 6), rem-calc(11))
-("lg", rem-calc(12 24), rem-calc(18));
+("xs", rem-calc(10))
+("sm", rem-calc(12))
+("lg", rem-calc(20));
 
 
 //==========================================================================

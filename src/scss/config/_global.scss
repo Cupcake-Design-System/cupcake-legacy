@@ -334,6 +334,7 @@ $card-colors:
 $box-border-radius : $card-border-radius !default;
 $box-border-color  : $card-border-color !default;
 $box-bg            : $card-bg !default;
+$box-padding       : $card-padding !default;
 $box-text-color    : $card-text-color !default;
 $box-shadow        : $card-shadow !default;
 
@@ -371,10 +372,12 @@ $material-switch-height: 15px !default;
 //==========================================================================
 $tabs-borders: 1px solid #cecece!default;
 $tabs-border-radius: $global-radius!default;
+$tabs-full-width-border: true!default;
 $tabs-color: $body-font-color!default;
 $tabs-color-hover: $primary!default;
 $tabs-color-active: $primary!default;
 $tabs-text-default-padding: rem-calc(6 12)!default;
+$tabs-text-default-spacing: rem-calc(0)!default;
 $tabs-bg: #eaeaea!default;
 $tabs-bg-hover: lighten($tabs-bg, 5%)!default;
 $tabs-bg-active: lighten($tabs-bg, 5%)!default;
