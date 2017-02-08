@@ -380,6 +380,7 @@ $tabs-color-hover: $primary!default;
 $tabs-color-active: $primary!default;
 $tabs-text-default-padding: rem-calc(6 12)!default;
 $tabs-text-default-spacing: rem-calc(0)!default;
+$tabs-link-border-bottom: 2px!default;
 $tabs-bg: #eaeaea!default;
 $tabs-bg-hover: lighten($tabs-bg, 5%)!default;
 $tabs-bg-active: lighten($tabs-bg, 5%)!default;

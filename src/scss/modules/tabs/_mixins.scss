@@ -27,30 +27,41 @@
   justify-content: center;
   padding: $tabs-text-default-padding;
   margin-right: $tabs-text-default-spacing;
-  margin-bottom: -1px;
-  border-bottom: 2px solid transparent;
+  border-bottom: $tabs-link-border-bottom solid transparent;
+
+  @if $tabs-full-width-border {
+    margin-bottom: -1px;
+  }  
 
   a {
     color: $tabs-color-active;
   }
 
   &:hover {
-    border-bottom: 2px solid $tabs-color-active;
+    border-bottom: $tabs-link-border-bottom solid $tabs-color-hover;
     transition: $tabs-hover-tranisition;
-    color: $tabs-color-active;
+    color: $tabs-color-hover;
   }
 }
 
 @mixin tab-item-active {
-  border-bottom: 2px solid $tabs-color-active;
-  color: $tabs-color-active;
 
-  a {
+  &,
+  & a {
     color: $tabs-color-active;
   }
 
+  &,
   &:hover {
-    border-bottom: 2px solid $tabs-color-active;
+
+    border-bottom-style: solid;
+    border-bottom-width: $tabs-link-border-bottom;
+
+    @if $tabs-full-width-border {
+      border-bottom-color: $tabs-color-active;
+    } @else {
+      border-bottom-color: $tabs-color;
+    }
   }
 }
 

@@ -352,6 +352,7 @@ $tabs-color-hover: $primary;
 $tabs-color-active: $body-font-color;
 $tabs-text-default-padding: rem-calc(10 0);
 $tabs-text-default-spacing: rem-calc(15);
+$tabs-link-border-bottom: 3px;
 $tabs-bg: #eaeaea;
 $tabs-bg-hover: lighten($tabs-bg, 5%);
 $tabs-bg-active: lighten($tabs-bg, 5%);
