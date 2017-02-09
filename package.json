@@ -1,21 +1,12 @@
 {
-  "name": "cupcake",
-  "version": "1.0.1",
+  "name": "@ipreo/cupcake-styles",
+  "version": "0.0.4-rc.0",
   "description": "A CSS framework.",
-  "repository": "Cupcake",
   "main": "dist/default.css",
-  "publishConfig": {
-    "registry": "https://ipreo.jfrog.io/ipreo/api/npm/npm"
+  "repository": {
+    "type": "git",
+    "url": "https://code.ipreo.com/Ipreo/cupcake"
   },
-  "ignore": [
-    ".github",
-    ".gitignore",
-    ".npmignore",
-    ".stylelintrc",
-    "backstop.conf.js",
-    "package.json",
-    "src"
-  ],
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
