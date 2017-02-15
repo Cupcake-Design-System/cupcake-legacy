@@ -1,5 +1,5 @@
 {
-    "buildCommand": "gulp build",
+    "buildCommand": "gulp build && node changelog",
     "dist": {
         "baseDir": null
     }

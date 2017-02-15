@@ -1,4 +1,8 @@
 
+### Release 0.1.1-rc.0
+* Removed a. from list group item ([0e71217](https://code.ipreo.com/Ipreo/cupcake/commit/0e7121706f381530c6f3562ad46c7704cc8efbbc))
+ 
+
 ### Release 0.1.0-rc.0
 * Merge pull request #15 from Ipreo/bd-adjustments-2 ([dfe72d3](https://code.ipreo.com/Ipreo/cupcake/commit/dfe72d32a2981425b544dd6d6035a3f0d0c3b5fc))
 * Merge pull request #13 from Ipreo/PAD-290 ([8c41794](https://code.ipreo.com/Ipreo/cupcake/commit/8c41794e5655914cbe98e379b06938415cdeb24e))
