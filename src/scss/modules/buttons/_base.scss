@@ -56,6 +56,17 @@
       background: $color;
       border-color: darken($color, 15%) darken($color, 10%) darken($color, 10%);
     }
+
+    @if $btn-active-selected {
+      &.c-btn-active {
+        color: $white;
+        border-color: transparent;
+
+        @if map-has-key($btn-colors-selected, nth($pair, 1)) {
+          background-color: map-get($btn-colors-selected, nth($pair, 1));
+        }
+      }
+    }
   }
 }
 
