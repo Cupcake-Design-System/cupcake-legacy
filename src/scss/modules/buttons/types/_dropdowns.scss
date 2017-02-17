@@ -4,13 +4,6 @@
 * ==========================================================================
 */
 
-.c-btn-dropdown {
-  @include dropdown-base();
-
-  box-shadow: none;
-  margin: 0;
-}
-
 .c-dropdown {
   position: relative;
   overflow: visible;
