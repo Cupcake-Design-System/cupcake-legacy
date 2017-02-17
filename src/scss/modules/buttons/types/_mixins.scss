@@ -47,28 +47,6 @@
 * Dropdown
 * ==========================================================================
 */
-@mixin dropdown-base() {
-  font-weight: $btn-font-weight;
-  font-family: $btn-font-family;
-  padding: $btn-default-padding-v $btn-default-padding-h;
-  text-decoration: none;
-  text-align: center;
-  border-radius: $btn-radius;
-  white-space: nowrap;
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-
-  @if $btn-shadows == true {
-    box-shadow: $btn-shadow;
-  }
-
-  @else {
-    box-shadow: 0;
-  }
-}
-
-
 @mixin dropdown-list {
   display: none;
   position: absolute;
