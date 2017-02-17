@@ -158,6 +158,8 @@ $btn-font-weight          : 600 ;
 $btn-radius               : rem-calc(3) ;
 $btn-shadow-active        : inset 0 1px 3px 0 rgba(0, 0, 0, 0.2) ;
 
+$btn-active-selected      : true;
+
 $btn-disabled-c           : rgba($darkest-gray, 0.35) ;
 $btn-disabled-bg          : #f9f9f9 ;
 $btn-disabled-bd          : 1px solid #d9d9d9 ;
@@ -216,7 +218,6 @@ $btn-no-border:
 ("success")
 ("warning")
 ("danger")
-("info")
 ;
 
 // Outline Button Colors
@@ -228,6 +229,15 @@ $outline-btn-colors:
 ("warning", $warning, $white)
 ("danger",  $danger, $white);
 
+// Buttons with different active state (selected)
+// Add a btn color and background, ex: (default: "#9494a1")
+$btn-colors-selected: (
+  default: #9494a1,  
+  primary: #9494a1,  
+  success: #9494a1,  
+  warning: #9494a1,  
+  danger: #9494a1
+);
 
 // BUTTON SHAPES
 // This map is used to generate the different button shapes.

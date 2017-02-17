@@ -175,6 +175,8 @@ $btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white,
 $btn-shadow-active    : inset 0 0 4px rgba(black, .54) !default;
 $btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48) !default;
 
+$btn-active-selected  : false !default;
+
 // Button shadows add box-shadow to buttons
 $btn-shadows: true !default;
 
@@ -227,6 +229,11 @@ $btn-no-border:
 // For adjusting padding sizes
 // Add a btn size and padding, ex: (lg: ".5em 1.25em")
 $btn-size-padding: (
+) !default;
+
+// Buttons with different active state (selected)
+// Add a btn color and background, ex: (default: "#9494a1")
+$btn-colors-selected: (
 ) !default;
 
 // Outline Button Colors
