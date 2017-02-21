@@ -1,4 +1,14 @@
 
+### Release 0.1.2-rc.0
+* removed codeclimate.yml ([c9a2e43](https://code.ipreo.com/Ipreo/cupcake/commit/c9a2e438d20156df7aa3145511e14cb4d2d6ffce))
+* Merge pull request #17 from Ipreo/btn-active-redesign ([32138cf](https://code.ipreo.com/Ipreo/cupcake/commit/32138cf55813b16dc058a7152ecb618050c616e6))
+* Merge pull request #20 from Ipreo/remove-c-btn-dropdown-class ([bd8d87c](https://code.ipreo.com/Ipreo/cupcake/commit/bd8d87c4f1d3f64f59a412fefc14d4bdeebfdf9f))
+* remove c-btn-dropdown class ([c3bd211](https://code.ipreo.com/Ipreo/cupcake/commit/c3bd211afeae59bd84cabf3c7d0288a3e4705c6f))
+* ability to have different style for btn active state ([d4cf6e2](https://code.ipreo.com/Ipreo/cupcake/commit/d4cf6e29f560c8c0f3b8c4e7e94c93692f661ec0))
+* Merge branch 'master' of https://code.ipreo.com/Ipreo/cupcake ([5b810f9](https://code.ipreo.com/Ipreo/cupcake/commit/5b810f952b6317d5ca1ff794c898434dbd773174))
+* codeclimate test ([4625f5d](https://code.ipreo.com/Ipreo/cupcake/commit/4625f5dbe3dd12ff33545a215c5d5a08a5cd5aac))
+ 
+
 ### Release 0.1.1-rc.0
 * Removed a. from list group item ([0e71217](https://code.ipreo.com/Ipreo/cupcake/commit/0e7121706f381530c6f3562ad46c7704cc8efbbc))
  
