@@ -87,7 +87,8 @@ select.c-input {
     font-size: $size;
 
     @if map-has-key($control-sizes-padding, $name) {
-      padding: map-get($control-sizes-padding, $name);
+      padding-top: map-get($control-sizes-padding, $name);
+      padding-bottom: map-get($control-sizes-padding, $name);
     }
   }
 }

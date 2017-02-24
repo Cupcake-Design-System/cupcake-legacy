@@ -550,7 +550,7 @@ $control-sizes:
 
 /// Input sizes with custom padding
 /// For adjusting padding sizes
-/// Add a input size and padding, ex: (lg: ".5em 1.25em")
+/// Add a input size and padding, ex: (lg: ".5em")
 $control-sizes-padding:
 ()
 ;
@@ -621,7 +621,8 @@ $checkbox-disabled-opacity: 0.5 ;
 /// ------------------
 $file-upload-padding    : .5rem 1rem ;
 $file-upload-margin     : .5rem ;
-$file-upload-bg-color   : #f5fafd ;
+$file-upload-color      : $primary ;
+$file-upload-bg         : #f5fafd ;
 $file-upload-bd         : 2px dashed #c8def0 ;
 $file-upload-bd-radius  : 6px ;
 $file-upload-fs         : .8rem ;

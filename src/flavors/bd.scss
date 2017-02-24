@@ -467,10 +467,10 @@ $control-sizes:
 ("xxl", rem-calc(18));
 
 $control-sizes-padding: (
-  xl: .563em .9em,
-  lg: .467em .51em,
-  sm: .27em .54em,
-  xs: .125em .220em,
+  xl: .563em,
+  lg: .467em,
+  sm: .27em,
+  xs: .125em,
 );
 
 $control-colors:
@@ -478,6 +478,15 @@ $control-colors:
 ("warning", #F8C000, #FCFBE7)
 ("error", #E98F88, #FFF6F5)
 ;
+
+
+// UI File upload
+// ------------------
+$file-upload-bg         : #EFF9FF;
+$file-upload-bd         : 1px dashed $primary;
+$file-upload-bd-radius  : $global-radius;
+$file-upload-fs         : $body-font-size;
+$file-upload-fa-fs      : 1.15rem;
 
 
 @import "../scss/default";
