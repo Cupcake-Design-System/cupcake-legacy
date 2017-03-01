@@ -210,6 +210,18 @@ dl.c-dl-unstyled {
   line-height: inherit;
 }
 
+// Clearfix
+.c-clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
 
 //simple mixin example
 .c-header-primary {
