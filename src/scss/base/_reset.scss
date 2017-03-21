@@ -104,16 +104,11 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: $global-weight-bold;
 }
 
 dfn {
   font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 mark {
@@ -122,7 +117,7 @@ mark {
 }
 
 small {
-  font-size: 80%;
+  font-size: $small-font-size;
 }
 
 sub,
