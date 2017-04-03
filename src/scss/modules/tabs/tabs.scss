@@ -17,7 +17,11 @@
 }
 
 .c-tabs-bordered {
+
+  border-bottom: $tabs-borders;
+
   .c-tab-item {
+
     .c-tab-item-link {
       border: $tabs-borders;
       border-bottom: 0;
@@ -25,6 +29,7 @@
       color: $tabs-color;
       margin-right: $tabs-bordered-space-between;
       margin-bottom: 0;
+      padding: $tabs-bordered-link-padding;
       border-radius: $tabs-border-radius $tabs-border-radius 0 0;
 
       &:hover {
@@ -58,7 +63,7 @@
 
     &:first-child {
       border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
-      margin-left: 1px;
+      margin-left: 0;
     }
 
     &:last-child {
@@ -82,6 +87,7 @@
 
   .c-tab-item-link {
     margin: 0;
+    padding: $tabs-toggle-link-padding;
     width: 100%;
     border-bottom: 0;
     text-align: center;
