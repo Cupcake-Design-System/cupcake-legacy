@@ -2,27 +2,29 @@
   position: relative;
   display: inline-block;
   margin: .25rem 0;
-  box-shadow: inset 0 -1px $white, inset 0 1px 1px rgba(0, 0, 0, .05);
   cursor: pointer;
   font-size: $default-switch-font-size;
   font-weight: bold;
 
   @if $style == material {
-    width: $material-switch-height * 4;
+    width: $material-switch-height * 2 + 3;
     height: $material-switch-height;
     border-radius: $default-switch-radius;
+    background:rgba(51,51,51,0.02);
   }
 
   @if $style == square {
     width: $default-switch-height * 2;
     height: $default-switch-height;
-    border-radius: 3px;
+    border-radius: 2px;
+    background: #FBFBFB;
   }
 
   @if $style == default {
     width: $default-switch-height * 2;
     height: $default-switch-height;
     border-radius: $default-switch-radius;
+    box-shadow: inset 0 -1px $white, inset 0 1px 1px rgba(0, 0, 0, .05);
   }
 
   &-input {
@@ -30,6 +32,7 @@
     top: 0;
     left: 0;
     opacity: 0;
+
   }
 
   &-label {
@@ -38,7 +41,8 @@
     height: inherit;
     text-transform: uppercase;
     border-radius: inherit;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2), inset 0 0 2px rgba(0, 0, 0, .15);
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    box-shadow: none;
     transition: .25s ease-out;
     transition-property: opacity background;
 
@@ -53,10 +57,10 @@
 
     &::before {
       content: attr(data-off);
-      right: 6px;
-      color: $switch-label-off;
+      right: 5px;
+      color: #333;
       text-shadow: 0 1px rgba(255, 255, 255, .5);
-      opacity: 0;
+      opacity: 1;
     }
 
     &::after {
@@ -71,30 +75,38 @@
 
 @mixin switch-handle($style: default) {
   position: absolute;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
-  background: $white;
   transition: left .15s ease-out;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
-  left: .15rem;
+
 
   @if $style == material {
     left: 0;
-    width: $material-switch-height + 10;
-    height: $material-switch-height + 10;
-    border-radius: $default-switch-radius;;
+    width: $material-switch-height + 2;
+    height: $material-switch-height + 2;
+    border-radius: $default-switch-radius;
+    background: $white;
+    border: 1px solid rgba(51,51,51,0.15);
+    box-shadow: none;
   }
 
   @if $style == square {
     width: 20px;
     height: 20px;
-    border-radius: 3px;
+    border-radius: 2px;
+    left: .35rem;
+    box-shadow: none;
+    background: #FBFBFB;
+    border: 1px solid rgba(51, 51, 51, 0.2);
   }
 
   @if $style == default {
-    width: $default-switch-height - .1rem;
+    width: $default-switch-height - .2rem;
     height: $default-switch-height - .25rem;
     border-radius: $default-switch-radius;
+    left: .15rem;
+    background: #FBFBFB;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
   }
 }
 

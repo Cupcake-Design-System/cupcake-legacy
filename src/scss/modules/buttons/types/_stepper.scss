@@ -7,6 +7,7 @@
 @each $pair in $btn-colors {
   .c-btn-#{nth($pair, 1)}-stepper {
     $color: nth($pair, 2);
+
     $font-color: nth($pair, 3);
 
     font-size: $btn-font-size;
@@ -33,3 +34,42 @@
     }
   }
 }
+
+.c-btn-group-stepper {
+  .c-btn {
+    &-secondary {
+      &:hover {
+        margin-right: -1px;
+        z-index: 1;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.c-btn-group-stepper-lg {
+  .c-btn {
+    font-size: .875rem;
+    padding: 15px 29px;
+
+    &-box {
+      height: 48px;
+      padding: 0 18px;
+    }
+
+    &-secondary {
+      &:hover {
+        margin-right: -1px;
+        z-index: 1;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

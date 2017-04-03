@@ -19,7 +19,9 @@
     &:hover {
       background-color: transparent;
       color: $color-hover;
-      border: 1px solid $border-color-hover;
+      border-color: $border-color-hover;
+      border-right: 1px solid;
+      z-index: 1002;
     }
 
     &:active {
@@ -81,4 +83,12 @@
       }
     }
   }
+}
+
+
+.c-btn-secondary {
+  @include btn-outline(#333, #ccc, #333, #333);
+
+  transition: all .4s ease 0s;
+  box-shadow: none;
 }

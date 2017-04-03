@@ -31,6 +31,7 @@
         <div class="c-col">
           <a class="c-btn c-btn-primary" href="#">Primary Button</a>
           <a class="c-btn c-btn-default" href="#">Default Button</a>
+          <a class="c-btn c-btn-secondary" href="#">Default Button</a>
           <a class="c-btn c-btn-success" href="#">Success Button</a>
           <a class="c-btn c-btn-warning" href="#">Warning Button</a>
           <a class="c-btn c-btn-danger" href="#">Danger Button</a>
@@ -43,6 +44,14 @@
           <a class="c-btn c-btn-lg c-btn-primary" href="#">Large</a>
         </div>
       </div>
+      <div class="c-row">
+        <div class="c-col">
+          <a class="c-btn c-btn-sm c-btn-primary" href="#">Small</a>
+          <a class="c-btn c-btn-primary" href="#">Default</a>
+          <a class="c-btn c-btn-lg c-btn-primary" href="#">Large</a>
+        </div>
+      </div>      
+     
       <br>
       <br>
       <div class="c-row">
@@ -274,12 +283,12 @@
         <div class="c-col">
           <label class="c-switch-square c-switch-primary">
 	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label"></span>
+	    <span class="c-switch-label" data-on="On" data-off="Off"></span>
 	    <span class="c-switch-handle"></span>
 	</label>          
           <label class="c-switch c-switch-primary">
 	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label"></span>
+	    <span class="c-switch-label" data-on="On" data-off="Off"></span>
 	    <span class="c-switch-handle"></span>
 	</label>
           <label class="c-switch c-switch-disabled">
@@ -289,6 +298,37 @@
 	</label>
         </div>
       </div>
+           <div class="c-row">
+        <div class="c-col">
+          <label class="c-switch c-switch-primary">
+	    <input type="checkbox" class="c-switch-input" checked>
+	     <span class="c-switch-label" data-on="On" data-off="Off"></span>
+	    <span class="c-switch-handle"></span>
+	</label>
+          <label class="c-switch c-switch-success">
+	    <input type="checkbox" class="c-switch-input" checked>
+	     <span class="c-switch-label" data-on="On" data-off="Off"></span>
+	    <span class="c-switch-handle"></span>
+	</label>
+          <label class="c-switch c-switch-warning">
+	    <input type="checkbox" class="c-switch-input" checked>
+	     <span class="c-switch-label" data-on="On" data-off="Off"></span>
+	    <span class="c-switch-handle"></span>
+	</label>
+          <label class="c-switch c-switch-danger">
+	    <input type="checkbox" class="c-switch-input" checked>
+	     <span class="c-switch-label" data-on="On" data-off="Off"></span>
+	    <span class="c-switch-handle"></span>
+	</label>
+          <label class="c-switch c-switch-disabled">
+	    <input type="checkbox" class="c-switch-input">
+	    <span class="c-switch-label"></span>
+	    <span class="c-switch-handle"></span>
+	</label>
+        </div>
+      </div>
+<br>
+
       <div class="c-row">
         <div class="c-col">
           <label class="c-switch c-switch-primary">
@@ -318,6 +358,8 @@
 	</label>
         </div>
       </div>
+
+<h3> Standard </h3>      
       <div class="c-row">
         <div class="c-col">
           <label class="c-switch c-switch-primary c-switch-xs">
@@ -352,19 +394,10 @@
 	</label>
         </div>
       </div>
-
+<h3> Material </h3>
       <div class="c-row">
         <div class="c-col">
-          <label class="c-switch-material c-switch-primary c-switch-xs">
-	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label"></span>
-	    <span class="c-switch-handle"></span>
-	</label>
-          <label class="c-switch-material c-switch-primary c-switch-sm">
-	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label"></span>
-	    <span class="c-switch-handle"></span>
-	</label>
+
           <label class="c-switch-material c-switch-primary">
 	    <input type="checkbox" class="c-switch-input" checked>
 	    <span class="c-switch-label"></span>
@@ -372,22 +405,14 @@
 	</label>
           <label class="c-switch-material c-switch-success">
 	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label" data-on="On" data-off="Off"></span>
-	    <span class="c-switch-handle"></span>
-	</label>
-          <label class="c-switch-material c-switch-primary c-switch-lg">
-	    <input type="checkbox" class="c-switch-input" checked>
 	    <span class="c-switch-label"></span>
 	    <span class="c-switch-handle"></span>
 	</label>
-          <label class="c-switch-material c-switch-success c-switch-lg">
-	    <input type="checkbox" class="c-switch-input" checked>
-	    <span class="c-switch-label" data-on="On" data-off="Off"></span>
-	    <span class="c-switch-handle"></span>
-	</label>
+
         </div>
       </div>  
 
+<h3> Square </h3>
       <div class="c-row">
         <div class="c-col">
           <label class="c-switch-square c-switch-primary c-switch-xs">
@@ -437,17 +462,25 @@
 	</label>
           <label class="c-checkbox-lg">
 	    <input type="checkbox" name="radio" checked="">
-	    <i class="c-bg-primary"></i>
+	    <i class="c-bg-success"></i>
 	</label>
+          <label class="c-checkbox-xl">
+	    <input type="checkbox" name="radio" checked="">
+	    <i class="c-bg-warning"></i>
+	</label>  
+            <label class="c-checkbox-xl">
+	    <input type="checkbox" name="radio" disabled>
+	    <i class="c-bg-warning"></i>
+	</label> 
         </div>
       </div>
       <div class="c-row">
         <div class="c-col">
-          <label class="c-radio-lg">
+          <label class="c-radio-sm">
 	    <input type="radio" name="radio" checked="">
 	    <i class="c-bg-primary"></i> 
 	</label>
-          <label class="c-radio-lg">
+          <label class="c-radio">
 	    <input type="radio" name="radio" checked="">
 	    <i class="c-bg-danger"></i>
 	     
@@ -456,11 +489,11 @@
 	    <input type="radio" name="radio" checked="">
 	    <i class="c-bg-success"></i> 
 	</label>
-          <label class="c-radio-lg">
+          <label class="c-radio-xl">
 	    <input type="radio" name="radio" checked="">
 	    <i class="c-bg-warning"></i> 
 	</label>
-          <label class="c-radio-lg">
+          <label class="c-radio-xl">
 	    <input type="radio" name="radio" disabled>
 	    <i class="c-bg-primary"></i> 
 	</label>
@@ -471,16 +504,17 @@
       <h3>Progress Bars</h3>
       <div class="c-row">
         <div class="c-col">
-          <div class="c-progress c-progress-primary">
+          <div class="c-progress c-progress-sm c-progress-primary">
             <div class="c-progress-meter" style="width: 10%"></div>
           </div>
           <div class="c-progress c-progress-primary">
-            <div class="c-progress-meter-animated" style="width: 40%"></div>
-          </div>
-          <div class="c-progress c-progress-primary">
-            <span class="c-progress-meter" style="width: 75%">
-            <p class="c-progress-meter-text">75%</p>
+            <span class="c-progress-meter" style="width: 45%">
+            <p class="c-progress-meter-text">45%</p>
           </span>
+          </div>
+                  <div class="c-progress c-progress-lg c-progress-primary">
+            <div class="c-progress-meter-animated" style="width: 80%"></div>
+            
           </div>
         </div>
       </div>

@@ -164,13 +164,13 @@ $badge-colors:
 //  Button GLOBAL Configs
 //==========================================================================
 $btn-font-family      : $body-font-family !default;
-$btn-font-size        : rem-calc(14) !default;
+$btn-font-size        : rem-calc(12) !default;
 $btn-line-height      : 1 !default;
-$btn-default-padding-v: .5em !default;
-$btn-default-padding-h: 1.25em !default;
+$btn-default-padding-v: .7em !default;
+$btn-default-padding-h: 1.75em !default;
 $btn-font-weight      : bold !default;
 $btn-border-width     : 1px !default;
-$btn-radius           : 4px !default;
+$btn-radius           : 3px !default;
 $btn-shadow           : inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 1px rgba(black, 0.05) !default;
 $btn-shadow-active    : inset 0 0 4px rgba(black, .54) !default;
 $btn-shadow-outline   : inset 1px 1px 7px 0 rgba(160, 160, 168, 0.48) !default;
@@ -199,10 +199,10 @@ $btn-disabled-opacity     : .8 !default;
 // Each block contains the arguments (name, font-size).
 // The class is generated using the name: (ex .c-btn-sm).
 $btn-sizes:
-("xs", rem-calc(9))
-("sm", rem-calc(10))
-("lg", rem-calc(18))
-("xl", rem-calc(20))
+("xs", rem-calc(11))
+("sm", rem-calc(11))
+("lg", rem-calc(14))
+("xl", rem-calc(18))
 !default;
 
 // BUTTON COLORS
@@ -225,11 +225,18 @@ $btn-no-border:
 ()
 !default;
 
+
+
+
 // Button sizes with custom padding
 // For adjusting padding sizes
 // Add a btn size and padding, ex: (lg: ".5em 1.25em")
 $btn-size-padding: (
-) !default;
+  xl: 25px 98px,
+  lg: 17px 78px,
+  sm: 4px 27px,
+);
+
 
 // Buttons with different active state (selected)
 // Add a btn color and background, ex: (default: "#9494a1")
@@ -351,14 +358,14 @@ $box-shadow        : $card-shadow !default;
 //==========================================================================
 //  Switch GLOBAL Configs
 //==========================================================================
-$switch-style            : "default";
-$default-switch-height   : rem-calc(30);
-$default-switch-radius   : rem-calc(50);
-$default-switch-font-size: rem-calc(10);
-$large-switch-font-size  : rem-calc(15);
-$switch-label-off        : $medium-gray;
-$switch-label-on         : $white;
-$switch-handle           : $white;
+$switch-style            : "default"!default;
+$default-switch-height   : 1.95rem !default;
+$default-switch-radius   : rem-calc(50) !default;
+$default-switch-font-size: rem-calc(10)!default;
+$large-switch-font-size  : rem-calc(15)!default;
+$switch-label-off        : $medium-gray!default;
+$switch-label-on         : $white!default;
+$switch-handle           : $white!default;
 
 $switch-sizes: (
   xs: rem-calc(30),
@@ -366,7 +373,8 @@ $switch-sizes: (
   lg: rem-calc(80)
 )!default;
 
-$switch-colors: ("primary", $primary)
+$switch-colors: 
+("primary", $primary)
 ("success", $success)
 ("default", $secondary)
 ("warning", $warning)
@@ -474,7 +482,7 @@ $vertical-nav-active-shadow-color: #1b1b1b!default;
 $progress-height: 1rem !default;
 $progress-background: #cccccc !default;
 $progress-margin-bottom: 1rem !default;
-$progress-radius: 100px !default;
+$progress-radius: 2px !default;
 $progress-colors: 
   ("primary", $primary)
   ("success", $success)
@@ -639,7 +647,8 @@ $avatar-colors:
 $checkbox-size            : 18px !default;
 $checkbox-size-sm         : 12px !default;
 $checkbox-size-lg         : 26px !default;
-$checkbox-icon-bd         : 1px solid #9e9e9e !default;
+$checkbox-size-xl         : 32px !default;
+$checkbox-icon-bd         : 1px solid rgba(51,51,51,0.10)!default;
 $checkbox-icon-radius     : 2px !default;
 $checkbox-transition      : all 0.2s !default;
 $checkbox-disabled-opacity: 0.5 !default;

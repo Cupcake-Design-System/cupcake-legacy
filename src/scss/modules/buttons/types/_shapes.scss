@@ -1,5 +1,25 @@
 /*
 * ==========================================================================
+* Button Sizes
+* ==========================================================================
+*/
+@each $btn-size in $btn-sizes {
+  $btn-size-name: nth($btn-size, 1);
+  $btn-size-font: nth($btn-size, 2);
+  $btn-size-namespace: #{$btn-size-name};
+
+  .c-btn-#{$btn-size-namespace} {
+    font-size: $btn-size-font;
+
+    @if map-has-key($btn-size-padding, $btn-size-name) {
+      padding: map-get($btn-size-padding, $btn-size-name);
+    }
+  }
+}
+
+
+/*
+* ==========================================================================
 * Button Shapes
 * ==========================================================================
 */
@@ -23,24 +43,4 @@
 .c-btn-box {
   padding-left: $btn-default-padding-v+.2em;
   padding-right: $btn-default-padding-v+.2em;
-}
-
-
-/*
-* ==========================================================================
-* Button Sizes
-* ==========================================================================
-*/
-@each $btn-size in $btn-sizes {
-  $btn-size-name: nth($btn-size, 1);
-  $btn-size-font: nth($btn-size, 2);
-  $btn-size-namespace: #{$btn-size-name};
-
-  .c-btn-#{$btn-size-namespace} {
-    font-size: $btn-size-font;
-
-    @if map-has-key($btn-size-padding, $btn-size-name) {
-      padding: map-get($btn-size-padding, $btn-size-name);
-    }
-  }
 }

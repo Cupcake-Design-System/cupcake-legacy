@@ -18,7 +18,7 @@
   border: $btn-border-width solid $light-gray;
   box-sizing: border-box;
   cursor: pointer;
-
+  
   @if $btn-shadows == true {
     box-shadow: $btn-shadow;
   }
@@ -40,7 +40,6 @@
   transition-duration: 0s;
   box-shadow: $btn-shadow-active;
 }
-
 
 /*
 * ==========================================================================
@@ -65,4 +64,50 @@
   z-index: map-get($zindex, dropdown);
 }
 
+@mixin style($bg, $color, $border: $bg, $gradients: null, $shadows: null) {
+  color: $color;
+  border: $btn-border-width solid $border;
+  border-radius: $btn-radius;
+
+  @if $gradients == true {
+    @include linear-gradient(to bottom, lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  }
+
+  @else {
+    background: $bg;
+  }
+
+  @if $shadows == true {
+    box-shadow: $btn-shadow;
+  }
+
+  @else {
+    box-shadow: 0;
+  }
+
+  &:focus {
+    color: $color;
+  }
+
+  &:hover,
+  &.c-btn-hover,
+  a:hover,
+  a:focus {
+    background: lighten($bg, 4%);
+    color: $color;
+  }
+
+  &:active,
+  &.c-btn-active {
+    background: $bg;
+    border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+  }
+
+  @if $btn-active-selected {
+    &.c-btn-active {
+      color: $white;
+      border-color: transparent;
+    }
+  }
+}
 

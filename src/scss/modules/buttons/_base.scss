@@ -12,7 +12,6 @@
   }
 }
 
-// Full-width
 .c-btn-block {
   display: block;
   width: 100%;
@@ -22,7 +21,9 @@
 @each $pair in $btn-colors {
   .c-btn-#{nth($pair, 1)} {
     $color: nth($pair, 2);
+
     $font-color: nth($pair, 3);
+
     background: $color;
     color: $font-color;
     border-color: darken($color, 8%) darken($color, 8%) darken($color, 8%);
@@ -47,14 +48,15 @@
     &.c-btn-hover,
     a:hover,
     a:focus {
-      background: lighten($color, 4%);
+      background: lighten($color, 10%);
+      border-color: lighten($color, 5%);
       color: $font-color;
     }
 
     &:active,
     &.c-btn-active {
-      background: $color;
-      border-color: darken($color, 15%) darken($color, 10%) darken($color, 10%);
+      background: lighten($color, 10%);
+      border-color: darken($color, 10%);
     }
 
     @if $btn-active-selected {
@@ -72,7 +74,6 @@
 
 .c-btn.c-btn-disabled,
 .c-btn[disabled] {
-
   &,
   &:hover,
   &:focus,
@@ -88,4 +89,17 @@
     box-shadow: none;
     opacity: $btn-disabled-opacity;
   }
+}
+
+// Weak override to keep default from breaking with new btn updates
+.c-btn-default:hover,
+    a:hover,
+    a:focus {
+      background: lighten($default, 5%);
+      border-color: darken($default, 3%);
+}
+
+.c-btn-default.c-btn-hover {
+        background: lighten($default, 5%);
+      border-color: darken($default, 3%);
 }

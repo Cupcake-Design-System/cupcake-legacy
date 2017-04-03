@@ -48,7 +48,7 @@
 @mixin full-progress(
   $height: $progress-height,
   $bg: $progress-background,
-  $color: purple,
+  $color: $white,
   $radius: $progress-radius
 ) {
   background-color: $bg;
@@ -86,7 +86,3 @@
   }
 }
 
-//height, bg, color, radius
-.c-progress-full {
-  @include full-progress();
-}

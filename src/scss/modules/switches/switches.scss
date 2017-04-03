@@ -14,7 +14,7 @@
 
   .c-switch-input:checked ~ .c-switch-handle {
     box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
-    left: $default-switch-height;
+    left: $default-switch-height + .05rem;
   }
 }
 
@@ -26,10 +26,17 @@
   }
 
   .c-switch-input:checked ~ .c-switch-handle {
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
-    left: 2.15rem;
+    left: 2.25rem;
   }
 }
+
+.c-switch-square.c-switch-lg {
+  .c-switch-handle {
+    width: 2rem;
+    height: 1.95rem;
+    left: .35rem;
+    }
+    }
 
 .c-switch-material {
   @include switch(material);
@@ -39,8 +46,7 @@
   }
 
   .c-switch-input:checked ~ .c-switch-handle {
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
-    left: $material-switch-height * 2 + 5;
+    left: $material-switch-height + 2;
   }
 }
 

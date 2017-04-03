@@ -10,12 +10,19 @@
   @include checkbox;
 }
 
+.c-radio-sm,
+.c-checkbox-sm {
+  @include checkbox($checkbox-size-sm);
+}
+
 .c-radio-lg,
 .c-checkbox-lg {
   @include checkbox($checkbox-size-lg);
 }
 
-.c-radio-sm,
-.c-checkbox-sm {
-  @include checkbox($checkbox-size-sm);
+
+.c-radio-xl,
+.c-checkbox-xl {
+  @include checkbox($checkbox-size-xl);
 }
+
