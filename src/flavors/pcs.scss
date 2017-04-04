@@ -372,11 +372,17 @@ $tabs-border-radius: $global-radius;
 $tabs-color: $body-font-color;
 $tabs-color-hover: $primary;
 $tabs-color-active: $primary;
-$tabs-text-default-padding: rem-calc(6 12);
+
+$tabs-default-link-padding: rem-calc(6 12);
+$tabs-bordered-link-padding: $tabs-default-link-padding;
+$tabs-toggle-link-padding: $tabs-default-link-padding;
+
+$tabs-default-space-between: rem-calc(0);
+$tabs-bordered-space-between: rem-calc(3);
+
 $tabs-bg: #eaeaea;
 $tabs-bg-hover: lighten($tabs-bg, 5%);
 $tabs-bg-active: lighten($tabs-bg, 5%);
-$tabs-bordered-space-between: 3px;
 $tabs-font-size-default: rem-calc(14);
 $tabs-hover-tranisition: all 0.4s ease 0s;
 $tab-sizes:

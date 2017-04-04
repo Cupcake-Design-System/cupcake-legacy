@@ -393,15 +393,20 @@ $tabs-full-width-border: true!default;
 $tabs-color: $body-font-color!default;
 $tabs-color-hover: $primary!default;
 $tabs-color-active: $primary!default;
-$tabs-text-default-padding: rem-calc(6 12)!default;
-$tabs-text-default-spacing: rem-calc(0)!default;
+
+$tabs-default-link-padding: rem-calc(6 12)!default;
+$tabs-bordered-link-padding: $tabs-default-link-padding!default;
+$tabs-toggle-link-padding: $tabs-default-link-padding!default;
+
+$tabs-default-space-between: rem-calc(0)!default;
+$tabs-bordered-space-between: rem-calc(3)!default;
+
 $tabs-link-border-bottom: 2px!default;
 $tabs-bg: #eaeaea!default;
 $tabs-bg-hover: lighten($tabs-bg, 5%)!default;
 $tabs-bg-active: lighten($tabs-bg, 5%)!default;
-$tabs-bordered-space-between: 3px!default;
 $tabs-font-size-default: rem-calc(14)!default;
-$tabs-hover-tranisition: all 0.4s ease 0s;
+$tabs-hover-tranisition: all 0.4s ease 0s!default;
 $tab-sizes:
 ("xs", rem-calc(10))
 ("sm", rem-calc(12))
