@@ -154,7 +154,10 @@ $breadcrumbs-item-slash         : true ;
 //  Button GLOBAL Configs
 //==========================================================================
 $btn-font-family          : $body-font-family ;
-$btn-font-size            : rem-calc(14) ;
+$btn-font-size            : rem-calc(14);
+$btn-line-height          : 1;
+$btn-default-padding-v    : .5em;
+$btn-default-padding-h    : 1.25em;
 $btn-font-weight          : 600 ;
 $btn-radius               : rem-calc(3) ;
 $btn-shadow-active        : inset 0 1px 3px 0 rgba(0, 0, 0, 0.2) ;
