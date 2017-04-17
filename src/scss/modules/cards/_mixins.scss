@@ -4,6 +4,7 @@
   background-color: $card-bg;
   color: $card-text-color;
   box-shadow: $card-shadow;
+  transition: $card-transition;
 
   &:hover {
     box-shadow: $card-shadow-hover;
@@ -21,7 +22,7 @@
     float: right;
 
     &-icon {
-      padding-right: $space-xs;
+      padding-left: $space-xs;
       color: $card-header-icon-color;
 
       &:hover {

@@ -74,7 +74,7 @@
   > i {
     height: $size;
     display: inline-block;
-    margin: 3px $size -3px 0;
+    margin: ($size/6) $size (-$size/6) 0;
     position: relative;
 
     &::before {

@@ -31,7 +31,7 @@
   i {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     margin: $avatar-icon-margin;
     width: $avatar-icon-size;
     height: $avatar-icon-size;
@@ -39,19 +39,12 @@
     border-style: solid;
     border-radius: 50%;
 
-    &.right {
-      right: 0;
-      left: auto;
+    &.left {
+      left: 0;
+      right: auto;
     }
 
     &.bottom {
-      top: auto;
-      right: 0;
-      bottom: 0;
-      left: auto;
-    }
-
-    &.left {
       top: auto;
       bottom: 0;
     }

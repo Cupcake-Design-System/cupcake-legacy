@@ -141,9 +141,9 @@ $badge-border-width: 1px;
 $badge-border-style: solid;
 $badge-border-radius: 3px !default;
 $badge-border-radius-rounded: 30em !default;
-$badge-font-size: 1rem;
-$badge-font-weight: bold;
-$badge-line-height: 1.2;
+$badge-font-size: 1rem !default;
+$badge-font-weight: bold !default;
+$badge-line-height: 1.2 !default;
 
 $badge-sizes:
 ("xs", .5rem)
@@ -335,6 +335,7 @@ $card-bg:                      $white !default;
 $card-padding:                 0.9375rem !default;
 $card-shadow:                  1px 2px 5px $light-gray !default;
 $card-shadow-hover:            $card-shadow !default;
+$card-transition:              none !default;
 $card-header-border-bottom:    1px solid rgba(177, 177, 177, 0.15)!default;
 $card-colors: 
 ("primary", $primary, $primary)
@@ -536,11 +537,13 @@ $control-line-height            : normal !default;
 $control-placeholder-c          : $dark-gray !default;
 $control-placeholder-hover-c    : $control-placeholder-c !default;
 $control-background             : $white !default;
-$control-padding                : .5em !default;
+$control-padding-v              : .5em !default;
+$control-padding-h              : .5em !default;
 $control-border                 : #e0e0e0 !default;
 $control-border-width           : 1px !default;
 $control-border-radius          : $global-radius !default;
 $control-border-radius-rounded  : 30em !default;
+$control-shadow                 : none !default;
 $control-transition             : border-color 0.1s ease-in !default;
 
 $control-hover                  : $primary !default;
@@ -557,12 +560,12 @@ $control-hint-color             : $header-small-font-color !default;
 $control-hint-font-size         : $small-font-size !default;
 $control-hint-transition        : all .2s ease !default;
 
-$control-label-padding          : $control-padding 0 !default;
+$control-label-padding          : $control-padding-v 0 !default;
 
 $control-addon-background       : #eeeeee !default;
 
 $control-element-padding        : 1em 0 !default;
-$control-element-label-padding  : 0 0 $control-padding 0 !default;
+$control-element-label-padding  : 0 0 $control-padding-v 0 !default;
 
 $control-select-padding-r       : 1em !default;
 $control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
@@ -572,7 +575,7 @@ $control-results-border         : 1px solid rgb(204, 204, 204) !default;
 $control-results-shadow         : 2px 5px 4px rgba(0, 0, 0, 0.05) !default;
 
 $fieldset-padding               : 0 !default;
-$fieldset-margin                : $control-padding 0 !default;
+$fieldset-margin                : $control-padding-v 0 !default;
 $fieldset-width                 : 100% !default;
 $fieldset-border                : 0 !default;
 $fieldset-legend-padding        : .3em 0 !default;
@@ -591,7 +594,7 @@ $control-sizes:
 
 // Input sizes with custom padding
 // For adjusting padding sizes
-// Add a input size and padding, ex: (lg: ".5em")
+// Add a input size and padding, ex: (lg: ".5em .6em")
 $control-sizes-padding:
 ()
 !default;

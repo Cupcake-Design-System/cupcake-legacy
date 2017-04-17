@@ -504,7 +504,8 @@ $control-line-height            : normal ;
 $control-placeholder-c          : $dark-gray ;
 $control-placeholder-hover-c    : $control-placeholder-c ;
 $control-background             : $white ;
-$control-padding                : .5em ;
+$control-padding-v              : .5em ;
+$control-padding-h              : .5em ;
 $control-border                 : #e0e0e0 ;
 $control-border-width           : 1px ;
 $control-border-radius          : $global-radius ;
@@ -525,19 +526,19 @@ $control-hint-color             : $header-small-font-color ;
 $control-hint-font-size         : $small-font-size ;
 $control-hint-transition        : all .2s ease ;
 
-$control-label-padding          : $control-padding 0 ;
+$control-label-padding          : $control-padding-v 0 ;
 
 $control-addon-background       : #eeeeee ;
 
 $control-element-padding        : 1em 0 ;
-$control-element-label-padding  : 0 0 $control-padding 0 ;
+$control-element-label-padding  : 0 0 $control-padding-v 0 ;
 
 $control-select-padding-r       : 1em ;
 $control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") ;
 $control-select-background-pos  : 99% 50% ;
 
 $fieldset-padding               : 0 ;
-$fieldset-margin                : $control-padding 0 ;
+$fieldset-margin                : $control-padding-v 0 ;
 $fieldset-width                 : 100% ;
 $fieldset-border                : 0 ;
 $fieldset-legend-padding        : .3em 0 ;
@@ -556,7 +557,7 @@ $control-sizes:
 
 /// Input sizes with custom padding
 /// For adjusting padding sizes
-/// Add a input size and padding, ex: (lg: ".5em")
+/// Add a input size and padding, ex: (lg: ".5em .6em")
 $control-sizes-padding:
 ()
 ;
