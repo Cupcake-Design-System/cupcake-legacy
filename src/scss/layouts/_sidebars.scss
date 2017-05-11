@@ -1,3 +1,6 @@
+$global-sidebar-max-width: 260px !default;
+$global-sidebar-background-color: #f5f5f5 !default;
+
 @mixin sidebar {
   background-color: $global-sidebar-background-color;
   flex: 1;

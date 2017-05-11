@@ -1,12 +1,11 @@
 var gulp          = require('gulp'),
     browserSync   = require('browser-sync'),
-    prefix        = require('gulp-autoprefixer'),
+    postcss       = require('gulp-postcss');
+    autoprefixer  = require('autoprefixer');
     cleanCSS      = require('gulp-clean-css'),
     deploy        = require('gulp-gh-pages'),    
     notify        = require('gulp-notify'),
     plumber       = require('gulp-plumber'),
-    prompt        = require('gulp-prompt'),
-    minimist      = require('minimist'); 
     rename        = require('gulp-rename'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
@@ -16,13 +15,36 @@ var gulp          = require('gulp'),
     del           = require('del'),
     vinylPaths    = require('vinyl-paths'),
     colors        = require('colors'),
-    fileExists    = require('file-exists');
-    download      = require('gulp-downloader');    
+    download      = require('gulp-downloader');
+    octophant     = require('octophant');
+    flatten       = require('gulp-flatten');
+
 
 var bases = {
     app:  'src/',
     dist: 'dist/',
+    scss:  'src/scss/',
+    flavors:  'src/flavors/',
 };
+
+var sassOptions = {
+  outputStyle: 'expanded'
+};
+
+var postcssPlugins = [
+  autoprefixer({
+    browsers: ['last 2 versions']
+  })
+];
+
+
+var tokens = {
+    bd:  'https://assets.brand.ai/ipreo/bd/_style-params.scss?key=r1QaADqhg',
+    pcs: 'https://assets.brand.ai/ipreo/pcs/_style-params.scss?key=r1QaADqhg',
+    buyside: 'https://assets.brand.ai/ipreo/buyside/_style-params.scss?key=r1QaADqhg',
+    northstar: 'https://assets.brand.ai/ipreo/north-star/_style-params.scss?key=r1QaADqhg',
+};
+
 
 colors.setTheme({
   silly:   'rainbow',
@@ -64,13 +86,6 @@ var onError = function(err) {
   this.emit('end');
 };
 
-var sassOptions = {
-  outputStyle: 'expanded'
-};
-
-var prefixerOptions = {
-  browsers: ['last 2 versions']
-};
 
 // BUILD SUBTASKS
 // ---------------
@@ -82,11 +97,11 @@ gulp.task('clean:dist', function() {
 
 
 gulp.task('styles', function() {
-  return gulp.src(bases.app + 'scss/default.scss')
+  return gulp.src(bases.scss + 'default.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
-    .pipe(prefix(prefixerOptions))    
+    .pipe(postcss(postcssPlugins))
     .pipe(rename('default.css'))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
@@ -94,18 +109,33 @@ gulp.task('styles', function() {
 });
 
 gulp.task('flavors', function() {
-  return gulp.src(bases.app + 'flavors/*.scss')
+  return gulp.src(bases.flavors + '**/*.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
-    .pipe(prefix(prefixerOptions))
+    .pipe(postcss(postcssPlugins))
+    .pipe(rename({
+      dirname: ''
+    }))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))
 });
 
+gulp.task('styles:flatten', function() {
+  return gulp.src(bases.dist + '**/*.css')
+    .pipe(flatten())
+    .pipe(gulp.dest(bases.dist))
+});
+
+
+gulp.task('clean:leftovers', function() {
+  return gulp.src([bases.dist + 'bd', bases.dist + 'buyside', bases.dist + 'northstar', bases.dist + 'pcs'])
+    .pipe(vinylPaths(del));
+});
+
 gulp.task('styles:build', function() {
-  return gulp.src(bases.dist + '*.css')
+  return gulp.src(bases.dist + '**/*.css')
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist))
@@ -126,9 +156,17 @@ gulp.task('deploy', function() {
 
 gulp.task('copy', function() {
 
-// gulp.src(bases.app + 'img/*')
-//     .pipe(gulp.dest(bases.dist + 'img'))
-//     .pipe(reload({stream:true}));
+gulp.src(bases.app + 'demo-js/**/*.*')
+    .pipe(gulp.dest(bases.dist + 'demo-js'))
+    .pipe(reload({stream:true}));
+
+gulp.src(bases.app + 'test/*')
+    .pipe(gulp.dest(bases.dist + 'test'))
+    .pipe(reload({stream:true}));    
+  
+gulp.src(bases.app + 'img/*')
+    .pipe(gulp.dest(bases.dist + 'img'))
+    .pipe(reload({stream:true}));
   
     // copy icons to dist directly
   gulp.src(bases.app + 'fonts/**/*.*')
@@ -137,8 +175,85 @@ gulp.task('copy', function() {
   
 });
 
+
+// ------------------------------------------------
+// Northstar Tokens = gulp northstar-scrape
+// ------------------------------------------------
+
+gulp.task('tokens:northstar', function(){
+  return download(tokens.northstar)
+  .pipe(rename('_tokens.scss'))
+  .pipe(gulp.dest('./src/scss/config/'));
+});
+
+
+gulp.task('northstar-scrape', function(done) {
+   runSequence('tokens:northstar', done);
+});
+
+
+gulp.task('variables:pcs', function(cb) {
+  var options = {
+    title: `Cupcake PCS Settings`,
+    output: bases.flavors + `pcs/_variables.scss`,
+    sort: [
+      'global-non-tokens'
+    ]
+  }
+
+  octophant(bases.scss, options, cb);
+});
+
+
+gulp.task('variables:northstar', function(cb) {
+  var options = {
+    title: `Cupcake Northstar Settings`,
+    output: bases.flavors + `northstar/_variables.scss`,
+    sort: [
+      'global-non-tokens'
+    ]
+  }
+
+  octophant(bases.scss, options, cb);
+});
+
+
+gulp.task('variables:bd', function(cb) {
+  var options = {
+    title: `Cupcake BD Settings`,
+    output: bases.flavors + `bd/_variables.scss`,
+    sort: [
+      'global-non-tokens'
+    ]
+  }
+
+  octophant(bases.scss, options, cb);
+});
+
+
+
+gulp.task('variables:buyside', function(cb) {
+  var options = {
+    title: `Cupcake Buyside Settings`,
+    output: bases.flavors + `buyside/_variables.scss`,
+    sort: [
+      'global-non-tokens'
+    ]
+  }
+
+  octophant(bases.scss, options, cb);
+});
+
+
+
+gulp.task('scrape-variables', function(done) {
+  runSequence('variables:northstar', 'variables:buyside', 'variables:bd', 'variables:pcs', done);
+});
+
+
+
 gulp.task('lint', function() {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src(bases.scss + '**/*.scss')
     .pipe(stylelint({
       failAfterError: true,
       reportOutputDir: 'reports/lint',
@@ -152,76 +267,31 @@ gulp.task('lint', function() {
 
 
 gulp.task('html', function() {
-  gulp.src(bases.app + './*.html')
+  gulp.src(bases.app + './**/*.html')
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(bases.app + 'scss/**/*.scss', ['styles', 'flavors']);
-  gulp.watch(bases.app + 'flavors/*.scss', ['styles', 'flavors']);
+  gulp.watch(bases.scss + '**/*.scss', ['styles', 'flavors']);
+  gulp.watch(bases.flavors + '**/*.scss', ['styles', 'flavors']);
   gulp.watch(bases.app + './*.html', ['html']);
+  gulp.watch(bases.app + './src/test/*.html', ['html']);
   gulp.watch(bases.app + 'img/*', ['img']);
 });
 
 
 
-
-gulp.task('prompt', function () {
-  return gulp.src('')
-  .pipe(prompt.prompt({
-        type: 'input',
-        message: 'What would you like to name your new flavor?',
-        name: 'flavorname',
-        default: 'demo'
-      },
-       function(response){
-
-        flavorname = response.flavorname;
-        
-    })
-  )
-})
-
-gulp.task('copy-flavor', function(){
-
-  if (fileExists(`src/flavors/${flavorname}.scss`))
-    throw 'Theme with that name already exists'
-
-  return gulp.src('src/flavors/bd.scss')
-    .pipe(rename(`${flavorname}.scss`))
-    .pipe(gulp.dest('src/flavors', {overwrite: false}))
-})
-
-
-gulp.task('create-flavor', function(done) {
-   runSequence('prompt', 'copy-flavor', 'default', done);
-});
-
-
-
-
-gulp.task('new-flavor', () => {
-  var opts = minimist(process.argv.slice(2), {
-    string: 'name'
-  })
-
-  if (fileExists(`src/flavors/${opts.name}.scss`))
-    throw 'A flavor with that name already exists'
-
-  return gulp.src('src/flavors/bd.scss')
-    .pipe(rename(`${opts.name}.scss`))
-    .pipe(gulp.dest('src/flavors', {overwrite: false}))
-});
-
-
+// ------------
 // BUILD TASKS
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {
   runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', done);
 });
+
+

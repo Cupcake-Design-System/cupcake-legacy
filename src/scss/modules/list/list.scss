@@ -1,0 +1,119 @@
+////
+/// @group lists
+////
+
+/// $list-margin-bottom             
+$list-margin-bottom             : 1rem !default;
+
+/// $list-style-type                
+$list-style-type                : disc !default;
+
+/// $list-style-position            
+$list-style-position            : outside !default;
+
+/// $list-font-size                 
+$list-font-size                 : 0.9rem !default;
+
+/// $list-ul-side-margin            
+$list-ul-side-margin            : 0.6rem !default;
+
+/// $list-nested-side-margin        
+$list-nested-side-margin        : 1.25rem !default;
+
+
+/// $list-padding                   
+$list-padding                   : 1.5rem !default;
+
+/// $list-ul-padding                
+$list-ul-padding                : 1.9rem !default;
+
+/// $list-side-margin               
+$list-side-margin               : 1.25rem !default;
+
+/// $defnlist-margin-bottom      
+$defnlist-margin-bottom         : 1rem !default;
+
+/// $defnlist-term-weight
+$defnlist-term-weight           : bold !default;
+
+/// $defnlist-term-margin-bottom
+$defnlist-term-margin-bottom    : 0.3rem !default;
+
+
+ul.c-ul,
+ol.c-ol,
+dl.c-dl {
+  @include font-ordered-list;
+
+  margin: 0 0 $list-margin-bottom;
+  padding: 0;
+  list-style-position: $list-style-position;
+
+
+  li ul {
+    margin-bottom: 0;
+  }
+}
+
+ol.c-ol li {
+  margin-left: $list-side-margin;
+}
+
+ul.c-ul {
+  li {
+    list-style-type: $list-style-type;
+    margin-left: $list-side-margin;
+
+    & & {
+      margin-left: $list-nested-side-margin;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// List items
+.c-li {
+  font-size: inherit;
+}
+
+// Unordered lists
+// Ordered lists
+.c-ol {
+  margin-left: $list-side-margin;
+
+  // Nested lists
+  & & {
+    margin-left: $list-nested-side-margin;
+    margin-bottom: 0;
+  }
+}
+
+// Definition lists
+.c-dl {
+  margin-bottom: $defnlist-margin-bottom;
+
+  .c-dt {
+    margin-bottom: $defnlist-term-margin-bottom;
+    font-weight: $defnlist-term-weight;
+  }
+}
+
+ul.c-ul-unstyled,
+ol.c-ol-unstyled,
+dl.c-dl-unstyled {
+  &,
+  & li,
+  & dt,
+  & dd {
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+
+// Use to remove the bullets from an unordered list
+.c-no-bullet {
+  margin-left: 0;
+  list-style: none;
+}

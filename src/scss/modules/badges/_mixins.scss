@@ -1,0 +1,72 @@
+////
+/// @group badges
+////
+
+/// $badge-padding:
+$badge-padding: 0.25em 0.5em !default;
+
+/// $badge-border-width:
+$badge-border-width: 1px !default;
+
+/// $badge-border-style: 
+$badge-border-style: solid !default;
+
+/// $badge-border-radius:
+$badge-border-radius: 3px !default;
+
+/// $badge-border-radius-rounded:
+$badge-border-radius-rounded: 30em !default;
+
+/// $badge-font-size:
+$badge-font-size: 1rem !default;
+
+/// $badge-font-weight: 
+$badge-font-weight: bold !default;
+
+/// $badge-line-height: 
+$badge-line-height: 1.2 !default;
+
+/// $badge-xs 
+$badge-xs: 0.5rem !default;
+
+/// $badge-sm 
+$badge-sm: 0.7rem !default;
+
+/// $badge-lg:  
+$badge-lg: 1.25rem !default;
+
+/// $badge-xl: 
+$badge-xl: 1.5rem !default;
+
+/// $primary
+$badge-primary: $primary;
+
+/// $success
+$badge-success: $success;
+
+/// $danger
+$badge-danger: $danger;
+
+/// $warning
+$badge-warning: $warning;
+
+
+// $badge-sizes
+$badge-sizes:
+  ("xs", $badge-xs)
+  ("sm", $badge-sm)
+  ("lg", $badge-lg)
+  ("xl", $badge-xl) !default;
+
+// $badge-colors
+$badge-colors:
+  ("primary", $badge-primary, $badge-primary)
+  ("success", $badge-success, $badge-success)
+  ("danger", $badge-danger, $badge-danger)
+  ("warning", $badge-warning, $badge-warning) !default;
+
+@mixin badge($background-color, $color: $badge-color, $border-color: $color) {
+  border: $badge-border-width $badge-border-style $border-color;
+  background-color: $background-color;
+  color: $color;
+}

@@ -1,7 +1,52 @@
-@mixin switch($style: default) {
+////
+/// @group switches
+////
+
+/// $switch-style 
+$switch-style: "default" !default;
+
+/// $default-switch-height
+$default-switch-height: 1.95rem !default;
+
+/// $default-switch-radius
+$default-switch-radius: rem-calc(50) !default;
+
+/// $default-switch-font-size: 
+$default-switch-font-size: rem-calc(10) !default;
+
+/// $large-switch-font-size  
+$large-switch-font-size: rem-calc(15) !default;
+
+/// $switch-label-off        
+$switch-label-off: #d3dae0 !default;
+
+/// $switch-label-on         
+$switch-label-on: $white !default;
+
+/// $switch-handle           
+$switch-handle: $white !default;
+
+// $switch-sizes:
+$switch-sizes: (
+  xs: rem-calc(30),
+  sm: rem-calc(40),
+  lg: rem-calc(80)
+) !default;
+
+// $switch-colors
+$switch-colors: ("primary", $primary)
+  ("success", $success)
+  ("default", $secondary)
+  ("warning", $warning)
+  ("danger", $danger) !default;
+
+// NOTE: Material height must remain px value
+$material-switch-height: 15px !default;
+
+@mixin switch($style: $switch-style) {
   position: relative;
   display: inline-block;
-  margin: .25rem 0;
+  margin: 0.25rem 0;
   cursor: pointer;
   font-size: $default-switch-font-size;
   font-weight: bold;
@@ -10,14 +55,14 @@
     width: $material-switch-height * 2 + 3;
     height: $material-switch-height;
     border-radius: $default-switch-radius;
-    background:rgba(51,51,51,0.02);
+    background: rgba(51, 51, 51, 0.02);
   }
 
   @if $style == square {
     width: $default-switch-height * 2;
     height: $default-switch-height;
     border-radius: 2px;
-    background: #FBFBFB;
+    background: #fbfbfb;
   }
 
   @if $style == default {
@@ -32,7 +77,6 @@
     top: 0;
     left: 0;
     opacity: 0;
-
   }
 
   &-label {
@@ -43,7 +87,7 @@
     border-radius: inherit;
     border: 1px solid rgba(51, 51, 51, 0.1);
     box-shadow: none;
-    transition: .25s ease-out;
+    transition: 0.25s ease-out;
     transition-property: opacity background;
 
     &::after,
@@ -58,8 +102,8 @@
     &::before {
       content: attr(data-off);
       right: 5px;
-      color: #333;
-      text-shadow: 0 1px rgba(255, 255, 255, .5);
+      color: #333333;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5);
       opacity: 1;
     }
 
@@ -67,7 +111,7 @@
       content: attr(data-on);
       left: 8px;
       color: $switch-label-on;
-      text-shadow: 0 1px rgba(0, 0, 0, .2);
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
       opacity: 1;
     }
   }
@@ -75,10 +119,9 @@
 
 @mixin switch-handle($style: default) {
   position: absolute;
-  top: 49%;
+  top: 50%;
   transform: translateY(-50%);
-  transition: left .15s ease-out;
-
+  transition: left 0.15s ease-out;
 
   @if $style == material {
     left: 0;
@@ -86,7 +129,7 @@
     height: $material-switch-height + 2;
     border-radius: $default-switch-radius;
     background: $white;
-    border: 1px solid rgba(51,51,51,0.15);
+    border: 1px solid rgba(51, 51, 51, 0.15);
     box-shadow: none;
   }
 
@@ -94,9 +137,9 @@
     width: 20px;
     height: 20px;
     border-radius: 2px;
-    left: .35rem;
+    left: 0.35rem;
     box-shadow: none;
-    background: #FBFBFB;
+    background: #fbfbfb;
     border: 1px solid rgba(51, 51, 51, 0.2);
   }
 
@@ -104,8 +147,8 @@
     width: $default-switch-height - .2rem;
     height: $default-switch-height - .25rem;
     border-radius: $default-switch-radius;
-    left: .15rem;
-    background: #FBFBFB;
+    left: 0.15rem;
+    background: #fbfbfb;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
   }
 }
@@ -115,4 +158,5 @@
     background: $color;
   }
 }
+
 

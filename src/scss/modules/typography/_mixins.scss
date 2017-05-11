@@ -1,37 +1,32 @@
-// Headers
-@mixin header-styles($font-size: null, $color: $header-color, $font-weight: $header-font-weight) {
-  font-family: $header-font-family;
+// /// $anchor-color
+$anchor-color                   : $primary !default;
+
+// /// $anchor-color-hover             
+$anchor-color-hover             : $color-primary-3 !default;
+
+// /// $anchor-color-active            
+$anchor-color-active            : $color-primary-7 !default;
+
+// /// $anchor-color-disabled          
+$anchor-color-disabled          : $disabled !default;
+
+// /// $hr-width                       
+$hr-width                       : 100% !default;
+
+// /// $hr-border                      
+$hr-border                      : 1px solid $color-gray-1 !default;
+
+// /// $hr-margin                      
+$hr-margin                      : 20px auto !default;
+
+
+@mixin header-styles($font-size: null, $color: $header-color, $font-weight: $font-header-md-line-height) {
+  font-family: $font-body-font-family;
   font-weight: $font-weight;
-  font-style: $header-font-style;
   color: $color;
-  text-rendering: $header-text-rendering;
   margin-top: 0;
-  margin-bottom: $header-margin-bottom;
-  line-height: $header-lineheight;
+  line-height: $font-header-md-line-height;
   font-size: $font-size;
-
-  small {
-    font-size: $small-font-size;
-    line-height: inherit;
-    color: $header-small-font-color;
-  }
-}
-
-// Heading sizes
-@each $size, $headers in $header-sizes {
-  @include bp($size) {
-    @each $header, $font-size in $headers {
-      .c-header-#{$header} {
-        @include header-styles;
-
-        font-size: rem-calc($font-size);
-
-        @if map-has-key($header-weight, $header) {
-          font-weight: map-get($header-weight, $header);
-        }
-      }
-    }
-  }
 }
 
 

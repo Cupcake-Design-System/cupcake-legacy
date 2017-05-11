@@ -1,3 +1,24 @@
+////
+/// @group file upload
+////
+
+/// $file-upload-padding
+$file-upload-padding    : 0.5rem 1rem !default;
+/// $file-upload-margin
+$file-upload-margin     : 0.5rem !default;
+/// $file-upload-color
+$file-upload-color      : $color-gray-6 !default;
+/// $file-upload-bg 
+$file-upload-bg         : #f5fafd !default;
+/// $file-upload-bd 
+$file-upload-bd         : 2px dashed $global-border-color !default;
+/// $file-upload-bd-radius 
+$file-upload-bd-radius  : 6px !default;
+/// $file-upload-fs  
+$file-upload-fs         : 0.8rem !default;
+/// $file-upload-fa-fs 
+$file-upload-fa-fs      : 1.25rem !default;
+
 .c-file-upload {
   display: flex;
   flex-direction: row;

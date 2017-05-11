@@ -1,3 +1,67 @@
+////
+/// @group tabs
+////
+
+/// $tabs-borders: 1px solid #cecece!default;
+$tabs-borders: 1px solid $global-border-color !default;
+
+/// $tabs-border-radius: $global-radius!default;
+$tabs-border-radius: $global-radius !default;
+
+/// $tabs-full-width-border: true!default;
+$tabs-full-width-border: true !default;
+
+/// $tabs-color: $body-font-color!default;
+$tabs-color: $global-text-color !default;
+
+/// $tabs-color-hover: $primary!default;
+$tabs-color-hover: $primary !default;
+
+/// $tabs-color-active: $primary!default;
+$tabs-color-active: $primary !default;
+
+/// $tabs-default-link-padding: rem-calc(6 12)!default;
+$tabs-default-link-padding: 6px 12px !default;
+
+/// $tabs-bordered-link-padding: $tabs-default-link-padding!default;
+$tabs-bordered-link-padding: $tabs-default-link-padding !default;
+
+/// $tabs-toggle-link-padding: $tabs-default-link-padding!default;
+$tabs-toggle-link-padding: $tabs-default-link-padding !default;
+
+/// $tabs-default-space-between: rem-calc(0)!default;
+$tabs-default-space-between: 0 !default;
+
+/// $tabs-bordered-space-between: rem-calc(3)!default;
+$tabs-bordered-space-between: 3px !default;
+
+/// $tabs-link-border-bottom: 2px !default;
+$tabs-link-border-bottom: 2px !default;
+
+/// $tabs-bg: #eaeaea !default;
+$tabs-bg: $color-gray-1 !default;
+
+/// $tabs-bg-hover: lighten($tabs-bg, 5%)!default;
+$tabs-bg-hover: lighten($tabs-bg, 5%) !default;
+
+/// $tabs-bg-active: lighten($tabs-bg, 5%)!default;
+$tabs-bg-active: lighten($tabs-bg, 5%) !default;
+
+/// $tabs-font-size-default: rem-calc(14)!default;
+$tabs-font-size-default: 14px !default;
+
+/// $tabs-hover-transition: all 0.4s ease 0s !default;
+$tabs-hover-transition: all 0.4s ease 0s !default;
+
+/// $tab-size-xs:
+$tab-font-size-xs: 10px !default;
+
+/// $tab-size-sm:
+$tab-font-size-sm: 12px !default;
+
+/// $tab-size-lg:
+$tab-font-size-lg: 20px !default;
+
 @mixin tabs {
   align-items: stretch;
   display: flex;
@@ -39,7 +103,7 @@
 
   &:hover {
     border-bottom: $tabs-link-border-bottom solid $tabs-color-hover;
-    transition: $tabs-hover-tranisition;
+    transition: $tabs-hover-transition;
     color: $tabs-color-hover;
   }
 }
@@ -53,13 +117,14 @@
 
   &,
   &:hover {
-
     border-bottom-style: solid;
     border-bottom-width: $tabs-link-border-bottom;
 
     @if $tabs-full-width-border {
       border-bottom-color: $tabs-color-active;
-    } @else {
+    }
+
+    @else {
       border-bottom-color: $tabs-color;
     }
   }

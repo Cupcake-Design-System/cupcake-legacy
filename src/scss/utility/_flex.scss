@@ -17,7 +17,7 @@ $flex-align: (
   display: flex;
 }
 
-/// Horizontally or vertically aligns the items within a flex container.
+// Horizontally or vertically aligns the items within a flex container.
 @mixin flex-align($x: null, $y: null) {
   @if $x {
     @if map-has-key($flex-justify, $x) {

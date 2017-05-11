@@ -26,9 +26,6 @@
   @include progress-meter-text;
 }
 
-
-
-
 //height, bg, color, radius
 .c-progress-sm {
   @include full-progress(5px,rgba(51,51,51,0.10), $primary, 2px);

@@ -1,0 +1,101 @@
+.c-sidebar-nav-toggle {
+  @include side-nav-toggle;
+}
+
+.c-sidebar-nav {
+  @include side-nav;
+  &-closed {
+    margin-left: -$sidebar-width;
+  }
+  &-header {
+    position: relative;
+    width: 100%;
+    z-index: 9;
+    margin-bottom: 25px;
+    &-tabs {
+      background-color: $sidebar-tab-bg-color;
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    &-tab-item {
+      border-right: 1px solid $sidebar-tab-border-color;
+      border-bottom: 1px solid $sidebar-tab-border-color;
+      display: flex;
+      flex-grow: 1;
+      &:hover {
+        background-color: $white;
+        color: $sidebar-text;
+        border-bottom: 1px solid $white;
+      }
+      &:active,
+      &-active {
+        border-bottom: 1px solid $white;
+        background-color: $white;
+        color: $sidebar-text;
+      }
+      &-link {
+        color: $sidebar-text;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 6px 0;
+        &:hover,
+        &:active {
+          background-color: $white;
+          color: $sidebar-text;
+        }
+      }
+    }
+  }
+}
+
+.c-sidebar-nav-body {
+  flex: 0 0 auto;
+  height: 440px;
+  min-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.c-sidebar-nav-divider {
+  border-top: 1px solid $sidebar-nav-divider;
+  box-shadow: 0px -2px 8px -5px rgba(0, 0, 0, 0.5);
+  color: $sidebar-nav-divider;
+  cursor: row-resize;
+  flex: 0 0 auto;
+  height: 18px;
+  line-height: 1rem;
+  text-align: center;
+  & .ic-divider {
+    font-size: 4px;
+  }
+}
+
+.c-sidebar-nav-footer {
+  flex: 1 1 auto;
+  min-height: 200px;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+
+.c-sidebar-nav-list-toggle {
+  align-items: center;
+  justify-content: center;
+  color: lighten($sidebar-text, 10);
+  display: inline-flex;
+  height: 15px;
+  left: 15px;
+  position: absolute;
+  top: 5px;
+  width: 15px;
+  font-size: 0.75rem;
+  &:hover {
+    color: darken($sidebar-text, 20);
+    cursor: pointer;
+  }
+}

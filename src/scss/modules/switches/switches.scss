@@ -1,8 +1,3 @@
-/*
-* ==========================================================================
-* Switches
-* ==========================================================================
-*/
 @import 'mixins';
 
 .c-switch {
@@ -13,8 +8,8 @@
   }
 
   .c-switch-input:checked ~ .c-switch-handle {
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, .3);
-    left: $default-switch-height + .05rem;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.3);
+    left: $default-switch-height + 0.05rem;
   }
 }
 
@@ -34,9 +29,9 @@
   .c-switch-handle {
     width: 2rem;
     height: 1.95rem;
-    left: .35rem;
-    }
-    }
+    left: 0.35rem;
+  }
+}
 
 .c-switch-material {
   @include switch(material);
@@ -70,13 +65,13 @@
     .c-switch-handle {
       @include vertical-center;
 
-      left: .15rem;
-      width: $size / 2 - .2rem;
-      height: $size / 2 - .25rem;
+      left: 0.15rem;
+      width: $size / 2 - 0.2rem;
+      height: $size / 2 - 0.25rem;
     }
 
     .c-switch-input:checked ~ .c-switch-handle {
-      left: $size / 2 + .1rem;
+      left: $size / 2 + 0.1rem;
     }
 
     .c-switch-label {
@@ -85,9 +80,59 @@
   }
 }
 
+.c-switch-sm {
+  .c-switch-label::after {
+    left: 5px;
+    margin-top: -0.35em;
+  }
 
+  .c-switch-label::before {
+    right: 3px;
+    margin-top: -0.35em;
+  }
+}
 
+.c-switch-square .c-switch-handle::before {
+  background: $color-gray-7;
+  box-shadow: -4px 0 0 0 $color-gray-7, 4px 0 0 0 $color-gray-7;
+  content: '';
+  display: block;
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.15s ease;
+  width: 2px;
+}
 
+.c-switch-material + .c-switch-lg {
+  height: 1rem;
 
+  .c-switch-handle {
+    left: 0;
+    width: 2rem;
+    height: 1.95rem;
+  }
 
+  .c-switch-input:checked ~ .c-switch-handle {
+    left: 3rem;
+  }
+}
 
+.c-switch-material.c-switch-sm {
+  height: .5rem;
+  width: 2rem;
+
+  .c-switch-handle {
+    left: 0;
+    width: 1rem;
+    height: .95rem;
+  }
+
+  .c-switch-input:checked ~ .c-switch-handle {
+    left: 1rem;
+  }
+}

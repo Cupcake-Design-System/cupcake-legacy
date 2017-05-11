@@ -1,3 +1,25 @@
+////
+/// @group footer
+////
+
+/// $footer-font-size     
+$footer-font-size       : 12px !default;
+
+/// $footer-color
+$footer-color           : $white !default;
+
+/// $footer-background-color
+$footer-background-color: $primary !default;
+
+/// $footer-padding       
+$footer-padding         : 12px 24px !default;
+
+/// $footer-trans-font-size 
+$footer-trans-font-size : 14px !default;
+
+/// $footer-trans-color
+$footer-trans-color     : $black !default;
+
 .c-footer {
   @include create-row();
   @include row-justify(space-between);

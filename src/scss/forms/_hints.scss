@@ -1,6 +1,6 @@
 .c-hint {
   position: absolute;
-  transform: scale(0.8);
+  transform: scale(.8);
   transform-origin: top left;
   color: $control-hint-color;
   font-size: $control-hint-font-size;
@@ -10,7 +10,7 @@
 
   &-static,
   .c-input:focus ~ & {
-    transform: scale(0.9);
+    transform: scale(.9);
     opacity: 1;
   }
 }

@@ -1,0 +1,133 @@
+////
+/// @group modals
+////
+
+/// $modals-z-index           
+$modals-z-index            : 1050 !default;
+
+/// $modals-dialog-top-magin  
+$modals-dialog-top-magin   : 30px !default;
+
+/// $modals-padding           
+$modals-padding            : 15px !default;
+
+/// $modals-width             
+$modals-width              : 600px !default;
+
+/// $modals-border           
+$modals-border             : 1px solid rgba(0, 0, 0, 0.2) !default;
+
+/// $modals-border-radius    
+$modals-border-radius      : .3rem !default;
+
+/// $modals-header-border    
+$modals-header-border      : 1px solid #e5e5e5 !default;
+
+/// $modal-transition        
+$modal-transition          : opacity .35s linear 0s !default;
+
+@mixin ipreo-modal-mixin() {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 0 none;
+  overflow: hidden;
+  z-index: $modals-z-index;
+
+  &-fade {
+    opacity: 0;
+    transition: $modal-transition;
+
+    &.c-modal-in {
+      opacity: 1;
+    }
+  }
+
+  &-open {
+    overflow: hidden;
+
+    .c-modal {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  &-dialog {
+    margin: $modals-dialog-top-magin auto;
+    max-width: $modals-width;
+  }
+
+  &-content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: $modals-border;
+    border-radius: $modals-border-radius;
+    outline: 0 none;
+  }
+
+  &-header {
+    border-bottom: $modals-header-border;
+    padding: $modals-padding;
+
+    &::after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+
+  &-close {
+    float: right;
+    color: #000000;
+    margin-top: -2px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    transition: all 0.1s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    // button element reset
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
+
+  &-title {
+    margin: 0;
+  }
+
+  &-body {
+    position: relative;
+    padding: $modals-padding;
+  }
+
+  &-backdrop {
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $modals-z-index - 10;
+
+    &.c-modal-fade {
+      opacity: 0;
+    }
+
+    &.c-modal-fade.c-modal-in {
+      opacity: 0.5;
+    }
+  }
+}
+
+

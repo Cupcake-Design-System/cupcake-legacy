@@ -1,4 +1,65 @@
-@import "base";
-@import "nav-left";
-@import "nav-center";
-@import "nav-right";
+@import "mixins";
+
+.c-header {
+  @include header;
+
+  &-item {
+    @include header-item;
+  }
+
+  &-brand {
+    max-width: $header-logo-max-width;
+  }
+
+  &-left {
+    display: flex;
+
+    .c-header-item {
+      border-right: 1px solid $header-borders;
+    }
+  }
+
+  &-center {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &-right {
+    display: flex;
+    justify-content: flex-end;
+
+    .c-header-item {
+      border-left: 1px solid $header-borders;
+    }
+  }
+}
+
+.c-badge-notifications {
+  align-content: center;
+  display: flex;
+  font-size: 0.875rem;
+  height: 32px;
+  justify-content: center;
+  line-height: 1.5rem;
+  width: 32px;
+}
+
+.c-product-switcher {
+  color: $header-text-color;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.c-user-profile {
+  color: $header-text-color;
+  font-size: 0.75rem;
+}
+
+
+
+.c-dropdown-list-right {
+  left: auto;
+  right: 0;
+  min-width: 150px;
+}
+

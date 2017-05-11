@@ -1,0 +1,172 @@
+/* Button Base
+* ================ ================ ================ ================ */
+@mixin btn-base {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: 0;
+  line-height: $btn-line-height;
+  padding: $btn-default-padding-v $btn-default-padding-h;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: $btn-radius;
+  cursor: pointer;
+
+  @if $btn-shadow == true {
+    box-shadow: $btn-shadow-inset;
+  }
+
+  // &:hover {
+  //   background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+  // }
+
+  &:active {
+    box-shadow: $btn-shadow-active;
+  }
+}
+
+
+/* Button Style
+* ================ ================ ================ ================ */
+@mixin btn-style($bg, $border: $btn-border, $color: white) {
+  background: $bg;
+  color: $color;
+
+  @if $border == false {
+    border-color: transparent;
+  }
+
+  @else {
+    border-color: darken($bg, 5%) darken($bg, 5%) darken($bg, 4%);
+  }
+
+  @if $btn-gradient == true {
+    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  }
+
+  &:active, &-active {
+    background: $bg;
+    border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+  }
+
+   &:hover {
+    // background: lighten($bg, 2);
+    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+  } 
+}
+
+/* Button Outline
+* ================ ================ ================ ================ */
+@mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $white) {
+  border: 1px solid $border-color;
+  background-color: $bg;
+  color: $color;
+  box-shadow: none;
+
+  &.c-btn-outline-active {
+    @include btn-active($bg, $border-color);
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: $bg-hover;
+      color: $color-hover;
+      border-color: $border-color-hover;
+      z-index: 1002;
+    }
+
+    &:active,
+    &.c-btn-active {
+      @include btn-active($bg-hover, $border-color);
+
+      color: $color-hover;
+    }
+  }
+}
+
+/* Button Sizes
+* ================ ================ ================ ================ */
+@mixin btn-size($size) {
+  @if $size == sm {
+    font-size: $btn-sm-font;
+    padding: $btn-sm-padding;
+  }
+
+  @elseif $size==md {
+    font-size: $btn-md-font;
+    padding: $btn-md-padding;
+  }
+
+  @elseif $size==lg {
+    font-size: $btn-lg-font;
+    padding: $btn-lg-padding;
+  }
+
+  @elseif $size==xl {
+    font-size: $btn-xl-font;
+    padding: $btn-xl-padding;
+  }
+}
+
+/* Button Active
+* ================ ================ ================ ================ */
+@mixin btn-active($bg: $default, $border: $default) {
+  text-decoration: none;
+  background-color: desaturate($bg, 15%);
+  border-color: darken($border, 15%);
+  box-shadow: $btn-shadow-active;
+}
+
+/* Button Disabled
+* ================ ================ ================ ================ */
+@mixin btn-disabled {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    top: 0;
+    background: $btn-disabled-bg;
+    border: $btn-disabled-bd;
+    text-shadow: $btn-disabled-text-shadow;
+    color: $btn-disabled-c;
+    line-height: 1;
+    cursor: not-allowed;
+    appearance: none;
+    box-shadow: none;
+    opacity: $btn-disabled-opacity;
+  }
+}
+
+/* Button Secondary
+* ================ ================ ================ ================ */
+@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
+  border: 1px solid $bd;
+  background-color: $bg;
+  color: $color;
+
+  @if $btn-shadow == true {
+    box-shadow: 0 1px 0 0 rgba(33, 37, 41, 0.1);
+  }
+
+  @else {
+    box-shadow: none;
+  }
+
+  @if $btn-gradient == true {
+    background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+      background-color: $bg-hover;
+      z-index: 1002;
+    }
+  }
+}

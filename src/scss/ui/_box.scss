@@ -1,3 +1,20 @@
+////
+/// @group box
+////
+
+/// box-border-radius
+$box-border-radius: 2px !default;
+/// box-border-color 
+$box-border-color: $global-border-color !default;
+/// box-bg           
+$box-bg: $white !default;
+/// box-padding      
+$box-padding: 0.9375rem !default;
+/// box-text-color   
+$box-text-color: $color-gray-6 !default;
+/// box-shadow       
+$box-shadow: 1px 2px 5px #d3dae0 !default;
+
 @mixin box {
   border-radius: $box-border-radius;
   border: 1px solid $box-border-color;

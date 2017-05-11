@@ -1,0 +1,110 @@
+.c-sidebar-nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  &-item {
+    @include side-nav-list-item;
+    &-active {
+      background-color: $sidebar-active-color;
+      color: $white;
+      .c-sidebar-nav-link {
+        color: $white;
+      }
+    }
+  }
+}
+
+.c-sidebar-nav-link {
+  color: $sidebar-text;
+  font-size: 0.75rem;
+  display: block;
+  overflow: hidden;
+  padding: 5px 0 5px 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-sidebar-nav-list-item .c-sidebar-nav-link .c-sidebar-nav-icon {
+  font-size: 1rem;
+  margin-right: .5rem;
+  text-align: center;
+  width: 20px;
+}
+
+.c-sidebar-nav-list>.c-sidebar-nav-list-item:nth-child(even)>.c-sidebar-nav-link {
+  background-color: $sidebar-even-row-bg;
+}
+
+.c-sidebar-nav-list .c-sidebar-nav-list-item .c-sidebar-nav-link:hover {
+  background-color: $sidebar-row-hover;
+  color: darken($sidebar-text, 10%);
+}
+
+.c-sidebar-nav-list .c-sidebar-nav-list-item-active .c-sidebar-nav-link:hover {
+  background-color: $sidebar-active-color;
+  color: $white;
+}
+
+
+/**** second level menu items ****/
+
+.c-sidebar-nav-level-two,
+.c-sidebar-nav-level-three,
+.c-sidebar-nav-level-four,
+.c-sidebar-nav-level-five {
+  display: none;
+}
+
+.c-sidebar-nav-level-two>.c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+    left: 50px;
+  }
+  >.c-sidebar-nav-link {
+    padding-left: 70px;
+  }
+}
+
+.c-sidebar-nav-level-three>.c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+    left: 70px;
+  }
+  >.c-sidebar-nav-link {
+    padding-left: 90px;
+  }
+}
+
+.c-sidebar-nav-level-four>.c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+    left: 90px;
+  }
+  >.c-sidebar-nav-link {
+    padding-left: 110px;
+  }
+}
+
+.c-sidebar-nav-level-five>.c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+    padding-left: 110px;
+  }
+  >.c-sidebar-nav-link {
+    padding-left: 130px;
+  }
+}
+
+
+/**** left nav card placeholder ****/
+
+.c-sidebar-nav-placeholder {
+  color: lighten($sidebar-text, 20);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.c-sidebar-nav-placeholder .placeholder-icon {
+  font-size: 1.375rem;
+}
+
+.c-sidebar-nav-placeholder .placeholder-text {
+  color: lighten($sidebar-text, 20);
+  margin: 0.75rem 0 0.25rem 0;
+}

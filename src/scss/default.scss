@@ -5,7 +5,10 @@
 @import "layouts/layouts";
 @import "forms/forms";
 @import "modules/modules";
+@import "navigation/navigation";
 @import "ui/ui";
 
 @include space-class-export;
 @include flex-class-export;
+@include icon-class-export;
+@include shadow-class-export;

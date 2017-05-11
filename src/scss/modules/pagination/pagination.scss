@@ -20,6 +20,7 @@
     color: $pagination-item-color;
     border: 1px solid darken($pagination-item-bg, 4%);
     display: block;
+    min-width: 20px;
     padding: $pagination-item-padding;
     border-radius: $pagination-item-border-radius;
 
@@ -114,7 +115,7 @@
     border: 1px solid $pagination-item-current-bg;
     border-radius: $pagination-item-border-radius;
     cursor: default;
-    min-width: 35px;
+    min-width: 30px;
     text-align: center;
     font-size: $pagination-font-size-lg;
     padding: $pagination-item-padding-lg;

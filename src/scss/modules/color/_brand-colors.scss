@@ -1,0 +1,150 @@
+
+//───────────────────────────────────
+// Brand Map
+//───────────────────────────────────
+$brand-map: (
+  primary: (
+    0: $color-primary-0,
+    1: $color-primary-1,
+    2: $color-primary-2,
+    3: $color-primary-3,
+    4: $color-primary-4,
+    5: $color-primary-5,
+    6: $color-primary-6,
+    7: $color-primary-7,
+    8: $color-primary-8,
+    9: $color-primary-9
+  ),
+  success: (
+    0: $color-success-0,
+    1: $color-success-1,
+    2: $color-success-2,
+    3: $color-success-3,
+    4: $color-success-4,
+    5: $color-success-5,
+    6: $color-success-6,
+    7: $color-success-7,
+    8: $color-success-8,
+    9: $color-success-9
+  ),
+  warning: (
+    0: $color-warning-0,
+    1: $color-warning-1,
+    2: $color-warning-2,
+    3: $color-warning-3,
+    4: $color-warning-4,
+    5: $color-warning-5,
+    6: $color-warning-6,
+    7: $color-warning-7,
+    8: $color-warning-8,
+    9: $color-warning-9
+  ),
+  danger: (
+    0: $color-danger-0,
+    1: $color-danger-1,
+    2: $color-danger-2,
+    3: $color-danger-3,
+    4: $color-danger-4,
+    5: $color-danger-5,
+    6: $color-danger-6,
+    7: $color-danger-7,
+    8: $color-danger-8,
+    9: $color-danger-9
+  )
+);
+
+
+@function color($color, $tone: 5) {
+  @if map-has-key($brand-map, $color) {
+    @return map-get(map-get($brand-map, $color), $tone);
+  }
+
+  @warn "Unknown `#{name}` in $palette.";
+
+  @return null;
+}
+
+
+@each $palette, $tones in $brand-map {
+  @each $tone_name, $tone_value in $tones {
+    @if ($tone_name == 6) {
+      .c-text-#{$palette} {
+        color: $tone_value;
+      }
+
+      .c-bg-#{$palette} {
+        background-color: $tone_value;
+        color: $color-gray-0;
+      }
+
+      .c-bd-#{$palette} {
+        border: 2px solid $tone_value;
+      }
+    }
+  }
+}
+
+
+@each $palette, $tones in $brand-map {
+  @each $tone_name, $tone_value in $tones {
+    .c-text-#{$palette}-#{$tone_name} {
+      color: $tone_value;
+    }
+
+    .c-bg-#{$palette}-#{$tone_name} {
+      background-color: $tone_value;
+      color: $color-gray-0;
+    }
+
+    .c-bd-#{$palette}-#{$tone_name} {
+      border: 1px solid $tone_value;
+    }
+  }
+}
+.c-bg-none {
+  background-color: transparent;
+}
+
+$color-primary-0: color(primary, 0);
+$color-primary-1: color(primary, 1);
+$color-primary-2: color(primary, 2);
+$color-primary-3: color(primary, 3);
+$color-primary-4: color(primary, 4);
+$color-primary-5: color(primary, 5);
+$color-primary-6: color(primary, 6);
+$color-primary-7: color(primary, 7);
+$color-primary-8: color(primary, 8);
+$color-primary-9: color(primary, 9);
+
+$color-success-0: color(success, 0);
+$color-success-1: color(success, 1);
+$color-success-2: color(success, 2);
+$color-success-3: color(success, 3);
+$color-success-4: color(success, 4);
+$color-success-5: color(success, 5);
+$color-success-6: color(success, 6);
+$color-success-7: color(success, 7);
+$color-success-8: color(success, 8);
+$color-success-9: color(success, 9);
+
+$color-warning-0: color(warning, 0);
+$color-warning-1: color(warning, 1);
+$color-warning-2: color(warning, 2);
+$color-warning-3: color(warning, 3);
+$color-warning-4: color(warning, 4);
+$color-warning-5: color(warning, 5);
+$color-warning-6: color(warning, 6);
+$color-warning-7: color(warning, 7);
+$color-warning-8: color(warning, 8);
+$color-warning-9: color(warning, 9);
+
+$color-danger-0 : color(danger, 0);
+$color-danger-1 : color(danger, 1);
+$color-danger-2 : color(danger, 2);
+$color-danger-3 : color(danger, 3);
+$color-danger-4 : color(danger, 4);
+$color-danger-5 : color(danger, 5);
+$color-danger-6 : color(danger, 6);
+$color-danger-7 : color(danger, 7);
+$color-danger-8 : color(danger, 8);
+$color-danger-9 : color(danger, 9);

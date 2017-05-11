@@ -1,14 +1,60 @@
-/*
-* ==========================================================================
-* Button Base
-* ==========================================================================
-*/
+/// Buttons
+
 .c-btn {
-  @include btn-base();
+  @include btn-base;
 
   &:active,
   &-active {
     @include btn-active;
+  }
+
+  &-primary {
+    @include btn-style($btn-primary-bg);
+
+    &-outline {
+      @include btn-outline($btn-primary-bg);
+    }
+  }
+
+  &-secondary,
+  &-default {
+    @include btn-secondary($btn-secondary-bg);
+
+    &-outline {
+      @include btn-outline($color-gray-7);
+    }
+  }
+
+  &-success {
+    @include btn-style($btn-success-bg);
+
+    &-outline {
+      @include btn-outline($btn-success-bg);
+    }
+  }
+
+  &-danger {
+    @include btn-style($btn-danger-bg);
+
+    &-outline {
+      @include btn-outline($btn-danger-bg);
+    }
+  }
+}
+
+.c-btn {
+  @include btn-size(md);
+
+  &-sm {
+    @include btn-size(sm);
+  }
+
+  &-lg {
+    @include btn-size(lg);
+  }
+
+  &-xl {
+    @include btn-size(xl);
   }
 }
 
@@ -18,88 +64,7 @@
   text-align: center;
 }
 
-@each $pair in $btn-colors {
-  .c-btn-#{nth($pair, 1)} {
-    $color: nth($pair, 2);
-
-    $font-color: nth($pair, 3);
-
-    background: $color;
-    color: $font-color;
-    border-color: darken($color, 8%) darken($color, 8%) darken($color, 8%);
-    border-radius: $btn-radius;
-
-    @if $btn-gradients == true {
-      @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
-    }
-
-    @each $exclude in $btn-no-border {
-      @if nth($pair, 1) == $exclude {
-        border: 0;
-        line-height: calc(1em + 2px);
-      }
-    }
-
-    &:focus {
-      color: $font-color;
-    }
-
-    &:hover,
-    &.c-btn-hover,
-    a:hover,
-    a:focus {
-      background: lighten($color, 10%);
-      border-color: lighten($color, 5%);
-      color: $font-color;
-    }
-
-    &:active,
-    &.c-btn-active {
-      background: lighten($color, 10%);
-      border-color: darken($color, 10%);
-    }
-
-    @if $btn-active-selected {
-      &.c-btn-active {
-        color: $white;
-        border-color: transparent;
-
-        @if map-has-key($btn-colors-selected, nth($pair, 1)) {
-          background-color: map-get($btn-colors-selected, nth($pair, 1));
-        }
-      }
-    }
-  }
-}
-
-.c-btn.c-btn-disabled,
+.c-btn-disabled,
 .c-btn[disabled] {
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    top: 0;
-    background: $btn-disabled-bg;
-    border: $btn-disabled-bd;
-    text-shadow: $btn-disabled-text-shadow;
-    color: $btn-disabled-c;
-    line-height: 1;
-    cursor: not-allowed;
-    appearance: none;
-    box-shadow: none;
-    opacity: $btn-disabled-opacity;
-  }
-}
-
-// Weak override to keep default from breaking with new btn updates
-.c-btn-default:hover,
-    a:hover,
-    a:focus {
-      background: lighten($default, 5%);
-      border-color: darken($default, 3%);
-}
-
-.c-btn-default.c-btn-hover {
-        background: lighten($default, 5%);
-      border-color: darken($default, 3%);
+  @include btn-disabled;
 }

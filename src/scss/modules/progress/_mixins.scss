@@ -1,3 +1,32 @@
+////
+/// @group progress
+////
+
+/// $progress-height
+$progress-height: 1rem !default;
+
+/// $progress-background
+$progress-background: #cccccc !default;
+
+/// $progress-margin-bottom
+$progress-margin-bottom: 1rem !default;
+
+/// $progress-radius
+$progress-radius: 2px !default;
+
+/// $progress-primary
+$progress-primary: $primary;
+/// $progress-success
+$progress-success: $success;
+/// $progress-default
+$progress-default: $default;
+
+// $progress-colors
+$progress-colors:
+  ("primary", $progress-primary)
+  ("success", $progress-success)
+  ("default", $progress-default) !default;
+
 @mixin loader-stripe($color) {
   background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
   height: $progress-height;

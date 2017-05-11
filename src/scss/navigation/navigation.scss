@@ -1,11 +1,3 @@
-/** Required Files
-* These files include the variables and options - variables live in config/default/modules
-and base css styles that are required to generate navigation. */
-
-@import "config";
-@import 'mixins/base';
+@import "vertical";
 @import "header/header";
-@import "level-2/level-2";
-@import "vertical/vertical";
-@import "base";
-@import "effects"; //<--- optional or dive in and just use the one needed
+@import "sidenav/sidenav";

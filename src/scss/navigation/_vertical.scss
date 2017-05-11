@@ -1,0 +1,82 @@
+////
+/// @group vertical-nav
+////
+
+/// $vertical-nav-width              : 120px !default;
+$vertical-nav-width              : 120px !default;
+/// $vertical-nav-padding            : 1.3em !default;
+$vertical-nav-padding            : 1.3em !default;
+/// $vertical-nav-button-size        : 6.25em !default;
+$vertical-nav-button-size        : 6.25em !default;
+/// $vertical-nav-background         : #000000 !default;
+$vertical-nav-background         : #000000 !default;
+/// $vertical-nav-link-color         : #e5e5e5 !default;
+$vertical-nav-link-color         : #e5e5e5 !default;
+/// $vertical-nav-separator-color    : #333333 !default;
+$vertical-nav-separator-color    : #333333 !default;
+/// $vertical-nav-hover-color        : #3f3f3f !default;
+$vertical-nav-hover-color        : #3f3f3f !default;
+/// $vertical-nav-active-color       : #c5c5c5 !default;
+$vertical-nav-active-color       : #c5c5c5 !default;
+/// $vertical-nav-disabled-color     : #666666 !default;
+$vertical-nav-disabled-color     : #666666 !default;
+/// $vertical-nav-active-shadow-color: #1b1b1b !default;
+$vertical-nav-active-shadow-color: #1b1b1b !default;
+
+//Vertical nav
+.c-vertical-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.c-vertical-nav-items {
+  background-color: $vertical-nav-background;
+  width: $vertical-nav-width;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .item {
+    height: $vertical-nav-button-size;
+    color: $vertical-nav-link-color;
+    padding-top: $vertical-nav-padding;
+    border-bottom: 1px solid $vertical-nav-separator-color;
+    display: block;
+    text-decoration: none;
+    transition: 0.4s all;
+
+    svg {
+      fill: $vertical-nav-link-color;
+    }
+
+    &.hover,
+    &:hover {
+      background-color: $vertical-nav-hover-color;
+    }
+
+    &.active,
+    .active:hover {
+      color: $vertical-nav-active-color;
+      background: $vertical-nav-hover-color;
+      box-shadow: inset 4px 4px 8px $vertical-nav-active-shadow-color, inset -4px -4px 8px $vertical-nav-active-shadow-color;
+
+      svg {
+        fill: $vertical-nav-active-color;
+      }
+    }
+
+    &.disabled {
+      color: $vertical-nav-disabled-color;
+      background-color: $vertical-nav-background;
+      cursor: not-allowed;
+
+      svg {
+        fill: $vertical-nav-disabled-color;
+      }
+    }
+  }
+}

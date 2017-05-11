@@ -1,0 +1,109 @@
+////
+/// @group buttons
+////
+
+
+/// $btn-font-family         
+$btn-font-family         : arial !default;
+
+/// $btn-font-size           
+$btn-font-size           : 12px !default;
+
+/// $btn-line-height         
+$btn-line-height         : 1 !default;
+
+/// $btn-default-padding-v   
+$btn-default-padding-v   : 0.7em !default;
+
+/// $btn-default-padding-h   
+$btn-default-padding-h   : 1.75em !default;
+
+/// $btn-font-weight         
+$btn-font-weight         : bold !default;
+
+/// $btn-border-width        
+$btn-border-width        : 1px !default;
+
+/// $btn-radius              
+$btn-radius              : 2px !default;
+
+/// $btn-shadow-active       
+$btn-shadow-active       : inset 0 1px 2px rgba(black, 0.52) !default;
+
+/// $btn-active-selected     
+$btn-active-selected     : false !default;
+
+/// $btn-shadow              
+$btn-shadow              : true !default;
+
+/// $btn-shadow-inset: 0 1px 
+$btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
+
+/// $btn-gradient            
+$btn-gradient            : false !default;
+
+/// $btn-border              
+$btn-border              : true !default;
+
+/// $btn-disabled-c          
+$btn-disabled-c          : $color-gray-5 !default;
+
+/// $btn-disabled-bg         
+$btn-disabled-bg         : $color-gray-1 !default;
+
+/// $btn-disabled-bd         
+$btn-disabled-bd         : 1px solid $color-gray-3 !default;
+
+/// $btn-disabled-text-shadow
+$btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !default;
+
+/// $btn-disabled-opacity    
+$btn-disabled-opacity    : 0.8 !default;
+
+/// $btn-primary-bg          
+$btn-primary-bg          : $primary !default;
+
+/// $btn-secondary-bg        
+$btn-secondary-bg        : $color-gray-1 !default;
+
+/// $btn-secondary-bg-hover  
+$btn-secondary-bg-hover  : $color-gray-0 !default;
+
+/// $btn-secondary-c         
+$btn-secondary-c         : $color-gray-7 !default;
+
+/// $btn-secondary-bd        
+$btn-secondary-bd        : $color-gray-4 !default;
+
+/// $btn-success-bg          
+$btn-success-bg          : $success !default;
+
+/// $btn-warning-bg          
+$btn-warning-bg          : $warning !default;
+
+/// $btn-danger-bg           
+$btn-danger-bg           : $danger !default;
+
+/// $btn-sm-font             
+$btn-sm-font             : 11px !default;
+
+/// $btn-sm-padding          
+$btn-sm-padding          : 4px 27px !default;
+
+/// $btn-md-font             
+$btn-md-font             : 12px !default;
+
+/// $btn-md-padding          
+$btn-md-padding          : 8px 20px !default;
+
+/// $btn-lg-font             
+$btn-lg-font             : 14px !default;
+
+/// $btn-lg-padding          
+$btn-lg-padding          : 17px 78px !default;
+
+/// $btn-xl-font             
+$btn-xl-font             : 1.75em !default;
+
+/// $btn-xl-padding          
+$btn-xl-padding          : 25px 98px !default;

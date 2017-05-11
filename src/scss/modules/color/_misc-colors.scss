@@ -1,0 +1,241 @@
+//───────────────────────────────────
+// Misc Map
+
+$misc-map: (
+  pink: (
+    0: $color-pink-0,
+    1: $color-pink-1,
+    2: $color-pink-2,
+    3: $color-pink-3,
+    4: $color-pink-4,
+    5: $color-pink-5,
+    6: $color-pink-6,
+    7: $color-pink-7,
+    8: $color-pink-8,
+    9: $color-pink-9
+  ),
+  orange: (
+    0: $color-orange-0,
+    1: $color-orange-1,
+    2: $color-orange-2,
+    3: $color-orange-3,
+    4: $color-orange-4,
+    5: $color-orange-5,
+    6: $color-orange-6,
+    7: $color-orange-7,
+    8: $color-orange-8,
+    9: $color-orange-9
+  ),
+  lime: (
+    0: $color-lime-0,
+    1: $color-lime-1,
+    2: $color-lime-2,
+    3: $color-lime-3,
+    4: $color-lime-4,
+    5: $color-lime-5,
+    6: $color-lime-6,
+    7: $color-lime-7,
+    8: $color-lime-8,
+    9: $color-lime-9
+  ),
+  cyan: (
+    0: $color-cyan-0,
+    1: $color-cyan-1,
+    2: $color-cyan-2,
+    3: $color-cyan-3,
+    4: $color-cyan-4,
+    5: $color-cyan-5,
+    6: $color-cyan-6,
+    7: $color-cyan-7,
+    8: $color-cyan-8,
+    9: $color-cyan-9
+  ),
+  indigo: (
+    0: $color-indigo-0,
+    1: $color-indigo-1,
+    2: $color-indigo-2,
+    3: $color-indigo-3,
+    4: $color-indigo-4,
+    5: $color-indigo-5,
+    6: $color-indigo-6,
+    7: $color-indigo-7,
+    8: $color-indigo-8,
+    9: $color-indigo-9
+  ),
+  violet: (
+    0: $color-violet-0,
+    1: $color-violet-1,
+    2: $color-violet-2,
+    3: $color-violet-3,
+    4: $color-violet-4,
+    5: $color-violet-5,
+    6: $color-violet-6,
+    7: $color-violet-7,
+    8: $color-violet-8,
+    9: $color-violet-9
+  ),
+  grape: (
+    0: $color-grape-0,
+    1: $color-grape-1,
+    2: $color-grape-2,
+    3: $color-grape-3,
+    4: $color-grape-4,
+    5: $color-grape-5,
+    6: $color-grape-6,
+    7: $color-grape-7,
+    8: $color-grape-8,
+    9: $color-grape-9
+  ),
+  teal: (
+    0: $color-teal-0,
+    1: $color-teal-1,
+    2: $color-teal-2,
+    3: $color-teal-3,
+    4: $color-teal-4,
+    5: $color-teal-5,
+    6: $color-teal-6,
+    7: $color-teal-7,
+    8: $color-teal-8,
+    9: $color-teal-9
+  )
+);
+
+
+/// example: color: misc(grape, 6);
+@function misc($color, $tone: 5) {
+  @if map-has-key($misc-map, $color) {
+    @return map-get(map-get($misc-map, $color), $tone);
+  }
+
+  @warn "Unknown `#{name}` in $misc-map.";
+
+  @return null;
+}
+
+
+@each $palette, $tones in $misc-map {
+  @each $tone_name, $tone_value in $tones {
+    @if ($tone_name == 6) {
+      .c-text-#{$palette} {
+        color: $tone_value;
+      }
+
+      .c-bg-#{$palette} {
+        background-color: $tone_value;
+        color: $color-gray-0;
+      }
+
+      .c-bd-#{$palette} {
+        border: 2px solid $tone_value;
+      }
+    }
+  }
+}
+
+
+@each $palette, $tones in $misc-map {
+  @each $tone_name, $tone_value in $tones {
+    .c-text-#{$palette}-#{$tone_name} {
+      color: $tone_value;
+    }
+
+    .c-bg-#{$palette}-#{$tone_name} {
+      background-color: $tone_value;
+      color: $color-gray-0;
+    }
+
+    .c-bd-#{$palette}-#{$tone_name} {
+      border: 1px solid $tone_value;
+    }
+  }
+}
+
+
+$color-pink-0   : misc(pink, 0);
+$color-pink-1   : misc(pink, 1);
+$color-pink-2   : misc(pink, 2);
+$color-pink-3   : misc(pink, 3);
+$color-pink-4   : misc(pink, 4);
+$color-pink-5   : misc(pink, 5);
+$color-pink-6   : misc(pink, 6);
+$color-pink-7   : misc(pink, 7);
+$color-pink-8   : misc(pink, 8);
+$color-pink-9   : misc(pink, 9);
+
+$color-orange-0 : misc(orange, 0);
+$color-orange-1 : misc(orange, 1);
+$color-orange-2 : misc(orange, 2);
+$color-orange-3 : misc(orange, 3);
+$color-orange-4 : misc(orange, 4);
+$color-orange-5 : misc(orange, 5);
+$color-orange-6 : misc(orange, 6);
+$color-orange-7 : misc(orange, 7);
+$color-orange-8 : misc(orange, 8);
+$color-orange-9 : misc(orange, 9);
+
+$color-lime-0   : misc(lime, 0);
+$color-lime-1   : misc(lime, 1);
+$color-lime-2   : misc(lime, 2);
+$color-lime-3   : misc(lime, 3);
+$color-lime-4   : misc(lime, 4);
+$color-lime-5   : misc(lime, 5);
+$color-lime-6   : misc(lime, 6);
+$color-lime-7   : misc(lime, 7);
+$color-lime-8   : misc(lime, 8);
+$color-lime-9   : misc(lime, 9);
+
+$color-cyan-0   : misc(cyan, 0);
+$color-cyan-1   : misc(cyan, 1);
+$color-cyan-2   : misc(cyan, 2);
+$color-cyan-3   : misc(cyan, 3);
+$color-cyan-4   : misc(cyan, 4);
+$color-cyan-5   : misc(cyan, 5);
+$color-cyan-6   : misc(cyan, 6);
+$color-cyan-7   : misc(cyan, 7);
+$color-cyan-8   : misc(cyan, 8);
+$color-cyan-9   : misc(cyan, 9);
+
+$color-indigo-0 : misc(indigo, 0);
+$color-indigo-1 : misc(indigo, 1);
+$color-indigo-2 : misc(indigo, 2);
+$color-indigo-3 : misc(indigo, 3);
+$color-indigo-4 : misc(indigo, 4);
+$color-indigo-5 : misc(indigo, 5);
+$color-indigo-6 : misc(indigo, 6);
+$color-indigo-7 : misc(indigo, 7);
+$color-indigo-8 : misc(indigo, 8);
+$color-indigo-9 : misc(indigo, 9);
+
+$color-grape-0  : misc(grape, 0);
+$color-grape-1  : misc(grape, 1);
+$color-grape-2  : misc(grape, 2);
+$color-grape-3  : misc(grape, 3);
+$color-grape-4  : misc(grape, 4);
+$color-grape-5  : misc(grape, 5);
+$color-grape-6  : misc(grape, 6);
+$color-grape-7  : misc(grape, 7);
+$color-grape-8  : misc(grape, 8);
+$color-grape-9  : misc(grape, 9);
+
+$color-violet-0 : misc(violet, 0);
+$color-violet-1 : misc(violet, 1);
+$color-violet-2 : misc(violet, 2);
+$color-violet-3 : misc(violet, 3);
+$color-violet-4 : misc(violet, 4);
+$color-violet-5 : misc(violet, 5);
+$color-violet-6 : misc(violet, 6);
+$color-violet-7 : misc(violet, 7);
+$color-violet-8 : misc(violet, 8);
+$color-violet-9 : misc(violet, 9);
+
+$color-teal-0   : misc(teal, 0);
+$color-teal-1   : misc(teal, 1);
+$color-teal-2   : misc(teal, 2);
+$color-teal-3   : misc(teal, 3);
+$color-teal-4   : misc(teal, 4);
+$color-teal-5   : misc(teal, 5);
+$color-teal-6   : misc(teal, 6);
+$color-teal-7   : misc(teal, 7);
+$color-teal-8   : misc(teal, 8);
+$color-teal-9   : misc(teal, 9);
+

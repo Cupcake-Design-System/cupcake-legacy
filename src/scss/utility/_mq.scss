@@ -1,11 +1,22 @@
-@import '../config/global';
+////
+/// @group breakpoints
+////
+
+// $breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px) !default;
 
 $show-breakpoints: false;
 $bp-show-breakpoints: (xs, sm, md, lg, xl, xxl);
 $bp-media-type: all !default;
-/// Get a breakpoint's width
-///  $tablet-width: bp-get-breakpoint-width(tablet);
-///  @media (min-width: bp-get-breakpoint-width(desktop)) {}
+// Get a breakpoint's width
+//  $tablet-width: bp-get-breakpoint-width(tablet);
+//  @media (min-width: bp-get-breakpoint-width(desktop)) {}
 @function bp-get-breakpoint-width($name, $breakpoint: $breakpoints) {
   @if map-has-key($breakpoint, $name) {
     @return map-get($breakpoint, $name);
@@ -32,7 +43,7 @@ $bp-media-type: all !default;
   }
 
   // Until: that breakpoint (exclusive)
-    @if $until {
+  @if $until {
     @if type-of($until) == number {
       $max-width: $until;
     }
@@ -64,8 +75,8 @@ $bp-media-type: all !default;
   }
 }
 
-///  @include bp-show-breakpoints;
-///  @include bp-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));
+//  @include bp-show-breakpoints;
+// @include bp-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));
 @mixin bp-show-breakpoints($show-breakpoints: $bp-show-breakpoints, $breakpoint: $breakpoints) {
   body:before {
     background-color: lighten(#0082de, 60%);

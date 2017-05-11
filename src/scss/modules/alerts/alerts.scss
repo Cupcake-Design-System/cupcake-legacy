@@ -6,78 +6,26 @@
 @import 'mixins';
 
 .c-alert {
-  @include ipreo-alert;
+  @include alert-base;
 
-  &-small {
-    @include ipreo-alert-size(.25rem);
+  &-danger {
+    @include alert-style($danger);
   }
 
-  &-large {
-    @include ipreo-alert-size(3rem);
+  &-warning {
+    @include alert-style($warning);
   }
-}
 
-@each $name, $color in $alert-colors {
-  .c-alert-#{$name} {
-    @if $alert-style == outline {
-      background-color: mix($color, $white, $alert-background-mix);
-      border-color: $color;
-      color: $color;
-    }
+  &-success {
+    @include alert-style($success);
+  }
 
-    @if $alert-style == solid {
-      background-color: $color;
-      border-color: $color;
-      color: $white;
-    }
+  &-sm {
+    @include alert-size(0.25rem);
+  }
 
-    @if $alert-style == gradient {
-      @include linear-gradient(to bottom, lighten($color, 10%), $color 66%, darken($color, 4%));
-
-      border: 2px solid darken($color, 10%);
-      color: $white;
-    }
-
-    @if $alert-shadows == true {
-      box-shadow: inset 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25);
-    }
-
-    @else {
-      box-shadow: none;
-    }
-
-    @if $alert-style == outline {
-      a {
-        color: $color;
-        text-decoration: underline;
-      }
-
-      a:hover {
-        color: darken($color, 20%);
-      }
-    }
-
-    @else {
-      a {
-        color: $white;
-        text-decoration: underline;
-      }
-
-      a:hover {
-        color: $white;
-      }
-    }
-
-    @if $alert-style == outline {
-      color: $color;
-    }
-
-    @else {
-      color: $white;
-    }
-
-    &:hover {
-      opacity: 1;
-    }
+  &-lg {
+    @include alert-size(1rem);
   }
 }
+

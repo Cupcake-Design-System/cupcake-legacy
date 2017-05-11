@@ -1,3 +1,43 @@
+////
+/// @group avatars
+////
+
+/// $avatar-size
+$avatar-size          : 2.5rem !default;
+
+/// $avatar-fs 
+$avatar-fs            : 12px !default;
+
+/// $avatar-icon-margin 
+$avatar-icon-margin   : 1px !default;
+
+/// $avatar-icon-size 
+$avatar-icon-size     : 10px !default;
+
+/// $avatar-bd-size  
+$avatar-bd-size       : 1px !default;
+
+/// $avatar-primary
+$avatar-primary: $primary;
+
+/// $avatar-success
+$avatar-success: $success;
+
+/// $avatar-danger
+$avatar-danger: $danger;
+
+/// $avatar-warning
+$avatar-warning: $warning;
+
+
+// $avatar-colors
+$avatar-colors:
+  ("primary", $avatar-primary)
+  ("success", $avatar-success)
+  ("danger", $avatar-danger)
+  ("warning", $avatar-warning) !default;
+
+
 @mixin avatar {
   position: relative;
   display: inline-block;
@@ -10,8 +50,8 @@
   white-space: nowrap;
   font-weight: bold;
   font-size: $avatar-fs;
-  margin: 0;
   vertical-align: middle;
+  margin: 0;
 
   &[data-text]::after {
     content: attr(data-text);
@@ -26,6 +66,7 @@
 
   .fa {
     font-size: $avatar-fs;
+    line-height: 2.5;
   }
 
   i {

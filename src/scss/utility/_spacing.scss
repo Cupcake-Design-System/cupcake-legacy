@@ -1,4 +1,32 @@
-@import '../config/global';
+////
+/// @group spacing
+////
+
+@import "../config/tokens";
+
+/// $space-none
+$space-none: $spacing-none !default;
+
+/// $space-xs
+$space-xs: $spacing-xs !default;
+
+/// $space-sm
+$space-sm: $spacing-sm !default;
+
+/// $space-md
+$space-md: $spacing-md !default;
+
+/// $space-lg
+$space-lg: $spacing-lg !default;
+
+/// $space-xl
+$space-xl: $spacing-xl !default;
+
+/// $space-xxl
+$space-xxl: $spacing-xxl !default;
+
+/// $space-xxxl
+$space-xxxl: $spacing-xxxl !default;
 
 $space-values : (
   0   : $space-none,

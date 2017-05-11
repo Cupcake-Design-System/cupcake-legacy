@@ -1,4 +1,4 @@
-/// Creates a CSS triangle, which can be used for dropdown arrows, dropdown pips, and more. Use this mixin inside a `&::before` or `&::after` selector, to attach the triangle to an existing element.
+// Creates a CSS triangle, which can be used for dropdown arrows, dropdown pips, and more. Use this mixin inside a `&::before` or `&::after` selector, to attach the triangle to an existing element.
 @mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
   content: '';
   display: block;
@@ -31,13 +31,12 @@
   }
 }
 
-/// Adds a downward-facing triangle as a background image to an element. The image is formatted as an SVG, making it easy to change the color. Because Internet Explorer doesn't support encoded SVGs as background images, a PNG fallback is also included.
-/// There are two PNG fallbacks: a black triangle and a white triangle. The one used depends on the lightness of the input color.
-///
-/// @param {Color} $color [$black] - Color to use for the triangle.
+// Adds a downward-facing triangle as a background image to an element. The image is formatted as an SVG, making it easy to change the color. Because Internet Explorer doesn't support encoded SVGs as background images, a PNG fallback is also included.
+// There are two PNG fallbacks: a black triangle and a white triangle. The one used depends on the lightness of the input color.
+//
+// @param {Color} $color [$black] - Color to use for the triangle.
 @mixin background-triangle($color: $black) {
   $rgb: 'rgb%28#{red($color)}, #{green($color)}, #{blue($color)}%29';
-
   background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0, 0 32, 0 16, 24' style='fill: #{$rgb}'></polygon></svg>");
 
   @media screen and (min-width: 0\0) {
@@ -53,10 +52,10 @@
   }
 }
 
-/// Applies the micro clearfix hack popularized by Nicolas Gallagher. Include this mixin on a container if its children are all floated, to give the container a proper height.
-/// The clearfix is augmented with specific styles to prevent borders in flexbox environments
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
-/// @link http://danisadesigner.com/blog/flexbox-clear-fix-pseudo-elements/ Flexbox fix
+// Applies the micro clearfix hack popularized by Nicolas Gallagher. Include this mixin on a container if its children are all floated, to give the container a proper height.
+// The clearfix is augmented with specific styles to prevent borders in flexbox environments
+// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
+// @link http://danisadesigner.com/blog/flexbox-clear-fix-pseudo-elements/ Flexbox fix
 @mixin clearfix {
   &::before,
   &::after {
@@ -74,8 +73,8 @@
   }
 }
 
-/// Adds CSS for a "quantity query" selector that automatically sizes elements based on how many there are inside a container.
-/// @link http://alistapart.com/article/quantity-queries-for-css Quantity Queries for CSS
+// Adds CSS for a "quantity query" selector that automatically sizes elements based on how many there are inside a container.
+// @link http://alistapart.com/article/quantity-queries-for-css Quantity Queries for CSS
 @mixin auto-width($max, $elem: li) {
   @for $i from 2 through $max {
     &:nth-last-child(#{$i}):first-child,
@@ -85,15 +84,15 @@
   }
 }
 
-/// Removes the focus ring around an element when a mouse input is detected.
+// Removes the focus ring around an element when a mouse input is detected.
 @mixin disable-mouse-outline {
   [data-whatinput='mouse'] & {
     outline: 0;
   }
 }
 
-/// Makes an element visually hidden, but still accessible to keyboards and assistive devices.
-/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility Hiding Content for Accessibility
+// Makes an element visually hidden, but still accessible to keyboards and assistive devices.
+// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility Hiding Content for Accessibility
 @mixin element-invisible {
   position: absolute !important;
   width: 1px;
@@ -102,7 +101,7 @@
   clip: rect(0, 0, 0, 0);
 }
 
-/// Reverses the CSS output created by the `element-invisible()` mixin.
+// Reverses the CSS output created by the `element-invisible()` mixin.
 @mixin element-invisible-off {
   position: static !important;
   height: auto;
@@ -111,24 +110,24 @@
   clip: auto;
 }
 
-/// Vertically centers the element inside of its first non-static parent,
-/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+// Vertically centers the element inside of its first non-static parent,
+// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
 @mixin vertical-center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/// Horizontally centers the element inside of its first non-static parent,
-/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+// Horizontally centers the element inside of its first non-static parent,
+// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
 @mixin horizontal-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/// Absolutely centers the element inside of its first non-static parent,
-/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+// Absolutely centers the element inside of its first non-static parent,
+// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
 @mixin absolute-center {
   position: absolute;
   top: 50%;
@@ -156,35 +155,31 @@
   }
 }
 
-
-
 @mixin hover {
-  &:hover { @content }
- }
-
+  &:hover {
+    @content;
+  }
+}
 
 @mixin hover-focus {
-    &:focus,
-    &:hover {
-      @content
-    }
+  &:focus,
+  &:hover {
+    @content;
   }
-
+}
 
 @mixin plain-hover-focus {
-
-    &,
-    &:focus,
-    &:hover {
-      @content
-    }
+  &,
+  &:focus,
+  &:hover {
+    @content;
   }
-
+}
 
 @mixin hover-focus-active {
-    &:focus,
-    &:active,
-    &:hover {
-      @content
-    }
+  &:focus,
+  &:active,
+  &:hover {
+    @content;
   }
+}

@@ -1,21 +1,61 @@
 @import "mixins";
 
-// Base typography styles (tags only)
 
 .c-body-text,
 .c-p {
-  font-size: $body-font-size;
-  color: $body-font-color;
-  line-height: $body-lineheight;
-  margin: 0;
-  padding: 0;  
-  margin-bottom: $body-margin-bottom;
-  text-rendering: $body-text-rendering;
+  @include font-body;
 
-  &-lead {
-    font-size: $body-font-size-lg;
+  margin: 0;
+  padding: 0;
+
+  &-xl {
+    @include font-body-xl;
+  }
+
+  &-lg {
+    @include font-body-lg;
+  }
+
+  &-md {
+    @include font-body-md;
+  }
+
+  &-sm {
+    @include font-body-sm;
+  }
+
+  &-xs {
+    @include font-body-xs;
   }
 }
+
+.c-header {
+  &-xxl {
+    @include font-header-xxl;
+  }
+
+  &-xl {
+    @include font-header-xl;
+  }
+
+  &-lg {
+    @include font-header-lg;
+  }
+
+  &-md {
+    @include font-header-md;
+  }
+
+  &-sm {
+    @include font-header-sm;
+  }
+
+  &-xs {
+    @include font-header-xs;
+  }
+}
+
+
 
 // Emphasized text
 .c-text-em,
@@ -34,7 +74,7 @@
 .c-a,
 .c-link {
   color: $anchor-color;
-  text-decoration: $anchor-text-decoration;
+  text-decoration: none;
   line-height: inherit;
   cursor: pointer;
 
@@ -42,19 +82,12 @@
   &:hover {
     text-decoration: none;
     color: $anchor-color-hover;
-
-    @if $anchor-text-decoration-hover != $anchor-text-decoration {
-      text-decoration: $anchor-text-decoration-hover;
-    }
   }
 
   &-active,
   &:active {
     color: $anchor-color-active;
-
-    @if $anchor-text-decoration-active != $anchor-text-decoration {
-      text-decoration: $anchor-text-decoration-active;
-    }
+    text-decoration: none;
   }
 
   &-disabled,
@@ -67,7 +100,7 @@
     &:active,
     &:visited {
       color: $anchor-color-disabled;
-      text-decoration: $anchor-text-decoration-disabled;
+      text-decoration: none;
       cursor: not-allowed;
     }
   }
@@ -90,106 +123,6 @@
 }
 
 
-ul.c-ul,
-ol.c-ol,
-dl.c-dl {
-  line-height: $list-lineheight;
-  margin: 0 0 $list-margin-bottom;
-  padding: 0;
-  list-style-position: $list-style-position;
-  font-size: $list-font-size;
-  color: $list-color;
-
-  li ul {
-    margin-bottom: 0;
-  }
-}
-
-ol.c-ol li {
-  margin-left: $list-side-margin;
-}
-
-ul.c-ul {
-  li {
-    list-style-type: $list-style-type;
-    margin-left: $list-side-margin;
-
-    & & {
-      margin-left: $list-nested-side-margin;
-      margin-bottom: 0;
-    }
-  }
-}
-
-// List items
-.c-li {
-  font-size: inherit;
-}
-
-// Unordered lists
-// Ordered lists
-.c-ol {
-  margin-left: $list-side-margin;
-
-  // Nested lists
-  & & {
-    margin-left: $list-nested-side-margin;
-    margin-bottom: 0;
-  }
-}
-
-// Definition lists
-.c-dl {
-  margin-bottom: $defnlist-margin-bottom;
-
-  .c-dt {
-    margin-bottom: $defnlist-term-margin-bottom;
-    font-weight: $defnlist-term-weight;
-  }
-}
-
-ul.c-ul-unstyled,
-ol.c-ol-unstyled,
-dl.c-dl-unstyled {
-  &,
-  & li,
-  & dt,
-  & dd {
-    margin-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-}
-
-
-// Blockquotes
-.c-blockquote {
-  font-size: $blockquote-font-size;
-  margin: 0 0 $body-margin-bottom;
-  padding: $blockquote-padding;
-  border-left: $blockquote-border;
-}
-
-// Citations
-.c-cite {
-  display: block;
-  font-size: $cite-font-size;
-  color: $cite-color;
-  font-weight: bold;
-  font-style: normal;
-
-  &::before {
-    content: '\2014 \0020';
-  }
-}
-
-// Helpers
-// Use to remove the bullets from an unordered list
-.c-no-bullet {
-  margin-left: 0;
-  list-style: none;
-}
-
 // Emphasized text
 .c-text-em,
 .c-text-italic {
@@ -200,13 +133,13 @@ dl.c-dl-unstyled {
 // Strong text
 .c-text-strong,
 .c-text-bold {
-  font-weight: $global-weight-bold;
+  font-weight: bold;
   line-height: inherit;
 }
 
 // Small text
 .c-text-small {
-  font-size: $small-font-size;
+  font-size: 80%;
   line-height: inherit;
 }
 

@@ -13,8 +13,8 @@
     document.write('<link media="all" rel="stylesheet" href="' + flavor + '.css">');
   </script>
   <style>
-    .c-container {
-      max-width: 1120px;
+    main {
+      max-width: 1400px!important;
     }
     
 
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <main class="c-container">
+  <main>
     <header class="c-m-top-xl">
       <h1 class="c-header-xl c-text-primary c-text-strong">
         <script>
@@ -39,14 +39,13 @@
     <section id="buttons">
       <h2 class="c-header-lg c-text-strong c-text-primary c-m-bottom-lg">Buttons</h2>
 
-
       <div class="c-row">
         <div class="c-col">
           <h3 class="c-header-md">Primary Buttons</h3>
           <button class="c-btn c-btn-primary c-m-right-md">Default</button>
           <button class="c-btn c-btn-primary c-btn-hover c-m-right-md">Hover</button>
           <button class="c-btn c-btn-primary c-m-right-md" disabled>Disabled</button>
-          <button class="c-btn c-btn-primary">Active</button>
+          <button class="c-btn c-btn-primary c-btn-active">Active</button>
         </div>
         <div class="c-col c-col-sm-offset-1">
           <h3 class="c-header-md">Sizes</h3>

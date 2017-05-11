@@ -1,24 +1,4 @@
-/*
-* Required Files
-*
-* These files include the variables and options
-* and base css styles that are required to generate buttons.
-*/
-
-@import 'types/mixins';
-@import 'base';
-
-/*
-* Button Types
-*
-* All of the files below represent the various button
-* types (including shapes & sizes). None of these files
-* are required. Simple remove the uneeded type below and
-* the button type will be excluded from the final build
-*/
-
-@import 'types/shapes';
-@import 'types/groups';
-@import 'types/outline';
-@import 'types/stepper';
-@import 'types/dropdowns';
+@import "variables";
+@import 'mixins';
+@import "base";
+@import "shapes";

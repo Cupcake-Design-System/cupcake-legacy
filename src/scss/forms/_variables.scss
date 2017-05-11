@@ -1,0 +1,138 @@
+////
+/// @group form inputs
+////
+
+/// $control-font-size 
+$control-font-size              : 16px !default;
+/// $control-font-weight
+$control-font-weight            : normal !default;
+/// $control-line-height
+$control-line-height            : normal !default;
+/// $control-placeholder-c
+$control-placeholder-c          : $color-gray-5 !default;
+/// $control-placeholder-hover-c
+$control-placeholder-hover-c    : $control-placeholder-c !default;
+/// $control-background 
+$control-background             : $white !default;
+/// $control-padding-v
+$control-padding-v              : 0.5em !default;
+/// $control-padding-h 
+$control-padding-h              : 0.5em !default;
+/// $control-border 
+$control-border                 : $global-border-color !default;
+/// $control-border-width 
+$control-border-width           : 1px !default;
+/// $control-border-radius 
+$control-border-radius          : $global-radius !default;
+/// $control-border-radius-rounded 
+$control-border-radius-rounded  : 30em !default;
+/// $control-shadow 
+$control-shadow                 : none !default;
+/// $control-transition 
+$control-transition             : border-color 0.1s ease-in !default;
+/// $control-hover  
+$control-hover                  : $primary !default;
+/// $control-hover-border
+$control-hover-border           : $primary !default;
+/// $control-active  
+$control-active                 : $primary !default;
+/// //$control-active-background 
+//$control-active-background      : $primary !default;
+/// $control-active-border  
+$control-active-border          : #0079bd !default;
+/// $control-disabled-border 
+$control-disabled-border        : #e6e6e6 !default;
+/// $control-disabled-background
+$control-disabled-background    : $disabled !default;
+/// $control-hint-color 
+$control-hint-color             : #8d8d97 !default;
+/// $control-hint-font-size 
+$control-hint-font-size         : 85% !default;
+/// $control-hint-transition 
+$control-hint-transition        : all 0.2s ease !default;
+/// $control-label-padding  
+$control-label-padding          : $control-padding-v 0 !default;
+/// $control-addon-background 
+$control-addon-background       : #eeeeee !default;
+/// $control-element-padding 
+$control-element-padding        : 1em 0 !default;
+/// $control-element-label-padding 
+$control-element-label-padding  : 0 0 $control-padding-v 0 !default;
+/// $control-select-padding-r   
+$control-select-padding-r       : 1em !default;
+// $control-select-background-img  
+$control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+/// $control-select-background-pos  
+$control-select-background-pos  : 99% 50% !default;
+/// $control-results-border         
+$control-results-border         : 1px solid rgb(204, 204, 204) !default;
+/// $control-results-shadow         
+$control-results-shadow         : 2px 5px 4px rgba(0, 0, 0, .05) !default;
+/// $fieldset-padding              
+$fieldset-padding               : 0 !default;
+/// $fieldset-margin                
+$fieldset-margin                : $control-padding-v 0 !default;
+/// $fieldset-width                 
+$fieldset-width                 : 100% !default;
+/// $fieldset-border                
+$fieldset-border                : 0 !default;
+/// $fieldset-legend-padding        
+$fieldset-legend-padding        : 0.3em 0 !default;
+/// $control-xs
+$control-xs: 0.67em !default;
+/// $control-sm
+$control-sm: 0.83em !default;
+/// $control-lg
+$control-lg: 1.17em !default;
+/// $control-xl
+$control-xl: 1.5em !default;
+/// $control-xxl
+$control-xxl: 2em !default;
+/// $control-xs
+$control-xs-padding: 0.125em 0.416em !default;
+/// $control-sm
+$control-sm-padding: 0.27em 0.5em !default;
+/// $control-lg
+$control-lg-padding: 0.467em 0.6em !default;
+/// $control-xl
+$control-xl-padding: 0.563em 0.75em !default;
+
+
+// FORM SIZES
+// This map is used to generate form input sizes. 
+// Arguments (name, font-size). Sizes tied to font-size.
+// The class is generated using the name: (ex .c-input-sm).
+// $control-sizes:
+$control-sizes:
+  ("xs", $control-xs)
+  ("sm", $control-sm)
+  ("lg", $control-lg)
+  ("xl", $control-xl)
+  ("xxl", $control-xxl) !default;
+
+// Input sizes with custom padding
+// For adjusting padding sizes
+// Add a input size and padding, ex: (lg: ".5em .6em")
+// $control-sizes-padding:
+$control-sizes-padding: (
+  xl: $control-xl-padding,
+  lg: $control-lg-padding,
+  sm: $control-sm-padding,
+  xs: $control-xs-padding,
+) !default;
+
+// FORM COLORS
+// This map is used to generate form validation colors.
+// Arguments (name, color, background).
+// The class is generated using the name: (ex .c-input-success).
+// $control-colors
+$control-colors:
+  ("success", $success, false)
+  ("warning", $warning, false)
+  ("error", $danger, false) !default;
+
+// Connect ng-validation states with form validation colors ($control-colors)
+// $control-ng-validation
+$control-ng-validation:
+  ("ng-valid", "success")
+  ("ng-invalid", "error") !default;

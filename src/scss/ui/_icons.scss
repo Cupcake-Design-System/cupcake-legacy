@@ -1,13 +1,13 @@
 $icon-sizes: (
-  xs: 10px,
-  sm: 12px,
-  md: 14px,
-  lg: 16px,
-  xl: 18px
+  xs: $sizing-icon-xs,
+  sm: $sizing-icon-sm,
+  md: $sizing-icon-md,
+  lg: $sizing-icon-lg,
+  xl: $sizing-icon-xl
 ) !default;
 
 .c-icon {
-  font-size: 14px;
+  font-size: $sizing-icon-md;
 }
 
 @mixin icon-class-export {
@@ -17,5 +17,4 @@ $icon-sizes: (
     }
   }
 }
-
 

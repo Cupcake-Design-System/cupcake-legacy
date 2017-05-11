@@ -1,3 +1,65 @@
+////
+/// @group pagination
+////
+
+/// $pagination-margin-bottom        
+$pagination-margin-bottom        : $spacing-global-margin !default;
+
+/// $pagination-gradients            
+$pagination-gradients            : true !default;
+
+/// $pagination-item-spacing        
+$pagination-item-spacing         : 4px !default;
+
+/// $pagination-font-size            
+$pagination-font-size            : 12px !default;
+
+/// $pagination-font-size-sm         
+$pagination-font-size-sm         : 12px !default;
+
+/// $pagination-font-size-lg         
+$pagination-font-size-lg         : 14px !default;
+
+/// $pagination-item-padding        
+$pagination-item-padding         : 3px 5px !default;
+
+/// $pagination-item-padding-sm      
+$pagination-item-padding-sm      : 1px 5px !default;
+
+/// $pagination-item-padding-lg  
+$pagination-item-padding-lg      : 5px !default;
+
+/// $pagination-item-current-padding 
+$pagination-item-current-padding : 3px 10px !default;
+
+/// $pagination-item-border-radius   
+$pagination-item-border-radius   : 3px !default;
+
+/// $pagination-item-color         
+$pagination-item-color           : #0a0a0a !default;
+
+/// $pagination-item-bg           
+$pagination-item-bg              : #eeeeee !default;
+
+/// $pagination-item-current-bg     
+$pagination-item-current-bg      : $primary !default;
+
+/// $pagination-item-current-color
+$pagination-item-current-color   : $white !default;
+
+/// $pagination-item-color-disabled
+$pagination-item-color-disabled  : #d8d8d8 !default;
+
+/// $pagination-item-color-sm    
+$pagination-item-color-sm        : #0a0a0a !default;
+
+/// $pagination-item-color-hover-sm  
+$pagination-item-color-hover-sm  : #0082de !default;
+
+/// $pagination-item-current-color-sm:
+$pagination-item-current-color-sm: #0082de !default;
+
+
 @mixin pagination-container {
   display: flex;
   list-style: none;

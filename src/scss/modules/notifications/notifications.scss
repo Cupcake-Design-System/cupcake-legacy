@@ -1,9 +1,22 @@
-/*
-* Required Files
-*
-* These files include the variables and options
-* and base css styles that are required for notifications.
-*/
+////
+/// @group notifications
+////
+
+/// $notify-z-index       
+$notify-z-index       : 99999 !default;
+
+/// $notify-min-width     
+$notify-min-width     : 390px !default;
+
+/// $notify-width         
+$notify-width         : 25vw !default;
+
+/// $notify-screen-spacing
+$notify-screen-spacing: 16px !default;
+
+/// $notify-transition 
+$notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+
 
 @mixin ipreo-notify-logs-slide($direction) {
   $sign: '';

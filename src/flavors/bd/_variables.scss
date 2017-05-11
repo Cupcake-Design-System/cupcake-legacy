@@ -1,0 +1,470 @@
+//  Cupcake BD Settings
+//  -------------------
+//
+//  Table of Contents:
+//
+//   1. Global Non-Tokens
+//   2. Alerts
+//   3. Avatars
+//   4. Badges
+//   5. Box
+//   6. Buttons
+//   7. Cards
+//   8. Checkboxes
+//   9. Dropdown
+//  10. File Upload
+//  11. Footer
+//  12. Form Inputs
+//  13. List Groups
+//  14. Lists
+//  15. Modals
+//  16. Notifications
+//  17. Pagination
+//  18. Progress
+//  19. Shadows
+//  20. Spacing
+//  21. Switches
+//  22. Tables
+//  23. Tabs
+//  24. Vertical Nav
+
+
+// 1. Global Non-Tokens
+// --------------------
+
+$primary: #0079bd;
+$success: $color-success-7;
+$warning: $color-warning-7;
+$danger: $color-danger-7;
+$default: $color-gray-1;
+$secondary: $color-gray-1;
+$disabled: $color-gray-3;
+$black: #0a0a0a;
+$white: #fefefe;
+$global-radius: $radius-md;
+$global-border-color: $color-gray-4;
+$global-text-color: $font-body-color;
+$global-font-size: $font-body-font-size;
+$global-font-family: $font-body-font-family;
+
+// 2. Alerts
+// ---------
+
+$alert-bg-lighten-percentage: 50;
+$alert-background-mix: 4%;
+$alert-border: 1px solid;
+$alert-margin: 0 0 1rem 0;
+$alert-padding: 6px;
+$alert-font-size: 14px;
+$alert-font-family: $global-font-family;
+$alert-font-weight: bold;
+$alert-font-color: $secondary;
+$alert-radius: 4px;
+$alert-shadows: false;
+$alert-style: 'outline';
+$alert-icon-width: 40px;
+
+// 3. Avatars
+// ----------
+
+$avatar-size: 2.5rem;
+$avatar-fs: 12px;
+$avatar-icon-margin: 1px;
+$avatar-icon-size: 10px;
+$avatar-bd-size: 1px;
+$avatar-primary: $primary;
+$avatar-success: $success;
+$avatar-danger: $danger;
+$avatar-warning: $warning;
+
+// 4. Badges
+// ---------
+
+$badge-padding: 0.25em 0.5em;
+$badge-border-width: 1px;
+$badge-border-style: solid;
+$badge-border-radius: 3px;
+$badge-border-radius-rounded: 30em;
+$badge-font-size: 1rem;
+$badge-font-weight: bold;
+$badge-line-height: 1.2;
+$badge-xs: 0.5rem;
+$badge-sm: 0.7rem;
+$badge-lg: 1.25rem;
+$badge-xl: 1.5rem;
+$badge-primary: $primary;
+$badge-success: $success;
+$badge-danger: $danger;
+$badge-warning: $warning;
+
+// 5. Box
+// ------
+
+$box-border-radius: 2px;
+$box-border-color: $global-border-color;
+$box-bg: $white;
+$box-padding: 0.9375rem;
+$box-text-color: $color-gray-6;
+$box-shadow: 1px 2px 5px #d3dae0;
+
+// 6. Buttons
+// ----------
+
+$btn-font-family: arial;
+$btn-font-size: 14px;
+$btn-line-height: 1;
+$btn-default-padding-v    : 0.5em;
+$btn-default-padding-h    : 1.25em;
+$btn-font-weight: bold;
+$btn-border-width: 1px;
+$btn-radius: 3px;
+$btn-shadow-active: inset 0 1px 2px rgba(black, 0.52);
+$btn-active-selected: false;
+$btn-shadow: false;
+$btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25);
+$btn-gradient: true;
+$btn-border: false;
+$btn-disabled-c: $color-gray-5;
+$btn-disabled-bg: $color-gray-1;
+$btn-disabled-bd: 1px solid $color-gray-3;
+$btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+$btn-disabled-opacity: 0.8;
+$btn-primary-bg: $primary;
+$btn-secondary-bg: $color-gray-1;
+$btn-secondary-bg-hover: $color-gray-0;
+$btn-secondary-c: $color-gray-7;
+$btn-secondary-bd: $color-gray-4;
+$btn-success-bg: $success;
+$btn-warning-bg: $warning;
+$btn-danger-bg: $danger;
+$btn-sm-font: 11px;
+$btn-sm-padding: 4px 27px;
+$btn-md-font: 12px;
+$btn-md-padding: 8px 20px;
+$btn-lg-font: 14px;
+$btn-lg-padding: 17px 78px;
+$btn-xl-font: 1.75em;
+$btn-xl-padding: 25px 98px;
+
+
+// 7. Cards
+// --------
+
+$card-header-font-size: 14px;
+$card-header-font-weight: bold;
+$card-body-font-size: 12px;
+$card-title-font-size: 18px;
+$card-subtitle-font-size: 16px;
+$card-text-color: $global-text-color;
+$card-header-icon-color: $secondary;
+$card-header-icon-hover-color: lighten($secondary, 10%);
+$card-header-text-color: $global-text-color;
+$card-border-color: $global-border-color;
+$card-border-radius: 2px;
+$card-bg: $white;
+$card-padding: 0.9375rem;
+$card-shadow: 1px 2px 5px $color-gray-2;
+$card-shadow-hover: $card-shadow;
+$card-transition: none;
+$card-header-border-bottom: 1px solid rgba(177, 177, 177, 0.15);
+$card-primary: $primary;
+$card-success: $success;
+$card-danger: $danger;
+$card-warning: $warning;
+
+// 8. Checkboxes
+// -------------
+
+$checkbox-size: 18px;
+$checkbox-size-sm: 12px;
+$checkbox-size-lg: 26px;
+$checkbox-size-xl: 32px;
+$checkbox-icon-bd: 1px solid $global-border-color;
+$checkbox-icon-radius: 2px;
+$checkbox-transition: all 0.2s;
+$checkbox-disabled: $color-gray-0;
+$checkbox-disabled-opacity: 0.5;
+
+// 9. Dropdown
+// -----------
+
+$dropdown-glued: true;
+$dropdown-list-margin: 0;
+$dropdown-list-padding: 0;
+$dropdown-padding: 1rem;
+$dropdown-border: 1px solid $global-border-color;
+$dropdown-color: $color-gray-7;
+$dropdown-color-hover: $primary;
+$dropdown-background-color: $white;
+$dropdown-background-hover: darken($default, 2%);
+$dropdown-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+$dropdown-font-size: 12px;
+$dropdown-font-weight: bold;
+$dropdown-width: 100%;
+$dropdown-radius: $global-radius;
+$dropdown-divider-margin: 0;
+
+// 10. File Upload
+// ---------------
+
+$file-upload-padding: 0.5rem 1rem;
+$file-upload-margin: 0.5rem;
+$file-upload-color: $color-gray-6;
+$file-upload-bg: #f5fafd;
+$file-upload-bd: 2px dashed $global-border-color;
+$file-upload-bd-radius: 6px;
+$file-upload-fs: 0.8rem;
+$file-upload-fa-fs: 1.25rem;
+
+// 11. Footer
+// ----------
+
+$footer-font-size: 12px;
+$footer-color: $white;
+$footer-background-color: $primary;
+$footer-padding: 12px 24px;
+$footer-trans-font-size: 14px;
+$footer-trans-color: $black;
+
+// 12. Form Inputs
+// ---------------
+
+$control-font-size: 16px;
+$control-font-weight: normal;
+$control-line-height: normal;
+$control-placeholder-c: $color-gray-5;
+$control-placeholder-hover-c: $control-placeholder-c;
+$control-background: $white;
+$control-padding-v: 0.5em;
+$control-padding-h: 0.5em;
+$control-border: $global-border-color;
+$control-border-width: 1px;
+$control-border-radius: $global-radius;
+$control-border-radius-rounded: 30em;
+$control-shadow: none;
+$control-transition: border-color 0.1s ease-in;
+$control-hover: $primary;
+$control-hover-border: $primary;
+$control-active: $primary;
+$control-active-border: #0079bd;
+$control-disabled-border: #e6e6e6;
+$control-disabled-background: $disabled;
+$control-hint-color: #8d8d97;
+$control-hint-font-size: 85%;
+$control-hint-transition: all 0.2s ease;
+$control-label-padding: $control-padding-v 0;
+$control-addon-background: #eeeeee;
+$control-element-padding: 1em 0;
+$control-element-label-padding: 0 0 $control-padding-v 0;
+$control-select-padding-r: 1em;
+$control-select-background-pos: 99% 50%;
+$control-results-border: 1px solid rgb(204, 204, 204);
+$control-results-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
+$fieldset-padding: 0;
+$fieldset-margin: $control-padding-v 0;
+$fieldset-width: 100%;
+$fieldset-border: 0;
+$fieldset-legend-padding: 0.3em 0;
+$control-xs: 0.67em;
+$control-sm: 0.83em;
+$control-lg: 1.17em;
+$control-xl: 1.5em;
+$control-xxl: 2em;
+$control-xs-padding: 0.125em 0.416em;
+$control-sm-padding: 0.27em 0.5em;
+$control-lg-padding: 0.467em 0.6em;
+$control-xl-padding: 0.563em 0.75em;
+
+// 13. List Groups
+// ---------------
+
+$ui-list-radius: true;
+$ui-list-shadows: false;
+$ui-list-box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 0 7px rgba($black, 0.15);
+$ui-list-noborder-spacing: 10px;
+$ui-list-item-padding: 12px 16px;
+$ui-list-item-noborder-spacing: 8px;
+$ui-list-img-size: $avatar-size;
+$ui-list-left-margin-t: 3px;
+$ui-list-left-body-spacing: 15px;
+$ui-list-fs: 16px;
+$ui-list-margin: 0;
+$ui-list-inset-after-offset: 72px;
+$ui-list-a-list-item-bd: 1px solid $global-border-color;
+$ui-list-a-list-item-bg-c: rgba(130, 130, 130, 0.08);
+$ui-list-a-list-item-bg-hover: $color-gray-2;
+
+// 14. Lists
+// ---------
+
+$list-margin-bottom: 1rem;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-font-size: 0.9rem;
+$list-ul-side-margin: 0.6rem;
+$list-nested-side-margin: 1.25rem;
+$list-padding: 1.5rem;
+$list-ul-padding: 1.9rem;
+$list-side-margin: 1.25rem;
+$defnlist-margin-bottom: 1rem;
+$defnlist-term-weight: bold;
+$defnlist-term-margin-bottom: 0.3rem;
+
+// 15. Modals
+// ----------
+
+$modals-z-index: 1050;
+$modals-dialog-top-magin: 30px;
+$modals-padding: 15px;
+$modals-width: 600px;
+$modals-border: 1px solid rgba(0, 0, 0, 0.2);
+$modals-border-radius: .3rem;
+$modals-header-border: 1px solid #e5e5e5;
+$modal-transition: opacity .35s linear 0s;
+
+// 16. Notifications
+// -----------------
+
+$notify-z-index: 99999;
+$notify-min-width: 390px;
+$notify-width: 25vw;
+$notify-screen-spacing: 16px;
+$notify-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// 17. Pagination
+// --------------
+
+$pagination-margin-bottom: $spacing-global-margin;
+$pagination-gradients: true;
+$pagination-item-spacing: 4px;
+$pagination-font-size: 12px;
+$pagination-font-size-sm: 12px;
+$pagination-font-size-lg: 14px;
+$pagination-item-padding: 3px 10px;
+$pagination-item-padding-sm: 1px 5px;
+$pagination-item-padding-lg: 5px;
+$pagination-item-current-padding: 3px 10px;
+$pagination-item-border-radius: 3px;
+$pagination-item-color: #0a0a0a;
+$pagination-item-bg: #eeeeee;
+$pagination-item-current-bg: $primary;
+$pagination-item-current-color: $white;
+$pagination-item-color-disabled: #d8d8d8;
+$pagination-item-color-sm: #0a0a0a;
+$pagination-item-color-hover-sm: #0082de;
+$pagination-item-current-color-sm: #0082de;
+
+// 18. Progress
+// ------------
+
+$progress-height: 1rem;
+$progress-background: #cccccc;
+$progress-margin-bottom: 1rem;
+$progress-radius: 2px;
+$progress-primary: $primary;
+$progress-success: $success;
+$progress-default: $default;
+
+// 19. Shadows
+// -----------
+
+$shadow-xs: 0 1.5px 3px rgba(0, 0, 0, .24), 1px 3px 8px rgba(0, 0, 0, .05);
+$shadow-sm: 0 4px 7px rgba(0, 0, 0, .23),   0 8px 25px rgba(0, 0, 0, .05);
+$shadow-md: 0 7px 10px rgba(0, 0, 0, .3),  0 10px 50px rgba(0, 0, 0, .12);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, .28), 0 15px 60px rgba(0, 0, 0, .18);
+$shadow-xl: 0 16px 20px rgba(0, 0, 0, .29), 0 20px 65px rgba(0, 0, 0, .18);
+
+// 20. Spacing
+// -----------
+
+$space-none: $spacing-none;
+$space-xs: $spacing-xs;
+$space-sm: $spacing-sm;
+$space-md: $spacing-md;
+$space-lg: $spacing-lg;
+$space-xl: $spacing-xl;
+$space-xxl: $spacing-xxl;
+$space-xxxl: $spacing-xxxl;
+
+// 21. Switches
+// ------------
+
+$switch-style: "default";
+$default-switch-height: 1.95rem;
+$default-switch-radius: rem-calc(50);
+$default-switch-font-size: rem-calc(10);
+$large-switch-font-size: rem-calc(15);
+$switch-label-off: #d3dae0;
+$switch-label-on: $white;
+$switch-handle: $white;
+
+// 22. Tables
+// ----------
+
+$table-background: $white;
+$table-border-color: $global-border-color;
+$table-border-radius: 0;
+$table-border: 1px solid $table-border-color;
+$table-head-border-bottom: 0;
+$table-padding: 8px 10px 10px;
+$table-padding-sm: 6px 10px 8px;
+$table-cell-padding: 12px 12px;
+$table-cell-padding-sm: 2px 12px;
+$table-row-hover: #fff2cf;
+$table-row-stripe-hover: $table-row-hover;
+$table-striped-background: darken($white, 3%);
+$table-stripe: odd;
+$table-head-background: $color-gray-2;
+$table-transparent-head-background: $color-gray-0;
+$table-foot-background: $color-gray-1;
+$table-head-font-color: $color-gray-7;
+$table-foot-font-color: $color-gray-6;
+$table-header-font-size: 12px;
+$table-cell-font-size: 12px;
+$table-sm-font-size: 13px;
+$table-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+$show-header-for-stacked: false;
+$table-state-selected: #FAFAD2;
+$table-state-active: #FAFAD2;
+$table-state-success: lighten($success, 20%);
+$table-state-warning: lighten($warning, 20%);
+$table-state-danger: lighten($danger, 20%);
+
+// 23. Tabs
+// --------
+
+$tabs-borders: 1px solid $global-border-color;
+$tabs-border-radius: $global-radius;
+$tabs-full-width-border: true;
+$tabs-color: $global-text-color;
+$tabs-color-hover: $primary;
+$tabs-color-active: $primary;
+$tabs-default-link-padding: 6px 12px;
+$tabs-bordered-link-padding: $tabs-default-link-padding;
+$tabs-toggle-link-padding: $tabs-default-link-padding;
+$tabs-default-space-between: 0;
+$tabs-bordered-space-between: 3px;
+$tabs-link-border-bottom: 2px;
+$tabs-bg: $color-gray-1;
+$tabs-bg-hover: lighten($tabs-bg, 5%);
+$tabs-bg-active: lighten($tabs-bg, 5%);
+$tabs-font-size-default: 14px;
+$tabs-hover-transition: all 0.4s ease 0s;
+$tab-font-size-xs: 10px;
+$tab-font-size-sm: 12px;
+$tab-font-size-lg: 20px;
+
+// 24. Vertical Nav
+// ----------------
+
+$vertical-nav-width: 120px;
+$vertical-nav-padding: 1.3em;
+$vertical-nav-button-size: 6.25em;
+$vertical-nav-background: #000000;
+$vertical-nav-link-color: #e5e5e5;
+$vertical-nav-separator-color: #333333;
+$vertical-nav-hover-color: #3f3f3f;
+$vertical-nav-active-color: #c5c5c5;
+$vertical-nav-disabled-color: #666666;
+$vertical-nav-active-shadow-color: #1b1b1b;
+

@@ -1,8 +1,12 @@
-/*
-* Required Files
-* These files include the variables
-* and base css styles that are required to generate tooltips and popovers.
-*/
+@import 'mixins';
 
-@import 'config';
-@import 'base';
+.c-popover {
+  @include popover-base;
+  @include popover-colors;
+}
+
+.c-tooltip {
+  @include popover-base;
+  @include popover-colors;
+}
+

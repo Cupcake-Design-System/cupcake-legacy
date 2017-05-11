@@ -21,7 +21,6 @@
   border-bottom: $tabs-borders;
 
   .c-tab-item {
-
     .c-tab-item-link {
       border: $tabs-borders;
       border-bottom: 0;
@@ -34,7 +33,7 @@
 
       &:hover {
         background: $tabs-bg-hover;
-        transition: $tabs-hover-tranisition;
+        transition: $tabs-hover-transition;
         color: $tabs-color-hover;
       }
     }
@@ -73,7 +72,7 @@
     &:hover {
       background-color: $tabs-bg;
       z-index: 2;
-      transition: $tabs-hover-tranisition;
+      transition: $tabs-hover-transition;
 
       &:first-child {
         border-radius: $tabs-border-radius 0 0 $tabs-border-radius;
@@ -103,21 +102,11 @@
 
     &:hover {
       background-color: $tabs-bg-active;
-      transition: $tabs-hover-tranisition;
+      transition: $tabs-hover-transition;
     }
   }
 }
 
-@each $tab-size in $tab-sizes {
-  $tab-size-name: nth($tab-size, 1);
-  $tab-size-font: nth($tab-size, 2);
-
-  .c-tabs-#{$tab-size-name} {
-    .c-tab-item-link {
-      font-size: $tab-size-font;
-    }
-  }
-}
 
 .c-tabs-fullwidth {
   .c-tab-item {
@@ -132,4 +121,22 @@
 .c-tabs-center {
   flex: none;
   justify-content: center;
+}
+
+.c-tabs-xs {
+  .c-tab-item-link {
+    font-size: $tab-font-size-xs;
+  }
+}
+
+.c-tabs-sm {
+  .c-tab-item-link {
+    font-size: $tab-font-size-sm;
+  }
+}
+
+.c-tabs-lg {
+  .c-tab-item-link {
+    font-size: $tab-font-size-lg;
+  }
 }

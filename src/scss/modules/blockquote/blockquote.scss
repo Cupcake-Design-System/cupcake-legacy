@@ -1,0 +1,27 @@
+////
+/// @group blockquote and cite
+////
+
+$blockquote-padding             : 9px 20px 0 19px !default;
+$blockquote-border              : 3px solid $primary !default;
+
+.c-blockquote {
+  @include font-block-quote-quote;
+
+  margin: 0 0 1rem;
+  padding: $blockquote-padding;
+  border-left: $blockquote-border;
+  line-height: 1;
+}
+
+// Citations
+.c-cite {
+  @include font-blockquote-author;
+
+  display: block;
+  padding: 10px 0;
+
+  &::before {
+    content: '\2014 \0020';
+  }
+}

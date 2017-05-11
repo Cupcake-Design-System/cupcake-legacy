@@ -2,8 +2,6 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 *,
@@ -13,22 +11,19 @@ html {
 }
 
 body {
+  @include font-body;
+
   padding: 0;
   margin: 0;
-  font-family: $body-font-family;
-  font-size: $body-font-size;
-  font-weight: $global-weight-normal;
-  line-height: $global-lineheight;
-  color: $body-font-color;
-  background: $body-background;
+  background: $color-gray-0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
-  -ms-interpolation-mode: bicubic;
   display: inline-block;
   vertical-align: middle;
 }
@@ -45,8 +40,6 @@ select {
 }
 
 button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   background: transparent;
   padding: 0;
   border: 0;
@@ -104,7 +97,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: $global-weight-bold;
+  font-weight: bold;
 }
 
 dfn {
@@ -117,7 +110,7 @@ mark {
 }
 
 small {
-  font-size: $small-font-size;
+  font-size: 80%;
 }
 
 sub,
@@ -133,7 +126,7 @@ sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 img {
@@ -161,7 +154,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -233,8 +226,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
+  border: 0;
+  padding: 0;
 }
 
 textarea {

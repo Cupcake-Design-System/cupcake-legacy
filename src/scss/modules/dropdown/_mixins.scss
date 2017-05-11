@@ -1,0 +1,67 @@
+////
+/// @group dropdown
+////
+
+/// $dropdown-glued           
+$dropdown-glued           : true !default;
+
+/// $dropdown-list-margin    
+$dropdown-list-margin     : 0 !default;
+
+/// $dropdown-list-padding   
+$dropdown-list-padding    : 0 !default;
+
+/// $dropdown-padding        
+$dropdown-padding         : 1rem !default;
+
+/// $dropdown-border          
+$dropdown-border          : 1px solid $global-border-color !default;
+
+/// $dropdown-color          
+$dropdown-color           : $color-gray-7 !default;
+
+/// $dropdown-color-hover    
+$dropdown-color-hover     : $primary !default;
+
+/// $dropdown-background-color:
+$dropdown-background-color: $white !default;
+
+/// $dropdown-background-hover:
+$dropdown-background-hover: darken($default, 2%) !default;
+
+/// $dropdown-box-shadow 
+$dropdown-box-shadow      : 0 2px 7px rgba(0, 0, 0, 0.2) !default;
+
+/// $dropdown-font-size 
+$dropdown-font-size       : 12px !default;
+
+/// $dropdown-font-weight 
+$dropdown-font-weight     : bold !default;
+
+/// $dropdown-width  
+$dropdown-width           : 100% !default;
+
+/// $dropdown-radius 
+$dropdown-radius          : $global-radius !default;
+
+/// $dropdown-divider-margin 
+$dropdown-divider-margin  : 0 !default;
+
+
+@mixin dropdown-list {
+  display: none;
+  position: absolute;
+  padding: $dropdown-list-padding;
+  margin: $dropdown-list-margin;
+  top: 0;
+  left: 0;
+  width: $dropdown-width;
+  list-style-type: none;
+  background: $dropdown-background-color;
+  color: $dropdown-color;
+  border: $dropdown-border;
+  box-shadow: $dropdown-box-shadow;
+  border-radius: $dropdown-radius;
+  box-sizing: border-box;
+  z-index: 12;
+}

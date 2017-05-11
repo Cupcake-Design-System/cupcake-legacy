@@ -1,28 +1,70 @@
-@mixin ipreo-alert-base() {
+////
+/// @group alerts
+////
+
+/// $alert-bg-lighten-percentage:
+$alert-bg-lighten-percentage: 50 !default;
+
+/// $alert-background-mix: 
+$alert-background-mix:        4% !default;
+
+/// $alert-border:   
+$alert-border:                1px solid !default;
+
+/// $alert-margin:  
+$alert-margin:                0 0 1rem 0 !default;
+
+/// $alert-padding:  
+$alert-padding:               6px !default;
+
+/// $alert-font-size: 
+$alert-font-size:             14px !default;
+
+/// $alert-font-family: 
+$alert-font-family:           $global-font-family !default;
+
+/// $alert-font-weight: 
+$alert-font-weight:           bold !default;
+
+/// $alert-font-color:
+$alert-font-color:            $secondary !default;
+
+/// $alert-radius:  
+$alert-radius:                4px !default;
+
+/// $alert-shadows: 
+$alert-shadows:               false !default;
+
+/// $alert-style:  
+$alert-style:                 'outline' !default;
+
+/// $alert-icon-width:
+$alert-icon-width:            40px !default;
+
+
+@mixin alert-base() {
   position: relative;
   margin: $alert-margin;
-  padding: $alert-padding $alert-padding * 1.8;
+  padding: $alert-padding $alert-padding * 2;
   border: $alert-border;
   border-radius: $alert-radius;
-  color: $alert-font-color;
+  font-family: $alert-font-family;
+  font-weight: $alert-font-weight;
   font-size: $alert-font-size;
+  text-align: center;
 
   &.c-alert-dismissible {
     padding-right: $alert-padding * 4;
   }
 
   .c-alert-close {
-    position: absolute;
-    top: $alert-padding;
-    right: $alert-padding;
-    text-align: center;
     cursor: pointer;
     background: none;
     border: 0;
     appearance: none;
-    opacity: .6;
+    opacity: 0.6;
     font-size: $alert-font-size;
-    padding: rem-calc(0 5);
+    float: right;
   }
 
   a {
@@ -57,25 +99,62 @@
   }
 }
 
-/// Generate quick styles for a ipreo-alert using a single color as a baseline.
-/// [$alert-background] - Color to use.
-@mixin ipreo-alert-style($color: $alert-background) {
-  $background: mix($color, $white, $alert-background-mix);
-
-  background-color: $background;
-}
-
-/* stylelint-disable */
-@mixin ipreo-alert-size($padding) {
+@mixin alert-size($padding) {
   padding-top: $padding;
   padding-right: $padding;
   padding-bottom: $padding;
   padding-left: $padding;
 }
 
-/// Adds styles for a ipreo-alert.
-@mixin ipreo-alert($color: $alert-background) {
-  @include ipreo-alert-base;
-  @include ipreo-alert-style($color);
+@mixin alert-style($bg, $color: $bg, $style: $alert-style, $shadows: $alert-shadows) {
+  @if $style == outline {
+    background-color: lighten($bg, $alert-bg-lighten-percentage);
+    border-color: $bg;
+    color: $bg;
+  }
+
+  @if $style == solid {
+    background-color: $bg;
+    border-color: $bg;
+    color: $white;
+  }
+
+  @if $style == gradient {
+    @include linear-gradient(to bottom, lighten($bg, 10%), $bg 66%, darken($bg, 4%));
+
+    border: 2px solid darken($color, 10%);
+    color: $white;
+  }
+
+  @if $shadows == true {
+    box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 1px 2px rgba($black, 0.25);
+  }
+
+  @else {
+    box-shadow: none;
+  }
+
+  @if $style == outline {
+    a {
+      color: $bg;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: darken($bg, 20%);
+    }
+  }
+
+  @else {
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: $white;
+    }
+  }
 }
-/* stylelint-enable */
+
+

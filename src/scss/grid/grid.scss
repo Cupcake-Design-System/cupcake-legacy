@@ -4,9 +4,9 @@
 $auto-generate: true !default;
 $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
-$gutter: .75rem !default;
+$gutter: $spacing-global-gutter !default;
 $columns: 12 !default;
-$container-fixed-width: 1200px !default;
+$container-fixed-width: $sizing-container-fixed-max-width !default;
 
 
 // Optional row features - Set to true to enable

@@ -1,0 +1,27 @@
+$white: #ffffff;
+$header-bottom-border: $color-gray-1;
+$header-bg: $white;
+$header-text-color: $color-gray-7;
+$header-borders: $color-gray-1;
+$header-logo-max-width: 90px;
+$header-height: 50px;
+
+@mixin header{
+  background-color: $header-bg;
+  border-bottom: 1px solid $header-borders;
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+  height: $header-height;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+@mixin header-item {
+  align-items: center;
+  display: flex;
+  height: $header-height - 1;
+  padding: 0 20px;
+}
