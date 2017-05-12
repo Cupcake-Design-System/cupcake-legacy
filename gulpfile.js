@@ -195,7 +195,7 @@ gulp.task('northstar-scrape', function(done) {
 gulp.task('variables:pcs', function(cb) {
   var options = {
     title: `Cupcake PCS Settings`,
-    output: bases.flavors + `pcs/_variables.scss`,
+    output: bases.flavors + `pcs/_tokens.scss`,
     sort: [
       'global-non-tokens'
     ]
@@ -208,7 +208,7 @@ gulp.task('variables:pcs', function(cb) {
 gulp.task('variables:northstar', function(cb) {
   var options = {
     title: `Cupcake Northstar Settings`,
-    output: bases.flavors + `northstar/_variables.scss`,
+    output: bases.flavors + `northstar/_tokens.scss`,
     sort: [
       'global-non-tokens'
     ]
@@ -221,7 +221,7 @@ gulp.task('variables:northstar', function(cb) {
 gulp.task('variables:bd', function(cb) {
   var options = {
     title: `Cupcake BD Settings`,
-    output: bases.flavors + `bd/_variables.scss`,
+    output: bases.flavors + `bd/_tokens.scss`,
     sort: [
       'global-non-tokens'
     ]
@@ -235,7 +235,7 @@ gulp.task('variables:bd', function(cb) {
 gulp.task('variables:buyside', function(cb) {
   var options = {
     title: `Cupcake Buyside Settings`,
-    output: bases.flavors + `buyside/_variables.scss`,
+    output: bases.flavors + `buyside/_tokens.scss`,
     sort: [
       'global-non-tokens'
     ]
