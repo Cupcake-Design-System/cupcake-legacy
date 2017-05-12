@@ -13,9 +13,9 @@
     "deploy": "gulp deploy",
     "test": "gulp lint",
     "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
-    "backstop": "run-s build && run-p serve compare",
-    "reference": "backstop reference --configPath=backstop.conf.js",
-    "compare": "backstop test --configPath=backstop.conf.js"
+    "backstop": "npm run build & npm run reference & npm run compare",
+    "reference": "backstop reference --configPath=backstop.config.js",
+    "compare": "backstop test --configPath=backstop.config.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",
@@ -28,6 +28,7 @@
     "gulp-findreplace": "^1.5.0",
     "gulp-flatten": "^0.3.1",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-hb": "^6.0.2",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",

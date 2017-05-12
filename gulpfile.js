@@ -2,6 +2,7 @@ var gulp          = require('gulp'),
     browserSync   = require('browser-sync'),
     postcss       = require('gulp-postcss');
     autoprefixer  = require('autoprefixer');
+    fs            = require('fs');
     cleanCSS      = require('gulp-clean-css'),
     deploy        = require('gulp-gh-pages'),    
     notify        = require('gulp-notify'),
@@ -9,7 +10,8 @@ var gulp          = require('gulp'),
     rename        = require('gulp-rename'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
-    stylelint     = require('gulp-stylelint'), 
+    stylelint     = require('gulp-stylelint'),
+    handlebars    = require('handlebars');
     runSequence   = require('run-sequence'),
     reload        = browserSync.reload,
     del           = require('del'),
@@ -18,7 +20,12 @@ var gulp          = require('gulp'),
     download      = require('gulp-downloader');
     octophant     = require('octophant');
     flatten       = require('gulp-flatten');
+    hb            = require('gulp-hb');
 
+require.extensions['.html'] = function (module, filename) {
+   module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'));
+};
+ 
 
 var bases = {
     app:  'src/',
@@ -160,10 +167,6 @@ gulp.src(bases.app + 'demo-js/**/*.*')
     .pipe(gulp.dest(bases.dist + 'demo-js'))
     .pipe(reload({stream:true}));
 
-gulp.src(bases.app + 'test/*')
-    .pipe(gulp.dest(bases.dist + 'test'))
-    .pipe(reload({stream:true}));    
-  
 gulp.src(bases.app + 'img/*')
     .pipe(gulp.dest(bases.dist + 'img'))
     .pipe(reload({stream:true}));
@@ -267,10 +270,12 @@ gulp.task('lint', function() {
 
 
 gulp.task('html', function() {
-  gulp.src(bases.app + './**/*.html')
+  gulp.src(bases.app + '*.html')
+    .pipe(hb({ partials: './src/test/*.html'}))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 });
+
 
 gulp.task('watch', function() {
   gulp.watch(bases.scss + '**/*.scss', ['styles', 'flavors']);
@@ -279,7 +284,6 @@ gulp.task('watch', function() {
   gulp.watch(bases.app + './src/test/*.html', ['html']);
   gulp.watch(bases.app + 'img/*', ['img']);
 });
-
 
 
 // ------------
