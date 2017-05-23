@@ -1,8 +1,8 @@
 var gulp          = require('gulp'),
     browserSync   = require('browser-sync'),
-    postcss       = require('gulp-postcss');
-    autoprefixer  = require('autoprefixer');
-    fs            = require('fs');
+    postcss       = require('gulp-postcss'),
+    autoprefixer  = require('autoprefixer'),
+    fs            = require('fs'),
     cleanCSS      = require('gulp-clean-css'),
     deploy        = require('gulp-gh-pages'),    
     notify        = require('gulp-notify'),
@@ -11,19 +11,19 @@ var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
-    handlebars    = require('handlebars');
+    handlebars    = require('handlebars'),
     runSequence   = require('run-sequence'),
     reload        = browserSync.reload,
     del           = require('del'),
     vinylPaths    = require('vinyl-paths'),
     colors        = require('colors'),
-    download      = require('gulp-downloader');
-    octophant     = require('octophant');
-    flatten       = require('gulp-flatten');
+    download      = require('gulp-downloader'),
+    octophant     = require('octophant'),
+    flatten       = require('gulp-flatten'),
     hb            = require('gulp-hb');
 
 require.extensions['.html'] = function (module, filename) {
-   module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'));
+   module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'))
 };
  
 
@@ -31,7 +31,7 @@ var bases = {
     app:  'src/',
     dist: 'dist/',
     scss:  'src/scss/',
-    flavors:  'src/flavors/',
+    flavors:  'src/flavors/'
 };
 
 var sassOptions = {
@@ -49,7 +49,7 @@ var tokens = {
     bd:  'https://assets.brand.ai/ipreo/bd/_style-params.scss?key=r1QaADqhg',
     pcs: 'https://assets.brand.ai/ipreo/pcs/_style-params.scss?key=r1QaADqhg',
     buyside: 'https://assets.brand.ai/ipreo/buyside/_style-params.scss?key=r1QaADqhg',
-    northstar: 'https://assets.brand.ai/ipreo/north-star/_style-params.scss?key=r1QaADqhg',
+    northstar: 'https://assets.brand.ai/ipreo/north-star/_style-params.scss?key=r1QaADqhg'
 };
 
 
@@ -81,7 +81,7 @@ var displayError = function(error) {
   // This will output an error like the following:
   // [gulp-sass] error message in file_name on line 1
   console.error(errorString);
-}
+};
 
 var onError = function(err) {
   notify.onError({
@@ -202,7 +202,7 @@ gulp.task('variables:pcs', function(cb) {
     sort: [
       'global-non-tokens'
     ]
-  }
+  };
 
   octophant(bases.scss, options, cb);
 });
@@ -215,7 +215,7 @@ gulp.task('variables:northstar', function(cb) {
     sort: [
       'global-non-tokens'
     ]
-  }
+  };
 
   octophant(bases.scss, options, cb);
 });
@@ -228,7 +228,7 @@ gulp.task('variables:bd', function(cb) {
     sort: [
       'global-non-tokens'
     ]
-  }
+  };
 
   octophant(bases.scss, options, cb);
 });
@@ -242,7 +242,7 @@ gulp.task('variables:buyside', function(cb) {
     sort: [
       'global-non-tokens'
     ]
-  }
+  };
 
   octophant(bases.scss, options, cb);
 });
