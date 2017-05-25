@@ -173,7 +173,6 @@ $color-orange-9: #d9480f !default;
 // header-xxl font style
 $font-header-xxl-font-size: 64px !default;
 $font-header-xxl-line-height: 75px !default;
-$font-header-xxl-text-align: start !default;
 $font-header-xxl-color: #495057 !default;
 $font-header-xxl-font-style: normal !default;
 $font-header-xxl-font-weight: bold !default;
@@ -182,7 +181,6 @@ $font-header-xxl-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-xxl () {
   font-size: $font-header-xxl-font-size;
   line-height: $font-header-xxl-line-height;
-  text-align: $font-header-xxl-text-align;
   color: $font-header-xxl-color;
   font-style: $font-header-xxl-font-style;
   font-weight: $font-header-xxl-font-weight;
@@ -192,7 +190,7 @@ $font-header-xxl-font-family: Arial, Helvetica, Sans-Serif !default;
 // header-xl font style
 $font-header-xl-font-size: 48px !default;
 $font-header-xl-line-height: 60px !default;
-$font-header-xl-text-align: start !default;
+$font-header-xl-color: #495057 !default;
 $font-header-xl-font-style: normal !default;
 $font-header-xl-font-weight: bold !default;
 $font-header-xl-font-family: Arial, Helvetica, Sans-Serif !default;
@@ -200,7 +198,7 @@ $font-header-xl-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-xl () {
   font-size: $font-header-xl-font-size;
   line-height: $font-header-xl-line-height;
-  text-align: $font-header-xl-text-align;
+  color: $font-header-xl-color;
   font-style: $font-header-xl-font-style;
   font-weight: $font-header-xl-font-weight;
   font-family: $font-header-xl-font-family;
@@ -209,7 +207,6 @@ $font-header-xl-font-family: Arial, Helvetica, Sans-Serif !default;
 // header-lg font style
 $font-header-lg-font-size: 36px !default;
 $font-header-lg-line-height: 45px !default;
-$font-header-lg-text-align: start !default;
 $font-header-lg-color: #495057 !default;
 $font-header-lg-font-style: normal !default;
 $font-header-lg-font-weight: bold !default;
@@ -218,7 +215,6 @@ $font-header-lg-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-lg () {
   font-size: $font-header-lg-font-size;
   line-height: $font-header-lg-line-height;
-  text-align: $font-header-lg-text-align;
   color: $font-header-lg-color;
   font-style: $font-header-lg-font-style;
   font-weight: $font-header-lg-font-weight;
@@ -228,7 +224,6 @@ $font-header-lg-font-family: Arial, Helvetica, Sans-Serif !default;
 // header-md font style
 $font-header-md-font-size: 24px !default;
 $font-header-md-line-height: 35px !default;
-$font-header-md-text-align: start !default;
 $font-header-md-color: #495057 !default;
 $font-header-md-font-style: normal !default;
 $font-header-md-font-weight: bold !default;
@@ -237,7 +232,6 @@ $font-header-md-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-md () {
   font-size: $font-header-md-font-size;
   line-height: $font-header-md-line-height;
-  text-align: $font-header-md-text-align;
   color: $font-header-md-color;
   font-style: $font-header-md-font-style;
   font-weight: $font-header-md-font-weight;
@@ -247,7 +241,6 @@ $font-header-md-font-family: Arial, Helvetica, Sans-Serif !default;
 // header-sm font style
 $font-header-sm-font-size: 20px !default;
 $font-header-sm-line-height: 30px !default;
-$font-header-sm-text-align: start !default;
 $font-header-sm-color: #495057 !default;
 $font-header-sm-font-style: normal !default;
 $font-header-sm-font-weight: bold !default;
@@ -256,7 +249,6 @@ $font-header-sm-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-sm () {
   font-size: $font-header-sm-font-size;
   line-height: $font-header-sm-line-height;
-  text-align: $font-header-sm-text-align;
   color: $font-header-sm-color;
   font-style: $font-header-sm-font-style;
   font-weight: $font-header-sm-font-weight;
@@ -266,7 +258,6 @@ $font-header-sm-font-family: Arial, Helvetica, Sans-Serif !default;
 // header-xs font style
 $font-header-xs-font-size: 18px !default;
 $font-header-xs-line-height: 25px !default;
-$font-header-xs-text-align: start !default;
 $font-header-xs-color: #495057 !default;
 $font-header-xs-font-style: normal !default;
 $font-header-xs-font-weight: bold !default;
@@ -275,7 +266,6 @@ $font-header-xs-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-header-xs () {
   font-size: $font-header-xs-font-size;
   line-height: $font-header-xs-line-height;
-  text-align: $font-header-xs-text-align;
   color: $font-header-xs-color;
   font-style: $font-header-xs-font-style;
   font-weight: $font-header-xs-font-weight;
@@ -285,7 +275,6 @@ $font-header-xs-font-family: Arial, Helvetica, Sans-Serif !default;
 // body font style
 $font-body-font-size: 12px !default;
 $font-body-line-height: 15px !default;
-$font-body-text-align: start !default;
 $font-body-color: #495057 !default;
 $font-body-font-style: normal !default;
 $font-body-font-weight: 400 !default;
@@ -294,7 +283,6 @@ $font-body-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body () {
   font-size: $font-body-font-size;
   line-height: $font-body-line-height;
-  text-align: $font-body-text-align;
   color: $font-body-color;
   font-style: $font-body-font-style;
   font-weight: $font-body-font-weight;
@@ -304,7 +292,6 @@ $font-body-font-family: Arial, Helvetica, Sans-Serif !default;
 // body-xl font style
 $font-body-xl-font-size: 20px !default;
 $font-body-xl-line-height: 25px !default;
-$font-body-xl-text-align: start !default;
 $font-body-xl-color: #495057 !default;
 $font-body-xl-font-style: normal !default;
 $font-body-xl-font-weight: 400 !default;
@@ -313,7 +300,6 @@ $font-body-xl-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body-xl () {
   font-size: $font-body-xl-font-size;
   line-height: $font-body-xl-line-height;
-  text-align: $font-body-xl-text-align;
   color: $font-body-xl-color;
   font-style: $font-body-xl-font-style;
   font-weight: $font-body-xl-font-weight;
@@ -323,7 +309,6 @@ $font-body-xl-font-family: Arial, Helvetica, Sans-Serif !default;
 // body-lg font style
 $font-body-lg-font-size: 18px !default;
 $font-body-lg-line-height: 25px !default;
-$font-body-lg-text-align: start !default;
 $font-body-lg-color: #495057 !default;
 $font-body-lg-font-style: normal !default;
 $font-body-lg-font-weight: 400 !default;
@@ -332,7 +317,6 @@ $font-body-lg-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body-lg () {
   font-size: $font-body-lg-font-size;
   line-height: $font-body-lg-line-height;
-  text-align: $font-body-lg-text-align;
   color: $font-body-lg-color;
   font-style: $font-body-lg-font-style;
   font-weight: $font-body-lg-font-weight;
@@ -342,7 +326,6 @@ $font-body-lg-font-family: Arial, Helvetica, Sans-Serif !default;
 // body-md font style
 $font-body-md-font-size: 14px !default;
 $font-body-md-line-height: 20px !default;
-$font-body-md-text-align: start !default;
 $font-body-md-color: #495057 !default;
 $font-body-md-font-style: normal !default;
 $font-body-md-font-weight: 400 !default;
@@ -351,7 +334,6 @@ $font-body-md-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body-md () {
   font-size: $font-body-md-font-size;
   line-height: $font-body-md-line-height;
-  text-align: $font-body-md-text-align;
   color: $font-body-md-color;
   font-style: $font-body-md-font-style;
   font-weight: $font-body-md-font-weight;
@@ -361,7 +343,6 @@ $font-body-md-font-family: Arial, Helvetica, Sans-Serif !default;
 // body-sm font style
 $font-body-sm-font-size: 12px !default;
 $font-body-sm-line-height: 15px !default;
-$font-body-sm-text-align: start !default;
 $font-body-sm-color: #495057 !default;
 $font-body-sm-font-style: normal !default;
 $font-body-sm-font-weight: 400 !default;
@@ -370,7 +351,6 @@ $font-body-sm-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body-sm () {
   font-size: $font-body-sm-font-size;
   line-height: $font-body-sm-line-height;
-  text-align: $font-body-sm-text-align;
   color: $font-body-sm-color;
   font-style: $font-body-sm-font-style;
   font-weight: $font-body-sm-font-weight;
@@ -380,7 +360,6 @@ $font-body-sm-font-family: Arial, Helvetica, Sans-Serif !default;
 // body-xs font style
 $font-body-xs-font-size: 10px !default;
 $font-body-xs-line-height: 15px !default;
-$font-body-xs-text-align: start !default;
 $font-body-xs-color: #495057 !default;
 $font-body-xs-font-style: normal !default;
 $font-body-xs-font-weight: 400 !default;
@@ -389,7 +368,6 @@ $font-body-xs-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-body-xs () {
   font-size: $font-body-xs-font-size;
   line-height: $font-body-xs-line-height;
-  text-align: $font-body-xs-text-align;
   color: $font-body-xs-color;
   font-style: $font-body-xs-font-style;
   font-weight: $font-body-xs-font-weight;
@@ -399,7 +377,6 @@ $font-body-xs-font-family: Arial, Helvetica, Sans-Serif !default;
 // Unordered List font style
 $font-unordered-list-font-size: 12px !default;
 $font-unordered-list-line-height: 20px !default;
-$font-unordered-list-text-align: start !default;
 $font-unordered-list-color: #495057 !default;
 $font-unordered-list-font-style: normal !default;
 $font-unordered-list-font-weight: 400 !default;
@@ -408,7 +385,6 @@ $font-unordered-list-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-unordered-list () {
   font-size: $font-unordered-list-font-size;
   line-height: $font-unordered-list-line-height;
-  text-align: $font-unordered-list-text-align;
   color: $font-unordered-list-color;
   font-style: $font-unordered-list-font-style;
   font-weight: $font-unordered-list-font-weight;
@@ -418,7 +394,6 @@ $font-unordered-list-font-family: Arial, Helvetica, Sans-Serif !default;
 // Ordered List font style
 $font-ordered-list-font-size: 12px !default;
 $font-ordered-list-line-height: 20px !default;
-$font-ordered-list-text-align: start !default;
 $font-ordered-list-color: #495057 !default;
 $font-ordered-list-font-style: normal !default;
 $font-ordered-list-font-weight: 400 !default;
@@ -427,7 +402,6 @@ $font-ordered-list-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-ordered-list () {
   font-size: $font-ordered-list-font-size;
   line-height: $font-ordered-list-line-height;
-  text-align: $font-ordered-list-text-align;
   color: $font-ordered-list-color;
   font-style: $font-ordered-list-font-style;
   font-weight: $font-ordered-list-font-weight;
@@ -437,7 +411,6 @@ $font-ordered-list-font-family: Arial, Helvetica, Sans-Serif !default;
 // Unstyled List font style
 $font-unstyled-list-font-size: 12px !default;
 $font-unstyled-list-line-height: 20px !default;
-$font-unstyled-list-text-align: start !default;
 $font-unstyled-list-color: #495057 !default;
 $font-unstyled-list-font-style: normal !default;
 $font-unstyled-list-font-weight: 400 !default;
@@ -446,7 +419,6 @@ $font-unstyled-list-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-unstyled-list () {
   font-size: $font-unstyled-list-font-size;
   line-height: $font-unstyled-list-line-height;
-  text-align: $font-unstyled-list-text-align;
   color: $font-unstyled-list-color;
   font-style: $font-unstyled-list-font-style;
   font-weight: $font-unstyled-list-font-weight;
@@ -456,7 +428,6 @@ $font-unstyled-list-font-family: Arial, Helvetica, Sans-Serif !default;
 // Inline List font style
 $font-inline-list-font-size: 12px !default;
 $font-inline-list-line-height: 20px !default;
-$font-inline-list-text-align: start !default;
 $font-inline-list-color: #495057 !default;
 $font-inline-list-font-style: normal !default;
 $font-inline-list-font-weight: 400 !default;
@@ -465,7 +436,6 @@ $font-inline-list-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-inline-list () {
   font-size: $font-inline-list-font-size;
   line-height: $font-inline-list-line-height;
-  text-align: $font-inline-list-text-align;
   color: $font-inline-list-color;
   font-style: $font-inline-list-font-style;
   font-weight: $font-inline-list-font-weight;
@@ -475,7 +445,6 @@ $font-inline-list-font-family: Arial, Helvetica, Sans-Serif !default;
 // Block Quote - Quote font style
 $font-block-quote-quote-font-size: 20px !default;
 $font-block-quote-quote-line-height: 25px !default;
-$font-block-quote-quote-text-align: start !default;
 $font-block-quote-quote-color: #495057 !default;
 $font-block-quote-quote-font-style: normal !default;
 $font-block-quote-quote-font-weight: 400 !default;
@@ -484,7 +453,6 @@ $font-block-quote-quote-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-block-quote-quote () {
   font-size: $font-block-quote-quote-font-size;
   line-height: $font-block-quote-quote-line-height;
-  text-align: $font-block-quote-quote-text-align;
   color: $font-block-quote-quote-color;
   font-style: $font-block-quote-quote-font-style;
   font-weight: $font-block-quote-quote-font-weight;
@@ -505,7 +473,6 @@ $font-blockquote-author-font-family: Arial, Helvetica, Sans-Serif !default;
 @mixin font-blockquote-author () {
   font-size: $font-blockquote-author-font-size;
   line-height: $font-blockquote-author-line-height;
-  text-align: $font-blockquote-author-text-align;
   color: $font-blockquote-author-color;
   letter-spacing: $font-blockquote-author-letter-spacing;
   text-transform: $font-blockquote-author-text-transform;

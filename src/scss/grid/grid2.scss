@@ -4,21 +4,18 @@
 $auto-generate: true !default;
 $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
-$row-default-wrap: 'wrap' !default;		// 'nowrap', 'wrap' or 'reverse'
-$row-default-align: 'stretch' !default; // 'stretch', 'start', 'center', 'end' or 'baseline'
-$row-default-content-stretch: 'stretch' !default;	// 'stretch' or 'unstretch'
 $gutter: $spacing-global-gutter !default;
-$total-columns: 12 !default;
+$columns: 12 !default;
 $container-fixed-width: $sizing-container-fixed-max-width !default;
 
 
 // Optional row features - Set to true to enable
-$row-align: true !default;
-$row-justify: true !default;
-$row-wrap: true !default;
-$col-order: true !default;
-$col-offset: true !default;
-$col-align: true !default;
+$row-align:       true !default;
+$row-justify:     true !default;
+$row-wrap:        true !default;
+$col-order:       true !default;
+$col-offset:      true !default;
+$col-align:       true !default;
 $gutter-collapse: true !default;
 
 
@@ -51,12 +48,8 @@ $gutter-collapse: true !default;
   @return if($breakpoint, '-' + $breakpoint + '-', '-');
 }
 
-@function format-modifier($key, $val) {
-  @return $key + '\\/' + $val;
-}
 
-
-// cols
+// Cols
 // ==========================================================================
 @mixin generate-all-cols() {
   @include create-cols();
@@ -65,12 +58,13 @@ $gutter-collapse: true !default;
 @mixin create-cols($breakpoint: null) {
   $breakpoint: format-breakpoint($breakpoint);
 
-  @for $i from 1 through $total-columns {
+  @for $i from 1 through $columns {
     & > #{$col-namespace}#{$breakpoint}#{$i} {
       @include create-col($i);
     }
   }
 }
+
 
 // Accepts number input
 //	- @include create-col(3)
@@ -81,34 +75,46 @@ $gutter-collapse: true !default;
     @error "create-col: Please define a number variable.";
   }
 
-  width: (100% / $total-columns) * $column;
+  width: (100% / $columns) * $column;
 }
 
-// Content stretch behavior of all cols within a row section
+
+// Alignment of all cols within a row section
 // ==========================================================================
-@mixin row-content-stretch($value: 'stretch') {
-  $values: (stretch: 'flex', unstretch: 'inline-block');
+@mixin row-align($value: 'stretch') {
+  $values: (
+    start: 'flex-start',
+    end: 'flex-end',
+    center: 'center',
+    stretch: 'stretch'
+  );
 
   @if map-has-key($values, $value) {
-    .c-col {
-      @include col-content-stretch($value);
-    }
+    align-items: #{map-get($values, $value)};
   }
 
   @else {
-    @error "row-content-stretch: Please enter a valid property;"stretch", or"unstretch"";
+    @error "row-align: Please enter a valid property;"flex-start","flex-end","center"or"stretch"";
   }
 }
 
-@mixin generate-row-content-stretch($breakpoint: null) {
+@mixin generate-row-align($breakpoint: null) {
   $breakpoint: format-breakpoint($breakpoint);
 
-  &#{$breakpoint}content-stretch {
-    @include row-content-stretch('stretch');
+  &#{$breakpoint}align-stretch {
+    @include row-align();
   }
 
-  &#{$breakpoint}content-unstretch {
-    @include row-content-stretch('unstretch');
+  &#{$breakpoint}align-top {
+    @include row-align('start');
+  }
+
+  &#{$breakpoint}align-bottom {
+    @include row-align('end');
+  }
+
+  &#{$breakpoint}align-center {
+    @include row-align('center');
   }
 }
 
@@ -121,7 +127,8 @@ $gutter-collapse: true !default;
     end: 'flex-end',
     center: 'center',
     space-between: 'space-between',
-    space-around: 'space-around');
+    space-around: 'space-around'
+  );
 
   @if map-has-key($values, $value) {
     justify-content: #{map-get($values, $value)};
@@ -158,63 +165,21 @@ $gutter-collapse: true !default;
   }
 }
 
-// Alignment of all cols within a row section
-// ==========================================================================
-@mixin row-align($value: 'stretch') {
-  $values: (
-    stretch: 'stretch',
-    start: 'flex-start',
-    center: 'center',
-    end: 'flex-end',
-    baseline: 'baseline');
-
-  @if map-has-key($values, $value) {
-    align-items: #{map-get($values, $value)};
-  }
-
-  @else {
-    @error "row-align: Please enter a valid property;"flex-start","flex-end","center","stretch", or"baseline"";
-  }
-}
-
-@mixin generate-row-align($breakpoint: null) {
-  $breakpoint: format-breakpoint($breakpoint);
-
-  &#{$breakpoint}align-stretch {
-    @include row-align();
-  }
-
-  &#{$breakpoint}align-start {
-    @include row-align('start');
-  }
-
-  &#{$breakpoint}align-end {
-    @include row-align('end');
-  }
-
-  &#{$breakpoint}align-center {
-    @include row-align('center');
-  }
-
-  &#{$breakpoint}align-baseline {
-    @include row-align('baseline');
-  }
-}
-
 // row section with automatically wrapping cols
 // ==========================================================================
-@mixin row-wrap($value: $row-default-wrap) {
+@mixin row-wrap($value: 'nowrap') {
   $values: (
     wrap: 'wrap',
     reverse: 'wrap-reverse',
-    nowrap: 'nowrap');
+    nowrap: 'nowrap'
+  );
 
   @if map-has-key($values, $value) {
     flex-wrap: #{map-get($values, $value)};
   }
 
   @else {
-    @error "row-wrap: Please enter a valid property;"nowrap","wrap"or"reverse"";
+    @error "row-wrap: Please enter a valid property;"wrap","wrap-reverse","nowrap"";
   }
 }
 
@@ -238,11 +203,11 @@ $gutter-collapse: true !default;
   }
 
   &#{$breakpoint}nowrap {
-    @include row-wrap('nowrap');
+    @include row-wrap();
   }
 }
 
-// col order (order is 0 by default)
+// Cell order (order is 0 by default)
 // ==========================================================================
 @mixin col-order($value: 'start') {
   @if ($value == 'start') {
@@ -250,7 +215,7 @@ $gutter-collapse: true !default;
   }
 
   @else if($value == 'end') {
-    order: $total-columns;
+    order: $columns;
   }
 
   @else {
@@ -266,18 +231,18 @@ $gutter-collapse: true !default;
   $breakpoint: format-breakpoint($breakpoint);
 
   &#{$breakpoint}order {
-    // Useful for pulling a single col to the front of the row
+    // Useful for pulling a single column to the front of the row
     &-start {
       @include col-order(start);
     }
 
-    // Useful for pushing a single col to the end of the row
+    // Useful for pushing a single column to the end of the row
     &-end {
       @include col-order(end);
     }
 
     // Create offset classes used to control col order
-    @for $i from 1 through $total-columns {
+    @for $i from 1 through $columns {
       &-#{$i} {
         @include col-order($i - 1);
       }
@@ -286,7 +251,7 @@ $gutter-collapse: true !default;
 }
 
 
-// col positioning through offset
+// Cell positioning through offset
 // ========================================================================== */
 @mixin generate-col-offset($breakpoint: null) {
   @include col-column-offset($breakpoint);
@@ -300,7 +265,7 @@ $gutter-collapse: true !default;
       margin-left: 0;
     }
 
-    @for $i from 1 through $total-columns {
+    @for $i from 1 through $columns {
       &-#{$i} {
         @include col-offset($i);
       }
@@ -313,51 +278,26 @@ $gutter-collapse: true !default;
     @error "Please define a number variable.";
   }
 
-  margin-left: (100% / $total-columns) * $value;
+  margin-left: (100% / $columns) * $value;
 }
 
-
-// Content stretch behavior of individual cols
-// ==========================================================================
-@mixin col-content-stretch($value: 'stretch') {
-  $values: (stretch: 'flex', unstretch: 'inline-block');
-
-  @if map-has-key($values, $value) {
-    display: #{map-get($values, $value)};
-
-    > * {
-      flex-grow: 1;
-    }
-  }
-
-  @else {
-    @error "col-content-stretch: Please enter a valid property;"stretch", or"unstretch"";
-  }
-}
-
-@mixin generate-col-content-stretch($breakpoint: null) {
-  $breakpoint: format-breakpoint($breakpoint);
-
-  &#{$breakpoint}content-stretch {
-    @include col-content-stretch('stretch');
-  }
-
-  &#{$breakpoint}content-unstretch {
-    @include col-content-stretch('unstretch');
-  }
-}
 
 // Alignment of individual cols
 // ==========================================================================
 @mixin col-align($value: 'stretch') {
-  $values: (start: 'flex-start', end: 'flex-end', center: 'center', stretch: 'stretch', baseline: 'baseline');
+  $values: (
+    start: 'flex-start',
+    end: 'flex-end',
+    center: 'center',
+    stretch: 'stretch'
+  );
 
   @if map-has-key($values, $value) {
     align-self: #{map-get($values, $value)};
   }
 
   @else {
-    @error "col-align: Please enter a valid property;"flex-start","flex-end","center","stretch"or"baseline"";
+    @error "col-align: Please enter a valid property;"flex-start","flex-end","center"or"stretch"";
   }
 }
 
@@ -365,11 +305,11 @@ $gutter-collapse: true !default;
   $breakpoint: format-breakpoint($breakpoint);
 
   &#{$breakpoint}align {
-    &-start {
+    &-top {
       @include col-align(start);
     }
 
-    &-end {
+    &-bottom {
       @include col-align(end);
     }
 
@@ -380,21 +320,70 @@ $gutter-collapse: true !default;
     &-stretch {
       @include col-align(stretch);
     }
+  }
+}
 
-    &-baseline {
-      @include col-align(baseline);
+// Justify individual cols
+// ==========================================================================
+@mixin col-justify($value: null) {
+  $values: (
+    start: 'flex-start',
+    end: 'flex-end',
+    center: 'center',
+    space-between: 'space-between',
+    space-around: 'space-around'
+  );
+
+  @if map-has-key($values, $value) {
+    justify-content: #{map-get($values, $value)};
+  }
+
+  @else {
+    @error "justify-content: Please enter a valid property;"flex-start","flex-end","center","space-between"or"space-around"";
+  }
+}
+
+@mixin generate-col-justify($breakpoint: null) {
+  $breakpoint: format-breakpoint($breakpoint);
+
+  &#{$breakpoint}justify {
+    &-start {
+      @include col-justify(start);
+    }
+
+    &-end {
+      @include col-justify(end);
+    }
+
+    &-center {
+      @include col-justify(center);
+    }
+
+    &-space-between {
+      @include col-justify(space-between);
+    }
+
+    &-space-around {
+      @include col-justify(space-around);
     }
   }
 }
 
 // row or col without gutters
 // ==========================================================================
+@mixin generate-gutter-collapse($breakpoint: null) {
+  @include row-gutter-collapsed($breakpoint);
+  @include row-gutter-expanded($breakpoint);
+  @include col-gutter-collapsed($breakpoint);
+  @include col-gutter-expanded($breakpoint);
+}
 
+// row where none of the cols have gutters
 @mixin row-gutter-collapsed($breakpoint: null) {
   $breakpoint: format-breakpoint($breakpoint);
 
   &#{$breakpoint}collapsed {
-    & > #{$col-namespace} {
+    > #{$col-namespace} {
       @include gutter-collapsed();
     }
   }
@@ -404,12 +393,13 @@ $gutter-collapse: true !default;
   $breakpoint: format-breakpoint($breakpoint);
 
   &#{$breakpoint}expanded {
-    & > #{$col-namespace} {
+    > #{$col-namespace} {
       @include gutter-expanded();
     }
   }
 }
 
+// Specific col without gutters
 @mixin col-gutter-collapsed($breakpoint: null) {
   $breakpoint: format-breakpoint($breakpoint);
 
@@ -418,6 +408,7 @@ $gutter-collapse: true !default;
   }
 }
 
+// Specific col without gutters
 @mixin col-gutter-expanded($breakpoint: null) {
   $breakpoint: format-breakpoint($breakpoint);
 
@@ -431,7 +422,7 @@ $gutter-collapse: true !default;
 }
 
 @mixin gutter-expanded() {
-  padding: 0 ($gutter / 2);
+  padding: $gutter;
 }
 
 // Create responsive classes for all additional options
@@ -439,18 +430,17 @@ $gutter-collapse: true !default;
 @mixin create-responsive-classes() {
   @each $breakpoint, $size in $breakpoints {
     @media (min-width: $size) {
-      // Base
+      // $base
+
       @include create-cols($breakpoint);
       @include generate-row-layout($breakpoint);
-      @include generate-row-content-stretch($breakpoint);
-
-      & > #{$col-namespace} {
-        @include generate-col-content-stretch($breakpoint);
-      }
 
       // Optional
+
       @if $row-align {
-        @include generate-row-align($breakpoint);
+        & > #{$col-namespace} {
+          @include generate-row-align($breakpoint);
+        }
       }
 
       @if $row-justify {
@@ -473,24 +463,19 @@ $gutter-collapse: true !default;
         }
       }
 
-      @if $gutter-collapse {
-        @include row-gutter-collapsed($breakpoint);
-        @include row-gutter-expanded($breakpoint);
-
-        & > #{$col-namespace} {
-          @include col-gutter-collapsed($breakpoint);
-          @include col-gutter-expanded($breakpoint);
-        }
-      }
-
       @if $col-align {
         & > #{$col-namespace} {
           @include generate-col-align($breakpoint);
         }
       }
+
+      @if $gutter-collapse {
+        @include generate-gutter-collapse($breakpoint);
+      }
     }
   }
 }
+
 
 // Base
 // ==========================================================================
@@ -498,14 +483,9 @@ $gutter-collapse: true !default;
   flex-direction: row;
   box-sizing: border-box;
   display: flex;
-
-  @include row-wrap($row-default-wrap);
-  @include row-align($row-default-align);
-
-  margin-right: -($gutter / 2);
-  margin-left: -($gutter / 2);
-
-  @include row-content-stretch($row-default-content-stretch);
+  flex-wrap: wrap;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
 }
 
 @mixin create-row-col() {
@@ -516,8 +496,16 @@ $gutter-collapse: true !default;
   flex-grow: 1;
   flex-shrink: 1;
   box-sizing: border-box;
-  max-width: 100%;
-  padding: 0 ($gutter / 2);
+
+  // Child items of a row section also have display flex to allow same-height (stretched) modules within multiple cols
+  // display: flex;
+  // max-width: 100%;
+  padding: $gutter;
+
+  > * {
+    // 	// All direct child elements within a col try to use up the maximum (and same) amount of available space
+    // flex-grow: 1;
+  }
 }
 
 @mixin generate-full-row() {
@@ -538,9 +526,6 @@ $gutter-collapse: true !default;
 
     &vertical {
       @include row-layout(vertical);
-
-      // Maintain cols as full width rows even if the default row alignment is set to 'start', 'center' or 'end'
-      align-items: stretch;
 
       // IE Fix to prevent cols from not having a height in a vertical row layout
       > #{$col-namespace} {
@@ -565,16 +550,19 @@ $gutter-collapse: true !default;
 
 // Generate all the things
 // ==========================================================================
-@mixin base() {
+@if ($auto-generate) {
   #{$row-namespace} {
     @include generate-full-row();
     @include generate-row-layout();
     @include generate-all-cols();
-    @include generate-row-content-stretch();
 
     // Optional
     @if $row-align {
       @include generate-row-align();
+    }
+
+    @if $row-justify {
+      @include generate-row-justify();
     }
 
     @if $row-wrap {
@@ -588,19 +576,7 @@ $gutter-collapse: true !default;
     }
 
     @if $col-offset {
-      & > #{$col-namespace} {
-        @include generate-col-offset();
-      }
-    }
-
-    @if $gutter-collapse {
-      @include row-gutter-collapsed();
-      @include row-gutter-expanded();
-
-      & > #{$col-namespace} {
-        @include col-gutter-collapsed();
-        @include col-gutter-expanded();
-      }
+      @include generate-col-offset();
     }
 
     @if $col-align {
@@ -609,17 +585,13 @@ $gutter-collapse: true !default;
       }
     }
 
-    & > #{$col-namespace} {
-      @include generate-col-content-stretch();
+    @if $gutter-collapse {
+      @include generate-gutter-collapse();
     }
 
     // Responsive classes
     @include create-responsive-classes();
   }
-}
-
-@if ($auto-generate) {
-  @include base();
 }
 
 #{$row-namespace} {

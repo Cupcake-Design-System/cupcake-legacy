@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="BAM">
+  <title>Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'default';
+    document.write('<link media="all" rel="stylesheet" href="' + flavor + '.css">');
+  </script>
+  <style>
+
+
+
+.block{
+position: relative;
+box-sizing: border-box;
+min-height: 1rem;
+padding: .75rem;
+margin-bottom: .75rem;
+background: #007FFF;
+border: 1px solid #FFF;
+border-radius: 2px;
+overflow: hidden;
+text-align: center;
+color: #fff
+}
+  </style>
+
+</head>
+
+<body>
+  <main class="c-container">
+    <header class="c-m-top-xl">
+      <h1 class="c-header-md c-text-primary-7 c-text-strong">
+        <script>
+          document.write(flavor.toUpperCase());
+        </script>
+        Theme
+      </h1>
+    </header>
+    <h3>This is only static html for testing and examples.</h3>
+    <h3>Please refer to the <a href="#">Cupcake Docs</a> for complete documentation.</h3>
+
+    {{> grid/grid }}
+    
+
+</body>
+</html>

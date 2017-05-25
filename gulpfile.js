@@ -271,7 +271,7 @@ gulp.task('lint', function() {
 
 gulp.task('html', function() {
   gulp.src(bases.app + '*.html')
-    .pipe(hb({ partials: './src/test/*.html'}))
+    .pipe(hb({ partials: './src/scss/**/**/*.html'}))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 });
@@ -281,7 +281,7 @@ gulp.task('watch', function() {
   gulp.watch(bases.scss + '**/*.scss', ['styles', 'flavors']);
   gulp.watch(bases.flavors + '**/*.scss', ['styles', 'flavors']);
   gulp.watch(bases.app + './*.html', ['html']);
-  gulp.watch(bases.app + './src/test/*.html', ['html']);
+  gulp.watch(bases.app + './src/scss/**/**/*.html', ['html']);
   gulp.watch(bases.app + 'img/*', ['img']);
 });
 
