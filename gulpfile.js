@@ -45,12 +45,28 @@ var postcssPlugins = [
 ];
 
 
-var tokens = {
-    bd:  'https://assets.brand.ai/ipreo/bd/_style-params.scss?key=r1QaADqhg',
-    pcs: 'https://assets.brand.ai/ipreo/pcs/_style-params.scss?key=r1QaADqhg',
-    buyside: 'https://assets.brand.ai/ipreo/buyside/_style-params.scss?key=r1QaADqhg',
-    northstar: 'https://assets.brand.ai/ipreo/north-star/_style-params.scss?key=r1QaADqhg'
-};
+var tokens = [
+  {
+    title: 'bd',
+    src:    'https://assets.brand.ai/ipreo/bd/_style-params.scss?key=By4YfCNVWZ',
+    dest:   bases.flavors + 'bd'
+  },
+  {
+    title: 'pcs',
+    src:    'https://assets.brand.ai/ipreo/pcs/_style-params.scss?key=r1QaADqhg',
+    dest:   bases.flavors + 'pcs'
+  },
+  {
+    title: 'buyside',
+    src:    'https://assets.brand.ai/ipreo/buyside/_style-params.scss?key=r1QaADqhg',
+    dest:   bases.flavors + 'buyside'
+  },
+  {
+    title: 'northstar',
+    src:    'https://assets.brand.ai/ipreo/northstar/_style-params.scss?key=r1QaADqhg',
+    dest:   './src/scss/config/'
+  }
+];
 
 
 colors.setTheme({
@@ -183,10 +199,12 @@ gulp.src(bases.app + 'img/*')
 // Northstar Tokens = gulp northstar-scrape
 // ------------------------------------------------
 
-gulp.task('tokens:northstar', function(){
-  return download(tokens.northstar)
-  .pipe(rename('_tokens.scss'))
-  .pipe(gulp.dest('./src/scss/config/'));
+gulp.task('tokens', function(){
+  return tokens.forEach(function(flavor){
+    download(flavor.src)
+    .pipe(rename('_tokens.scss'))
+    .pipe(gulp.dest(flavor.dest));
+  });
 });
 
 
