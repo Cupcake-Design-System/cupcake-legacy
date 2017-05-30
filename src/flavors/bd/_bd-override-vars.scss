@@ -1,0 +1,10 @@
+@import "tokens";
+
+$primary: $color-brand;
+
+$anchor-color: $primary;
+$anchor-color-hover: $primary;
+$anchor-decoration-hover: underline;
+$anchor-color-active: $color-primary-3;
+$anchor-color-disabled: $color-gray-6;
+

@@ -80,7 +80,7 @@
 
   &-hover,
   &:hover {
-    text-decoration: none;
+    text-decoration: $anchor-decoration-hover;
     color: $anchor-color-hover;
   }
 
