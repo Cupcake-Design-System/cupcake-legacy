@@ -38,8 +38,10 @@ $control-hover-border           : $primary !default;
 $control-active                 : $primary !default;
 /// //$control-active-background 
 //$control-active-background      : $primary !default;
+
 /// $control-active-border  
-$control-active-border          : #0079bd !default;
+$control-active-border          : $primary !default;
+
 /// $control-disabled-border 
 $control-disabled-border        : #e6e6e6 !default;
 /// $control-disabled-background
@@ -96,6 +98,8 @@ $control-sm-padding: 0.27em 0.5em !default;
 $control-lg-padding: 0.467em 0.6em !default;
 /// $control-xl
 $control-xl-padding: 0.563em 0.75em !default;
+/// $control-group-padding
+$control-group-padding: 1em !default;
 
 
 // FORM SIZES
