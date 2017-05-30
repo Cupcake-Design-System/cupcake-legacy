@@ -3,55 +3,55 @@
 ////
 
 /// $card-header-font-size:       
-$card-header-font-size:        14px !default;
+$card-header-font-size: 14px !default;
 
 /// $card-header-font-weight:     
-$card-header-font-weight:      bold !default;
+$card-header-font-weight: bold !default;
 
 /// $card-body-font-size:         
-$card-body-font-size:          12px !default;
+$card-body-font-size: 12px !default;
 
 /// $card-title-font-size:       
-$card-title-font-size:         18px !default;
+$card-title-font-size: 18px !default;
 
 /// $card-subtitle-font-size:     
-$card-subtitle-font-size:      16px !default;
+$card-subtitle-font-size: 16px !default;
 
 /// $card-text-color:            
-$card-text-color:              $global-text-color !default;
+$card-text-color: $global-text-color !default;
 
 /// $card-header-icon-color:      
-$card-header-icon-color:       $secondary !default;
+$card-header-icon-color: $secondary !default;
 
 /// $card-header-icon-hover-color: 
 $card-header-icon-hover-color: lighten($secondary, 10%) !default;
 
 /// $card-header-text-color:     
-$card-header-text-color:       $global-text-color !default;
+$card-header-text-color: $global-text-color !default;
 
 /// $card-border-color:          
-$card-border-color:            $global-border-color !default;
+$card-border-color: $global-border-color !default;
 
 /// $card-border-radius:         
-$card-border-radius:           2px !default;
+$card-border-radius: 2px !default;
 
 /// $card-bg:                    
-$card-bg:                      $white !default;
+$card-bg: $white !default;
 
 /// $card-padding:             
-$card-padding:                 0.9375rem !default;
+$card-padding: 0.9375rem !default;
 
 /// $card-shadow:            
-$card-shadow:                  1px 2px 5px $color-gray-2 !default;
+$card-shadow: 1px 2px 5px $color-gray-2 !default;
 
 /// $card-shadow-hover:  
-$card-shadow-hover:            $card-shadow !default;
+$card-shadow-hover: $card-shadow !default;
 
 /// $card-transition:            
-$card-transition:              none !default;
+$card-transition: none !default;
 
 /// $card-header-border-bottom: 
-$card-header-border-bottom:    1px solid rgba(177, 177, 177, 0.15) !default;
+$card-header-border-bottom: 1px solid rgba(177, 177, 177, 0.15) !default;
 
 /// $card-primary
 $card-primary: $primary;
@@ -66,12 +66,10 @@ $card-danger: $danger;
 $card-warning: $warning;
 
 // $card-colors:
-$card-colors:
-  ("primary", $card-primary)
+$card-colors: ("primary", $card-primary)
   ("success", $card-success)
   ("danger", $card-danger)
   ("warning", $card-warning) !default;
-
 
 @mixin card {
   border-radius: $card-border-radius;
@@ -107,6 +105,10 @@ $card-colors:
     display: flex;
     justify-content: center;
     padding: 0 $card-padding;
+
+    &-item {
+      padding-left: $space-xs;
+    }
 
     &-icon {
       padding-left: $space-xs;
