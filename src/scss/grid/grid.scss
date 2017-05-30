@@ -6,7 +6,7 @@ $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
 $row-default-wrap: 'wrap' !default;		// 'nowrap', 'wrap' or 'reverse'
 $row-default-align: 'stretch' !default; // 'stretch', 'start', 'center', 'end' or 'baseline'
-$row-default-content-stretch: 'stretch' !default;	// 'stretch' or 'unstretch'
+$row-default-content-stretch: 'unstretch' !default;	// 'stretch' or 'unstretch'
 $gutter: $spacing-global-gutter !default;
 $total-columns: 12 !default;
 $container-fixed-width: $sizing-container-fixed-max-width !default;

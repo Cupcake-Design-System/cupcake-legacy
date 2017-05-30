@@ -6,11 +6,11 @@
   .c-btn {
     position: relative;
     float: left;
-    border-right-width: 1px;
+    border-left-width: 0;
     border-radius: 0;
 
     &:first-child {
-      border-right-width: 0;
+      border-left-width: 1px;
       border-top-left-radius: $btn-radius;
       border-bottom-left-radius: $btn-radius;
     }
@@ -71,19 +71,19 @@
   }
 }
 
-.c-btn-group {
-  .c-btn-secondary:not(:disabled) {
-    &:hover {
-      border-right: 1px solid;
-      margin-right: -1px;
-      z-index: 1002;
+// .c-btn-group {
+//   .c-btn-secondary:not(:disabled) {
+//     &:hover {
+//       border-right: 1px solid;
+//       margin-right: -1px;
+//       z-index: 1002;
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
 
 
 .c-btn-group-sm {
