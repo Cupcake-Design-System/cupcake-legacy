@@ -16,7 +16,7 @@
     right: 0;
     width: 100%;
     bottom: 0;
-    top: 47px;
+    top: 43px;
   }
 
   &-open {
@@ -46,12 +46,12 @@
   @include notification-item();
 
   &-body {
-    margin-left: 3.5rem;
+   
   }
 
   &-left {
-    position: absolute;
     margin-top: 3px;
+    padding-right: 1rem;
   }
 }
 
