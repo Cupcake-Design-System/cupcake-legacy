@@ -37,6 +37,11 @@ $avatar-colors:
   ("danger", $avatar-danger)
   ("warning", $avatar-warning) !default;
 
+  // $avatar-sizes
+$avatar-sizes:
+  ("sm", 2rem)
+  ("lg", 3rem) !default;
+
 
 @mixin avatar {
   position: relative;
@@ -109,3 +114,7 @@ $avatar-colors:
 }
 
 
+@mixin avatar-size($size) {
+  width: $size;
+  height: $size;
+}

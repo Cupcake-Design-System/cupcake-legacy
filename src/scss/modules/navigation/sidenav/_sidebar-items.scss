@@ -2,11 +2,14 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
   &-item {
     @include side-nav-list-item;
+
     &-active {
       background-color: $sidebar-active-color;
       color: $white;
+
       .c-sidebar-nav-link {
         color: $white;
       }
@@ -31,7 +34,7 @@
   width: 20px;
 }
 
-.c-sidebar-nav-list>.c-sidebar-nav-list-item:nth-child(even)>.c-sidebar-nav-link {
+.c-sidebar-nav-list > .c-sidebar-nav-list-item:nth-child(even) > .c-sidebar-nav-link {
   background-color: $sidebar-even-row-bg;
 }
 
@@ -55,38 +58,42 @@
   display: none;
 }
 
-.c-sidebar-nav-level-two>.c-sidebar-nav-list-item {
-  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+.c-sidebar-nav-level-two > .c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent > .c-sidebar-nav-list-toggle {
     left: 50px;
   }
-  >.c-sidebar-nav-link {
+
+  > .c-sidebar-nav-link {
     padding-left: 70px;
   }
 }
 
-.c-sidebar-nav-level-three>.c-sidebar-nav-list-item {
-  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+.c-sidebar-nav-level-three > .c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent > .c-sidebar-nav-list-toggle {
     left: 70px;
   }
-  >.c-sidebar-nav-link {
+
+  > .c-sidebar-nav-link {
     padding-left: 90px;
   }
 }
 
-.c-sidebar-nav-level-four>.c-sidebar-nav-list-item {
-  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+.c-sidebar-nav-level-four > .c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent > .c-sidebar-nav-list-toggle {
     left: 90px;
   }
-  >.c-sidebar-nav-link {
+
+  > .c-sidebar-nav-link {
     padding-left: 110px;
   }
 }
 
-.c-sidebar-nav-level-five>.c-sidebar-nav-list-item {
-  &.c-sidebar-nav-list-item-parent>.c-sidebar-nav-list-toggle {
+.c-sidebar-nav-level-five > .c-sidebar-nav-list-item {
+  &.c-sidebar-nav-list-item-parent > .c-sidebar-nav-list-toggle {
     padding-left: 110px;
   }
-  >.c-sidebar-nav-link {
+
+  > .c-sidebar-nav-link {
     padding-left: 130px;
   }
 }
@@ -106,5 +113,5 @@
 
 .c-sidebar-nav-placeholder .placeholder-text {
   color: lighten($sidebar-text, 20);
-  margin: 0.75rem 0 0.25rem 0;
+  margin: 0.75rem 0 0.25rem;
 }

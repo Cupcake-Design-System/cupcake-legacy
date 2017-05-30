@@ -1,0 +1,52 @@
+@mixin center($pos: both) {
+  position: absolute;
+
+  @if ($pos == both) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @else if($pos == top) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  @else if($pos == left) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  @else if($pos == right) {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  @else if($pos == bottom) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+.c-center {
+  @include center(both);
+
+  &-top {
+    @include center(top);
+  }
+
+  &-right {
+    @include center(right);
+  }
+
+  &-bottom {
+    @include center(bottom);
+  }
+
+  &-left {
+    @include center(left);
+  }
+}

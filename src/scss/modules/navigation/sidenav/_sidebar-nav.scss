@@ -4,14 +4,17 @@
 
 .c-sidebar-nav {
   @include side-nav;
+
   &-closed {
     margin-left: -$sidebar-width;
   }
+
   &-header {
     position: relative;
     width: 100%;
     z-index: 9;
     margin-bottom: 25px;
+
     &-tabs {
       background-color: $sidebar-tab-bg-color;
       display: flex;
@@ -20,22 +23,26 @@
       margin: 0;
       width: 100%;
     }
+
     &-tab-item {
       border-right: 1px solid $sidebar-tab-border-color;
       border-bottom: 1px solid $sidebar-tab-border-color;
       display: flex;
       flex-grow: 1;
+
       &:hover {
         background-color: $white;
         color: $sidebar-text;
         border-bottom: 1px solid $white;
       }
+
       &:active,
       &-active {
         border-bottom: 1px solid $white;
         background-color: $white;
         color: $sidebar-text;
       }
+
       &-link {
         color: $sidebar-text;
         display: flex;
@@ -43,7 +50,8 @@
         justify-content: center;
         font-size: 0.75rem;
         font-weight: bold;
-        padding: 6px 0;
+        padding: 10px 0;
+
         &:hover,
         &:active {
           background-color: $white;
@@ -64,13 +72,14 @@
 
 .c-sidebar-nav-divider {
   border-top: 1px solid $sidebar-nav-divider;
-  box-shadow: 0px -2px 8px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -2px 8px -5px rgba(0, 0, 0, 0.5);
   color: $sidebar-nav-divider;
   cursor: row-resize;
   flex: 0 0 auto;
   height: 18px;
   line-height: 1rem;
   text-align: center;
+
   & .ic-divider {
     font-size: 4px;
   }
@@ -94,6 +103,7 @@
   top: 5px;
   width: 15px;
   font-size: 0.75rem;
+
   &:hover {
     color: darken($sidebar-text, 20);
     cursor: pointer;

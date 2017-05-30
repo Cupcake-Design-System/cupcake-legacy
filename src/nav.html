@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="BAM">
+  <title>Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script>
+    var flavor = location.search.replace(/(^\?)/g, '') || 'default';
+    document.write('<link media="all" rel="stylesheet" href="' + flavor + '.css">');
+  </script>
+  
+  <style>
+    .c-container {
+      max-width: 980px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="c-header">
+    <div class="c-header-left">
+      <div class="c-header-item">
+              <a href="javascript:void(0)" class="c-nav-logo">
+<svg width="90px" height="26px" viewBox="0 0 90 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-9.000000, -9.000000)" fill-rule="nonzero">
+            <g id="logo" transform="translate(9.000000, 9.000000)">
+                <path d="M28.0993671,21.5965455 L29.4664557,21.5965455 C29.9244304,21.5965455 29.9996203,21.6733636 29.9996203,22.1366364 L29.9996203,23.6139091 C29.9996203,24.0748182 29.9244304,24.1575455 29.4675949,24.1575455 L23.2587342,24.1575455 C22.7779747,24.1575455 22.7267089,24.1102727 22.7267089,23.6257273 L22.7267089,22.1602727 C22.7267089,21.6993636 22.7950633,21.6166364 23.2507595,21.6166364 L24.6178481,21.6166364 L24.6178481,9.05272727 L23.2507595,9.05272727 C22.7950633,9.05272727 22.7153165,8.97236364 22.7153165,8.50909091 L22.7153165,7.04363636 C22.7153165,6.55436364 22.7608861,6.50354545 23.2393671,6.50354545 L29.4482278,6.50354545 C29.9039241,6.50354545 29.9722785,6.58627273 29.9722785,7.04718182 L29.9722785,8.50909091 C29.9722785,8.97 29.8925316,9.048 29.4368354,9.048 L28.0697468,9.048 L28.0697468,21.5989091 L28.0993671,21.5965455 Z M38.4824051,14.1924545 C40.6013924,14.1924545 41.3418987,13.4951818 41.3418987,11.5333636 C41.3418987,9.70154545 40.6925316,9.11063636 38.7444304,9.11063636 L37.8102532,9.11063636 L37.8102532,14.1818182 L38.4824051,14.1818182 L38.4824051,14.1924545 Z M37.8102532,23.5997273 C37.8102532,24.0606364 37.7305063,24.1433636 37.2975949,24.1433636 L35.0191139,24.1433636 C34.5634177,24.1433636 34.5178481,24.0842727 34.5178481,23.5997273 L34.5178481,7.03181818 C34.5178481,6.54372727 34.5634177,6.49290909 35.0191139,6.49290909 L38.9153165,6.49290909 C40.8337975,6.49290909 41.8910127,6.69854545 42.6862025,7.21381818 C43.8140506,7.95836364 44.5112658,9.50181818 44.5112658,11.3265455 C44.5112658,14.8010909 42.3467089,17.0890909 39.031519,17.0890909 L37.8227848,17.0890909 L37.8227848,23.5961818 L37.8102532,23.5997273 Z M53.2355696,14.3815455 C55.5026582,14.3815455 56.3001266,13.6606364 56.3001266,11.6633636 C56.3001266,9.78427273 55.6051899,9.18154545 53.5203797,9.18154545 L52.5178481,9.18154545 L52.5178481,14.3697273 L53.2355696,14.3697273 L53.2355696,14.3815455 Z M60.754557,23.6115455 C60.8229114,23.7415455 60.8798734,23.8951818 60.8798734,24.0015455 C60.8798734,24.1315455 60.7773418,24.2379091 60.4583544,24.3206364 L58.168481,24.9706364 C57.9337975,25.0533636 57.9337975,25.0533636 57.8608861,25.0533636 C57.7355696,25.0533636 57.6558228,24.9706364 57.4997468,24.687 L53.8678481,17.1706364 L52.5007595,17.1706364 L52.5007595,24.0251818 C52.5007595,24.4979091 52.4210127,24.5806364 51.9539241,24.5806364 L49.5843038,24.5806364 C49.0944304,24.5806364 49.0431646,24.5215455 49.0431646,23.9424545 L49.0431646,7.05545455 C49.0431646,6.552 49.0932911,6.5 49.5820253,6.5 L53.7789873,6.5 C55.7122785,6.5 56.6897468,6.68436364 57.5920253,7.18545455 C59.0616456,8.03045455 59.7793671,9.53372727 59.7793671,11.6964545 C59.7793671,14.1239091 58.9306329,15.6271818 56.8970886,16.7357273 L60.7317722,23.6257273 L60.754557,23.6115455 Z M69.3216456,13.507 L72.9672152,13.507 C73.354557,13.507 73.4229114,13.5779091 73.4229114,14.0388182 L73.4229114,15.7642727 C73.4229114,16.2251818 73.354557,16.2960909 72.9672152,16.2960909 L69.3216456,16.2960909 L69.3216456,21.3117273 L73.9013924,21.3117273 C74.2887342,21.3117273 74.3570886,21.3885455 74.3570886,21.8518182 L74.3570886,23.5772727 C74.3570886,24.0618182 74.311519,24.1161818 73.8922785,24.1161818 L66.7834177,24.1161818 C66.3732911,24.1161818 66.3277215,24.0570909 66.3277215,23.5725455 L66.3277215,7.02709091 C66.3277215,6.53427273 66.3732911,6.48345455 66.7834177,6.48345455 L74.074557,6.48345455 C74.4049367,6.48345455 74.515443,6.55790909 74.515443,6.76709091 C74.515443,6.84154545 74.4926582,6.968 74.4755696,7.098 L74.0506329,8.85181818 C73.9822785,9.18272727 73.8751899,9.28909091 73.5687342,9.28909091 L69.3421519,9.28909091 L69.3421519,13.5081818 L69.3216456,13.507 Z M81.0307595,15.1509091 C81.0307595,19.1809091 81.8965823,21.1722727 83.6453165,21.1722727 C85.3951899,21.1722727 86.2826582,19.1832727 86.2826582,15.1981818 C86.2826582,10.9956364 85.4510127,9.07636364 83.6168354,9.07636364 C81.9421519,9.07636364 81.0307595,11.2154545 81.0307595,15.1509091 Z M88.0598734,8.19 C89.3312658,9.555 89.9396203,11.7874545 89.9396203,14.9310909 C89.9396203,20.7810909 87.783038,23.7592727 83.5712658,23.7592727 C79.4358228,23.7592727 77.3772152,20.852 77.3772152,15.0445455 C77.3772152,11.5428182 78.0653165,9.40727273 79.6101266,7.96545455 C80.7037975,6.981 82.1016456,6.47636364 83.7763291,6.47636364 C85.4510127,6.47636364 87.1029114,7.12636364 88.0667089,8.17818182 L88.0598734,8.19 Z" id="Shape" fill="#0079BD"></path>
+                <path d="M15.664557,7.46554545 L13.4863291,7.46554545 L13.4863291,24.2154545 L15.6622785,24.2154545 L15.6622785,26 L11.0198734,26 L11.0198734,5.681 L15.664557,5.681 L15.664557,7.46554545 M0,24.2154545 L2.17594937,24.2154545 L2.17594937,7.46554545 L0,7.46554545 L0,5.681 L4.64582278,5.681 L4.64582278,26 L0,26 L0,24.2154545" id="Shape" fill="#94DBFF"></path>
+                <polyline id="Shape" fill="#0079BD" points="9.04556962 5.681 6.42531646 5.681 6.42531646 26 9.23924051 26 9.23924051 5.681 9.04556962 5.681"></polyline>
+                <polyline id="Shape" fill="#EB8B2D" points="8.96240506 0 6.42189873 0 6.42189873 2.78554545 9.15037975 2.78554545 9.15037975 0 8.96240506 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+      </a>
+      </div>
+      <div class="c-header-item">
+        <span class="c-dropdown">
+          <a href="javascript:void(0);" class="c-product-switcher">
+            BD Advanced <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </a>
+          <ul class="c-dropdown-list c-dropdown-list-below">
+            <li><a href="javascript:void(0)" class="c-a">Option 1</a></li>
+            <li><a href="javascript:void(0)" class="c-a">Option 2</a></li>
+          </ul>
+        </span>
+      </div>
+    </div><!-- /.c-header-left -->
+    <div class="c-header-center">
+      <div class="c-input-container search-container">
+        <div class="c-input-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="c-input" placeholder="Search">
+      </div>
+    </div><!-- /.c-header-center -->
+    <div class="c-header-right">
+      <div class="c-header-item">
+        <a href="javascript:void(0);">
+         
+            <svg width="30px" height="31px" viewBox="0 0 50 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="symphony-logo-nav-light" fill-rule="nonzero">
+            <path d="M6.00774603,29.3156053 C6.00774603,32.4668684 6.76139153,35.4423158 8.10001587,38.0674737 L25.2330688,29.3156053 L6.00774603,29.3156053" id="Fill-9" fill="#E25C85"></path>
+            <path d="M18.1691481,39.0619737 C20.1529894,40.5087632 22.5933016,41.3623421 25.2330688,41.3623421 L25.2330688,29.3156053 L18.1691481,39.0619737" id="Fill-10" fill="#4CAAD4"></path>
+            <path d="M36.2700265,2.59965789 C32.8712593,1.18507895 29.1431905,0.403973684 25.2330688,0.403973684 C23.6976667,0.403973684 22.1917143,0.524763158 20.7219048,0.755605263 L25.2330688,29.3156053 L36.2700265,2.59965789" id="Fill-11" fill="#94C564"></path>
+            <path d="M25.2330688,29.3156054 L49.2627143,29.3156054 C49.2627143,24.0223422 47.5599841,19.1290264 44.6739101,15.1537106 L25.2330688,29.3156054" id="Fill-12" fill="#F9C638"></path>
+            <path d="M3.71602116,16.0972106 C1.36004233,19.9436843 0,24.4706054 0,29.3156054 L25.2330688,29.3156054 L3.71602116,16.0972106" id="Fill-14" fill="#595A57"></path>
+            <path d="M25.2330688,12.4507105 C21.5384656,12.4507105 18.1209577,13.6465263 15.3446508,15.6717632 L25.2330688,29.3156053 L25.2330688,12.4507105" id="Fill-16" fill="#959692"></path>
+            <path d="M25.2330688,51 C29.9838466,51 34.3772116,49.4619474 37.9446455,46.8582632 L25.2330688,29.3156053 L25.2330688,51" id="Fill-17" fill="#6F6F6C"></path>
+            <path d="M41.8494127,26.6770263 L25.2330688,29.3156053 L40.775836,35.7711316 C41.5990899,33.7821316 42.0542222,31.6025526 42.0542222,29.3156053 C42.0542222,28.4177368 41.9832751,27.5373158 41.8494127,26.6770263" id="Fill-18" fill="#3B3C3A"></path>
+        </g>
+    </g>
+</svg>
+
+        </a>
+      </div>
+      <div class="c-header-item">
+        <a href="javascript:void(0);" id="show-notifications">
+          <span class="c-badge c-badge-rounded c-badge-danger c-badge-notifications">8</span>
+        </a>
+      </div>
+      <div class="c-header-item">
+        <span class="c-dropdown">
+          <a class="c-user-profile" href="javascript:void(0);">
+            <span class="c-avatar c-avatar-sm">
+              <img src="https://unsplash.it/200?image=1011">
+            </span>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </a>
+          <ul class="c-dropdown-list c-dropdown-list-below c-dropdown-list-right">
+            <li><a href="javascript:void(0)" class="c-a">Help</a></li>
+            <li><a href="javascript:void(0)" class="c-a">Contact Support</a></li>
+            <li><a href="javascript:void(0)" class="c-a">Settings</a></li>
+            <li><a href="javascript:void(0)" class="c-a">Log Out</a></li>
+          </ul>
+        </span>
+      </div>
+    </div><!-- /.c-header-right -->
+  </header>
+
+  <main class="c-wrapper">
+    <aside class="c-sidebar-nav">
+      <button class="c-sidebar-nav-toggle"><i class="fa fa-angle-double-left"></i></button>
+<div class="c-sidebar-nav-header">
+        <ul class="c-sidebar-nav-header-tabs">
+          <li class="c-sidebar-nav-header-tab-item  c-sidebar-nav-header-tab-item-active"><a class="c-sidebar-nav-header-tab-item-link" href="javascript:void(0);" id="tabMenu">Menu</a></li>
+          <li class="c-sidebar-nav-header-tab-item"><a class="c-sidebar-nav-header-tab-item-link" href="javascript:void(0);" id="tabTodo">To-Do</a></li>
+          <li class="c-sidebar-nav-header-tab-item"><a class="c-sidebar-nav-header-tab-item-link" href="javascript:void(0);" id="tabContacts">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="c-sidebar-nav-body">
+        <ul class="c-sidebar-nav-list">
+          <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-active">
+            <a class="c-sidebar-nav-link" href="javascript:void(0);"><i class="fa fa-dashboard c-sidebar-nav-icon" aria-hidden="true"></i>Dashboard</a>
+          </li>
+          <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+            <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+            <a class="c-sidebar-nav-link" href="javascript:void(0);"><i class="fa fa-comment-o c-sidebar-nav-icon" aria-hidden="true"></i>Communications</a>
+            <ul class="c-sidebar-nav-list c-sidebar-nav-level-two">
+              <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Mail</a>
+                <ul class="c-sidebar-nav-list c-sidebar-nav-level-three">
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Inbox</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Sent</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Drafts</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Outbox</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                    <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Tracking</a>
+                    <ul class="c-sidebar-nav-list c-sidebar-nav-level-four">
+                      <li class="c-sidebar-nav-list-item">
+                        <a class="c-sidebar-nav-link" href="javascript:void(0);">Advanced Tracking</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                    <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Templates</a>
+                    <ul class="c-sidebar-nav-list c-sidebar-nav-level-four">
+                      <li class="c-sidebar-nav-list-item">
+                        <a class="c-sidebar-nav-link" href="javascript:void(0);">Manage Templates</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="c-sidebar-nav-list-item">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Chat (co-located)</a>
+              </li>
+              <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Dialing Session Assistant</a>
+                <ul class="c-sidebar-nav-list c-sidebar-nav-level-three">
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Call List Library</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Call List (Instance)</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+            <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+            <a class="c-sidebar-nav-link" href="javascript:void(0);"><i class="fa fa-file-text c-sidebar-nav-icon" aria-hidden="true"></i>Reports</a>
+            <ul class="c-sidebar-nav-list c-sidebar-nav-level-two">
+              <li class="c-sidebar-nav-list-item">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Create Report</a>
+              </li>
+              <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Saved Report</a>
+                <ul class="c-sidebar-nav-list c-sidebar-nav-level-three">
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Report (Instance)</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="c-sidebar-nav-list-item">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Data Alerts</a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+            <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+            <a class="c-sidebar-nav-link" href="javascript:void(0);"><i class="fa fa-cogs c-sidebar-nav-icon" aria-hidden="true"></i>Administration</a>
+            <ul class="c-sidebar-nav-list c-sidebar-nav-level-two">
+              <li class="c-sidebar-nav-list-item">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Company</a>
+              </li>
+              <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Data</a>
+                <ul class="c-sidebar-nav-list c-sidebar-nav-level-three">
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Files</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="c-sidebar-nav-list-item c-sidebar-nav-list-item-parent">
+                <span class="c-sidebar-nav-list-toggle" title=""><i class="fa fa-caret-right"></i></span>
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Personnel</a>
+                <ul class="c-sidebar-nav-list c-sidebar-nav-level-three">
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Users</a>
+                  </li>
+                  <li class="c-sidebar-nav-list-item">
+                    <a class="c-sidebar-nav-link" href="javascript:void(0);">Teams</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="c-sidebar-nav-list-item">
+                <a class="c-sidebar-nav-link" href="javascript:void(0);">Communication</a>
+              </li>
+            </ul>
+          </li>
+        </ul><!-- /.c-sidebar-nav-list -->
+      </div>
+      <!--<div class="c-sidebar-nav-divider">
+        <i class="fa fa-circle ic-divider"></i>
+        <i class="fa fa-circle ic-divider"></i>
+        <i class="fa fa-circle ic-divider"></i>
+      </div>
+      <div class="c-sidebar-nav-footer">
+        <div class="c-sidebar-nav-placeholder c-text-center c-m-top-xl">
+          <i class="fa fa-area-chart placeholder-icon"></i>
+          <p class="placeholder-text">You have no active data cards.</p>
+          <a href="javascript:void(0);" class="c-text-primary" id="add-new-card"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a>
+        </div>
+      </div>-->
+    </aside><!-- /.c-sidebar-nav -->
+
+
+  </main>
+
+  <div class="c-notification">
+    <div class="c-notification-header">
+      <a href="#" class="c-notification-filter c-text-primary">All Notifications <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+      <a href="#" class="c-notification-settings"><i class="fa fa-gear" aria-hidden="true"></i></a>
+    </div>
+    <div class="c-notification-body">
+      <a class="c-notification-item c-notification-item-unread" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SS"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item c-notification-item-unread" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default avatar-square" data-text="GS"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Goldman Sachs</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+      <a class="c-notification-item" href="javascript:void(0);">
+        <div class="c-notification-item-left">
+          <span class="c-avatar c-avatar-default" data-text="SJ"></span>
+        </div>
+        <div class="c-notification-item-body">
+          <div class="c-notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</div>
+          <ul class="c-notification-info">
+            <li class="c-notification-author c-text-primary">Steve Johnson</li>
+            <li class="c-notification-date">Sep 15, 2017</li>
+            <li class="c-notification-time">11:45 AM</li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </div><!-- /.notification-pane -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="./demo-js/plugin/jquery-resizable.min.js"></script>
+  <script src="./demo-js/nav.js"></script>
+  <script src="./demo-js/notifications.js"></script>
+
+</body>
+</html>

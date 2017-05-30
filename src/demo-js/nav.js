@@ -1,27 +1,30 @@
   $(document).ready(function() {
-    // left nav elements
-    var $leftNavWrapper = $(".c-sidebar-nav-body");
-    var $leftNavLink = $(".c-sidebar-nav-link");
-    var $leftNavChildList = $(".c-sidebar-nav-list")
-    var $navToggle = $(".c-sidebar-nav-toggle");
-    // left navigation sub menu toggle
-    $leftNavLink.on("click", function() {
-      $(this)
-        .next($leftNavChildList)
-        .slideToggle(200);
+
+    // sidebar nav elements
+    var $sidebarNavContainer = $(".c-sidebar-nav")
+    var $sidebarNavBody = $(".c-sidebar-nav-body");
+    var $sidebarNavListToggle = $(".c-sidebar-nav-list-toggle");
+    var $sidebarNavLinkName =$(".c-sidebar-nav-link");
+    var $sidebarNavChildList = ".c-sidebar-nav-list";
+    var $sidebarNavToggle = $(".c-sidebar-nav-toggle");
+
+    // sidebar nav sub menu toggle
+    $sidebarNavListToggle.on("click", function() {
+      $(this).find(".fa").toggleClass("fa-caret-right fa-caret-down");
+      $(this).siblings($sidebarNavChildList).slideToggle(200);
+      $(this).parent().toggleClass("open");
     })
-    $leftNavLink.on("click", function() {
-      $(this).parent()
-        .toggleClass("open")
-    })
-    // left menu adjustable panels
-    $leftNavWrapper.resizable({
+
+    // sidebar nav adjustable panels
+    $sidebarNavBody.resizable({
       handleSelector: ".c-sidebar-nav-divider",
       resizeWidth: false
     });
-    // left navigation open/close toggle
-    $navToggle.on("click", function() {
-      $(".c-sidebar-nav").toggleClass("c-sidebar-nav-closed");
+
+    // sidebar navigation open/close toggle
+    $sidebarNavToggle.on("click", function() {
+      $(this).find(".fa").toggleClass("fa-angle-double-left fa-angle-double-right");
+      $sidebarNavContainer.toggleClass("c-sidebar-nav-closed");
     })
 
     // Dropdown controls
@@ -34,9 +37,10 @@
         $(".c-dropdown-list").slideUp("fast");
       }
     });
+
     // Create nav tooltips
     // Loop through all nav links and copy the text to the title attribute for tooltips
-    $leftNavLink.each(function() {
+    $sidebarNavLinkName.each(function() {
       var $this = $(this);
       var title = $this.text();
       $this.attr('title', title);

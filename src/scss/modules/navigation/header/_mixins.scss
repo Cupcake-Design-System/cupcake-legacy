@@ -6,14 +6,14 @@ $header-borders: $color-gray-1;
 $header-logo-max-width: 90px;
 $header-height: 50px;
 
-@mixin header{
+@mixin header {
   background-color: $header-bg;
   border-bottom: 1px solid $header-borders;
   align-items: center;
   align-content: space-between;
   display: flex;
   height: $header-height;
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 10;
   top: 0;

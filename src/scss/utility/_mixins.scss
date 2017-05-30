@@ -136,10 +136,13 @@
 }
 
 @mixin vertical-gradient-topdown($from, $to, $filter: true, $stop: 100%) {
-  background: $from; /* Old browsers */
-  background: linear-gradient(to bottom, $from 0%, $to $stop); /* W3C */
-  @if (filter == true) {
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}', GradientType=0); /* IE6-9 */
+  background: $from;
+  /* Old browsers */
+  background: linear-gradient(to bottom, $from 0%, $to $stop);
+  /* W3C */
+    @if (filter == true) {
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}', GradientType=0);
+    /* IE6-9 */
   }
 }
 
@@ -183,3 +186,4 @@
     @content;
   }
 }
+

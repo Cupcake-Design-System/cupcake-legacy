@@ -12,3 +12,13 @@
     background: $avatar-bg-color;
   }
 }
+
+
+@each $avatar-size in $avatar-sizes {
+  $avatar-size-namespace: nth($avatar-size, 1);
+  $avatar-size: nth($avatar-size, 2);
+
+  .c-avatar-#{$avatar-size-namespace} {
+    @include avatar-size($avatar-size);
+  }
+}
