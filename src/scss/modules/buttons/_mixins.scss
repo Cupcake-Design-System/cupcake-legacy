@@ -40,6 +40,8 @@
 
   @if $border == false {
     border-color: transparent;
+    background-size: 100% calc(100% + 2px);
+    background-position-y: -1px;
   }
 
   @else {
@@ -50,9 +52,17 @@
     background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
   }
 
-  &:active, &-active {
+  &:active,
+  &-active {
     background: $bg;
-    border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+
+    @if $border == false {
+      border-color: transparent;
+    }
+
+    @else {
+      border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+    }
   }
 
    &:hover {
@@ -123,6 +133,21 @@
   box-shadow: $btn-shadow-active;
 }
 
+@mixin btn-active-selected () {
+
+  &-active {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      border-color: transparent;
+      background: $btn-active-selected;
+      box-shadow: $btn-shadow-active;
+    }
+  }
+}
+
 /* Button Disabled
 * ================ ================ ================ ================ */
 @mixin btn-disabled {
@@ -162,11 +187,9 @@
     background-image: linear-gradient(lighten($bg, 6%), $bg 66%, darken($bg, 4%));
   }
 
-  &:not(:disabled) {
-    &:hover {
-      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
-      background-color: $bg-hover;
-      z-index: 1002;
-    }
+  &:hover {
+    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+    background-color: $bg-hover;
+    z-index: 1002;
   }
 }
