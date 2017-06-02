@@ -40,6 +40,10 @@
       @include btn-outline($btn-danger-bg);
     }
   }
+
+  @if $btn-active-selected {
+    @include btn-active-selected;
+  }
 }
 
 .c-btn {

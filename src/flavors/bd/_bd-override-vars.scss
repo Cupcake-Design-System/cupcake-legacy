@@ -1,6 +1,9 @@
 @import "tokens";
 
+
+
 $primary: $color-brand;
+
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -8,3 +11,51 @@ $anchor-decoration-hover: underline;
 $anchor-color-active: $color-primary-3;
 $anchor-color-disabled: $color-gray-6;
 
+
+$btn-font-family: $font-body-font-family;
+$btn-font-size: $font-body-font-size;
+
+$btn-default-padding-v: 0.5em;
+$btn-default-padding-h: 1.25em;
+$btn-font-weight: 600;
+
+$btn-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+$btn-active-selected: #9494A1;
+$btn-shadow: false;
+
+$btn-gradient: true;
+
+$btn-border: false;
+
+$btn-disabled-c: rgba($font-body-color, 0.35);
+$btn-disabled-bg: $color-gray-0;
+$btn-disabled-bd: 1px solid $color-gray-3;
+$btn-disabled-text-shadow: none;
+$btn-disabled-opacity: 1;
+
+$btn-sm-font: 12px;
+$btn-sm-padding: .25em .63em;
+$btn-md-font: $btn-font-size;
+$btn-md-padding: .5em 1.075em;
+$btn-lg-font: 15px;
+$btn-lg-padding: .6em 1em;
+$btn-xl-font: 16px;
+$btn-xl-padding: .688em .9375em;
+
+
+$dropdown-glued            : false ;
+$dropdown-list-margin      : 2px 0 0;
+$dropdown-list-padding     : 5px 0 ;
+$dropdown-padding          : 5px 15px ;
+$dropdown-border           : 1px solid rgba(0, 0, 0, 0.18) ;
+$dropdown-color            : $font-body-color ;
+$dropdown-color-hover      : $primary ;
+$dropdown-background-color : white ;
+$dropdown-background-hover : $color-gray-0 ;
+$dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2) ;
+$dropdown-font-size        : $font-body-font-size ;
+$dropdown-font-weight      : normal;
+$dropdown-width            : 100% ;
+$dropdown-radius           : 4px ;
+$dropdown-divider-margin   : 5px ;
