@@ -80,14 +80,14 @@ $avatar-warning: $warning;
 // 4. Badges
 // ---------
 
-$badge-padding: 0.25em 0.5em;
+$badge-padding: 0.25em;
 $badge-border-width: 1px;
 $badge-border-style: solid;
 $badge-border-radius: 3px;
 $badge-border-radius-rounded: 30em;
 $badge-font-size: 1rem;
 $badge-font-weight: bold;
-$badge-line-height: 1.2;
+$badge-line-height: 1;
 $badge-xs: 0.5rem;
 $badge-sm: 0.7rem;
 $badge-lg: 1.25rem;
@@ -391,9 +391,9 @@ $space-xxxl: $spacing-xxxl;
 
 $switch-style: "default";
 $default-switch-height: 1.95rem;
-$default-switch-radius: rem-calc(50);
-$default-switch-font-size: rem-calc(10);
-$large-switch-font-size: rem-calc(15);
+$default-switch-radius: 50px;
+$default-switch-font-size: 10px;
+$large-switch-font-size: 15px;
 $switch-label-off: #d3dae0;
 $switch-label-on: $white;
 $switch-handle: $white;
