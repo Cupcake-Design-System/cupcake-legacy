@@ -47,8 +47,6 @@
 }
 
 .c-btn {
-  @include btn-size(md);
-
   &-sm {
     @include btn-size(sm);
   }
@@ -66,6 +64,37 @@
   display: block;
   width: 100%;
   text-align: center;
+}
+
+.c-btn-link {
+  @include btn-base;
+
+  color: $primary;
+  box-shadow: none;
+
+  &:hover {
+    color: lighten($primary, 15);
+  }
+
+  &:active {
+    color: darken($primary, 15);
+    box-shadow: none;
+  }
+
+  &-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      color: $btn-disabled-c;
+      line-height: 1;
+      cursor: not-allowed;
+      appearance: none;
+      box-shadow: none;
+      opacity: $btn-disabled-opacity;
+    }
+  }
 }
 
 .c-btn-disabled,
