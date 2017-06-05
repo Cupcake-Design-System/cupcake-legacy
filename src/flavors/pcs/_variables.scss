@@ -209,9 +209,9 @@ $dropdown-divider-margin: 0;
 
 $file-upload-padding: 0.5rem 1rem;
 $file-upload-margin: 0.5rem;
-$file-upload-color: $color-gray-6;
-$file-upload-bg: #f5fafd;
-$file-upload-bd: 2px dashed $global-border-color;
+$file-upload-color: $color-primary-6;
+$file-upload-bg: $color-primary-0;
+$file-upload-bd: 2px dashed $color-primary-6;
 $file-upload-bd-radius: 6px;
 $file-upload-fs: 0.8rem;
 $file-upload-fa-fs: 1.25rem;
