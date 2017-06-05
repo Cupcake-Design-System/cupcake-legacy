@@ -120,12 +120,12 @@ gulp.task('clean:dist', function() {
 
 
 gulp.task('styles', function() {
-  return gulp.src(bases.scss + 'default.scss')
+  return gulp.src(bases.scss + 'northstar.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
-    .pipe(rename('default.css'))
+    .pipe(rename('northstar.css'))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))    
