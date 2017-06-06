@@ -3,6 +3,8 @@
 
 
 $primary: $color-brand;
+$global-radius: 2px;
+
 
 
 $anchor-color: $primary;
@@ -44,18 +46,72 @@ $btn-xl-font: 16px;
 $btn-xl-padding: .688em .9375em;
 
 
-$dropdown-glued            : false ;
+$dropdown-glued            : false;
 $dropdown-list-margin      : 2px 0 0;
-$dropdown-list-padding     : 5px 0 ;
-$dropdown-padding          : 5px 15px ;
-$dropdown-border           : 1px solid rgba(0, 0, 0, 0.18) ;
-$dropdown-color            : $font-body-color ;
-$dropdown-color-hover      : $primary ;
-$dropdown-background-color : white ;
-$dropdown-background-hover : $color-gray-0 ;
-$dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2) ;
-$dropdown-font-size        : $font-body-font-size ;
+$dropdown-list-padding     : 5px 0;
+$dropdown-padding          : 5px 15px;
+$dropdown-border           : 1px solid rgba(0, 0, 0, 0.18);
+$dropdown-color            : $font-body-color;
+$dropdown-color-hover      : $primary;
+$dropdown-background-color : white;
+$dropdown-background-hover : $color-gray-0;
+$dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+$dropdown-font-size        : $font-body-font-size;
 $dropdown-font-weight      : normal;
-$dropdown-width            : 100% ;
-$dropdown-radius           : 4px ;
-$dropdown-divider-margin   : 5px ;
+$dropdown-width            : 100%;
+$dropdown-radius           : 4px;
+$dropdown-divider-margin   : 5px;
+
+
+$control-font-size           : $font-body-font-size;
+$control-line-height         : 1.3;
+$control-placeholder-c       : rgba($font-body-color, 0.6);
+$control-placeholder-hover-c : $font-body-color;
+
+$control-border           : $color-gray-3; //#d9d9d9
+$control-hover-border     : #bababa;
+$control-active-border    : #52afe4;
+
+$control-padding-v        : .358em;
+$control-padding-h        : .571em;
+$control-shadow           : inset 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+$control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
+
+$control-xs  : 12px;
+$control-sm  : 13px;
+$control-lg  : 15px;
+$control-xl  : 16px;
+$control-xxl : 18px;
+$control-xs-padding: 0.125em 0.416em;
+$control-sm-padding: 0.27em 0.5em;
+$control-lg-padding: 0.467em 0.6em;
+$control-xl-padding: 0.563em 0.75em;
+
+$control-success-c  : #4DAA0B;
+$control-success-bg : #F3F8EF;
+$control-warning-c  : #F8C000;
+$control-warning-bg : #FCFBE7;
+$control-danger-c   : #E98F88;
+$control-danger-bg  : #FFF6F5;
+
+
+$card-header-font-size:        rem-calc(15);
+$card-header-font-weight:      600;
+$card-body-font-size:          rem-calc(14);
+
+$card-padding-v:               10px;
+$card-padding-h:               15px;
+
+$card-menu-font-size: $font-body-font-size;
+$card-header-icon-color: $color-gray-4;
+$card-header-icon-hover-color: darken($color-gray-4, 28%);
+$card-header-border-bottom:    1px solid $color-dividers;
+
+$card-border:                  none;
+$card-border-radius:           1px;
+$card-shadow:                  0 2px 2px 0 rgba(65, 65, 81, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+$card-shadow-hover:            0 4px 4px 0 rgba(0, 122, 194, 0.07), 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+$card-transition:              box-shadow 0.15s ease-in;
+
+
+
