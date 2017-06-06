@@ -6,7 +6,7 @@
 $pagination-margin-bottom        : $spacing-global-margin !default;
 
 /// $pagination-gradients            
-$pagination-gradients            : true !default;
+$pagination-gradients            : false !default;
 
 /// $pagination-item-spacing        
 $pagination-item-spacing         : 4px !default;
@@ -21,16 +21,16 @@ $pagination-font-size-sm         : 12px !default;
 $pagination-font-size-lg         : 14px !default;
 
 /// $pagination-item-padding        
-$pagination-item-padding         : 3px 5px !default;
+$pagination-item-padding         : 3px !default;
 
 /// $pagination-item-padding-sm      
-$pagination-item-padding-sm      : 1px 5px !default;
+$pagination-item-padding-sm      : 1px !default;
 
 /// $pagination-item-padding-lg  
 $pagination-item-padding-lg      : 5px !default;
 
 /// $pagination-item-current-padding 
-$pagination-item-current-padding : 3px 10px !default;
+$pagination-item-current-padding : 3px !default;
 
 /// $pagination-item-border-radius   
 $pagination-item-border-radius   : 3px !default;
@@ -39,7 +39,7 @@ $pagination-item-border-radius   : 3px !default;
 $pagination-item-color           : #0a0a0a !default;
 
 /// $pagination-item-bg           
-$pagination-item-bg              : #eeeeee !default;
+$pagination-item-bg              : $color-gray-1 !default;
 
 /// $pagination-item-current-bg     
 $pagination-item-current-bg      : $primary !default;

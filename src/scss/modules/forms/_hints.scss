@@ -4,6 +4,7 @@
   transform-origin: top left;
   color: $control-hint-color;
   font-size: $control-hint-font-size;
+  margin-top: 5px;
   opacity: 0;
   pointer-events: none;
   transition: $control-hint-transition;

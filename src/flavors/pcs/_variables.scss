@@ -80,14 +80,14 @@ $avatar-warning: $warning;
 // 4. Badges
 // ---------
 
-$badge-padding: 0.25em 0.5em;
+$badge-padding: 0.25em;
 $badge-border-width: 1px;
 $badge-border-style: solid;
 $badge-border-radius: 3px;
 $badge-border-radius-rounded: 30em;
 $badge-font-size: 1rem;
 $badge-font-weight: bold;
-$badge-line-height: 1.2;
+$badge-line-height: 1;
 $badge-xs: 0.5rem;
 $badge-sm: 0.7rem;
 $badge-lg: 1.25rem;
@@ -117,11 +117,12 @@ $btn-default-padding-v: 0.7em;
 $btn-default-padding-h: 1.75em;
 $btn-font-weight: bold;
 $btn-border-width: 1px;
-$btn-radius: 2px;
+$btn-radius: 3px;
 $btn-shadow-active: inset 0 1px 2px rgba(black, 0.52);
 $btn-active-selected: false;
 $btn-shadow: true;
-$btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25);
+$btn-shadow-inset: 0 1px rgba(white, .4), inset 0 0 0 1px rgba(white, .12);
+$btn-shadow-secondary: inset -1px 1px 0 0 rgba(254, 254, 254, 0.75), inset 1px -1px 0 0 rgba(254, 254, 254, 0.75);
 $btn-gradient: false;
 $btn-border: true;
 $btn-disabled-c: $color-gray-5;
@@ -208,9 +209,9 @@ $dropdown-divider-margin: 0;
 
 $file-upload-padding: 0.5rem 1rem;
 $file-upload-margin: 0.5rem;
-$file-upload-color: $color-gray-6;
-$file-upload-bg: #f5fafd;
-$file-upload-bd: 2px dashed $global-border-color;
+$file-upload-color: $color-primary-6;
+$file-upload-bg: $color-primary-0;
+$file-upload-bd: 2px dashed $color-primary-6;
 $file-upload-bd-radius: 6px;
 $file-upload-fs: 0.8rem;
 $file-upload-fa-fs: 1.25rem;
@@ -390,9 +391,9 @@ $space-xxxl: $spacing-xxxl;
 
 $switch-style: "default";
 $default-switch-height: 1.95rem;
-$default-switch-radius: rem-calc(50);
-$default-switch-font-size: rem-calc(10);
-$large-switch-font-size: rem-calc(15);
+$default-switch-radius: 50px;
+$default-switch-font-size: 10px;
+$large-switch-font-size: 15px;
 $switch-label-off: #d3dae0;
 $switch-label-on: $white;
 $switch-handle: $white;

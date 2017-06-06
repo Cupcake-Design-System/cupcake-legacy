@@ -18,7 +18,7 @@ $default-switch-font-size: rem-calc(10) !default;
 $large-switch-font-size: rem-calc(15) !default;
 
 /// $switch-label-off        
-$switch-label-off: #d3dae0 !default;
+$switch-label-off: $color-gray-2 !default;
 
 /// $switch-label-on         
 $switch-label-on: $white !default;

@@ -21,6 +21,7 @@
   .c-btn {
     border-radius: 0;
     z-index: 2;
+    box-shadow: none;
 
     &:first-child {
       border-top-left-radius: $control-border-radius;

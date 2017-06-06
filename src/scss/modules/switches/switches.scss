@@ -48,6 +48,7 @@
 .c-switch-disabled {
   pointer-events: none;
   background: $disabled;
+  opacity: 0.5;
 
   &.c-switch-input:checked,
   .c-switch-label,

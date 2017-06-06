@@ -11,10 +11,10 @@
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   font-family: $btn-font-family;
-  color: white;
+  color: $color-gray-6;
   text-align: center;
   text-decoration: none;
-  border: 1px solid;
+  border: 1px solid transparent;
   border-radius: $btn-radius;
   cursor: pointer;
 
@@ -22,9 +22,6 @@
     box-shadow: $btn-shadow-inset;
   }
 
-  // &:hover {
-  //   background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
-  // }
 
   &:active {
     box-shadow: $btn-shadow-active;
@@ -65,10 +62,9 @@
     }
   }
 
-   &:hover {
-    // background: lighten($bg, 2);
+  &:hover {
     background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
-  } 
+  }
 }
 
 /* Button Outline
@@ -176,7 +172,7 @@
   color: $color;
 
   @if $btn-shadow == true {
-    box-shadow: 0 1px 0 0 rgba(33, 37, 41, 0.1);
+    box-shadow: $btn-shadow-secondary;
   }
 
   @else {
