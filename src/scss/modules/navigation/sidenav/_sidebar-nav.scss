@@ -51,7 +51,7 @@
         font-size: 0.75rem;
         font-weight: bold;
         padding: 10px 0;
-
+/* stylelint-disable */
         &:hover,
         &:active {
           background-color: $white;
@@ -61,6 +61,7 @@
     }
   }
 }
+/* stylelint-enable */
 
 .c-sidebar-nav-body {
   flex: 0 0 auto;

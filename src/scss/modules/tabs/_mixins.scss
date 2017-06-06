@@ -95,7 +95,7 @@ $tab-font-size-lg: 20px !default;
 
   @if $tabs-full-width-border {
     margin-bottom: -1px;
-  }  
+  }
 
   a {
     color: $tabs-color-active;
@@ -109,7 +109,6 @@ $tab-font-size-lg: 20px !default;
 }
 
 @mixin tab-item-active {
-
   &,
   & a {
     color: $tabs-color-active;

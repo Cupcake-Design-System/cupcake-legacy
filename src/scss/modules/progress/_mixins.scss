@@ -6,13 +6,13 @@
 $progress-height: 1rem !default;
 
 /// $progress-background
-$progress-background: #cccccc !default;
+$progress-background: $color-gray-1 !default;
 
 /// $progress-margin-bottom
 $progress-margin-bottom: 1rem !default;
 
 /// $progress-radius
-$progress-radius: 2px !default;
+$progress-radius: $global-radius !default;
 
 /// $progress-primary
 $progress-primary: $primary;

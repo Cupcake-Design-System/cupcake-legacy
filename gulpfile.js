@@ -309,7 +309,7 @@ gulp.task('watch', function() {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {

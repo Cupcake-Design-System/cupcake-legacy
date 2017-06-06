@@ -55,8 +55,6 @@
   }
 }
 
-
-
 // Emphasized text
 .c-text-em,
 .c-text-italic {
@@ -93,7 +91,6 @@
   &-disabled,
   &[disabled],
   &:disabled {
-
     &,
     &:hover,
     &:focus,
@@ -150,6 +147,7 @@
     content: '';
     display: table;
   }
+
   &::after {
     clear: both;
   }

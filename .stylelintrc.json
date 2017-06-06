@@ -1,6 +1,5 @@
 {
   "extends": "stylelint-config-standard",
-  "defaultSeverity": "warning",
  "plugins": [
     "stylelint-declaration-use-variable"
   ],
@@ -11,7 +10,6 @@
     "block-opening-brace-space-before": "always",
     "color-hex-case": "lower",
     "color-hex-length": "long",
-    "color-named": "never",
     "color-no-invalid-hex": true,
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",
@@ -31,7 +29,7 @@
     "function-url-quotes": "always",
     "indentation": 2,
     "length-zero-no-unit": true,
-    "max-nesting-depth": 3,
+    "max-nesting-depth": 4,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
     "no-missing-end-of-source-newline": true,
@@ -59,14 +57,13 @@
       }
     ],
     "selector-list-comma-newline-after": "always",
-    "selector-max-compound-selectors": 3,
+    "selector-max-compound-selectors": 4,
     "selector-no-id": true,
-    "selector-no-qualifying-type": false,
+    "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-element-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
-    "stylelint-disable-reason": "always-before",
     "value-no-vendor-prefix": true,
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
@@ -81,11 +78,12 @@
         "at-root",
         "return",
         "content",
+        "elseif",
         "else",
         "if"
       ]
     }],
     "max-empty-lines": 2,
-    "unit-whitelist": ["em", "rem", "s", "ms", "%", "vh", "px", "deg"]
+    "unit-whitelist": ["em", "rem", "s", "ms", "%", "vh", "vw", "px", "deg"]
   }
 }

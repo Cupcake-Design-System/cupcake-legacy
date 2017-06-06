@@ -57,10 +57,8 @@ $footer-trans-color     : $black !default;
     z-index: map-get($zindex, footer);
 
     .c-footer-right {
-      .c-footer-link {
-        a {
-          color: $footer-trans-color;
-        }
+      .c-footer-link a {
+        color: $footer-trans-color;
       }
     }
   }
