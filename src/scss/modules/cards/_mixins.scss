@@ -21,6 +21,9 @@ $card-subtitle-font-size: 16px !default;
 $card-text-color: $global-text-color !default;
 
 /// $card-header-icon-color:      
+$card-menu-font-size: 100% !default;
+
+/// $card-header-icon-color:
 $card-header-icon-color: $secondary !default;
 
 /// $card-header-icon-hover-color: 
@@ -30,7 +33,7 @@ $card-header-icon-hover-color: lighten($secondary, 10%) !default;
 $card-header-text-color: $global-text-color !default;
 
 /// $card-border-color:          
-$card-border-color: $global-border-color !default;
+$card-border: 1px solid $global-border-color !default;
 
 /// $card-border-radius:         
 $card-border-radius: $global-radius !default;
@@ -38,10 +41,13 @@ $card-border-radius: $global-radius !default;
 /// $card-bg:                    
 $card-bg: $white !default;
 
-/// $card-padding:             
-$card-padding: 0.9375rem !default;
+/// $card-padding-v:
+$card-padding-v: 0.9375rem !default;
 
-/// $card-shadow:            
+/// $card-padding-h:
+$card-padding-h: 0.9375rem !default;
+
+/// $card-shadow:
 $card-shadow: 1px 2px 5px $color-gray-2 !default;
 
 /// $card-shadow-hover:  
@@ -73,8 +79,8 @@ $card-colors:
   ("warning", $card-warning) !default;
 
 @mixin card {
+  border: $card-border;
   border-radius: $card-border-radius;
-  border: 1px solid $card-border-color;
   background-color: $card-bg;
   color: $card-text-color;
   box-shadow: $card-shadow;
@@ -95,7 +101,7 @@ $card-colors:
     align-items: center;
     display: flex;
     flex-grow: 1;
-    padding: $card-padding;
+    padding: $card-padding-v $card-padding-h;
     font-size: $card-header-font-size;
     font-weight: $card-header-font-weight;
   }
@@ -105,7 +111,8 @@ $card-colors:
     cursor: pointer;
     display: flex;
     justify-content: center;
-    padding: 0 $card-padding;
+    font-size: $card-menu-font-size;
+    padding: 0 $card-padding-h;
 
     &-item {
       padding-left: $space-xs;
@@ -123,7 +130,7 @@ $card-colors:
 }
 
 @mixin card-content {
-  padding: $card-padding;
+  padding: $card-padding-v $card-padding-h;
   font-weight: normal;
 
   &-title {
@@ -142,8 +149,8 @@ $card-colors:
 }
 
 @mixin card-footer {
-  padding: $card-padding;
-  border-top: 1px solid $card-border-color;
+  padding: $card-padding-v $card-padding-h;
+  border-top: $card-border;
   border-radius: 0 0 $card-border-radius $card-border-radius;
 }
 
