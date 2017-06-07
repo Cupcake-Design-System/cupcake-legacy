@@ -3,67 +3,64 @@
 ////
 
 /// $modals-z-index           
-$modals-z-index                         : 1050 !default;
+$modals-z-index: 1050 !default;
 
 /// $modals-dialog-top-magin  
-$modals-dialog-top-magin                : 30px !default;
+$modals-dialog-top-magin: 30px !default;
 
 /// $modals-width             
-$modals-width                           : 600px !default;
+$modals-width: 600px !default;
 
 /// $modals-border-radius    
-$modals-border-radius                   : .3rem !default;
+$modals-border-radius: .3rem !default;
 
 /// $modals-box-shadow
-$modals-shadow                          : 0 6px 20px 0 rgba($global-text-color, 0.8) !default;
+$modals-shadow: 0 6px 20px 0 rgba($global-text-color, 0.8) !default;
 
 /// $modals-header-border    
-$modals-header-border                   : 1px solid #e5e5e5 !default;
+$modals-header-border: 1px solid #e5e5e5 !default;
 
 /// $modals-transition        
-$modals-transition                      : opacity .35s !default;
+$modals-transition: opacity .35s !default;
 
 /// $modals-horizontal-padding
-$modals-horizontal-padding              : 30px !default;
+$modals-horizontal-padding: 30px !default;
 
 /// $modals-small-padding
-$modals-vertical-padding                : 15px !default;
+$modals-vertical-padding: 15px !default;
 
 /// $modals-close-top-right
-$modals-close-top-right                 : 10px !default;
+$modals-close-top-right: 10px !default;
 
 /// $modals-close-padding 
-$modals-close-padding                   : 0 2px !default;
+$modals-close-padding: 0 2px !default;
 
 /// $modals-close-button-color
-$modals-close-button-color              : $color-gray-6 !default;
+$modals-close-button-color: $color-gray-6 !default;
 
 /// $modals-close-button-size
-$modals-close-button-size               : 11px !default;
+$modals-close-button-size: 11px !default;
 
 /// $modals-default-color
-$modals-default-color                   : $global-text-color !default;
+$modals-default-color: $global-text-color !default;
 
 /// $modals-close-button-font-size
-$modals-close-button-font-size          : 14px !default;
+$modals-close-button-font-size: 14px !default;
 
 /// $modals-title-font-size
-$modals-title-font-size                 : 18px !default;
+$modals-title-font-size: 18px !default;
 
 /// $modals-line-height-title
-$modals-line-height-title               : 1.4 !default;
+$modals-line-height-title: 1.4 !default;
 
 /// $modals-close-button-transform-degrees
-$modals-close-button-transform-degrees  : 45deg !default;
+$modals-close-button-transform-degrees: 45deg !default;
 
 /// $modals-background-color
-$modals-background-color                : #ffffff !default;
+$modals-background-color: #ffffff !default;
 
 /// $modals-backdrop-background-color
-$modals-backdrop-background-color       : #000000 !default;
-
-
-
+$modals-backdrop-background-color: #000000 !default;
 
 @mixin ipreo-modal-mixin() {
   display: none;
@@ -121,43 +118,45 @@ $modals-backdrop-background-color       : #000000 !default;
   }
 
   &-close {
+    position: absolute;
+    top: $modals-close-top-right;
+    right: $modals-close-top-right;
+    padding: $modals-close-padding;
+    opacity: 0.64;
+    transition: $modals-transition;
+    height: $modals-close-button-size;
+    width: $modals-close-button-size + 5;
+    cursor: pointer;
+
+    &::before,
+    &::after {
       position: absolute;
-      top: $modals-close-top-right;
-      right: $modals-close-top-right;
-      padding: $modals-close-padding;
-      opacity: 0.64;
-      transition: $modals-transition;
-      height: $modals-close-button-size;
-      width: $modals-close-button-size + 5;
-      cursor: pointer;
+      content: '';
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: $modals-close-button-color;
+    }
 
-      &:before,
-      &:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: $modals-close-button-color;
-      }
+    &::before {
+      transform: rotate($modals-close-button-transform-degrees);
+    }
 
-      &:before {
-        transform: rotate($modals-close-button-transform-degrees);
-      }
-      &:after {
-        transform: rotate(- $modals-close-button-transform-degrees);
-      }
+    &::after {
+      transform: rotate(- $modals-close-button-transform-degrees);
+    }
 
     &:hover {
       opacity: 1;
     }
 
-    // button element reset
+    /* stylelint-disable */
     padding: 0;
-    border: none;
+    border: 0;
     background: none;
     border-radius: 0;
   }
+  /* stylelint-enable */
 
   &-title {
     margin: 0;

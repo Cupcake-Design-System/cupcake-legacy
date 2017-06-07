@@ -49,10 +49,11 @@
     $value: strip-unit($value) / strip-unit($base) * 1rem;
   }
 
+/* stylelint-disable */
   // Turn 0rem into 0
   @if $value == 0rem {
     $value: 0;
   }
-
+/* stylelint-enable */
   @return $value;
 }

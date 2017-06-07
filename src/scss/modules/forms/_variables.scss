@@ -23,7 +23,7 @@ $control-border                 : $global-border-color !default;
 /// $control-border-width 
 $control-border-width           : 1px !default;
 /// $control-border-radius 
-$control-border-radius          : 3px !default;
+$control-border-radius          : $global-radius !default;
 /// $control-border-radius-rounded 
 $control-border-radius-rounded  : 30em !default;
 /// $control-shadow 

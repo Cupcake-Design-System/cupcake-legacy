@@ -36,7 +36,7 @@ $card-header-text-color: $global-text-color !default;
 $card-border: 1px solid $global-border-color !default;
 
 /// $card-border-radius:         
-$card-border-radius: 2px !default;
+$card-border-radius: $global-radius !default;
 
 /// $card-bg:                    
 $card-bg: $white !default;
@@ -72,7 +72,8 @@ $card-danger: $danger;
 $card-warning: $warning;
 
 // $card-colors:
-$card-colors: ("primary", $card-primary)
+$card-colors:
+  ("primary", $card-primary)
   ("success", $card-success)
   ("danger", $card-danger)
   ("warning", $card-warning) !default;

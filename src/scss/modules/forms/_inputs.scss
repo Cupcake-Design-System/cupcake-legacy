@@ -17,6 +17,7 @@
 
 .c-input-icon {
   @include vertical-center;
+
   left: $control-padding-h;
   color: $control-border;
 
@@ -59,11 +60,12 @@ select.c-input {
     }
 
     &:focus {
-
       @if $bg {
         border-color: $color;
         background-color: transparent;
-      } @else {
+      }
+
+      @else {
         border-color: $control-active-border;
       }
     }

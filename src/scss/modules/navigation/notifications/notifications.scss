@@ -45,10 +45,6 @@
 .c-notification-item {
   @include notification-item();
 
-  &-body {
-   
-  }
-
   &-left {
     margin-top: 3px;
     padding-right: 1rem;
