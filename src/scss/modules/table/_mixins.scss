@@ -12,10 +12,10 @@ $table-border-color: $global-border-color !default;
 $table-border-radius: 0 !default;
 
 /// $table-border           
-$table-border: 1px solid $table-border-color !default;
+$table-border: 0 !default;
 
 /// $table-head-border-bottom:
-$table-head-border-bottom: 0 !default;
+$table-head-border-bottom: 1px solid $table-border-color !default;
 
 /// $table-padding           
 $table-padding: 8px 10px 10px !default;
@@ -42,7 +42,7 @@ $table-striped-background: darken($white, 3%) !default;
 $table-stripe: odd !default;
 
 /// $table-head-background   
-$table-head-background: $color-gray-2 !default;
+$table-head-background: transparent !default;
 
 /// $table-transparent-head-background   
 $table-transparent-head-background: $color-gray-0 !default;
@@ -66,7 +66,7 @@ $table-cell-font-size: 12px !default;
 $table-sm-font-size: 13px !default;
 
 /// $table-shadow            
-$table-shadow: 0 1px 3px rgba(0, 0, 0, .2) !default;
+$table-shadow: 0 !default;
 
 /// $show-header-for-stacked
 $show-header-for-stacked: false !default;

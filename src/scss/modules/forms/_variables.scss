@@ -3,7 +3,7 @@
 ////
 
 /// $control-font-size 
-$control-font-size              : 16px !default;
+$control-font-size              : 12px !default;
 /// $control-font-weight
 $control-font-weight            : normal !default;
 /// $control-line-height
@@ -23,11 +23,11 @@ $control-border                 : $global-border-color !default;
 /// $control-border-width 
 $control-border-width           : 1px !default;
 /// $control-border-radius 
-$control-border-radius          : $global-radius !default;
+$control-border-radius          : 2px !default;
 /// $control-border-radius-rounded 
 $control-border-radius-rounded  : 30em !default;
 /// $control-shadow 
-$control-shadow                 : none !default;
+$control-shadow                 : inset 0 1px 1px 0 rgba(33, 37, 41, .1) !default;
 /// $control-transition 
 $control-transition             : border-color 0.1s ease-in !default;
 /// $control-hover  
@@ -83,7 +83,7 @@ $fieldset-legend-padding        : 0.3em 0 !default;
 /// $control-xs
 $control-xs: 0.67em !default;
 /// $control-sm
-$control-sm: 0.83em !default;
+$control-sm: 12px !default;
 /// $control-lg
 $control-lg: 1.17em !default;
 /// $control-xl
@@ -93,9 +93,9 @@ $control-xxl: 2em !default;
 /// $control-xs
 $control-xs-padding: 0.125em 0.416em !default;
 /// $control-sm
-$control-sm-padding: 0.27em 0.5em !default;
+$control-sm-padding: 0.2em 0.5em !default;
 /// $control-lg
-$control-lg-padding: 0.467em 0.6em !default;
+$control-lg-padding: 0.7em 0.6em !default;
 /// $control-xl
 $control-xl-padding: 0.563em 0.75em !default;
 /// $control-group-padding

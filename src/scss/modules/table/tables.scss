@@ -213,8 +213,7 @@ table.c-table-border {
   display: table-cell;
   font-size: $table-cell-font-size;
   vertical-align: middle;
-  border-right: 1px solid $table-border-color;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid $table-border-color;
 
   @include last-child() {
     border-right: 0;
@@ -247,3 +246,6 @@ table.c-table-border {
     }
   }
 }
+
+
+

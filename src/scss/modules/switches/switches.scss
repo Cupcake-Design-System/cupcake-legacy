@@ -47,13 +47,13 @@
 
 .c-switch-disabled {
   pointer-events: none;
-  background: $disabled;
+  background: $switch-disabled;
   opacity: 0.5;
 
   &.c-switch-input:checked,
   .c-switch-label,
   .c-switch-handle {
-    background: $disabled;
+    background: $switch-disabled;
     pointer-events: none;
   }
 }
