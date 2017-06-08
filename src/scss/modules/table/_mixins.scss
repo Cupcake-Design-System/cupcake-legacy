@@ -68,7 +68,7 @@ $table-sm-font-size: 13px !default;
 /// $table-shadow            
 $table-shadow: 0 1px 3px rgba(0, 0, 0, .2) !default;
 
-/// $show-header-for-stacked : 
+/// $show-header-for-stacked
 $show-header-for-stacked: false !default;
 
 /// $table-state-selected 
@@ -104,6 +104,10 @@ $table-states: ("selected", $table-state-selected)
     tfoot {
       border: $table-border;
       background-color: $table-background;
+    }
+
+    tbody {
+      font-size: $table-cell-font-size;
     }
 
     // Table head
@@ -243,7 +247,7 @@ $table-states: ("selected", $table-state-selected)
 @mixin table-stack($header: $show-header-for-stacked) {
   @if $header {
     thead {
-      th::first-child {
+      th:first-child {
         display: block;
       }
 
