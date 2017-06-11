@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "precommit": "lint-staged",
     "build": "gulp build",
     "deploy": "gulp deploy",
     "test": "gulp lint",
@@ -16,6 +17,9 @@
     "backstop": "npm run build & npm run reference & npm run compare",
     "reference": "backstop reference --configPath=backstop.config.js",
     "compare": "backstop test --configPath=backstop.config.js"
+  },
+  "lint-staged": {
+    "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",
@@ -37,6 +41,8 @@
     "gulp-sourcemaps": "^2.4.0",
     "gulp-style-extract": "^1.0.2",
     "gulp-stylelint": "^3.7.0",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
     "list-selectors": "^2.0.0",
     "octophant": "^1.0.1",
     "run-sequence": "^1.2.2",

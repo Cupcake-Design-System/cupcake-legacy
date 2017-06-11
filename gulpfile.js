@@ -277,10 +277,8 @@ gulp.task('lint', function() {
   return gulp.src(bases.scss + '**/*.scss')
     .pipe(stylelint({
       failAfterError: true,
-      reportOutputDir: 'reports/lint',
       reporters: [
-        {formatter: 'verbose', console: true},
-        {formatter: 'json', save: 'lint-report.json'}
+        {formatter: 'verbose', console: true}
       ],
       debug: true
     }));
