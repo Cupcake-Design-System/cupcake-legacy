@@ -47,13 +47,13 @@
 
 .c-switch-disabled {
   pointer-events: none;
-  background: $disabled;
+  background: $switch-disabled;
   opacity: 0.5;
 
   &.c-switch-input:checked,
   .c-switch-label,
   .c-switch-handle {
-    background: $disabled;
+    background: $switch-disabled;
     pointer-events: none;
   }
 }
@@ -82,14 +82,18 @@
 }
 
 .c-switch-sm {
-  .c-switch-label::after {
-    left: 5px;
-    margin-top: -0.35em;
-  }
+  .c-switch-label {
+    font-size: 8px;
 
-  .c-switch-label::before {
-    right: 3px;
-    margin-top: -0.35em;
+    &::after {
+      margin-top: -0.35em;
+      left: 4px;
+    }
+
+    &::before {
+      right: 2px;
+      margin-top: -0.35em;
+    }
   }
 }
 

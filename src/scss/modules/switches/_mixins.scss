@@ -26,6 +26,9 @@ $switch-label-on: $white !default;
 /// $switch-handle           
 $switch-handle: $white !default;
 
+/// $switch-disabled           
+$switch-disabled: $color-primary-0 !default;
+
 // $switch-sizes:
 $switch-sizes: (
   xs: rem-calc(30),

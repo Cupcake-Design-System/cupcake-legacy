@@ -33,7 +33,7 @@ $pagination-item-padding-lg      : 5px !default;
 $pagination-item-current-padding : 3px !default;
 
 /// $pagination-item-border-radius   
-$pagination-item-border-radius   : 3px !default;
+$pagination-item-border-radius   : $global-radius !default;
 
 /// $pagination-item-color         
 $pagination-item-color           : #0a0a0a !default;

@@ -38,7 +38,6 @@ table.c-table-condensed {
 
 // Different table borders
 table.c-table-border {
-
   &-horizontal {
     tr {
       border-bottom: 1px solid $table-border-color;
@@ -64,14 +63,13 @@ table.c-table-border {
     td {
       border: 1px solid $table-border-color;
     }
-  }  
+  }
 }
 
 // Table row and cell states
 .c-table {
   //raising specificity to overrie table stripes
   &#{&} {
-
     @each $state, $color in $table-states {
       .c-table-row-#{$state},
       .c-table-cell-#{$state} {
@@ -215,17 +213,16 @@ table.c-table-border {
   display: table-cell;
   font-size: $table-cell-font-size;
   vertical-align: middle;
-  border-right: 1px solid $table-border-color;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid $table-border-color;
 
   @include last-child() {
-    border-right: none;
+    border-right: 0;
   }
 
   @include bp($until: md) {
     padding: $table-cell-padding-sm;
     display: block;
-    border-right: none;
+    border-right: 0;
     text-align: left;
   }
 }

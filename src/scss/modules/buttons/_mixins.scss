@@ -63,7 +63,7 @@
   }
 
   &:hover {
-    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
   }
 }
 
@@ -130,7 +130,6 @@
 }
 
 @mixin btn-active-selected () {
-
   &-active {
     &,
     &:hover,
@@ -184,7 +183,7 @@
   }
 
   &:hover {
-    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.10));
+    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     background-color: $bg-hover;
     z-index: 1002;
   }

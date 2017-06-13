@@ -46,26 +46,6 @@
   }
 }
 
-.c-btn {
-  &-sm {
-    @include btn-size(sm);
-  }
-
-  &-lg {
-    @include btn-size(lg);
-  }
-
-  &-xl {
-    @include btn-size(xl);
-  }
-}
-
-.c-btn-block {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
 .c-btn-link {
   @include btn-base;
 
@@ -96,6 +76,29 @@
     }
   }
 }
+
+
+.c-btn,
+.c-btn-link {
+  &-sm {
+    @include btn-size(sm);
+  }
+
+  &-lg {
+    @include btn-size(lg);
+  }
+
+  &-xl {
+    @include btn-size(xl);
+  }
+}
+
+.c-btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 
 .c-btn-disabled,
 .c-btn[disabled] {

@@ -1,4 +1,3 @@
-
 //───────────────────────────────────
 // Brand Map
 //───────────────────────────────────
@@ -53,7 +52,6 @@ $brand-map: (
   )
 );
 
-
 @function color($color, $tone: 5) {
   @if map-has-key($brand-map, $color) {
     @return map-get(map-get($brand-map, $color), $tone);
@@ -78,7 +76,7 @@ $brand-map: (
       }
 
       .c-bd-#{$palette} {
-        border: 2px solid $tone_value;
+        border: 1px solid $tone_value;
       }
     }
   }
@@ -101,6 +99,7 @@ $brand-map: (
     }
   }
 }
+
 .c-bg-none {
   background-color: transparent;
 }

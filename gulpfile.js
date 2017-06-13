@@ -277,10 +277,8 @@ gulp.task('lint', function() {
   return gulp.src(bases.scss + '**/*.scss')
     .pipe(stylelint({
       failAfterError: true,
-      reportOutputDir: 'reports/lint',
       reporters: [
-        {formatter: 'verbose', console: true},
-        {formatter: 'json', save: 'lint-report.json'}
+        {formatter: 'verbose', console: true}
       ],
       debug: true
     }));
@@ -309,7 +307,7 @@ gulp.task('watch', function() {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {

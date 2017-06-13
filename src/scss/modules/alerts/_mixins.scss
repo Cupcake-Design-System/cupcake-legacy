@@ -15,10 +15,10 @@ $alert-border:                1px solid !default;
 $alert-margin:                0 0 1rem 0 !default;
 
 /// $alert-padding:  
-$alert-padding:               6px !default;
+$alert-padding:               8px !default;
 
 /// $alert-font-size: 
-$alert-font-size:             14px !default;
+$alert-font-size:             12px !default;
 
 /// $alert-font-family: 
 $alert-font-family:           $global-font-family !default;
@@ -30,7 +30,7 @@ $alert-font-weight:           bold !default;
 $alert-font-color:            $secondary !default;
 
 /// $alert-radius:  
-$alert-radius:                4px !default;
+$alert-radius:                $global-radius !default;
 
 /// $alert-shadows: 
 $alert-shadows:               false !default;
@@ -99,12 +99,14 @@ $alert-icon-width:            40px !default;
   }
 }
 
+/* stylelint-disable */
 @mixin alert-size($padding) {
   padding-top: $padding;
   padding-right: $padding;
   padding-bottom: $padding;
   padding-left: $padding;
 }
+/* stylelint-enable */
 
 @mixin alert-style($bg, $color: $bg, $style: $alert-style, $shadows: $alert-shadows) {
   @if $style == outline {

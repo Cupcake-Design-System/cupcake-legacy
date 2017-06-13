@@ -24,6 +24,7 @@ $global-sidebar-background-color: #f5f5f5 !default;
   order: 2;
 
   @media (min-width: 480px) and (max-width: 1024px) {
-    padding: $space-sm;    
+    padding: $space-sm;
   }
 }
+

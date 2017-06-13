@@ -78,7 +78,7 @@ $bp-media-type: all !default;
 //  @include bp-show-breakpoints;
 // @include bp-show-breakpoints((L, XL), (S: 300px, L: 800px, XL: 1200px));
 @mixin bp-show-breakpoints($show-breakpoints: $bp-show-breakpoints, $breakpoint: $breakpoints) {
-  body:before {
+  body::before {
     background-color: lighten(#0082de, 60%);
     border-bottom: 1px solid lighten(#0082de, 50%);
     border-left: 1px solid lighten(#0082de, 50%);

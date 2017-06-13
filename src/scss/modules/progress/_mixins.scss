@@ -3,16 +3,16 @@
 ////
 
 /// $progress-height
-$progress-height: 1rem !default;
+$progress-height: 2rem !default;
 
 /// $progress-background
-$progress-background: #cccccc !default;
+$progress-background: $color-gray-1 !default;
 
 /// $progress-margin-bottom
 $progress-margin-bottom: 1rem !default;
 
 /// $progress-radius
-$progress-radius: 2px !default;
+$progress-radius: $global-radius !default;
 
 /// $progress-primary
 $progress-primary: $primary;
@@ -30,7 +30,7 @@ $progress-colors:
 @mixin loader-stripe($color) {
   background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
   height: $progress-height;
-  background-size: $progress-height $progress-height;
+  background-size: $progress-height+1 $progress-height+1;
   animation: stripes 3s linear infinite;
   border-radius: inherit;
 }

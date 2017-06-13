@@ -12,7 +12,7 @@ $badge-border-width: 1px !default;
 $badge-border-style: solid !default;
 
 /// $badge-border-radius:
-$badge-border-radius: 3px !default;
+$badge-border-radius: $global-radius !default;
 
 /// $badge-border-radius-rounded:
 $badge-border-radius-rounded: 30em !default;
