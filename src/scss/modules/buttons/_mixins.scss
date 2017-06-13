@@ -3,7 +3,7 @@
 @mixin btn-base {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: $btn-v-align;
   white-space: nowrap;
   outline: 0;
   line-height: $btn-line-height;

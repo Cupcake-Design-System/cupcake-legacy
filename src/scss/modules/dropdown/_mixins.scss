@@ -32,6 +32,9 @@ $dropdown-background-hover: darken($default, 2%) !default;
 /// $dropdown-box-shadow 
 $dropdown-box-shadow      : 0 2px 7px rgba(0, 0, 0, 0.2) !default;
 
+/// $dropdown-font-family
+$dropdown-font-family     : arial !default;
+
 /// $dropdown-font-size 
 $dropdown-font-size       : 12px !default;
 
@@ -58,6 +61,7 @@ $dropdown-divider-margin  : 0 !default;
   width: $dropdown-width;
   list-style-type: none;
   background: $dropdown-background-color;
+  font-family: $dropdown-font-family;
   color: $dropdown-color;
   border: $dropdown-border;
   box-shadow: $dropdown-box-shadow;
