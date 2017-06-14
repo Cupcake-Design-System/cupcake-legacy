@@ -1,0 +1,271 @@
+////
+/// @group loaders
+////
+
+/// $c-color-loader-indicator
+$c-color-loader-indicator: white !default;
+
+/// $c-color-btn-progress-bar
+$c-color-btn-progress-bar: white !default;
+
+/// $c-btn-in-progress-text-color
+$c-btn-in-progress-text-color: white !default;
+
+/// $c-degree-loader-indicator
+$c-degree-loader-indicator: 140deg !default;
+
+/// $c-bg-full-loader
+$c-bg-full-loader: white !default;
+
+/// $c-degree-btn-progress-bar
+$c-degree-btn-in-progress-indicator: -45deg !default;
+
+/// $c-loader-indicator
+$c-loader-indicator: linear-gradient($c-degree-loader-indicator, rgba($c-color-loader-indicator, 0), rgba($c-color-loader-indicator, .6) 50%, rgba($c-color-loader-indicator, 0) 100%) !default;
+
+/// $c-loader-movement
+$c-loader-movement: c-loader-iteration 2s infinite !default;
+
+/// $c-color-loader-bar
+$c-color-loader-bar: #dee2e6 !default;
+
+/// $c-btn-in-progress-color-bg
+$c-btn-in-progress-color-bg: #f0f0f0 !default;
+
+/// $c-btn-in-progress-color-bg-primary
+$c-btn-in-progress-color-bg-primary: #b3d9ee !default;
+
+/// $c-btn-in-progress-color-bg-success
+$c-btn-in-progress-color-bg-success: #b6eed7 !default;
+
+/// $c-btn-in-progress-color-bg-danger
+$c-btn-in-progress-color-bg-danger: #f8c9c5 !default;
+
+/// $c-btn-in-progress-color-bg-warning
+$c-btn-in-progress-color-bg-warning: #fce7be !default;
+
+/// $c-btn-in-progress-color-bg-info
+$c-btn-in-progress-color-bg-info: #c8e6ee !default;
+
+/// $c-height-of-bar
+$c-height-of-bar: 10px !default;
+
+/// $c-border-radius-bar
+$c-border-radius-bar: 2px !default;
+
+/// $c-btn-bd-default-disabled
+$c-btn-bd-default-disabled: #d9d9d9 !default;
+
+/// $c-overlay-loader-color
+$c-overlay-loader-color: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .2) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .2) 50%, rgba($c-color-btn-progress-bar, .2) 75%, transparent 75%, transparent), $primary !default;
+
+/// $c-btn-progress-default-color
+$c-btn-progress-default-color: $global-text-color !default;
+
+/// $c-btn-in-progress-bg
+$c-btn-in-progress-bg: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg !default;
+
+/// $c-btn-in-progress-bg-primary
+$c-btn-in-progress-bg-primary:  linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-primary !default;
+
+/// $c-btn-in-progress-bg-success
+$c-btn-in-progress-bg-success: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-success !default;
+
+/// $c-btn-in-progress-bg-danger
+$c-btn-in-progress-bg-danger: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-danger !default;
+
+/// $c-btn-in-progress-bg-warning
+$c-btn-in-progress-bg-warning: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-warning !default;
+
+/// $c-btn-in-progress-bg-info
+$c-btn-in-progress-bg-info: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-info !default;
+
+/// $c-btn-in-progress-bg-size
+$c-btn-in-progress-bg-size:         40px !default;
+
+/// $c-btn-in-progress-anim-params
+$c-btn-in-progress-anim-params:     2s linear infinite !default;
+
+@mixin c-skeleton-bar($top, $right, $left: 0, $position: absolute) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  height: $c-height-of-bar;
+  background: $c-color-loader-bar;
+  border-radius: $c-border-radius-bar;
+  background-image: $c-loader-indicator;
+  background-size: 70% 40px;
+  background-position: -200% 0;
+  background-repeat: no-repeat;
+  animation: $c-loader-movement;
+}
+
+
+@mixin c-skeleton-loader-mixin {
+  @include c-skeleton-bar(0, 0, $position: relative);
+
+  margin: 25px 0;
+
+  &::after {
+    @include c-skeleton-bar(-15px, 5%);
+
+    content: '';
+  }
+
+  &::before {
+    @include c-skeleton-bar(15px, 10%);
+
+    content: '';
+  }
+}
+
+@mixin c-btn-in-progress {
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited,
+  &[disabled],
+  &.disabled,
+  fieldset[disabled] &,
+  fieldset.disabled & {
+    color: rgba($c-btn-progress-default-color, .3);
+    white-space: nowrap;
+    text-shadow: none;
+    box-shadow: none;
+    background: $c-btn-in-progress-bg;
+    background-repeat: repeat;
+    cursor: wait;
+    background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+    animation: c-btn-progress-bar-stripes $c-btn-in-progress-anim-params;
+  }
+
+  &.c-btn {
+    &-primary {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &[disabled],
+      &.disabled,
+      fieldset[disabled] &,
+      fieldset.disabled & {
+        color: $c-btn-in-progress-text-color;
+        background: $c-btn-in-progress-bg-primary;
+        background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+      }
+    }
+
+    &-success {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &[disabled],
+      &.disabled,
+      fieldset[disabled] &,
+      fieldset.disabled & {
+        color: $c-btn-in-progress-text-color;
+        background: $c-btn-in-progress-bg-success;
+        background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+      }
+    }
+
+    &-danger {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &[disabled],
+      &.disabled,
+      fieldset[disabled] &,
+      fieldset.disabled & {
+        color: $c-btn-in-progress-text-color;
+        background: $c-btn-in-progress-bg-danger;
+        background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+      }
+    }
+
+    &-warning {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &[disabled],
+      &.disabled,
+      fieldset[disabled] &,
+      fieldset.disabled & {
+        color: $c-btn-in-progress-text-color;
+        background: $c-btn-in-progress-bg-warning;
+        background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+      }
+    }
+
+    &-info {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited,
+      &[disabled],
+      &.disabled,
+      fieldset[disabled] &,
+      fieldset.disabled & {
+        color: $c-btn-in-progress-text-color;
+        background: $c-btn-in-progress-bg-info;
+        background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+      }
+    }
+  }
+}
+
+@mixin c-overlay-loader {
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: $c-overlay-loader-color;
+  background-repeat: repeat;
+  background-size: $c-btn-in-progress-bg-size $c-btn-in-progress-bg-size, 100% 100%;
+  animation: c-btn-progress-bar-stripes $c-btn-in-progress-anim-params;
+}
+
+
+@mixin c-full-page-loader {
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+  }
+
+  &::after {
+    background: rgba($c-bg-full-loader, .7);
+  }
+}
+
+@keyframes c-loader-iteration {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes c-btn-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: $c-btn-in-progress-bg-size 0;
+  }
+}

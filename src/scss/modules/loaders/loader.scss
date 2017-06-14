@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.c-skeleton-loading {
+  @include c-skeleton-loader-mixin;
+}
+
+.c-btn-in-progress {
+  @include c-btn-in-progress;
+}
+
+.c-btn-group-in-progress {
+  > .c-btn {
+    @include c-btn-in-progress;
+  }
+}
+
+.c-overlay-loader {
+  @include c-overlay-loader;
+}
+
+.c-full-page-loader {
+  @include c-full-page-loader;
+}
