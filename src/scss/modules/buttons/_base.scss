@@ -80,6 +80,10 @@
 
 .c-btn,
 .c-btn-link {
+  &-xs {
+    @include btn-size(xs);
+  }
+
   &-sm {
     @include btn-size(sm);
   }

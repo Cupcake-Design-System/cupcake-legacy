@@ -89,10 +89,16 @@ $btn-warning-bg          : $warning !default;
 /// $btn-danger-bg           
 $btn-danger-bg           : $danger !default;
 
-/// $btn-sm-font             
+/// $btn-xs-font
+$btn-xs-font             : 9px !default;
+
+/// $btn-xs-padding
+$btn-xs-padding          : 2px 14px !default;
+
+/// $btn-sm-font
 $btn-sm-font             : 11px !default;
 
-/// $btn-sm-padding          
+/// $btn-sm-padding
 $btn-sm-padding          : 4px 27px !default;
 
 /// $btn-md-font             

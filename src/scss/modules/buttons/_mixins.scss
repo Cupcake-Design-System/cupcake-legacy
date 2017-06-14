@@ -99,6 +99,11 @@
 /* Button Sizes
 * ================ ================ ================ ================ */
 @mixin btn-size($size) {
+  @if $size == xs {
+    font-size: $btn-xs-font;
+    padding: $btn-xs-padding;
+  }
+
   @if $size == sm {
     font-size: $btn-sm-font;
     padding: $btn-sm-padding;
