@@ -161,3 +161,15 @@ $checkbox-size: 12px;
 $checkbox-size-sm: 10px;
 $checkbox-size-lg: 14px;
 $checkbox-size-xl: 26px;
+
+
+$shadow-sm: 0 2px 2px 0 rgba(65, 65, 81, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+$shadow-md: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+
+
+$box-border-radius: 4px;
+$box-border-color: rgba(0, 0, 0, 0.18);
+$box-bg: white;
+$box-padding: 10px 15px;
+$box-text-color: $font-body-color;
+$box-shadow: $shadow-md;
