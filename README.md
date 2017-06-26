@@ -1,7 +1,13 @@
 <img alt="cupcake-logo" src="src/img/cupcake-horizontal-logo.png" width="350">
 
 
-Project Cupcake is the Ipreo design system that brings together UX guidelines, an HTML/CSS framework, and rich ui components. This repository includes everything you need to build, customize, test, and deploy Cupcake. For complete documentation, visit the [Cupcake documentation site](https://pages.code.ipreo.com/Ipreo/cupcake-docs/).
+Project Cupcake is the Ipreo design system that brings together UX guidelines, an HTML/CSS framework, and rich ui components. This repository includes everything you need to build, customize, test, and deploy Cupcake. 
+
+### Changelog
+[Cupcake documentation site](https://pages.code.ipreo.com/Ipreo/cupcake-docs/).
+
+### Changelog
+[Visit page](CHANGELOG.md)
 
 
 ## Getting Started
@@ -17,8 +23,6 @@ Project Cupcake is the Ipreo design system that brings together UX guidelines, a
 - Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
 - Keep `gulp` running while you're making changes. When you want to stop the gulp task, hit `ctrl + C`.
 
-_For theming: Running 'gulp theme' will prompt you for a name. This name will be used to make your .scss file inside theme folder. The generated file will be properly linked to dependencies and all you to easily change the root variables._
-
 ## Requirements
 - Node/NPM
 - LibSass
@@ -30,60 +34,6 @@ _For theming: Running 'gulp theme' will prompt you for a name. This name will be
 - Sass compilation and linting
 - Autoprefixer
 
-## Current Dependencies
-```
-    "browser-sync": "^2.0.0-rc4",
-    "colors": "^1.1.2",
-    "del": "^2.0.2",
-    "file-exists": "^2.0.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.7",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-prompt": "^0.2.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-stylelint": "^3.7.0",
-    "run-sequence": "^1.2.2",
-    "stylelint-config-standard": "^15.0.1",
-    "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-scss": "^1.4.1",    
-    "gulp-sourcemaps": "^2.4.0",
-    "vinyl-paths": "^2.0.0"
-```
-
-## Tasks
-- clean:dist
-- styles
-- styles:prod
-- browser-sync
-- deploy
-- lint
-- watch
-- stats
-- themes
-- default
-  - clean:dist
-  - html
-  - styles
-  - themes
-  - copy
-  - styles:prod
-  - browser-sync
-  - watch
-- build
-  - clean:dist
-  - html
-  - styles
-  - themes
-  - copy
-  - styles:prod
-- audit *in-progress
-  - lint
-  - stats
-
 ## Directory structure
 
 ```
@@ -92,21 +42,22 @@ _For theming: Running 'gulp theme' will prompt you for a name. This name will be
 ├── .stylelintrc.json
 ├── src
 │   ├── img
-│   ├── index.html
+│   ├── demo-js
 │   ├── fonts
-│   ├── themes
+│   ├── flavors
 │   └── scss
 │       ├──── base
 │       ├──── config
-│       ├──── forms
 │       ├──── grid
 │       ├──── layouts
 │       ├──── modules
-│       ├──── navigation
 │       ├──── ui
 │       ├──── utility
-│       └── default.scss
+│       └── northstar.scss
 ├── gulpfile.js
+├── index.html
+├── grid.html
+├── invis.html
 └── package.json
 ```
 
