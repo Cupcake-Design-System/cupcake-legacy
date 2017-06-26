@@ -311,7 +311,7 @@ gulp.task('default', function(done) {
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', done);
 });
 
 

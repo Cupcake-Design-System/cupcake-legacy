@@ -1,0 +1,23 @@
+////
+/// @group borders
+////
+
+/// $border-default
+$border-default: 1px solid $color-gray-4 !default;
+
+// $border-sides
+$border-sides : (
+  bd        : border,
+  bd-top    : border-top,
+  bd-right  : border-right,
+  bd-bottom : border-bottom,
+  bd-left   : border-left
+);
+
+@mixin borders-class-export {
+  @each $side, $prop in $border-sides {
+    .c-#{$side} {
+      #{$prop}: $border-default;
+    }
+  }
+}

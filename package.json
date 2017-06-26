@@ -1,6 +1,6 @@
 {
   "name": "@ipreo/cupcake-styles",
-  "version": "0.1.2-rc.0",
+  "version": "0.1.2",
   "description": "A CSS framework.",
   "main": "dist/default.css",
   "repository": {
@@ -13,6 +13,7 @@
     "build": "gulp build",
     "deploy": "gulp deploy",
     "test": "gulp lint",
+    "changelog": "git log --pretty=format:'* %s [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/%H)' > change.md",
     "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
     "backstop": "npm run build & npm run reference & npm run compare",
     "reference": "backstop reference --configPath=backstop.config.js",
@@ -28,6 +29,7 @@
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-clean-css": "^2.0.7",
+    "gulp-conventional-changelog": "^1.1.3",
     "gulp-downloader": "^1.0.4",
     "gulp-findreplace": "^1.5.0",
     "gulp-flatten": "^0.3.1",
