@@ -4,6 +4,7 @@
 
 $primary: $color-brand;
 $global-radius: 2px;
+$spacing-global-gutter: 1.5rem;
 
 $paragraph-margin: 0 0 10px;
 
@@ -77,6 +78,7 @@ $control-active-border    : #52afe4;
 
 $control-padding-v        : 6px;
 $control-padding-h        : 8px;
+$control-label-padding    : 5px 0;
 $control-shadow           : inset 0 1px 2px 0 rgba(0, 0, 0, 0.13);
 $control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
 
