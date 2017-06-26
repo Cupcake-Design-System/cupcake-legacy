@@ -100,6 +100,18 @@ $control-lg-padding: 0.7em 0.6em !default;
 $control-xl-padding: 0.563em 0.75em !default;
 /// $control-group-padding
 $control-group-padding: 1em !default;
+/// $control-success-c
+$control-success-c: $success !default;
+/// $control-success-bg
+$control-success-bg: false !default;
+/// $control-warning-c
+$control-warning-c: $warning !default;
+/// $control-warning-bg
+$control-warning-bg: false !default;
+/// $control-danger-c
+$control-danger-c: $danger !default;
+/// $control-danger-bg
+$control-danger-bg: false !default;
 
 
 // FORM SIZES
@@ -131,9 +143,9 @@ $control-sizes-padding: (
 // The class is generated using the name: (ex .c-input-success).
 // $control-colors
 $control-colors:
-  ("success", $success, false)
-  ("warning", $warning, false)
-  ("error", $danger, false) !default;
+  ("success", $control-success-c, $control-success-bg)
+  ("warning", $control-warning-c, $control-warning-bg)
+  ("error", $control-danger-c, $control-danger-bg) !default;
 
 // Connect ng-validation states with form validation colors ($control-colors)
 // $control-ng-validation

@@ -27,7 +27,7 @@ $alert-font-family:           $global-font-family !default;
 $alert-font-weight:           bold !default;
 
 /// $alert-font-color:
-$alert-font-color:            $secondary !default;
+$alert-font-color:            $font-body-color !default;
 
 /// $alert-radius:  
 $alert-radius:                $global-radius !default;
@@ -65,9 +65,15 @@ $alert-icon-width:            40px !default;
     opacity: 0.6;
     font-size: $alert-font-size;
     float: right;
+    color: $alert-font-color;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($alert-font-color, 20%);
+    }
   }
 
-  a {
+  .c-alert-link {
     color: $alert-font-color;
     text-decoration: underline;
 
@@ -137,24 +143,24 @@ $alert-icon-width:            40px !default;
   }
 
   @if $style == outline {
-    a {
+    .c-alert-close,
+    .c-alert-link {
       color: $bg;
-      text-decoration: underline;
-    }
 
-    a:hover {
-      color: darken($bg, 20%);
+      &:hover {
+        color: darken($bg, 20%);
+      }
     }
   }
 
   @else {
-    a {
+    .c-alert-close,
+    .c-alert-link {
       color: $white;
-      text-decoration: underline;
-    }
 
-    a:hover {
-      color: $white;
+      &:hover {
+        color: $white;
+      }
     }
   }
 }

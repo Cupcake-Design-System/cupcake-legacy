@@ -1,12 +1,15 @@
 @import "mixins";
 
-
-.c-body-text,
 .c-p {
   @include font-body;
 
-  margin: 0;
+  margin: $paragraph-margin;
   padding: 0;
+}
+
+.c-body-text,
+.c-text {
+  @include font-body;
 
   &-xl {
     @include font-body-xl;

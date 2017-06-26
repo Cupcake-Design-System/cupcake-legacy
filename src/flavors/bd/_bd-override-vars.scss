@@ -4,8 +4,9 @@
 
 $primary: $color-brand;
 $global-radius: 2px;
+$spacing-global-gutter: 1.5rem;
 
-
+$paragraph-margin: 0 0 10px;
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -77,6 +78,7 @@ $control-active-border    : #52afe4;
 
 $control-padding-v        : 6px;
 $control-padding-h        : 8px;
+$control-label-padding    : 5px 0;
 $control-shadow           : inset 0 1px 2px 0 rgba(0, 0, 0, 0.13);
 $control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
 
@@ -161,3 +163,18 @@ $checkbox-size: 12px;
 $checkbox-size-sm: 10px;
 $checkbox-size-lg: 14px;
 $checkbox-size-xl: 26px;
+
+
+$shadow-sm: 0 2px 2px 0 rgba(65, 65, 81, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+$shadow-md: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+
+
+$box-border-radius: 4px;
+$box-border-color: rgba(0, 0, 0, 0.18);
+$box-bg: white;
+$box-padding: 10px 15px;
+$box-text-color: $font-body-color;
+$box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+
+
+$border-default: 1px solid $color-dividers;
