@@ -113,42 +113,42 @@ $misc-map: (
 }
 
 
-@each $palette, $tones in $misc-map {
-  @each $tone_name, $tone_value in $tones {
-    @if ($tone_name == 6) {
-      .c-text-#{$palette} {
-        color: $tone_value;
-      }
+// @each $palette, $tones in $misc-map {
+//   @each $tone_name, $tone_value in $tones {
+//     @if ($tone_name == 6) {
+//       .c-text-#{$palette} {
+//         color: $tone_value;
+//       }
 
-      .c-bg-#{$palette} {
-        background-color: $tone_value;
-        color: $color-gray-0;
-      }
+//       .c-bg-#{$palette} {
+//         background-color: $tone_value;
+//         color: $color-gray-0;
+//       }
 
-      .c-bd-#{$palette} {
-        border: 2px solid $tone_value;
-      }
-    }
-  }
-}
+//       .c-bd-#{$palette} {
+//         border: 2px solid $tone_value;
+//       }
+//     }
+//   }
+// }
 
 
-@each $palette, $tones in $misc-map {
-  @each $tone_name, $tone_value in $tones {
-    .c-text-#{$palette}-#{$tone_name} {
-      color: $tone_value;
-    }
+// @each $palette, $tones in $misc-map {
+//   @each $tone_name, $tone_value in $tones {
+//     .c-text-#{$palette}-#{$tone_name} {
+//       color: $tone_value;
+//     }
 
-    .c-bg-#{$palette}-#{$tone_name} {
-      background-color: $tone_value;
-      color: $color-gray-0;
-    }
+//     .c-bg-#{$palette}-#{$tone_name} {
+//       background-color: $tone_value;
+//       color: $color-gray-0;
+//     }
 
-    .c-bd-#{$palette}-#{$tone_name} {
-      border: 1px solid $tone_value;
-    }
-  }
-}
+//     .c-bd-#{$palette}-#{$tone_name} {
+//       border: 1px solid $tone_value;
+//     }
+//   }
+// }
 
 
 $color-pink-0   : misc(pink, 0);

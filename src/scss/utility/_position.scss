@@ -30,23 +30,25 @@
   }
 }
 
+@mixin position-class-export {
+  .c-center {
+    @include center(both);
 
-.c-center {
-  @include center(both);
+    &-top {
+      @include center(top);
+    }
 
-  &-top {
-    @include center(top);
-  }
+    &-right {
+      @include center(right);
+    }
 
-  &-right {
-    @include center(right);
-  }
+    &-bottom {
+      @include center(bottom);
+    }
 
-  &-bottom {
-    @include center(bottom);
-  }
-
-  &-left {
-    @include center(left);
+    &-left {
+      @include center(left);
+    }
   }
 }
+

@@ -40,7 +40,7 @@ $footer-trans-color     : $black !default;
     background-color: transparent;
 
     a {
-      color: $footer-color-link;
+      color: $footer-color;
     }
 
     @include bp(sm) {

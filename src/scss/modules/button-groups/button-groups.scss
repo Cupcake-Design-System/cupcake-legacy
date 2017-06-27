@@ -34,6 +34,34 @@
   }
 }
 
+.c-btn-group {
+  .c-btn-pill {
+    &:first-child {
+      border-left-width: 1px;
+      border-top-left-radius: $radius-pill;
+      border-bottom-left-radius: $radius-pill;
+    }
+
+    &:last-child {
+      border-left-width: 0;
+      border-top-right-radius: $radius-pill;
+      border-bottom-right-radius: $radius-pill;
+
+      &:hover {
+        margin-right: 0;
+      }
+
+      &.selected,
+      &:focus,
+      &:active,
+      &:hover {
+        border-right-width: 1px;
+      }
+    }
+  }
+}
+
+
 .c-btn-group-vertical {
   display: inline-block;
 

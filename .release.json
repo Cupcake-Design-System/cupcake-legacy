@@ -1,6 +1,4 @@
 {
-    "dry-run": true,
-    "verbose": true,
     "pkgFiles": ["package.json"],
     "buildCommand": "gulp build",
     "changelogCommand": "git log --pretty=format:'* %s [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/%H)' > change.md",
