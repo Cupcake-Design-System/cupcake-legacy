@@ -68,7 +68,7 @@
 // Strong text
 .c-text-strong,
 .c-text-bold {
-  font-weight: 700;
+  font-weight: $text-strong;
   line-height: inherit;
 }
 
@@ -127,13 +127,6 @@
 .c-text-em,
 .c-text-italic {
   font-style: italic;
-  line-height: inherit;
-}
-
-// Strong text
-.c-text-strong,
-.c-text-bold {
-  font-weight: bold;
   line-height: inherit;
 }
 

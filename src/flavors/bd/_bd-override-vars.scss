@@ -1,12 +1,15 @@
 @import "tokens";
 
 
-
 $primary: $color-brand;
 $global-radius: 2px;
 $spacing-global-gutter: 1.5rem;
 
+$black: $font-body-color;
+$white: white;
+
 $paragraph-margin: 0 0 10px;
+$text-strong: 600;
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -24,7 +27,7 @@ $btn-font-weight: 600;
 
 $btn-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 
-$btn-active-selected: #9494A1;
+$btn-active-selected: #9494a1;
 $btn-shadow: false;
 
 $btn-gradient: true;
@@ -92,12 +95,12 @@ $control-sm-padding: 4px 6px;
 $control-lg-padding: 8px 9px;
 $control-xl-padding: 10px 12px;
 
-$control-success-c  : #4DAA0B;
-$control-success-bg : #F3F8EF;
-$control-warning-c  : #F8C000;
-$control-warning-bg : #FCFBE7;
-$control-danger-c   : #E98F88;
-$control-danger-bg  : #FFF6F5;
+$control-success-c  : #4daa0b;
+$control-success-bg : #f3f8ef;
+$control-warning-c  : #f8c000;
+$control-warning-bg : #fcfbe7;
+$control-danger-c   : #e98f88;
+$control-danger-bg  : #fff6f5;
 
 
 $card-header-font-size:        rem-calc(15);
@@ -125,7 +128,7 @@ $table-border-color      : $color-dividers;
 $table-head-border-bottom: 2px solid #8d8d97;
 $table-padding           : rem-calc(7 10 8);
 $table-padding-sm        : rem-calc(5 10 6);
-$table-row-hover         : #EAF7FF;
+$table-row-hover         : #eaf7ff;
 $table-row-stripe-hover  : $table-row-hover;
 $table-striped-background: #f9f9f9;
 $table-head-background   : white;
@@ -160,7 +163,7 @@ $tabs-hover-tranisition: all 0.4s ease 0s;
 
 
 $checkbox-size: 12px;
-$checkbox-size-sm: 10px;
+$checkbox-size-sm: 12px;
 $checkbox-size-lg: 14px;
 $checkbox-size-xl: 26px;
 
