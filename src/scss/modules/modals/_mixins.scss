@@ -122,11 +122,13 @@ $modals-backdrop-background-color: #000000 !default;
     top: $modals-close-top-right;
     right: $modals-close-top-right;
     padding: $modals-close-padding;
-    opacity: 0.64;
-    transition: $modals-transition;
-    height: $modals-close-button-size;
-    width: $modals-close-button-size + 5;
+    color: #000000;
     cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    transition: all 0.1s linear;
 
     &:hover {
       opacity: 1;
