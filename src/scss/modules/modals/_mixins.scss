@@ -128,29 +128,6 @@ $modals-backdrop-background-color: #000000 !default;
     width: $modals-close-button-size + 5;
     cursor: pointer;
 
-    > span {
-      display: inline-block;
-      text-indent: -9999px;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: $modals-close-button-color;
-    }
-
-    &::before {
-      transform: rotate($modals-close-button-transform-degrees);
-    }
-
-    &::after {
-      transform: rotate(- $modals-close-button-transform-degrees);
-    }
-
     &:hover {
       opacity: 1;
     }
