@@ -4,7 +4,11 @@ $primary: $color-brand;
 $global-radius: 2px;
 $spacing-global-gutter: 1.5rem;
 
+$black: $font-body-color;
+$white: white;
+
 $paragraph-margin: 0 0 10px;
+$text-strong: 600;
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -158,7 +162,7 @@ $tabs-hover-tranisition: all 0.4s ease 0s;
 
 
 $checkbox-size: 12px;
-$checkbox-size-sm: 10px;
+$checkbox-size-sm: 12px;
 $checkbox-size-lg: 14px;
 $checkbox-size-xl: 26px;
 
