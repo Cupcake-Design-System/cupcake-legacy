@@ -122,29 +122,13 @@ $modals-backdrop-background-color: #000000 !default;
     top: $modals-close-top-right;
     right: $modals-close-top-right;
     padding: $modals-close-padding;
-    opacity: 0.64;
-    transition: $modals-transition;
-    height: $modals-close-button-size;
-    width: $modals-close-button-size + 5;
+    color: #000000;
     cursor: pointer;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: $modals-close-button-color;
-    }
-
-    &::before {
-      transform: rotate($modals-close-button-transform-degrees);
-    }
-
-    &::after {
-      transform: rotate(- $modals-close-button-transform-degrees);
-    }
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    transition: all 0.1s linear;
 
     &:hover {
       opacity: 1;
