@@ -1,4 +1,4 @@
-### Release 0.1.5
+### Release 0.1.6
 * Added Card deck (#66) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d0f872a111f249c33afa4a3fc216f3d1d11db2d5)
 * changed circle loader< added page for loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f98ef30de74fd0fcea433ac535f05fece4d269e5)
 * added HTML file for Modal windows [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a7670351f46af9516f2cf65a5ccd783c98ac12ff)
