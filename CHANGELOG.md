@@ -9,6 +9,7 @@
 * CPCK-11 added a couple loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2bf5eb5c843311c461b0f04a0cf3683bf2ef619f)
 * Merge branch 'master' of https://code.ipreo.com/Ipreo/cupcake [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5bb079c7fa1448a1fecd930f8dff1d9cc468a6e)
 * fix pill btn in group - updated deps. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/02d7bb7622e43f7d113f77e4704b58b4837d213a)
+
 ### Release 0.1.4
 * grid demo fix [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c5ecf67f638afa07bfc22cf7f9bc72cfd359aaa7)
 * Fix grid gutters, position class import order [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c1af7c89b6619b67ba35635c98256a0b54f04c30)
