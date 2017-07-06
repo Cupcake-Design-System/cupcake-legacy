@@ -33,7 +33,7 @@ $card-header-icon-hover-color: lighten($secondary, 10%) !default;
 $card-header-text-color: $global-text-color !default;
 
 /// $card-border-color:          
-$card-border: 1px solid $global-border-color !default;
+$card-border: 1px solid $color-gray-2 !default;
 
 /// $card-border-radius:         
 $card-border-radius: $global-radius !default;
@@ -48,7 +48,7 @@ $card-padding-v: 0.9375rem !default;
 $card-padding-h: 0.9375rem !default;
 
 /// $card-shadow:
-$card-shadow: 1px 2px 5px $color-gray-2 !default;
+$card-shadow: 0 2px 4px 0 rgba(33, 37, 41, 0.05) !default;
 
 /// $card-shadow-hover:  
 $card-shadow-hover: $card-shadow !default;

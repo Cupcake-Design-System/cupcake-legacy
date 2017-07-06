@@ -31,3 +31,11 @@
   }
 }
 
+.c-card-deck {
+  margin-top: $header-height;
+  padding-top: $spacing-global-gutter;
+
+  .c-card {
+    margin-bottom: $spacing-global-gutter;
+  }
+}
