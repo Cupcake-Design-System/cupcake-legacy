@@ -1,3 +1,14 @@
+### Release 0.1.5
+* Added Card deck (#66) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d0f872a111f249c33afa4a3fc216f3d1d11db2d5)
+* changed circle loader< added page for loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f98ef30de74fd0fcea433ac535f05fece4d269e5)
+* added HTML file for Modal windows [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a7670351f46af9516f2cf65a5ccd783c98ac12ff)
+* minor fix modal windows [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dfb090d655f3d0b39f939a9b0bee2fa1e8392a0a)
+* fixed couple bugs related to modal windows and loading indicators [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/165d2f5d62e7ce6539694665cfe349f8ea3bf97f)
+* small change for c-text-strong/bold [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/68468755e91acba79d3398d14b937d05bcd46a1b)
+* c-text-black/white - use variables (#63) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e9e0d6f14ed4045280be35f0aaa493b08e18d353)
+* CPCK-11 added a couple loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2bf5eb5c843311c461b0f04a0cf3683bf2ef619f)
+* Merge branch 'master' of https://code.ipreo.com/Ipreo/cupcake [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5bb079c7fa1448a1fecd930f8dff1d9cc468a6e)
+* fix pill btn in group - updated deps. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/02d7bb7622e43f7d113f77e4704b58b4837d213a)
 ### Release 0.1.4
 * grid demo fix [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c5ecf67f638afa07bfc22cf7f9bc72cfd359aaa7)
 * Fix grid gutters, position class import order [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c1af7c89b6619b67ba35635c98256a0b54f04c30)
