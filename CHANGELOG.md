@@ -7,7 +7,6 @@
 * small change for c-text-strong/bold [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/68468755e91acba79d3398d14b937d05bcd46a1b)
 * c-text-black/white - use variables (#63) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e9e0d6f14ed4045280be35f0aaa493b08e18d353)
 * CPCK-11 added a couple loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2bf5eb5c843311c461b0f04a0cf3683bf2ef619f)
-* Merge branch 'master' of https://code.ipreo.com/Ipreo/cupcake [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5bb079c7fa1448a1fecd930f8dff1d9cc468a6e)
 * fix pill btn in group - updated deps. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/02d7bb7622e43f7d113f77e4704b58b4837d213a)
 
 ### Release 0.1.4
