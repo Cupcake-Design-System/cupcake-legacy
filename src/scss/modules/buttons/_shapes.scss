@@ -38,3 +38,11 @@ $btn-shapes: (
   padding-left: $btn-default-padding-v+0.2em;
   padding-right: $btn-default-padding-v+0.2em;
 }
+
+.c-btn-sm {
+  &.c-btn-box {
+    padding-left: $btn-default-padding-v;
+    padding-right: $btn-default-padding-v;
+  }
+}
+

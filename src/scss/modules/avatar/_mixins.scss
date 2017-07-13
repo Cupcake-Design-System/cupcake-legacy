@@ -40,7 +40,8 @@ $avatar-colors:
 // $avatar-sizes
 $avatar-sizes:
   ("sm", 2rem)
-  ("lg", 3rem) !default;
+  ("lg", 3rem)
+  ("xl", 80px) !default;
 
 
 @mixin avatar {

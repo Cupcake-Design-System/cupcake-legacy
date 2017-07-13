@@ -49,6 +49,8 @@ $global-border-color: $color-gray-4;
 $global-text-color: $font-body-color;
 $global-font-size: $font-body-font-size;
 $global-font-family: $font-body-font-family;
+$main-content-padding: 40px;
+$global-sidebar-max-width: 300px;
 
 // 2. Alerts
 // ---------
@@ -536,6 +538,8 @@ $anchor-color-hover: lighten($primary, 15);
 $anchor-decoration-hover: none;
 $anchor-color-active: $color-primary-7;
 $anchor-color-disabled: $disabled;
+$font-body-md-font-size: 16px;
+$font-header-xs-font-size: 16px;
 
 // 27. Vertical Nav
 // ----------------

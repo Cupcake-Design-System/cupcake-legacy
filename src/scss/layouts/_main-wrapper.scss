@@ -1,3 +1,5 @@
+$main-content-padding: $gutter !default;
+
 .c-wrapper {
   display: flex;
   min-height: 100vh;
@@ -9,7 +11,7 @@
   color: $black;
   flex-direction: row;
   flex: 1;
-  padding: $gutter;
+  padding: $main-content-padding;
 
   @media (min-width: 480px) and (max-width: 1024px) {
     padding: 20px;

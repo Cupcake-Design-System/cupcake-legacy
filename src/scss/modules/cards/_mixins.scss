@@ -38,6 +38,9 @@ $card-border: 1px solid $color-gray-2 !default;
 /// $card-border-radius:         
 $card-border-radius: $global-radius !default;
 
+/// $card-min-width:         
+$card-min-width: 250px !default;
+
 /// $card-bg:                    
 $card-bg: $white !default;
 
@@ -85,6 +88,7 @@ $card-colors:
   color: $card-text-color;
   box-shadow: $card-shadow;
   transition: $card-transition;
+  min-width: $card-min-width;
 
   &:hover {
     box-shadow: $card-shadow-hover;
@@ -112,7 +116,7 @@ $card-colors:
     display: flex;
     justify-content: center;
     font-size: $card-menu-font-size;
-    padding: 0 $card-padding-h;
+    padding: $card-padding-v $card-padding-h;
 
     &-item {
       padding-left: $space-xs;
