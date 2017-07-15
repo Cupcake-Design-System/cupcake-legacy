@@ -1,0 +1,125 @@
+$select-border-color : #ced4da !default;
+$select-bg-color     : #f8f9fa !default;
+$select-color        : #495057 !default;
+$select-box-shadow   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+$select-border-radius: 2px !default;
+$select-padding      : 7px 10px !default;
+$select-padding-sm   : 3px 8px !default;
+$select-padding-lg   : 9px 12px !default;
+$select-padding-xl   : 11px 13px !default;
+$select-font-size    : 12px !default;
+$select-font-size-sm : 11px !default;
+$select-font-size-lg : 1.17em !default;
+$select-font-size-xl : 1.5em !default;
+
+
+@mixin select($padding: $select-padding, $font-size: $select-font-size) {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  select {
+    display: inline-block;
+    width: 100%;
+    outline: 0;
+    appearance: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: $padding;
+    font-size: $font-size;
+    border: 1px solid $select-border-color;
+    box-shadow: $select-box-shadow;
+    border-radius: $select-border-radius;
+    background-color: $select-bg-color;
+    color: $select-color;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: darken($select-color, 10);
+      border-color: darken($select-border-color, 10);
+      background: lighten($select-bg-color, 5);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+
+.c-select {
+  @include select;
+
+  &-arrow {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 7px 5px 0;
+    border-color: $select-color transparent transparent;
+  }
+}
+
+.c-select-sm {
+  @include select($padding: $select-padding-sm, $font-size: $select-font-size-sm);
+
+  .c-select-arrow {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 6px 4px 0;
+    border-color: $select-color transparent transparent;
+  }
+}
+
+.c-select-lg {
+  @include select($padding: $select-padding-lg, $font-size: $select-font-size-lg);
+
+  .c-select-arrow {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 9px 7px 0;
+    border-color: $select-color transparent transparent;
+  }
+}
+
+.c-select-xl {
+  @include select($padding: $select-padding-xl, $font-size: $select-font-size-xl);
+
+  .c-select-arrow {
+    position: absolute;
+    top: 22px;
+    right: 13px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 10px 9px 0;
+    border-color: $select-color transparent transparent;
+  }
+}
+
+.c-select select:disabled ~ .c-select-arrow,
+.c-select-sm select:disabled ~ .c-select-arrow,
+.c-select-lg select:disabled ~ .c-select-arrow,
+.c-select-xl select:disabled ~ .c-select-arrow {
+  border-top-color: #cccccc;
+}
+
