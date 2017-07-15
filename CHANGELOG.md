@@ -1,3 +1,9 @@
+### Release 0.1.7
+* Added select [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/98239c20200694bb2e2726eb09fe456b1f57038a)
+* Fix for checkbox and radio labels [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d000a9395302390dece10509222cc0f841e5324f)
+* PCS Flavor Update (#69) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/63074f0ece395b23dce624bb365caf01db6c428a)
+* PCS Flavor Update [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/beb2aa0f2258926f2f2f464a448b849af613fd93)
+
 ### Release 0.1.6
 * Added Card deck (#66) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d0f872a111f249c33afa4a3fc216f3d1d11db2d5)
 * changed circle loader< added page for loaders [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f98ef30de74fd0fcea433ac535f05fece4d269e5)
