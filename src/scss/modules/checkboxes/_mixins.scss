@@ -30,11 +30,6 @@ $checkbox-disabled: $color-gray-3;
 $checkbox-disabled-opacity: 0.5 !default;
 
 @mixin checkbox($size:$checkbox-size) {
-  cursor: pointer;
-  padding-left: 0;
-  font-family: inherit;
-  font-weight: normal;
-
   input {
     position: absolute;
     width: $size;
@@ -107,17 +102,75 @@ $checkbox-disabled-opacity: 0.5 !default;
   > i {
     height: $size;
     display: inline-block;
-    margin: 0 $size -2px 0;
+    margin: 0 $size -3px 0;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
       width: $size;
-      height: 100%;
+      height: $size;
       border: $checkbox-icon-bd;
       border-radius: $checkbox-icon-radius;
       transition: $checkbox-transition;
     }
   }
 }
+
+
+@mixin control($font-size: $checkbox-size) {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: $font-size;
+  line-height: 1;
+}
+
+.c-control {
+  @include control;
+
+  padding: 0 13px 0 26px;
+
+  &.c-checkbox > i,
+  &.c-radio > i {
+    position: absolute;
+    left: 0;
+  }
+
+  &-sm {
+    @include control($checkbox-size-sm);
+
+    padding: 0 10px 0 20px;
+
+    &.c-checkbox-sm > i,
+    &.c-radio-sm > i {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &-lg {
+    @include control($checkbox-size-lg);
+
+    padding: 0 16px 0 32px;
+
+    &.c-checkbox-lg > i,
+    &.c-radio-lg > i {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &-xl {
+    @include control($checkbox-size-xl);
+
+    padding: 0 20px 0 40px;
+
+    &.c-checkbox-xl > i,
+    &.c-radio-xl > i {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
