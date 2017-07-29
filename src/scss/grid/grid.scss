@@ -82,6 +82,7 @@ $gutter-collapse: true !default;
   }
 
   width: (100% / $total-columns) * $column;
+  padding: 0 ($gutter / 2);
 }
 
 // Content stretch behavior of all cols within a row section
@@ -626,6 +627,7 @@ $gutter-collapse: true !default;
   > #{$col-namespace}-shrink {
     flex: 0 0 auto;
     max-width: 100%;
+    padding: 0 ($gutter / 2);
   }
 }
 

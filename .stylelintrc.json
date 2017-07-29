@@ -39,7 +39,6 @@
     "property-no-vendor-prefix": true,
     "selector-list-comma-newline-after": "always",
     "selector-max-compound-selectors": 4,
-    "selector-no-id": true,
     "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
