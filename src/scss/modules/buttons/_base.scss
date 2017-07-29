@@ -109,3 +109,8 @@
   @include btn-disabled;
 }
 
+//TODO cleaner approach
+.c-btn-secondary.c-btn-active {
+  box-shadow: $btn-shadow-active;
+}
+
