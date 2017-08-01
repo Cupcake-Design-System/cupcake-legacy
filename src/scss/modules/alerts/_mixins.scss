@@ -49,6 +49,7 @@ $alert-icon-width:            40px !default;
   position: relative;
   margin: $alert-margin;
   padding: $alert-padding $alert-padding * 2;
+  background-color: $white;
   border: $alert-border;
   border-radius: $alert-radius;
   font-family: $alert-font-family;
