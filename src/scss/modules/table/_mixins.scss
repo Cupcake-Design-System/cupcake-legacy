@@ -123,6 +123,7 @@ $table-states: ("selected", $table-state-selected)
       border-style: solid;
       border-color: $table-head-border-color;
       border-width: $table-head-border-width;
+      vertical-align: bottom;
 
       th {
         font-size: $table-header-font-size;
