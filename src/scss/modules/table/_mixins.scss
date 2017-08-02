@@ -6,7 +6,7 @@
 $table-background: $white !default;
 
 /// $table-border-color   
-$table-border-color: $global-border-color !default;
+$table-border-color: $color-gray-2 !default;
 
 /// $table-border-radius    
 $table-border-radius: 0 !default;
@@ -14,11 +14,17 @@ $table-border-radius: 0 !default;
 /// $table-border           
 $table-border: 0 !default;
 
-/// $table-head-border-bottom:
-$table-head-border-bottom: 1px solid $table-border-color !default;
+/// $table-head-border-color
+$table-head-border-color: $color-gray-3 !default;
 
-/// $table-padding           
-$table-padding: 8px 10px 10px !default;
+/// $table-head-border-width
+$table-head-border-width: 1px 0 !default;
+
+/// $table-head-border-vertical
+$table-head-border-vertical: 1px solid $color-gray-3 !default;
+
+/// $table-padding
+$table-padding: 9px 10px 7px !default;
 
 /// $table-padding-sm        
 $table-padding-sm: 6px 10px 8px !default;
@@ -30,19 +36,19 @@ $table-cell-padding: 12px 12px !default;
 $table-cell-padding-sm: 2px 12px !default;
 
 /// $table-row-hover         
-$table-row-hover: #fff2cf !default;
+$table-row-hover: $color-orange-0 !default;
 
 /// $table-row-stripe-hover  
 $table-row-stripe-hover: $table-row-hover !default;
 
 /// $table-striped-background: 
-$table-striped-background: darken($white, 3%) !default;
+$table-striped-background: $color-gray-0 !default;
 
 /// $table-stripe            
-$table-stripe: odd !default;
+$table-stripe: 'even' !default;
 
 /// $table-head-background   
-$table-head-background: transparent !default;
+$table-head-background: $color-gray-1 !default;
 
 /// $table-transparent-head-background   
 $table-transparent-head-background: $color-gray-0 !default;
@@ -114,10 +120,17 @@ $table-states: ("selected", $table-state-selected)
     thead {
       background: $table-head-background;
       color: $table-head-font-color;
-      border-bottom: $table-head-border-bottom;
+      border-style: solid;
+      border-color: $table-head-border-color;
+      border-width: $table-head-border-width;
+      vertical-align: bottom;
 
       th {
         font-size: $table-header-font-size;
+
+        &:not(:last-child) {
+          border-right: $table-head-border-vertical;
+        }
       }
     }
 
@@ -148,15 +161,7 @@ $table-states: ("selected", $table-state-selected)
     &:not(.c-table-transparent) {
       tbody {
         tr {
-          // If stripe is set to even, darken the even rows.
-          @if $stripe == even {
-            &:nth-child(even) {
-              background-color: $table-striped-background;
-            }
-          }
-
-          // If stripe is set to odd, darken the odd rows. @else if $stripe == odd {
-          &:nth-child(odd) {
+          &:nth-child(#{$stripe}) {
             background-color: $table-striped-background;
           }
         }
@@ -173,7 +178,7 @@ $table-states: ("selected", $table-state-selected)
 
 // Adds the general styles for tables.
 // Uses keywords even, odd, or none to darken rows of the table. The default value is even.
-@mixin table($stripe: none, $nest: false) {
+@mixin table($stripe: $table-stripe, $nest: false) {
   width: 100%;
   margin-bottom: $spacing-global-margin;
   border-radius: $global-radius;
