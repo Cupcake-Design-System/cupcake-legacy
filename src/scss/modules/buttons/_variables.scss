@@ -9,7 +9,7 @@ $btn-font-family         : arial !default;
 $btn-font-size           : 12px !default;
 
 /// $btn-v-align
-$btn-v-align             : middle !default;
+$btn-v-align             : baseline !default;
 
 /// $btn-line-height         
 $btn-line-height         : 1 !default;
@@ -102,7 +102,7 @@ $btn-xs-padding          : 2px 14px !default;
 $btn-sm-font             : 11px !default;
 
 /// $btn-sm-padding
-$btn-sm-padding          : 4px 27px !default;
+$btn-sm-padding          : 4px 27px 3px !default;
 
 /// $btn-md-font             
 $btn-md-font             : 12px !default;

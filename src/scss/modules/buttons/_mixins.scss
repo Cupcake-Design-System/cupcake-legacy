@@ -193,3 +193,24 @@
     z-index: 1002;
   }
 }
+
+/* Button inside a table
+* ================ ================ ================ ================ */
+@mixin btn-table-icon() {
+  &#{&} {
+    padding-left: $btn-default-padding-v / 1.8;
+    padding-right: $btn-default-padding-v / 1.8;
+    margin-right: -$btn-default-padding-v / 1.8;
+  }
+
+  &:not(:hover) {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  th:not(:hover) &,
+  td:not(:hover) & {
+    color: $color-gray-4;
+  }
+}

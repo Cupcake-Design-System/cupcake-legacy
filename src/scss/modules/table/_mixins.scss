@@ -2,6 +2,9 @@
 /// @group tables
 ////
 
+/// $table-line-height
+$table-line-height: 20px !default;
+
 /// $table-background       
 $table-background: $white !default;
 
@@ -24,22 +27,28 @@ $table-head-border-width: 1px 0 !default;
 $table-head-border-vertical: 1px solid $color-gray-3 !default;
 
 /// $table-padding
-$table-padding: 9px 10px 7px !default;
+$table-padding: 5px 10px 4px !default;
 
 /// $table-padding-sm        
 $table-padding-sm: 6px 10px 8px !default;
-
-/// $table-cell-padding      
-$table-cell-padding: 12px 12px !default;
-
-/// $table-cell-padding-sm   
-$table-cell-padding-sm: 2px 12px !default;
 
 /// $table-row-hover         
 $table-row-hover: $color-orange-0 !default;
 
 /// $table-row-stripe-hover  
 $table-row-stripe-hover: $table-row-hover !default;
+
+/// $table-head-cell-hover         
+$table-head-cell-hover: $color-gray-2 !default;
+
+/// $table-hover-background-img
+$table-hover-background-img: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4=) !default;
+
+/// $table-hover-background-img-props
+$table-hover-background-img-head-pos: left 2px bottom 4px !default;
+
+/// $table-hover-background-img-props
+$table-hover-background-img-body-pos: 2px center !default;
 
 /// $table-striped-background: 
 $table-striped-background: $color-gray-0 !default;
@@ -183,6 +192,7 @@ $table-states: ("selected", $table-state-selected)
   margin-bottom: $spacing-global-margin;
   border-radius: $global-radius;
   text-align: left;
+  line-height: $table-line-height;
 
   &-layout-fixed {
     table-layout: fixed;
@@ -216,10 +226,14 @@ $table-states: ("selected", $table-state-selected)
 
 /// Slightly darkens the table rows on hover.
 @mixin table-hover {
+  th:hover {
+    background: $table-head-cell-hover $table-hover-background-img no-repeat $table-hover-background-img-head-pos;
+  }
+
   tbody {
     tr {
       &:hover {
-        background-color: $table-row-hover;
+        background: $table-row-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
       }
 
       //Darkens the even striped table rows.
