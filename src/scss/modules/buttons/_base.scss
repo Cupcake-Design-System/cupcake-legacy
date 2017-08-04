@@ -44,6 +44,10 @@
   @if $btn-active-selected {
     @include btn-active-selected;
   }
+
+  &-table-icon {
+    @include btn-table-icon;
+  }
 }
 
 .c-btn-link {
