@@ -66,12 +66,6 @@ $pagination-item-current-color-sm: #0082de !default;
   margin-left: 0;
   padding: 0;
   margin-bottom: $pagination-margin-bottom;
-
-  li {
-    font-size: $pagination-font-size;
-    margin-right: $pagination-item-spacing;
-    border-radius: $pagination-item-border-radius;
-  }
 }
 
 @mixin pagination-item-disabled {

@@ -8,7 +8,22 @@
 .c-pagination {
   @include pagination-container;
 
-  a {
+  .c-pagination-current {
+    min-width: 20px;
+    padding: $pagination-item-padding;
+    text-align: center;
+    background: $pagination-item-current-bg;
+    color: $pagination-item-current-color;
+    border: 1px solid darken($pagination-item-current-bg, 4%);
+    cursor: default;
+
+    &:hover {
+      background: $pagination-item-current-bg;
+    }
+  }
+
+  a,
+  &-link {
     @if $pagination-gradients == true {
       @include linear-gradient(to bottom, lighten($pagination-item-bg, 6%), $pagination-item-bg 66%, darken($pagination-item-bg, 4%));
     }
@@ -21,27 +36,20 @@
     border: 1px solid darken($pagination-item-bg, 4%);
     display: block;
     min-width: 20px;
+    font-size: $pagination-font-size;
     text-align: center;
     padding: $pagination-item-padding;
     border-radius: $pagination-item-border-radius;
+    margin-right: $pagination-item-spacing;
 
     &:hover {
       background: lighten($pagination-item-bg, 4%);
     }
   }
 
-  &-current {
-    min-width: 20px;
-    padding: $pagination-item-padding;
-    text-align: center;
-    background: $pagination-item-current-bg;
-    color: $pagination-item-current-color;
-    border: 1px solid darken($pagination-item-current-bg, 4%);
-    cursor: default;
-  }
-
   &-disabled {
-    a {
+    a,
+    &-link {
       @include pagination-item-disabled;
     }
   }
@@ -51,19 +59,6 @@
   }
 }
 
-.c-pagination-previous a::before,
-.c-pagination-previous.disabled::before {
-  content: '\f0d9';
-  font-family: fontawesome;
-  display: inline-block;
-}
-
-.c-pagination-next a::after,
-.c-pagination-next.disabled::after {
-  content: '\f0da';
-  font-family: fontawesome;
-  display: inline-block;
-}
 
 .c-pagination-sm {
   @include pagination-container;
@@ -71,7 +66,7 @@
   .c-pagination-current {
     color: $pagination-item-current-color-sm;
     font-weight: bold;
-    min-width: 20px;
+    min-width: 15px;
     text-align: center;
     padding: $pagination-item-padding-sm;
   }
@@ -98,13 +93,16 @@
     display: inline-block;
   }
 
-  a {
+  a,
+  &-link {
     background: transparent;
     border: 0;
     display: block;
+    min-width: 15px;
     color: $pagination-item-color-sm;
     padding: $pagination-item-padding-sm;
     font-size: $pagination-font-size-sm;
+    text-align: center;
 
     &:hover {
       color: $pagination-item-color-hover-sm;
@@ -125,6 +123,10 @@
     text-align: center;
     font-size: $pagination-font-size-lg;
     padding: $pagination-item-padding-lg;
+
+    &:hover {
+      background: $pagination-item-current-bg;
+    }
   }
 
   .c-pagination-disabled {
@@ -135,7 +137,8 @@
     @include pagination-ellipsis;
   }
 
-  a {
+  a,
+  &-link {
     @if $pagination-gradients == true {
       @include linear-gradient(to bottom, lighten($pagination-item-bg, 6%), $pagination-item-bg 66%, darken($pagination-item-bg, 4%));
     }
@@ -159,3 +162,30 @@
   }
 }
 
+.c-pagination-previous a::before,
+.c-pagination-previous.disabled::before {
+  content: '\f0d9';
+  font-family: fontawesome;
+  display: inline-block;
+}
+
+.c-pagination-next a::after,
+.c-pagination-next.disabled::after {
+  content: '\f0da';
+  font-family: fontawesome;
+  display: inline-block;
+}
+
+.c-pagination-previous::before,
+.c-pagination-previous.disabled::before {
+  content: '\f0d9';
+  font-family: fontawesome;
+  display: inline-block;
+}
+
+.c-pagination-next::after,
+.c-pagination-next.disabled::after {
+  content: '\f0da';
+  font-family: fontawesome;
+  display: inline-block;
+}
