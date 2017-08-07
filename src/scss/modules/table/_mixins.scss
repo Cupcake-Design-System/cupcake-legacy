@@ -87,9 +87,11 @@ $table-shadow: 0 !default;
 $show-header-for-stacked: false !default;
 
 /// $table-state-selected 
-$table-state-selected: #fafad2 !default;
+$table-state-selected: $color-primary-0 !default;
 /// $table-state-active   
 $table-state-active: #fafad2 !default;
+/// $table-state-starred  
+$table-state-starred: $color-warning-0 !default;
 /// $table-state-success  
 $table-state-success: lighten($success, 20%) !default;
 /// $table-state-warning  
@@ -98,19 +100,14 @@ $table-state-warning: lighten($warning, 20%) !default;
 $table-state-danger: lighten($danger, 20%) !default;
 
 
-// $table-colors:
-$table-colors: ("primary", $primary)
-  ("success", $success)
-  ("default", $secondary)
-  ("warning", $warning)
-  ("danger", $danger) !default;
-
 // $table-states:
 $table-states: ("selected", $table-state-selected)
+  ("starred", $table-state-starred)
   ("active", $table-state-active)
   ("success", $table-state-success)
   ("warning", $table-state-warning)
   ("danger", $table-state-danger) !default;
+
 
 @mixin ipreo-table-children-styles($stripe: $table-stripe) {
   .c-table {
