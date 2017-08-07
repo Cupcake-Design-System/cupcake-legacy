@@ -38,15 +38,26 @@
       border-left: 1px solid $header-borders;
     }
   }
-}
 
-.c-badge-notifications {
-  align-content: center;
-  display: flex;
-  font-size: 0.875rem;
-  height: 32px;
-  width: 32px;
-  justify-content: center;
+  &-notification {
+    .c-badge-notification {
+      align-items: center;
+      background-color: $color-gray-1;
+      border: 0;
+      color: $color-gray-7;
+      display: flex;
+      font-size: 0.875rem;
+      height: 2rem;
+      width: 2rem;
+      justify-content: center;
+
+      &-alert {
+        background-color: $danger;
+        color: $white;
+        position: absolute;
+      }
+    }
+  }
 }
 
 .c-product-switcher {
@@ -65,4 +76,3 @@
   right: 0;
   min-width: 150px;
 }
-
