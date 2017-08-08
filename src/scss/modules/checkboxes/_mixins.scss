@@ -6,171 +6,191 @@
 $checkbox-size            : 18px !default;
 
 /// $checkbox-size-sm         
-$checkbox-size-sm         : 12px !default;
+$checkbox-size-sm         : 14px !default;
 
 /// $checkbox-size-lg         
 $checkbox-size-lg         : 24px !default;
 
 /// $checkbox-size-xl        
-$checkbox-size-xl         : 32px !default;
-
-/// $checkbox-icon-bd         
-$checkbox-icon-bd         : 1px solid $global-border-color !default;
+$checkbox-size-xl         : 28px !default;
 
 /// $checkbox-icon-radius   
-$checkbox-icon-radius     : 2px !default;
+$checkbox-radius     : 2px !default;
 
-/// $checkbox-transition     
-$checkbox-transition      : all 0.2s !default;
+/// $checkbox-control
+$checkbox-control: transparent;
 
-/// $checkbox-disabled
-$checkbox-disabled: $color-gray-3;
+/// $checkbox-control-active 
+$checkbox-control-active: $primary;
 
-/// $checkbox-disabled-opacity 
-$checkbox-disabled-opacity: 0.5 !default;
+/// $checkbox-control-border
+$checkbox-control-border: $color-gray-4;
 
-@mixin checkbox($size:$checkbox-size) {
-  input {
+/// $checkbox-font-color
+$checkbox-font-color: $color-gray-7;
+
+/// $checkbox-control-disabled
+$checkbox-control-disabled: $color-gray-4;
+
+
+@mixin checkbox($font-size: $checkbox-size, $color: $checkbox-control-active) {
+  input[type='checkbox'] {
     position: absolute;
-    width: $size;
-    height: $size;
+    display: none;
     opacity: 0;
-    z-index: 1;
-    cursor: pointer;
-
-    &:checked + i::before {
-      border-width: 0;
-      background-color: inherit;
-    }
-
-    &:checked + span .active {
-      display: inherit;
-    }
-
-    &[type="radio"] + i {
-      &,
-      &::before {
-        border-radius: 50%;
-      }
-    }
-
-    &[type="checkbox"]:checked + i::after {
-      transform: rotate(45deg);
-      position: absolute;
-      left: $size / 3;
-      top: $size / 9;
-      display: table-cell;
-      width: $size / 3;
-      height: $size / 1.5;
-      border: $size / 9 solid;
-      border-top: 0;
-      border-left: 0;
-      content: ' ';
-      color: $white;
-    }
-
-    &[type="radio"]:checked + i::after {
-      position: absolute;
-      left: $size / 3;
-      top: $size / 3;
-      display: table;
-      width: $size / 3;
-      height: $size / 3;
-      background: $white;
-      border-radius: 50%;
-      content: ' ';
-      color: $white;
-    }
-
-    &[disabled],
-    fieldset[disabled] & {
-      & + i::before {
-        opacity: $checkbox-disabled-opacity;
-        background: $checkbox-disabled;
-        cursor: not-allowed;
-      }
-    }
-
-    &[disabled]:checked {
-      & + i::before {
-        opacity: $checkbox-disabled-opacity;
-        cursor: not-allowed;
-      }
-    }
   }
 
-  > i {
-    height: $size;
-    display: inline-block;
-    margin: 0 $size -3px 0;
+  input[type='checkbox'][disabled] {
+    cursor: not-allowed;
+  }
+
+  input[type='checkbox'] + i {
     position: relative;
+    display: inline-block;
+    color: $checkbox-font-color;
+    padding: 0 $font-size/2 0 1.75 * $font-size;
+    cursor: pointer;
+    vertical-align: middle;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: 1.3em;
+    margin-bottom: .5 * $font-size;
+
+    &:hover {
+      &::before {
+        border: 1px solid $color;
+      }
+    }
 
     &::before {
-      content: "";
       position: absolute;
-      width: $size;
-      height: $size;
-      border: $checkbox-icon-bd;
-      border-radius: $checkbox-icon-radius;
-      transition: $checkbox-transition;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 1.25 * $font-size;
+      height: 1.25 * $font-size;
+      content: '';
+      transition: border .2s ease;
+      border: 1px solid $checkbox-control-border;
+      background: $checkbox-control;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      transition: all .2s ease;
+    }
+  }
+
+  input[type='checkbox'][disabled] + i {
+    cursor: not-allowed;
+
+    &:hover,
+    &::before,
+    &::after {
+      cursor: not-allowed;
+    }
+
+    &::before {
+      border-color: $checkbox-control-disabled;
+    }
+  }
+
+  input[type='checkbox']:checked + i {
+    &::before {
+      animation-name: none;
+    }
+
+    &::after {
+      transform: scale(1);
+    }
+  }
+
+  // Checkbox specific styling
+
+  input[type='checkbox'] + i {
+    &::before {
+      border-radius: $checkbox-radius;
+    }
+
+    &::after {
+      top: 0.2 * $font-size;
+      left: 0.4375 * $font-size;
+      width: 0.375 * $font-size;
+      height: 0.75 * $font-size;
+      transform: scale(0) rotate(45deg);
+      border-width: 0.125 * $font-size;
+      border-style: solid;
+      border-color: #ffffff;
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+
+  input[type='checkbox']:checked + i {
+    &::before {
+      border: 1px solid $color;
+      background: $color;
+    }
+
+    &::after {
+      transform: scale(1) rotate(45deg);
+    }
+  }
+
+  input[type='checkbox']:checked[disabled] + i {
+    &::before {
+      border: 1px solid lighten($color, 30%);
+      background: lighten($color, 30%);
+    }
+  }
+}
+
+@mixin checkbox-color($color: $checkbox-control-active) {
+  input[type='checkbox'] + i {
+    &:hover {
+      &::before {
+        border: 1px solid $color;
+      }
+    }
+  }
+
+  input[type='checkbox']:checked + i {
+    &::before {
+      border: 1px solid $color;
+      background: $color;
+    }
+  }
+
+  input[type='checkbox']:checked[disabled] + i {
+    &::before {
+      border: 1px solid lighten($color, 30%);
+      background: lighten($color, 30%);
     }
   }
 }
 
 
-@mixin control($font-size: $checkbox-size) {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  font-size: $font-size;
-  line-height: 1;
-}
+@mixin checkbox-size($font-size: $checkbox-size) {
+  input[type='checkbox'] + i {
+    padding: 0 $font-size/2 0 1.75 * $font-size;
+    font-size: $font-size;
+    margin-bottom: .5 * $font-size;
 
-.c-control {
-  @include control;
-
-  padding: 0 13px 0 26px;
-
-  &.c-checkbox > i,
-  &.c-radio > i {
-    position: absolute;
-    left: 0;
-  }
-
-  &-sm {
-    @include control($checkbox-size-sm);
-
-    padding: 0 10px 0 20px;
-
-    &.c-checkbox-sm > i,
-    &.c-radio-sm > i {
-      position: absolute;
-      left: 0;
+    &::before {
+      width: 1.25 * $font-size;
+      height: 1.25 * $font-size;
     }
   }
 
-  &-lg {
-    @include control($checkbox-size-lg);
-
-    padding: 0 16px 0 32px;
-
-    &.c-checkbox-lg > i,
-    &.c-radio-lg > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  &-xl {
-    @include control($checkbox-size-xl);
-
-    padding: 0 20px 0 40px;
-
-    &.c-checkbox-xl > i,
-    &.c-radio-xl > i {
-      position: absolute;
-      left: 0;
+  // Checkbox specific styling
+  input[type='checkbox'] + i {
+    &::after {
+      top: 0.2 * $font-size;
+      left: 0.4375 * $font-size;
+      width: 0.375 * $font-size;
+      height: 0.75 * $font-size;
+      border-width: 0.125 * $font-size;
     }
   }
 }
-
