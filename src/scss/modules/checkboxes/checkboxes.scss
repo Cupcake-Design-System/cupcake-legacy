@@ -1,31 +1,23 @@
 @import 'mixins';
 
-.c-checkbox {
+.c-checkbox,
+.c-radio {
   @include checkbox;
-
-  &-success {
-    @include checkbox-color($success);
-  }
-
-  &-warning {
-    @include checkbox-color($warning);
-  }
-
-  &-danger {
-    @include checkbox-color($danger);
-  }
 }
 
-.c-checkbox {
-  &-sm {
-    @include checkbox-size($checkbox-size-sm);
-  }
-
-  &-lg {
-    @include checkbox-size($checkbox-size-lg);
-  }
-
-  &-xl {
-    @include checkbox-size($checkbox-size-xl);
-  }
+.c-radio-sm,
+.c-checkbox-sm {
+  @include checkbox($checkbox-size-sm);
 }
+
+.c-radio-lg,
+.c-checkbox-lg {
+  @include checkbox($checkbox-size-lg);
+}
+
+
+.c-radio-xl,
+.c-checkbox-xl {
+  @include checkbox($checkbox-size-xl);
+}
+
