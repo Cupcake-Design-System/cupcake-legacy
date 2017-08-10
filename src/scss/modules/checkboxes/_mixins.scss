@@ -12,7 +12,7 @@ $checkbox-size-sm         : 12px !default;
 $checkbox-size-lg         : 24px !default;
 
 /// $checkbox-size-xl        
-$checkbox-size-xl         : 32px !default;
+$checkbox-size-xl         : 30px !default;
 
 /// $checkbox-icon-bd         
 $checkbox-icon-bd         : 1px solid $global-border-color !default;
@@ -30,6 +30,11 @@ $checkbox-disabled: $color-gray-3;
 $checkbox-disabled-opacity: 0.5 !default;
 
 @mixin checkbox($size:$checkbox-size) {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+
   input {
     position: absolute;
     width: $size;
@@ -57,12 +62,12 @@ $checkbox-disabled-opacity: 0.5 !default;
     &[type="checkbox"]:checked + i::after {
       transform: rotate(45deg);
       position: absolute;
-      left: $size / 3;
-      top: $size / 9;
+      left: round($size / 3);
+      top: round($size / 9);
       display: table-cell;
-      width: $size / 3;
-      height: $size / 1.5;
-      border: $size / 9 solid;
+      width: round($size / 3);
+      height: round($size / 1.5);
+      border: round($size / 9) solid;
       border-top: 0;
       border-left: 0;
       content: ' ';
@@ -71,11 +76,11 @@ $checkbox-disabled-opacity: 0.5 !default;
 
     &[type="radio"]:checked + i::after {
       position: absolute;
-      left: $size / 3;
-      top: $size / 3;
+      left: round($size / 3);
+      top: round($size / 3);
       display: table;
-      width: $size / 3;
-      height: $size / 3;
+      width: round($size / 3);
+      height: round($size / 3);
       background: $white;
       border-radius: 50%;
       content: ' ';
@@ -102,7 +107,7 @@ $checkbox-disabled-opacity: 0.5 !default;
   > i {
     height: $size;
     display: inline-block;
-    margin: 0 $size -3px 0;
+    margin: 0 $size -2px 0;
     position: relative;
 
     &::before {
@@ -117,6 +122,45 @@ $checkbox-disabled-opacity: 0.5 !default;
   }
 }
 
+@mixin checkbox-size($size:$checkbox-size) {
+  input {
+    width: $size;
+    height: $size;
+
+    &[type="checkbox"]:checked + i::after {
+      left: round($size / 3);
+      top: round($size / 9);
+      width: round($size / 3);
+      height: round($size / 1.5);
+      border: round($size / 9) solid;
+      border-top: 0;
+      border-left: 0;
+    }
+
+    &[type="radio"]:checked + i::after {
+      left: round($size / 3);
+      top: round($size / 3);
+      width: round($size / 3);
+      height: round($size / 3);
+    }
+  }
+
+  > i {
+    height: $size;
+    margin: 0 $size -2px 0;
+
+    &::before {
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+@mixin checkbox-color($color: $primary) {
+  input:checked + i::before {
+    background-color: $color;
+  }
+}
 
 @mixin control($font-size: $checkbox-size) {
   display: inline-block;
@@ -125,52 +169,3 @@ $checkbox-disabled-opacity: 0.5 !default;
   font-size: $font-size;
   line-height: 1;
 }
-
-.c-control {
-  @include control;
-
-  padding: 0 13px 0 26px;
-
-  &.c-checkbox > i,
-  &.c-radio > i {
-    position: absolute;
-    left: 0;
-  }
-
-  &-sm {
-    @include control($checkbox-size-sm);
-
-    padding: 0 10px 0 20px;
-
-    &.c-checkbox-sm > i,
-    &.c-radio-sm > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  &-lg {
-    @include control($checkbox-size-lg);
-
-    padding: 0 16px 0 32px;
-
-    &.c-checkbox-lg > i,
-    &.c-radio-lg > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  &-xl {
-    @include control($checkbox-size-xl);
-
-    padding: 0 20px 0 40px;
-
-    &.c-checkbox-xl > i,
-    &.c-radio-xl > i {
-      position: absolute;
-      left: 0;
-    }
-  }
-}
-
