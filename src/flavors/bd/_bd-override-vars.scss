@@ -9,6 +9,7 @@ $white: white;
 
 $paragraph-margin: 0 0 10px;
 $text-strong: 600;
+$text-small: 85%;
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -121,6 +122,7 @@ $card-shadow-hover:            0 4px 4px 0 rgba(0, 122, 194, 0.07), 0 1px 4px 0 
 $card-transition:              box-shadow 0.15s ease-in;
 
 
+$table-line-height         : 1.4;
 $table-background          : white;
 $table-border              : 0;
 $table-border-color        : $color-dividers;

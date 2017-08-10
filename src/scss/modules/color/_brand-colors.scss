@@ -62,23 +62,18 @@ $brand-map: (
   @return null;
 }
 
+@each $name, $color in (primary: $primary, success: $success, warning: $warning, danger: $danger) {
+  .c-text-#{$name} {
+    color: $color;
+  }
 
-@each $palette, $tones in $brand-map {
-  @each $tone_name, $tone_value in $tones {
-    @if ($tone_name == 6) {
-      .c-text-#{$palette} {
-        color: $tone_value;
-      }
+  .c-bg-#{$name} {
+    background-color: $color;
+    color: $color-gray-0;
+  }
 
-      .c-bg-#{$palette} {
-        background-color: $tone_value;
-        color: $color-gray-0;
-      }
-
-      .c-bd-#{$palette} {
-        border: 1px solid $tone_value;
-      }
-    }
+  .c-bd-#{$name} {
+    border: 1px solid $color;
   }
 }
 

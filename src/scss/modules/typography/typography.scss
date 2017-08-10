@@ -11,36 +11,24 @@
 .c-text {
   @include font-body;
 
-  margin: $paragraph-margin;
-
   &-xl {
     @include font-body-xl;
-
-    margin: $paragraph-margin;
   }
 
   &-lg {
     @include font-body-lg;
-
-    margin: $paragraph-margin;
   }
 
   &-md {
     @include font-body-md;
-
-    margin: $paragraph-margin;
   }
 
   &-sm {
     @include font-body-sm;
-
-    margin: $paragraph-margin;
   }
 
   &-xs {
     @include font-body-xs;
-
-    margin: $paragraph-margin;
   }
 }
 
@@ -143,8 +131,9 @@
 }
 
 // Small text
+small,
 .c-text-small {
-  font-size: 80%;
+  font-size: $text-small;
   line-height: inherit;
 }
 
