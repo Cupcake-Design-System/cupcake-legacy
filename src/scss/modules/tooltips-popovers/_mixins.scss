@@ -59,22 +59,22 @@ $popover-colors:
   // x-placement is for popper.js that is used in cupcake-components package
 
   &-top,
-  &[x-placement="top"] {
+  &[x-placement^="top"] {
     margin-bottom: $popover-arrow-width;
   }
 
   &-left,
-  &[x-placement="left"] {
+  &[x-placement^="left"] {
     margin-right: $popover-arrow-width;
   }
 
   &-right,
-  &[x-placement="right"] {
+  &[x-placement^="right"] {
     margin-left: $popover-arrow-width;
   }
 
   &-bottom,
-  &[x-placement="bottom"] {
+  &[x-placement^="bottom"] {
     margin-top: $popover-arrow-width;
   }
 
@@ -104,8 +104,8 @@ $popover-colors:
   }
 
   // for popper.js
-  &[x-placement="top"] > &-arrow,
-  &[x-placement="bottom"] > &-arrow {
+  &[x-placement^="top"] > &-arrow,
+  &[x-placement^="bottom"] > &-arrow {
     margin: 0 $popover-bd-radius;
 
     &::after {
@@ -113,8 +113,8 @@ $popover-colors:
     }
   }
 
-  &[x-placement="left"] > &-arrow,
-  &[x-placement="right"] > &-arrow {
+  &[x-placement^="left"] > &-arrow,
+  &[x-placement^="right"] > &-arrow {
     margin: $popover-bd-radius 0;
 
     &::after {
@@ -125,7 +125,7 @@ $popover-colors:
 
   // generate and align arrow triangles
   &-top > &-arrow,
-  &[x-placement="top"] > &-arrow {
+  &[x-placement^="top"] > &-arrow {
     bottom: -$popover-arrow-width;
 
     @include css-triangle($popover-arrow-width, $popover-bd-c, down);
@@ -138,7 +138,7 @@ $popover-colors:
   }
 
   &-right > &-arrow,
-  &[x-placement="right"] > &-arrow {
+  &[x-placement^="right"] > &-arrow {
     left: -$popover-arrow-width;
 
     @include css-triangle($popover-arrow-width, $popover-bd-c, left);
@@ -151,7 +151,7 @@ $popover-colors:
   }
 
   &-bottom > &-arrow,
-  &[x-placement="bottom"] > &-arrow {
+  &[x-placement^="bottom"] > &-arrow {
     top: -$popover-arrow-width;
 
     @include css-triangle($popover-arrow-width, $popover-bd-c, up);
@@ -164,7 +164,7 @@ $popover-colors:
   }
 
   &-left > &-arrow,
-  &[x-placement="left"] > &-arrow {
+  &[x-placement^="left"] > &-arrow {
     right: -$popover-arrow-width;
 
     @include css-triangle($popover-arrow-width, $popover-bd-c, right);
