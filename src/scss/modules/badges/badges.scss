@@ -11,6 +11,14 @@
   line-height: $badge-line-height;
   white-space: nowrap;
 
+  &-link {
+    color: $color-gray-1;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   &-rounded {
     border-radius: $badge-border-radius-rounded;
   }
@@ -35,10 +43,22 @@
   $badge-color: nth($badge-color, 3);
 
   .c-badge-#{$badge-color-namespace} {
-    @include badge($badge-bg-color, $white, $badge-bg-color);
+    @include badge($badge-bg-color, $badge-color, $badge-bg-color);
 
     &-outline {
       @include badge(transparent, $badge-color);
+    }
+  }
+}
+
+.c-badge-secondary {
+  .c-badge-link {
+    color: $color-gray-7;
+    opacity: .8;
+
+    &:hover {
+      color: $color-gray-7;
+      opacity: 1;
     }
   }
 }

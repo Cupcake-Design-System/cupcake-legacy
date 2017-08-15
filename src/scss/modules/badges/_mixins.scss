@@ -3,7 +3,7 @@
 ////
 
 /// $badge-padding:
-$badge-padding: 0.5em !default;
+$badge-padding: 4px !default;
 
 /// $badge-border-width:
 $badge-border-width: 1px !default;
@@ -18,28 +18,31 @@ $badge-border-radius: $global-radius !default;
 $badge-border-radius-rounded: 30em !default;
 
 /// $badge-font-size:
-$badge-font-size: 1rem !default;
+$badge-font-size: 11px !default;
 
 /// $badge-font-weight: 
-$badge-font-weight: bold !default;
+$badge-font-weight: normal !default;
 
 /// $badge-line-height: 
 $badge-line-height: 1 !default;
 
 /// $badge-xs 
-$badge-xs: 0.5rem !default;
+$badge-xs: 8px !default;
 
 /// $badge-sm 
-$badge-sm: 0.7rem !default;
+$badge-sm: 9px !default;
 
 /// $badge-lg:  
-$badge-lg: 1.25rem !default;
+$badge-lg: 18px !default;
 
 /// $badge-xl: 
-$badge-xl: 1.5rem !default;
+$badge-xl: 22px !default;
 
 /// $primary
 $badge-primary: $primary;
+
+/// $secondary
+$badge-secondary: $color-gray-1;
 
 /// $success
 $badge-success: $success;
@@ -53,17 +56,17 @@ $badge-warning: $warning;
 
 // $badge-sizes
 $badge-sizes:
-  ("xs", $badge-xs)
   ("sm", $badge-sm)
   ("lg", $badge-lg)
   ("xl", $badge-xl) !default;
 
 // $badge-colors
 $badge-colors:
-  ("primary", $badge-primary, $badge-primary)
-  ("success", $badge-success, $badge-success)
-  ("danger", $badge-danger, $badge-danger)
-  ("warning", $badge-warning, $badge-warning) !default;
+  ("primary", $badge-primary, $white, $badge-primary)
+  ("secondary", $badge-secondary, $color-gray-7, $color-gray-4)
+  ("success", $badge-success, $white, $badge-success)
+  ("danger", $badge-danger, $white, $badge-danger)
+  ("warning", $badge-warning, $white, $badge-warning) !default;
 
 @mixin badge($background-color, $color: $badge-color, $border-color: $color) {
   border: $badge-border-width $badge-border-style $border-color;
