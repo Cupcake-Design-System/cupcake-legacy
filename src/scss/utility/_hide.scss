@@ -1,0 +1,32 @@
+@import "mq";
+
+@mixin hidden-class-export {
+  .c-hidden {
+    display: none;
+
+    &-sm {
+      @include bp($until:sm) {
+        display: none;
+      }
+    }
+
+    &-md {
+      @include bp($until:md) {
+        display: none;
+      }
+    }
+
+    &-lg {
+      @include bp($until:lg) {
+        display: none;
+      }
+    }
+
+    &-xl {
+      @include bp($until:xl) {
+        display: none;
+      }
+    }
+  }
+}
+

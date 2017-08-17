@@ -46,25 +46,28 @@ $hr-margin                      : 20px auto !default;
 }
 
 
-// .c-sm-text-center or .c-text-center
-@each $size, $breakpoint in $breakpoints {
-  @each $align in (left, right, center, justify) {
-    .c-#{$size}-text-#{$align} {
-      @include bp($size) {
-        text-align: $align;
+@mixin text-align-class-export {
+  @each $breakpoint in map-keys($breakpoints) {
+    @each $align in (left, right, center, justify) {
+      @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+        .c#{$infix}-text-#{$align} {
+          text-align: $align;
+        }
       }
     }
   }
-}
 
-@each $align in (left, right, center, justify) {
-  .c-text-#{$align} {
-    text-align: $align;
+  @each $align in (left, right, center, justify) {
+    .c-text-#{$align} {
+      text-align: $align;
+    }
   }
-}
 
-@each $pull in (left, right) {
-  .c-pull-#{$pull} {
-    float: $pull;
+  @each $pull in (left, right) {
+    .c-pull-#{$pull} {
+      float: $pull;
+    }
   }
 }

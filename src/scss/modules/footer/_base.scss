@@ -24,7 +24,7 @@ $footer-trans-font-size : 12px !default;
 $footer-trans-color     : $black !default;
 
 .c-footer {
-  @include create-row();
+  @include make-row();
 
   justify-content: space-between;
   color: $footer-color;

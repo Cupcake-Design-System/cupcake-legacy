@@ -3,13 +3,13 @@
 ////
 
 // $breakpoints
-$breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1440px) !default;
+// $breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1440px) !default;
 
 $show-breakpoints: false;
 $bp-show-breakpoints: (xs, sm, md, lg, xl, xxl);
@@ -49,7 +49,7 @@ $bp-media-type: all !default;
     }
 
     @else {
-      $max-width: bp-get-breakpoint-width($until, $breakpoint) - 10;
+      $max-width: bp-get-breakpoint-width($until, $breakpoint) - 2;
     }
   }
 

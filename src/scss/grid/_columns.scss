@@ -1,0 +1,76 @@
+// generate grid classes
+@mixin make-grid-columns($columns: $total-columns, $gutter: $grid-gutter-width, $grid-breakpoints: $breakpoints) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      #{$col-namespace}#{$infix}-#{$i} {
+        @extend %grid-column;
+      }
+    }
+
+    #{$col-namespace}#{$infix},
+    #{$col-namespace}#{$infix}-auto {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      #{$col-namespace}#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      #{$col-namespace}#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $columns {
+        #{$col-namespace}#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+
+      @for $i from 1 through $columns {
+        #{$col-namespace}#{$infix}-order-#{$i} {
+          order: $i;
+        }
+      }
+
+      @for $i from 1 through $columns {
+        #{$col-namespace}#{$infix}-offset-#{$i} {
+          margin-left: percentage($i / $columns);
+        }
+      }
+    }
+  }
+}
+
+@mixin make-col-ready() {
+  position: relative;
+  width: 100%;
+  min-height: 1px; // Prevent collapsing
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+}
+
+@mixin make-col($size, $columns: $total-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+// Common styles for small and large grid columns
+@include make-grid-columns();
