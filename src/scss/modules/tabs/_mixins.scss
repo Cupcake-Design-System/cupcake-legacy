@@ -12,7 +12,7 @@ $tabs-border-radius: $global-radius !default;
 $tabs-full-width-border: true !default;
 
 /// $tabs-color: $body-font-color!default;
-$tabs-color: $global-text-color !default;
+$tabs-color: $color-gray-5 !default;
 
 /// $tabs-color-hover: $primary!default;
 $tabs-color-hover: $primary !default;
@@ -67,6 +67,7 @@ $tab-font-size-lg: 20px !default;
   display: flex;
   white-space: nowrap;
   font-size: $tabs-font-size-default;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   overflow: hidden;
