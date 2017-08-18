@@ -1,3 +1,12 @@
+### Release 1.0.0
+* .c-bg-gray text colors - fixes #67 [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3b60e9f237157b5e70bdd42acc52837455212b49)
+* tab updates and input group fix [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/265da9f9657238a427a93b62cab7c9313db957a0)
+* Updated cleaner grid (#91) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9d564d9b093854ddd99550969b4305de78f120ba)
+* Changed references from northstar to default (#94) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/51e40ecabf546cc9edaf436ae7cd4bd3406a7986)
+* Update footer and badges to match latest design (#93) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dbeedb2cac3b8076218233a81914fb53b494fe97)
+* popover alternate positioning "shifted" [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/28e6c2f6636505b061faa5826a3aa82baee565e9)
+
+
 ### Release 0.1.8
 * fixes for Events team. (#87) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eb05f636473d42e6a25fd001ecc9ff228fb57c14)
 * Checkbox updates (#90) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/62c842d5eca64ceb5b52a12e29837b891a14747b)
