@@ -83,7 +83,7 @@ $popover-colors:
   }
 
   &[x-out-of-boundaries] {
-    display: none;
+    display: none !important; // overriding inline styles, set by popper js
   }
 
   // align arrows relative to popover
