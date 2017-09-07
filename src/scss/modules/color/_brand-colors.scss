@@ -62,41 +62,42 @@ $brand-map: (
   @return null;
 }
 
-@each $name, $color in (primary: $primary, success: $success, warning: $warning, danger: $danger) {
-  .c-text-#{$name} {
-    color: $color;
-  }
-
-  .c-bg-#{$name} {
-    background-color: $color;
-    color: $color-gray-0;
-  }
-
-  .c-bd-#{$name} {
-    border: 1px solid $color;
-  }
-}
-
-
-@each $palette, $tones in $brand-map {
-  @each $tone_name, $tone_value in $tones {
-    .c-text-#{$palette}-#{$tone_name} {
-      color: $tone_value;
+@mixin brand-color-class-export {
+  @each $name, $color in (primary: $primary, success: $success, warning: $warning, danger: $danger) {
+    .c-text-#{$name} {
+      color: $color;
     }
 
-    .c-bg-#{$palette}-#{$tone_name} {
-      background-color: $tone_value;
+    .c-bg-#{$name} {
+      background-color: $color;
       color: $color-gray-0;
     }
 
-    .c-bd-#{$palette}-#{$tone_name} {
-      border: 1px solid $tone_value;
+    .c-bd-#{$name} {
+      border-color: $color;
     }
   }
-}
 
-.c-bg-none {
-  background-color: transparent;
+  @each $palette, $tones in $brand-map {
+    @each $tone_name, $tone_value in $tones {
+      .c-text-#{$palette}-#{$tone_name} {
+        color: $tone_value;
+      }
+
+      .c-bg-#{$palette}-#{$tone_name} {
+        background-color: $tone_value;
+        color: $color-gray-0;
+      }
+
+      .c-bd-#{$palette}-#{$tone_name} {
+        border-color: $tone_value;
+      }
+    }
+  }
+
+  .c-bg-none {
+    background-color: transparent;
+  }
 }
 
 $color-primary-0: color(primary, 0);

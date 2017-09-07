@@ -9,21 +9,25 @@
   },
   "scripts": {
     "start": "gulp",
+    "deploy:dist": "surge --project ./dist --domain ipreo-cupcake.surge.sh",
+    "deploy:tests": "surge --project ./test --domain ipreo-cupcake-test.surge.sh",
+    "deploy:surge": "npm run deploy:dist && npm run deploy:tests",
     "precommit": "lint-staged",
     "build": "gulp build",
     "deploy": "gulp deploy",
     "test": "gulp lint",
     "changelog": "git log --pretty=format:'* %s [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/%H)' > change.md",
     "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
-    "backstop": "npm run build & npm run reference & npm run compare",
-    "reference": "backstop reference --configPath=backstop.config.js",
-    "compare": "backstop test --configPath=backstop.config.js"
+    "visual": "npm run reference && npm run compare",
+    "reference": "backstop reference",
+    "compare": "backstop test"
   },
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",
+    "backstopjs": "^3.0.13",
     "browser-sync": "^2.0.0-rc4",
     "colors": "^1.1.2",
     "del": "^3.0.0",
@@ -51,6 +55,7 @@
     "stylelint-config-standard": "^16.0.0",
     "stylelint-declaration-use-variable": "^1.6.0",
     "stylelint-scss": "^1.4.1",
+    "surge": "^0.19.0",
     "vinyl-paths": "^2.0.0"
   }
 }
