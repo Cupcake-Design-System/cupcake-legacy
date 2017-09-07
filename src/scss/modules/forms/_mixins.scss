@@ -2,6 +2,8 @@
   display: block;
   width: 100%;
   padding: $control-label-padding;
+  color: $control-color;
+  font-size: $control-font-size;
   cursor: pointer;
 }
 
@@ -12,6 +14,7 @@
   border: $control-border-width solid $control-border;
   border-radius: $control-border-radius;
   outline: 0;
+  color: $control-color;
   background-color: $control-background;
   font-family: inherit;
   font-size: $control-font-size;

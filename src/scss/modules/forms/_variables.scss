@@ -4,10 +4,12 @@
 
 /// $control-font-size 
 $control-font-size              : 12px !default;
+/// $control-color 
+$control-color                  : $font-body-color !default;
 /// $control-font-weight
 $control-font-weight            : normal !default;
 /// $control-line-height
-$control-line-height            : normal !default;
+$control-line-height            : 1.166667 !default;  //line height optimized for IE compatibility
 /// $control-placeholder-c
 $control-placeholder-c          : $color-gray-5 !default;
 /// $control-placeholder-hover-c
@@ -15,9 +17,9 @@ $control-placeholder-hover-c    : $control-placeholder-c !default;
 /// $control-background 
 $control-background             : $white !default;
 /// $control-padding-v
-$control-padding-v              : 0.75em !default;
+$control-padding-v              : 7px !default;
 /// $control-padding-h 
-$control-padding-h              : 0.75em !default;
+$control-padding-h              : 10px !default;
 /// $control-border 
 $control-border                 : $global-border-color !default;
 /// $control-border-width 
@@ -33,7 +35,7 @@ $control-transition             : border-color 0.1s ease-in !default;
 /// $control-hover  
 $control-hover                  : $primary !default;
 /// $control-hover-border
-$control-hover-border           : $primary !default;
+$control-hover-border           : $color-gray-5 !default;
 /// $control-active  
 $control-active                 : $primary !default;
 /// //$control-active-background 
@@ -81,23 +83,23 @@ $fieldset-border                : 0 !default;
 /// $fieldset-legend-padding        
 $fieldset-legend-padding        : 0.3em 0 !default;
 /// $control-xs
-$control-xs: 0.67em !default;
+$control-xs: 11px !default;
 /// $control-sm
-$control-sm: 12px !default;
+$control-sm: 11px !default;
 /// $control-lg
-$control-lg: 1.17em !default;
+$control-lg: 12px !default;
 /// $control-xl
-$control-xl: 1.5em !default;
+$control-xl: 12px !default;
 /// $control-xxl
-$control-xxl: 2em !default;
+$control-xxl: 14px !default;
 /// $control-xs
-$control-xs-padding: 0.125em 0.416em !default;
+$control-xs-padding: 1px 10px !default;
 /// $control-sm
-$control-sm-padding: 0.2em 0.5em !default;
+$control-sm-padding: 2.5px 10px 3px !default;
 /// $control-lg
-$control-lg-padding: 0.7em 0.6em !default;
+$control-lg-padding: 12px 15px !default;
 /// $control-xl
-$control-xl-padding: 0.563em 0.75em !default;
+$control-xl-padding: 17px 20px !default;
 /// $control-group-padding
 $control-group-padding: 1em !default;
 /// $control-success-c
