@@ -54,7 +54,6 @@ $gray-map: (
 
       .c-bg-#{$palette}-#{$tone_name} {
         background-color: $tone_value;
-        color: $color-gray-0;
       }
 
       .c-bd-#{$palette}-#{$tone_name} {
