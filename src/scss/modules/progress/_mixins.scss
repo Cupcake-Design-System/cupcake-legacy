@@ -5,6 +5,21 @@
 /// $progress-height
 $progress-height: 2rem !default;
 
+/// $progress-height-sm
+$progress-height-sm: .75rem !default;
+
+/// $progress-height-lg
+$progress-height-lg: 3rem !default;
+
+// $progress-font-size
+$progress-font-size: .75rem !default;
+
+// $progress-font-size-sm
+$progress-font-size-sm: .5rem !default;
+
+// $progress-font-size-lg
+$progress-font-size-lg: 1rem !default;
+
 /// $progress-background
 $progress-background: $color-gray-1 !default;
 
@@ -16,16 +31,14 @@ $progress-radius: $global-radius !default;
 
 /// $progress-primary
 $progress-primary: $primary;
+
 /// $progress-success
 $progress-success: $success;
-/// $progress-default
-$progress-default: $default;
 
 // $progress-colors
 $progress-colors:
   ("primary", $progress-primary)
-  ("success", $progress-success)
-  ("default", $progress-default) !default;
+  ("success", $progress-success) !default;
 
 @mixin loader-stripe($color) {
   background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
@@ -67,51 +80,25 @@ $progress-colors:
 
   position: absolute;
   margin: 0;
-  font-size: .75rem;
+  font-size: $progress-font-size;
   font-weight: bold;
   color: $white;
   white-space: nowrap;
   border-radius: $progress-radius;
 }
 
-@mixin full-progress(
-  $height: $progress-height,
-  $bg: $progress-background,
-  $color: $white,
-  $radius: $progress-radius
+@mixin progress-size(
+  $height: $progress-height
 ) {
-  background-color: $bg;
   height: $height;
-  border-radius: $radius;
-  margin-bottom: $progress-margin-bottom;
 
   .c-progress-meter {
-    position: relative;
-    display: block;
-    width: 0%;
-    height: 100%;
     height: $height;
-    border-radius: $radius;
-
-    @include linear-gradient(to bottom, lighten($color, 6%), $color 66%, darken($color, 4%));
 
     &-animated {
-      background: linear-gradient(135deg, $color 25%, darken($color, 10%) 25%, darken($color, 10%) 50%, $color 50%, $color 75%, darken($color, 10%) 75%);
       height: $height;
       background-size: $height $height;
-      animation: stripes 3s linear infinite;
-      border-radius: inherit;
     }
-  }
-
-  .c-progress-meter-text {
-    @include absolute-center;
-
-    margin: 0;
-    font-size: .75rem;
-    font-weight: bold;
-    color: white;
-    white-space: nowrap;
   }
 }
 
