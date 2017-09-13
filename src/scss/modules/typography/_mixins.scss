@@ -45,29 +45,54 @@ $hr-margin                      : 20px auto !default;
   font-size: $font-size;
 }
 
+@mixin text-pull-class-export {
+  @each $float in (left, right) {
+    .c-pull-#{$float} {
+      float: $float;
+    }
+  }
+}
+
+@mixin text-align($direction,$breakpoint) {
+  .c-text-#{$direction}-#{$breakpoint} {
+    text-align: $direction;
+  }
+}
 
 @mixin text-align-class-export {
-  @each $breakpoint in map-keys($breakpoints) {
-    @each $align in (left, right, center, justify) {
-      @include media-breakpoint-up($breakpoint) {
-        $infix: breakpoint-infix($breakpoint, $breakpoints);
+  .c-text-left {
+    text-align: left;
+  }
 
-        .c#{$infix}-text-#{$align} {
-          text-align: $align;
-        }
+  .c-text-right {
+    text-align: right;
+  }
+
+  .c-text-center {
+    text-align: center;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include text-align(left, $breakpoint);
+        @include text-align(right, $breakpoint);
+        @include text-align(center, $breakpoint);
       }
     }
-  }
 
-  @each $align in (left, right, center, justify) {
-    .c-text-#{$align} {
-      text-align: $align;
-    }
-  }
-
-  @each $pull in (left, right) {
-    .c-pull-#{$pull} {
-      float: $pull;
+    @else {
+      @media (min-width: $min-width) {
+        @include text-align(left, $breakpoint);
+        @include text-align(right, $breakpoint);
+        @include text-align(center, $breakpoint);
+      }
     }
   }
 }
