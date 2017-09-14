@@ -15,6 +15,7 @@ $shadow-xl: 0 16px 20px rgba(0, 0, 0, .29), 0 20px 65px rgba(0, 0, 0, .18) !defa
 
 
 $default-shadows: (
+  0: none,
   xs: $shadow-xs,
   sm: $shadow-sm,
   md: $shadow-md,

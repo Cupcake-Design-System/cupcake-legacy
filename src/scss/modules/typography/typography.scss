@@ -88,7 +88,6 @@
   font-weight: 900;
 }
 
-
 .c-a,
 .c-link {
   color: $anchor-color;
@@ -140,13 +139,6 @@
 }
 
 
-// Emphasized text
-.c-text-em,
-.c-text-italic {
-  font-style: italic;
-  line-height: inherit;
-}
-
 // Small text
 small,
 .c-text-small {
@@ -189,12 +181,11 @@ small,
   text-overflow: ellipsis;
 }
 
-
-//simple mixin example
-.c-header-primary {
-  @include header-styles(45px, blue, 900);
+.c-text-shadow {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.c-subheader-secondary {
-  @include header-styles(35px, green, bold);
+.c-text-muted {
+  color: inherit;
+  opacity: 0.6;
 }

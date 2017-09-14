@@ -1,0 +1,39 @@
+////
+/// @group radius
+////
+
+@import "../config/tokens";
+
+/// $radius-none
+$border-radius-none: $radius-square !default;
+
+/// $radius-sm
+$border-radius-sm: $radius-sm !default;
+
+/// $radius-md
+$border-radius-md: $radius-md !default;
+
+/// $radius-lg
+$border-radius-lg: $radius-lg !default;
+
+/// $radius-round
+$border-radius-round: $radius-round !default;
+
+
+// $radius-sizes
+$radius-sizes: (
+  0: $border-radius-none,
+  sm: $border-radius-sm,
+  md: $border-radius-md,
+  lg: $border-radius-lg,
+  round: $border-radius-round
+) !default;
+
+
+@mixin radius-class-export {
+  @each $size, $radius-size in $radius-sizes {
+    .c-radius-#{$size} {
+      border-radius: #{$radius-size};
+    }
+  }
+}

@@ -19,5 +19,10 @@ $border-sides : (
     .c-#{$side} {
       #{$prop}: $border-default;
     }
+
+    .c-#{$side}-0 {
+      #{$prop}: none;
+    }
   }
 }
+
