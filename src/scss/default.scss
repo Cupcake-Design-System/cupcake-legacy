@@ -1,3 +1,5 @@
+$generate-responsive-helpers: false;
+
 @import "utility/utility";
 @import "config/default";
 @import "base/reset";
@@ -7,7 +9,6 @@
 @import "ui/ui";
 
 @include space-class-export;
-@include flex-class-export;
 @include icon-class-export;
 @include shadow-class-export;
 @include borders-class-export;
@@ -15,7 +16,17 @@
 @include hidden-class-export;
 @include misc-helpers;
 @include radius-class-export;
-@include text-pull-class-export;
-@include text-align-class-export;
 @include gray-color-class-export;
 @include brand-color-class-export;
+
+@if $generate-responsive-helpers {
+  @include flex-responsive-class-export;
+  @include float-responsive-class-export;
+  @include text-align-responsive-class-export;
+}
+
+@else {
+  @include flex-class-export;
+  @include float-class-export;
+  @include text-align-class-export;
+}

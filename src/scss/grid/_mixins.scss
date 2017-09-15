@@ -1,12 +1,3 @@
-// Setup - Values may be edited - !!!DO NOT REMOVE THESE VARIABLES!!!
-// ========================================================================== //
-$row-namespace: '.c-row' !default;
-$col-namespace: '.c-col' !default;
-$gutter: $spacing-global-gutter !default;
-$total-columns: 12 !default;
-$container-fixed-width: $sizing-container-fixed-max-width !default;
-$grid-gutter-width: 30px !default;
-
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.

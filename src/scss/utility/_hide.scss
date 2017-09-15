@@ -1,32 +1,102 @@
-@import "mq";
-
 @mixin hidden-class-export {
+  .c-d-none {
+    display: none;
+  }
+
+  .c-d-inline {
+    display: inline;
+  }
+
+  .c-d-inline-block {
+    display: inline-block;
+  }
+
+  .c-d-block {
+    display: block;
+  }
+
+  .c-d-table {
+    display: table;
+  }
+
+  .c-d-table-cell {
+    display: table-cell;
+  }
+
+  .c-d-flex {
+    display: flex;
+  }
+
+  .c-d-inline-flex {
+    display: inline-flex;
+  }
+
+  @each $bp in map-keys($breakpoints) {
+    @include media-breakpoint-up($bp) {
+      $infix: breakpoint-infix($bp, $breakpoints);
+
+      .c#{$infix}-d-none {
+        display: none;
+      }
+
+      .c#{$infix}-d-inline {
+        display: inline;
+      }
+
+      .c#{$infix}-d-inline-block {
+        display: inline-block;
+      }
+
+      .c#{$infix}-d-block {
+        display: block;
+      }
+
+      .c#{$infix}-d-table {
+        display: table;
+      }
+
+      .c#{$infix}-d-table-cell {
+        display: table-cell;
+      }
+
+      .c#{$infix}-d-flex {
+        display: flex;
+      }
+
+      .c#{$infix}-d-inline-flex {
+        display: inline-flex;
+      }
+    }
+  }
+
   .c-hidden {
     display: none;
+  }
 
-    &-sm {
-      @include bp($until:sm) {
-        display: none;
+  @mixin hidden($breakpoint) {
+    .c-#{$breakpoint}-hidden,
+    .c-hidden-#{$breakpoint} {
+      display: none;
+    }
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include hidden($breakpoint);
       }
     }
 
-    &-md {
-      @include bp($until:md) {
-        display: none;
-      }
-    }
-
-    &-lg {
-      @include bp($until:lg) {
-        display: none;
-      }
-    }
-
-    &-xl {
-      @include bp($until:xl) {
-        display: none;
+    @else {
+      @media (min-width: $min-width) {
+        @include hidden($breakpoint);
       }
     }
   }
 }
-

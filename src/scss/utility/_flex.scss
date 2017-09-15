@@ -57,11 +57,8 @@ $flex-align: (
   align-self: $y;
 }
 
+// these are the basic flex classes
 @mixin flex-class-export {
-  .c-display-flex {
-    @include flex;
-  }
-
   @each $hdir, $prop in map-remove($flex-justify, left) {
     .c-justify-#{$hdir} {
       @include flex-align($x: $hdir);
@@ -75,6 +72,290 @@ $flex-align: (
 
     .c-align-self-#{$vdir} {
       @include flex-align-self($y: $vdir);
+    }
+  }
+}
+
+
+@mixin flex($direction,$breakpoint) {
+  .c-#{$breakpoint}-flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+@mixin justify-content($direction, $breakpoint) {
+  .c-#{$breakpoint}-justify-#{$direction} {
+    justify-content: $direction;
+  }
+}
+
+@mixin align-content($name, $direction, $breakpoint) {
+  .c-#{$breakpoint}-align-content-#{$name} {
+    align-content: $direction;
+  }
+}
+
+@mixin align-items($name, $direction, $breakpoint) {
+  .c-#{$breakpoint}-align-#{$name} {
+    align-items: $direction;
+  }
+}
+
+@mixin align-self($direction, $breakpoint) {
+  .c-#{$breakpoint}-align-self-#{$direction} {
+    align-self: $direction;
+  }
+}
+
+/*
+* ==========================================================================
+* Flex classes - and responsive variations
+* ==========================================================================
+*/
+@mixin flex-responsive-class-export {
+  .c-flex-row {
+    flex-direction: row;
+  }
+
+  .c-flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .c-flex-column {
+    flex-direction: column;
+  }
+
+  .c-flex-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include flex(row, $breakpoint);
+        @include flex(row-reverse, $breakpoint);
+        @include flex(column, $breakpoint);
+        @include flex(column-reverse, $breakpoint);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        @include flex(row, $breakpoint);
+        @include flex(row-reverse, $breakpoint);
+        @include flex(column, $breakpoint);
+        @include flex(column-reverse, $breakpoint);
+      }
+    }
+  }
+
+  // start justify classes
+
+  .c-justify-start {
+    justify-content: flex-start;
+  }
+
+  .c-justify-end {
+    justify-content: flex-end;
+  }
+
+  .c-justify-center {
+    justify-content: center;
+  }
+
+  .c-justify-space-around {
+    justify-content: space-around;
+  }
+
+  .c-justify-space-between {
+    justify-content: space-between;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include justify-content(flex-start, $breakpoint);
+        @include justify-content(flex-end, $breakpoint);
+        @include justify-content(center, $breakpoint);
+        @include justify-content(space-around, $breakpoint);
+        @include justify-content(space-between, $breakpoint);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        @include justify-content(flex-start, $breakpoint);
+        @include justify-content(flex-end, $breakpoint);
+        @include justify-content(center, $breakpoint);
+        @include justify-content(space-around, $breakpoint);
+        @include justify-content(space-between, $breakpoint);
+      }
+    }
+  }
+
+  // start align classes
+
+  .c-align-top {
+    align-items: flex-start;
+  }
+
+  .c-align-bottom {
+    align-items: flex-end;
+  }
+
+  .c-align-center {
+    align-items: center;
+  }
+
+  .c-align-baseline {
+    align-items: baseline;
+  }
+
+  .c-align-stretch {
+    align-items: stretch;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include align-items(top, flex-start, $breakpoint);
+        @include align-items(bottom, flex-end, $breakpoint);
+        @include align-items(center, center, $breakpoint);
+        @include align-items(baseline, baseline, $breakpoint);
+        @include align-items(stretch, stretch, $breakpoint);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        @include align-items(top, flex-start, $breakpoint);
+        @include align-items(bottom, flex-end, $breakpoint);
+        @include align-items(center, center, $breakpoint);
+        @include align-items(baseline, baseline, $breakpoint);
+        @include align-items(stretch, stretch, $breakpoint);
+      }
+    }
+  }
+
+  // start align-self classes
+
+  .c-align-self-start {
+    align-self: flex-start;
+  }
+
+  .c-align-self-end {
+    align-self: flex-end;
+  }
+
+  .c-align-self-center {
+    align-self: center;
+  }
+
+  .c-align-self-baseline {
+    align-self: baseline;
+  }
+
+  .c-align-self-stretch {
+    align-self: stretch;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include align-self(flex-start, $breakpoint);
+        @include align-self(flex-end, $breakpoint);
+        @include align-self(center, $breakpoint);
+        @include align-self(baseline, $breakpoint);
+        @include align-self(stretch, $breakpoint);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        @include align-self(flex-start, $breakpoint);
+        @include align-self(flex-end, $breakpoint);
+        @include align-self(center, $breakpoint);
+        @include align-self(baseline, $breakpoint);
+        @include align-self(stretch, $breakpoint);
+      }
+    }
+  }
+
+  // start align-content classes
+
+  .c-align-content-top {
+    align-content: flex-start;
+  }
+
+  .c-align-content-bottom {
+    align-content: flex-end;
+  }
+
+  .c-align-content-center {
+    align-content: center;
+  }
+
+  .c-align-content-space-around {
+    align-content: space-around;
+  }
+
+  .c-align-content-space-between {
+    align-content: space-between;
+  }
+
+  .c-align-content-stretch {
+    align-content: space-between;
+  }
+
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth(map-keys($breakpoints), $i);
+    $min-width: nth(map-values($breakpoints), $i);
+    $next-index: $i + 1;
+
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include align-content(top, flex-start, $breakpoint);
+        @include align-content(bottom, flex-end, $breakpoint);
+        @include align-content(center, center, $breakpoint);
+        @include align-content(baseline, baseline, $breakpoint);
+        @include align-content(stretch, stretch, $breakpoint);
+      }
+    }
+
+    @else {
+      @media (min-width: $min-width) {
+        @include align-content(top, flex-start, $breakpoint);
+        @include align-content(bottom, flex-end, $breakpoint);
+        @include align-content(center, center, $breakpoint);
+        @include align-content(baseline, baseline, $breakpoint);
+        @include align-content(stretch, stretch, $breakpoint);
+      }
     }
   }
 }

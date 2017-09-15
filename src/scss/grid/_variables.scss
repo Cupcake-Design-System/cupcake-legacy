@@ -2,9 +2,10 @@
 // ========================================================================== //
 $row-namespace: '.c-row' !default;
 $col-namespace: '.c-col' !default;
+$gutter: $spacing-global-gutter !default;
 $total-columns: 12 !default;
 $container-fixed-width: $sizing-container-fixed-max-width !default;
-$grid-gutter-width: $spacing-global-gutter !default;
+$grid-gutter-width: 30px !default;
 
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
@@ -22,3 +23,4 @@ $breakpoints: (
   xl: 1200px,
   xxl: 1440px
 ) !default;
+

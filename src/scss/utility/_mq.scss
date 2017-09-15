@@ -10,9 +10,10 @@
 //   lg: 992px,
 //   xl: 1200px,
 //   xxl: 1440px) !default;
+@import "../grid/_variables.scss";
 
-$show-breakpoints: false;
-$bp-show-breakpoints: (xs, sm, md, lg, xl, xxl);
+// $show-breakpoints: "true";
+$bp-show-breakpoints: (xs, sm, md, lg, xl);
 $bp-media-type: all !default;
 // Get a breakpoint's width
 //  $tablet-width: bp-get-breakpoint-width(tablet);
@@ -87,7 +88,7 @@ $bp-media-type: all !default;
     padding: 3px 6px;
     pointer-events: none;
     position: fixed;
-    right: 0;
+    left: 0;
     top: 0;
     z-index: 100;
 
@@ -101,9 +102,9 @@ $bp-media-type: all !default;
   }
 }
 
-@if $show-breakpoints {
-  @include bp-show-breakpoints;
-}
+// @if $show-breakpoints {
+//   @include bp-show-breakpoints;
+// }
 
 // .element {
 //   @include bp($from: lg) {
