@@ -1,0 +1,53 @@
+@mixin pulse($n) {
+  0% { transform: scaleX(1) scaleY(1); }
+
+  @for $i from 1 through 9 {
+    $m: 1;
+
+    @if $i % 2 != 0 { $m: $n; }
+
+    #{$i*10%} { transform: scaleX($m) scaleY($m); }
+  }
+
+  100% { transform: scaleX(1) scaleY(1); }
+}
+
+@mixin shake($n) {
+  0% { transform: rotateZ(0); }
+
+  $pos: 1;
+
+  @for $i from 1 through 9 {
+    $pos: $pos * -1;
+
+    $m: ($n / $i) * $pos;
+
+    #{$i*10%} { transform: rotateZ($m * 1deg); }
+  }
+
+  100% { transform: rotateZ(0); }
+}
+
+@keyframes pulse {
+  @include pulse(0.85);
+}
+
+@keyframes shake {
+  @include shake(30);
+}
+
+@keyframes spin {
+  to { transform: rotateZ(720deg); }
+}
+
+.c-pulse:hover {
+  animation: pulse 1500ms;
+}
+
+.c-shake:hover {
+  animation: shake 1300ms;
+}
+
+.c-spin:hover {
+  animation: spin 3000ms;
+}

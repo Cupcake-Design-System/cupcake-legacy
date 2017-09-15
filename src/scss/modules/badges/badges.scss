@@ -4,6 +4,7 @@
   @include badge($primary, $white, $primary);
 
   display: inline-block;
+  text-align: center;
   padding: $badge-padding;
   border-radius: $badge-border-radius;
   font-size: $badge-font-size;
@@ -34,6 +35,7 @@
 
   .c-badge-#{$badge-size-namespace} {
     font-size: $badge-size-font;
+    min-width: 17px;
   }
 }
 
@@ -43,10 +45,12 @@
   $badge-color: nth($badge-color, 3);
 
   .c-badge-#{$badge-color-namespace} {
-    @include badge($badge-bg-color, $badge-color, $badge-bg-color);
+    @include badge($badge-bg-color, $badge-color);
 
     &-outline {
-      @include badge(transparent, $badge-color);
+      @include badge(transparent, $badge-bg-color);
+
+      border: 1px solid $badge-bg-color;
     }
   }
 }

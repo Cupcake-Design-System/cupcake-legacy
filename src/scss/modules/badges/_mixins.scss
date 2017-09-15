@@ -68,8 +68,7 @@ $badge-colors:
   ("danger", $badge-danger, $white, $badge-danger)
   ("warning", $badge-warning, $white, $badge-warning) !default;
 
-@mixin badge($background-color, $color: $badge-color, $border-color: $color) {
-  border: $badge-border-width $badge-border-style $border-color;
+@mixin badge($background-color, $color: $badge-color) {
   background-color: $background-color;
   color: $color;
 }

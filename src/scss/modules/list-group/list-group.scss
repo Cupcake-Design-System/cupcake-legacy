@@ -6,7 +6,7 @@
 $ui-list-radius               : true !default;
 
 /// $ui-list-shadows
-$ui-list-shadows              : true !default;
+$ui-list-shadows              : false !default;
 
 /// $ui-list-box-shadow
 $ui-list-box-shadow           : inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 0 7px rgba($black, 0.15) !default;
@@ -39,7 +39,7 @@ $ui-list-margin               : 0 !default;
 $ui-list-inset-after-offset   : 72px !default;
 
 /// $ui-list-a-list-item-bd      
-$ui-list-a-list-item-bd       : 1px solid $global-border-color !default;
+$ui-list-a-list-item-bd       : 1px solid $color-gray-3 !default;
 
 /// $ui-list-a-list-item-bg-c    
 $ui-list-a-list-item-bg-c     : $color-orange-0 !default;
@@ -52,6 +52,7 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
   padding-left: 0;
   padding-right: 0;
   border: $ui-list-a-list-item-bd;
+  color: $color-gray-6;
 
   @if $ui-list-radius == true {
     border-radius: $global-radius;
@@ -67,7 +68,6 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
 
   @else {
     box-shadow: none;
-    border: $ui-list-a-list-item-bd;
   }
 
   &-item {
@@ -75,6 +75,7 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
     align-items: center;
     position: relative;
     padding: $ui-list-item-padding;
+    color: inherit;
 
     &:first-child {
       @if $ui-list-radius == true {
@@ -101,8 +102,8 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
     &.c-list-group-item-active,
     &.c-list-group-item-active:focus,
     &.c-list-group-item-active:hover {
-      color: inherit;
-      background-color: $ui-list-a-list-item-bg-hover;
+      color: $white;
+      background-color: $primary;
       border-color: $ui-list-a-list-item-bg-hover;
       border-bottom-color: $ui-list-a-list-item-bg-hover;
 
@@ -113,13 +114,17 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
   }
 
   &-item-right {
-    float: right;
+    padding-left: $ui-list-left-body-spacing;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 
   &-item-left {
-    + .c-list-group-body {
-      padding-left: $ui-list-left-body-spacing;
-    }
+    padding-right: $ui-list-left-body-spacing;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: flex-start;
   }
 }
 
@@ -127,27 +132,35 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
   font-size: $ui-list-fs;
   margin: 0;
   font-weight: normal;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-bottom: 1px solid $ui-list-a-list-item-bg-hover;
+.c-list-group-hoverable {
+  .c-list-group-item {
+    &.hover,
+    &:focus,
+    &:hover {
+      color: inherit;
+      background-color: $ui-list-a-list-item-bg-c;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 
-.c-list-group-item {
-  color: inherit;
-  display: flex;
-  align-items: center;
+.c-list-group-bordered {
+  .c-list-group-item {
+    border-bottom: 1px solid $ui-list-a-list-item-bg-hover;
+  }
 
-  &.hover,
-  &:focus,
-  &:hover {
-    color: inherit;
-    background-color: $ui-list-a-list-item-bg-c;
-    text-decoration: none;
+  &:last-child {
+    @if $ui-list-radius == true {
+      border-radius: 0 0 $global-radius $global-radius;
+    }
+
+    @else {
+      border-radius: 0;
+    }
+
+    border-bottom: 0;
   }
 }
