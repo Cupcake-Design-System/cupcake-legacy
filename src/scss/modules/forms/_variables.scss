@@ -19,7 +19,7 @@ $control-background             : $white !default;
 /// $control-padding-v
 $control-padding-v              : 7px !default;
 /// $control-padding-h 
-$control-padding-h              : 10px !default;
+$control-padding-h              : 8px !default;
 /// $control-border 
 $control-border                 : $global-border-color !default;
 /// $control-border-width 
@@ -83,23 +83,23 @@ $fieldset-border                : 0 !default;
 /// $fieldset-legend-padding        
 $fieldset-legend-padding        : 0.3em 0 !default;
 /// $control-xs
-$control-xs: 11px !default;
+$control-xs: 9px !default;
 /// $control-sm
 $control-sm: 11px !default;
 /// $control-lg
-$control-lg: 12px !default;
+$control-lg: 16px !default;
 /// $control-xl
-$control-xl: 12px !default;
+$control-xl: 18px !default;
 /// $control-xxl
-$control-xxl: 14px !default;
+$control-xxl: 18px !default;
 /// $control-xs
-$control-xs-padding: 1px 10px !default;
+$control-xs-padding: 2px 5px !default;
 /// $control-sm
-$control-sm-padding: 2.5px 10px 3px !default;
+$control-sm-padding: 6px 7px 5px !default;
 /// $control-lg
-$control-lg-padding: 12px 15px !default;
+$control-lg-padding: 12px !default;
 /// $control-xl
-$control-xl-padding: 17px 20px !default;
+$control-xl-padding: 17px !default;
 /// $control-group-padding
 $control-group-padding: 1em !default;
 /// $control-success-c

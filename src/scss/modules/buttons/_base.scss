@@ -11,6 +11,13 @@
   &-primary {
     @include btn-style($btn-primary-bg);
 
+    @if $btn-white-label == false {
+      &:hover {
+        background-color: $btn-primary-hover;
+        background-image: none;
+      }
+    }
+
     &-outline {
       @include btn-outline($btn-primary-bg);
     }
@@ -28,6 +35,13 @@
   &-success {
     @include btn-style($btn-success-bg);
 
+    @if $btn-white-label == false {
+      &:hover {
+        background-color: $btn-success-hover;
+        background-image: none;
+      }
+    }
+
     &-outline {
       @include btn-outline($btn-success-bg);
     }
@@ -35,6 +49,13 @@
 
   &-danger {
     @include btn-style($btn-danger-bg);
+
+    @if $btn-white-label == false {
+      &:hover {
+        background-color: $btn-danger-hover;
+        background-image: none;
+      }
+    }
 
     &-outline {
       @include btn-outline($btn-danger-bg);
@@ -57,11 +78,11 @@
   box-shadow: none;
 
   &:hover {
-    color: lighten($primary, 15);
+    color: lighten($primary, 10);
   }
 
   &:active {
-    color: darken($primary, 15);
+    color: darken($primary, 10);
     box-shadow: none;
   }
 
@@ -107,7 +128,6 @@
   text-align: center;
 }
 
-
 .c-btn-disabled,
 .c-btn[disabled] {
   @include btn-disabled;
@@ -118,3 +138,22 @@
   box-shadow: $btn-shadow-active;
 }
 
+.c-btn-link {
+  &-secondary,
+  &-default {
+    @include btn-link-style($color-gray-7);
+  }
+
+  &-success {
+    @include btn-link-style($success);
+  }
+
+  &-danger {
+    @include btn-link-style($danger);
+  }
+
+  &[disabled] {
+    opacity: 0.8;
+    color: $btn-disabled-c;
+  }
+}

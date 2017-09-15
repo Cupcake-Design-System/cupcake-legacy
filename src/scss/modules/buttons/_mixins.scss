@@ -62,10 +62,13 @@
     }
   }
 
-  &:hover {
-    background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+  @if $btn-white-label == true {
+    &:hover {
+      background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    }
   }
 }
+
 
 /* Button Outline
 * ================ ================ ================ ================ */
@@ -212,5 +215,20 @@
   th:not(:hover) &,
   td:not(:hover) & {
     color: $color-gray-4;
+  }
+}
+
+
+/* Button Link Style
+* ================ ================ ================ ================ */
+@mixin btn-link-style($color) {
+  color: $color;
+
+  &:hover {
+    color: lighten($color, 10);
+  }
+
+  &:active {
+    color: darken($color, 10);
   }
 }

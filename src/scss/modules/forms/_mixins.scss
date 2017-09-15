@@ -69,6 +69,7 @@
   border-color: $control-disabled-border;
   background-color: $control-disabled-background;
   cursor: not-allowed;
+  color: $control-placeholder-c;
 
   &::placeholder {
     color: $control-placeholder-c;

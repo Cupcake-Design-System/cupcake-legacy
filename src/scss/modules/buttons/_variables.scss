@@ -3,7 +3,7 @@
 ////
 
 /// $btn-font-family         
-$btn-font-family         : arial !default;
+$btn-font-family         : Arial, Helvetica, Sans-Serif !default;
 
 /// $btn-font-size           
 $btn-font-size           : 12px !default;
@@ -15,10 +15,10 @@ $btn-v-align             : baseline !default;
 $btn-line-height         : 1 !default;
 
 /// $btn-default-padding-v   
-$btn-default-padding-v   : 0.7em !default;
+$btn-default-padding-v   : 8px !default;
 
 /// $btn-default-padding-h   
-$btn-default-padding-h   : 1.75em !default;
+$btn-default-padding-h   : 24px !default;
 
 /// $btn-font-weight         
 $btn-font-weight         : bold !default;
@@ -27,7 +27,7 @@ $btn-font-weight         : bold !default;
 $btn-border-width        : 1px !default;
 
 /// $btn-border        
-$btn-bd        : 1px solid transparent !default;
+$btn-bd                  : 1px solid transparent !default;
 
 /// $btn-radius              
 $btn-radius              : 2px !default;
@@ -40,6 +40,9 @@ $btn-active-selected     : false !default;
 
 /// $btn-shadow              
 $btn-shadow              : true !default;
+
+/// $btn-white-label 
+$btn-white-label         : false !default;
 
 /// $btn-shadow-inset
 $btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
@@ -71,6 +74,9 @@ $btn-disabled-opacity    : 0.8 !default;
 /// $btn-primary-bg          
 $btn-primary-bg          : $primary !default;
 
+/// $btn-primary-bg          
+$btn-primary-hover          : $color-primary-6 !default;
+
 /// $btn-secondary-bg        
 $btn-secondary-bg        : $color-gray-1 !default;
 
@@ -86,38 +92,38 @@ $btn-secondary-bd        : $color-gray-4 !default;
 /// $btn-success-bg          
 $btn-success-bg          : $success !default;
 
+/// $btn-success-hove          
+$btn-success-hover          : $color-success-6 !default;
+
 /// $btn-warning-bg          
 $btn-warning-bg          : $warning !default;
 
 /// $btn-danger-bg           
 $btn-danger-bg           : $danger !default;
 
+/// $btn-danger-hove          
+$btn-danger-hover          : $color-danger-6 !default;
+
 /// $btn-xs-font
 $btn-xs-font             : 9px !default;
 
 /// $btn-xs-padding
-$btn-xs-padding          : 2px 14px !default;
+$btn-xs-padding          : 3px 8px 2px !default;
 
 /// $btn-sm-font
 $btn-sm-font             : 11px !default;
 
 /// $btn-sm-padding
-$btn-sm-padding          : 4px 27px 3px !default;
-
-/// $btn-md-font             
-$btn-md-font             : 12px !default;
-
-/// $btn-md-padding          
-$btn-md-padding          : 8px 20px !default;
+$btn-sm-padding          : 6px 16px !default;
 
 /// $btn-lg-font             
-$btn-lg-font             : 14px !default;
+$btn-lg-font             : 16px !default;
 
 /// $btn-lg-padding          
-$btn-lg-padding          : 17px 78px !default;
+$btn-lg-padding          : 12px 32px 11px !default;
 
 /// $btn-xl-font             
-$btn-xl-font             : 1.75em !default;
+$btn-xl-font             : 18px !default;
 
 /// $btn-xl-padding          
-$btn-xl-padding          : 25px 98px !default;
+$btn-xl-padding          : 18px 40px !default;
