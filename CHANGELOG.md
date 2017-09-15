@@ -1,3 +1,21 @@
+### Release 1.0.1
+* Updated display props (#104) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6ab969f6442cab7e9a7ac80e3e58ed38ee4fe679)
+* List groups style update (#111) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/56c564453931412fb52cb30140886d12e7975254)
+* Button updates (#110) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ed5763dc32a9d06ccb28d4c1875107e8555c2457)
+* Utility updates (#109) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/42992fb0d5a5b9296694d87ff7b9ae77f21b0c0c)
+* progress size fixes (#107) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0f9941da798a27e419ac9711ac43c7b6a0b1bbfd)
+* text alignment fixes for #102 (#108) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c69c85fee78875765d3d07769760a1d940d67d71)
+* various additional helper classes (#106) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5c6c53bdeade5a1af662f09e12f409286600a537)
+* Merge pull request #103 from Ipreo/bg-text-color [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/51c9648bd9853cd13e670b6c8f075606a1bee063)
+* tabs alignment bug fix [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/17b74489951c0e2882dfc8ecf651c5c623eeb028)
+* remove color property from background helper. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ad82508846229f61ebc9a4e27f73dfc38671d053)
+* Border color changes only color (#97) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6757149288bae7c4b0d433d0c05fb80e2c825d7d)
+* adjust forms to meet invisioanapp design. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f17ebf5c3625d333990ae022038c5e627643cb5e)
+* Merge pull request #100 from Ipreo/form-snippets [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/43b19588b46d26fab8eecf2e08006fc60c34d47e)
+* add more form snippets [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/23c8a7e0f468ee2a1010d12cc11e8ad18cd4e053)
+* added popover examples [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9993495f2a6fce7bc8ecfb28b84a70371404d201)
+* fix for issue-96 [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/df2c330c1be451f8c78ab04aae2d62fb2db6b6e7)
+
 ### Release 1.0.0
 * .c-bg-gray text colors - fixes #67 [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3b60e9f237157b5e70bdd42acc52837455212b49)
 * tab updates and input group fix [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/265da9f9657238a427a93b62cab7c9313db957a0)

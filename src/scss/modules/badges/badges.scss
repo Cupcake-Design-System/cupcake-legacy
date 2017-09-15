@@ -1,7 +1,7 @@
 @import "mixins";
 
 .c-badge {
-  @include badge($primary, $white, $primary);
+  @include badge($primary, $white);
 
   display: inline-block;
   text-align: center;
