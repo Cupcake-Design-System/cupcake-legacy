@@ -1,3 +1,7 @@
+### Release 1.1.1
+* removed loaders(We have multiple versions in the wild - will be added when we have the correct options) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)
+* add text align classes to export [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/922c7278756a1dccf2dcc83604f921c0a8b95e6b)
+
 ### Release 1.0.1
 * Updated display props (#104) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6ab969f6442cab7e9a7ac80e3e58ed38ee4fe679)
 * List groups style update (#111) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/56c564453931412fb52cb30140886d12e7975254)
