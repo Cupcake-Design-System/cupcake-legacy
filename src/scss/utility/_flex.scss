@@ -107,11 +107,7 @@ $flex-align: (
   }
 }
 
-/*
-* ==========================================================================
-* Flex classes - and responsive variations
-* ==========================================================================
-*/
+// Flex classes - and responsive variations
 @mixin flex-responsive-class-export {
   .c-flex-row {
     flex-direction: row;

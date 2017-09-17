@@ -13,8 +13,7 @@ $btn-shapes: (
 ) !default;
 
 
-/* Button Shapes
-* ======================================== */
+// Button Shapes
 
 @each $btn-shape in $btn-shapes {
   $btn-shape-name: nth($btn-shape, 1);

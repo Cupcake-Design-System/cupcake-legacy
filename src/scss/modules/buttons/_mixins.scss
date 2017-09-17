@@ -1,5 +1,5 @@
-/* Button Base
-* ================ ================ ================ ================ */
+// Button Base
+
 @mixin btn-base {
   position: relative;
   display: inline-block;
@@ -29,8 +29,8 @@
 }
 
 
-/* Button Style
-* ================ ================ ================ ================ */
+// Button Style
+
 @mixin btn-style($bg, $border: $btn-border, $color: white) {
   background: $bg;
   color: $color;
@@ -70,8 +70,8 @@
 }
 
 
-/* Button Outline
-* ================ ================ ================ ================ */
+//Button Outline
+
 @mixin btn-outline($border-color, $color: $border-color, $border-color-hover: $border-color, $bg: transparent, $bg-hover: $border-color, $color-hover: $white) {
   border: 1px solid $border-color;
   background-color: $bg;
@@ -171,8 +171,8 @@
   }
 }
 
-/* Button Secondary
-* ================ ================ ================ ================ */
+// Button Secondary
+
 @mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
   border: 1px solid $bd;
   background-color: $bg;
@@ -197,8 +197,8 @@
   }
 }
 
-/* Button inside a table
-* ================ ================ ================ ================ */
+// Button inside a table
+
 @mixin btn-table-icon() {
   &#{&} {
     padding-left: $btn-default-padding-v / 1.8;
@@ -219,8 +219,8 @@
 }
 
 
-/* Button Link Style
-* ================ ================ ================ ================ */
+// Button Link Style
+
 @mixin btn-link-style($color) {
   color: $color;
 
