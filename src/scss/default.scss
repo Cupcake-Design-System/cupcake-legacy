@@ -18,15 +18,14 @@ $generate-responsive-helpers: false;
 @include radius-class-export;
 @include gray-color-class-export;
 @include brand-color-class-export;
+@include text-align-responsive-class-export;
 
 @if $generate-responsive-helpers {
   @include flex-responsive-class-export;
   @include float-responsive-class-export;
-  @include text-align-responsive-class-export;
 }
 
 @else {
   @include flex-class-export;
   @include float-class-export;
-  @include text-align-class-export;
 }
