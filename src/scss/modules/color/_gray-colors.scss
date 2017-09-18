@@ -40,7 +40,7 @@ $gray-map: (
         }
 
         .c-bd-#{$palette} {
-          border: $tone_value;
+          border-color: $tone_value;
         }
       }
     }
@@ -57,7 +57,7 @@ $gray-map: (
       }
 
       .c-bd-#{$palette}-#{$tone_name} {
-        border: $tone_value;
+        border-color: $tone_value;
       }
     }
   }
@@ -89,4 +89,3 @@ $color-gray-6: color(gray, 6);
 $color-gray-7: color(gray, 7);
 $color-gray-8: color(gray, 8);
 $color-gray-9: color(gray, 9);
-
