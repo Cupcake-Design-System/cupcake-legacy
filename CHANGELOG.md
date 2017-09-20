@@ -1,3 +1,8 @@
+### Release 1.1.3
+- restore loaders, but without logo loader. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3d5aeaf66e117fef726f1ca4c8325a1863945790)
+- fixed gray borders to use border-color property (#112) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c0d6a11e1cfbebe533914d6f7ebd8d358b94efb3)
+
+
 ### Release 1.1.1
 * removed loaders(We have multiple versions in the wild - will be added when we have the correct options) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)
 * add text align classes to export [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/922c7278756a1dccf2dcc83604f921c0a8b95e6b)
