@@ -14,6 +14,12 @@ $card-body-font-size: 12px !default;
 /// $card-title-font-size:       
 $card-title-font-size: 18px !default;
 
+/// $card-title-font-weight:       
+$card-title-font-weight: bold !default;
+
+/// $card-title-margin:       
+$card-title-margin: false !default;
+
 /// $card-subtitle-font-size:     
 $card-subtitle-font-size: 16px !default;
 
@@ -139,8 +145,12 @@ $card-colors:
 
   &-title {
     font-size: $card-title-font-size;
-    font-weight: bold;
+    font-weight: $card-title-font-weight;
     line-height: 1;
+
+    @if $card-title-margin {
+      margin: $card-title-margin;
+    }
   }
 
   &-subtitle {
