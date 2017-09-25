@@ -68,6 +68,18 @@ $control-select-padding-r       : 1em !default;
 $control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
 /// $control-select-background-pos  
 $control-select-background-pos  : 99% 50% !default;
+/// $control-select-background  
+$control-select-background      : $color-gray-0 !default;
+/// $control-select-background-hover  
+$control-select-background-hover: $color-gray-1 !default;
+/// $control-select-background-active
+$control-select-background-active: $color-gray-2 !default;
+/// $control-select-border-c  
+$control-select-border-c        : $color-gray-4 !default;
+/// $control-select-shadow  
+$control-select-shadow          :	0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+/// $control-select-shadow-active
+$control-select-shadow-active   :	inset 0 1px 0 1px $color-gray-4 !default;
 /// $control-results-border         
 $control-results-border         : 1px solid rgb(204, 204, 204) !default;
 /// $control-results-shadow         

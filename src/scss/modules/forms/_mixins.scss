@@ -75,3 +75,23 @@
     color: $control-placeholder-c;
   }
 }
+
+
+@mixin select-input {
+  $dropdown-arrow: $control-select-background-img $control-select-background-pos no-repeat;
+
+  background: $dropdown-arrow, $control-select-background;
+  border-color: $control-select-border-c;
+  box-shadow: $control-select-shadow;
+
+  &:hover,
+  &.c-input-hover {
+    background: $dropdown-arrow, $control-select-background-hover;
+  }
+
+  &:active,
+  &.c-input-active {
+    background: $dropdown-arrow, $control-select-background-active;
+    box-shadow: $control-select-shadow-active;
+  }
+}
