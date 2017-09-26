@@ -4,6 +4,20 @@
     cursor: pointer;
   }
 
+  .c-cursor-grab {
+    cursor: move;  //IE fallback
+    cursor: grab;
+  }
+
+  .c-cursor-grabbing {
+    cursor: move;  //IE fallback
+    cursor: grabbing;
+  }
+
+  .c-cursor-move {
+    cursor: move;
+  }
+
   .c-full-height {
     height: 100%;
   }
