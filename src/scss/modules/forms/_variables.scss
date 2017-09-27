@@ -30,6 +30,8 @@ $control-border-radius          : 2px !default;
 $control-border-radius-rounded  : 30em !default;
 /// $control-shadow 
 $control-shadow                 : inset 0 1px 1px 0 rgba(33, 37, 41, .1) !default;
+/// $control-shadow-disabled 
+$control-shadow-disabled        : none !default;
 /// $control-transition 
 $control-transition             : border-color 0.1s ease-in !default;
 /// $control-hover  
@@ -45,9 +47,9 @@ $control-active                 : $primary !default;
 $control-active-border          : $primary !default;
 
 /// $control-disabled-border 
-$control-disabled-border        : #e6e6e6 !default;
+$control-disabled-border        : $color-gray-2 !default;
 /// $control-disabled-background
-$control-disabled-background    : $disabled !default;
+$control-disabled-background    : $color-gray-0 !default;
 /// $control-hint-color 
 $control-hint-color             : #8d8d97 !default;
 /// $control-hint-font-size 
@@ -66,6 +68,8 @@ $control-element-label-padding  : 0 0 $control-padding-v 0 !default;
 $control-select-padding-r       : 1em !default;
 // $control-select-background-img  
 $control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+// $control-select-background-img  
+$control-select-background-img-disabled : url("data:image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
 /// $control-select-background-pos  
 $control-select-background-pos  : 99% 50% !default;
 /// $control-select-background  
