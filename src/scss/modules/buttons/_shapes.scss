@@ -33,15 +33,37 @@ $btn-shapes: (
   width: 30px;
 }
 
-.c-btn-box {
-  padding-left: $btn-default-padding-v + 2;
-  padding-right: $btn-default-padding-v + 2;
+@mixin btn-box($width: $btn-box-width) {
+  width: $width;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
 }
 
-.c-btn-sm {
-  &.c-btn-box {
-    padding-left: $btn-default-padding-v;
-    padding-right: $btn-default-padding-v;
+.c-btn-box {
+  @include btn-box;
+
+  &.c-btn-xs {
+    width: $btn-box-width-xs;
+  }
+
+  &.c-btn-sm {
+    width: $btn-box-width-sm;
+  }
+
+  &.c-btn-lg {
+    width: $btn-box-width-lg;
+  }
+
+  &.c-btn-xl {
+    width: $btn-box-width-xl;
   }
 }
 
+.c-btn-caret {
+  @include btn-box($btn-caret-width);
+}
+
+.c-btn-icon-dropdown {
+  @include btn-box($btn-icon-dropdown-width);
+}
