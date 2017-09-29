@@ -29,21 +29,8 @@
 
 
 // SELECTS
-select.c-input {
-  cursor: pointer;
-
-  &:not([multiple]) {
-    line-height: normal;
-    padding-right: $control-select-padding-r;
-    // separate bg props - not to override default background
-    background-image: $control-select-background-img;
-    background-position: $control-select-background-pos;
-    background-repeat: no-repeat;
-  }
-
-  &::-ms-expand {
-    display: none;
-  }
+select.c-input:not([multiple]) {
+  @include select-input;
 }
 
 
