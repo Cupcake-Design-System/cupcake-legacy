@@ -60,5 +60,33 @@ $space-prefixes : (
       }
     }
   }
+
+  @each $value-name, $value-size in $space-values {
+    .c-p-horizontal-#{$value-name}.c-p-horizontal-#{$value-name} {
+      padding-right: #{$value-size};
+      padding-left: #{$value-size};
+    }
+  }
+
+  @each $value-name, $value-size in $space-values {
+    .c-p-vertical-#{$value-name}.c-p-vertical-#{$value-name} {
+      padding-top: #{$value-size};
+      padding-bottom: #{$value-size};
+    }
+  }
+
+  @each $value-name, $value-size in $space-values {
+    .c-m-horizontal-#{$value-name}.c-m-horizontal-#{$value-name} {
+      margin-right: #{$value-size};
+      margin-left: #{$value-size};
+    }
+  }
+
+  @each $value-name, $value-size in $space-values {
+    .c-m-vertical-#{$value-name}.c-m-vertical-#{$value-name} {
+      margin-top: #{$value-size};
+      margin-bottom: #{$value-size};
+    }
+  }
 }
 
