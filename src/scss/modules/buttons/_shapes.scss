@@ -24,24 +24,43 @@ $btn-shapes: (
   }
 }
 
-.c-btn-circle {
-  overflow: hidden;
+@mixin btn-box($width: $btn-box-width) {
+  width: $width;
   padding-left: 0;
   padding-right: 0;
-  // Make btn width equal to height. line height + padding + left&right border;
-  // width: unquote('calc(#{1em * $btn-line-height} + #{$btn-default-padding-v * 2} + #{$btn-border-width * 6})');
-  width: 30px;
+  text-align: center;
 }
 
 .c-btn-box {
-  padding-left: $btn-default-padding-v + 2;
-  padding-right: $btn-default-padding-v + 2;
-}
+  @include btn-box;
 
-.c-btn-sm {
-  &.c-btn-box {
-    padding-left: $btn-default-padding-v;
-    padding-right: $btn-default-padding-v;
+  &.c-btn-xs {
+    width: $btn-box-width-xs;
+  }
+
+  &.c-btn-sm {
+    width: $btn-box-width-sm;
+  }
+
+  &.c-btn-lg {
+    width: $btn-box-width-lg;
+  }
+
+  &.c-btn-xl {
+    width: $btn-box-width-xl;
   }
 }
 
+.c-btn-caret {
+  @include btn-box($btn-caret-width);
+}
+
+.c-btn-icon-dropdown {
+  @include btn-box($btn-icon-dropdown-width);
+}
+
+.c-btn-circle {
+  overflow: hidden;
+
+  @extend .c-btn-box;
+}

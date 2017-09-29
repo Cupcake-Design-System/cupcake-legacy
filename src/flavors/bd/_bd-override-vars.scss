@@ -21,8 +21,8 @@ $anchor-color-disabled: $color-gray-6;
 $btn-font-family: $font-body-font-family;
 $btn-font-size: $font-body-font-size;
 $btn-v-align: baseline;
-$btn-default-padding-v: 0.5em;
-$btn-default-padding-h: 1.25em;
+$btn-default-padding-v: 7px;
+$btn-default-padding-h: 15px;
 $btn-font-weight: 600;
 
 $btn-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
@@ -42,15 +42,19 @@ $btn-disabled-text-shadow: none;
 $btn-disabled-opacity: 1;
 
 $btn-xs-font: 12px;
-$btn-xs-padding: .25em .63em;
+$btn-xs-padding: 3px 7px;
 $btn-sm-font: 13px;
-$btn-sm-padding: .385em .77em;
-$btn-md-font: $btn-font-size;
-$btn-md-padding: .5em 1.075em;
+$btn-sm-padding: 5px 10px;
 $btn-lg-font: 15px;
-$btn-lg-padding: .6em 1em;
+$btn-lg-padding: 9px 19px;
 $btn-xl-font: 16px;
-$btn-xl-padding: .688em .9375em;
+$btn-xl-padding: 11px 40px;
+
+$btn-box-width           : 35px;
+$btn-box-width-xs        : 25px;
+$btn-box-width-sm        : 30px;
+$btn-box-width-lg        : 40px;
+$btn-box-width-xl        : 45px;
 
 
 $dropdown-glued            : false;
