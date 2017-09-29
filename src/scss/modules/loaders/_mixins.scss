@@ -87,11 +87,17 @@ $c-btn-in-progress-bg-size:         40px !default;
 $c-btn-in-progress-anim-params:     2s linear infinite !default;
 
 /// $c-full-page-loader-indicator
-$c-full-page-loader-indicator: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiMxRDdDRDYiPiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgc3Ryb2tlLXdpZHRoPSI0Ij4gICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZT0iI0U5RUNFRiIgY3g9IjI4IiBjeT0iMjgiIHI9IjI4Ii8+ICAgICAgICAgICAgPHBhdGggZD0iTTU2IDI4YzAtOS45NC04LjA2LTI4LTI4LTI4Ij4gICAgICAgICAgICAgICAgPGFuaW1hdGVUcmFuc2Zvcm0gICAgICAgICAgICAgICAgICAgIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgICAgICAgICAgICAgICAgICAgIHR5cGU9InJvdGF0ZSIgICAgICAgICAgICAgICAgICAgIGZyb209IjAgMjggMjgiICAgICAgICAgICAgICAgICAgICB0bz0iMzYwIDI4IDI4IiAgICAgICAgICAgICAgICAgICAgZHVyPSIxcyIgICAgICAgICAgICAgICAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+ICAgICAgICAgICAgPC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+") !default;
+$c-full-page-loader-indicator: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiMxRDdDRDYiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAyKSIgc3Ryb2tlLXdpZHRoPSI0Ij48Y2lyY2xlIHN0cm9rZT0iI0U5RUNFRiIgY3g9IjI4IiBjeT0iMjgiIHI9IjI4Ii8+PHBhdGggZD0iTTU2IDI4YzAtOS45NC04LjA2LTI4LTI4LTI4Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=) !default;
 
+/// $c-full-page-loader-animation
+$c-full-page-loader-animation: spin 2s infinite linear !default; //spin borrowed from ui/_animations.scss
+
+/// $c-full-page-loader-size
+$c-full-page-loader-size: 60px !default;
 
 /// $c-full-loader-indicator-logo-sizes
 $c-full-loader-indicator-logo-sizes: 100px 100px !default;
+
 
 @mixin c-skeleton-bar($top, $right, $left: 0, $position: absolute) {
   position: $position;
@@ -247,7 +253,6 @@ $c-full-loader-indicator-logo-sizes: 100px 100px !default;
   position: relative;
   min-height: 80px;
 
-  &::after,
   &::before {
     position: absolute;
     top: 0;
@@ -258,7 +263,19 @@ $c-full-loader-indicator-logo-sizes: 100px 100px !default;
   }
 
   &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $c-full-page-loader-size;
+    height: $c-full-page-loader-size;
+    margin-left: -($c-full-page-loader-size / 2);
+    margin-top: -($c-full-page-loader-size / 2);
     background: $c-full-page-loader-indicator no-repeat center center;
+
+    @if $c-full-page-loader-animation {
+      animation: $c-full-page-loader-animation;
+    }
   }
 
   &::before {
