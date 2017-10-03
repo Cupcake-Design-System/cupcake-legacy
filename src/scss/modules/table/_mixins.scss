@@ -133,6 +133,7 @@ $table-states: ("selected", $table-state-selected)
 
       th {
         font-size: $table-header-font-size;
+        text-align: left; //IE centers text by default
 
         &:not(:last-child) {
           border-right: $table-head-border-vertical;
