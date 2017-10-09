@@ -3,7 +3,7 @@
 ////
 
 /// $badge-padding:
-$badge-padding: 4px !default;
+$badge-padding: .25em .4em !default;
 
 /// $badge-border-width:
 $badge-border-width: 1px !default;
@@ -36,7 +36,7 @@ $badge-sm: 9px !default;
 $badge-lg: 18px !default;
 
 /// $badge-xl: 
-$badge-xl: 22px !default;
+$badge-xl: 20px !default;
 
 /// $primary
 $badge-primary: $primary;
@@ -68,7 +68,32 @@ $badge-colors:
   ("danger", $badge-danger, $white, $badge-danger)
   ("warning", $badge-warning, $white, $badge-warning) !default;
 
-@mixin badge($background-color, $color: $badge-color) {
+@mixin badge {
+  display: inline-block;
+  text-align: center;
+  padding: $badge-padding;
+  border-radius: $badge-border-radius;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: $badge-line-height;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &-link {
+    color: $color-gray-1;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:empty {
+    padding: $badge-font-size - 4;
+    border-radius: 100%;
+  }
+}
+
+@mixin badge-style($background-color, $color: $badge-color) {
   background-color: $background-color;
   color: $color;
 }
