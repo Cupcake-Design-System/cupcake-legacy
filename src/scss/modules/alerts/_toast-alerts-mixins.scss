@@ -1,0 +1,175 @@
+////
+/// @group toast-alerts
+////
+
+/// $toast-alert-border 
+$toast-alert-border: $color-gray-3 !default;
+
+/// $toast-alert-color 
+$toast-alert-color: $color-gray-9 !default;
+
+/// $toast-alert-color-variant 
+$toast-alert-color-variant: true !default;
+
+/// $toast-alert-font-weight 
+$toast-alert-font-weight: bold !default;
+
+/// $toast-alert-margin 
+$toast-alert-margin: 0 0 1rem 0 !default;
+
+/// $toast-alert-padding 
+$toast-alert-padding: 19px 27px 19px 40px !default;
+
+/// $toast-alert-shadow 
+$toast-alert-shadow: 0 8px 12px 0 rgba(33, 37, 41, 0.15) !default;
+
+/// $toast-alert-bar-bg 
+$toast-alert-bar-bg: $color-gray-8 !default;
+
+/// $toast-alert-bar-bd 
+$toast-alert-bar-bd: 1px solid $color-gray-9 !default;
+
+/// $toast-alert-bar-position 
+$toast-alert-bar-position: bottom !default;
+
+/// $toast-alert-bar-size 
+$toast-alert-bar-size: 3px !default;
+
+
+/// $toast-alert-danger-color 
+$toast-alert-danger-color: $danger !default;
+
+/// $toast-alert-warning-color 
+$toast-alert-warning-color: $warning !default;
+
+/// $toast-alert-success-color 
+$toast-alert-success-color: $success !default;
+
+/// $toast-alert-info-color 
+$toast-alert-info-color: $color-primary-7 !default;
+
+
+/// $toast-alert-danger-bar-bg 
+$toast-alert-danger-bar-bg: $danger !default;
+
+/// $toast-alert-warning-bar-bg 
+$toast-alert-warning-bar-bg: $warning !default;
+
+/// $toast-alert-success-bar-bg 
+$toast-alert-success-bar-bg: $success !default;
+
+/// $toast-alert-info-bar-bg 
+$toast-alert-info-bar-bg: $color-primary-7 !default;
+
+
+/// $toast-alert-danger-bar-bd 
+$toast-alert-danger-bar-bd: $color-danger-8 !default;
+
+/// $toast-alert-warning-bar-bd 
+$toast-alert-warning-bar-bd: $color-warning-8 !default;
+
+/// $toast-alert-success-bar-bd 
+$toast-alert-success-bar-bd: $color-success-8 !default;
+
+/// $toast-alert-info-bar-bd 
+$toast-alert-info-bar-bd: $color-primary-8 !default;
+
+
+/// $toast-alert-radius 
+$toast-alert-radius: 2px !default;
+
+/// $toast-alert-fs 
+$toast-alert-fs: 12px !default;
+
+/// $toast-alert-close-size 
+$toast-alert-close-size: 30px !default;
+
+/// $toast-alert-close-c 
+$toast-alert-close-c: $color-gray-4 !default;
+
+/// $toast-alert-close-hover-c 
+$toast-alert-close-hover-c: $color-gray-9 !default;
+
+/// $toast-alert-close-transition 
+$toast-alert-close-transition: color .15s linear !default;
+
+/// $toast-alert-icon-top 
+$toast-alert-icon-top: 18px !default;
+
+/// $toast-alert-icon-left 
+$toast-alert-icon-left: 20px !default;
+
+
+@mixin toast-alert {
+  position: relative;
+  margin: $toast-alert-margin;
+  padding: $toast-alert-padding;
+  background: white;
+  color: $toast-alert-color;
+  font-size: $toast-alert-fs;
+  font-weight: $toast-alert-font-weight;
+  border-radius: $toast-alert-radius;
+  box-shadow: $toast-alert-shadow, 0 0 0 1px $toast-alert-border;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: $toast-alert-bar-bg;
+
+    @if $toast-alert-bar-position == bottom {
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      height: $toast-alert-bar-size;
+      border: $toast-alert-bar-bd;
+      border-radius: 0 0 $toast-alert-radius $toast-alert-radius;
+    }
+
+    @else {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: $toast-alert-bar-size;
+      border-radius: $toast-alert-radius 0 0 $toast-alert-radius;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $toast-alert-close-size;
+    height: $toast-alert-close-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $toast-alert-close-c;
+    transition: $toast-alert-close-transition;
+    cursor: pointer;
+
+    &:hover {
+      color: $toast-alert-close-hover-c;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    top: $toast-alert-icon-top;
+    left: $toast-alert-icon-left;
+  }
+}
+
+@mixin toast-alert-style($color, $bd, $bg) {
+  @if $toast-alert-color-variant {
+    color: $color;
+  }
+
+  .c-toast-alert-icon {
+    color: $color;
+  }
+
+  &::before {
+    background: $bg;
+    border-color: $bd;
+  }
+}
