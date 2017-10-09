@@ -1,6 +1,7 @@
 // Alerts
 
 @import 'mixins';
+@import 'toast-alerts-mixins';
 
 .c-alert {
   @include alert-base;
@@ -33,4 +34,25 @@
   border-right-width: 0;
   border-top-width: 0;
   margin-bottom: 0;
+}
+
+
+.c-toast-alert {
+  @include toast-alert;
+
+  &-danger {
+    @include toast-alert-style($toast-alert-danger-color, $toast-alert-danger-bar-bd, $toast-alert-danger-bar-bg);
+  }
+
+  &-warning {
+    @include toast-alert-style($toast-alert-warning-color, $toast-alert-warning-bar-bd, $toast-alert-warning-bar-bg);
+  }
+
+  &-success {
+    @include toast-alert-style($toast-alert-success-color, $toast-alert-success-bar-bd, $toast-alert-success-bar-bg);
+  }
+
+  &-info {
+    @include toast-alert-style($toast-alert-info-color, $toast-alert-info-bar-bd, $toast-alert-info-bar-bg);
+  }
 }
