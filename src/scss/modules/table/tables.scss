@@ -21,6 +21,14 @@ table.c-table-hover {
   @include table-hover;
 }
 
+table.c-table-header-cell-draggable {
+  @include table-header-cell-draggable;
+}
+
+table.c-table-row-draggable {
+  @include table-row-draggable;
+}
+
 table.c-table-condensed {
   @include table-condensed;
 }

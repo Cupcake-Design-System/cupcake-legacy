@@ -45,9 +45,6 @@ $table-head-cell-hover: $color-gray-2 !default;
 $table-hover-background-img: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI1IiBoZWlnaHQ9IjIwIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxLjMyMjkxNjYgNS4yOTE2NjY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yOTEuNzEpIiBmaWxsPSIjYmJjMWM5Ij4gIDxyZWN0IHk9IjI5Ni40NyIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5MS43MSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjkxLjcxIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTYuNDciIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHg9Ii43OTM3NSIgeT0iMjk0Ljg4IiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTQuMDkiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+ICA8cmVjdCB4PSIuNzkzNzUiIHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeD0iLjc5Mzc1IiB5PSIyOTIuNSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NS42OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC44OCIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5NC4wOSIgd2lkdGg9Ii41MjkxNyIgaGVpZ2h0PSIuNTI5MTciLz4gIDxyZWN0IHk9IjI5My4zIiB3aWR0aD0iLjUyOTE3IiBoZWlnaHQ9Ii41MjkxNyIvPiAgPHJlY3QgeT0iMjkyLjUiIHdpZHRoPSIuNTI5MTciIGhlaWdodD0iLjUyOTE3Ii8+IDwvZz48L3N2Zz4=) !default;
 
 /// $table-hover-background-img-props
-$table-hover-background-img-head-pos: left 2px bottom 4px !default;
-
-/// $table-hover-background-img-props
 $table-hover-background-img-body-pos: 2px center !default;
 
 /// $table-striped-background: 
@@ -133,6 +130,8 @@ $table-states: ("selected", $table-state-selected)
 
       th {
         font-size: $table-header-font-size;
+        text-align: left; //IE centers text by default
+        vertical-align: middle;
 
         &:not(:last-child) {
           border-right: $table-head-border-vertical;
@@ -224,13 +223,13 @@ $table-states: ("selected", $table-state-selected)
 /// Slightly darkens the table rows on hover.
 @mixin table-hover {
   th:hover {
-    background: $table-head-cell-hover $table-hover-background-img no-repeat $table-hover-background-img-head-pos;
+    background: $table-head-cell-hover;
   }
 
   tbody {
     tr {
       &:hover {
-        background: $table-row-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
+        background: $table-row-hover;
       }
 
       //Darkens the even striped table rows.
@@ -245,6 +244,18 @@ $table-states: ("selected", $table-state-selected)
         background-color: $table-row-hover;
       }
     }
+  }
+}
+
+@mixin table-header-cell-draggable {
+  th:hover {
+    background: $table-head-cell-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
+  }  
+}
+
+@mixin table-row-draggable {
+  tbody tr:hover {
+    background: $table-row-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
   }
 }
 
