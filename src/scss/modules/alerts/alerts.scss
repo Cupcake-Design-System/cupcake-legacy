@@ -5,16 +5,20 @@
 .c-alert {
   @include alert-base;
 
+  &-primary {
+    @include alert-style($alert-primary-bg, $alert-primary-color);
+  }
+
   &-danger {
-    @include alert-style($danger);
+    @include alert-style($alert-danger-bg, $alert-danger-color);
   }
 
   &-warning {
-    @include alert-style($warning);
+    @include alert-style($alert-warning-bg, $alert-warning-color);
   }
 
   &-success {
-    @include alert-style($success);
+    @include alert-style($alert-success-bg, $alert-success-color);
   }
 
   &-sm {
