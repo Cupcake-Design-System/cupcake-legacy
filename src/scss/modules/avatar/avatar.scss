@@ -13,12 +13,18 @@
   }
 }
 
+.c-avatar-secondary {
+  color: #495057;
+}
 
 @each $avatar-size in $avatar-sizes {
   $avatar-size-namespace: nth($avatar-size, 1);
+  $avatar-font-size: nth($avatar-size, 3);
+  $avatar-icon-size: nth($avatar-size, 4);
+  $avatar-status-size: nth($avatar-size, 5);
   $avatar-size: nth($avatar-size, 2);
 
   .c-avatar-#{$avatar-size-namespace} {
-    @include avatar-size($avatar-size);
+    @include avatar-size($avatar-size, $avatar-font-size, $avatar-icon-size, $avatar-status-size);
   }
 }
