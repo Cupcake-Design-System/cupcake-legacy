@@ -1,3 +1,51 @@
+### Release 1.1.4
+* avatar fixes (#134) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4205d349c5f4c4e79d163aadb2f1a26286af20f8)
+
+* alert style fixes #132  (#136) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1be897760322da2439544dae18bad6d4c4129f9e)
+
+* Badge alignment fix (#135) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4e457d69555da639f1743c0e9f009d392707f128)
+
+* Merge pull request #129 from Ipreo/issue115 [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/60292c3a91accbafce099392b8cc99d93cd4418a)
+
+* BD - popover border and shadow. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1c8a26ce743e5934d4d3159665c3ace0e3ede3ba)
+
+* vertically align table head; extract drag handle to separate classes [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ae5f3e42f23eeecbcbeae966a7f43b416c55e556)
+
+* adjust xs btn size, change btn size in table. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e680fa85721484933315f37790d3b8df01fae546)
+
+* Merge pull request #128 from Ipreo/issue126 [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/79f6fd18374f807b71538375d5be21ffe9ec423c)
+
+* fix for default btn color [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/453b8355b5e48ec4281b0528a39eed06e6040d00)
+
+* fix large text color in BD [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8c642597d324146556444e05c9857a73ef197f76)
+
+* fix c-col-shrink (#123) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/75ef103d87fddac8f8c0fb7b5553dfdd8be1a91e)
+
+* fix full page loader in IE11 (#124) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/53453bdc59c628e53721da762e3842c1e3d40550)
+
+* added .c-p-horizontal-{size}, .c-p-vertical-{size}, .c-m-horizontal-{size}, .c-m-vertical-{size} (#121) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/78ee52ff094d7d5f63dfcd6b6df82e83e5c501fb)
+
+* Merge pull request #119 from Ipreo/btn-box [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/93bd151e60cf106ead995b8ec48a3f0a8c63f121)
+
+* Merge pull request #118 from Ipreo/forms-select [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f672b255cb22e0e55dfd6cf3ff202e0037c56c3d)
+
+* remove negative margin for footer (#120) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fa3cb58b6011f2be1f57eb269898a9c184cf6db5)
+
+* refactor c-btn-circle; adjust c-btn-box sizes. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c99e79ed6b49d197958d54320456c2ded26db09b)
+
+* make btn-box width fixed [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/40ea080f422692cf51142cc078c49706b605d90b)
+
+* remove dev comments [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/07239ffa7bc657e3fb2d2c4c20238c7cc99bd290)
+
+* select disabled state [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4735e3150eebe3bc74553bee299be83c26742b94)
+
+* add more cursor classes [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39001089bd747b4e02848156ed4114dd15a28d45)
+
+* form select style update [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e35accd1b4e294e99a730f0edc276a9bb1f2d8bb)
+
+* modals font-weight; card content title font weight and margin functionality. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7c27d4461adfbca794050b486d14132475ab398e)
+
+
 ### Release 1.1.3
 - restore loaders, but without logo loader. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3d5aeaf66e117fef726f1ca4c8325a1863945790)
 - fixed gray borders to use border-color property (#112) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c0d6a11e1cfbebe533914d6f7ebd8d358b94efb3)
