@@ -3,22 +3,22 @@
 ////
 
 /// $avatar-size
-$avatar-size          : 2.5rem !default;
+$avatar-size: 2.5rem !default;
 
 /// $avatar-fs 
-$avatar-fs            : 12px !default;
+$avatar-fs: 12px !default;
 
-/// $avatar-icon-margin 
-$avatar-icon-margin   : 1px !default;
+/// $avatar-status-margin 
+$avatar-status-margin: 1px !default;
 
-/// $avatar-icon-size 
-$avatar-icon-size     : 10px !default;
-
-/// $avatar-bd-size  
-$avatar-bd-size       : 1px !default;
+/// $avatar-status-size 
+$avatar-status-size: 8px !default;
 
 /// $avatar-primary
 $avatar-primary: $primary;
+
+/// $avatar-success
+$avatar-secondary: $secondary;
 
 /// $avatar-success
 $avatar-success: $success;
@@ -31,26 +31,26 @@ $avatar-warning: $warning;
 
 
 // $avatar-colors
-$avatar-colors:
-  ("primary", $avatar-primary)
+$avatar-colors: ("primary", $avatar-primary)
+  ("secondary", $avatar-secondary)
   ("success", $avatar-success)
   ("danger", $avatar-danger)
   ("warning", $avatar-warning) !default;
 
 // $avatar-sizes
 $avatar-sizes:
-  ("sm", 2rem)
-  ("lg", 3rem)
-  ("xl", 80px) !default;
-
+  ("sm", 32px, .8rem, 1rem, 6px)
+  ("lg", 48px, 1rem, 1.25rem, 10px)
+  ("xl", 80px, 1.4rem, 1.8rem, 18px) !default;
 
 @mixin avatar {
   position: relative;
   display: inline-block;
   width: $avatar-size;
   height: $avatar-size;
+  line-height: $avatar-size;
   color: $white;
-  background: $primary;
+  background: $avatar-secondary;
   border-radius: 50%;
   text-align: center;
   white-space: nowrap;
@@ -58,6 +58,7 @@ $avatar-sizes:
   font-size: $avatar-fs;
   vertical-align: middle;
   margin: 0;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.06);
 
   &[data-text]::after {
     content: attr(data-text);
@@ -71,51 +72,55 @@ $avatar-sizes:
   }
 
   .fa {
-    font-size: $avatar-fs;
-    line-height: 2.5;
+    font-size: $avatar-fs + 4;
+    line-height: $avatar-size;
   }
 
-  i {
+  &[data-status]::before {
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
-    margin: $avatar-icon-margin;
-    width: $avatar-icon-size;
-    height: $avatar-icon-size;
-    border-width: $avatar-bd-size;
-    border-style: solid;
-    border-radius: 50%;
+    margin: $avatar-status-margin;
+    width: $avatar-status-size;
+    height: $avatar-status-size;
+    background-clip: padding-box;
+    border-radius: 50px;
+    box-shadow: 0 0 0 0.1rem $white;
+    color: $white;
+  }
 
-    &.left {
-      left: 0;
-      right: auto;
-    }
+  &[data-status='primary']::before {
+    background-color: $primary;
+  }
 
-    &.bottom {
-      top: auto;
-      bottom: 0;
-    }
+  &[data-status='success']::before {
+    background-color: $success;
+  }
 
-    &.success {
-      background-color: $success;
-    }
+  &[data-status='warning']::before {
+    background-color: $warning;
+  }
 
-    &.primary {
-      background-color: $primary;
-    }
-
-    &.warning {
-      background-color: $warning;
-    }
-
-    &.danger {
-      background-color: $danger;
-    }
+  &[data-status='danger']::before {
+    background-color: $danger;
   }
 }
 
 
-@mixin avatar-size($size) {
+@mixin avatar-size($size, $font-size, $icon-size, $status-size) {
   width: $size;
   height: $size;
+  line-height: $size;
+  font-size: $font-size;
+
+  &[data-status]::before {
+    width: $status-size;
+    height: $status-size;
+  }
+
+  .fa {
+    font-size: $icon-size;
+    line-height: $size;
+  }
 }

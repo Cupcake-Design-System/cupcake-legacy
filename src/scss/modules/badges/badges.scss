@@ -1,31 +1,17 @@
 @import "mixins";
 
 .c-badge {
-  @include badge($primary, $white);
-
-  display: inline-block;
-  text-align: center;
-  padding: $badge-padding;
-  border-radius: $badge-border-radius;
-  font-size: $badge-font-size;
-  font-weight: $badge-font-weight;
-  line-height: $badge-line-height;
-  white-space: nowrap;
-
-  &-link {
-    color: $color-gray-1;
-
-    &:hover {
-      color: $white;
-    }
-  }
+  @include badge;
+  @include badge-style($primary, $white);
 
   &-rounded {
     border-radius: $badge-border-radius-rounded;
+    padding-right: .5em;
+    padding-left: .5em;
   }
 
   &-outline {
-    @include badge($primary, $primary);
+    @include badge-style($primary, $primary);
   }
 }
 
@@ -35,7 +21,10 @@
 
   .c-badge-#{$badge-size-namespace} {
     font-size: $badge-size-font;
-    min-width: 17px;
+
+    &:empty {
+      padding: $badge-size-font - 6;
+    }
   }
 }
 
@@ -45,10 +34,10 @@
   $badge-color: nth($badge-color, 3);
 
   .c-badge-#{$badge-color-namespace} {
-    @include badge($badge-bg-color, $badge-color);
+    @include badge-style($badge-bg-color, $badge-color);
 
     &-outline {
-      @include badge(transparent, $badge-bg-color);
+      @include badge-style(transparent, $badge-bg-color);
 
       border: 1px solid $badge-bg-color;
     }
@@ -65,4 +54,8 @@
       opacity: 1;
     }
   }
+}
+
+.c-badge-top {
+  vertical-align: top;
 }
