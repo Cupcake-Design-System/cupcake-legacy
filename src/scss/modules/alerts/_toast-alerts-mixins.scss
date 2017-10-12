@@ -76,10 +76,10 @@ $toast-alert-info-bar-bd: $color-primary-8 !default;
 
 
 /// $toast-alert-radius 
-$toast-alert-radius: 2px !default;
+$toast-alert-radius: $global-radius !default;
 
 /// $toast-alert-fs 
-$toast-alert-fs: 12px !default;
+$toast-alert-fs: $global-font-size !default;
 
 /// $toast-alert-close-size 
 $toast-alert-close-size: 30px !default;
