@@ -97,6 +97,9 @@ $control-shadow           : inset 0 1px 2px 0 rgba(0, 0, 0, 0.13);
 $control-shadow-disabled  : $control-shadow;
 $control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
 
+$control-icon-padding     : 26px;
+$control-icon-color       : $color-bd-text-light;
+
 $control-select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $control-select-background-hover : radial-gradient(farthest-corner, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
 $control-select-background-focus : $control-select-background;
