@@ -19,10 +19,6 @@
     align-items: flex-end;
   }
 
-  &-single {
-    align-items: center;
-  }
-
   &-vertical {
     flex-direction: column;
   }
@@ -101,24 +97,12 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 
 // Sizes
 .c-media {
-  &-list-xs & {
-    padding: $media-list-padding-xs;
-  }
-
   &-list-sm & {
     padding: $media-list-padding-sm;
   }
 
   &-list-lg & {
     padding: $media-list-padding-lg;
-  }
-
-  &-list-xl & {
-    padding: $media-list-padding-xl;
-  }
-
-  &-list-xxl & {
-    padding: $media-list-padding-xxl;
   }
 }
 
