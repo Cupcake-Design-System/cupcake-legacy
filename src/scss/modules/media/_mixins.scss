@@ -29,21 +29,6 @@ $media-border           : #ebebeb !default;
 /// $media-action-color    
 $media-action-color     : $color-gray-6 !default;
 
-/// $media-list-padding-xs 
-$media-list-padding-xs  : 5px 3px !default;
-
-/// $media-list-padding-sm 
-$media-list-padding-sm  : 8px 6px !default;
-
-/// $media-list-padding-lg 
-$media-list-padding-lg  : 20px 16px !default;
-
-/// $media-list-padding-xl 
-$media-list-padding-xl  : 24px 20px !default;
-
-/// $media-list-padding-xxl
-$media-list-padding-xxl : 32px 24px !default;
-
 
 @mixin media {
   display: flex;

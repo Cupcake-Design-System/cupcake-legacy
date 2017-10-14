@@ -61,7 +61,7 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
     margin-bottom: 0;
   }
 
-  &ul {
+  & ul {
     padding-left: 0;
   }
 }
@@ -92,17 +92,6 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
 .c-media-list-striped {
   .c-media#{$media-excludes}:nth-child(even) {
     background-color: $media-stripe-bg;
-  }
-}
-
-// Sizes
-.c-media {
-  &-list-sm & {
-    padding: $media-list-padding-sm;
-  }
-
-  &-list-lg & {
-    padding: $media-list-padding-lg;
   }
 }
 
