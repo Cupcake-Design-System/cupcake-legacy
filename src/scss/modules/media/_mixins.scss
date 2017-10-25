@@ -1,0 +1,80 @@
+////
+/// @group media object
+////
+
+/// $media-padding         
+$media-padding          : 16px 12px !default;
+
+/// $media-margin          
+$media-margin           : 0 8px !default;
+
+/// $media-color           
+$media-color            : $color-gray-7 !default;
+
+/// $media-stripe-bg       
+$media-stripe-bg        : $color-gray-0 !default;
+
+/// $media-hover-bg        
+$media-hover-bg         : $media-stripe-bg !default;
+
+/// $media-header-bg       
+$media-header-bg        : $color-gray-0 !default;
+
+/// $media-new-bg          
+$media-new-bg           : $color-primary-0 !default;
+
+/// $media-border          
+$media-border           : $color-gray-2 !default;
+
+/// $media-action-color    
+$media-action-color     : $color-gray-6 !default;
+
+
+@mixin media {
+  display: flex;
+  align-items: flex-start;
+  color: $media-color;
+  padding: $media-padding;
+}
+
+@mixin media-body {
+  flex: 1;
+  min-width: 1px;
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  .c-media > {
+    *:first-child {
+      margin-left: 0;
+    }
+
+    *:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin media-action {
+  opacity: 0;
+  transition: .5s;
+  color: $media-action-color;
+
+  .c-media:hover & {
+    opacity: 1;
+  }
+
+  &-visible,
+  &-visible & {
+    opacity: 1;
+  }
+}
+
+@mixin media-block-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .5rem;
+  transition: .5s;
+}
