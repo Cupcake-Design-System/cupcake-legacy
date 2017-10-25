@@ -8,6 +8,12 @@ $modals-z-index: 1050 !default;
 /// $modals-dialog-top-magin  
 $modals-dialog-top-magin: 30px !default;
 
+/// $modals-confirmation-margin-top
+$modals-confirmation-margin-top: 140px !default;
+
+/// $modals-confirmation-margin-top
+$modals-confirmation-width: 400px !default;
+
 /// $modals-width             
 $modals-width: 600px !default;
 
@@ -44,14 +50,14 @@ $modals-close-button-size: 11px !default;
 /// $modals-default-color
 $modals-default-color: $global-text-color !default;
 
-/// $modals-close-button-font-size
-$modals-close-button-font-size: 14px !default;
+/// $modals-body-font-size
+$modals-body-font-size: $font-body-font-size !default;
 
 /// $modals-title-font-size
-$modals-title-font-size: 18px !default;
+$modals-title-font-size: $font-header-sm-font-size !default;
 
 /// $modals-title-font-weight
-$modals-title-font-weight: 600 !default;
+$modals-title-font-weight: $font-header-sm-font-weight !default;
 
 /// $modals-line-height-title
 $modals-line-height-title: 1.4 !default;
@@ -64,6 +70,34 @@ $modals-background-color: #ffffff !default;
 
 /// $modals-backdrop-background-color
 $modals-backdrop-background-color: #000000 !default;
+
+/// $modals-confirmation-icon-fs
+$modals-confirmation-icon-fs: 17px !default;
+
+/// $modals-confirmation-icon-danger-c
+$modals-confirmation-icon-danger-c: $color-danger-8 !default;
+
+/// $modals-confirmation-icon-info-c
+$modals-confirmation-icon-info-c: $color-primary-4 !default;
+
+/// $modals-confirmation-icon-margin
+$modals-confirmation-icon-margin: 16px 0 12px !default;
+
+/// $modals-confirmation-title-fs
+$modals-confirmation-title-fs: $font-header-sm-font-size !default;
+
+/// $modals-confirmation-title-weight
+$modals-confirmation-title-weight: $font-header-sm-font-weight !default;
+
+/// $modals-confirmation-title-margin
+$modals-confirmation-title-margin: 0 0 15px !default;
+
+/// $modals-confirmation-text-margin
+$modals-confirmation-text-margin: 0 !default;
+
+/// $modals-confirmation-buttons-margin
+$modals-confirmation-buttons-margin: 25px 0 15px !default;
+
 
 @mixin ipreo-modal-mixin() {
   display: none;
@@ -97,6 +131,12 @@ $modals-backdrop-background-color: #000000 !default;
   &-dialog {
     margin: $modals-dialog-top-magin auto;
     max-width: $modals-width;
+
+    .c-modal-danger &,
+    .c-modal-info & {
+      width: $modals-confirmation-width;
+      margin-top: $modals-confirmation-margin-top;
+    }
   }
 
   &-content {
@@ -156,8 +196,8 @@ $modals-backdrop-background-color: #000000 !default;
   &-body {
     position: relative;
     padding: $modals-vertical-padding $modals-horizontal-padding;
-    color: $modals-default-color;
-    font-size: $modals-close-button-font-size;
+
+    @include font-body;
   }
 
   &-backdrop {
@@ -176,6 +216,33 @@ $modals-backdrop-background-color: #000000 !default;
     &.c-modal-fade.c-modal-in {
       opacity: 0.5;
     }
+  }
+
+  &-confirmation-icon {
+    font-size: $modals-confirmation-icon-fs;
+    margin: $modals-confirmation-icon-margin;
+
+    .c-modal-danger & {
+      color: $modals-confirmation-icon-danger-c;
+    }
+
+    .c-modal-info & {
+      color: $modals-confirmation-icon-info-c;
+    }
+  }
+
+  &-confirmation-title {
+    font-size: $modals-confirmation-title-fs;
+    font-weight: $modals-confirmation-title-weight;
+    margin: $modals-confirmation-title-margin;
+  }
+
+  &-confirmation-text {
+    margin: $modals-confirmation-text-margin;
+  }
+
+  &-confirmation-buttons {
+    margin: $modals-confirmation-buttons-margin;
   }
 }
 
