@@ -104,3 +104,9 @@ $media-excludes: ':not(.c-media-list-header):not(.c-media-list-footer)';
   border-top: 1px solid $media-border;
   background-color: $media-header-bg;
 }
+
+.c-media-list .c-media-action-visible {
+  .c-media-action {
+    opacity: 1;
+  }
+}
