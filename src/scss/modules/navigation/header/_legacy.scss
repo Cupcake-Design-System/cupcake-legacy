@@ -1,0 +1,56 @@
+////
+/// @group header legacy
+////
+
+/// $header-legacy-bg           
+$header-legacy-bg           : #0079bd !default;
+
+/// $header-legacy-tabs-bg      
+$header-legacy-tabs-bg      : #0a0a0a !default;
+
+/// $header-legacy-tabs-bg-hover: rgba(89, 89, 89, 0
+$header-legacy-tabs-bg-hover: rgba(89, 89, 89, 0.56) !default;
+
+/// $header-legacy-text         
+$header-legacy-text         : #ffffff !default;
+
+
+.c-header-legacy {
+  .c-header {
+    background-color: $header-legacy-bg;
+    border-bottom: 0;
+    color: $header-legacy-text;
+
+    .c-header-item {
+      border: 0;
+
+      & a {
+        color: $header-legacy-text;
+      }
+    }
+  }
+
+  .c-header-left .c-header-item {
+    border-right: 1px solid $header-borders;
+  }
+
+  .c-header-right .c-header-item {
+    border-left: 1px solid $header-borders;
+  }
+
+  .c-tabs {
+    background-color: $header-legacy-tabs-bg;
+    box-shadow: none;
+
+    .c-tab-item-link {
+      border-bottom: 0;
+    }
+
+    .c-tab-item-link:hover,
+    .c-tab-item-link-active {
+      border-bottom-width: 0;
+      background-color: $header-legacy-tabs-bg-hover;
+      color: $header-legacy-text;
+    }
+  }
+}

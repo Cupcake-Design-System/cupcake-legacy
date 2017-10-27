@@ -1,27 +1,69 @@
-$white: #ffffff;
-$header-bottom-border: $color-gray-1;
-$header-bg: $white;
-$header-text-color: $color-gray-7;
-$header-borders: $color-gray-1;
-$header-logo-max-width: 90px;
-$header-height: 50px;
+////
+/// @group header
+////
+
+/// $white                    
+$white                    : #ffffff !default;
+
+/// $header-bottom-border     : $col
+$header-bottom-border     : $color-gray-1 !default;
+
+/// $header-bg                
+$header-bg                : #ffffff !default;
+
+/// $header-bg-hover        
+$header-bg-hover          : rgba(0, 0, 0, 0.03) !default;
+
+/// $header-inverse-bg       
+$header-inverse-bg        : $color-gray-7 !default;
+
+/// $header-inverse-bg-hover  
+$header-inverse-bg-hover  : rgba(0, 0, 0, 0.05) !default;
+
+/// $header-text-color        
+$header-text-color        : #adb5bd !default;
+
+/// $header-inverse-text-color
+$header-inverse-text-color: #ffffff !default;
+
+/// $header-inverse-borders   : rgba(255, 255, 
+$header-inverse-borders   : rgba(255, 255, 255, 0.1) !default;
+
+/// $header-borders           : rgba(0, 0,
+$header-borders           : rgba(0, 0, 0, 0.06) !default;
+
+/// $header-logo-max-width  
+$header-logo-max-width    : 120px !default;
+
+/// $header-height         
+$header-height            : 50px !default;
+
+/// $header-logo-width         
+$header-logo-width:  85px !default;
+
 
 @mixin header {
   background-color: $header-bg;
   border-bottom: 1px solid $header-borders;
+  justify-content: space-between;
   align-items: center;
-  align-content: space-between;
   display: flex;
   height: $header-height;
-  position: fixed;
   width: 100%;
   z-index: 10;
-  top: 0;
 }
 
 @mixin header-item {
-  align-items: center;
-  display: flex;
-  height: $header-height - 1;
-  padding: 0 20px;
+  &-link {
+    color: $header-text-color;
+    white-space: nowrap;
+    align-items: center;
+    display: flex;
+    height: $header-height;
+    padding: 0 20px;
+
+    &:hover {
+      background: $header-bg-hover;
+    }
+  }
 }
