@@ -7,11 +7,11 @@
 
   // input icons padding
   &-right-icon {
-    padding-right: $control-icon-padding;
+    padding-right: $control-padding-h * 4;
   }
 
   .c-input-icon + & {
-    padding-left: $control-icon-padding;
+    padding-left: $control-padding-h * 4;
   }
 }
 
@@ -19,7 +19,7 @@
   @include vertical-center;
 
   left: $control-padding-h;
-  color: $control-icon-color;
+  color: $control-border;
 
   .c-input ~ & {
     left: auto;

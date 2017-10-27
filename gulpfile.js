@@ -296,9 +296,8 @@ gulp.task('html', function() {
 gulp.task('watch', function() {
   gulp.watch(bases.scss + '**/*.scss', ['styles', 'flavors']);
   gulp.watch(bases.flavors + '**/*.scss', ['styles', 'flavors']);
-  gulp.watch(bases.app + './*.html', ['html']);
-  gulp.watch(bases.app + './src/scss/**/**/*.html', ['html']);
-  gulp.watch(bases.app + 'img/*', ['img']);
+  gulp.watch(bases.app + '**/*.html', ['html']);
+  //gulp.watch(bases.app + 'img/*', ['img']);
 });
 
 

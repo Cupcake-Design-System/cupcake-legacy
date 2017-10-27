@@ -67,7 +67,7 @@ $dropdown-list-padding     : 5px 0;
 $dropdown-padding          : 5px 15px;
 $dropdown-border           : 1px solid rgba(0, 0, 0, 0.18);
 $dropdown-color            : $font-body-color;
-$dropdown-color-hover      : $font-body-color;
+$dropdown-color-hover      : $primary;
 $dropdown-background-color : white;
 $dropdown-background-hover : $color-gray-0;
 $dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2);
@@ -96,9 +96,6 @@ $control-label-padding    : 5px 0;
 $control-shadow           : inset 0 1px 2px 0 rgba(0, 0, 0, 0.13);
 $control-shadow-disabled  : $control-shadow;
 $control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
-
-$control-icon-padding     : 26px;
-$control-icon-color       : $color-bd-text-light;
 
 $control-select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $control-select-background-hover : radial-gradient(farthest-corner, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
@@ -221,3 +218,35 @@ $c-full-page-loader-indicator: url("data:image/gif;base64,R0lGODlhUAA0ALMJAL29va
 $c-full-page-loader-animation: false;
 $c-full-page-loader-size: 80px;
 $c-full-loader-indicator-logo-sizes: inherit;
+
+
+$toast-alert-border: rgba(0, 0, 0, 0.1);
+$toast-alert-color: $font-body-color;
+$toast-alert-color-variant: false;
+$toast-alert-font-weight: $font-body-font-weight;
+$toast-alert-margin: 0 0 15px 0;
+$toast-alert-padding: 9px 20px 10px 40px;
+$toast-alert-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+$toast-alert-bar-bg: #f3f3f3;
+$toast-alert-bar-bd: none;
+$toast-alert-bar-shadow: none;
+$toast-alert-bar-position: left;
+$toast-alert-bar-size: 30px;
+$toast-alert-radius: 4px;
+$toast-alert-fs: $font-body-font-size;
+$toast-alert-close-size: 20px;
+$toast-alert-icon-top: 9px;
+$toast-alert-icon-left: 9px;
+
+$toast-alert-danger-color: #d75248;
+$toast-alert-warning-color: #d7ad3b;
+$toast-alert-success-color: #4eaa0a;
+$toast-alert-info-color: #62a2b5;
+
+$toast-alert-danger-bar-bg: #feeeed;
+$toast-alert-warning-bar-bg: #f5eed7;
+$toast-alert-success-bar-bg: #e1f8e1;
+$toast-alert-info-bar-bg: #cdecf5;
+
+$notify-width: 20vw;
+$notify-min-width: 265px;

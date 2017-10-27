@@ -4,6 +4,7 @@
   padding: $control-label-padding;
   color: $control-color;
   font-size: $control-font-size;
+  cursor: pointer;
 }
 
 @mixin input {
@@ -72,25 +73,6 @@
   box-shadow: $control-select-shadow;
   cursor: pointer;
   user-select: none;
-
-  // Firefox, IE and EDGE do not respect line-height on <select>, so we just setting height. Hardcoded for now.
-  height: 30px;
-
-  &.c-input-xs {
-    height: 20px;
-  }
-
-  &.c-input-sm {
-    height: 25px;
-  }
-
-  &.c-input-lg {
-    height: 35px;
-  }
-
-  &.c-input-xl {
-    height: 40px;
-  }
 
   &::-ms-expand {
     display: none;

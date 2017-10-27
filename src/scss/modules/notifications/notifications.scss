@@ -25,7 +25,8 @@ $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !default;
     $sign: '-';
   }
 
-  .c-alert {
+  .c-alert,
+  .c-toast-alert {
     transform: translateX(calc(#{$sign}110% + #{$notify-screen-spacing}));
 
     &.show {
@@ -60,7 +61,8 @@ $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !default;
     @include ipreo-notify-logs-slide(right);
   }
 
-  .c-alert {
+  .c-alert,
+  .c-toast-alert {
     position: relative;
     pointer-events: none;
     opacity: 0;
