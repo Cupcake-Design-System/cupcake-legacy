@@ -54,9 +54,11 @@
 
   &-success {
     @include toast-alert-style($toast-alert-success-color, $toast-alert-success-bar-bd, $toast-alert-success-bar-bg);
+    @include taost-alert-success-icon;
   }
 
   &-info {
     @include toast-alert-style($toast-alert-info-color, $toast-alert-info-bar-bd, $toast-alert-info-bar-bg);
+    @include toast-alert-info-icon;
   }
 }

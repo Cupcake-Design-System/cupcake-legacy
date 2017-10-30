@@ -2,8 +2,11 @@
 /// @group toast-alerts
 ////
 
-/// $toast-alert-border 
-$toast-alert-border: $color-gray-3 !default;
+/// $toast-alert-fs 
+$toast-alert-fs: $global-font-size !default;
+
+/// $toast-alert-font-weight 
+$toast-alert-font-weight: bold !default;
 
 /// $toast-alert-color 
 $toast-alert-color: $color-gray-9 !default;
@@ -11,8 +14,11 @@ $toast-alert-color: $color-gray-9 !default;
 /// $toast-alert-color-variant 
 $toast-alert-color-variant: true !default;
 
-/// $toast-alert-font-weight 
-$toast-alert-font-weight: bold !default;
+/// $toast-alert-border 
+$toast-alert-border: $color-gray-3 !default;
+
+/// $toast-alert-radius 
+$toast-alert-radius: $global-radius !default;
 
 /// $toast-alert-margin 
 $toast-alert-margin: 0 0 1rem 0 !default;
@@ -22,6 +28,7 @@ $toast-alert-padding: 19px 27px 19px 40px !default;
 
 /// $toast-alert-shadow 
 $toast-alert-shadow: 0 8px 12px 0 rgba(33, 37, 41, 0.15) !default;
+
 
 /// $toast-alert-bar-bg 
 $toast-alert-bar-bg: $color-gray-8 !default;
@@ -75,14 +82,11 @@ $toast-alert-success-bar-bd: $color-success-8 !default;
 $toast-alert-info-bar-bd: $color-primary-8 !default;
 
 
-/// $toast-alert-radius 
-$toast-alert-radius: $global-radius !default;
-
-/// $toast-alert-fs 
-$toast-alert-fs: $global-font-size !default;
-
 /// $toast-alert-close-size 
 $toast-alert-close-size: 30px !default;
+
+/// $toast-alert-close-size 
+$toast-alert-close-fs: 17px !default;
 
 /// $toast-alert-close-c 
 $toast-alert-close-c: $color-gray-4 !default;
@@ -93,11 +97,15 @@ $toast-alert-close-hover-c: $color-gray-9 !default;
 /// $toast-alert-close-transition 
 $toast-alert-close-transition: color .15s linear !default;
 
+
 /// $toast-alert-icon-top 
-$toast-alert-icon-top: 18px !default;
+$toast-alert-icon-top: 19px !default;
 
 /// $toast-alert-icon-left 
 $toast-alert-icon-left: 20px !default;
+
+/// $toast-alert-icon-left 
+$toast-alert-icon-size: 12px !default;
 
 
 @mixin toast-alert {
@@ -111,6 +119,7 @@ $toast-alert-icon-left: 20px !default;
   border-radius: $toast-alert-radius;
   box-shadow: $toast-alert-shadow, 0 0 0 1px $toast-alert-border;
 
+  // Alert Bar
   &::before {
     content: '';
     position: absolute;
@@ -143,6 +152,8 @@ $toast-alert-icon-left: 20px !default;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: $toast-alert-close-fs;
+    font-weight: 900;
     color: $toast-alert-close-c;
     transition: $toast-alert-close-transition;
     cursor: pointer;
@@ -152,10 +163,37 @@ $toast-alert-icon-left: 20px !default;
     }
   }
 
-  &-icon {
+  // Alert Icon
+  &::after {
+    content: '!';
+    font-family: Arial, Helvetica, sans-serif; // alert icon using regular symbols so we setting font for them.
     position: absolute;
     top: $toast-alert-icon-top;
     left: $toast-alert-icon-left;
+    width: $toast-alert-icon-size;
+    height: $toast-alert-icon-size;
+    line-height: $toast-alert-icon-size;
+    color: white;
+    background: $toast-alert-color;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: $toast-alert-icon-size / 1.25;
+    text-indent: -0.5px;
+  }
+}
+
+@mixin toast-alert-info-icon() {
+  &::after {
+    content: 'i';
+  }
+}
+
+@mixin taost-alert-success-icon() {
+  &::after {
+    content: 'L';
+    transform: scaleX(-1) rotate(-45deg);
+    font-size: $toast-alert-icon-size / 1.333;
   }
 }
 
@@ -164,12 +202,14 @@ $toast-alert-icon-left: 20px !default;
     color: $color;
   }
 
-  .c-toast-alert-icon {
-    color: $color;
-  }
-
+  // bar color
   &::before {
     background: $bg;
     border-color: $bd;
+  }
+
+  // icon color
+  &::after {
+    background: $color;
   }
 }
