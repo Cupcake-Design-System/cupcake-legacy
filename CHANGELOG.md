@@ -1,3 +1,21 @@
+### Release 1.1.5
+* remove cursor-pointer from input label [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/997fa6e0a856a4ff5d8c28be803d1173385cdfe7)
+* #125 [BD Flavor] Hover item in dropdown update [View Commit]
+(https://code.ipreo.com/Ipreo/cupcake/commit/eb9db74d194564f3ab21cb0d9e8d2d85350724d6)
+* Force setting height on select [View Commit]
+(https://code.ipreo.com/Ipreo/cupcake/commit/527706afcafe9df1f5a0b4acf69c6a30a7b60f73)
+* #139 input icon color and padding [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0b885e0192910a499e952ef92980ac378322d74e)
+* Added toast alerts - simplify html, rewrite icons. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4eb7be98a2c0c3b4fb7601d621da08e161179063)
+* updated btn variables. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5f65d93518238089352e92d8d1ed077d1b70b541)
+* Added confimation-modals [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1f41e46a100313819959915fee356cab545cc49a)
+* updated header styles, decoupled notifications, removed unused classes (#152) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e9336e9a25fedc3b9b44985e8e17bb29ef1b7a1a)
+* gulpfile fix for html watcher [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/25da64331739cfd9687421c82420d890bedbc6b3)
+* hotfix: tab padding [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b9df018c74cbcb8d86bda3472a9752a6c17df5df)
+* Media group updates (#149) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/90b889fe27a05586c12ca9b12652dc7a4864df93)
+* Add modal subtype - confirmation [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9a8e993ddf82be3c99d12165050b3a9c923873a6)
+
+
+
 ### Release 1.1.4
 * avatar fixes (#134) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4205d349c5f4c4e79d163aadb2f1a26286af20f8)
 * alert style fixes #132  (#136) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1be897760322da2439544dae18bad6d4c4129f9e)
