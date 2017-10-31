@@ -3,7 +3,6 @@
 .c-dropdown {
   position: relative;
   overflow: visible;
-  display: inline-flex;
 
   &-right {
     float: right;
@@ -19,7 +18,7 @@
   }
 
   &-below {
-    top: 100%;
+    top: 110%;
 
     @if $dropdown-glued {
       border-radius: 0 0 $dropdown-radius $dropdown-radius;
@@ -27,11 +26,9 @@
   }
 
   &-above {
-    bottom: 100%;
+    bottom: 110%;
     margin-bottom: 0;
     top: auto;
-    border-bottom: 0;
-    box-shadow: $dropdown-box-shadow;
 
     @if $dropdown-glued {
       border-radius: $dropdown-radius $dropdown-radius 0 0;
@@ -39,26 +36,6 @@
   }
 }
 
-.c-dropdown-list > li {
-  padding: 0;
-  margin: 0;
-  display: block;
-
-  > a {
-    display: block;
-    font-size: $dropdown-font-size;
-    padding: $dropdown-padding;
-    font-weight: $dropdown-font-weight;
-    color: $dropdown-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $dropdown-color-hover;
-      background: $dropdown-background-hover;
-      text-decoration: none;
-    }
-  }
-}
 
 .c-dropdown-divider {
   border-top: $dropdown-border;
@@ -66,4 +43,44 @@
   > a {
     margin-top: $dropdown-divider-margin;
   }
+}
+
+.c-dropdown-list > li > a,
+.c-dropdown-item {
+  @include dropdown-item;
+}
+
+
+.c-dropdown-grid {
+  @include dropdown-grid;
+
+  li a,
+  .c-dropdown-item {
+    @include dropdown-grid-item;
+  }
+
+  &-col-2 {
+    width: 200px;
+
+    li a,
+    .c-dropdown-item {
+      flex-basis: 50%;
+    }
+  }
+
+  &-col-4 {
+    width: 400px;
+
+    li a,
+    .c-dropdown-item {
+      flex-basis: 25%;
+    }
+  }
+}
+
+.c-dropdown-grid-right {
+  right: 0;
+  left: auto;
+  position: absolute;
+  min-width: 300px;
 }

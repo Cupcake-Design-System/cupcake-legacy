@@ -12,10 +12,10 @@ $dropdown-list-margin     : 0 !default;
 $dropdown-list-padding    : 0 !default;
 
 /// $dropdown-padding        
-$dropdown-padding         : 1rem !default;
+$dropdown-padding         : .75rem 1rem !default;
 
 /// $dropdown-border          
-$dropdown-border          : 1px solid $global-border-color !default;
+$dropdown-border          : 1px solid $color-gray-2 !default;
 
 /// $dropdown-color          
 $dropdown-color           : $color-gray-7 !default;
@@ -27,10 +27,10 @@ $dropdown-color-hover     : $primary !default;
 $dropdown-background-color: $white !default;
 
 /// $dropdown-background-hover:
-$dropdown-background-hover: darken($default, 2%) !default;
+$dropdown-background-hover: $color-gray-1 !default;
 
 /// $dropdown-box-shadow 
-$dropdown-box-shadow      : 0 2px 7px rgba(0, 0, 0, 0.2) !default;
+$dropdown-box-shadow      : 0 0 4px rgba(0, 0, 0, 0.06) !default;
 
 /// $dropdown-font-family
 $dropdown-font-family     : arial !default;
@@ -42,7 +42,7 @@ $dropdown-font-size       : 12px !default;
 $dropdown-font-weight     : bold !default;
 
 /// $dropdown-width  
-$dropdown-width           : 100% !default;
+$dropdown-width           : 200px !default;
 
 /// $dropdown-radius 
 $dropdown-radius          : $global-radius !default;
@@ -50,15 +50,21 @@ $dropdown-radius          : $global-radius !default;
 /// $dropdown-divider-margin 
 $dropdown-divider-margin  : 0 !default;
 
+/// $dropdown-grid-item-padding
+$dropdown-grid-item-padding: 12px !default;
+
+/// $dropdown-grid-padding
+$dropdown-grid-padding: 8px !default;
+
 
 @mixin dropdown-list {
   display: none;
   position: absolute;
   padding: $dropdown-list-padding;
   margin: $dropdown-list-margin;
-  top: 0;
+  top: -5px;
   left: 0;
-  width: $dropdown-width;
+  min-width: $dropdown-width;
   list-style-type: none;
   background: $dropdown-background-color;
   font-family: $dropdown-font-family;
@@ -67,5 +73,59 @@ $dropdown-divider-margin  : 0 !default;
   box-shadow: $dropdown-box-shadow;
   border-radius: $dropdown-radius;
   box-sizing: border-box;
-  z-index: 12;
+  z-index: 1000;
+}
+
+@mixin dropdown-item {
+  display: block;
+  font-size: $dropdown-font-size;
+  padding: $dropdown-padding;
+  font-weight: $dropdown-font-weight;
+  color: $dropdown-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $dropdown-color-hover;
+    background: $dropdown-background-hover;
+    text-decoration: none;
+  }
+}
+
+
+@mixin dropdown-grid {
+  position: absolute;
+  top: 110%;
+  float: left;
+  text-align: left;
+  list-style: none;
+  color: $dropdown-color;
+  border-radius: $dropdown-radius;
+  font-size: $dropdown-font-size;
+  background-color: $dropdown-background-color;
+  background-clip: padding-box;
+  border: $dropdown-border;
+  box-shadow: $dropdown-box-shadow;
+  z-index: 1000;
+  min-width: $dropdown-width;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $dropdown-grid-padding;
+}
+
+
+@mixin dropdown-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 33.333333%;
+  overflow: hidden;
+  text-align: center;
+  padding: $dropdown-grid-item-padding;
+  margin: 0;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $color-gray-0;
+    border-color: $color-gray-2;
+  }
 }
