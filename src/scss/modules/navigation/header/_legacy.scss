@@ -3,13 +3,13 @@
 ////
 
 /// $header-legacy-bg           
-$header-legacy-bg           : #0079bd !default;
+$header-legacy-bg           : #0082de !default;
 
 /// $header-legacy-tabs-bg      
-$header-legacy-tabs-bg      : #0a0a0a !default;
+$header-legacy-tabs-bg      : #324655 !default;
 
-/// $header-legacy-tabs-bg-hover: rgba(89, 89, 89, 0
-$header-legacy-tabs-bg-hover: rgba(89, 89, 89, 0.56) !default;
+/// $header-legacy-tabs-bg-hover
+$header-legacy-tabs-bg-hover: hsla(0, 0%, 9%, .4) !default;
 
 /// $header-legacy-text         
 $header-legacy-text         : #ffffff !default;
@@ -41,9 +41,14 @@ $header-legacy-text         : #ffffff !default;
   .c-tabs {
     background-color: $header-legacy-tabs-bg;
     box-shadow: none;
+    padding-left: 0;
 
     .c-tab-item-link {
       border-bottom: 0;
+      padding: 8px 10px;
+      color: $header-legacy-text;
+      font-size: 12px;
+      line-height: 2;
     }
 
     .c-tab-item-link:hover,
