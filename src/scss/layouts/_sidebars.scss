@@ -12,19 +12,11 @@ $global-sidebar-background-color: #f5f5f5 !default;
   @include sidebar;
 
   order: -1;
-
-  @media (min-width: 480px) and (max-width: 1024px) {
-    padding: $space-sm;
-  }
 }
 
 .c-sidebar-right {
   @include sidebar;
 
   order: 2;
-
-  @media (min-width: 480px) and (max-width: 1024px) {
-    padding: $space-sm;
-  }
 }
 

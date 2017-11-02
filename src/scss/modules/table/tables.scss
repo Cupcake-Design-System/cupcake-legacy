@@ -8,7 +8,7 @@ table.c-table {
 
 
 table.c-table-stack {
-  @include bp($until: lg) {
+  @include media-breakpoint-down(md) {
     @include table-stack;
   }
 }

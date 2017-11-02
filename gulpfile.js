@@ -21,6 +21,7 @@ var gulp          = require('gulp'),
     octophant     = require('octophant'),
     flatten       = require('gulp-flatten'),
     hb            = require('gulp-hb');
+    gcmq          = require('gulp-group-css-media-queries');
 
 require.extensions['.html'] = function (module, filename) {
    module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'))
@@ -125,6 +126,7 @@ gulp.task('styles', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
+    .pipe(gcmq())
     .pipe(rename('northstar.css'))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
@@ -137,6 +139,7 @@ gulp.task('flavors', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
+    .pipe(gcmq())
     .pipe(rename({
       dirname: ''
     }))

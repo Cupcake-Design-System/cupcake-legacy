@@ -1,357 +1,127 @@
-$flex-justify: (
-  'start': flex-start,
-  'end': flex-end,
-  'center': center,
-  'space-between': space-between,
-  'space-around': space-around,
-);
-
-$flex-align: (
-  'top': flex-start,
-  'bottom': flex-end,
-  'center': center,
-  'stretch': stretch,
-);
-
-@mixin flex {
-  display: flex;
-}
-
-// Horizontally or vertically aligns the items within a flex container.
-@mixin flex-align($x: null, $y: null) {
-  @if $x {
-    @if map-has-key($flex-justify, $x) {
-      $x: map-get($flex-justify, $x);
-    }
-
-    @else {
-      @warn "flex-grid-row-align(): #{$x} is not a valid value for horizontal alignment. Use left, right, center, justify, or spaced.";
-    }
-  }
-
-  @if $y {
-    @if map-has-key($flex-align, $y) {
-      $y: map-get($flex-align, $y);
-    }
-
-    @else {
-      @warn "flex-grid-row-align(): #{$y} is not a valid value for vertical alignment. Use top, bottom, middle, or stretch.";
-    }
-  }
-
-  justify-content: $x;
-  align-items: $y;
-}
-
-@mixin flex-align-self($y: null) {
-  @if $y {
-    @if map-has-key($flex-align, $y) {
-      $y: map-get($flex-align, $y);
-    }
-
-    @else {
-      @warn "flex-grid-column-align(): #{$y} is not a valid value for alignment. Use top, bottom, middle, or stretch.";
-    }
-  }
-
-  align-self: $y;
-}
-
-// these are the basic flex classes
-@mixin flex-class-export {
-  @each $hdir, $prop in map-remove($flex-justify, left) {
-    .c-justify-#{$hdir} {
-      @include flex-align($x: $hdir);
-    }
-  }
-
-  @each $vdir, $prop in $flex-align {
-    .c-align-#{$vdir} {
-      @include flex-align($y: $vdir);
-    }
-
-    .c-align-self-#{$vdir} {
-      @include flex-align-self($y: $vdir);
-    }
-  }
-}
-
-
-@mixin flex($direction,$breakpoint) {
-  .c-#{$breakpoint}-flex-#{$direction} {
-    flex-direction: $direction;
-  }
-}
-
-@mixin justify-content($direction, $breakpoint) {
-  .c-#{$breakpoint}-justify-#{$direction} {
-    justify-content: $direction;
-  }
-}
-
-@mixin align-content($name, $direction, $breakpoint) {
-  .c-#{$breakpoint}-align-content-#{$name} {
-    align-content: $direction;
-  }
-}
-
-@mixin align-items($name, $direction, $breakpoint) {
-  .c-#{$breakpoint}-align-#{$name} {
-    align-items: $direction;
-  }
-}
-
-@mixin align-self($direction, $breakpoint) {
-  .c-#{$breakpoint}-align-self-#{$direction} {
-    align-self: $direction;
-  }
-}
-
 // Flex classes - and responsive variations
 @mixin flex-responsive-class-export {
-  .c-flex-row {
-    flex-direction: row;
-  }
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-  .c-flex-row-reverse {
-    flex-direction: row-reverse;
-  }
-
-  .c-flex-column {
-    flex-direction: column;
-  }
-
-  .c-flex-column-reverse {
-    flex-direction: column-reverse;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include flex(row, $breakpoint);
-        @include flex(row-reverse, $breakpoint);
-        @include flex(column, $breakpoint);
-        @include flex(column-reverse, $breakpoint);
+      .c#{$infix}-flex-row {
+        flex-direction: row;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include flex(row, $breakpoint);
-        @include flex(row-reverse, $breakpoint);
-        @include flex(column, $breakpoint);
-        @include flex(column-reverse, $breakpoint);
+      .c#{$infix}-flex-column {
+        flex-direction: column;
       }
-    }
-  }
 
-  // start justify classes
-
-  .c-justify-start {
-    justify-content: flex-start;
-  }
-
-  .c-justify-end {
-    justify-content: flex-end;
-  }
-
-  .c-justify-center {
-    justify-content: center;
-  }
-
-  .c-justify-space-around {
-    justify-content: space-around;
-  }
-
-  .c-justify-space-between {
-    justify-content: space-between;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include justify-content(flex-start, $breakpoint);
-        @include justify-content(flex-end, $breakpoint);
-        @include justify-content(center, $breakpoint);
-        @include justify-content(space-around, $breakpoint);
-        @include justify-content(space-between, $breakpoint);
+      .c#{$infix}-flex-row-reverse {
+        flex-direction: row-reverse;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include justify-content(flex-start, $breakpoint);
-        @include justify-content(flex-end, $breakpoint);
-        @include justify-content(center, $breakpoint);
-        @include justify-content(space-around, $breakpoint);
-        @include justify-content(space-between, $breakpoint);
+      .c#{$infix}-flex-column-reverse {
+        flex-direction: column-reverse;
       }
-    }
-  }
 
-  // start align classes
 
-  .c-align-top {
-    align-items: flex-start;
-  }
-
-  .c-align-bottom {
-    align-items: flex-end;
-  }
-
-  .c-align-center {
-    align-items: center;
-  }
-
-  .c-align-baseline {
-    align-items: baseline;
-  }
-
-  .c-align-stretch {
-    align-items: stretch;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include align-items(top, flex-start, $breakpoint);
-        @include align-items(bottom, flex-end, $breakpoint);
-        @include align-items(center, center, $breakpoint);
-        @include align-items(baseline, baseline, $breakpoint);
-        @include align-items(stretch, stretch, $breakpoint);
+      .c#{$infix}-flex-wrap {
+        flex-wrap: wrap;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include align-items(top, flex-start, $breakpoint);
-        @include align-items(bottom, flex-end, $breakpoint);
-        @include align-items(center, center, $breakpoint);
-        @include align-items(baseline, baseline, $breakpoint);
-        @include align-items(stretch, stretch, $breakpoint);
+      .c#{$infix}-flex-nowrap {
+        flex-wrap: nowrap;
       }
-    }
-  }
 
-  // start align-self classes
-
-  .c-align-self-start {
-    align-self: flex-start;
-  }
-
-  .c-align-self-end {
-    align-self: flex-end;
-  }
-
-  .c-align-self-center {
-    align-self: center;
-  }
-
-  .c-align-self-baseline {
-    align-self: baseline;
-  }
-
-  .c-align-self-stretch {
-    align-self: stretch;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include align-self(flex-start, $breakpoint);
-        @include align-self(flex-end, $breakpoint);
-        @include align-self(center, $breakpoint);
-        @include align-self(baseline, $breakpoint);
-        @include align-self(stretch, $breakpoint);
+      .c#{$infix}-flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include align-self(flex-start, $breakpoint);
-        @include align-self(flex-end, $breakpoint);
-        @include align-self(center, $breakpoint);
-        @include align-self(baseline, $breakpoint);
-        @include align-self(stretch, $breakpoint);
+      .c#{$infix}-justify-content-start {
+        justify-content: flex-start;
       }
-    }
-  }
 
-  // start align-content classes
-
-  .c-align-content-top {
-    align-content: flex-start;
-  }
-
-  .c-align-content-bottom {
-    align-content: flex-end;
-  }
-
-  .c-align-content-center {
-    align-content: center;
-  }
-
-  .c-align-content-space-around {
-    align-content: space-around;
-  }
-
-  .c-align-content-space-between {
-    align-content: space-between;
-  }
-
-  .c-align-content-stretch {
-    align-content: space-between;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include align-content(top, flex-start, $breakpoint);
-        @include align-content(bottom, flex-end, $breakpoint);
-        @include align-content(center, center, $breakpoint);
-        @include align-content(baseline, baseline, $breakpoint);
-        @include align-content(stretch, stretch, $breakpoint);
+      .c#{$infix}-justify-content-end {
+        justify-content: flex-end;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include align-content(top, flex-start, $breakpoint);
-        @include align-content(bottom, flex-end, $breakpoint);
-        @include align-content(center, center, $breakpoint);
-        @include align-content(baseline, baseline, $breakpoint);
-        @include align-content(stretch, stretch, $breakpoint);
+      .c#{$infix}-justify-content-center {
+        justify-content: center;
+      }
+
+      .c#{$infix}-justify-content-between {
+        justify-content: space-between;
+      }
+
+      .c#{$infix}-justify-content-around {
+        justify-content: space-around;
+      }
+
+
+      .c#{$infix}-align-items-start {
+        align-items: flex-start;
+      }
+
+      .c#{$infix}-align-items-end {
+        align-items: flex-end;
+      }
+
+      .c#{$infix}-align-items-center {
+        align-items: center;
+      }
+
+      .c#{$infix}-align-items-baseline {
+        align-items: baseline;
+      }
+
+      .c#{$infix}-align-items-stretch {
+        align-items: stretch;
+      }
+
+      .c#{$infix}-align-content-start {
+        align-content: flex-start;
+      }
+
+      .c#{$infix}-align-content-end {
+        align-content: flex-end;
+      }
+
+      .c#{$infix}-align-content-center {
+        align-content: center;
+      }
+
+      .c#{$infix}-align-content-between {
+        align-content: space-between;
+      }
+
+      .c#{$infix}-align-content-around {
+        align-content: space-around;
+      }
+
+      .c#{$infix}-align-content-stretch {
+        align-content: stretch;
+      }
+
+      .c#{$infix}-align-self-auto {
+        align-self: auto;
+      }
+
+      .c#{$infix}-align-self-start {
+        align-self: flex-start;
+      }
+
+      .c#{$infix}-align-self-end {
+        align-self: flex-end;
+      }
+
+      .c#{$infix}-align-self-center {
+        align-self: center;
+      }
+
+      .c#{$infix}-align-self-baseline {
+        align-self: baseline;
+      }
+
+      .c#{$infix}-align-self-stretch {
+        align-self: stretch;
       }
     }
   }
 }
+

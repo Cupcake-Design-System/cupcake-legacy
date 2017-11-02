@@ -1,36 +1,12 @@
-@mixin hidden-class-export {
-  .c-d-none {
+@mixin hidden($breakpoint) {
+  .c-#{$breakpoint}-hidden,
+  .c-hidden-#{$breakpoint} {
     display: none;
   }
+}
 
-  .c-d-inline {
-    display: inline;
-  }
 
-  .c-d-inline-block {
-    display: inline-block;
-  }
-
-  .c-d-block {
-    display: block;
-  }
-
-  .c-d-table {
-    display: table;
-  }
-
-  .c-d-table-cell {
-    display: table-cell;
-  }
-
-  .c-d-flex {
-    display: flex;
-  }
-
-  .c-d-inline-flex {
-    display: inline-flex;
-  }
-
+@mixin hidden-class-export {
   @each $bp in map-keys($breakpoints) {
     @include media-breakpoint-up($bp) {
       $infix: breakpoint-infix($bp, $breakpoints);
@@ -71,13 +47,6 @@
 
   .c-hidden {
     display: none;
-  }
-
-  @mixin hidden($breakpoint) {
-    .c-#{$breakpoint}-hidden,
-    .c-hidden-#{$breakpoint} {
-      display: none;
-    }
   }
 
   @for $i from 1 through length($breakpoints) {

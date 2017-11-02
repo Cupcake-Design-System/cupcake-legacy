@@ -1,58 +1,21 @@
-@mixin text-align-class-export {
-  .c-text-left {
-    text-align: left;
-  }
-
-  .c-text-right {
-    text-align: right;
-  }
-
-  .c-text-center {
-    text-align: center;
-  }
-}
-
-@mixin text-align($direction, $breakpoint) {
-  .c-#{$breakpoint}-text-#{$direction} {
-    text-align: $direction;
-  }
-}
-
 @mixin text-align-responsive-class-export {
-  .c-text-left {
-    text-align: left;
-  }
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-  .c-text-right {
-    text-align: right;
-  }
-
-  .c-text-center {
-    text-align: center;
-  }
-
-  @for $i from 1 through length($breakpoints) {
-    $breakpoint: nth(map-keys($breakpoints), $i);
-    $min-width: nth(map-values($breakpoints), $i);
-    $next-index: $i + 1;
-
-    @if $next-index <= length($breakpoints) {
-      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
-
-      @media (min-width: $min-width) and (max-width: $max-width) {
-        @include text-align(left, $breakpoint);
-        @include text-align(right, $breakpoint);
-        @include text-align(center, $breakpoint);
+      .c#{$infix}-text-left {
+        text-align: left;
       }
-    }
 
-    @else {
-      @media (min-width: $min-width) {
-        @include text-align(left, $breakpoint);
-        @include text-align(right, $breakpoint);
-        @include text-align(center, $breakpoint);
+      .c#{$infix}-text-right {
+        text-align: right;
+      }
+
+      .c#{$infix}-text-center {
+        text-align: center;
       }
     }
   }
 }
+
 
