@@ -1,5 +1,9 @@
 @import 'mixins';
 
 .c-modal {
-  @include ipreo-modal-mixin;
+  @include modal-base;
+}
+
+.c-modal-close {
+  @include modal-close;
 }

@@ -24,16 +24,10 @@ $modals-border-radius: .3rem !default;
 $modals-shadow: 0 6px 20px 0 rgba($global-text-color, 0.8) !default;
 
 /// $modals-header-border    
-$modals-header-border: 1px solid #e5e5e5 !default;
+$modals-border: 1px solid $color-gray-3 !default;
 
 /// $modals-transition        
 $modals-transition: opacity .35s !default;
-
-/// $modals-horizontal-padding
-$modals-horizontal-padding: 30px !default;
-
-/// $modals-small-padding
-$modals-vertical-padding: 15px !default;
 
 /// $modals-close-top-right
 $modals-close-top-right: 10px !default;
@@ -41,11 +35,11 @@ $modals-close-top-right: 10px !default;
 /// $modals-close-padding 
 $modals-close-padding: 0 2px !default;
 
-/// $modals-close-button-color
-$modals-close-button-color: $color-gray-6 !default;
+/// $modals-close-color
+$modals-close-color: $color-gray-6 !default;
 
-/// $modals-close-button-size
-$modals-close-button-size: 11px !default;
+/// $modals-close-font-size
+$modals-close-font-size: 1.5rem !default;
 
 /// $modals-default-color
 $modals-default-color: $global-text-color !default;
@@ -54,13 +48,10 @@ $modals-default-color: $global-text-color !default;
 $modals-body-font-size: $font-body-font-size !default;
 
 /// $modals-title-font-size
-$modals-title-font-size: $font-header-sm-font-size !default;
+$modals-title-font-size: 14px !default;
 
 /// $modals-title-font-weight
 $modals-title-font-weight: $font-header-sm-font-weight !default;
-
-/// $modals-line-height-title
-$modals-line-height-title: 1.4 !default;
 
 /// $modals-close-button-transform-degrees
 $modals-close-button-transform-degrees: 45deg !default;
@@ -98,8 +89,17 @@ $modals-confirmation-text-margin: 0 !default;
 /// $modals-confirmation-buttons-margin
 $modals-confirmation-buttons-margin: 25px 0 15px !default;
 
+/// $modal-body-padding
+$modal-body-padding: 20px !default;
 
-@mixin ipreo-modal-mixin() {
+/// $modal-header-padding
+$modal-header-padding: 12px 20px !default;
+
+/// $modal-footer-padding
+$modal-footer-padding: 10px 20px !default;
+
+
+@mixin modal-base {
   display: none;
   position: fixed;
   top: 0;
@@ -141,6 +141,9 @@ $modals-confirmation-buttons-margin: 25px 0 15px !default;
 
   &-content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    border: $modals-border;
     background-color: $modals-background-color;
     background-clip: padding-box;
     outline: 0 none;
@@ -149,56 +152,40 @@ $modals-confirmation-buttons-margin: 25px 0 15px !default;
   }
 
   &-header {
-    padding: $modals-vertical-padding * 1.333 $modals-horizontal-padding 0;
-    border: 0;
-    border-radius: $modals-border-radius $modals-border-radius 0 0;
-
-    &::after {
-      content: '';
-      clear: both;
-      display: table;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $modal-header-padding;
+    border-bottom: $modals-border;
+    border-top-left-radius: $modals-border-radius;
+    border-top-right-radius: $modals-border-radius;
   }
 
-  &-close {
-    position: absolute;
-    top: $modals-close-top-right;
-    right: $modals-close-top-right;
-    padding: $modals-close-padding;
-    color: #000000;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    opacity: 0.2;
-    transition: all 0.1s linear;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    /* stylelint-disable */
-    padding: 0;
-    border: 0;
-    background: none;
-    border-radius: 0;
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $modal-footer-padding;
+    border-top: $modals-border;
+    border-bottom-left-radius: $modals-border-radius;
+    border-bottom-right-radius: $modals-border-radius;
   }
-  /* stylelint-enable */
 
   &-title {
     margin: 0;
     color: $modals-default-color;
     font-size: $modals-title-font-size;
     font-weight: $modals-title-font-weight;
-    line-height: $modals-line-height-title;
   }
 
   &-body {
     position: relative;
-    padding: $modals-vertical-padding $modals-horizontal-padding;
+    flex: 1 1 auto;
+    padding: $modal-body-padding;
 
     @include font-body;
   }
+
 
   &-backdrop {
     background-color: $modals-backdrop-background-color;
@@ -247,3 +234,26 @@ $modals-confirmation-buttons-margin: 25px 0 15px !default;
 }
 
 
+@mixin modal-close {
+  color: $modals-close-color;
+  opacity: 0.4;
+  cursor: pointer;
+  font-size: $modals-close-font-size;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.1s linear;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  /* stylelint-disable */
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 0;
+
+  &.c-btn {
+    opacity: 1;
+  }
+}
