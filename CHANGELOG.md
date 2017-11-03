@@ -1,3 +1,4 @@
+### Release 1.1.6
 * restore display property on c-dropdown (#162) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f1ee8152118ed4c74b21d66156d48aee5236ff75)
 * add break-word to toast-alerts. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5b3ddd78a0b728ebfd0ebd46b13787fcd6ab90ae)
 * modals - bd styles, close btn absolute option. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a647498fffe7f38c5b2b6a781cdf70c6476d6c94)
