@@ -118,6 +118,7 @@ $toast-alert-icon-size: 12px !default;
   font-weight: $toast-alert-font-weight;
   border-radius: $toast-alert-radius;
   box-shadow: $toast-alert-shadow, 0 0 0 1px $toast-alert-border;
+  word-wrap: break-word;
 
   // Alert Bar
   &::before {
