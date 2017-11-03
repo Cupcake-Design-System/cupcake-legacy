@@ -1,3 +1,12 @@
+* restore display property on c-dropdown (#162) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f1ee8152118ed4c74b21d66156d48aee5236ff75)
+* add break-word to toast-alerts. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5b3ddd78a0b728ebfd0ebd46b13787fcd6ab90ae)
+* modals - bd styles, close btn absolute option. [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a647498fffe7f38c5b2b6a781cdf70c6476d6c94)
+* legacy header colors update [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/61c2c43a4cbb8bfa50ed168c0a0269e1a5eeba13)
+* made modals flex enabled to fix alignment, added footer (#157) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4f991a617e51d374690377f1375a8ca11d22b686)
+* Added all responsive classes (#161) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f05a1f2fa67e0a54c6ebd3754af29acac71a7770)
+* update demo-test page [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6852c62e22ae652d9dbc605cc6fdde2dad32b379)
+* Dropdown updates (#155) [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8bd1157fc775578e3247e0bd75ec352ac789e5d1)
+
 ### Release 1.1.5
 * remove cursor-pointer from input label [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/997fa6e0a856a4ff5d8c28be803d1173385cdfe7)
 * #125 [BD Flavor] Hover item in dropdown update [View Commit]
