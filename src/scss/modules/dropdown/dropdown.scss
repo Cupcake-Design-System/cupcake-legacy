@@ -3,6 +3,7 @@
 .c-dropdown {
   position: relative;
   overflow: visible;
+  display: inline-block;
 
   &-right {
     float: right;
