@@ -29,8 +29,11 @@ $modals-border: 1px solid $color-gray-3 !default;
 /// $modals-transition        
 $modals-transition: opacity .35s !default;
 
+/// $modals-close-absolute
+$modals-close-absolute: false !default;
+
 /// $modals-close-top-right
-$modals-close-top-right: 10px !default;
+$modals-close-size: 30px !default;
 
 /// $modals-close-padding 
 $modals-close-padding: 0 2px !default;
@@ -235,13 +238,21 @@ $modal-footer-padding: 10px 20px !default;
 
 
 @mixin modal-close {
+  @if $modals-close-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $modals-close-size;
+    height: $modals-close-size;
+  }
+
   color: $modals-close-color;
   opacity: 0.4;
   cursor: pointer;
   font-size: $modals-close-font-size;
   font-weight: 700;
   line-height: 1;
-  transition: all 0.1s linear;
+  transition: color 0.1s linear;
 
   &:hover {
     opacity: 1;

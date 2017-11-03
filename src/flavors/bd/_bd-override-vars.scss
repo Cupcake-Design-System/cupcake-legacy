@@ -202,6 +202,12 @@ $checkbox-size-xl: 26px;
 $shadow-sm: 0 2px 2px 0 rgba(65, 65, 81, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.14);
 $shadow-md: 0 4px 9px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
 
+$modal-header-padding: 20px 30px 0;
+$modal-body-padding: 15px 30px;
+$modal-footer-padding: 15px 30px;
+$modals-border: none;
+$modals-close-absolute: true;
+$modals-close-color: #000000;
 $modals-title-font-size: $font-header-lg-font-size;
 $modals-title-font-weight: $font-header-lg-font-weight;
 $modals-confirmation-title-fs: $font-header-lg-font-size;
