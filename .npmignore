@@ -3,6 +3,10 @@
 .npmignore
 .stylelintrc
 backstop.conf.js
+.backstop.json
 package.json
+package-lock.json
+release.json
+.surgeignore
 test
 .idea/
