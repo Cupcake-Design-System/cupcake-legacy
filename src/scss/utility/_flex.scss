@@ -20,7 +20,6 @@
         flex-direction: column-reverse;
       }
 
-
       .c#{$infix}-flex-wrap {
         flex-wrap: wrap;
       }
@@ -33,44 +32,44 @@
         flex-wrap: wrap-reverse;
       }
 
-      .c#{$infix}-justify-content-start {
+      .c#{$infix}-justify-start {
         justify-content: flex-start;
       }
 
-      .c#{$infix}-justify-content-end {
+      .c#{$infix}-justify-end {
         justify-content: flex-end;
       }
 
-      .c#{$infix}-justify-content-center {
+      .c#{$infix}-justify-center {
         justify-content: center;
       }
 
-      .c#{$infix}-justify-content-between {
+      .c#{$infix}-justify-space-between {
         justify-content: space-between;
       }
 
-      .c#{$infix}-justify-content-around {
+      .c#{$infix}-justify-space-around {
         justify-content: space-around;
       }
 
 
-      .c#{$infix}-align-items-start {
+      .c#{$infix}-align-top {
         align-items: flex-start;
       }
 
-      .c#{$infix}-align-items-end {
+      .c#{$infix}-align-bottom {
         align-items: flex-end;
       }
 
-      .c#{$infix}-align-items-center {
+      .c#{$infix}-align-center {
         align-items: center;
       }
 
-      .c#{$infix}-align-items-baseline {
+      .c#{$infix}-align-baseline {
         align-items: baseline;
       }
 
-      .c#{$infix}-align-items-stretch {
+      .c#{$infix}-align-stretch {
         align-items: stretch;
       }
 
@@ -102,11 +101,11 @@
         align-self: auto;
       }
 
-      .c#{$infix}-align-self-start {
+      .c#{$infix}-align-self-top {
         align-self: flex-start;
       }
 
-      .c#{$infix}-align-self-end {
+      .c#{$infix}-align-self-bottom {
         align-self: flex-end;
       }
 
