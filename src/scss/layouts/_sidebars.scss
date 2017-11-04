@@ -1,12 +1,24 @@
-$global-sidebar-max-width: 260px !default;
-$global-sidebar-background-color: #f5f5f5 !default;
+$global-sidebar-max-width: 30% !default;
+$global-sidebar-background-color: $color-gray-0 !default;
+$global-sidebar-min-width: 225px !default;
 
 @mixin sidebar {
   background-color: $global-sidebar-background-color;
+  display: flex;
   flex: 1;
+  flex-grow: 0;
   max-width: $global-sidebar-max-width;
+  min-width: $global-sidebar-min-width;
   padding: $space-lg;
+  min-height: calc(100vh - 100px); //this is footer height plus header height
+  border-right: 1px solid $color-gray-3;
+
+  @media (max-width: 576px) {
+    min-height: 0;
+    min-width: 100%;
+  }
 }
+
 
 .c-sidebar {
   @include sidebar;

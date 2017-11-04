@@ -2,8 +2,13 @@ $main-content-padding: $gutter !default;
 
 .c-wrapper {
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px); //this is footer height plus header height
+  flex: 1 1 auto;
   width: 100%;
+
+  @media (max-width: 576px) {
+    display: block;
+  }
 }
 
 .c-main-content {

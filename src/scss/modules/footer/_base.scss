@@ -12,13 +12,15 @@ $footer-color           : $color-gray-6 !default;
 $footer-color-link           : $color-gray-8 !default;
 
 /// $footer-background-color
-$footer-background-color: $color-gray-1 !default;
+$footer-background-color: $color-gray-0 !default;
 
 /// $footer-padding       
-$footer-padding         : 18px !default;
+$footer-padding         : 18px 15px !default;
 
 /// $footer-trans-font-size 
 $footer-trans-font-size : 12px !default;
+
+$footer-height: 50px !default;
 
 /// $footer-trans-color
 $footer-trans-color     : $black !default;
@@ -32,9 +34,10 @@ $footer-trans-color     : $black !default;
   background-color: $footer-background-color;
   padding: $footer-padding;
   z-index: z(footer);
-  line-height: 1.5;
+  line-height: 1;
   width: 100%;
-  border-top: 1px solid $color-gray-4;
+  border-top: 1px solid $color-gray-3;
+  height: $footer-height;
 
   &-link {
     margin-left: 10px;
@@ -49,6 +52,8 @@ $footer-trans-color     : $black !default;
   @include media-breakpoint-down(sm) {
     text-align: center;
     display: inline-block;
+    padding: 5px;
+    line-height: 1.5;
   }
 
   &.c-footer-transparent {
