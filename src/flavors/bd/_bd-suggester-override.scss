@@ -1,0 +1,20 @@
+.c-suggester-pill {
+  &#{&}#{&}#{&}#{&}#{&} {
+    margin: 2px;
+    padding: 4px 16px 4px 3px;
+    font-size: inherit;
+
+    .c-close {
+      top: 5px;
+      font-size: 12px;
+    }
+  }
+
+  &.c-bg-primary:not(.c-bg-warning) {
+    background: #79bde9;
+  }
+
+  &.c-depth-xs {
+    box-shadow: none;
+  }
+}
