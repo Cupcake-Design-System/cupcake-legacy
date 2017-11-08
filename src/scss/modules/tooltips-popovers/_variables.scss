@@ -1,0 +1,106 @@
+////
+/// @group tooltips & popovers
+////
+
+// $popover-bg          
+$popover-bg                  : $white !default;
+
+// $popover-max-width   
+$popover-max-width           : 300px !default;
+
+// $popover-padding     
+$popover-padding             : 6px 10px !default;
+
+// $popover-fs          
+$popover-fs                  : 14px !default;
+
+// $popover-fs          
+$popover-color               : $color-gray-7 !default;
+
+// $popover-bd-width    
+$popover-bd-width            : 1px !default;
+
+// $popover-bd-c       
+$popover-bd-c                : $global-border-color !default;
+
+// $popover-bd-radius   
+$popover-bd-radius           : 3px !default;
+
+// $popover-shadow      
+$popover-shadow              : 0 0 9px 0 rgba(0, 0, 0, .2) !default;
+
+// $popover-zindex      
+$popover-zindex              : 1 !default;
+
+// $popover-arrow-width       
+$popover-arrow-width         : 10px !default;
+
+// $popover-arrow-inner-width 
+$popover-arrow-inner-width   : 9px !default;
+
+/// $popover-default-bg   
+$popover-default-bg          : $color-gray-9 !default;
+
+/// $popover-default-bd   
+$popover-default-bd          : $color-gray-9 !default;
+
+/// $popover-default-color
+$popover-default-color       : $white !default;
+
+/// $popover-invert-bg    
+$popover-invert-bg           : $white !default;
+
+/// $popover-invert-bd    
+$popover-invert-bd           : $color-gray-9 !default;
+
+/// $popover-invert-color 
+$popover-invert-color        : $color-gray-9 !default;
+
+/// $popover-success-bg   
+$popover-success-bg          : $color-success-7 !default;
+
+/// $popover-success-bd   
+$popover-success-bd          : $color-success-7 !default;
+
+/// $popover-success-color
+$popover-success-color       : $white !default;
+
+/// $popover-primary-bg   
+$popover-primary-bg          : $color-primary-7 !default;
+
+/// $popover-primary-bd   
+$popover-primary-bd          : $color-primary-7 !default;
+
+/// $popover-primary-color
+$popover-primary-color       : $white !default;
+
+/// $popover-warning-bg   
+$popover-warning-bg          : $color-warning-7 !default;
+
+/// $popover-warning-bd   
+$popover-warning-bd          : $color-warning-7 !default;
+
+/// $popover-warning-color
+$popover-warning-color       : $white !default;
+
+/// $popover-danger-bg    
+$popover-danger-bg           : $color-danger-7 !default;
+
+/// $popover-danger-bd    
+$popover-danger-bd           : $color-danger-7 !default;
+
+/// $popover-danger-color 
+$popover-danger-color        : $white !default;
+
+/// $transition-style
+$popover-css-transition-style: cubic-bezier(0.73, 0.01, 0, 1) !default;
+
+/// $border-width
+$popover-css-border-width    : 4px !default;
+
+/// $z-index
+$popover-css-z-index         : 110000 !default;
+
+/// $arrow-position
+$popover-css-arrow-position  : 6px !default;
+

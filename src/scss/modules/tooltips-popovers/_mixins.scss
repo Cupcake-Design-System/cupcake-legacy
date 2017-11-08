@@ -1,55 +1,10 @@
-////
-/// @group tooltips & popovers
-////
-
-
-// $popover-bg          
-$popover-bg          : $white !default;
-
-// $popover-max-width   
-$popover-max-width   : 300px !default;
-
-// $popover-padding     
-$popover-padding     : 8px 14px !default;
-
-// $popover-fs          
-$popover-fs          : 14px !default;
-
-// $popover-bd-width    
-$popover-bd-width    : 1px !default;
-
-// $popover-bd-c       
-$popover-bd-c        : $global-border-color !default;
-
-// $popover-bd-radius   
-$popover-bd-radius   : 6px !default;
-
-// $popover-shadow      
-$popover-shadow      : 0 0 9px 0 rgba(0, 0, 0, .2) !default;
-
-// $popover-zindex      
-$popover-zindex      : 1 !default;
-
-// $popover-arrow-width       
-$popover-arrow-width       : 10px !default;
-
-// $popover-arrow-inner-width 
-$popover-arrow-inner-width : 9px !default;
-
-// class name(eg. .c-popover-success), text-color, border-color
-$popover-colors:
-  ("success", $success, lighten($success, 11%))
-  ("warning", $warning, lighten($warning, 11%))
-  ("danger", $danger, lighten($danger, 11%)) !default;
-
 @mixin popover-base {
-  @include font-body;
-
   position: absolute;
+  text-align: left;
   max-width: $popover-max-width;
   padding: $popover-padding;
   font-size: $popover-fs;
-  text-align: left;
+  color: $popover-color;
   background: $popover-bg;
   border: $popover-bd-width solid $popover-bd-c;
   border-radius: $popover-bd-radius;
@@ -177,22 +132,104 @@ $popover-colors:
   }
 }
 
-@mixin popover-colors {
-  @each $color in $popover-colors {
-    &-#{nth($color, 1)} {
-      color: nth($color, 2);
-      font-weight: bold;
-      border-color: nth($color, 3);
-    }
+@mixin popover-color($bg: $color-primary-7, $color: $color-gray-0, $bd: $popover-bd-c) {
+  color: $color;
+  font-weight: bold;
+  background: $bg;
+  border: 1px solid $bd;
 
-    &-#{nth($color, 1)}#{&}-top > &-arrow,
-    &-#{nth($color, 1)}#{&}-bottom > &-arrow {
-      border-color: nth($color, 3) transparent;
-    }
+  &.c-popover-top > .c-popover-arrow {
+    border-color: $bd transparent transparent;
 
-    &-#{nth($color, 1)}#{&}-left > &-arrow,
-    &-#{nth($color, 1)}#{&}-right > &-arrow {
-      border-color: transparent nth($color, 3);
+    &::after {
+      border-color: $bg transparent transparent;
+    }
+  }
+
+  &.c-popover-bottom > .c-popover-arrow {
+    border-color: transparent transparent $bd;
+
+    &::after {
+      border-color: transparent transparent $bg;
+    }
+  }
+
+  &.c-popover-left > .c-popover-arrow,
+  &.c-popover-right > .c-popover-arrow {
+    border-color: transparent $bd transparent;
+
+    &::after {
+      border-color: transparent $bg transparent;
     }
   }
 }
+
+
+/* stylelint-disable */
+@mixin tooltip-color($bg: $popover-default-bg, $color: $popover-default-color) {
+  
+  &::after {
+    color: $color;
+    background: $bg;
+  }
+
+  &::before {
+    border-top-color: $bg;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  &[data-c-tooltip-conf*='right'] {
+    &::before {
+      border-top-color: transparent;
+      border-right-color: $bg;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  &[data-c-tooltip-conf*='bottom'] {
+    &::before {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: $bg;
+      border-left-color: transparent;
+    }
+  }
+
+  &[data-c-tooltip-conf*='left'] {
+    &::before {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: $bg;
+    }
+  }
+}
+
+// Set Arrow Side
+@mixin arrowPosition($side) {
+  border-style: solid;
+  border-top-width: $popover-css-border-width;
+  border-right-width: $popover-css-border-width;
+  border-bottom-width: $popover-css-border-width;
+  border-left-width: $popover-css-border-width;
+
+  @if $side == top {
+    border-bottom-width: 0;
+  }
+
+  @else if $side == right {
+    border-left-width: 0;
+  }
+
+  @else if $side == bottom {
+    border-top-width: 0;
+  }
+
+  @else if $side == left {
+    border-right-width: 0;
+  }
+}
+/* stylelint-enable */

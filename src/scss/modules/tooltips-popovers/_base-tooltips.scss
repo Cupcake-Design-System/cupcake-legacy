@@ -1,0 +1,20 @@
+.c-tooltip,
+.c-popover {
+  @include popover-base;
+
+  &-primary {
+    @include popover-color($popover-primary-bg, $popover-primary-color, $popover-primary-bd);
+  }
+
+  &-success {
+    @include popover-color($popover-success-bg, $popover-success-color, $popover-success-bd);
+  }
+
+  &-warning {
+    @include popover-color($popover-warning-bg, $popover-warning-color, $popover-warning-bd);
+  }
+
+  &-danger {
+    @include popover-color($popover-danger-bg, $popover-danger-color, $popover-danger-bd);
+  }
+}
