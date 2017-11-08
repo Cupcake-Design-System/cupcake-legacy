@@ -20,6 +20,8 @@ $control-background             : $white !default;
 $control-padding-v              : 7px !default;
 /// $control-padding-h 
 $control-padding-h              : 8px !default;
+/// $control-height
+$control-height                 : 30px !default;
 /// $control-border 
 $control-border                 : $global-border-color !default;
 /// $control-border-width 
@@ -112,16 +114,22 @@ $control-sm: 11px !default;
 $control-lg: 16px !default;
 /// $control-xl
 $control-xl: 18px !default;
-/// $control-xxl
-$control-xxl: 18px !default;
-/// $control-xs
+/// $control-xs-padding
 $control-xs-padding: 2px 5px !default;
-/// $control-sm
+/// $control-sm-padding
 $control-sm-padding: 6px 7px 5px !default;
-/// $control-lg
-$control-lg-padding: 12px !default;
-/// $control-xl
-$control-xl-padding: 17px !default;
+/// $control-lg-padding
+$control-lg-padding: 10px !default;
+/// $control-xl-padding
+$control-xl-padding: 14px !default;
+/// $control-xs-height
+$control-xs-height: 20px !default;
+/// $control-sm-height
+$control-sm-height: 25px !default;
+/// $control-lg-height
+$control-lg-height: 40px !default;
+/// $control-xl-height
+$control-xl-height: 50px !default;
 /// $control-group-padding
 $control-group-padding: 1em !default;
 /// $control-success-c
@@ -147,8 +155,7 @@ $control-sizes:
   ("xs", $control-xs)
   ("sm", $control-sm)
   ("lg", $control-lg)
-  ("xl", $control-xl)
-  ("xxl", $control-xxl) !default;
+  ("xl", $control-xl) !default;
 
 // Input sizes with custom padding
 // For adjusting padding sizes
@@ -159,6 +166,14 @@ $control-sizes-padding: (
   lg: $control-lg-padding,
   sm: $control-sm-padding,
   xs: $control-xs-padding,
+) !default;
+
+// Input heights
+$control-sizes-height: (
+  xl: $control-xl-height,
+  lg: $control-lg-height,
+  sm: $control-sm-height,
+  xs: $control-xs-height,
 ) !default;
 
 // FORM COLORS

@@ -27,6 +27,9 @@
   }
 }
 
+textarea.c-input {
+  height: auto;
+}
 
 // SELECTS
 select.c-input:not([multiple]) {
@@ -74,10 +77,11 @@ select.c-input:not([multiple]) {
   .c-input-#{$name},
   .c-input-label-#{$name} {
     font-size: $size;
+    padding: map-get($control-sizes-padding, $name);
+  }
 
-    @if map-has-key($control-sizes-padding, $name) {
-      padding: map-get($control-sizes-padding, $name);
-    }
+  .c-input-#{$name} {
+    height: map-get($control-sizes-height, $name);
   }
 
   .c-input-label-#{$name} {
