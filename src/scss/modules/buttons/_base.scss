@@ -8,6 +8,11 @@
     @include btn-active;
   }
 
+  &-disabled,
+  &[disabled] {
+    @include btn-disabled;
+  }
+
   &-primary {
     @include btn-style($btn-primary-bg);
 
@@ -21,6 +26,11 @@
     &-outline {
       @include btn-outline($btn-primary-bg);
     }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-primary-disabled);
+    }
   }
 
   &-secondary,
@@ -29,6 +39,11 @@
 
     &-outline {
       @include btn-outline($color-gray-7);
+    }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-disabled-bg, $btn-disabled-bd, $btn-disabled-c, $btn-disabled-text-shadow);
     }
   }
 
@@ -45,6 +60,11 @@
     &-outline {
       @include btn-outline($btn-success-bg);
     }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-success-disabled);
+    }
   }
 
   &-danger {
@@ -59,6 +79,11 @@
 
     &-outline {
       @include btn-outline($btn-danger-bg);
+    }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-danger-disabled);
     }
   }
 
@@ -126,11 +151,6 @@
   display: block;
   width: 100%;
   text-align: center;
-}
-
-.c-btn-disabled,
-.c-btn[disabled] {
-  @include btn-disabled;
 }
 
 //TODO cleaner approach

@@ -48,7 +48,7 @@ $btn-white-label         : false !default;
 $btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25) !default;
 
 /// $btn-shadow-secondary
-$btn-shadow-secondary: 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+$btn-shadow-secondary    : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
 
 /// $btn-gradient            
 $btn-gradient            : false !default;
@@ -69,7 +69,7 @@ $btn-disabled-bd         : 1px solid $color-gray-3 !default;
 $btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !default;
 
 /// $btn-disabled-opacity    
-$btn-disabled-opacity    : 0.8 !default;
+$btn-disabled-opacity    : 1 !default;
 
 /// $btn-default-c
 $btn-default-c           : $color-gray-6 !default;
@@ -77,11 +77,17 @@ $btn-default-c           : $color-gray-6 !default;
 /// $btn-primary-bg          
 $btn-primary-bg          : $primary !default;
 
+/// $btn-primary-disabled          
+$btn-primary-disabled    : $color-primary-2 !default;
+
 /// $btn-primary-bg          
 $btn-primary-hover       : $color-primary-6 !default;
 
 /// $btn-secondary-bg        
 $btn-secondary-bg        : $color-gray-1 !default;
+
+/// $btn-secondary-disabled          
+$btn-secondary-disabled    : $color-gray-2 !default;
 
 /// $btn-secondary-bg-hover  
 $btn-secondary-bg-hover  : $color-gray-0 !default;
@@ -95,7 +101,10 @@ $btn-secondary-bd        : $color-gray-4 !default;
 /// $btn-success-bg          
 $btn-success-bg          : $success !default;
 
-/// $btn-success-hove          
+/// $btn-success-disabled          
+$btn-success-disabled    : $color-success-2 !default;
+
+/// $btn-success-hover          
 $btn-success-hover       : $color-success-6 !default;
 
 /// $btn-warning-bg          
@@ -104,7 +113,10 @@ $btn-warning-bg          : $warning !default;
 /// $btn-danger-bg           
 $btn-danger-bg           : $danger !default;
 
-/// $btn-danger-hove          
+/// $btn-success-disabled          
+$btn-danger-disabled    : $color-danger-2 !default;
+
+/// $btn-danger-hover          
 $btn-danger-hover        : $color-danger-6 !default;
 
 /// $btn-xs-font
