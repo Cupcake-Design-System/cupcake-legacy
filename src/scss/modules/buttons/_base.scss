@@ -14,14 +14,7 @@
   }
 
   &-primary {
-    @include btn-style($btn-primary-bg);
-
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-primary-hover;
-        background-image: none;
-      }
-    }
+    @include btn-style($btn-primary-bg, $btn-primary-hover);
 
     &-outline {
       @include btn-outline($btn-primary-bg);
@@ -48,14 +41,7 @@
   }
 
   &-success {
-    @include btn-style($btn-success-bg);
-
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-success-hover;
-        background-image: none;
-      }
-    }
+    @include btn-style($btn-success-bg, $btn-success-hover);
 
     &-outline {
       @include btn-outline($btn-success-bg);
@@ -68,14 +54,7 @@
   }
 
   &-danger {
-    @include btn-style($btn-danger-bg);
-
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-danger-hover;
-        background-image: none;
-      }
-    }
+    @include btn-style($btn-danger-bg, $btn-danger-hover);
 
     &-outline {
       @include btn-outline($btn-danger-bg);

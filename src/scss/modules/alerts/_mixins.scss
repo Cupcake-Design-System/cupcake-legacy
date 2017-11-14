@@ -3,64 +3,64 @@
 ////
 
 /// $alert-border:   
-$alert-border:                1px solid !default;
+$alert-border           : 1px solid !default;
 
-/// $alert-margin:  
-$alert-margin:                0 0 1rem 0 !default;
+/// $alert-margin       : 
+$alert-margin           : 0 0 1rem 0 !default;
 
-/// $alert-padding:  
-$alert-padding:               8px !default;
+/// $alert-padding      : 
+$alert-padding          : 8px !default;
 
-/// $alert-top-padding:  
-$alert-top-padding:           18px 20px !default;
+/// $alert-top-padding  : 
+$alert-top-padding      : 18px 20px !default;
 
-/// $alert-font-size: 
-$alert-font-size:             12px !default;
+/// $alert-font-size    : 
+$alert-font-size        : 12px !default;
 
-/// $alert-font-family: 
-$alert-font-family:           $global-font-family !default;
+/// $alert-font-family  : 
+$alert-font-family      : $global-font-family !default;
 
-/// $alert-font-weight: 
-$alert-font-weight:           bold !default;
+/// $alert-font-weight  : 
+$alert-font-weight      : bold !default;
 
-/// $alert-font-color:
-$alert-font-color:            $color-gray-7 !default;
+/// $alert-font-color   : 
+$alert-font-color       : $color-gray-7 !default;
 
-/// $alert-primary-bg:
-$alert-primary-bg:            $color-primary-0 !default;
+/// $alert-primary-bg   : 
+$alert-primary-bg       : $color-primary-0 !default;
 
-/// $alert-primary-color:
-$alert-primary-color:         $primary !default;
+/// $alert-primary-color: 
+$alert-primary-color    : $primary !default;
 
-/// $alert-success-bg:
-$alert-success-bg:            $color-success-0 !default;
+/// $alert-success-bg   : 
+$alert-success-bg       : $color-success-0 !default;
 
-/// $alert-success-color:
-$alert-success-color:         $success !default;
+/// $alert-success-color: 
+$alert-success-color    : $success !default;
 
-/// $alert-danger-bg: 
-$alert-danger-bg:            $color-danger-0 !default;
+/// $alert-danger-bg    : 
+$alert-danger-bg        : $color-danger-0 !default;
 
-/// $alert-danger-color: 
-$alert-danger-color:         $danger !default;
+/// $alert-danger-color : 
+$alert-danger-color     : $danger !default;
 
-/// $alert-warning-bg: 
-$alert-warning-bg:            $color-warning-0 !default;
+/// $alert-warning-bg   : 
+$alert-warning-bg       : $color-warning-0 !default;
 
-/// $alert-warning-color:
-$alert-warning-color:         $warning !default;
+/// $alert-warning-color: 
+$alert-warning-color    : $warning !default;
 
-/// $alert-radius:  
-$alert-radius:                $global-radius !default;
+/// $alert-radius       : 
+$alert-radius           : $global-radius !default;
 
-/// $alert-shadows: 
-$alert-shadows:               false !default;
+/// $alert-shadows      : 
+$alert-shadows          : false !default;
 
-/// $alert-style:  
-$alert-style:                 'outline' !default;
+/// $alert-style        : 
+$alert-style            : 'outline' !default;
 
-/// $alert-icon-width:
-$alert-icon-width:            40px !default;
+/// $alert-icon-width   : 
+$alert-icon-width       : 40px !default;
 
 
 @mixin alert-base() {
@@ -138,31 +138,39 @@ $alert-icon-width:            40px !default;
 /* stylelint-enable */
 
 @mixin alert-style($bg, $color: $bg, $style: $alert-style, $shadows: $alert-shadows) {
-  @if $style == outline {
-    background-color: $bg;
+  @if $white-label == true {
+    background-color: lighten($color, 80);
     border-color: $color;
     color: $color;
   }
 
-  @if $style == solid {
-    background-color: $color;
-    border-color: $color;
-    color: $color-gray-0;
-  }
-
-  @if $style == gradient {
-    @include linear-gradient(to bottom, lighten($color, 10%), $color 66%, darken($color, 4%));
-
-    border: 1px solid darken($color, 10%);
-    color: $white;
-  }
-
-  @if $shadows == true {
-    box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 1px 2px rgba($black, 0.25);
-  }
-
   @else {
-    box-shadow: none;
+    @if $style == outline {
+      background-color: $bg;
+      border-color: $color;
+      color: $color;
+    }
+
+    @if $style == solid {
+      background-color: $color;
+      border-color: $color;
+      color: $color-gray-0;
+    }
+
+    @if $style == gradient {
+      @include linear-gradient(to bottom, lighten($color, 10%), $color 66%, darken($color, 4%));
+
+      border: 1px solid darken($color, 10%);
+      color: $white;
+    }
+
+    @if $shadows == true {
+      box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 1px 2px rgba($black, 0.25);
+    }
+
+    @else {
+      box-shadow: none;
+    }
   }
 
   @if $style == outline {
