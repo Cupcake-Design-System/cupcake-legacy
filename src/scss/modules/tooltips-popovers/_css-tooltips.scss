@@ -1,10 +1,10 @@
 
-[data-c-tooltip] {
+[data-tooltip] {
   position: relative;
 
   // Bubble
   &::after {
-    content: attr(data-c-tooltip);
+    content: attr(data-tooltip);
     padding: $popover-padding;
     border-radius: $popover-bd-radius;
     line-height: $popover-fs + 1px;
@@ -64,7 +64,7 @@
   }
 
   // Positions
-  &[data-c-tooltip-conf*='right'] {
+  &[data-tooltip-conf*='right'] {
     &::before {
       @include arrowPosition(right);
 
@@ -93,7 +93,7 @@
     }
   }
 
-  &[data-c-tooltip-conf*='bottom'] {
+  &[data-tooltip-conf*='bottom'] {
     &::before {
       @include arrowPosition(bottom);
 
@@ -122,7 +122,7 @@
     }
   }
 
-  &[data-c-tooltip-conf*='left'] {
+  &[data-tooltip-conf*='left'] {
     &::before {
       @include arrowPosition(left);
 
@@ -156,7 +156,7 @@
   //// Features
 
   // Multiline
-  &[data-c-tooltip-conf*='multiline'] {
+  &[data-tooltip-conf*='multiline'] {
     &::after {
       min-width: 180px;
       text-overflow: clip;
@@ -166,7 +166,7 @@
   }
 
   // Delay
-  &[data-c-tooltip-conf*='delay'] {
+  &[data-tooltip-conf*='delay'] {
     &::before {
       transition: opacity .2s $popover-css-transition-style 0s, transform .3s $popover-css-transition-style 0s;
     }
@@ -188,14 +188,14 @@
   }
 
   // Shadow
-  &[data-c-tooltip-conf*='shadow'] {
+  &[data-tooltip-conf*='shadow'] {
     &::after {
       box-shadow: $popover-shadow;
     }
   }
 
   // No Fading {
-  &[data-c-tooltip-conf*='no-fade'] {
+  &[data-tooltip-conf*='no-fade'] {
     &::before,
     &::after {
       transition: none;
@@ -203,42 +203,42 @@
   }
 
   // No Arrow {
-  &[data-c-tooltip-conf*='no-arrow'] {
+  &[data-tooltip-conf*='no-arrow'] {
     &::before {
       display: none;
     }
   }
 
   // Square {
-  &[data-c-tooltip-conf*='square'] {
+  &[data-tooltip-conf*='square'] {
     &::after {
       border-radius: 0;
     }
   }
 
   // Types
-  &[data-c-tooltip-conf*='invert'] {
+  &[data-tooltip-conf*='invert'] {
     @include tooltip-color($popover-invert-bg, $popover-invert-color);
   }
 
-  &[data-c-tooltip-conf*='success'] {
+  &[data-tooltip-conf*='success'] {
     @include tooltip-color($popover-success-bg, $popover-success-color);
   }
 
-  &[data-c-tooltip-conf*='primary'] {
+  &[data-tooltip-conf*='primary'] {
     @include tooltip-color($popover-primary-bg, $popover-primary-color);
   }
 
-  &[data-c-tooltip-conf*='warning'] {
+  &[data-tooltip-conf*='warning'] {
     @include tooltip-color($popover-warning-bg, $popover-warning-color);
   }
 
-  &[data-c-tooltip-conf*='danger'] {
+  &[data-tooltip-conf*='danger'] {
     @include tooltip-color($popover-danger-bg, $popover-danger-color);
   }
 
   // Hide if has no message
-  &[data-c-tooltip=''] {
+  &[data-tooltip=''] {
     &::before,
     &::after {
       display: none;
