@@ -4,6 +4,7 @@ var gulp          = require('gulp'),
     autoprefixer  = require('autoprefixer'),
     fs            = require('fs'),
     cleanCSS      = require('gulp-clean-css'),
+    extract       = require('gulp-style-extract'),
     deploy        = require('gulp-gh-pages'),    
     notify        = require('gulp-notify'),
     plumber       = require('gulp-plumber'),
@@ -27,7 +28,6 @@ require.extensions['.html'] = function (module, filename) {
    module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'))
 };
  
-
 var bases = {
     app:  'src/',
     dist: 'dist/',
@@ -44,7 +44,6 @@ var postcssPlugins = [
     browsers: ['last 2 versions']
   })
 ];
-
 
 var tokens = [
   {
@@ -68,7 +67,6 @@ var tokens = [
     dest:   './src/scss/config/'
   }
 ];
-
 
 colors.setTheme({
   silly:   'rainbow',
@@ -121,17 +119,17 @@ gulp.task('clean:dist', function() {
 
 
 gulp.task('styles', function() {
-  return gulp.src(bases.scss + 'northstar.scss')
+  return gulp.src(bases.scss + '*.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
-    .pipe(gcmq())
-    .pipe(rename('northstar.css'))
+    .pipe(cleanCSS({format: 'beautify'}))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))    
 });
+
 
 gulp.task('flavors', function() {
   return gulp.src(bases.flavors + '**/*.scss')
@@ -139,14 +137,24 @@ gulp.task('flavors', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
-    .pipe(gcmq())
+    .pipe(cleanCSS({format: 'beautify'}))
     .pipe(rename({
       dirname: ''
     }))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
-    .pipe(reload({stream:true}))
+    .pipe(reload({stream:true}))    
 });
+
+
+gulp.task('styles:build', function() {
+  return gulp.src(bases.dist + '**/*.css')
+    .pipe(gcmq())  
+    .pipe(cleanCSS())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(bases.dist))
+});
+
 
 gulp.task('styles:flatten', function() {
   return gulp.src(bases.dist + '**/*.css')
@@ -156,16 +164,10 @@ gulp.task('styles:flatten', function() {
 
 
 gulp.task('clean:leftovers', function() {
-  return gulp.src([bases.dist + 'bd', bases.dist + 'buyside', bases.dist + 'northstar', bases.dist + 'pcs'])
+  return gulp.src([bases.dist + 'bd', bases.dist + 'buyside'])
     .pipe(vinylPaths(del));
 });
 
-gulp.task('styles:build', function() {
-  return gulp.src(bases.dist + '**/*.css')
-    .pipe(cleanCSS())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(bases.dist))
-});
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -175,10 +177,12 @@ gulp.task('browser-sync', function() {
   });
 });
 
+
 gulp.task('deploy', function() {
   return gulp.src(bases.dist + '**/*.*')
     .pipe(deploy());
 });
+
 
 gulp.task('copy', function() {
 
@@ -194,7 +198,6 @@ gulp.src(bases.app + 'img/*')
   gulp.src(bases.app + 'fonts/**/*.*')
     .pipe(gulp.dest(bases.dist + 'fonts'))
     .pipe(reload({stream:true}));
-  
 });
 
 
@@ -216,31 +219,6 @@ gulp.task('northstar-scrape', function(done) {
 });
 
 
-gulp.task('variables:pcs', function(cb) {
-  var options = {
-    title: `Cupcake PCS Settings`,
-    output: bases.flavors + `pcs/_variables.scss`,
-    sort: [
-      'global-non-tokens'
-    ]
-  };
-
-  octophant(bases.scss, options, cb);
-});
-
-
-gulp.task('variables:northstar', function(cb) {
-  var options = {
-    title: `Cupcake Northstar Settings`,
-    output: bases.flavors + `northstar/_variables.scss`,
-    sort: [
-      'global-non-tokens'
-    ]
-  };
-
-  octophant(bases.scss, options, cb);
-});
-
 
 gulp.task('variables:bd', function(cb) {
   var options = {
@@ -250,30 +228,14 @@ gulp.task('variables:bd', function(cb) {
       'global-non-tokens'
     ]
   };
-
-  octophant(bases.scss, options, cb);
-});
-
-
-
-gulp.task('variables:buyside', function(cb) {
-  var options = {
-    title: `Cupcake Buyside Settings`,
-    output: bases.flavors + `buyside/_variables.scss`,
-    sort: [
-      'global-non-tokens'
-    ]
-  };
-
   octophant(bases.scss, options, cb);
 });
 
 
 
 gulp.task('scrape-variables', function(done) {
-  runSequence('variables:northstar', 'variables:buyside', 'variables:bd', 'variables:pcs', done);
+  runSequence('variables:bd', done);
 });
-
 
 
 gulp.task('lint', function() {
@@ -303,6 +265,24 @@ gulp.task('watch', function() {
   //gulp.watch(bases.app + 'img/*', ['img']);
 });
 
+
+gulp.task('extract:color', function() {
+  gulp.src(bases.dist + '*.css')
+   .pipe(extract({
+      properties: ['color']
+  }))
+  .pipe(rename('colors.css'))
+  .pipe(gulp.dest('dist/tokens'))
+});
+
+gulp.task('extract:bg', function() {
+  gulp.src(bases.dist + '*.css')
+   .pipe(extract({
+      properties: ['background-color']
+  }))
+  .pipe(rename('bg-colors.css'))
+  .pipe(gulp.dest('dist/tokens'))
+});
 
 // ------------
 // BUILD TASKS
