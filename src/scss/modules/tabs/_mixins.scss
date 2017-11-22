@@ -20,6 +20,9 @@ $tabs-color-hover: $primary !default;
 /// $tabs-color-active: $primary!default;
 $tabs-color-active: $primary !default;
 
+/// $tabs-font-weight
+$tabs-font-weight: bold !default;
+
 /// $tabs-default-link-padding: rem-calc(6 12)!default;
 $tabs-default-link-padding: 10px 12px !default;
 
@@ -67,7 +70,7 @@ $tab-font-size-lg: 20px !default;
   display: flex;
   white-space: nowrap;
   font-size: $tabs-font-size-default;
-  font-weight: bold;
+  font-weight: $tabs-font-weight;
   margin: 0;
   padding: 0;
   overflow: hidden;

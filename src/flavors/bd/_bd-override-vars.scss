@@ -179,15 +179,16 @@ $tabs-borders: 1px solid $color-gray-4;
 $tabs-full-width-border: false;
 $tabs-color: $primary;
 $tabs-color-active: $font-body-color;
+$tabs-font-weight: 600;
 
-$tabs-default-link-padding: rem-calc(10 0);
+$tabs-default-link-padding: rem-calc(4 0);
 $tabs-bordered-link-padding: rem-calc(6 12);
 $tabs-toggle-link-padding: rem-calc(6 12);
 
 $tabs-default-space-between: rem-calc(15);
 $tabs-bordered-space-between: rem-calc(3);
 
-$tabs-link-border-bottom: 3px;
+$tabs-link-border-bottom: 2px;
 $tabs-bg: transparent;
 $tabs-bg-hover: $color-gray-1;
 $tabs-bg-active: $color-gray-1;
