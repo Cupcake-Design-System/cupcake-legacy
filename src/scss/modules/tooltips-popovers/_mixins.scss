@@ -180,7 +180,7 @@
     border-left-color: transparent;
   }
 
-  &[data-c-tooltip-conf*='right'] {
+  &[data-tooltip-conf*='right'] {
     &::before {
       border-top-color: transparent;
       border-right-color: $bg;
@@ -189,7 +189,7 @@
     }
   }
 
-  &[data-c-tooltip-conf*='bottom'] {
+  &[data-tooltip-conf*='bottom'] {
     &::before {
       border-top-color: transparent;
       border-right-color: transparent;
@@ -198,7 +198,7 @@
     }
   }
 
-  &[data-c-tooltip-conf*='left'] {
+  &[data-tooltip-conf*='left'] {
     &::before {
       border-top-color: transparent;
       border-right-color: transparent;
