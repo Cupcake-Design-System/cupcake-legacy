@@ -12,6 +12,8 @@ var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
+    addHeader     = require('gulp-header');
+    addFooter     = require('gulp-footer');
     handlebars    = require('handlebars'),
     runSequence   = require('run-sequence'),
     reload        = browserSync.reload,
@@ -27,7 +29,23 @@ var gulp          = require('gulp'),
 require.extensions['.html'] = function (module, filename) {
    module.exports = handlebars.compile(fs.readFileSync(filename, 'utf8'))
 };
- 
+
+var pkg = require('./package.json');
+
+var metaHeader = `
+/* ----------------------- */
+/* 🎂 CUPCAKE 🎂 */
+/* pkg name: ${pkg.name} */
+/* version: ${pkg.version} */
+`;
+
+var metaFooter = `
+/* 🎂 CUPCAKE 🎂 */
+/* END */
+/* ----------------------- */
+`;
+
+
 var bases = {
     app:  'src/',
     dist: 'dist/',
@@ -125,6 +143,8 @@ gulp.task('styles', function() {
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
     .pipe(cleanCSS({format: 'beautify'}))
+    .pipe(addHeader(metaHeader + '/* flavor: NorthStar */\n\n'))
+    .pipe(addFooter(metaFooter))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))    
@@ -141,6 +161,8 @@ gulp.task('flavors', function() {
     .pipe(rename({
       dirname: ''
     }))
+    .pipe(addHeader(metaHeader + '/* flavor: <%= filename %> */\n\n'))
+    .pipe(addFooter(metaFooter))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))    
