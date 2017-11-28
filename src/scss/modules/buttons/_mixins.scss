@@ -31,7 +31,7 @@
 
 // Button Style
 
-@mixin btn-style($bg, $border: $btn-border, $color: white) {
+@mixin btn-style($bg, $bg-hover, $border: $btn-border, $color: white) {
   background: $bg;
   color: $color;
 
@@ -62,9 +62,16 @@
     }
   }
 
-  @if $btn-white-label == true {
+  @if $white-label == true {
     &:hover {
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
+    }
+  }
+
+  @else {
+    &:hover {
+      background-color: $bg-hover;
+      background-image: none;
     }
   }
 }
@@ -153,16 +160,16 @@
 
 /* Button Disabled
 * ================ ================ ================ ================ */
-@mixin btn-disabled {
+@mixin btn-disabled($bg: $btn-disabled-bg, $bd: $bg, $color: $color-gray-0, $shadow:none ) {
   &,
   &:hover,
   &:focus,
   &:active {
     top: 0;
-    background: $btn-disabled-bg;
-    border: $btn-disabled-bd;
-    text-shadow: $btn-disabled-text-shadow;
-    color: $btn-disabled-c;
+    background: $bg;
+    border: $bd;
+    text-shadow: $shadow;
+    color: $color;
     line-height: 1;
     cursor: not-allowed;
     appearance: none;

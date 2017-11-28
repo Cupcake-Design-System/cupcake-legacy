@@ -97,7 +97,6 @@ $toast-alert-close-hover-c: $color-gray-9 !default;
 /// $toast-alert-close-transition 
 $toast-alert-close-transition: color .15s linear !default;
 
-
 /// $toast-alert-icon-top 
 $toast-alert-icon-top: 19px !default;
 
@@ -106,7 +105,6 @@ $toast-alert-icon-left: 20px !default;
 
 /// $toast-alert-icon-left 
 $toast-alert-icon-size: 12px !default;
-
 
 @mixin toast-alert {
   position: relative;
@@ -205,8 +203,15 @@ $toast-alert-icon-size: 12px !default;
 
   // bar color
   &::before {
-    background: $bg;
-    border-color: $bd;
+    @if $white-label == true {
+      background: $bg;
+      border-color: $bg;
+    }
+
+    @else {
+      background: $bg;
+      border-color: $bd;
+    }
   }
 
   // icon color

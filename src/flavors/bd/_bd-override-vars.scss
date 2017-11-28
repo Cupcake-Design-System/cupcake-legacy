@@ -115,6 +115,8 @@ $control-xs-padding: 3px 5px 2px;
 $control-sm-padding: 4px 6px;
 $control-lg-padding: 8px 9px;
 $control-xl-padding: 10px 12px;
+$control-lg-height: 35px;
+$control-xl-height: 40px;
 
 $control-success-c  : #4daa0b;
 $control-success-bg : #f3f8ef;
@@ -177,15 +179,16 @@ $tabs-borders: 1px solid $color-gray-4;
 $tabs-full-width-border: false;
 $tabs-color: $primary;
 $tabs-color-active: $font-body-color;
+$tabs-font-weight: 600;
 
-$tabs-default-link-padding: rem-calc(10 0);
+$tabs-default-link-padding: rem-calc(4 0);
 $tabs-bordered-link-padding: rem-calc(6 12);
 $tabs-toggle-link-padding: rem-calc(6 12);
 
 $tabs-default-space-between: rem-calc(15);
 $tabs-bordered-space-between: rem-calc(3);
 
-$tabs-link-border-bottom: 3px;
+$tabs-link-border-bottom: 2px;
 $tabs-bg: transparent;
 $tabs-bg-hover: $color-gray-1;
 $tabs-bg-active: $color-gray-1;
@@ -259,3 +262,17 @@ $toast-alert-info-bar-bg: #cdecf5;
 
 $notify-width: 20vw;
 $notify-min-width: 265px;
+
+
+$popover-success-bg   : $color-success-0;
+$popover-success-bd   : $color-gray-3;
+$popover-success-color: $color-success-7;
+$popover-primary-bg   : $color-primary-0;
+$popover-primary-bd   : $color-gray-3;
+$popover-primary-color: $color-primary-7;
+$popover-warning-bg   : $color-warning-0;
+$popover-warning-bd   : $color-gray-3;
+$popover-warning-color: $color-warning-7;
+$popover-danger-bg    : $color-danger-0;
+$popover-danger-bd    : $color-gray-3;
+$popover-danger-color : $color-danger-7;

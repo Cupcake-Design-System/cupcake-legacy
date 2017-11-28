@@ -1,0 +1,247 @@
+
+[data-tooltip] {
+  position: relative;
+
+  // Bubble
+  &::after {
+    content: attr(data-tooltip);
+    padding: $popover-padding;
+    border-radius: $popover-bd-radius;
+    line-height: $popover-fs + 1px;
+    max-width: $popover-max-width;
+    font-size: $popover-fs;
+    bottom: 100%;
+    box-sizing: border-box;
+    font-style: normal;
+    left: 50%;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    transform: translate(-50%, 12px);
+    transition: opacity .3s $popover-css-transition-style, transform .3s $popover-css-transition-style;
+    white-space: nowrap;
+    z-index: 100000;
+    backface-visibility: hidden;
+  }
+
+  // Arrow
+  &::before {
+    @include arrowPosition(top);
+
+    content: '';
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: -2px;
+    transform: translate(-50%, calc(-50% - 6px));
+    transition: opacity .1s $popover-css-transition-style 0s, transform .6s $popover-css-transition-style 0s;
+    width: 0;
+    z-index: 110000;
+    backface-visibility: hidden;
+  }
+
+  @include tooltip-color;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      transform: translate(-50%, calc(-50% - 2px));
+      transition: opacity .1s $popover-css-transition-style .1s, transform .6s $popover-css-transition-style .1s;
+    }
+
+    &::after {
+      transform: translate(-50%, -6px);
+    }
+  }
+
+  // Positions
+  &[data-tooltip-conf*='right'] {
+    &::before {
+      @include arrowPosition(right);
+
+      left: auto;
+      right: -$popover-css-arrow-position;
+      top: 50%;
+      transform: translate(calc(-50% + 7px), -50%);
+    }
+
+    &::after {
+      bottom: auto;
+      left: 100%;
+      top: 50%;
+      transform: translate(-12px, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: translate(calc(-50% + 3px), -50%);
+      }
+
+      &::after {
+        transform: translate(7px, -50%);
+      }
+    }
+  }
+
+  &[data-tooltip-conf*='bottom'] {
+    &::before {
+      @include arrowPosition(bottom);
+
+      bottom: -$popover-css-arrow-position;
+      left: 50%;
+      top: auto;
+      transform: translate(-50%, calc(-50% + 6px));
+    }
+
+    &::after {
+      bottom: auto;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -12px);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: translate(-50%, calc(-50% + 2px));
+      }
+
+      &::after {
+        transform: translate(-50%, 6px);
+      }
+    }
+  }
+
+  &[data-tooltip-conf*='left'] {
+    &::before {
+      @include arrowPosition(left);
+
+      height: 0;
+      left: -2px;
+      top: 50%;
+      transform: translate(calc(-50% - 8px), -50%);
+      width: 0;
+    }
+
+    &::after {
+      bottom: auto;
+      left: auto;
+      right: 100%;
+      top: 50%;
+      transform: translate(12px, -50%);
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-7px, -50%);
+      }
+
+      &::before {
+        transform: translate(calc(-50% - 3px), -50%);
+      }
+    }
+  }
+
+  //// Features
+
+  // Multiline
+  &[data-tooltip-conf*='multiline'] {
+    &::after {
+      min-width: 180px;
+      text-overflow: clip;
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+
+  // Delay
+  &[data-tooltip-conf*='delay'] {
+    &::before {
+      transition: opacity .2s $popover-css-transition-style 0s, transform .3s $popover-css-transition-style 0s;
+    }
+
+    &::after {
+      transition: opacity .3s $popover-css-transition-style 0s, transform .3s $popover-css-transition-style 0s;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transition: opacity .2s $popover-css-transition-style .5s, transform .6s $popover-css-transition-style .5s;
+      }
+
+      &::after {
+        transition: opacity .3s $popover-css-transition-style .4s, transform .3s $popover-css-transition-style .4s;
+      }
+    }
+  }
+
+  // Shadow
+  &[data-tooltip-conf*='shadow'] {
+    &::after {
+      box-shadow: $popover-shadow;
+    }
+  }
+
+  // No Fading {
+  &[data-tooltip-conf*='no-fade'] {
+    &::before,
+    &::after {
+      transition: none;
+    }
+  }
+
+  // No Arrow {
+  &[data-tooltip-conf*='no-arrow'] {
+    &::before {
+      display: none;
+    }
+  }
+
+  // Square {
+  &[data-tooltip-conf*='square'] {
+    &::after {
+      border-radius: 0;
+    }
+  }
+
+  // Types
+  &[data-tooltip-conf*='invert'] {
+    @include tooltip-color($popover-invert-bg, $popover-invert-color);
+  }
+
+  &[data-tooltip-conf*='success'] {
+    @include tooltip-color($popover-success-bg, $popover-success-color);
+  }
+
+  &[data-tooltip-conf*='primary'] {
+    @include tooltip-color($popover-primary-bg, $popover-primary-color);
+  }
+
+  &[data-tooltip-conf*='warning'] {
+    @include tooltip-color($popover-warning-bg, $popover-warning-color);
+  }
+
+  &[data-tooltip-conf*='danger'] {
+    @include tooltip-color($popover-danger-bg, $popover-danger-color);
+  }
+
+  // Hide if has no message
+  &[data-tooltip=''] {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

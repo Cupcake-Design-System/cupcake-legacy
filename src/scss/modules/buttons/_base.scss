@@ -8,18 +8,21 @@
     @include btn-active;
   }
 
-  &-primary {
-    @include btn-style($btn-primary-bg);
+  &-disabled,
+  &[disabled] {
+    @include btn-disabled;
+  }
 
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-primary-hover;
-        background-image: none;
-      }
-    }
+  &-primary {
+    @include btn-style($btn-primary-bg, $btn-primary-hover);
 
     &-outline {
       @include btn-outline($btn-primary-bg);
+    }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-primary-disabled);
     }
   }
 
@@ -30,35 +33,36 @@
     &-outline {
       @include btn-outline($color-gray-7);
     }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-disabled-bg, $btn-disabled-bd, $btn-disabled-c, $btn-disabled-text-shadow);
+    }
   }
 
   &-success {
-    @include btn-style($btn-success-bg);
-
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-success-hover;
-        background-image: none;
-      }
-    }
+    @include btn-style($btn-success-bg, $btn-success-hover);
 
     &-outline {
       @include btn-outline($btn-success-bg);
     }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-success-disabled);
+    }
   }
 
   &-danger {
-    @include btn-style($btn-danger-bg);
-
-    @if $btn-white-label == false {
-      &:hover {
-        background-color: $btn-danger-hover;
-        background-image: none;
-      }
-    }
+    @include btn-style($btn-danger-bg, $btn-danger-hover);
 
     &-outline {
       @include btn-outline($btn-danger-bg);
+    }
+
+    &-disabled,
+    &[disabled] {
+      @include btn-disabled($btn-danger-disabled);
     }
   }
 
@@ -126,11 +130,6 @@
   display: block;
   width: 100%;
   text-align: center;
-}
-
-.c-btn-disabled,
-.c-btn[disabled] {
-  @include btn-disabled;
 }
 
 //TODO cleaner approach

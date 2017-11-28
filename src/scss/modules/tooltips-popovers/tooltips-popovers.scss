@@ -1,12 +1,4 @@
+@import 'variables';
 @import 'mixins';
-
-.c-popover {
-  @include popover-base;
-  @include popover-colors;
-}
-
-.c-tooltip {
-  @include popover-base;
-  @include popover-colors;
-}
-
+@import 'base-tooltips';
+@import 'css-tooltips';
