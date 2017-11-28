@@ -6,6 +6,7 @@
 
 .c-skeleton-bar {
   @include c-skeleton-bar(0, 0, $position: relative);
+
   margin: 5px 0; // make it similar to text line height
 }
 
