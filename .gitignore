@@ -11,3 +11,4 @@ dist
 .stage/
 .publish/
 test/*
+yarn.lock
