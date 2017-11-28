@@ -195,7 +195,7 @@ gulp.src(bases.app + 'img/*')
     .pipe(reload({stream:true}));
   
     // copy icons to dist directly
-  gulp.src(bases.app + 'fonts/**/*.*')
+  gulp.src(['./node_modules/source-sans-pro/**/*', '!./node_modules/source-sans-pro/package.json'])
     .pipe(gulp.dest(bases.dist + 'fonts'))
     .pipe(reload({stream:true}));
 });
