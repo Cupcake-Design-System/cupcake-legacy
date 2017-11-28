@@ -4,6 +4,12 @@
   @include c-skeleton-loader-mixin;
 }
 
+.c-skeleton-bar {
+  @include c-skeleton-bar(0, 0, $position: relative);
+
+  margin: 5px 0; // make it similar to text line height
+}
+
 .c-btn-in-progress {
   @include c-btn-in-progress;
 }
