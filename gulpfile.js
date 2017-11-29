@@ -215,11 +215,12 @@ gulp.src(bases.app + 'demo-js/**/*.*')
 gulp.src(bases.app + 'img/*')
     .pipe(gulp.dest(bases.dist + 'img'))
     .pipe(reload({stream:true}));
-  
-    // copy icons to dist directly
-  gulp.src(['./node_modules/source-sans-pro/**/*', '!./node_modules/source-sans-pro/package.json'])
-    .pipe(gulp.dest(bases.dist + 'fonts'))
-    .pipe(reload({stream:true}));
+});
+
+gulp.task('fonts', function(){
+  return gulp.src(['./node_modules/source-sans-pro/**/*', '!./node_modules/source-sans-pro/package.json'])
+  .pipe(gulp.dest(bases.dist + 'fonts'))
+  .pipe(reload({stream:true}));
 });
 
 
@@ -311,11 +312,11 @@ gulp.task('extract:bg', function() {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'styles:build', 'styles:flatten', 'clean:leftovers', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', done);
 });
 
 
