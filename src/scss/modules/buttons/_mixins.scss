@@ -119,20 +119,27 @@
     padding: $btn-sm-padding;
   }
 
-  @elseif $size==md {
+  @elseif $size == md {
     font-size: $btn-md-font;
     padding: $btn-md-padding;
   }
 
-  @elseif $size==lg {
+  @elseif $size == lg {
     font-size: $btn-lg-font;
     padding: $btn-lg-padding;
   }
 
-  @elseif $size==xl {
+  @elseif $size == xl {
     font-size: $btn-xl-font;
     padding: $btn-xl-padding;
   }
+}
+
+/* Button Focus
+* ================ ================ ================ ================ */
+@mixin btn-focus($shadow: $btn-shadow-focus) {
+  // focus styles go here
+  box-shadow: $shadow;
 }
 
 /* Button Active
@@ -141,7 +148,7 @@
   text-decoration: none;
   background-color: desaturate($bg, 15%);
   border-color: darken($border, 15%);
-  box-shadow: $btn-shadow-active;
+  box-shadow: $btn-shadow-active, $btn-shadow-focus;
 }
 
 @mixin btn-active-selected () {

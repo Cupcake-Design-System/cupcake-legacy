@@ -3,6 +3,11 @@
 .c-btn {
   @include btn-base;
 
+  &:focus,
+  &-focus {
+    @include btn-focus;
+  }
+
   &:active,
   &-active {
     @include btn-active;

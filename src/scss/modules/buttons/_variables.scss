@@ -35,6 +35,9 @@ $btn-radius              : 2px !default;
 /// $btn-shadow-active       
 $btn-shadow-active       : inset 0 1px 2px rgba(black, 0.3) !default;
 
+/// $btn-shadow-focus       
+$btn-shadow-focus        : 0 0 1px 1px white, 0 0 2px 3px $color-primary-4 !default;
+
 /// $btn-active-selected     
 $btn-active-selected     : false !default;
 
