@@ -9,6 +9,7 @@
         "release": true,
         "releaseName": "Release %s",
         "preRelease": false,
-        "draft": true
+        "draft": true,
+        "tokenRef": "GITHUB_TOKEN"
     }    
 }
