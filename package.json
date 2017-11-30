@@ -16,8 +16,7 @@
     "build": "gulp build",
     "deploy": "gulp deploy",
     "test": "gulp lint",
-    "changelog": "git log --pretty=format:'* %s [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/%H)' > change.md",
-    "changelog-2": "git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:'* %s [View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/%H)' | cut -d' ' -f 2- > change2.md",
+    "changelog": "auto-changelog --template changelog-template.hbs --commit-limit false",
     "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
     "visual": "npm run reference && npm run compare",
     "reference": "backstop reference",
@@ -27,6 +26,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
+    "auto-changelog": "^1.1.0",
     "autoprefixer": "^7.1.6",
     "backstopjs": "^3.0.32",
     "browser-sync": "^2.18.13",

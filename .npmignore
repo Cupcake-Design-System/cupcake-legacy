@@ -8,5 +8,6 @@ package.json
 package-lock.json
 release.json
 .surgeignore
+changelog-template.hbs
 test
 .idea/

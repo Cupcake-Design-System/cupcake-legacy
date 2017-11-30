@@ -1,444 +1,479 @@
-
-## Release [1.1.9](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.8...1.1.9) - 2017-11-29
-### Commits
-- gulp task - fonts [`75f9f4d`](https://code.ipreo.com/Ipreo/cupcake/commit/75f9f4d1e333f509b238534407141d1aea4b3a07)
-- Release 1.1.9 [`9b251d2`](https://code.ipreo.com/Ipreo/cupcake/commit/9b251d2e399fcd9d5182fe49c725b2e0806f9a20)
-
-## Release [1.1.8](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.7...1.1.8) - 2017-11-29
-### Merged
-- Fixes #154 button focus state [`#173`](https://code.ipreo.com/Ipreo/cupcake/pull/173)
-- add single skeleton bar [`#174`](https://code.ipreo.com/Ipreo/cupcake/pull/174)
-- #160 add meta info to dist files [`#176`](https://code.ipreo.com/Ipreo/cupcake/pull/176)
-- deleted wrong fonts from src, added right fonts via npm package [`#175`](https://code.ipreo.com/Ipreo/cupcake/pull/175)
-- Gulp/build updates [`#172`](https://code.ipreo.com/Ipreo/cupcake/pull/172)
-- updated styles and added css popovers [`#167`](https://code.ipreo.com/Ipreo/cupcake/pull/167)
+## Release [1.1.9](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.8...1.1.9) :rocket:
+**29 November 2017**
 
 ### Commits
-- deleted yarn.lock [`c3efeba`](https://code.ipreo.com/Ipreo/cupcake/commit/c3efebaf105c5c586713a1bb5b043bdf148bf91b)
-- add global boolean for white-label (#168) [`019efaa`](https://code.ipreo.com/Ipreo/cupcake/commit/019efaa670bbcfbdbbd15d9493068fa5e75ee235)
-- set fixed heights for inputs (#164) [`7bdf8a6`](https://code.ipreo.com/Ipreo/cupcake/commit/7bdf8a6e589824bf8c11284ae3a500a63b3b6f37)
-- tooltip syntax fix to match other &quot;data-&quot; attributes [`4bb2b30`](https://code.ipreo.com/Ipreo/cupcake/commit/4bb2b301e2b7183843dae67ee9c4136c1ddd2639)
-- adds button disabled states (#166) [`b09b9a0`](https://code.ipreo.com/Ipreo/cupcake/commit/b09b9a02fdfc2ad58c0a697424a4d2b37942af2b)
-- overide pills in a cupcake-suggester [`0ef5d54`](https://code.ipreo.com/Ipreo/cupcake/commit/0ef5d540bd4dfa5e79a58283a14925245e6628e7)
-- overide pills in a cupcake-suggester (#165) [`c4c915c`](https://code.ipreo.com/Ipreo/cupcake/commit/c4c915ccf3ecd5d944a6dc45ef7f96f67030c524)
-- tabs - bd adjustments [`e6146c0`](https://code.ipreo.com/Ipreo/cupcake/commit/e6146c0098b3945cb9b452d1fa07f5be71c2e6e9)
-- fix for #131 width:auto for inline input. [`f39fc05`](https://code.ipreo.com/Ipreo/cupcake/commit/f39fc05b43911d20cb0c38d77f23414b281e2103)
-- tooltip hotfix [`54e2427`](https://code.ipreo.com/Ipreo/cupcake/commit/54e2427c86712af2f6ced7e50e1e59fc293e4c23)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`1830720`](https://code.ipreo.com/Ipreo/cupcake/commit/18307206c8fb8362a6040e5c59838888775b7e16)
-- Merge remote-tracking branch &#x27;upstream/master&#x27; [`c4b4d35`](https://code.ipreo.com/Ipreo/cupcake/commit/c4b4d3506a48f6f7bf1a9d5c77330b3fb3ba6de7)
-- Release 1.1.8 [`aa6609b`](https://code.ipreo.com/Ipreo/cupcake/commit/aa6609b7bd1d2507722af2b939a9d0ff02f132c7)
-- Update CHANGELOG.md [`8f11998`](https://code.ipreo.com/Ipreo/cupcake/commit/8f11998976d9be7ed44fa0efd0e58f6680280391)
-- added yarn.lock to gitignore [`2495487`](https://code.ipreo.com/Ipreo/cupcake/commit/2495487c0c9415992e177586b52f9025bb27f852)
-- fix lint [`d87af14`](https://code.ipreo.com/Ipreo/cupcake/commit/d87af14e9383219afa52f478d89e6a1059687a43)
+- gulp task - fonts **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/75f9f4d1e333f509b238534407141d1aea4b3a07)**
+- Release 1.1.9 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9b251d2e399fcd9d5182fe49c725b2e0806f9a20)**
 
-## Release [1.1.7](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.6...1.1.7) - 2017-11-04
+## Release [1.1.8](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.7...1.1.8) :rocket:
+**29 November 2017**
+
 ### Merged
-- Layout updates [`#163`](https://code.ipreo.com/Ipreo/cupcake/pull/163)
+- Fixes #154 button focus state **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/173)**
+- add single skeleton bar **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/174)**
+- #160 add meta info to dist files **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/176)**
+- deleted wrong fonts from src, added right fonts via npm package **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/175)**
+- Gulp/build updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/172)**
+- updated styles and added css popovers **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/167)**
 
 ### Commits
-- hot-fix flex syntax regression [`bd71cdd`](https://code.ipreo.com/Ipreo/cupcake/commit/bd71cdd5959abd62fd6794f378b33c84bc29ff59)
-- Release 1.1.6 changelog [`046aaae`](https://code.ipreo.com/Ipreo/cupcake/commit/046aaaeb458384071a6c2b8d5753a780ac71ac2b)
-- Release 1.1.7 [`1a92ed3`](https://code.ipreo.com/Ipreo/cupcake/commit/1a92ed3e9b2d08bc5a33800e5d0b52b5d79ea401)
-- Update CHANGELOG.md [`a77aa3d`](https://code.ipreo.com/Ipreo/cupcake/commit/a77aa3d20c99179b4ab5118ecd152335a772721d)
+- deleted yarn.lock **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c3efebaf105c5c586713a1bb5b043bdf148bf91b)**
+- add global boolean for white-label (#168) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/019efaa670bbcfbdbbd15d9493068fa5e75ee235)**
+- set fixed heights for inputs (#164) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7bdf8a6e589824bf8c11284ae3a500a63b3b6f37)**
+- tooltip syntax fix to match other &quot;data-&quot; attributes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4bb2b301e2b7183843dae67ee9c4136c1ddd2639)**
+- adds button disabled states (#166) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b09b9a02fdfc2ad58c0a697424a4d2b37942af2b)**
+- overide pills in a cupcake-suggester **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0ef5d540bd4dfa5e79a58283a14925245e6628e7)**
+- overide pills in a cupcake-suggester (#165) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c4c915ccf3ecd5d944a6dc45ef7f96f67030c524)**
+- tabs - bd adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e6146c0098b3945cb9b452d1fa07f5be71c2e6e9)**
+- fix for #131 width:auto for inline input. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f39fc05b43911d20cb0c38d77f23414b281e2103)**
+- tooltip hotfix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/54e2427c86712af2f6ced7e50e1e59fc293e4c23)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/18307206c8fb8362a6040e5c59838888775b7e16)**
+- Merge remote-tracking branch &#x27;upstream/master&#x27; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c4b4d3506a48f6f7bf1a9d5c77330b3fb3ba6de7)**
+- Release 1.1.8 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/aa6609b7bd1d2507722af2b939a9d0ff02f132c7)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8f11998976d9be7ed44fa0efd0e58f6680280391)**
+- added yarn.lock to gitignore **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2495487c0c9415992e177586b52f9025bb27f852)**
+- fix lint **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d87af14e9383219afa52f478d89e6a1059687a43)**
 
-## Release [1.1.6](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.5...1.1.6) - 2017-11-03
+## Release [1.1.7](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.6...1.1.7) :rocket:
+**4 November 2017**
+
 ### Merged
-- made modals flex enabled to fix alignment, added footer [`#157`](https://code.ipreo.com/Ipreo/cupcake/pull/157)
-- Responsive classes [`#161`](https://code.ipreo.com/Ipreo/cupcake/pull/161)
-- Dropdown updates [`#155`](https://code.ipreo.com/Ipreo/cupcake/pull/155)
+- Layout updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/163)**
 
 ### Commits
-- update demo [`6852c62`](https://code.ipreo.com/Ipreo/cupcake/commit/6852c62e22ae652d9dbc605cc6fdde2dad32b379)
-- legacy header colors update [`61c2c43`](https://code.ipreo.com/Ipreo/cupcake/commit/61c2c43a4cbb8bfa50ed168c0a0269e1a5eeba13)
-- modals - bd styles, close btn absolute option. [`a647498`](https://code.ipreo.com/Ipreo/cupcake/commit/a647498fffe7f38c5b2b6a781cdf70c6476d6c94)
-- Update CHANGELOG.md [`80f2726`](https://code.ipreo.com/Ipreo/cupcake/commit/80f272697cd9b070121164259fc0426398fab43f)
-- Release 1.1.6 [`3dd9e00`](https://code.ipreo.com/Ipreo/cupcake/commit/3dd9e004716e4b605eb053c3899a094d9f15f81c)
-- restore display property on c-dropdown (#162) [`f1ee815`](https://code.ipreo.com/Ipreo/cupcake/commit/f1ee8152118ed4c74b21d66156d48aee5236ff75)
-- add break-word to toast-alerts. [`5b3ddd7`](https://code.ipreo.com/Ipreo/cupcake/commit/5b3ddd78a0b728ebfd0ebd46b13787fcd6ab90ae)
+- hot-fix flex syntax regression **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bd71cdd5959abd62fd6794f378b33c84bc29ff59)**
+- Release 1.1.6 changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/046aaaeb458384071a6c2b8d5753a780ac71ac2b)**
+- Release 1.1.7 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1a92ed3e9b2d08bc5a33800e5d0b52b5d79ea401)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a77aa3d20c99179b4ab5118ecd152335a772721d)**
 
-## Release [1.1.5](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.4...1.1.5) - 2017-10-31
+## Release [1.1.6](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.5...1.1.6) :rocket:
+**3 November 2017**
+
 ### Merged
-- toast alerts - simplify html, rewrite icons. [`#156`](https://code.ipreo.com/Ipreo/cupcake/pull/156)
-- modal sub-type - confirmation [`#148`](https://code.ipreo.com/Ipreo/cupcake/pull/148)
-- Toast alerts [`#138`](https://code.ipreo.com/Ipreo/cupcake/pull/138)
-- force setting height on &lt;select&gt; [`#142`](https://code.ipreo.com/Ipreo/cupcake/pull/142)
+- made modals flex enabled to fix alignment, added footer **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/157)**
+- Responsive classes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/161)**
+- Dropdown updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/155)**
 
 ### Commits
-- list-group replacement path [`b261631`](https://code.ipreo.com/Ipreo/cupcake/commit/b2616316feac5210dfd226f93e89a70a25a2fe77)
-- Revert &quot;Media Group Upgrades&quot; [`c904a02`](https://code.ipreo.com/Ipreo/cupcake/commit/c904a02c56cbdbf27824c167faebe13afc9042a6)
-- Media Group Upgrades [`86ba31e`](https://code.ipreo.com/Ipreo/cupcake/commit/86ba31e3f832b94f6a1b15381d6f1b15e1242f08)
-- final fix (#151) [`ac3d987`](https://code.ipreo.com/Ipreo/cupcake/commit/ac3d9871ccf21acbebc0a8959b29d8f0a6a09785)
-- updated header styles, decoupled notifications, removed unused classes (#152) [`e9336e9`](https://code.ipreo.com/Ipreo/cupcake/commit/e9336e9a25fedc3b9b44985e8e17bb29ef1b7a1a)
-- Media group updates (#149) [`90b889f`](https://code.ipreo.com/Ipreo/cupcake/commit/90b889fe27a05586c12ca9b12652dc7a4864df93)
-- Revert &quot;Media group updates (#149)&quot; (#150) [`165621b`](https://code.ipreo.com/Ipreo/cupcake/commit/165621b8e7eeb0717e90528151348d4831e0eafe)
-- toast alerts initial commit [`0373228`](https://code.ipreo.com/Ipreo/cupcake/commit/03732286c0649e202164e5f053db5c7860275587)
-- add media to sidebar [`1c2dcc1`](https://code.ipreo.com/Ipreo/cupcake/commit/1c2dcc13e2e8891e19a63cf6dbc8644a5970026d)
-- modal subtype - confirmation [`9a8e993`](https://code.ipreo.com/Ipreo/cupcake/commit/9a8e993ddf82be3c99d12165050b3a9c923873a6)
-- Cleanup Rebase error [`eca76da`](https://code.ipreo.com/Ipreo/cupcake/commit/eca76da94f2fb50b4a6c0b21ea6fb3ae81765650)
-- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake [`db92f85`](https://code.ipreo.com/Ipreo/cupcake/commit/db92f85ecad504f158ea443773660114953be4c2)
-- Update CHANGELOG.md [`6cf442b`](https://code.ipreo.com/Ipreo/cupcake/commit/6cf442b114c1df3ffcf26b9e9bf28bec674202b1)
-- Merge branch &#x27;master&#x27; into toast-alerts [`6f323f6`](https://code.ipreo.com/Ipreo/cupcake/commit/6f323f693fdce747ac07be4e119026b9e310866b)
-- closer match lists [`951fc02`](https://code.ipreo.com/Ipreo/cupcake/commit/951fc0203ea2b46825c74890ad888756dcf4fb38)
-- Merge branch &#x27;master&#x27; into confimation-modals [`291b867`](https://code.ipreo.com/Ipreo/cupcake/commit/291b867974abcd2930694de3a27824fb80bf2348)
-- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake [`c85e759`](https://code.ipreo.com/Ipreo/cupcake/commit/c85e759e2aae43db99bd71697472f90b4953eb35)
-- Merge branch &#x27;master&#x27; into toast-alerts:wq [`341c4c2`](https://code.ipreo.com/Ipreo/cupcake/commit/341c4c2db9810409ac20c6aded3c8bc77104b6cf)
-- removed old media file [`18b11ea`](https://code.ipreo.com/Ipreo/cupcake/commit/18b11eae928e8bd1903ed74ecc1d7330da5ccbbb)
-- Update CHANGELOG.md [`b605c3d`](https://code.ipreo.com/Ipreo/cupcake/commit/b605c3dd53904a098183d86ece7af81a08abedbe)
-- force setting height on &lt;select&gt; [`527706a`](https://code.ipreo.com/Ipreo/cupcake/commit/527706afcafe9df1f5a0b4acf69c6a30a7b60f73)
-- force setting height on &lt;select&gt; [`0c0c913`](https://code.ipreo.com/Ipreo/cupcake/commit/0c0c913a1abc93a28df4d85e8948416cf37b7bdb)
-- #139 input icon color and padding [`0b885e0`](https://code.ipreo.com/Ipreo/cupcake/commit/0b885e0192910a499e952ef92980ac378322d74e)
-- #139 input icon color and padding [`fe1a79f`](https://code.ipreo.com/Ipreo/cupcake/commit/fe1a79fc72494d4c938100148bc0a9da64cc4294)
-- default was missing in btn variables. [`5f65d93`](https://code.ipreo.com/Ipreo/cupcake/commit/5f65d93518238089352e92d8d1ed077d1b70b541)
-- added c-media-action-visible for parent to show all [`dc21aff`](https://code.ipreo.com/Ipreo/cupcake/commit/dc21aff1e11f70e87c05148ca04ab8a51bafef18)
-- gulpfile fix for html watcher [`25da643`](https://code.ipreo.com/Ipreo/cupcake/commit/25da64331739cfd9687421c82420d890bedbc6b3)
-- Release 1.1.5 [`7ca1da1`](https://code.ipreo.com/Ipreo/cupcake/commit/7ca1da1c34a518805d4c472a1a95e1dcd7bde15c)
-- Revert &quot;Release 1.1.5&quot; [`3313fa0`](https://code.ipreo.com/Ipreo/cupcake/commit/3313fa0f9cee2baf7314d04e9963750f9075407b)
-- toast alerts - use global vars [`7df73e6`](https://code.ipreo.com/Ipreo/cupcake/commit/7df73e678e27e6a4e1c690a43f27fd9b380067fb)
-- Revert &quot;Release 1.1.5&quot; [`71cbb16`](https://code.ipreo.com/Ipreo/cupcake/commit/71cbb1665478aabe67f9b8fa43c19f6ce211ebb7)
-- toast alerts - use global vars [`46bb962`](https://code.ipreo.com/Ipreo/cupcake/commit/46bb962e1b32d770da23ad257ac590bfce03aa23)
-- Release 1.1.5 [`e603416`](https://code.ipreo.com/Ipreo/cupcake/commit/e603416dec746320b59c1b42f43605599a7e664a)
-- Release 1.1.5 [`dddd2b8`](https://code.ipreo.com/Ipreo/cupcake/commit/dddd2b805cfa1bd31d8541f0b6226df562273d90)
-- Revert &quot;Release 1.1.5&quot; [`9c18166`](https://code.ipreo.com/Ipreo/cupcake/commit/9c18166d38e9f9aa702019cd32c226a8686a9b6f)
-- #125 [BD Flavor] Hover item in dropdown update [`5bdbe87`](https://code.ipreo.com/Ipreo/cupcake/commit/5bdbe87219f07c4334312ec014fb0466f0fbe6b4)
-- Revert &quot;Release 1.1.6&quot; [`59beb88`](https://code.ipreo.com/Ipreo/cupcake/commit/59beb8892e4d4534b9c355aa4cf5f88aec6994b1)
-- Release 1.1.6 [`bee8276`](https://code.ipreo.com/Ipreo/cupcake/commit/bee8276eca2f1c39845136308601a8ae786f06dc)
-- hotfix: tab padding [`b9df018`](https://code.ipreo.com/Ipreo/cupcake/commit/b9df018c74cbcb8d86bda3472a9752a6c17df5df)
-- #125 [BD Flavor] Hover item in dropdown update [`58ea7ac`](https://code.ipreo.com/Ipreo/cupcake/commit/58ea7ace5c3bd98ccb799394b2d9c56250f0c48f)
-- #125 [BD Flavor] Hover item in dropdown update [`eb9db74`](https://code.ipreo.com/Ipreo/cupcake/commit/eb9db74d194564f3ab21cb0d9e8d2d85350724d6)
-- Release 1.1.5 [`1b28709`](https://code.ipreo.com/Ipreo/cupcake/commit/1b287092ed555a26322754f9e6ddc8e8472b9136)
-- remove cursor-pointer from input label [`a7a9003`](https://code.ipreo.com/Ipreo/cupcake/commit/a7a90034ff50ff04a148e4386dd2804700e8f92d)
-- remove cursor-pointer from input label [`95153da`](https://code.ipreo.com/Ipreo/cupcake/commit/95153da04aab81c6ac980fe88b11b3264731253f)
-- remove cursor-pointer from input label [`997fa6e`](https://code.ipreo.com/Ipreo/cupcake/commit/997fa6e0a856a4ff5d8c28be803d1173385cdfe7)
+- update demo **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6852c62e22ae652d9dbc605cc6fdde2dad32b379)**
+- legacy header colors update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/61c2c43a4cbb8bfa50ed168c0a0269e1a5eeba13)**
+- modals - bd styles, close btn absolute option. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a647498fffe7f38c5b2b6a781cdf70c6476d6c94)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/80f272697cd9b070121164259fc0426398fab43f)**
+- Release 1.1.6 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3dd9e004716e4b605eb053c3899a094d9f15f81c)**
+- restore display property on c-dropdown (#162) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f1ee8152118ed4c74b21d66156d48aee5236ff75)**
+- add break-word to toast-alerts. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5b3ddd78a0b728ebfd0ebd46b13787fcd6ab90ae)**
 
-## Release [1.1.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.3...1.1.4) - 2017-10-11
+## Release [1.1.5](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.4...1.1.5) :rocket:
+**31 October 2017**
+
 ### Merged
-- alert fixes #132  [`#136`](https://code.ipreo.com/Ipreo/cupcake/pull/136)
-- Badge alignment fix [`#135`](https://code.ipreo.com/Ipreo/cupcake/pull/135)
-- adjust xs btn size, change btn size in table. [`#129`](https://code.ipreo.com/Ipreo/cupcake/pull/129)
-- fix for default btn color [`#128`](https://code.ipreo.com/Ipreo/cupcake/pull/128)
-- added .c-p-horizontal-{size}, .c-p-vertical-{size}, .c-m-horizontal-{size}, .c-m-vertical-{size} [`#121`](https://code.ipreo.com/Ipreo/cupcake/pull/121)
-- button box - fixed width approach. [`#119`](https://code.ipreo.com/Ipreo/cupcake/pull/119)
-- Forms select [`#118`](https://code.ipreo.com/Ipreo/cupcake/pull/118)
+- toast alerts - simplify html, rewrite icons. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/156)**
+- modal sub-type - confirmation **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/148)**
+- Toast alerts **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/138)**
+- force setting height on &lt;select&gt; **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/142)**
+
+### Commits
+- list-group replacement path **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b2616316feac5210dfd226f93e89a70a25a2fe77)**
+- Revert &quot;Media Group Upgrades&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c904a02c56cbdbf27824c167faebe13afc9042a6)**
+- Media Group Upgrades **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/86ba31e3f832b94f6a1b15381d6f1b15e1242f08)**
+- final fix (#151) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ac3d9871ccf21acbebc0a8959b29d8f0a6a09785)**
+- updated header styles, decoupled notifications, removed unused classes (#152) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e9336e9a25fedc3b9b44985e8e17bb29ef1b7a1a)**
+- Media group updates (#149) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/90b889fe27a05586c12ca9b12652dc7a4864df93)**
+- Revert &quot;Media group updates (#149)&quot; (#150) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/165621b8e7eeb0717e90528151348d4831e0eafe)**
+- toast alerts initial commit **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/03732286c0649e202164e5f053db5c7860275587)**
+- add media to sidebar **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1c2dcc13e2e8891e19a63cf6dbc8644a5970026d)**
+- modal subtype - confirmation **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9a8e993ddf82be3c99d12165050b3a9c923873a6)**
+- Cleanup Rebase error **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eca76da94f2fb50b4a6c0b21ea6fb3ae81765650)**
+- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/db92f85ecad504f158ea443773660114953be4c2)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6cf442b114c1df3ffcf26b9e9bf28bec674202b1)**
+- Merge branch &#x27;master&#x27; into toast-alerts **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6f323f693fdce747ac07be4e119026b9e310866b)**
+- closer match lists **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/951fc0203ea2b46825c74890ad888756dcf4fb38)**
+- Merge branch &#x27;master&#x27; into confimation-modals **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/291b867974abcd2930694de3a27824fb80bf2348)**
+- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c85e759e2aae43db99bd71697472f90b4953eb35)**
+- Merge branch &#x27;master&#x27; into toast-alerts:wq **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/341c4c2db9810409ac20c6aded3c8bc77104b6cf)**
+- removed old media file **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/18b11eae928e8bd1903ed74ecc1d7330da5ccbbb)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b605c3dd53904a098183d86ece7af81a08abedbe)**
+- force setting height on &lt;select&gt; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/527706afcafe9df1f5a0b4acf69c6a30a7b60f73)**
+- force setting height on &lt;select&gt; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0c0c913a1abc93a28df4d85e8948416cf37b7bdb)**
+- #139 input icon color and padding **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0b885e0192910a499e952ef92980ac378322d74e)**
+- #139 input icon color and padding **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fe1a79fc72494d4c938100148bc0a9da64cc4294)**
+- default was missing in btn variables. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5f65d93518238089352e92d8d1ed077d1b70b541)**
+- added c-media-action-visible for parent to show all **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dc21aff1e11f70e87c05148ca04ab8a51bafef18)**
+- gulpfile fix for html watcher **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/25da64331739cfd9687421c82420d890bedbc6b3)**
+- Release 1.1.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7ca1da1c34a518805d4c472a1a95e1dcd7bde15c)**
+- Revert &quot;Release 1.1.5&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3313fa0f9cee2baf7314d04e9963750f9075407b)**
+- toast alerts - use global vars **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7df73e678e27e6a4e1c690a43f27fd9b380067fb)**
+- Revert &quot;Release 1.1.5&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/71cbb1665478aabe67f9b8fa43c19f6ce211ebb7)**
+- toast alerts - use global vars **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/46bb962e1b32d770da23ad257ac590bfce03aa23)**
+- Release 1.1.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e603416dec746320b59c1b42f43605599a7e664a)**
+- Release 1.1.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dddd2b805cfa1bd31d8541f0b6226df562273d90)**
+- Revert &quot;Release 1.1.5&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9c18166d38e9f9aa702019cd32c226a8686a9b6f)**
+- #125 [BD Flavor] Hover item in dropdown update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5bdbe87219f07c4334312ec014fb0466f0fbe6b4)**
+- Revert &quot;Release 1.1.6&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/59beb8892e4d4534b9c355aa4cf5f88aec6994b1)**
+- Release 1.1.6 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bee8276eca2f1c39845136308601a8ae786f06dc)**
+- hotfix: tab padding **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b9df018c74cbcb8d86bda3472a9752a6c17df5df)**
+- #125 [BD Flavor] Hover item in dropdown update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/58ea7ace5c3bd98ccb799394b2d9c56250f0c48f)**
+- #125 [BD Flavor] Hover item in dropdown update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eb9db74d194564f3ab21cb0d9e8d2d85350724d6)**
+- Release 1.1.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1b287092ed555a26322754f9e6ddc8e8472b9136)**
+- remove cursor-pointer from input label **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a7a90034ff50ff04a148e4386dd2804700e8f92d)**
+- remove cursor-pointer from input label **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/95153da04aab81c6ac980fe88b11b3264731253f)**
+- remove cursor-pointer from input label **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/997fa6e0a856a4ff5d8c28be803d1173385cdfe7)**
+
+## Release [1.1.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.3...1.1.4) :rocket:
+**11 October 2017**
+
+### Merged
+- alert fixes #132  **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/136)**
+- Badge alignment fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/135)**
+- adjust xs btn size, change btn size in table. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/129)**
+- fix for default btn color **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/128)**
+- added .c-p-horizontal-{size}, .c-p-vertical-{size}, .c-m-horizontal-{size}, .c-m-vertical-{size} **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/121)**
+- button box - fixed width approach. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/119)**
+- Forms select **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/118)**
 
 ### Fixed
-- fix full page loader in IE11 (#124) [`#114`](https://code.ipreo.com/Ipreo/cupcake/issues/114)
+- fix full page loader in IE11 (#124) **[View Fix](https://code.ipreo.com/Ipreo/cupcake/issues/114)**
 
 ### Commits
-- moved all out to modules [`c580bad`](https://code.ipreo.com/Ipreo/cupcake/commit/c580bad51b172c462689784a497c6c264f9fc7d0)
-- updated base media item [`d002b81`](https://code.ipreo.com/Ipreo/cupcake/commit/d002b817c5bd36fd3c275533d3d0c1f268ac3ef7)
-- toast alerts initial commit [`ed72471`](https://code.ipreo.com/Ipreo/cupcake/commit/ed724712a15cfa0d6ea2ba4fcc5b4583711c06ac)
-- form select - invisionapp design [`e35accd`](https://code.ipreo.com/Ipreo/cupcake/commit/e35accd1b4e294e99a730f0edc276a9bb1f2d8bb)
-- avatar fixes (#134) [`4205d34`](https://code.ipreo.com/Ipreo/cupcake/commit/4205d349c5f4c4e79d163aadb2f1a26286af20f8)
-- select disabled state [`4735e31`](https://code.ipreo.com/Ipreo/cupcake/commit/4735e3150eebe3bc74553bee299be83c26742b94)
-- make btn-box width fixed [`40ea080`](https://code.ipreo.com/Ipreo/cupcake/commit/40ea080f422692cf51142cc078c49706b605d90b)
-- vertically align table head; extract drag handle to separate classes [`ae5f3e4`](https://code.ipreo.com/Ipreo/cupcake/commit/ae5f3e42f23eeecbcbeae966a7f43b416c55e556)
-- fix c-col-shrink (#123) [`75ef103`](https://code.ipreo.com/Ipreo/cupcake/commit/75ef103d87fddac8f8c0fb7b5553dfdd8be1a91e)
-- modals font-weight; card content title font weight and margin functionality. [`7c27d44`](https://code.ipreo.com/Ipreo/cupcake/commit/7c27d4461adfbca794050b486d14132475ab398e)
-- refactor c-btn-circle; adjust c-btn-box sizes. [`c99e79e`](https://code.ipreo.com/Ipreo/cupcake/commit/c99e79ed6b49d197958d54320456c2ded26db09b)
-- add more cursor classes [`3900108`](https://code.ipreo.com/Ipreo/cupcake/commit/39001089bd747b4e02848156ed4114dd15a28d45)
-- remove dev comments [`07239ff`](https://code.ipreo.com/Ipreo/cupcake/commit/07239ffa7bc657e3fb2d2c4c20238c7cc99bd290)
-- Update CHANGELOG.md [`d3416e1`](https://code.ipreo.com/Ipreo/cupcake/commit/d3416e15309571325626e54d6ac0c7e52480d1e6)
-- new row mixin adds negative margin - not needed for footer (#120) [`fa3cb58`](https://code.ipreo.com/Ipreo/cupcake/commit/fa3cb58b6011f2be1f57eb269898a9c184cf6db5)
-- Merge branch &#x27;master&#x27; into forms-select [`bb055fa`](https://code.ipreo.com/Ipreo/cupcake/commit/bb055fabe84a290eacd614974f4250b2ee2a11b1)
-- release-prep [`ad5d426`](https://code.ipreo.com/Ipreo/cupcake/commit/ad5d426cfd7e127ccca067ecbb8f7a5b1ebcd1eb)
-- fix large text color in BD [`8c64259`](https://code.ipreo.com/Ipreo/cupcake/commit/8c642597d324146556444e05c9857a73ef197f76)
-- BD - popover border and shadow. [`1c8a26c`](https://code.ipreo.com/Ipreo/cupcake/commit/1c8a26ce743e5934d4d3159665c3ace0e3ede3ba)
-- Release 1.1.4 [`37475e0`](https://code.ipreo.com/Ipreo/cupcake/commit/37475e0d92432e38699b2a8d24185e435d878a4e)
+- moved all out to modules **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c580bad51b172c462689784a497c6c264f9fc7d0)**
+- updated base media item **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d002b817c5bd36fd3c275533d3d0c1f268ac3ef7)**
+- toast alerts initial commit **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ed724712a15cfa0d6ea2ba4fcc5b4583711c06ac)**
+- form select - invisionapp design **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e35accd1b4e294e99a730f0edc276a9bb1f2d8bb)**
+- avatar fixes (#134) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4205d349c5f4c4e79d163aadb2f1a26286af20f8)**
+- select disabled state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4735e3150eebe3bc74553bee299be83c26742b94)**
+- make btn-box width fixed **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/40ea080f422692cf51142cc078c49706b605d90b)**
+- vertically align table head; extract drag handle to separate classes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ae5f3e42f23eeecbcbeae966a7f43b416c55e556)**
+- fix c-col-shrink (#123) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/75ef103d87fddac8f8c0fb7b5553dfdd8be1a91e)**
+- modals font-weight; card content title font weight and margin functionality. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7c27d4461adfbca794050b486d14132475ab398e)**
+- refactor c-btn-circle; adjust c-btn-box sizes. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c99e79ed6b49d197958d54320456c2ded26db09b)**
+- add more cursor classes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39001089bd747b4e02848156ed4114dd15a28d45)**
+- remove dev comments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/07239ffa7bc657e3fb2d2c4c20238c7cc99bd290)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d3416e15309571325626e54d6ac0c7e52480d1e6)**
+- new row mixin adds negative margin - not needed for footer (#120) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fa3cb58b6011f2be1f57eb269898a9c184cf6db5)**
+- Merge branch &#x27;master&#x27; into forms-select **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bb055fabe84a290eacd614974f4250b2ee2a11b1)**
+- release-prep **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ad5d426cfd7e127ccca067ecbb8f7a5b1ebcd1eb)**
+- fix large text color in BD **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8c642597d324146556444e05c9857a73ef197f76)**
+- BD - popover border and shadow. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1c8a26ce743e5934d4d3159665c3ace0e3ede3ba)**
+- Release 1.1.4 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/37475e0d92432e38699b2a8d24185e435d878a4e)**
 
-## Release [1.1.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.1...1.1.3) - 2017-09-19
+## Release [1.1.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.1...1.1.3) :rocket:
+**19 September 2017**
+
 ### Commits
-- restore loaders, but without logo loader. [`3d5aeaf`](https://code.ipreo.com/Ipreo/cupcake/commit/3d5aeaf66e117fef726f1ca4c8325a1863945790)
-- fixed gray borders to use border-color property (#112) [`c0d6a11`](https://code.ipreo.com/Ipreo/cupcake/commit/c0d6a11e1cfbebe533914d6f7ebd8d358b94efb3)
-- Changelog [`fb779b4`](https://code.ipreo.com/Ipreo/cupcake/commit/fb779b45f9714b4ed9bfaf5d6e371263d27acf70)
-- Release 1.1.3 [`1341aed`](https://code.ipreo.com/Ipreo/cupcake/commit/1341aed1267aa59f4a9baeb318d8f837487b7298)
+- restore loaders, but without logo loader. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3d5aeaf66e117fef726f1ca4c8325a1863945790)**
+- fixed gray borders to use border-color property (#112) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c0d6a11e1cfbebe533914d6f7ebd8d358b94efb3)**
+- Changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fb779b45f9714b4ed9bfaf5d6e371263d27acf70)**
+- Release 1.1.3 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1341aed1267aa59f4a9baeb318d8f837487b7298)**
 
-## Release [1.1.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.0...1.1.1) - 2017-09-16
+## Release [1.1.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.0...1.1.1) :rocket:
+**16 September 2017**
+
 ### Commits
-- removed loaders [`92f403f`](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)
-- add text align classes to export [`922c727`](https://code.ipreo.com/Ipreo/cupcake/commit/922c7278756a1dccf2dcc83604f921c0a8b95e6b)
-- Release 1.1.1 [`50cfea2`](https://code.ipreo.com/Ipreo/cupcake/commit/50cfea2e447c08e577ab4af70f74289a4f3d52a6)
+- removed loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)**
+- add text align classes to export **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/922c7278756a1dccf2dcc83604f921c0a8b95e6b)**
+- Release 1.1.1 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50cfea2e447c08e577ab4af70f74289a4f3d52a6)**
 
-## Release [1.1.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.0.0...1.1.0) - 2017-09-15
+## Release [1.1.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.0.0...1.1.0) :rocket:
+**15 September 2017**
+
 ### Merged
-- Updated display props [`#104`](https://code.ipreo.com/Ipreo/cupcake/pull/104)
-- List groups style update [`#111`](https://code.ipreo.com/Ipreo/cupcake/pull/111)
-- Button updates [`#110`](https://code.ipreo.com/Ipreo/cupcake/pull/110)
-- Utility updates [`#109`](https://code.ipreo.com/Ipreo/cupcake/pull/109)
-- remove color property from background helper. [`#103`](https://code.ipreo.com/Ipreo/cupcake/pull/103)
-- Border color changes only color [`#97`](https://code.ipreo.com/Ipreo/cupcake/pull/97)
-- add more form snippets [`#100`](https://code.ipreo.com/Ipreo/cupcake/pull/100)
+- Updated display props **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/104)**
+- List groups style update **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/111)**
+- Button updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/110)**
+- Utility updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/109)**
+- remove color property from background helper. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/103)**
+- Border color changes only color **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/97)**
+- add more form snippets **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/100)**
 
 ### Commits
-- progress size fixes (#107) [`0f9941d`](https://code.ipreo.com/Ipreo/cupcake/commit/0f9941da798a27e419ac9711ac43c7b6a0b1bbfd)
-- added popover examples [`9993495`](https://code.ipreo.com/Ipreo/cupcake/commit/9993495f2a6fce7bc8ecfb28b84a70371404d201)
-- text alignment fixes for #102 (#108) [`c69c85f`](https://code.ipreo.com/Ipreo/cupcake/commit/c69c85fee78875765d3d07769760a1d940d67d71)
-- various additional helper classes (#106) [`5c6c53b`](https://code.ipreo.com/Ipreo/cupcake/commit/5c6c53bdeade5a1af662f09e12f409286600a537)
-- adjust forms to meet invisioanapp design. [`f17ebf5`](https://code.ipreo.com/Ipreo/cupcake/commit/f17ebf5c3625d333990ae022038c5e627643cb5e)
-- Release 1.1.0 [`ccbc9b3`](https://code.ipreo.com/Ipreo/cupcake/commit/ccbc9b3ff55681cc936855e588a16c9f70507f73)
-- tabs alignment bug fix [`17b7448`](https://code.ipreo.com/Ipreo/cupcake/commit/17b74489951c0e2882dfc8ecf651c5c623eeb028)
-- fix for issue-96 [`df2c330`](https://code.ipreo.com/Ipreo/cupcake/commit/df2c330c1be451f8c78ab04aae2d62fb2db6b6e7)
+- progress size fixes (#107) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0f9941da798a27e419ac9711ac43c7b6a0b1bbfd)**
+- added popover examples **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9993495f2a6fce7bc8ecfb28b84a70371404d201)**
+- text alignment fixes for #102 (#108) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c69c85fee78875765d3d07769760a1d940d67d71)**
+- various additional helper classes (#106) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5c6c53bdeade5a1af662f09e12f409286600a537)**
+- adjust forms to meet invisioanapp design. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f17ebf5c3625d333990ae022038c5e627643cb5e)**
+- Release 1.1.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ccbc9b3ff55681cc936855e588a16c9f70507f73)**
+- tabs alignment bug fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/17b74489951c0e2882dfc8ecf651c5c623eeb028)**
+- fix for issue-96 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/df2c330c1be451f8c78ab04aae2d62fb2db6b6e7)**
 
-## Release [1.0.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.8...1.0.0) - 2017-08-18
+## Release [1.0.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.8...1.0.0) :rocket:
+**18 August 2017**
+
 ### Merged
-- Updated cleaner grid [`#91`](https://code.ipreo.com/Ipreo/cupcake/pull/91)
+- Updated cleaner grid **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/91)**
 
 ### Fixed
-- .c-bg-gray text colors - fixes #67 [`#67`](https://code.ipreo.com/Ipreo/cupcake/issues/67)
+- .c-bg-gray text colors - fixes #67 **[View Fix](https://code.ipreo.com/Ipreo/cupcake/issues/67)**
 
 ### Commits
-- tab updates and input group fix [`265da9f`](https://code.ipreo.com/Ipreo/cupcake/commit/265da9f9657238a427a93b62cab7c9313db957a0)
-- Update footer and badges to match latest design (#93) [`dbeedb2`](https://code.ipreo.com/Ipreo/cupcake/commit/dbeedb2cac3b8076218233a81914fb53b494fe97)
-- 1.0 Release prep [`5942bab`](https://code.ipreo.com/Ipreo/cupcake/commit/5942bab787f33c7fe9ca760a2e12a05c79ac2f78)
-- Changed references from northstar to default (#94) [`51e40ec`](https://code.ipreo.com/Ipreo/cupcake/commit/51e40ecabf546cc9edaf436ae7cd4bd3406a7986)
-- package name change [`c34a5ec`](https://code.ipreo.com/Ipreo/cupcake/commit/c34a5ecfe32cdded20fb134be6472e98aa4f23c8)
-- Release 1.0.0 [`35433ce`](https://code.ipreo.com/Ipreo/cupcake/commit/35433ce1e13ba05f67bef47fd99be5d13ef94ae1)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`b3e67be`](https://code.ipreo.com/Ipreo/cupcake/commit/b3e67be293dc6b1dd00c8746dc772d826f06fc15)
-- changelog 1.8 [`784448b`](https://code.ipreo.com/Ipreo/cupcake/commit/784448b86b1a94cf8c99890b987c3ea6d4c4bbc2)
-- popover alternate positioning &quot;shifted&quot; [`28e6c2f`](https://code.ipreo.com/Ipreo/cupcake/commit/28e6c2f6636505b061faa5826a3aa82baee565e9)
+- tab updates and input group fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/265da9f9657238a427a93b62cab7c9313db957a0)**
+- Update footer and badges to match latest design (#93) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dbeedb2cac3b8076218233a81914fb53b494fe97)**
+- 1.0 Release prep **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5942bab787f33c7fe9ca760a2e12a05c79ac2f78)**
+- Changed references from northstar to default (#94) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/51e40ecabf546cc9edaf436ae7cd4bd3406a7986)**
+- package name change **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c34a5ecfe32cdded20fb134be6472e98aa4f23c8)**
+- Release 1.0.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/35433ce1e13ba05f67bef47fd99be5d13ef94ae1)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b3e67be293dc6b1dd00c8746dc772d826f06fc15)**
+- changelog 1.8 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/784448b86b1a94cf8c99890b987c3ea6d4c4bbc2)**
+- popover alternate positioning &quot;shifted&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/28e6c2f6636505b061faa5826a3aa82baee565e9)**
 
-## Release [0.1.8](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.7...0.1.8) - 2017-08-10
+## Release [0.1.8](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.7...0.1.8) :rocket:
+**10 August 2017**
+
 ### Merged
-- fixes for Events team. [`#87`](https://code.ipreo.com/Ipreo/cupcake/pull/87)
-- Checkbox updates [`#90`](https://code.ipreo.com/Ipreo/cupcake/pull/90)
-- Cupcake tables [`#83`](https://code.ipreo.com/Ipreo/cupcake/pull/83)
-- add classes to popovers for popper.js compatibility [`#84`](https://code.ipreo.com/Ipreo/cupcake/pull/84)
-- Cupcake tables [`#78`](https://code.ipreo.com/Ipreo/cupcake/pull/78)
-- issue-76 add background for default alerts [`#77`](https://code.ipreo.com/Ipreo/cupcake/pull/77)
-- support using column classes without have to use c-col. [`#70`](https://code.ipreo.com/Ipreo/cupcake/pull/70)
+- fixes for Events team. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/87)**
+- Checkbox updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/90)**
+- Cupcake tables **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/83)**
+- add classes to popovers for popper.js compatibility **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/84)**
+- Cupcake tables **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/78)**
+- issue-76 add background for default alerts **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/77)**
+- support using column classes without have to use c-col. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/70)**
 
 ### Fixed
-- added support for header notification alert icon (#80) [`#74`](https://code.ipreo.com/Ipreo/cupcake/issues/74)
-- remove bottom margin from .c-alert-top: closes #64 [`#64`](https://code.ipreo.com/Ipreo/cupcake/issues/64)
+- added support for header notification alert icon (#80) **[View Fix](https://code.ipreo.com/Ipreo/cupcake/issues/74)**
+- remove bottom margin from .c-alert-top: closes #64 **[View Fix](https://code.ipreo.com/Ipreo/cupcake/issues/64)**
 
 ### Commits
-- base styles for new tables design [`27576d7`](https://code.ipreo.com/Ipreo/cupcake/commit/27576d7960381f286e508f0178970b1adbf146a8)
-- Revert &quot;checkbox &amp; radio syntax fixes&quot; (#86) [`39f5609`](https://code.ipreo.com/Ipreo/cupcake/commit/39f56092b6cb9f8862204765908e2fd1f859c970)
-- checkbox &amp; radio syntax fixes (#85) [`5a1778a`](https://code.ipreo.com/Ipreo/cupcake/commit/5a1778a47be95b8435af3f5e451741dfd76bea99)
-- update table designs [`4d2469c`](https://code.ipreo.com/Ipreo/cupcake/commit/4d2469cb42770048022ed3bfc9f2b55aae8f4e57)
-- made pagination non-specific to li adding .c-pagination-link : BREAKING syntax change (#82) [`124a89a`](https://code.ipreo.com/Ipreo/cupcake/commit/124a89a377011ae5eadc0ad14886439036130a4a)
-- add table line-height; (#79) [`7c435ea`](https://code.ipreo.com/Ipreo/cupcake/commit/7c435eaf9c00daec7e69bcc8e16736c04660a040)
-- add table line-height; [`a94e685`](https://code.ipreo.com/Ipreo/cupcake/commit/a94e68525027490036b81f8263b121fd810d3950)
-- used existing select form inputs [`4ae82c0`](https://code.ipreo.com/Ipreo/cupcake/commit/4ae82c0321a91b02326dde08172d5fd32a31a20c)
-- added starred state. removed old sass map - $table-colors. [`706af4b`](https://code.ipreo.com/Ipreo/cupcake/commit/706af4bee37f2de29f56d801aff7060450e34519)
-- c-btn-secondary active fix: [`c494b77`](https://code.ipreo.com/Ipreo/cupcake/commit/c494b7704943fa3716e032d8ad0b811df1b7f6bc)
-- Merge branch &#x27;master&#x27; into cupcake-tables [`bdef9bc`](https://code.ipreo.com/Ipreo/cupcake/commit/bdef9bc01a09f454fd7319d0513d9b98a6ff0c39)
-- Update CHANGELOG.md [`5d7f552`](https://code.ipreo.com/Ipreo/cupcake/commit/5d7f552e00ed2528fecf2cf0788c0582d6cbfa40)
-- Release 0.1.8 [`5028546`](https://code.ipreo.com/Ipreo/cupcake/commit/502854621635199e2cd421ea4dcc72a470e6b6d9)
+- base styles for new tables design **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/27576d7960381f286e508f0178970b1adbf146a8)**
+- Revert &quot;checkbox &amp; radio syntax fixes&quot; (#86) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39f56092b6cb9f8862204765908e2fd1f859c970)**
+- checkbox &amp; radio syntax fixes (#85) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5a1778a47be95b8435af3f5e451741dfd76bea99)**
+- update table designs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4d2469cb42770048022ed3bfc9f2b55aae8f4e57)**
+- made pagination non-specific to li adding .c-pagination-link : BREAKING syntax change (#82) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/124a89a377011ae5eadc0ad14886439036130a4a)**
+- add table line-height; (#79) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7c435eaf9c00daec7e69bcc8e16736c04660a040)**
+- add table line-height; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a94e68525027490036b81f8263b121fd810d3950)**
+- used existing select form inputs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4ae82c0321a91b02326dde08172d5fd32a31a20c)**
+- added starred state. removed old sass map - $table-colors. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/706af4bee37f2de29f56d801aff7060450e34519)**
+- c-btn-secondary active fix: **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c494b7704943fa3716e032d8ad0b811df1b7f6bc)**
+- Merge branch &#x27;master&#x27; into cupcake-tables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bdef9bc01a09f454fd7319d0513d9b98a6ff0c39)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5d7f552e00ed2528fecf2cf0788c0582d6cbfa40)**
+- Release 0.1.8 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/502854621635199e2cd421ea4dcc72a470e6b6d9)**
 
-## Release [0.1.7](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.6...0.1.7) - 2017-07-15
+## Release [0.1.7](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.6...0.1.7) :rocket:
+**15 July 2017**
+
 ### Merged
-- Pcs flavor updates [`#69`](https://code.ipreo.com/Ipreo/cupcake/pull/69)
+- Pcs flavor updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/69)**
 
 ### Commits
-- PCS Flavor update [`beb2aa0`](https://code.ipreo.com/Ipreo/cupcake/commit/beb2aa0f2258926f2f2f464a448b849af613fd93)
-- added select [`98239c2`](https://code.ipreo.com/Ipreo/cupcake/commit/98239c20200694bb2e2726eb09fe456b1f57038a)
-- Fix for checkbox and radio labels [`d000a93`](https://code.ipreo.com/Ipreo/cupcake/commit/d000a9395302390dece10509222cc0f841e5324f)
-- pcs-demo page [`256274c`](https://code.ipreo.com/Ipreo/cupcake/commit/256274c27d7576f284bb3273396edeccd85079ab)
-- Release 0.1.7 [`bfc8d44`](https://code.ipreo.com/Ipreo/cupcake/commit/bfc8d44c14763e577066ed1c0142efa9d348d302)
-- changelog [`01fc1b5`](https://code.ipreo.com/Ipreo/cupcake/commit/01fc1b54561c50598247a8bf10e8d75fd3223dc1)
-- Update CHANGELOG.md [`35d18db`](https://code.ipreo.com/Ipreo/cupcake/commit/35d18db1e3bd1414c6b36fde71b0c15ed1eca2d4)
-- Update CHANGELOG.md [`6bd8618`](https://code.ipreo.com/Ipreo/cupcake/commit/6bd86183e4895da236c84157f04acc1bcbb5535a)
+- PCS Flavor update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/beb2aa0f2258926f2f2f464a448b849af613fd93)**
+- added select **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/98239c20200694bb2e2726eb09fe456b1f57038a)**
+- Fix for checkbox and radio labels **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d000a9395302390dece10509222cc0f841e5324f)**
+- pcs-demo page **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/256274c27d7576f284bb3273396edeccd85079ab)**
+- Release 0.1.7 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bfc8d44c14763e577066ed1c0142efa9d348d302)**
+- changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/01fc1b54561c50598247a8bf10e8d75fd3223dc1)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/35d18db1e3bd1414c6b36fde71b0c15ed1eca2d4)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6bd86183e4895da236c84157f04acc1bcbb5535a)**
 
-## Release [0.1.6](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.4...0.1.6) - 2017-07-06
+## Release [0.1.6](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.4...0.1.6) :rocket:
+**6 July 2017**
+
 ### Merged
-- Added Card deck [`#66`](https://code.ipreo.com/Ipreo/cupcake/pull/66)
-- page loader [`#62`](https://code.ipreo.com/Ipreo/cupcake/pull/62)
+- Added Card deck **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/66)**
+- page loader **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/62)**
 
 ### Commits
-- changed circle loader&lt; added page for loaders [`f98ef30`](https://code.ipreo.com/Ipreo/cupcake/commit/f98ef30de74fd0fcea433ac535f05fece4d269e5)
-- CPCK-11 added a couple loaders [`2bf5eb5`](https://code.ipreo.com/Ipreo/cupcake/commit/2bf5eb5c843311c461b0f04a0cf3683bf2ef619f)
-- fix pill btn in group - updated deps. [`02d7bb7`](https://code.ipreo.com/Ipreo/cupcake/commit/02d7bb7622e43f7d113f77e4704b58b4837d213a)
-- small change for c-text-strong/bold [`6846875`](https://code.ipreo.com/Ipreo/cupcake/commit/68468755e91acba79d3398d14b937d05bcd46a1b)
-- reverted to previous version [`71d0d46`](https://code.ipreo.com/Ipreo/cupcake/commit/71d0d462481065fa2ce4666fb16e60b180d6d04e)
-- added HTML file for Modal windows [`a767035`](https://code.ipreo.com/Ipreo/cupcake/commit/a7670351f46af9516f2cf65a5ccd783c98ac12ff)
-- fixed couple bugs related to modal windows and loading indicators [`165d2f5`](https://code.ipreo.com/Ipreo/cupcake/commit/165d2f5d62e7ce6539694665cfe349f8ea3bf97f)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`b5bb079`](https://code.ipreo.com/Ipreo/cupcake/commit/b5bb079c7fa1448a1fecd930f8dff1d9cc468a6e)
-- Release 0.1.6 [`a6ae431`](https://code.ipreo.com/Ipreo/cupcake/commit/a6ae4311b9ac05448b2473a7b29c62c61a9b40bf)
-- minor fix modal windows [`dfb090d`](https://code.ipreo.com/Ipreo/cupcake/commit/dfb090d655f3d0b39f939a9b0bee2fa1e8392a0a)
-- c-text-black/white - use variables (#63) [`e9e0d6f`](https://code.ipreo.com/Ipreo/cupcake/commit/e9e0d6f14ed4045280be35f0aaa493b08e18d353)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`6ec8350`](https://code.ipreo.com/Ipreo/cupcake/commit/6ec8350f7735babe4a2ec10c3fef1703e324ec48)
+- changed circle loader&lt; added page for loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f98ef30de74fd0fcea433ac535f05fece4d269e5)**
+- CPCK-11 added a couple loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2bf5eb5c843311c461b0f04a0cf3683bf2ef619f)**
+- fix pill btn in group - updated deps. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/02d7bb7622e43f7d113f77e4704b58b4837d213a)**
+- small change for c-text-strong/bold **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/68468755e91acba79d3398d14b937d05bcd46a1b)**
+- reverted to previous version **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/71d0d462481065fa2ce4666fb16e60b180d6d04e)**
+- added HTML file for Modal windows **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a7670351f46af9516f2cf65a5ccd783c98ac12ff)**
+- fixed couple bugs related to modal windows and loading indicators **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/165d2f5d62e7ce6539694665cfe349f8ea3bf97f)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5bb079c7fa1448a1fecd930f8dff1d9cc468a6e)**
+- Release 0.1.6 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a6ae4311b9ac05448b2473a7b29c62c61a9b40bf)**
+- minor fix modal windows **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dfb090d655f3d0b39f939a9b0bee2fa1e8392a0a)**
+- c-text-black/white - use variables (#63) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e9e0d6f14ed4045280be35f0aaa493b08e18d353)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6ec8350f7735babe4a2ec10c3fef1703e324ec48)**
 
-## Release [0.1.4](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.3...0.1.4) - 2017-06-26
+## Release [0.1.4](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.3...0.1.4) :rocket:
+**26 June 2017**
+
 ### Commits
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`c11f6d9`](https://code.ipreo.com/Ipreo/cupcake/commit/c11f6d9626761121017d69e8adc5ad3a132337e6)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`eab1aec`](https://code.ipreo.com/Ipreo/cupcake/commit/eab1aecf3855b8777aedfd48034f6ec208497437)
-- Update README.md [`243f8b3`](https://code.ipreo.com/Ipreo/cupcake/commit/243f8b3d8f97806cd87a415a9ffd18ee2cd934ce)
-- 0.1.4 Release Changelog [`eb623e4`](https://code.ipreo.com/Ipreo/cupcake/commit/eb623e4045b2d98f6c44ffe422ab559f589a7dcc)
-- hotfix: text-white and text-black fix [`b6cc06c`](https://code.ipreo.com/Ipreo/cupcake/commit/b6cc06cf1e237de3b161c9ee0f6190b5838d3b3c)
-- Release 0.1.5 [`415b48f`](https://code.ipreo.com/Ipreo/cupcake/commit/415b48fc5c368a72d0c837df47ce3bdfde326200)
-- Release 0.1.4 [`d60fc30`](https://code.ipreo.com/Ipreo/cupcake/commit/d60fc30b7a4c8407df1b0e234db02a8e69294ee6)
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c11f6d9626761121017d69e8adc5ad3a132337e6)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eab1aecf3855b8777aedfd48034f6ec208497437)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/243f8b3d8f97806cd87a415a9ffd18ee2cd934ce)**
+- 0.1.4 Release Changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eb623e4045b2d98f6c44ffe422ab559f589a7dcc)**
+- hotfix: text-white and text-black fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b6cc06cf1e237de3b161c9ee0f6190b5838d3b3c)**
+- Release 0.1.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/415b48fc5c368a72d0c837df47ce3bdfde326200)**
+- Release 0.1.4 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d60fc30b7a4c8407df1b0e234db02a8e69294ee6)**
 
-## Release [0.1.3](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.2-rc.0...0.1.3) - 2017-06-26
+## Release [0.1.3](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.2-rc.0...0.1.3) :rocket:
+**26 June 2017**
+
 ### Merged
-- border helper classes [`#59`](https://code.ipreo.com/Ipreo/cupcake/pull/59)
-- #57 remove link selector from alerts. [`#58`](https://code.ipreo.com/Ipreo/cupcake/pull/58)
-- Linting [`#52`](https://code.ipreo.com/Ipreo/cupcake/pull/52)
-- BD: inputs, cards [`#51`](https://code.ipreo.com/Ipreo/cupcake/pull/51)
-- buttons and dropdown [`#49`](https://code.ipreo.com/Ipreo/cupcake/pull/49)
-- Card menu item fix [`#48`](https://code.ipreo.com/Ipreo/cupcake/pull/48)
-- Notifications navigation [`#47`](https://code.ipreo.com/Ipreo/cupcake/pull/47)
-- bd-fixes typography [`#46`](https://code.ipreo.com/Ipreo/cupcake/pull/46)
-- flavors tokens task [`#44`](https://code.ipreo.com/Ipreo/cupcake/pull/44)
-- Grid updates [`#43`](https://code.ipreo.com/Ipreo/cupcake/pull/43)
-- Variable parsing [`#38`](https://code.ipreo.com/Ipreo/cupcake/pull/38)
-- Bd fixes 3 [`#28`](https://code.ipreo.com/Ipreo/cupcake/pull/28)
-- bd tabs fix, variable names refactor. [`#24`](https://code.ipreo.com/Ipreo/cupcake/pull/24)
-- Cleanups to match updated comps [`#26`](https://code.ipreo.com/Ipreo/cupcake/pull/26)
-- variables in strong, small tags. remove h1 from reset. [`#23`](https://code.ipreo.com/Ipreo/cupcake/pull/23)
+- border helper classes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/59)**
+- #57 remove link selector from alerts. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/58)**
+- Linting **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/52)**
+- BD: inputs, cards **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/51)**
+- buttons and dropdown **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/49)**
+- Card menu item fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/48)**
+- Notifications navigation **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/47)**
+- bd-fixes typography **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/46)**
+- flavors tokens task **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/44)**
+- Grid updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/43)**
+- Variable parsing **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/38)**
+- Bd fixes 3 **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/28)**
+- bd tabs fix, variable names refactor. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/24)**
+- Cleanups to match updated comps **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/26)**
+- variables in strong, small tags. remove h1 from reset. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/23)**
 
 ### Commits
-- create invisionapp page. [`bc0213f`](https://code.ipreo.com/Ipreo/cupcake/commit/bc0213f83caf2b3c3939f21f30df3e0d91837b0d)
-- Added elements to invision page. [`dc84a27`](https://code.ipreo.com/Ipreo/cupcake/commit/dc84a27c3186d8bc161ecadfa72a1cfe579e8133)
-- init stylelinting [`c79a2ee`](https://code.ipreo.com/Ipreo/cupcake/commit/c79a2eef07502729bd0179c35ef7cb2003cbb1de)
-- add loaders [`a908124`](https://code.ipreo.com/Ipreo/cupcake/commit/a908124606b8de85e4f8e4d201a5d0e7227f7493)
-- switches, checksboxes, list groups [`cd57a46`](https://code.ipreo.com/Ipreo/cupcake/commit/cd57a46bb327b8868680e29fa0b4dfca9ca55dc6)
-- Visual regressions working (#42) [`d8b51a1`](https://code.ipreo.com/Ipreo/cupcake/commit/d8b51a14440faf8ba1b907b46f771e0a46f6846e)
-- added tables to invision page [`b79386a`](https://code.ipreo.com/Ipreo/cupcake/commit/b79386ae756a6f0249e00e1345f555d979b836e1)
-- add initial tokens file to BD [`4f315c0`](https://code.ipreo.com/Ipreo/cupcake/commit/4f315c08df1c3ba3942f176c7000b215da38476d)
-- Change and add new styles for modal view [`7607bcf`](https://code.ipreo.com/Ipreo/cupcake/commit/7607bcf31af333dc7a2086c6656c76ce8303dcdc)
-- Change and add new styles for modal view (#50) [`d3d7649`](https://code.ipreo.com/Ipreo/cupcake/commit/d3d7649561a21f052e3e06a705d983197e2e72e0)
-- pull in card changes [`66053a7`](https://code.ipreo.com/Ipreo/cupcake/commit/66053a7281818df3893b680b057ad3940d6d9125)
-- added form groups [`4196783`](https://code.ipreo.com/Ipreo/cupcake/commit/4196783e0e80446617c69b420a51023b902f4238)
-- northstar flavor fixes [`f160775`](https://code.ipreo.com/Ipreo/cupcake/commit/f160775fe1a53741d78ff145c71cd7c6e11c4612)
-- switch and checkbox disabled colors [`03fa361`](https://code.ipreo.com/Ipreo/cupcake/commit/03fa3611ffe0aee7bbc8776eed2e17fb2ed540d2)
-- stopped generating misc color classes [`7950517`](https://code.ipreo.com/Ipreo/cupcake/commit/795051771a78817e84f39e2401fcd643598a3028)
-- added c-btn-link, fixes to pcs styles [`710fb60`](https://code.ipreo.com/Ipreo/cupcake/commit/710fb600c716c0a3c36de435b745096928039d37)
-- Merge remote-tracking branch &#x27;origin/master&#x27; [`12dd4a9`](https://code.ipreo.com/Ipreo/cupcake/commit/12dd4a9c15cf00ecf8fea307e2c51edde906cc41)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`3694692`](https://code.ipreo.com/Ipreo/cupcake/commit/3694692d718730e89bce0a98a8af01f3af6b3b94)
-- Added c-btn-link (#54) [`e5ebedb`](https://code.ipreo.com/Ipreo/cupcake/commit/e5ebedb6d9c443500fb04ed37e516ff89cdb07c8)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`3c1b800`](https://code.ipreo.com/Ipreo/cupcake/commit/3c1b8006cc44f02d1b74bc23716eaec5c9161b94)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`8b9fda0`](https://code.ipreo.com/Ipreo/cupcake/commit/8b9fda05f783db923becef49f08ac59f6c57f02b)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`e1d7cd3`](https://code.ipreo.com/Ipreo/cupcake/commit/e1d7cd3dcf182e23fc802a8a25735f8403e9d432)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`c882ed9`](https://code.ipreo.com/Ipreo/cupcake/commit/c882ed90b3c6a51b362aeea0f12eaecc4f1d3895)
-- Merge remote-tracking branch &#x27;origin/master&#x27; [`d5953fc`](https://code.ipreo.com/Ipreo/cupcake/commit/d5953fc66d0288f4703e06998b9f146331a7900d)
-- northstar is now the base [`35d2d0c`](https://code.ipreo.com/Ipreo/cupcake/commit/35d2d0cbb7b9006feb1e954ebcf9c0cfe4306f34)
-- precommit hooks [`08d4623`](https://code.ipreo.com/Ipreo/cupcake/commit/08d46237a6235f2059364628888fde3d69494a2b)
-- button group fix [`f49600b`](https://code.ipreo.com/Ipreo/cupcake/commit/f49600b4e4ab34ffddf90e7f0a7d82df31bbe369)
-- Fix grid gutters, position class import order [`c1af7c8`](https://code.ipreo.com/Ipreo/cupcake/commit/c1af7c89b6619b67ba35635c98256a0b54f04c30)
-- BD tables (#53) [`32781a0`](https://code.ipreo.com/Ipreo/cupcake/commit/32781a0f7f2b3671a23f7a4919cfe2bc126e848f)
-- Buyside flavor fix (#60) [`20149cf`](https://code.ipreo.com/Ipreo/cupcake/commit/20149cf97c9b75471bc3e7c58d8c09b3dce845f9)
-- gulpfile small cleanup [`2fe48ab`](https://code.ipreo.com/Ipreo/cupcake/commit/2fe48ab85467812a00359631a82ed3a23ba231ff)
-- bd-inputs fine adjustments.  add vars in dropdowns, buttons. [`5e0d7d5`](https://code.ipreo.com/Ipreo/cupcake/commit/5e0d7d5f5e7fd4de0cbdcc2ce422d5013e8963e4)
-- fixed dropdown flex and shadowson input-groups, badges line-height [`c157889`](https://code.ipreo.com/Ipreo/cupcake/commit/c157889f2b8f59e1cf302f0e0c88170432e4a784)
-- add XS size for buttons [`c7c8856`](https://code.ipreo.com/Ipreo/cupcake/commit/c7c885696556829a1fb79728f97850d5c1152e07)
-- file upload styling [`dc8665b`](https://code.ipreo.com/Ipreo/cupcake/commit/dc8665beac68ac6e2e1b0260264e877c3e859753)
-- bd flavor - c-box, shadows [`4d506aa`](https://code.ipreo.com/Ipreo/cupcake/commit/4d506aa968795acc5b6c63cacfb4e5d649c8f03f)
-- BD tabs [`93d2b10`](https://code.ipreo.com/Ipreo/cupcake/commit/93d2b10535ca6cdeb38fba5442c4ca8fa759e424)
-- bd flavor - forms colors [`d06e6f3`](https://code.ipreo.com/Ipreo/cupcake/commit/d06e6f33287dfef5cb40c39e188a73a817bb777a)
-- grid demo fix [`c5ecf67`](https://code.ipreo.com/Ipreo/cupcake/commit/c5ecf67f638afa07bfc22cf7f9bc72cfd359aaa7)
-- fix for paragraph and padding class names conflict (#55) [`28b0654`](https://code.ipreo.com/Ipreo/cupcake/commit/28b065463db86ad428fdefa6bda6d199d0f40187)
-- updating release files [`33f62ed`](https://code.ipreo.com/Ipreo/cupcake/commit/33f62eda75f959936e8577c406aa5b57b8ac8fe5)
-- fix &#x27;scrape-variables&#x27; task overwriting tokens files [`8cd249e`](https://code.ipreo.com/Ipreo/cupcake/commit/8cd249ecf0ff676f22673599d4f863dc6e5c8d8f)
-- notification flex-item [`e189026`](https://code.ipreo.com/Ipreo/cupcake/commit/e189026ba845ff278b20267021e81b75d1b761d9)
-- variable flavors generate to &quot;tokens&quot; to not overwrite existing variables (#41) [`767d147`](https://code.ipreo.com/Ipreo/cupcake/commit/767d147484ec900ff4a6ee8c9d66ab07f3f05c2c)
-- badge line-height fix [`20d8ec2`](https://code.ipreo.com/Ipreo/cupcake/commit/20d8ec29103686f6beea4d6a482e585af1649a2d)
-- fix btn sizes in BD. fix typo in $btn-size-padding. (#27) [`04771f5`](https://code.ipreo.com/Ipreo/cupcake/commit/04771f5070ba1d050f4ce704a4919324703c71ef)
-- BD checkboxes [`8e874cf`](https://code.ipreo.com/Ipreo/cupcake/commit/8e874cf0ebda631b7cffa3de9c37f34923152b92)
-- Release 0.1.3 [`9aa8f3c`](https://code.ipreo.com/Ipreo/cupcake/commit/9aa8f3c26a4ef05e4951003488c1ed062efd33bb)
-- Add link to documentation site. (#40) [`928efda`](https://code.ipreo.com/Ipreo/cupcake/commit/928efda0b1e83b2247b325652c9c97123a7008fd)
-- bd-adjustments - grid gutters, form label padding. [`81130e3`](https://code.ipreo.com/Ipreo/cupcake/commit/81130e3535e84b41873d98e87f38677311c888d7)
-- form input fix [`c6f0a57`](https://code.ipreo.com/Ipreo/cupcake/commit/c6f0a579741b56a960a8e0fc16abb3a894c4fbf7)
+- create invisionapp page. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bc0213f83caf2b3c3939f21f30df3e0d91837b0d)**
+- Added elements to invision page. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dc84a27c3186d8bc161ecadfa72a1cfe579e8133)**
+- init stylelinting **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c79a2eef07502729bd0179c35ef7cb2003cbb1de)**
+- add loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a908124606b8de85e4f8e4d201a5d0e7227f7493)**
+- switches, checksboxes, list groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cd57a46bb327b8868680e29fa0b4dfca9ca55dc6)**
+- Visual regressions working (#42) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d8b51a14440faf8ba1b907b46f771e0a46f6846e)**
+- added tables to invision page **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b79386ae756a6f0249e00e1345f555d979b836e1)**
+- add initial tokens file to BD **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4f315c08df1c3ba3942f176c7000b215da38476d)**
+- Change and add new styles for modal view **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7607bcf31af333dc7a2086c6656c76ce8303dcdc)**
+- Change and add new styles for modal view (#50) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d3d7649561a21f052e3e06a705d983197e2e72e0)**
+- pull in card changes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/66053a7281818df3893b680b057ad3940d6d9125)**
+- added form groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4196783e0e80446617c69b420a51023b902f4238)**
+- northstar flavor fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f160775fe1a53741d78ff145c71cd7c6e11c4612)**
+- switch and checkbox disabled colors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/03fa3611ffe0aee7bbc8776eed2e17fb2ed540d2)**
+- stopped generating misc color classes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/795051771a78817e84f39e2401fcd643598a3028)**
+- added c-btn-link, fixes to pcs styles **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/710fb600c716c0a3c36de435b745096928039d37)**
+- Merge remote-tracking branch &#x27;origin/master&#x27; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/12dd4a9c15cf00ecf8fea307e2c51edde906cc41)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3694692d718730e89bce0a98a8af01f3af6b3b94)**
+- Added c-btn-link (#54) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e5ebedb6d9c443500fb04ed37e516ff89cdb07c8)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3c1b8006cc44f02d1b74bc23716eaec5c9161b94)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8b9fda05f783db923becef49f08ac59f6c57f02b)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e1d7cd3dcf182e23fc802a8a25735f8403e9d432)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c882ed90b3c6a51b362aeea0f12eaecc4f1d3895)**
+- Merge remote-tracking branch &#x27;origin/master&#x27; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d5953fc66d0288f4703e06998b9f146331a7900d)**
+- northstar is now the base **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/35d2d0cbb7b9006feb1e954ebcf9c0cfe4306f34)**
+- precommit hooks **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/08d46237a6235f2059364628888fde3d69494a2b)**
+- button group fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f49600b4e4ab34ffddf90e7f0a7d82df31bbe369)**
+- Fix grid gutters, position class import order **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c1af7c89b6619b67ba35635c98256a0b54f04c30)**
+- BD tables (#53) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/32781a0f7f2b3671a23f7a4919cfe2bc126e848f)**
+- Buyside flavor fix (#60) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/20149cf97c9b75471bc3e7c58d8c09b3dce845f9)**
+- gulpfile small cleanup **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2fe48ab85467812a00359631a82ed3a23ba231ff)**
+- bd-inputs fine adjustments.  add vars in dropdowns, buttons. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5e0d7d5f5e7fd4de0cbdcc2ce422d5013e8963e4)**
+- fixed dropdown flex and shadowson input-groups, badges line-height **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c157889f2b8f59e1cf302f0e0c88170432e4a784)**
+- add XS size for buttons **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c7c885696556829a1fb79728f97850d5c1152e07)**
+- file upload styling **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dc8665beac68ac6e2e1b0260264e877c3e859753)**
+- bd flavor - c-box, shadows **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4d506aa968795acc5b6c63cacfb4e5d649c8f03f)**
+- BD tabs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/93d2b10535ca6cdeb38fba5442c4ca8fa759e424)**
+- bd flavor - forms colors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d06e6f33287dfef5cb40c39e188a73a817bb777a)**
+- grid demo fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c5ecf67f638afa07bfc22cf7f9bc72cfd359aaa7)**
+- fix for paragraph and padding class names conflict (#55) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/28b065463db86ad428fdefa6bda6d199d0f40187)**
+- updating release files **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/33f62eda75f959936e8577c406aa5b57b8ac8fe5)**
+- fix &#x27;scrape-variables&#x27; task overwriting tokens files **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8cd249ecf0ff676f22673599d4f863dc6e5c8d8f)**
+- notification flex-item **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e189026ba845ff278b20267021e81b75d1b761d9)**
+- variable flavors generate to &quot;tokens&quot; to not overwrite existing variables (#41) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/767d147484ec900ff4a6ee8c9d66ab07f3f05c2c)**
+- badge line-height fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/20d8ec29103686f6beea4d6a482e585af1649a2d)**
+- fix btn sizes in BD. fix typo in $btn-size-padding. (#27) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/04771f5070ba1d050f4ce704a4919324703c71ef)**
+- BD checkboxes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8e874cf0ebda631b7cffa3de9c37f34923152b92)**
+- Release 0.1.3 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9aa8f3c26a4ef05e4951003488c1ed062efd33bb)**
+- Add link to documentation site. (#40) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/928efda0b1e83b2247b325652c9c97123a7008fd)**
+- bd-adjustments - grid gutters, form label padding. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/81130e3535e84b41873d98e87f38677311c888d7)**
+- form input fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c6f0a579741b56a960a8e0fc16abb3a894c4fbf7)**
 
-## Release [0.1.2-rc.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.1-rc.0...0.1.2-rc.0) - 2017-02-21
+## Release [0.1.2-rc.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.1-rc.0...0.1.2-rc.0) :rocket:
+**21 February 2017**
+
 ### Merged
-- ability to have different style for btn active state [`#17`](https://code.ipreo.com/Ipreo/cupcake/pull/17)
-- remove c-btn-dropdown class [`#20`](https://code.ipreo.com/Ipreo/cupcake/pull/20)
+- ability to have different style for btn active state **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/17)**
+- remove c-btn-dropdown class **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/20)**
 
 ### Commits
-- removed codeclimate.yml [`c9a2e43`](https://code.ipreo.com/Ipreo/cupcake/commit/c9a2e438d20156df7aa3145511e14cb4d2d6ffce)
-- Release 0.1.2-rc.0 [`6ac1444`](https://code.ipreo.com/Ipreo/cupcake/commit/6ac144428e41c5bbd2d9316d056e5d122767f63c)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`5b810f9`](https://code.ipreo.com/Ipreo/cupcake/commit/5b810f952b6317d5ca1ff794c898434dbd773174)
-- codeclimate test [`4625f5d`](https://code.ipreo.com/Ipreo/cupcake/commit/4625f5dbe3dd12ff33545a215c5d5a08a5cd5aac)
+- removed codeclimate.yml **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c9a2e438d20156df7aa3145511e14cb4d2d6ffce)**
+- Release 0.1.2-rc.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6ac144428e41c5bbd2d9316d056e5d122767f63c)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5b810f952b6317d5ca1ff794c898434dbd773174)**
+- codeclimate test **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4625f5dbe3dd12ff33545a215c5d5a08a5cd5aac)**
 
-## Release [0.1.1-rc.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.0-rc.0...0.1.1-rc.0) - 2017-02-10
+## Release [0.1.1-rc.0](https://code.ipreo.com/Ipreo/cupcake/compare/0.1.0-rc.0...0.1.1-rc.0) :rocket:
+**10 February 2017**
+
 ### Commits
-- Release 0.1.1-rc.0 [`1b8f9bf`](https://code.ipreo.com/Ipreo/cupcake/commit/1b8f9bf45f0a3d34677c53595c356715cf4e622b)
-- Removed a. from list group item [`0e71217`](https://code.ipreo.com/Ipreo/cupcake/commit/0e7121706f381530c6f3562ad46c7704cc8efbbc)
+- Release 0.1.1-rc.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1b8f9bf45f0a3d34677c53595c356715cf4e622b)**
+- Removed a. from list group item **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0e7121706f381530c6f3562ad46c7704cc8efbbc)**
 
-## 0.1.0-rc.0 - 2017-02-09
+## 0.1.0-rc.0
+**9 February 2017**
+
 ### Merged
-- Bd adjustments 2 [`#15`](https://code.ipreo.com/Ipreo/cupcake/pull/15)
-- .ipreo-ul-unstyled - doesn&#x60;t override .ipreo-ul [`#13`](https://code.ipreo.com/Ipreo/cupcake/pull/13)
-- remove old unused variables [`#14`](https://code.ipreo.com/Ipreo/cupcake/pull/14)
-- table states, including selected. table-condensed. [`#12`](https://code.ipreo.com/Ipreo/cupcake/pull/12)
-- remove old forms files [`#11`](https://code.ipreo.com/Ipreo/cupcake/pull/11)
-- the box element bd-flavor, input-results fixes. [`#10`](https://code.ipreo.com/Ipreo/cupcake/pull/10)
-- Bd adjustments. [`#9`](https://code.ipreo.com/Ipreo/cupcake/pull/9)
-- Bd adjustments [`#8`](https://code.ipreo.com/Ipreo/cupcake/pull/8)
-- fix links in cards [`#4`](https://code.ipreo.com/Ipreo/cupcake/pull/4)
-- Develop [`#2`](https://code.ipreo.com/Ipreo/cupcake/pull/2)
+- Bd adjustments 2 **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/15)**
+- .ipreo-ul-unstyled - doesn&#x60;t override .ipreo-ul **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/13)**
+- remove old unused variables **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/14)**
+- table states, including selected. table-condensed. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/12)**
+- remove old forms files **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/11)**
+- the box element bd-flavor, input-results fixes. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/10)**
+- Bd adjustments. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/9)**
+- Bd adjustments **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/8)**
+- fix links in cards **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/4)**
+- Develop **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/2)**
 
 ### Commits
-- Release 0.1.0-rc.0 [`1024bb9`](https://code.ipreo.com/Ipreo/cupcake/commit/1024bb9acd22d6451129a7695d33644424dc8134)
-- .idea folder added to ignore [`1d953b9`](https://code.ipreo.com/Ipreo/cupcake/commit/1d953b973a6939724998a2fedffe65f58ae70946)
-- added support for release-it and changelog [`bd6736b`](https://code.ipreo.com/Ipreo/cupcake/commit/bd6736bbaf038e050fabac0c59fc89113bb2a802)
-- bd-flavored tabs [`e87d54c`](https://code.ipreo.com/Ipreo/cupcake/commit/e87d54c12abbb4621cc45295f0c63c6b0911dd2c)
-- Selector Discrepancy Between Default and BD [`ea0cff2`](https://code.ipreo.com/Ipreo/cupcake/commit/ea0cff2723ac49ae66fc898fc00521fedb9f0815)
-- Merge branch &#x27;master&#x27; into bd-adjustments-2 [`3a1dfdb`](https://code.ipreo.com/Ipreo/cupcake/commit/3a1dfdbfedad7040a31d832e8e52bcfc4d8372b9)
-- change list color [`151bb13`](https://code.ipreo.com/Ipreo/cupcake/commit/151bb13958919084043328502752b74389ff6ad6)
-- tabs, box adjustments [`0c7dbaa`](https://code.ipreo.com/Ipreo/cupcake/commit/0c7dbaa5060a238bf42b9018c01c0d60592ad370)
-- table states [`1b2cbb2`](https://code.ipreo.com/Ipreo/cupcake/commit/1b2cbb25d5fd2e20164e3e51407b22f8c03a49ec)
-- Merge branch &#x27;master&#x27; into bd-adjustments [`9e38e46`](https://code.ipreo.com/Ipreo/cupcake/commit/9e38e460df352e99ba50c0c7abbc5b05dd9341e3)
-- added card menu icon classes and variables [`8e623ba`](https://code.ipreo.com/Ipreo/cupcake/commit/8e623ba21086151e864b35c3128de651cd90b0a1)
-- adjusting grid gutter. [`30981e8`](https://code.ipreo.com/Ipreo/cupcake/commit/30981e823767108276a8e10ccd96deba27b703ec)
-- Merge branch &#x27;master&#x27; into bd-adjustments [`2715529`](https://code.ipreo.com/Ipreo/cupcake/commit/2715529b5ceb835f0592f39c5d3466db3452e355)
-- cleanup and linting [`b570550`](https://code.ipreo.com/Ipreo/cupcake/commit/b570550e62277ecc351f4d8762931f34f56285d0)
-- added square switches [`8000545`](https://code.ipreo.com/Ipreo/cupcake/commit/800054597d681d3f9d1399be68fb0a2334a8142d)
-- fixes tab border [`ff790a3`](https://code.ipreo.com/Ipreo/cupcake/commit/ff790a328a01064ad193a8b6999cbe5d19b7a791)
-- renaming .c-p-lg to .c-p-lead in typography. small fixes. [`24bc6e2`](https://code.ipreo.com/Ipreo/cupcake/commit/24bc6e26baa2672cc5a04b2bfeeb965afbcce99d)
-- restore overwritten(by 85945e0) changes in tables. [`fea7c45`](https://code.ipreo.com/Ipreo/cupcake/commit/fea7c4582aa29bb1e258451a9f0df12e04b00aa0)
-- Added export mixins for space &amp; flex [`5610a5f`](https://code.ipreo.com/Ipreo/cupcake/commit/5610a5f78b873192c99f657776d31ef50e712390)
-- hotfix - fix spacing duplication across flavors [`678b4f5`](https://code.ipreo.com/Ipreo/cupcake/commit/678b4f50ad49627f8831ea2c9968a8a631cfa622)
-- hotfix -  font-size duplicated in btn-colors [`8ffcfc1`](https://code.ipreo.com/Ipreo/cupcake/commit/8ffcfc192fe0650421ef6c8dd22757f719c910e1)
-- moved to single .c-container [`213dd85`](https://code.ipreo.com/Ipreo/cupcake/commit/213dd850d6ef8c4c088ab5a41ffc8f067439e8fe)
-- breakpoints and class fixes [`988a013`](https://code.ipreo.com/Ipreo/cupcake/commit/988a013e26ae35fb644f04937360b289f6bd9466)
-- fixed spacing duplications [`cb1012c`](https://code.ipreo.com/Ipreo/cupcake/commit/cb1012ca708b3c06d22bf871f3ef711b2ef228fa)
-- removed box content [`445a113`](https://code.ipreo.com/Ipreo/cupcake/commit/445a1139a67d8374211ed381aba0d5200c62916f)
-- pcs naming fixes [`b27d9e9`](https://code.ipreo.com/Ipreo/cupcake/commit/b27d9e9193cc4c1d86ae4db41e41c061190dfe22)
-- simple box component [`9693aa5`](https://code.ipreo.com/Ipreo/cupcake/commit/9693aa52cb34a9871c5999bded6c937e567402fe)
-- Tabs scroll bar fix [`57e2d85`](https://code.ipreo.com/Ipreo/cupcake/commit/57e2d85fb4a4cbeab6b33a56e25353cd0f1c1baf)
-- container max-widths, spacing and mq fixes [`85945e0`](https://code.ipreo.com/Ipreo/cupcake/commit/85945e009b0436dad2124861bb96bf289dab1588)
-- BF-flavor angle-down -&gt; caret-down [`3b89376`](https://code.ipreo.com/Ipreo/cupcake/commit/3b89376a979dc55a4d436053c0065753ee40dffa)
-- BD-flavor forms, headers, table adjustments [`b622774`](https://code.ipreo.com/Ipreo/cupcake/commit/b622774b99471688d98c3a759c040d31c013d7dc)
-- BD-flavor styling - tables [`8c37028`](https://code.ipreo.com/Ipreo/cupcake/commit/8c37028bdc6594ba38b139360cb552440c68a556)
-- card, base table styling for bd flavor [`984ab81`](https://code.ipreo.com/Ipreo/cupcake/commit/984ab8142f33ee333ae8e362ecaf44820ce5222e)
-- Merge branch &#x27;master&#x27; into bd-adjustments [`6c78fd1`](https://code.ipreo.com/Ipreo/cupcake/commit/6c78fd1d7cd80b5437c65d7061971c497af19434)
-- buttons and forms in bd-flavor [`b618cfd`](https://code.ipreo.com/Ipreo/cupcake/commit/b618cfd43c8d092f13c09f3849901dc094ed879e)
-- added containers (#7) [`b0dc87d`](https://code.ipreo.com/Ipreo/cupcake/commit/b0dc87d0d3ee78a53c6fedc6f0630dadaf1d30be)
-- BD: typography, buttons, dropdown [`14d5eba`](https://code.ipreo.com/Ipreo/cupcake/commit/14d5ebad5ea901443b66424ce0efb15aa08c3cf9)
-- Cleaned up buttons and button groups - table import fixes [`d9aee5f`](https://code.ipreo.com/Ipreo/cupcake/commit/d9aee5f10d3c15f90abeb9257ac32f6682f366ef)
-- Merge branch &#x27;button-groups&#x27; of code.ipreo.com:Ipreo/cupcake into button-groups [`77bf0ac`](https://code.ipreo.com/Ipreo/cupcake/commit/77bf0acb0d4b1e0945a717af98fb8b57ed7d5578)
-- table fixes [`47fc98c`](https://code.ipreo.com/Ipreo/cupcake/commit/47fc98cb16dc9cc4ae85f0243d30aa44804fab81)
-- table fix [`bffe155`](https://code.ipreo.com/Ipreo/cupcake/commit/bffe15521ad080d17b8bfa9c6b2aaa759d164330)
-- typography helper import order [`4a1368a`](https://code.ipreo.com/Ipreo/cupcake/commit/4a1368ade885a32c16d0886a16cad3cfbdf77bcb)
-- add ng-dirty class to ng-validation [`f344373`](https://code.ipreo.com/Ipreo/cupcake/commit/f344373425ec9117788435ae9276b7c12348d0bb)
-- Cleaned up buttons and button groups [`d549408`](https://code.ipreo.com/Ipreo/cupcake/commit/d54940813a5fd00e0ea57707d26889cc4162b1bc)
-- Fixes font/flavor refs [`f3047fb`](https://code.ipreo.com/Ipreo/cupcake/commit/f3047fb5493d30f837a043d47e6c928cec8e38cf)
-- fix for dropdown overrides. [`ee25902`](https://code.ipreo.com/Ipreo/cupcake/commit/ee2590230dc3a3a82891ffa6f5ecd6f125d812a9)
-- flavor can be added with &#x27;gulp new flavor --name something&#x27; [`b219845`](https://code.ipreo.com/Ipreo/cupcake/commit/b219845507c51e220e89e90c3568680f58435e83)
-- updated gulpfile based on structure conversations [`bf37ae7`](https://code.ipreo.com/Ipreo/cupcake/commit/bf37ae7fce0f3d28c36d2a69b98115370acfb7ba)
-- updated .gitignore and gulpfile [`06f20ec`](https://code.ipreo.com/Ipreo/cupcake/commit/06f20ec633bcb4c267a76c57109b491926bed30c)
-- Merge branch &#x27;gulpANDc-&#x27; [`f586328`](https://code.ipreo.com/Ipreo/cupcake/commit/f586328759dca6f312e30ce21d5487a099ec3234)
-- Merge [`d0a2daa`](https://code.ipreo.com/Ipreo/cupcake/commit/d0a2daae01d8da52df0f240c13d31eea40a72769)
-- Fixed package.json [`50697fc`](https://code.ipreo.com/Ipreo/cupcake/commit/50697fcf56d6d525c5b0f461b5dd44bf37c0d97e)
-- Update package.json [`ce9931f`](https://code.ipreo.com/Ipreo/cupcake/commit/ce9931f761fe37a90f7c8888c479e43456e1b0dc)
-- Gulp and c- prefix [`fc1dbeb`](https://code.ipreo.com/Ipreo/cupcake/commit/fc1dbeb3486e79290fcfd961bac5f53069c37192)
-- changed copy npm task. [`6f34669`](https://code.ipreo.com/Ipreo/cupcake/commit/6f346696340ee151100b01530492108ff76d50f3)
-- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake [`149703c`](https://code.ipreo.com/Ipreo/cupcake/commit/149703cc5f24c6c7f0ee463d540ab392de45e81a)
-- - removed dist [`09ce413`](https://code.ipreo.com/Ipreo/cupcake/commit/09ce4131ecf7af1d1f31d1aae5dd4c7b9fb4765f)
-- Update README.md [`566f53d`](https://code.ipreo.com/Ipreo/cupcake/commit/566f53d73a5581eb09103867fdee984c20d29fc3)
-- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake [`92f2cee`](https://code.ipreo.com/Ipreo/cupcake/commit/92f2cee5ac9cbe153cab019d4f2bcfd9c594634b)
-- logo-fix [`8bc6c00`](https://code.ipreo.com/Ipreo/cupcake/commit/8bc6c002e204a2b7c92ae84af95c7d55227dfd0c)
-- Update README.md [`815bce0`](https://code.ipreo.com/Ipreo/cupcake/commit/815bce05d7e7c6e6425c0f999cd4a68cdf64a41e)
-- logo-update [`fd71d56`](https://code.ipreo.com/Ipreo/cupcake/commit/fd71d56805cfd7c65445e170bc1a9d3dbb6e8bb5)
-- stylelint [`e997b1c`](https://code.ipreo.com/Ipreo/cupcake/commit/e997b1c23b5c0658d771b2aec1599036a8f9978d)
-- Update README.md [`c0408e0`](https://code.ipreo.com/Ipreo/cupcake/commit/c0408e07b39f684c21947113e23c784fa94c0402)
-- Update README.md [`f132051`](https://code.ipreo.com/Ipreo/cupcake/commit/f132051f4a7a542f2cdf7b1f3996302512c1120d)
-- Update README.md [`c38df1d`](https://code.ipreo.com/Ipreo/cupcake/commit/c38df1d56453f9fc7f47edf2ceb6bdcbef4a7ae6)
-- Init core [`26f5408`](https://code.ipreo.com/Ipreo/cupcake/commit/26f5408433d0f438d5063a40fc19971d1c39a0d3)
-- Update README.md [`92c8a03`](https://code.ipreo.com/Ipreo/cupcake/commit/92c8a03151eb09ac39c887dc50290b8efb8e07fa)
-- Update README.md [`a6db93e`](https://code.ipreo.com/Ipreo/cupcake/commit/a6db93e5c8094985f848f0f039b190928e325e90)
-- Add files via upload [`febcb32`](https://code.ipreo.com/Ipreo/cupcake/commit/febcb32ea6cfe45b2b7a212a2e359dc212389c61)
-- Update README.md [`24963e3`](https://code.ipreo.com/Ipreo/cupcake/commit/24963e356853deed8a1019d20ddf20caae065c56)
-- Initial commit [`ab25715`](https://code.ipreo.com/Ipreo/cupcake/commit/ab25715fd61a809e12480d8ba5e9e81ac5ccd913)
+- Release 0.1.0-rc.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1024bb9acd22d6451129a7695d33644424dc8134)**
+- .idea folder added to ignore **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1d953b973a6939724998a2fedffe65f58ae70946)**
+- added support for release-it and changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bd6736bbaf038e050fabac0c59fc89113bb2a802)**
+- bd-flavored tabs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e87d54c12abbb4621cc45295f0c63c6b0911dd2c)**
+- Selector Discrepancy Between Default and BD **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ea0cff2723ac49ae66fc898fc00521fedb9f0815)**
+- Merge branch &#x27;master&#x27; into bd-adjustments-2 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3a1dfdbfedad7040a31d832e8e52bcfc4d8372b9)**
+- change list color **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/151bb13958919084043328502752b74389ff6ad6)**
+- tabs, box adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0c7dbaa5060a238bf42b9018c01c0d60592ad370)**
+- table states **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1b2cbb25d5fd2e20164e3e51407b22f8c03a49ec)**
+- Merge branch &#x27;master&#x27; into bd-adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9e38e460df352e99ba50c0c7abbc5b05dd9341e3)**
+- added card menu icon classes and variables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8e623ba21086151e864b35c3128de651cd90b0a1)**
+- adjusting grid gutter. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/30981e823767108276a8e10ccd96deba27b703ec)**
+- Merge branch &#x27;master&#x27; into bd-adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2715529b5ceb835f0592f39c5d3466db3452e355)**
+- cleanup and linting **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b570550e62277ecc351f4d8762931f34f56285d0)**
+- added square switches **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/800054597d681d3f9d1399be68fb0a2334a8142d)**
+- fixes tab border **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ff790a328a01064ad193a8b6999cbe5d19b7a791)**
+- renaming .c-p-lg to .c-p-lead in typography. small fixes. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/24bc6e26baa2672cc5a04b2bfeeb965afbcce99d)**
+- restore overwritten(by 85945e0) changes in tables. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fea7c4582aa29bb1e258451a9f0df12e04b00aa0)**
+- Added export mixins for space &amp; flex **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5610a5f78b873192c99f657776d31ef50e712390)**
+- hotfix - fix spacing duplication across flavors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/678b4f50ad49627f8831ea2c9968a8a631cfa622)**
+- hotfix -  font-size duplicated in btn-colors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8ffcfc192fe0650421ef6c8dd22757f719c910e1)**
+- moved to single .c-container **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/213dd850d6ef8c4c088ab5a41ffc8f067439e8fe)**
+- breakpoints and class fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/988a013e26ae35fb644f04937360b289f6bd9466)**
+- fixed spacing duplications **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cb1012ca708b3c06d22bf871f3ef711b2ef228fa)**
+- removed box content **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/445a1139a67d8374211ed381aba0d5200c62916f)**
+- pcs naming fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b27d9e9193cc4c1d86ae4db41e41c061190dfe22)**
+- simple box component **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9693aa52cb34a9871c5999bded6c937e567402fe)**
+- Tabs scroll bar fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/57e2d85fb4a4cbeab6b33a56e25353cd0f1c1baf)**
+- container max-widths, spacing and mq fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/85945e009b0436dad2124861bb96bf289dab1588)**
+- BF-flavor angle-down -&gt; caret-down **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3b89376a979dc55a4d436053c0065753ee40dffa)**
+- BD-flavor forms, headers, table adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b622774b99471688d98c3a759c040d31c013d7dc)**
+- BD-flavor styling - tables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8c37028bdc6594ba38b139360cb552440c68a556)**
+- card, base table styling for bd flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/984ab8142f33ee333ae8e362ecaf44820ce5222e)**
+- Merge branch &#x27;master&#x27; into bd-adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6c78fd1d7cd80b5437c65d7061971c497af19434)**
+- buttons and forms in bd-flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b618cfd43c8d092f13c09f3849901dc094ed879e)**
+- added containers (#7) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b0dc87d0d3ee78a53c6fedc6f0630dadaf1d30be)**
+- BD: typography, buttons, dropdown **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/14d5ebad5ea901443b66424ce0efb15aa08c3cf9)**
+- Cleaned up buttons and button groups - table import fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d9aee5f10d3c15f90abeb9257ac32f6682f366ef)**
+- Merge branch &#x27;button-groups&#x27; of code.ipreo.com:Ipreo/cupcake into button-groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/77bf0acb0d4b1e0945a717af98fb8b57ed7d5578)**
+- table fixes **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/47fc98cb16dc9cc4ae85f0243d30aa44804fab81)**
+- table fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bffe15521ad080d17b8bfa9c6b2aaa759d164330)**
+- typography helper import order **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4a1368ade885a32c16d0886a16cad3cfbdf77bcb)**
+- add ng-dirty class to ng-validation **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f344373425ec9117788435ae9276b7c12348d0bb)**
+- Cleaned up buttons and button groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d54940813a5fd00e0ea57707d26889cc4162b1bc)**
+- Fixes font/flavor refs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f3047fb5493d30f837a043d47e6c928cec8e38cf)**
+- fix for dropdown overrides. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ee2590230dc3a3a82891ffa6f5ecd6f125d812a9)**
+- flavor can be added with &#x27;gulp new flavor --name something&#x27; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b219845507c51e220e89e90c3568680f58435e83)**
+- updated gulpfile based on structure conversations **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bf37ae7fce0f3d28c36d2a69b98115370acfb7ba)**
+- updated .gitignore and gulpfile **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/06f20ec633bcb4c267a76c57109b491926bed30c)**
+- Merge branch &#x27;gulpANDc-&#x27; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f586328759dca6f312e30ce21d5487a099ec3234)**
+- Merge **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d0a2daae01d8da52df0f240c13d31eea40a72769)**
+- Fixed package.json **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50697fcf56d6d525c5b0f461b5dd44bf37c0d97e)**
+- Update package.json **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ce9931f761fe37a90f7c8888c479e43456e1b0dc)**
+- Gulp and c- prefix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fc1dbeb3486e79290fcfd961bac5f53069c37192)**
+- changed copy npm task. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6f346696340ee151100b01530492108ff76d50f3)**
+- Merge branch &#x27;master&#x27; of code.ipreo.com:Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/149703cc5f24c6c7f0ee463d540ab392de45e81a)**
+- - removed dist **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/09ce4131ecf7af1d1f31d1aae5dd4c7b9fb4765f)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/566f53d73a5581eb09103867fdee984c20d29fc3)**
+- Merge branch &#x27;master&#x27; of https://code.ipreo.com/Ipreo/cupcake **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f2cee5ac9cbe153cab019d4f2bcfd9c594634b)**
+- logo-fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8bc6c002e204a2b7c92ae84af95c7d55227dfd0c)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/815bce05d7e7c6e6425c0f999cd4a68cdf64a41e)**
+- logo-update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fd71d56805cfd7c65445e170bc1a9d3dbb6e8bb5)**
+- stylelint **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e997b1c23b5c0658d771b2aec1599036a8f9978d)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c0408e07b39f684c21947113e23c784fa94c0402)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f132051f4a7a542f2cdf7b1f3996302512c1120d)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c38df1d56453f9fc7f47edf2ceb6bdcbef4a7ae6)**
+- Init core **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/26f5408433d0f438d5063a40fc19971d1c39a0d3)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92c8a03151eb09ac39c887dc50290b8efb8e07fa)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a6db93e5c8094985f848f0f039b190928e325e90)**
+- Add files via upload **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/febcb32ea6cfe45b2b7a212a2e359dc212389c61)**
+- Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/24963e356853deed8a1019d20ddf20caae065c56)**
+- Initial commit **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ab25715fd61a809e12480d8ba5e9e81ac5ccd913)**
 
