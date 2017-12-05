@@ -1,0 +1,122 @@
+////
+/// @group cards
+////
+
+/// $card-header-font-size       
+$card-header-font-size           : 14px !default;
+
+/// $card-header-font-weight     
+$card-header-font-weight         : bold !default;
+
+/// $card-body-font-size         
+$card-body-font-size             : 12px !default;
+
+/// $card-title-font-size        
+$card-title-font-size            : 18px !default;
+
+/// $card-title-font-weight      
+$card-title-font-weight          : bold !default;
+
+/// $card-title-margin           
+$card-title-margin               : .25rem 0 !default;
+
+/// $card-subtitle-font-size     
+$card-subtitle-font-size         : 16px !default;
+
+/// $card-text-color             
+$card-text-color                 : $global-text-color !default;
+
+/// $card-menu-font-size      
+$card-menu-font-size             : 100% !default;
+
+/// $card-header-icon-color      
+$card-header-icon-color          : $secondary !default;
+
+/// $card-header-icon-hover-color: 
+$card-header-icon-hover-color    : lighten($secondary, 10%) !default;
+
+/// $card-header-text-color      
+$card-header-text-color          : $global-text-color !default;
+
+/// $card-border-color           
+$card-border                     : 1px solid $color-gray-2 !default;
+
+/// $card-border-radius          
+$card-border-radius              : $global-radius !default;
+
+/// $card-min-width              
+$card-min-width                  : 250px !default;
+
+/// $card-bg                     
+$card-bg                         : $white !default;
+
+/// $card-padding-v              
+$card-padding-v                  : 0.9375rem !default;
+
+/// $card-padding-h              
+$card-padding-h                  : 0.9375rem !default;
+
+/// $card-shadow                 
+$card-shadow                     : 0 2px 4px 0 rgba(33, 37, 41, 0.05) !default;
+
+/// $card-shadow-hover           
+$card-shadow-hover               : $card-shadow !default;
+
+/// $card-transition             
+$card-transition                 : none !default;
+
+/// $card-header-border-bottom   
+$card-header-border-bottom       : 1px solid rgba(177, 177, 177, 0.15) !default;
+
+/// $card-primary
+$card-primary                    : $primary;
+
+/// $card-success
+$card-success                    : $success;
+
+/// $card-danger
+$card-danger                     : $danger;
+
+/// $card-warning
+$card-warning                    : $warning;
+
+/// $card-group-margin
+$card-group-margin                    : 15px;
+
+/// $base-card-width            
+$card-deck-base-card-width             : 100% !default;
+
+/// $base-card-height            
+$card-deck-base-card-height            : 350px !default;
+
+/// $base-card-margin-bottom     
+$card-deck-base-card-margin-bottom     : 10px !default;
+
+/// $card-deck-padding           
+$card-deck-padding           : 10px !default;
+
+/// $card-deck-mobile-padding    
+$card-deck-mobile-padding    : 0 !default;
+
+/// $card-deck-tablet-padding    
+$card-deck-tablet-padding    : 20px !default;
+
+/// $card-deck-laptop-padding    
+$card-deck-laptop-padding    : 20px !default;
+
+/// $card-deck-laptop-card-width 
+$card-deck-laptop-card-width : calc(50% - 5px) !default;
+
+/// $card-deck-desktop-padding  
+$card-deck-desktop-padding   : 20px !default;
+
+/// $card-deck-desktop-card-width
+$card-deck-desktop-card-width: calc(33.333% - 6.667px) !default;
+
+/// $card-deck-hd-padding        
+$card-deck-hd-padding        : 20px !default;
+
+/// $card-deck-hd-card-width
+$card-deck-hd-card-width     : calc(25% - 7.5px) !default;
+
+

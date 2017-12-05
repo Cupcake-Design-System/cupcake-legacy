@@ -1,0 +1,110 @@
+// Single Column: 0 - 767px
+.c-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: $card-deck-padding;
+
+  .c-card {
+    height: $card-deck-base-card-height;
+    max-width: $card-deck-base-card-width;
+    flex: 0 0 $card-deck-base-card-width;
+    margin-bottom: $card-deck-base-card-margin-bottom;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+// Extra Small Devices
+@include media-breakpoint-down(xs) {
+  .c-card-deck {
+    padding-left: $card-deck-mobile-padding;
+    padding-right: $card-deck-mobile-padding;
+
+    .c-card {
+      transform-origin: top left;
+    }
+  }
+}
+
+// Single Column: 768 - 1439px
+@include media-breakpoint-up(md) {
+  .c-card-deck {
+    padding: $card-deck-tablet-padding;
+
+    .c-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+// Double Column: 1000px
+@include media-breakpoint-up(lg) {
+  .c-card-deck {
+    padding: $card-deck-laptop-padding;
+
+    .c-card {
+      flex: 0 0 $card-deck-laptop-card-width;
+      max-width: $card-deck-laptop-card-width;
+
+      &:nth-child(2n+1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Triple Column: 1440px - 1919px
+@include media-breakpoint-up(xxl) {
+  .c-card-deck {
+    padding: $card-deck-desktop-padding;
+
+    .c-card {
+      flex: 0 0 $card-deck-desktop-card-width;
+      max-width: $card-deck-desktop-card-width;
+
+      &:nth-child(even),
+      &:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:nth-child(3n+2) {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+// Quadruple Column
+@media (min-width: 2110px) {
+  .c-card-deck {
+    padding: $card-deck-hd-padding;
+
+    .c-card {
+      flex: 0 0 $card-deck-hd-card-width;
+      max-width: $card-deck-hd-card-width;
+
+      &:nth-child(even),
+      &:nth-child(odd) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:nth-child(4n+2) {
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+
+      &:nth-child(4n+3) {
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
