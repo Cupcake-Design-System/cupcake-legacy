@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "auto-changelog": "^1.1.0",
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^7.2.1",
     "backstopjs": "^3.0.32",
     "browser-sync": "^2.18.13",
     "colors": "^1.1.2",
@@ -51,14 +51,15 @@
     "gulp-style-extract": "^1.0.2",
     "gulp-stylelint": "^5.0.0",
     "husky": "^0.14.3",
-    "lint-staged": "^5.0.0",
+    "lint-staged": "^6.0.0",
     "list-selectors": "^2.0.0",
     "octophant": "^1.0.1",
     "run-sequence": "^2.2.0",
     "source-sans-pro": "^2.0.10",
-    "stylelint-config-standard": "^17.0.0",
+    "stylelint": "^8.3.1",
+    "stylelint-config-standard": "^18.0.0",
     "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-scss": "^2.1.0",
+    "stylelint-scss": "^2.2.0",
     "surge": "^0.19.0",
     "vinyl-paths": "^2.1.0"
   }
