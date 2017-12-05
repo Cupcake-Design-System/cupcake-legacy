@@ -85,6 +85,7 @@
 
   color: $primary;
   box-shadow: none;
+  font-weight: $btn-link-font-weight;
 
   &:hover {
     color: lighten($primary, 10);
