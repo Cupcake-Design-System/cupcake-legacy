@@ -2,10 +2,10 @@
 /// @group modals
 ////
 
-/// $modals-z-index           
+/// $modals-z-index
 $modals-z-index: 1050 !default;
 
-/// $modals-dialog-top-magin  
+/// $modals-dialog-top-magin
 $modals-dialog-top-magin: 30px !default;
 
 /// $modals-confirmation-margin-top
@@ -14,19 +14,19 @@ $modals-confirmation-margin-top: 140px !default;
 /// $modals-confirmation-margin-top
 $modals-confirmation-width: 400px !default;
 
-/// $modals-width             
+/// $modals-width
 $modals-width: 600px !default;
 
-/// $modals-border-radius    
+/// $modals-border-radius
 $modals-border-radius: .3rem !default;
 
 /// $modals-box-shadow
 $modals-shadow: 0 6px 20px 0 rgba($global-text-color, 0.8) !default;
 
-/// $modals-header-border    
+/// $modals-header-border
 $modals-border: 1px solid $color-gray-3 !default;
 
-/// $modals-transition        
+/// $modals-transition
 $modals-transition: opacity .35s !default;
 
 /// $modals-close-absolute
@@ -35,7 +35,7 @@ $modals-close-absolute: false !default;
 /// $modals-close-top-right
 $modals-close-size: 30px !default;
 
-/// $modals-close-padding 
+/// $modals-close-padding
 $modals-close-padding: 0 2px !default;
 
 /// $modals-close-color
@@ -152,6 +152,8 @@ $modal-footer-padding: 10px 20px !default;
     outline: 0 none;
     box-shadow: $modals-shadow;
     border-radius: $modals-border-radius;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   &-header {
@@ -175,6 +177,7 @@ $modal-footer-padding: 10px 20px !default;
   }
 
   &-title {
+    width: 100%;
     margin: 0;
     color: $modals-default-color;
     font-size: $modals-title-font-size;
