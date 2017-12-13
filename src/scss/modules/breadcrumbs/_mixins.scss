@@ -1,0 +1,55 @@
+////
+/// @group breadcrumbs
+////
+
+///$breadcrumb-padding          
+$breadcrumb-padding          : 0 !default;
+
+///$breadcrumb-color            
+$breadcrumb-color            : $color-gray-9 !default;
+
+///$breadcrumb-color-active     
+$breadcrumb-color-active     : $breadcrumb-color !default;
+
+///$breadcrumb-font-size        
+$breadcrumb-font-size        : 12px !default;
+
+///$breadcrumb-font-weight      
+$breadcrumb-font-weight      : bold !default;
+
+///$breadcrumb-divider-padding  
+$breadcrumb-divider-padding  : 0 12px !default;
+
+///$breadcrumb-divider-font-size
+$breadcrumb-divider-font-size: 0.75rem !default;
+
+///$breadcrumb-divider-color    
+$breadcrumb-divider-color    : $color-gray-3 !default;
+
+///$breadcrumb-divider-content  
+$breadcrumb-divider-content  : "\f105" !default;
+
+
+@mixin breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  color: $breadcrumb-color;
+  background-color: transparent;
+  padding: $breadcrumb-padding;
+  font-size: $breadcrumb-font-size;
+  font-weight: $breadcrumb-font-weight;
+  list-style: none;
+}
+
+
+@mixin breadcrumb-divider($content: $breadcrumb-divider-content) {
+  display: inline-block;
+  font-family: FontAwesome;
+  vertical-align: middle;
+  content: $breadcrumb-divider-content;
+  font-size: $breadcrumb-divider-font-size;
+  color: $breadcrumb-divider-color;
+  padding: $breadcrumb-divider-padding;
+}
+
+

@@ -1,0 +1,19 @@
+@import "mixins";
+
+.c-breadcrumb {
+  @include breadcrumb;
+}
+
+.c-breadcrumb-item {
+  font-size: $breadcrumb-font-size;
+  font-weight: bold;
+
+  + .c-breadcrumb-item::before {
+    @include breadcrumb-divider;
+  }
+
+  &-active {
+    color: $breadcrumb-color-active;
+  }
+}
+
