@@ -2,7 +2,7 @@
 
 .c-badge {
   @include badge;
-  @include badge-style($primary, $white);
+  @include badge-style($color-gray-9, $white);
 
   &-rounded {
     border-radius: $badge-border-radius-rounded;
@@ -11,7 +11,55 @@
   }
 
   &-outline {
-    @include badge-style($primary, $primary);
+    @include badge-style($color-gray-9, $color-gray-9);
+  }
+}
+
+.c-badge-secondary {
+  @include badge-style($badge-secondary, $color-gray-9);
+
+  border: 1px solid $color-gray-4;
+
+  .c-badge-link {
+    color: $color-gray-7;
+    opacity: .8;
+
+    &:hover {
+      color: $color-gray-9;
+      opacity: 1;
+    }
+  }
+}
+
+.c-badge-primary {
+  @include badge-style($badge-primary);
+
+  &-outline {
+    @include badge-outline($badge-primary);
+  }
+}
+
+.c-badge-success {
+  @include badge-style($badge-success);
+
+  &-outline {
+    @include badge-outline($badge-success);
+  }
+}
+
+.c-badge-warning {
+  @include badge-style($badge-warning);
+
+  &-outline {
+    @include badge-outline($badge-warning);
+  }
+}
+
+.c-badge-danger {
+  @include badge-style($badge-danger);
+
+  &-outline {
+    @include badge-outline($badge-danger);
   }
 }
 
@@ -24,34 +72,6 @@
 
     &:empty {
       padding: $badge-size-font - 6;
-    }
-  }
-}
-
-@each $badge-color in $badge-colors {
-  $badge-color-namespace: nth($badge-color, 1);
-  $badge-bg-color: nth($badge-color, 2);
-  $badge-color: nth($badge-color, 3);
-
-  .c-badge-#{$badge-color-namespace} {
-    @include badge-style($badge-bg-color, $badge-color);
-
-    &-outline {
-      @include badge-style(transparent, $badge-bg-color);
-
-      border: 1px solid $badge-bg-color;
-    }
-  }
-}
-
-.c-badge-secondary {
-  .c-badge-link {
-    color: $color-gray-7;
-    opacity: .8;
-
-    &:hover {
-      color: $color-gray-7;
-      opacity: 1;
     }
   }
 }

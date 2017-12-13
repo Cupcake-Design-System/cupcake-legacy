@@ -38,19 +38,22 @@ $badge-lg: 18px !default;
 /// $badge-xl: 
 $badge-xl: 20px !default;
 
-/// $primary
+/// $badge-color
+$badge-color: $white;
+
+/// $badge-primary
 $badge-primary: $primary;
 
-/// $secondary
+/// $badge-secondary
 $badge-secondary: $color-gray-1;
 
-/// $success
+/// $badge-success
 $badge-success: $success;
 
-/// $danger
+/// $badge-danger
 $badge-danger: $danger;
 
-/// $warning
+/// $badge-warning
 $badge-warning: $warning;
 
 
@@ -60,13 +63,6 @@ $badge-sizes:
   ("lg", $badge-lg)
   ("xl", $badge-xl) !default;
 
-// $badge-colors
-$badge-colors:
-  ("primary", $badge-primary, $white, $badge-primary)
-  ("secondary", $badge-secondary, $color-gray-7, $color-gray-4)
-  ("success", $badge-success, $white, $badge-success)
-  ("danger", $badge-danger, $white, $badge-danger)
-  ("warning", $badge-warning, $white, $badge-warning) !default;
 
 @mixin badge {
   display: inline-block;
@@ -96,4 +92,10 @@ $badge-colors:
 @mixin badge-style($background-color, $color: $badge-color) {
   background-color: $background-color;
   color: $color;
+}
+
+@mixin badge-outline($color: $badge-color) {
+  background-color: transparent;
+  color: $color;
+  border: 1px solid $color;
 }
