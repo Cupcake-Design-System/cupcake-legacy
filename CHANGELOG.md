@@ -1,3 +1,21 @@
+## Release [1.1.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.9...1.1.10) :rocket:
+**15 December 2017**
+
+### Merged
+- nav and layout updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/183)**
+- feature: add breadcrumbs **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/180)**
+- update badge style **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/181)**
+- fixed issue with long non-breaking words in modals **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/182)**
+- Feature: Add Card-Deck, Card-Group **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/178)**
+- c-btn-link font-weight for bd flavour **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/179)**
+- &#x60;feat(changelog): adds auto changelog **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/177)**
+
+### Commits
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6647d2149f74af03d1f7fbf1c728fc90c795eda1)**
+- Release 1.1.10 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5ed693e62ef92bddcc46372038d075d9f866a6dc)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f65bab8a8da21a5d10af0934654e5b2bf079b307)**
+- stylelint dep. bump **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f70288d54a7a6d2e4c6296cdbbd0fe2cececfdc6)**
+
 ## Release [1.1.9](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.8...1.1.9) :rocket:
 **29 November 2017**
 
