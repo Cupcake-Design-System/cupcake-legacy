@@ -8,7 +8,7 @@
 - fixed issue with long non-breaking words in modals **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/182)**
 - Feature: Add Card-Deck, Card-Group **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/178)**
 - c-btn-link font-weight for bd flavour **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/179)**
-- &#x60;feat(changelog): adds auto changelog **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/177)**
+- feature: adds auto changelog **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/177)**
 
 ### Commits
 - Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6647d2149f74af03d1f7fbf1c728fc90c795eda1)**
