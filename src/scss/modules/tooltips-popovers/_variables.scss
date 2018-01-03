@@ -11,10 +11,16 @@ $popover-max-width           : 300px !default;
 // $popover-padding     
 $popover-padding             : 6px 10px !default;
 
-// $popover-fs          
+// $popover-fs
 $popover-fs                  : 14px !default;
 
-// $popover-fs          
+// $popover-family
+$popover-family              : $font-body-font-family !default;
+
+// $popover-line-height
+$popover-line-height         : $font-body-line-height !default;
+
+// $popover-color
 $popover-color               : $color-gray-7 !default;
 
 // $popover-bd-width    
