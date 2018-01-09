@@ -4,6 +4,8 @@
   max-width: $popover-max-width;
   padding: $popover-padding;
   font-size: $popover-fs;
+  font-family: $popover-family;
+  line-height: $popover-line-height;
   color: $popover-color;
   background: $popover-bg;
   border: $popover-bd-width solid $popover-bd-c;
