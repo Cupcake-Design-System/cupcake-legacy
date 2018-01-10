@@ -80,9 +80,25 @@ $dropdown-font-weight      : normal;
 $dropdown-radius           : 4px;
 $dropdown-divider-margin   : 5px;
 
-$popover-bd-c   : rgba(0, 0, 0, 0.18);
-$popover-shadow : $dropdown-box-shadow;
-$popover-color  : $font-body-color;
+$popover-bd-c          : rgba(0, 0, 0, 0.18);
+$popover-shadow        : $dropdown-box-shadow;
+$popover-color         : $font-body-color;
+$popover-bd-radius     : 6px;
+$popover-contextual-fw : normal;
+
+$popover-success-bg   : #e6f8dd;
+$popover-success-bd   : rgba(0, 0, 0, 0.17);
+$popover-success-color: #42721f;
+$popover-primary-bg   : $color-primary-0;
+$popover-primary-bd   : rgba(0, 0, 0, 0.17);
+$popover-primary-color: $color-primary-7;
+$popover-warning-bg   : #fef7e3;
+$popover-warning-bd   : rgba(0, 0, 0, 0.17);
+$popover-warning-color: #866c28;
+$popover-danger-bg    : #fde9e8;
+$popover-danger-bd    : rgba(0, 0, 0, 0.17);
+$popover-danger-color : #965650;
+
 
 $control-font-size           : $font-body-font-size;
 $control-line-height         : 1.15;
@@ -268,17 +284,3 @@ $toast-alert-info-bar-bg: #cdecf5;
 
 $notify-width: 20vw;
 $notify-min-width: 265px;
-
-
-$popover-success-bg   : $color-success-0;
-$popover-success-bd   : $color-gray-3;
-$popover-success-color: $color-success-7;
-$popover-primary-bg   : $color-primary-0;
-$popover-primary-bd   : $color-gray-3;
-$popover-primary-color: $color-primary-7;
-$popover-warning-bg   : $color-warning-0;
-$popover-warning-bd   : $color-gray-3;
-$popover-warning-color: $color-warning-7;
-$popover-danger-bg    : $color-danger-0;
-$popover-danger-bd    : $color-gray-3;
-$popover-danger-color : $color-danger-7;
