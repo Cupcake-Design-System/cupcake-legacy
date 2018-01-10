@@ -136,7 +136,7 @@
 
 @mixin popover-color($bg: $color-primary-7, $color: $color-gray-0, $bd: $popover-bd-c) {
   color: $color;
-  font-weight: bold;
+  font-weight: $popover-contextual-fw;
   background: $bg;
   border: 1px solid $bd;
 
