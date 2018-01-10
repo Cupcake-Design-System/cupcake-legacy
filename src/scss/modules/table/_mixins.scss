@@ -71,6 +71,9 @@ $table-foot-font-color: $color-gray-6 !default;
 /// $table-header-font-size  
 $table-header-font-size: 12px !default;
 
+/// $table-header-footer-font-weight  
+$table-header-footer-font-weight: bold !default;
+
 /// $table-cell-font-size    
 $table-cell-font-size: 12px !default;
 
@@ -157,7 +160,7 @@ $table-states: ("selected", $table-state-selected)
       td {
         border-right: $table-border;
         padding: $table-padding;
-        font-weight: bold;
+        font-weight: $table-header-footer-font-weight;
       }
     }
 
