@@ -36,7 +36,6 @@ var metaHeader = `
 /* ----------------------- */
 /* 🎂 CUPCAKE 🎂 */
 /* pkg name: ${pkg.name} */
-/* version: ${pkg.version} */
 `;
 
 var metaFooter = `
