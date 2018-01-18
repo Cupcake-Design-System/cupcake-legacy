@@ -156,7 +156,7 @@ gulp.task('flavors', function() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
-    .pipe(cleanCSS({format: 'beautify'}))
+    .pipe(cleanCSS({format: 'beautify', rebase: false}))
     .pipe(rename({
       dirname: ''
     }))
@@ -171,7 +171,7 @@ gulp.task('flavors', function() {
 gulp.task('styles:build', function() {
   return gulp.src(bases.dist + '**/*.css')
     .pipe(gcmq())  
-    .pipe(cleanCSS())
+    .pipe(cleanCSS({rebase: false}))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist))
 });
