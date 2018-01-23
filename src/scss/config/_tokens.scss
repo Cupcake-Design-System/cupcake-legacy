@@ -291,6 +291,25 @@ $font-body-xl-font-family: Arial, Helvetica, Sans-Serif !default;
   font-family: $font-body-xl-font-family;
 }
 
+
+// body-xl font style
+$font-body-xxl-font-size: 34px !default;
+$font-body-xxl-line-height: 40px !default;
+$font-body-xxl-color: #495057 !default;
+$font-body-xxl-font-style: normal !default;
+$font-body-xxl-font-weight: 400 !default;
+$font-body-xxl-font-family: Arial, Helvetica, Sans-Serif !default;
+
+@mixin font-body-xxl () {
+  font-size: $font-body-xxl-font-size;
+  line-height: $font-body-xxl-line-height;
+  color: $font-body-xxl-color;
+  font-style: $font-body-xxl-font-style;
+  font-weight: $font-body-xxl-font-weight;
+  font-family: $font-body-xxl-font-family;
+}
+
+
 // body-lg font style
 $font-body-lg-font-size: 18px !default;
 $font-body-lg-line-height: 25px !default;

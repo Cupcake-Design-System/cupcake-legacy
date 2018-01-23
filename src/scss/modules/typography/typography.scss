@@ -11,6 +11,10 @@
 .c-text {
   @include font-body;
 
+  &-xxl {
+    @include font-body-xxl;
+  }
+
   &-xl {
     @include font-body-xl;
   }
