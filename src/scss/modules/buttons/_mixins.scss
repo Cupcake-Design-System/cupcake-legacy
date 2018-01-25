@@ -187,7 +187,7 @@
 
 // Button Secondary
 
-@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
+@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bg-active: $btn-secondary-bg-active, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
   border: 1px solid $bd;
   background-color: $bg;
   color: $color;
@@ -208,6 +208,12 @@
     background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     background-color: $bg-hover;
     z-index: 1002;
+  }
+
+  @if $bg-active {
+    &:active {
+      background: $bg-active;
+    }
   }
 }
 
