@@ -54,10 +54,10 @@ $pagination-item-color-disabled  : #d8d8d8 !default;
 $pagination-item-color-sm        : #0a0a0a !default;
 
 /// $pagination-item-color-hover-sm  
-$pagination-item-color-hover-sm  : #0082de !default;
+$pagination-item-color-hover-sm  : $primary !default;
 
 /// $pagination-item-current-color-sm:
-$pagination-item-current-color-sm: #0082de !default;
+$pagination-item-current-color-sm: $primary !default;
 
 
 @mixin pagination-container {

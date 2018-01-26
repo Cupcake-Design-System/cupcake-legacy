@@ -53,7 +53,7 @@ $toast-alert-warning-color: $warning !default;
 $toast-alert-success-color: $success !default;
 
 /// $toast-alert-info-color 
-$toast-alert-info-color: $color-primary-7 !default;
+$toast-alert-info-color: $primary !default;
 
 
 /// $toast-alert-danger-bar-bg 
@@ -66,20 +66,20 @@ $toast-alert-warning-bar-bg: $warning !default;
 $toast-alert-success-bar-bg: $success !default;
 
 /// $toast-alert-info-bar-bg 
-$toast-alert-info-bar-bg: $color-primary-7 !default;
+$toast-alert-info-bar-bg: $primary !default;
 
 
 /// $toast-alert-danger-bar-bd 
-$toast-alert-danger-bar-bd: $color-danger-8 !default;
+$toast-alert-danger-bar-bd: darken($danger, 5) !default;
 
 /// $toast-alert-warning-bar-bd 
-$toast-alert-warning-bar-bd: $color-warning-8 !default;
+$toast-alert-warning-bar-bd: darken($warning, 5) !default;
 
 /// $toast-alert-success-bar-bd 
-$toast-alert-success-bar-bd: $color-success-8 !default;
+$toast-alert-success-bar-bd: darken($success, 5) !default;
 
 /// $toast-alert-info-bar-bd 
-$toast-alert-info-bar-bd: $color-primary-8 !default;
+$toast-alert-info-bar-bd: darken($primary, 5) !default;
 
 
 /// $toast-alert-close-size 
