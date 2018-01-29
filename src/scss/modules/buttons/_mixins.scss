@@ -21,11 +21,6 @@
   @if $btn-shadow == true {
     box-shadow: $btn-shadow-inset;
   }
-
-
-  &:active {
-    box-shadow: $btn-shadow-active;
-  }
 }
 
 
@@ -148,7 +143,11 @@
   text-decoration: none;
   background-color: desaturate($bg, 15%);
   border-color: darken($border, 15%);
-  box-shadow: $btn-shadow-active, $btn-shadow-focus;
+  box-shadow: $btn-shadow-active;
+
+  &:focus {
+    box-shadow: $btn-shadow-active, $btn-shadow-focus;
+  }
 }
 
 @mixin btn-active-selected () {
@@ -161,6 +160,10 @@
       border-color: transparent;
       background: $btn-active-selected;
       box-shadow: $btn-shadow-active;
+    }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
     }
   }
 }
@@ -210,9 +213,16 @@
     z-index: 1002;
   }
 
-  @if $bg-active {
-    &:active {
+  &:active,
+  &-active {
+    box-shadow: $btn-shadow-active;
+
+    @if $bg-active {
       background: $bg-active;
+    }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
     }
   }
 }
