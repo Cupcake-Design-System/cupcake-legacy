@@ -20,6 +20,9 @@ $tabs-color-hover: $primary !default;
 /// $tabs-color-active: $primary!default;
 $tabs-color-active: $primary !default;
 
+/// $tabs-color-disabled
+$tabs-color-disabled: $color-gray-3 !default;
+
 /// $tabs-font-weight
 $tabs-font-weight: bold !default;
 
@@ -136,3 +139,21 @@ $tab-font-size-lg: 20px !default;
 }
 
 
+@mixin tab-item-disabled {
+  &,
+  & a,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $tabs-color-disabled;
+    cursor: not-allowed;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+  }
+}
