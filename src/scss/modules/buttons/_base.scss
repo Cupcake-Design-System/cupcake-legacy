@@ -150,16 +150,13 @@
   }
 }
 
+
 .c-btn-block {
   display: block;
   width: 100%;
   text-align: center;
 }
 
-//TODO cleaner approach
-.c-btn-secondary.c-btn-active {
-  box-shadow: $btn-shadow-active;
-}
 
 .c-btn-link {
   &-secondary,
