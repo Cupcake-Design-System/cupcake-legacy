@@ -72,26 +72,6 @@ $control-addon-background       : #eeeeee !default;
 $control-element-padding        : 1em 0 !default;
 /// $control-element-label-padding 
 $control-element-label-padding  : 0 0 $control-padding-v 0 !default;
-/// $control-select-padding-r   
-$control-select-padding-r       : 1em !default;
-// $control-select-background-img  
-$control-select-background-img  : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
-// $control-select-background-img  
-$control-select-background-img-disabled : url("data:image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
-/// $control-select-background-pos  
-$control-select-background-pos  : 99% 50% !default;
-/// $control-select-background  
-$control-select-background      : $color-gray-0 !default;
-/// $control-select-background-hover  
-$control-select-background-hover: $color-gray-1 !default;
-/// $control-select-background-active
-$control-select-background-active: $color-gray-2 !default;
-/// $control-select-border-c  
-$control-select-border-c        : $color-gray-4 !default;
-/// $control-select-shadow  
-$control-select-shadow          :	0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
-/// $control-select-shadow-active
-$control-select-shadow-active   :	inset 0 1px 0 1px $color-gray-4 !default;
 /// $control-results-border         
 $control-results-border         : 1px solid rgb(204, 204, 204) !default;
 /// $control-results-shadow         
@@ -191,3 +171,55 @@ $control-colors:
 $control-ng-validation:
   ("ng-valid", "success")
   ("ng-invalid", "error") !default;
+
+
+/// $select-border-color
+$select-border-color : $color-gray-4 !default;
+/// $select-background
+$select-background   : $color-gray-0 !default;
+/// $select-color
+$select-color        : $color-gray-7 !default;
+/// $select-box-shadow
+$select-box-shadow   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+/// $select-border-radius
+$select-border-radius: $control-border-radius !default;
+/// $select-padding
+$select-padding      : 7px 10px !default;
+/// $select-padding-sm
+$select-padding-sm   : 3px 10px !default;
+/// $select-padding-lg
+$select-padding-lg   : 9px 20px !default;
+/// $select-padding-xl
+$select-padding-xl   : 11px 20px !default;
+/// $select-font-size
+$select-font-size    : 12px !default;
+/// $select-font-size-sm
+$select-font-size-sm : 11px !default;
+/// $select-font-size-lg
+$select-font-size-lg : 14px !default;
+/// $select-font-size-xl
+$select-font-size-xl : 18px !default;
+/// $select-height
+$select-height       : $control-height !default;
+/// $select-height-sm
+$select-height-sm    : $control-sm-height !default;
+/// $select-height-lg
+$select-height-lg    : $control-lg-height !default;
+/// $select-height-xl
+$select-height-xl    : $control-xl-height !default;
+/// $select-padding-r   
+$select-padding-r        : 22px !default;
+// $select-background-img  
+$select-background-img   : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+// $select-background-img  
+$select-background-img-disabled : url("data:image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+/// $select-background-pos  
+$select-background-pos   : right 6px top 50% !default;
+/// $select-background-hover  
+$select-background-hover : $color-gray-1 !default;
+/// $select-background-active
+$select-background-active: $color-gray-2 !default;
+/// $select-box-shadow-active
+$select-box-shadow-active: inset 0 1px 0 1px $color-gray-4 !default;
+/// $select-box-shadow-focus
+$select-box-shadow-focus : 0 0 1px 1px white, 0 0 2px 3px $color-primary-4 !default;

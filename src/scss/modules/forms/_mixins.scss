@@ -66,49 +66,6 @@
   }
 }
 
-@mixin select-input {
-  $dropdown-arrow: $control-select-background-img $control-select-background-pos no-repeat;
-
-  background: $dropdown-arrow, $control-select-background;
-  border-color: $control-select-border-c;
-  box-shadow: $control-select-shadow;
-  cursor: pointer;
-  user-select: none;
-
-  &::-ms-expand {
-    display: none;
-  }
-
-  &:focus::-ms-value {
-    color: $control-color;
-    background-color: transparent;
-  }
-
-  &:hover,
-  &.c-input-hover {
-    background: $dropdown-arrow, $control-select-background-hover;
-  }
-
-  &:active,
-  &.c-input-active {
-    background: $dropdown-arrow, $control-select-background-active;
-    box-shadow: $control-select-shadow-active;
-  }
-
-  &[disabled],
-  &.c-input-disabled {
-    &,
-    &:hover,
-    &:active {
-      @include input-disabled;
-
-      background: $control-select-background-img-disabled $control-select-background-pos no-repeat, $control-disabled-background;
-      box-shadow: none;
-    }
-  }
-}
-
-
 @mixin input-disabled {
   border-color: $control-disabled-border;
   background-color: $control-disabled-background;
