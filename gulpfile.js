@@ -241,6 +241,16 @@ gulp.task('northstar-scrape', function(done) {
    runSequence('tokens:northstar', done);
 });
 
+gulp.task('variables:bookbuild', function(cb) {
+  var options = {
+    title: `Cupcake Bookbuild Settings`,
+    output: bases.flavors + `bookbuild/_variables-STOCK.scss`,
+    sort: [
+      'global-non-tokens'
+    ]
+  };
+  octophant(bases.scss, options, cb);
+});
 
 
 gulp.task('variables:bd', function(cb) {

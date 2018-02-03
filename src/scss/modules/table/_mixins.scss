@@ -3,7 +3,7 @@
 ////
 
 /// $table-line-height
-$table-line-height: 20px !default;
+$table-line-height: 1.5 !default;
 
 /// $table-background       
 $table-background: $white !default;
@@ -161,6 +161,7 @@ $table-states: ("selected", $table-state-selected)
         border-right: $table-border;
         padding: $table-padding;
         font-weight: $table-header-footer-font-weight;
+        line-height: $table-line-height;
       }
     }
 
@@ -180,6 +181,7 @@ $table-states: ("selected", $table-state-selected)
     td {
       border-right: $table-border;
       padding: $table-padding;
+      line-height: $table-line-height;
     }
   }
 }
