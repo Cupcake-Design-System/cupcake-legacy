@@ -1,3 +1,25 @@
+## Release [1.2.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.12...1.2.0) :rocket:
+**2 February 2018**
+
+### Merged
+- added gulp task for variables, set base variables for bookbuild flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/201)**
+- Tabs disabled state **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/199)**
+- button focus+active state fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/198)**
+- White label fixes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/196)**
+- added body text for xxl **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/197)**
+- rename release-it config, restore pkg version meta info. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/192)**
+- #189 fix inconsistent borders inside input groups **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/193)**
+
+### Commits
+- button fix focus+active state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5da36df4558b46e34cce7c49fadbf7e876fb59a)**
+- Release 1.2.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39bef8f8bcfbf4fc1192d76f8a47452147e8fa0a)**
+- #153 btn secondary active background **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ee858e5831cb37d854791e8ad0b58c6322251c2a)**
+- clean-css plugin - stop fonts path processing **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bc0352d141460991fa1d71171feac2bad8dea2ac)**
+- restore secondary btn active state shadow **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bd72dbd51bccbc11f8403ddcc88eb61e6e4f2947)**
+- tabs link underline fix. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c61790669fb4ea720046632a0d3d00620e43bacb)**
+- adjustment to reset.css **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/736a33a119872dbf07b4d3c1d892c19d4965be0a)**
+- modal add overflow **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d48884f1089ff9322f53cc4e21ca4d1f9367c428)**
+
 ## Release [1.1.12](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.11...1.1.12) :rocket:
 **12 January 2018**
 
