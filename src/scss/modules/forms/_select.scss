@@ -75,8 +75,18 @@ select.c-input:not([multiple]) {
   @include select;
 }
 
-// for backwards compatibility
-.c-select {
+// for backwards compatibility. Remove in future.
+.c-select-sm,
+.c-select-lg,
+.c-select-xl {
+  @include select;
+}
+
+// for backwards compatibility. Remove in future.
+.c-select,
+.c-select-sm,
+.c-select-lg,
+.c-select-xl {
   select {
     appearance: none;
     position: absolute;
@@ -84,7 +94,7 @@ select.c-input:not([multiple]) {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: $select-padding;
+    padding-left: 7px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
@@ -104,11 +114,13 @@ select.c-input:not([multiple]) {
   }
 }
 
+
 // select sizes
 .c-select-sm,
 select.c-input:not([multiple]).c-input-sm {
   height: $control-sm-height;
   padding: $select-padding-sm;
+  padding-right: $select-padding-r;
   font-size: $select-font-size-sm;
 }
 
@@ -116,6 +128,7 @@ select.c-input:not([multiple]).c-input-sm {
 select.c-input:not([multiple]).c-input-lg {
   height: $control-lg-height;
   padding: $select-padding-lg;
+  padding-right: $select-padding-r;
   font-size: $select-font-size-lg;
 }
 
@@ -123,5 +136,6 @@ select.c-input:not([multiple]).c-input-lg {
 select.c-input:not([multiple]).c-input-xl {
   height: $control-xl-height;
   padding: $select-padding-xl;
+  padding-right: $select-padding-r;
   font-size: $select-font-size-xl;
 }
