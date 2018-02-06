@@ -31,11 +31,6 @@ textarea.c-input {
   height: auto;
 }
 
-// SELECTS
-select.c-input:not([multiple]) {
-  @include select-input;
-}
-
 
 // VALIDATION COLORS
 @each $name, $color, $bg in $control-colors {
