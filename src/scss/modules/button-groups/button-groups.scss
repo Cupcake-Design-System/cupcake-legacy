@@ -99,21 +99,6 @@
   }
 }
 
-// .c-btn-group {
-//   .c-btn-secondary:not(:disabled) {
-//     &:hover {
-//       border-right: 1px solid;
-//       margin-right: -1px;
-//       z-index: 1002;
-
-//       &:last-child {
-//         margin-right: 0;
-//       }
-//     }
-//   }
-// }
-
-
 .c-btn-group-sm {
   .c-btn-box {
     height: 30px;
@@ -154,5 +139,14 @@
         padding: 0;
       }
     }
+  }
+}
+
+.c-btn-group,
+.c-btn-group-vertical,
+.c-btn-group-stepper {
+  .c-btn:focus,
+  .c-btn:active {
+    z-index: 1;
   }
 }
