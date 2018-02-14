@@ -1,125 +1,141 @@
-$select-border-color : #ced4da !default;
-$select-bg-color     : #f8f9fa !default;
-$select-color        : #495057 !default;
-$select-box-shadow   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
-$select-border-radius: 2px !default;
-$select-padding      : 7px 10px !default;
-$select-padding-sm   : 3px 8px !default;
-$select-padding-lg   : 9px 12px !default;
-$select-padding-xl   : 11px 13px !default;
-$select-font-size    : 12px !default;
-$select-font-size-sm : 11px !default;
-$select-font-size-lg : 1.17em !default;
-$select-font-size-xl : 1.5em !default;
 
+@mixin select {
+  $_dropdown-arrow: $select-background-img $select-background-pos no-repeat;
 
-@mixin select($padding: $select-padding, $font-size: $select-font-size) {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
+  height: $control-height;
+  outline: 0;
+  appearance: none;
+  cursor: pointer;
+  padding: $select-padding;
+  padding-right: $select-padding-r;
+  font-size: $select-font-size;
+  font-weight: $control-font-weight;
+  line-height: $control-line-height;
+  text-align: left;
+  border: 1px solid $select-border-color;
+  box-shadow: $select-box-shadow;
+  border-radius: $select-border-radius;
+  background: $_dropdown-arrow, $select-background;
+  color: $select-color;
 
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus::-ms-value {
+    color: $control-color;
+    background-color: transparent;
+  }
+
+  &-inline {
+    display: inline;
+    width: auto;
+  }
+
+  &:focus {
+    box-shadow: $select-box-shadow, $select-box-shadow-focus;
+  }
+
+  &:hover {
+    background: $_dropdown-arrow, $select-background-hover;
+  }
+
+  &:active,
+  &.c-input-active,
+  &.c-select-active {
+    background: $_dropdown-arrow, $select-background-active;
+    box-shadow: $select-box-shadow-active;
+
+    &:focus {
+      box-shadow: $select-box-shadow-active, $select-box-shadow-focus;
+    }
+  }
+
+  &:disabled,
+  &[disabled],
+  &.c-input-disabled {
+    &,
+    &:hover,
+    &:active {
+      @include input-disabled;
+
+      opacity: 0.5;
+      background: $select-background-img-disabled $select-background-pos no-repeat, $control-disabled-background;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.c-select,
+select.c-input:not([multiple]) {
+  @include select;
+}
+
+// for backwards compatibility. Remove in future.
+.c-select-sm,
+.c-select-lg,
+.c-select-xl {
+  @include select;
+}
+
+// for backwards compatibility. Remove in future.
+.c-select,
+.c-select-sm,
+.c-select-lg,
+.c-select-xl {
   select {
-    display: inline-block;
-    width: 100%;
-    outline: 0;
     appearance: none;
-    margin-bottom: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 7px;
+    background-color: transparent;
+    border: 0;
     cursor: pointer;
-    padding: $padding;
-    font-size: $font-size;
-    border: 1px solid $select-border-color;
-    box-shadow: $select-box-shadow;
-    border-radius: $select-border-radius;
-    background-color: $select-bg-color;
-    color: $select-color;
 
     &::-ms-expand {
       display: none;
     }
 
-    &:hover,
-    &:focus {
-      color: darken($select-color, 10);
-      border-color: darken($select-border-color, 10);
-      background: lighten($select-bg-color, 5);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      pointer-events: none;
+    &:focus::-ms-value {
+      color: $control-color;
+      background-color: transparent;
     }
   }
-}
-
-
-.c-select {
-  @include select;
 
   &-arrow {
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 7px 5px 0;
-    border-color: $select-color transparent transparent;
+    display: none;
   }
 }
 
-.c-select-sm {
-  @include select($padding: $select-padding-sm, $font-size: $select-font-size-sm);
 
-  .c-select-arrow {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 6px 4px 0;
-    border-color: $select-color transparent transparent;
-  }
+// select sizes
+.c-select-sm,
+select.c-input:not([multiple]).c-input-sm {
+  height: $control-sm-height;
+  padding: $select-padding-sm;
+  padding-right: $select-padding-r;
+  font-size: $select-font-size-sm;
 }
 
-.c-select-lg {
-  @include select($padding: $select-padding-lg, $font-size: $select-font-size-lg);
-
-  .c-select-arrow {
-    position: absolute;
-    top: 16px;
-    right: 12px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 9px 7px 0;
-    border-color: $select-color transparent transparent;
-  }
+.c-select-lg,
+select.c-input:not([multiple]).c-input-lg {
+  height: $control-lg-height;
+  padding: $select-padding-lg;
+  padding-right: $select-padding-r;
+  font-size: $select-font-size-lg;
 }
 
-.c-select-xl {
-  @include select($padding: $select-padding-xl, $font-size: $select-font-size-xl);
-
-  .c-select-arrow {
-    position: absolute;
-    top: 22px;
-    right: 13px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 10px 9px 0;
-    border-color: $select-color transparent transparent;
-  }
+.c-select-xl,
+select.c-input:not([multiple]).c-input-xl {
+  height: $control-xl-height;
+  padding: $select-padding-xl;
+  padding-right: $select-padding-r;
+  font-size: $select-font-size-xl;
 }
-
-.c-select select:disabled ~ .c-select-arrow,
-.c-select-sm select:disabled ~ .c-select-arrow,
-.c-select-lg select:disabled ~ .c-select-arrow,
-.c-select-xl select:disabled ~ .c-select-arrow {
-  border-top-color: #cccccc;
-}
-

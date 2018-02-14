@@ -152,6 +152,7 @@ $modal-footer-padding: 10px 20px !default;
     outline: 0 none;
     box-shadow: $modals-shadow;
     border-radius: $modals-border-radius;
+    overflow: hidden;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }

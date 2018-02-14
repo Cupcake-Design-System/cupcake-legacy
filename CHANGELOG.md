@@ -1,3 +1,50 @@
+## Release [1.2.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.12...1.2.0) :rocket:
+**2 February 2018**
+
+### Merged
+- added gulp task for variables, set base variables for bookbuild flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/201)**
+- Tabs disabled state **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/199)**
+- button focus+active state fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/198)**
+- White label fixes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/196)**
+- added body text for xxl **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/197)**
+- rename release-it config, restore pkg version meta info. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/192)**
+- #189 fix inconsistent borders inside input groups **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/193)**
+
+### Commits
+- button fix focus+active state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5da36df4558b46e34cce7c49fadbf7e876fb59a)**
+- Release 1.2.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39bef8f8bcfbf4fc1192d76f8a47452147e8fa0a)**
+- #153 btn secondary active background **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ee858e5831cb37d854791e8ad0b58c6322251c2a)**
+- clean-css plugin - stop fonts path processing **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bc0352d141460991fa1d71171feac2bad8dea2ac)**
+- restore secondary btn active state shadow **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bd72dbd51bccbc11f8403ddcc88eb61e6e4f2947)**
+- tabs link underline fix. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c61790669fb4ea720046632a0d3d00620e43bacb)**
+- adjustment to reset.css **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/736a33a119872dbf07b4d3c1d892c19d4965be0a)**
+- modal add overflow **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d48884f1089ff9322f53cc4e21ca4d1f9367c428)**
+
+## Release [1.1.12](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.11...1.1.12) :rocket:
+**12 January 2018**
+
+### Commits
+- Release 1.1.12 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/74cccef8e6609d4dd7a97bfd10cf06c85ac397bb)**
+
+## Release [1.1.11](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.10...1.1.11) :rocket:
+**11 January 2018**
+
+### Merged
+- BD Flavor - adjust popover styling **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/191)**
+- explicitly set font-family and line-height on popovers **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/188)**
+- remove variables from card mixins. bd-cards adjustments **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/186)**
+- adding split button dropdown **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/185)**
+
+### Commits
+- BD Flavor adjust table header font weight **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/558853376338d85f48acacb6eb86e4a7fe1ca685)**
+- changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/199555f845486631de6f699de9fb04e093be596d)**
+- adjust BD table paddings #146 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cec22b4017009b628eb6b3bc60676877e4163c46)**
+- Release 1.1.11 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c4540fc178dbbaad582480721036981f53b065c1)**
+- typo in badges **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/00f93852419e66eeba74c323ea0a4a8a2048aeae)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9261c0d2d77c6179316f63e3f754d860cc02b567)**
+- temporary remove pkg version from meta info. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cbff67d03cd6741274dbd6cfbed8088f83ad9009)**
+- bd-flavor - dropdown width **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8fac2ece16217757b395a15898be2480bf563f73)**
+
 ## Release [1.1.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.9...1.1.10) :rocket:
 **15 December 2017**
 
@@ -8,7 +55,7 @@
 - fixed issue with long non-breaking words in modals **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/182)**
 - Feature: Add Card-Deck, Card-Group **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/178)**
 - c-btn-link font-weight for bd flavour **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/179)**
-- feature: adds auto changelog **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/177)**
+- &#x60;feat(changelog): adds auto changelog **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/177)**
 
 ### Commits
 - Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6647d2149f74af03d1f7fbf1c728fc90c795eda1)**

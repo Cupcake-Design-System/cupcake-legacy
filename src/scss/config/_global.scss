@@ -3,6 +3,10 @@
 ////
 
 //TODO Make better global use
+
+/// $white-label
+$white-label: false !default;
+
 /// $primary      
 $primary          : $color-primary-7 !default;
 /// $success      
@@ -36,5 +40,4 @@ $global-font-size: $font-body-font-size !default;
 /// $default-font-family
 $global-font-family: $font-body-font-family !default;
 
-/// $white-label
-$white-label: false;
+

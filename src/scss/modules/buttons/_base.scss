@@ -27,7 +27,13 @@
 
     &-disabled,
     &[disabled] {
-      @include btn-disabled($btn-primary-disabled);
+      @if $white-label == true {
+        @include btn-disabled(rgba($btn-primary-bg, .5));
+      }
+
+      @else {
+        @include btn-disabled($btn-primary-disabled);
+      }
     }
   }
 
@@ -54,7 +60,13 @@
 
     &-disabled,
     &[disabled] {
-      @include btn-disabled($btn-success-disabled);
+      @if $white-label == true {
+        @include btn-disabled(rgba($btn-success-bg, .5));
+      }
+
+      @else {
+        @include btn-disabled($btn-success-disabled);
+      }
     }
   }
 
@@ -67,7 +79,13 @@
 
     &-disabled,
     &[disabled] {
-      @include btn-disabled($btn-danger-disabled);
+      @if $white-label == true {
+        @include btn-disabled(rgba($btn-danger-bg, .5));
+      }
+
+      @else {
+        @include btn-disabled($btn-danger-disabled);
+      }
     }
   }
 
@@ -132,6 +150,7 @@
   }
 }
 
+
 .c-btn-block {
   display: block;
   width: 100%;
@@ -139,7 +158,8 @@
 }
 
 //TODO cleaner approach
-.c-btn-secondary.c-btn-active {
+.c-btn-secondary.c-btn-active.c-btn-active,
+.c-btn-default.c-btn-active.c-btn-active {
   box-shadow: $btn-shadow-active;
 }
 

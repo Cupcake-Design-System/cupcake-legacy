@@ -21,11 +21,6 @@
   @if $btn-shadow == true {
     box-shadow: $btn-shadow-inset;
   }
-
-
-  &:active {
-    box-shadow: $btn-shadow-active;
-  }
 }
 
 
@@ -148,7 +143,11 @@
   text-decoration: none;
   background-color: desaturate($bg, 15%);
   border-color: darken($border, 15%);
-  box-shadow: $btn-shadow-active, $btn-shadow-focus;
+  box-shadow: $btn-shadow-active;
+
+  &:focus {
+    box-shadow: $btn-shadow-active, $btn-shadow-focus;
+  }
 }
 
 @mixin btn-active-selected () {
@@ -162,12 +161,16 @@
       background: $btn-active-selected;
       box-shadow: $btn-shadow-active;
     }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
+    }
   }
 }
 
 /* Button Disabled
 * ================ ================ ================ ================ */
-@mixin btn-disabled($bg: $btn-disabled-bg, $bd: $bg, $color: $color-gray-0, $shadow:none ) {
+@mixin btn-disabled($bg: $btn-disabled-bg, $bd: $btn-border-width solid $bg, $color: $color-gray-0, $shadow:none ) {
   &,
   &:hover,
   &:focus,
@@ -187,7 +190,7 @@
 
 // Button Secondary
 
-@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
+@mixin btn-secondary($bg: $btn-secondary-bg, $bg-hover: $btn-secondary-bg-hover, $bg-active: $btn-secondary-bg-active, $bd: $btn-secondary-bd, $color: $btn-secondary-c ) {
   border: 1px solid $bd;
   background-color: $bg;
   color: $color;
@@ -208,6 +211,19 @@
     background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     background-color: $bg-hover;
     z-index: 1002;
+  }
+
+  &:active,
+  &-active {
+    box-shadow: $btn-shadow-active;
+
+    @if $bg-active {
+      background: $bg-active;
+    }
+
+    &:focus {
+      box-shadow: $btn-shadow-active, $btn-shadow-focus;
+    }
   }
 }
 

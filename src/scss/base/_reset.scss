@@ -13,8 +13,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -80,6 +78,7 @@ template {
 a {
   background-color: transparent;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:active,

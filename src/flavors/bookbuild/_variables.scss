@@ -1,0 +1,287 @@
+//  Cupcake Bookbuild Settings
+//  --------------------------
+//
+//  Table of Contents:
+//
+//   1. Global Non-Tokens
+//   2. Alerts
+//   3. Avatars
+//   4. Badges
+//   5. Borders
+//   6. Box
+//   7. Breadcrumbs
+//   8. Buttons
+//   9. Cards
+//  10. Checkboxes
+//  11. Dropdown
+//  12. File Upload
+//  13. Footer
+//  14. Form Inputs
+//  15. Header
+//  16. Header Legacy
+//  17. List Groups
+//  18. Lists
+//  19. Loaders
+//  20. Media Object
+//  21. Modals
+//  22. Notifications
+//  23. Pagination
+//  24. Progress
+//  25. Radius
+//  26. Shadows
+//  27. Spacing
+//  28. Switches
+//  29. Tables
+//  30. Tabs
+//  31. Toast Alerts
+//  32. Tooltips & Popovers
+//  33. Typography
+//  34. Vertical Nav
+
+
+// 1. Global Non-Tokens
+// --------------------
+
+$white-label: true;
+$primary: $color-gray-7;
+$success: $color-success-7;
+$warning: $color-warning-7;
+$danger: $color-danger-7;
+$default: $color-gray-1;
+$secondary: $color-gray-1;
+$disabled: $color-gray-3;
+$black: #0a0a0a;
+$white: #ffffff;
+$global-radius: $radius-sm;
+$global-border-color: $color-gray-4;
+$global-text-color: $font-body-color;
+$global-font-size: 12px;
+$global-font-family: $font-body-font-family;
+
+// 2. Alerts
+// ---------
+
+$alert-border: 1px solid;
+$alert-margin: 0 0 1rem 0;
+$alert-padding: 6px;
+$alert-top-padding: 18px 20px;
+$alert-font-size: 10px;
+
+
+// 4. Badges
+// ---------
+
+$badge-padding: .25em .4em;
+$badge-border-width: 1px;
+$badge-border-style: solid;
+$badge-border-radius: $global-radius;
+$badge-border-radius-rounded: 30em;
+$badge-font-size: 10px;
+$badge-font-weight: normal;
+$badge-line-height: 1;
+$badge-xs: 8px;
+$badge-sm: 9px;
+$badge-lg: 18px;
+$badge-xl: 20px;
+
+// 7. Breadcrumbs
+// --------------
+
+$breadcrumb-padding: 0;
+$breadcrumb-color: $color-gray-9;
+$breadcrumb-color-active: $breadcrumb-color;
+$breadcrumb-font-size: 11px;
+$breadcrumb-font-weight: bold;
+$breadcrumb-divider-padding: 0 12px;
+$breadcrumb-divider-font-size: 0.75rem;
+$breadcrumb-divider-color: $color-gray-3;
+$breadcrumb-divider-content: "\f105";
+
+// 8. Buttons
+// ----------
+
+$btn-font-family: Arial, Helvetica, Sans-Serif;
+$btn-font-size: 12px;
+$btn-v-align: baseline;
+$btn-line-height: 1;
+$btn-default-padding-v: 8px;
+$btn-default-padding-h: 24px;
+$btn-font-weight: bold;
+$btn-border-width: 1px;
+$btn-bd: 1px solid transparent;
+$btn-radius: 2px;
+$btn-shadow-active: inset 0 1px 2px rgba(black, 0.3);
+$btn-shadow-focus: 0 0 1px 1px white, 0 0 2px 3px $color-primary-4;
+$btn-active-selected: false;
+$btn-shadow: true;
+$btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25);
+$btn-shadow-secondary: 0 1px 0 0 rgba(33, 37, 41, 0.1);
+$btn-gradient: false;
+$btn-border: true;
+
+
+// 10. Checkboxes
+// --------------
+
+$checkbox-size: 16px;
+$checkbox-size-sm: 12px;
+$checkbox-size-lg: 24px;
+$checkbox-size-xl: 30px;
+$checkbox-icon-bd: 1px solid $global-border-color;
+$checkbox-icon-radius: 2px;
+$checkbox-transition: all 0.2s;
+$checkbox-disabled: $color-gray-3;
+$checkbox-disabled-opacity: 0.5;
+
+
+// 13. Footer
+// ----------
+
+$footer-font-size: 12px;
+$footer-color: $color-gray-6;
+$footer-color-link: $color-gray-8;
+$footer-background-color: $color-gray-0;
+$footer-padding: 18px 15px;
+$footer-trans-font-size: 12px;
+$footer-trans-color: $black;
+
+
+// 15. Header
+// ----------
+
+$white: #ffffff;
+$header-bottom-border: $color-gray-1;
+$header-bg: #ffffff;
+$header-bg-hover: rgba(0, 0, 0, 0.03);
+$header-inverse-bg: $color-gray-7;
+$header-inverse-bg-hover: rgba(0, 0, 0, 0.05);
+$header-text-color: #adb5bd;
+$header-inverse-text-color: #ffffff;
+$header-inverse-borders: rgba(255, 255, 255, 0.1);
+$header-borders: rgba(0, 0, 0, 0.06);
+$header-logo-max-width: 120px;
+$header-height: 50px;
+$header-logo-width: 85px;
+
+// 16. Header Legacy
+// -----------------
+
+$header-legacy-bg: #0082de;
+$header-legacy-tabs-bg: #324655;
+$header-legacy-tabs-bg-hover: hsla(0, 0%, 9%, .4);
+$header-legacy-text: #ffffff;
+
+
+// 23. Pagination
+// --------------
+
+$pagination-margin-bottom: $spacing-global-margin;
+$pagination-gradients: false;
+$pagination-item-spacing: 4px;
+$pagination-font-size: 12px;
+$pagination-font-size-sm: 12px;
+$pagination-font-size-lg: 14px;
+$pagination-item-padding: 3px;
+$pagination-item-padding-sm: 1px;
+$pagination-item-padding-lg: 5px;
+$pagination-item-current-padding: 3px;
+$pagination-item-border-radius: $global-radius;
+$pagination-item-color: #0a0a0a;
+$pagination-item-bg: $color-gray-1;
+$pagination-item-current-bg: $primary;
+$pagination-item-current-color: $white;
+$pagination-item-color-disabled: #d8d8d8;
+$pagination-item-color-sm: #0a0a0a;
+$pagination-item-color-hover-sm: $primary;
+$pagination-item-current-color-sm: $primary;
+
+// 24. Progress
+// ------------
+
+$progress-height: 1.5rem;
+$progress-height-sm: .75rem;
+$progress-height-lg: 3rem;
+$progress-background: $color-gray-1;
+$progress-margin-bottom: 1rem;
+$progress-radius: $global-radius;
+$progress-primary: $primary;
+$progress-success: $success;
+
+
+// 29. Tables
+// ----------
+
+$table-line-height: 1.5;
+$table-background: $white;
+$table-border-color: $color-gray-2;
+$table-border-radius: 0;
+$table-border: 0;
+$table-head-border-color: $color-gray-3;
+$table-head-border-width: 1px 0;
+$table-head-border-vertical: 1px solid $color-gray-3;
+$table-padding: 4px 10px;
+$table-padding-sm: 5px 10px 7px;
+$table-row-hover: $color-gray-0;
+$table-row-stripe-hover: $table-row-hover;
+$table-head-cell-hover: $color-gray-2;
+$table-hover-background-img-body-pos: 2px center;
+$table-striped-background: $color-gray-0;
+$table-stripe: 'even';
+$table-head-background: $color-gray-1;
+$table-transparent-head-background: $color-gray-0;
+$table-foot-background: $color-gray-1;
+$table-head-font-color: $color-gray-7;
+$table-foot-font-color: $color-gray-6;
+$table-header-font-size: 12px;
+$table-header-footer-font-weight: bold;
+$table-cell-font-size: 12px;
+$table-sm-font-size: 13px;
+$table-shadow: 0;
+$show-header-for-stacked: false;
+$table-state-selected: $color-primary-0;
+$table-state-active: #fafad2;
+$table-state-starred: $color-warning-0;
+$table-state-success: lighten($success, 20%);
+$table-state-warning: lighten($warning, 20%);
+$table-state-danger: lighten($danger, 20%);
+
+// 30. Tabs
+// --------
+
+$tabs-borders: 1px solid $global-border-color;
+$tabs-border-radius: $global-radius;
+$tabs-full-width-border: true;
+$tabs-color: $color-gray-5;
+$tabs-color-hover: $primary;
+$tabs-color-active: $primary;
+$tabs-color-disabled: $color-gray-3;
+$tabs-font-weight: bold;
+$tabs-default-link-padding: 10px 12px;
+$tabs-bordered-link-padding: 6px 12px;
+$tabs-toggle-link-padding: 6px 12px;
+$tabs-default-space-between: 0;
+$tabs-bordered-space-between: 3px;
+$tabs-link-border-bottom: 2px;
+$tabs-bg: $color-gray-1;
+$tabs-bg-hover: lighten($tabs-bg, 5%);
+$tabs-bg-active: lighten($tabs-bg, 5%);
+$tabs-font-size-default: 12px;
+$tabs-hover-transition: all 0.4s ease 0s;
+$tab-font-size-xs: 8px;
+$tab-font-size-sm: 10px;
+$tab-font-size-lg: 18px;
+
+
+// 33. Typography
+// --------------
+
+$paragraph-margin: 0;
+$text-strong: 700;
+$text-small: 80%;
+$anchor-color: $primary;
+$anchor-color-hover: lighten($primary, 5);
+$anchor-decoration-hover: none;
+$anchor-color-active: darken($primary, 5);
+$anchor-color-disabled: $disabled;
+
+

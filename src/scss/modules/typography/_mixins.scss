@@ -12,16 +12,16 @@ $text-strong                    : 700 !default;
 $text-small                    : 80% !default;
 
 /// $anchor-color
-$anchor-color                   : $color-primary-7 !default;
+$anchor-color                   : $primary !default;
 
 /// $anchor-color-hover
-$anchor-color-hover             : $color-primary-5 !default;
+$anchor-color-hover             : lighten($primary, 5) !default;
 
 /// $anchor-decoration-hover
 $anchor-decoration-hover        : none !default;
 
 /// $anchor-color-active
-$anchor-color-active            : $color-primary-8 !default;
+$anchor-color-active            : darken($primary, 5) !default;
 
 /// $anchor-color-disabled
 $anchor-color-disabled          : $disabled !default;
