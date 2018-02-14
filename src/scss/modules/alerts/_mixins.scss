@@ -9,19 +9,28 @@ $alert-border           : 1px solid !default;
 $alert-margin           : 0 0 1rem 0 !default;
 
 /// $alert-padding      : 
-$alert-padding          : 8px !default;
+$alert-padding          : 9px !default;
+
+/// $alert-padding-ratio : 
+$alert-padding-ratio     : 1 !default;
 
 /// $alert-top-padding  : 
-$alert-top-padding      : 18px 20px !default;
+$alert-top-padding      : 18px !default;
 
 /// $alert-font-size    : 
 $alert-font-size        : 12px !default;
+
+/// $alert-font-size    : 
+$alert-line-height      : 14px !default;
 
 /// $alert-font-family  : 
 $alert-font-family      : $global-font-family !default;
 
 /// $alert-font-weight  : 
-$alert-font-weight      : bold !default;
+$alert-font-weight      : normal !default;
+
+/// $alert-default-color : 
+$alert-default-bg        : $color-gray-1 !default;
 
 /// $alert-font-color   : 
 $alert-font-color       : $color-gray-7 !default;
@@ -53,28 +62,41 @@ $alert-warning-color    : $warning !default;
 /// $alert-radius       : 
 $alert-radius           : $global-radius !default;
 
-/// $alert-shadows      : 
-$alert-shadows          : false !default;
+/// $alert-radius       :
+$alert-top-radius       : 0 !default;
 
-/// $alert-style        : 
-$alert-style            : 'outline' !default;
+/// $alert-style 
+$alert-style            : 'color-close' !default;
+
+/// $alert-shadows      : 
+$alert-shadows          : 0 1px 0 0 transparentize($color-gray-9, 0.9) !default;
 
 /// $alert-icon-width   : 
-$alert-icon-width       : 40px !default;
+$alert-icon-width       : 12px !default;
+
+/// $alert-icon-padding :
+$alert-icon-padding     : 30px !default;
+
+/// $alert-top-padding  : 
+$alert-top-icon-padding : 42px !default;
+
+/// $alert-close-font-size  :
+$alert-close-font-size  : 12px !default;
 
 
 @mixin alert-base() {
   position: relative;
   margin: $alert-margin;
-  padding: $alert-padding $alert-padding * 2;
-  background-color: $color-gray-1;
+  padding: $alert-padding $alert-padding*$alert-padding-ratio;
+  background-color: $alert-default-bg;
   color: $alert-font-color;
   border: $alert-border;
   border-radius: $alert-radius;
   font-family: $alert-font-family;
   font-weight: $alert-font-weight;
   font-size: $alert-font-size;
-  text-align: center;
+  text-align: left;
+  line-height: $alert-line-height;
 
   &.c-alert-dismissible {
     padding-right: $alert-padding * 4;
@@ -86,13 +108,14 @@ $alert-icon-width       : 40px !default;
     border: 0;
     appearance: none;
     opacity: 0.6;
-    font-size: $alert-font-size;
+    font-size: $alert-close-font-size;
     float: right;
     color: lighten($alert-font-color, 20%);
     text-decoration: none;
 
     &:hover {
-      color: darken($alert-font-color, 20%);
+      color: $alert-font-color;
+      opacity: 1;
     }
   }
 
@@ -106,16 +129,16 @@ $alert-icon-width       : 40px !default;
   }
 
   &.c-alert-has-icon {
-    padding-left: $alert-icon-width + $alert-padding * 2.5;
-    min-height: $alert-icon-width + $alert-padding * 2;
+    padding-left: $alert-icon-padding;
   }
 
   .c-alert-icon {
     position: absolute;
     top: $alert-padding;
-    left: $alert-padding;
+    left: $alert-padding*$alert-padding-ratio;
     bottom: $alert-padding;
     width: $alert-icon-width;
+    font-size: $alert-icon-width;
   }
 
   // Respect the padding, fool.
@@ -137,49 +160,18 @@ $alert-icon-width       : 40px !default;
 }
 /* stylelint-enable */
 
-@mixin alert-style($bg, $color: $bg, $style: $alert-style, $shadows: $alert-shadows) {
-  @if $white-label == true {
-    background-color: lighten($color, 80);
-    border-color: $color;
-    color: $color;
-  }
+@mixin alert-style($bg, $color, $style: $alert-style) {
+  background-color: $bg;
+  border-color: $color;
+  color: $color;
 
-  @else {
-    @if $style == outline {
-      background-color: $bg;
-      border-color: $color;
-      color: $color;
-    }
-
-    @if $style == solid {
-      background-color: $color;
-      border-color: $color;
-      color: $color-gray-0;
-    }
-
-    @if $style == gradient {
-      @include linear-gradient(to bottom, lighten($color, 10%), $color 66%, darken($color, 4%));
-
-      border: 1px solid darken($color, 10%);
-      color: $white;
-    }
-
-    @if $shadows == true {
-      box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 1px 2px rgba($black, 0.25);
-    }
-
-    @else {
-      box-shadow: none;
-    }
-  }
-
-  @if $style == outline {
+  @if $style  == color-close {
     .c-alert-close,
     .c-alert-link {
       color: lighten($color, 20%);
 
       &:hover {
-        color: darken($color, 20%);
+        color: $color;
       }
     }
   }
@@ -187,10 +179,10 @@ $alert-icon-width       : 40px !default;
   @else {
     .c-alert-close,
     .c-alert-link {
-      color: $white;
+      color: lighten($font-body-color, 20%);
 
       &:hover {
-        color: $white;
+        color: $font-body-color;
         opacity: 1;
       }
     }

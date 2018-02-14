@@ -32,12 +32,23 @@
 }
 
 .c-alert-top {
-  border-radius: 0;
-  padding: $alert-top-padding;
+  border-radius: $alert-top-radius;
+  padding: $alert-top-padding $alert-top-padding*$alert-padding-ratio;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
-  margin-bottom: 0;
+  box-shadow: $alert-shadows;
+
+  &.c-alert-has-icon {
+    padding-left: $alert-top-icon-padding;
+
+    .c-alert-icon {
+      top: $alert-top-padding;
+      left: $alert-top-padding*$alert-padding-ratio;
+      bottom: $alert-top-padding;
+      width: $alert-icon-width;
+    }
+  }
 }
 
 
