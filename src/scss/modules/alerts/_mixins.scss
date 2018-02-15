@@ -11,9 +11,6 @@ $alert-margin           : 0 0 1rem 0 !default;
 /// $alert-padding      : 
 $alert-padding          : 9px !default;
 
-/// $alert-padding-ratio : 
-$alert-padding-ratio     : 1 !default;
-
 /// $alert-top-padding  : 
 $alert-top-padding      : 18px !default;
 
@@ -87,7 +84,7 @@ $alert-close-font-size  : 12px !default;
 @mixin alert-base() {
   position: relative;
   margin: $alert-margin;
-  padding: $alert-padding $alert-padding*$alert-padding-ratio;
+  padding: $alert-padding;
   background-color: $alert-default-bg;
   color: $alert-font-color;
   border: $alert-border;
@@ -135,7 +132,7 @@ $alert-close-font-size  : 12px !default;
   .c-alert-icon {
     position: absolute;
     top: $alert-padding;
-    left: $alert-padding*$alert-padding-ratio;
+    left: $alert-padding;
     bottom: $alert-padding;
     width: $alert-icon-width;
     font-size: $alert-icon-width;
