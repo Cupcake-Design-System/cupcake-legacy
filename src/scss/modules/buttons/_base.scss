@@ -157,11 +157,6 @@
   text-align: center;
 }
 
-//TODO cleaner approach
-.c-btn-secondary.c-btn-active.c-btn-active,
-.c-btn-default.c-btn-active.c-btn-active {
-  box-shadow: $btn-shadow-active;
-}
 
 .c-btn-link {
   &-secondary,
