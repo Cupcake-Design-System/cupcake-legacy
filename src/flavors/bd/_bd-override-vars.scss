@@ -263,6 +263,25 @@ $c-full-page-loader-animation: false;
 $c-full-page-loader-size: 80px;
 $c-full-loader-indicator-logo-sizes: inherit;
 
+$alert-danger-color: #d75248;
+$alert-warning-color: #d7ad3b;
+$alert-success-color: #4eaa0a;
+$alert-primary-color: #62a2b5;
+$alert-default-bg: #f2f2f2;
+$alert-primary-bg: #cdecf5;
+$alert-success-bg: #e1f8e1;
+$alert-danger-bg: #feeeed;
+$alert-warning-bg: #f5eed7;
+$alert-padding: 8px;
+$alert-top-padding: 8px;
+$alert-font-size: 14px;
+$alert-border: 0;
+$alert-shadows: none;
+$alert-top-radius: $global-radius;
+$alert-icon-width : 13px;
+$alert-icon-padding: 27px;
+$alert-top-icon-padding: 29px;
+$alert-style: 'grey';
 
 $toast-alert-border: rgba(0, 0, 0, 0.1);
 $toast-alert-color: $font-body-color;
@@ -271,7 +290,7 @@ $toast-alert-font-weight: $font-body-font-weight;
 $toast-alert-margin: 0 0 15px 0;
 $toast-alert-padding: 9px 20px 10px 40px;
 $toast-alert-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
-$toast-alert-bar-bg: #f3f3f3;
+$toast-alert-bar-bg: $alert-default-bg;
 $toast-alert-bar-bd: none;
 $toast-alert-bar-shadow: none;
 $toast-alert-bar-position: left;
@@ -282,15 +301,10 @@ $toast-alert-close-size: 20px;
 $toast-alert-icon-top: 11px;
 $toast-alert-icon-left: 9px;
 
-$toast-alert-danger-color: #d75248;
-$toast-alert-warning-color: #d7ad3b;
-$toast-alert-success-color: #4eaa0a;
-$toast-alert-info-color: #62a2b5;
-
-$toast-alert-danger-bar-bg: #feeeed;
-$toast-alert-warning-bar-bg: #f5eed7;
-$toast-alert-success-bar-bg: #e1f8e1;
-$toast-alert-info-bar-bg: #cdecf5;
+$toast-alert-danger-bar-bg: $alert-danger-bg;
+$toast-alert-warning-bar-bg: $alert-warning-bg;
+$toast-alert-success-bar-bg: $alert-success-bg;
+$toast-alert-info-bar-bg: $alert-primary-bg;
 
 $notify-width: 20vw;
 $notify-min-width: 265px;
