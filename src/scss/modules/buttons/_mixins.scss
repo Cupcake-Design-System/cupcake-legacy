@@ -45,7 +45,7 @@
   }
 
   &:active,
-  &-active {
+  &.c-btn-active {
     background: $bg;
 
     @if $border == false {
@@ -89,7 +89,6 @@
       background-color: $bg-hover;
       color: $color-hover;
       border-color: $border-color-hover;
-      z-index: 1002;
     }
 
     &:active,
@@ -152,7 +151,7 @@
 
 @mixin btn-active-selected () {
   &-active {
-    &,
+    &.c-btn,
     &:hover,
     &:active,
     &:focus {
@@ -210,11 +209,10 @@
   &:hover {
     background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     background-color: $bg-hover;
-    z-index: 1002;
   }
 
   &:active,
-  &-active {
+  &.c-btn-active {
     box-shadow: $btn-shadow-active;
 
     @if $bg-active {

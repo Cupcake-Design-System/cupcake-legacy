@@ -22,7 +22,11 @@
 
   .c-btn {
     border-radius: 0;
-    box-shadow: none;
+
+    &:focus,
+    &:active {
+      z-index: 2;
+    }
 
     &:first-child {
       border-top-left-radius: $control-border-radius;
@@ -32,10 +36,6 @@
     &:last-child {
       border-top-right-radius: $control-border-radius;
       border-bottom-right-radius: $control-border-radius;
-    }
-
-    &:hover {
-      z-index: unset; // override .c-btn-***:hover
     }
   }
 
