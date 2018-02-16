@@ -1,5 +1,5 @@
 ## Release [1.2.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.12...1.2.0) :rocket:
-**2 February 2018**
+**3 February 2018**
 
 ### Merged
 - added gulp task for variables, set base variables for bookbuild flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/201)**
@@ -11,6 +11,7 @@
 - #189 fix inconsistent borders inside input groups **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/193)**
 
 ### Commits
+- refactor select styles to single mixin **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9be9a08a8deeea4682d34cd345ed73496e21b0d6)**
 - button fix focus+active state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b5da36df4558b46e34cce7c49fadbf7e876fb59a)**
 - Release 1.2.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/39bef8f8bcfbf4fc1192d76f8a47452147e8fa0a)**
 - #153 btn secondary active background **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ee858e5831cb37d854791e8ad0b58c6322251c2a)**
@@ -46,7 +47,7 @@
 - bd-flavor - dropdown width **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8fac2ece16217757b395a15898be2480bf563f73)**
 
 ## Release [1.1.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.9...1.1.10) :rocket:
-**15 December 2017**
+**16 December 2017**
 
 ### Merged
 - nav and layout updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/183)**
@@ -222,7 +223,7 @@
 - Release 1.1.3 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1341aed1267aa59f4a9baeb318d8f837487b7298)**
 
 ## Release [1.1.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.0...1.1.1) :rocket:
-**16 September 2017**
+**17 September 2017**
 
 ### Commits
 - removed loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)**
@@ -230,7 +231,7 @@
 - Release 1.1.1 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50cfea2e447c08e577ab4af70f74289a4f3d52a6)**
 
 ## Release [1.1.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.0.0...1.1.0) :rocket:
-**15 September 2017**
+**16 September 2017**
 
 ### Merged
 - Updated display props **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/104)**
