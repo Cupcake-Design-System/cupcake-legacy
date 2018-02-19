@@ -142,8 +142,9 @@ $control-danger-bg  : #fff6f5;
 $select-font-size        : $font-body-font-size;
 $select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $select-background-hover : linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #ffffff, #ededed);
-$select-box-shadow       : none;
+$select-box-shadow       : 0 0 transparent;
 $select-box-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+$select-box-shadow-focus : $btn-shadow-focus;
 
 $select-padding      : 6px 8px;
 $select-padding-sm   : 3px 8px;
