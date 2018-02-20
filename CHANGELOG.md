@@ -1,5 +1,34 @@
+## Release [1.3.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.0...1.3.1) :rocket:
+**20 February 2018**
+
+### Merged
+- Condensed flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/206)**
+
+### Commits
+- Release 1.3.1 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c193421115d9876b0b677f064d473a4224619ccc)**
+- adjust &lt;select&gt; in bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f575f7f159b199b45c23dc8c22e53986df11ad22)**
+
+## Release [1.3.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.2.0...1.3.0) :rocket:
+**16 February 2018**
+
+### Merged
+- btn active state and z-index fixes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/203)**
+- refactor select styles to single mixin **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/200)**
+
+### Commits
+- style alert elements #190 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5e5a872d89bb9edbf1e1dbf40810516e8f5347a9)**
+- fix typos **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3d776365c3dc1203867512854c5a527fc5742d9f)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/90cb71a1a953f043863d4169fa7e5df9394a48e4)**
+- c-select - better backwards compatability **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4ca59b541d846f2b8ee872ffa8f41139e90e57cb)**
+- remove $alert-padding-ratio to lower complexity **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ed9fec2fedd9e9fabb6c58c3ba97898713eade82)**
+- Release 1.3.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a9eabe38be2d48dadb72990e52a6a4b728db2eac)**
+- fix for unstyled lists **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/65a882c7e42c15603168f2299092ea0df5924b6c)**
+- remove font-smoothing property from reset.css **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/059a4a39b758846d2d025404436fa8713059c7cb)**
+- fix disabled button border size **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4dd4c77f736c5f8d4a3a7365809b3565320dce1c)**
+- remove overflow hidden from modal content **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0f5ad6fe1ed677f54101c5db7524eddf46117857)**
+
 ## Release [1.2.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.12...1.2.0) :rocket:
-**3 February 2018**
+**2 February 2018**
 
 ### Merged
 - added gulp task for variables, set base variables for bookbuild flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/201)**
@@ -47,7 +76,7 @@
 - bd-flavor - dropdown width **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8fac2ece16217757b395a15898be2480bf563f73)**
 
 ## Release [1.1.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.9...1.1.10) :rocket:
-**16 December 2017**
+**15 December 2017**
 
 ### Merged
 - nav and layout updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/183)**
@@ -223,7 +252,7 @@
 - Release 1.1.3 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1341aed1267aa59f4a9baeb318d8f837487b7298)**
 
 ## Release [1.1.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.0...1.1.1) :rocket:
-**17 September 2017**
+**16 September 2017**
 
 ### Commits
 - removed loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92f403f776a93b3113c9dccba7fdcff3d1b9c6dd)**
@@ -231,7 +260,7 @@
 - Release 1.1.1 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50cfea2e447c08e577ab4af70f74289a4f3d52a6)**
 
 ## Release [1.1.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.0.0...1.1.0) :rocket:
-**16 September 2017**
+**15 September 2017**
 
 ### Merged
 - Updated display props **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/104)**
