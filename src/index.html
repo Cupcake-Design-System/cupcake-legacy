@@ -10,7 +10,7 @@
     var flavor = location.search.replace(/(^\?)/g, '') || 'default';
     document.write('<link media="all" rel="stylesheet" href="' + flavor + '.css">');
   </script>
-  
+
   <style>
     .c-container {
       max-width: 1425px;
@@ -19,12 +19,13 @@
 </head>
 
 <body class="c-body-text">
-      <div class="c-alert c-alert-danger c-alert-top">
-    	<a href="javascript:void(0)" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
-    		<i class="fa fa-times" aria-hidden="true"></i>
-    	</a>
-    	<i class="fa fa-exclamation-circle" aria-hidden="true"></i> <strong>Oh snap there is a problem!</strong>
-    </div>
+  <div class="c-alert c-alert-danger c-alert-top">
+    <a href="javascript:void(0)" class="c-a c-alert-close" data-dismiss="c-alert" aria-hidden="true">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+    <strong>Oh snap there is a problem!</strong>
+  </div>
   <main class="c-container">
     <header class="c-m-top-xl">
       <h1 class="c-header-md c-text-primary-7 c-text-strong">
@@ -38,80 +39,60 @@
 
 
     <h3>This is only static html for testing and examples.</h3>
-    <h3>Please refer to the <a href="#">Cupcake Docs</a> for complete documentation.</h3>
+    <h3>Please refer to the
+      <a href="#">Cupcake Docs</a> for complete documentation.</h3>
+
+
+
 
     {{> modules/alerts/alerts }}
-    
-    <hr class="c-hr c-m-bottom-md c-m-top-md">
-    {{> modules/avatar/avatar }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/badges/badges }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/buttons/buttons }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/blockquote/blockquote }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/breadcrumbs/breadcrumbs }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/cards/cards }}
+    <hr class="c-hr c-m-bottom-md c-m-top-md"> {{> modules/avatar/avatar }}
 
-    {{> modules/cards/card-group }}
-    
-    {{> modules/cards/card-deck }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/checkboxes/checkboxes }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/badges/badges }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/dropdown/dropdown }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/footer/footer }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/forms/forms }} 
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/buttons/buttons }}
 
-    <hr class="c-hr c-m-bottom-md c-m-top-md">
-    {{> modules/media/media }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/blockquote/blockquote }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/navigation/header/header }}       
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/list-group/list-group }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/breadcrumbs/breadcrumbs }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">    
-    {{> modules/pagination/pagination }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">    
-    {{> modules/progress/progress }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/cards/cards }} {{> modules/cards/card-group }} {{> modules/cards/card-deck }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">    
-    {{> modules/switches/switches }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/checkboxes/checkboxes }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/table/table }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/dropdown/dropdown }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/tabs/tabs }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/footer/footer }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">    
-    {{> modules/tooltips-popovers/tooltips-popovers }}
-    
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/typography/typography }}
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/forms/forms }}
 
-    <hr class="c-hr c-m-bottom-lg c-m-top-lg">
-    {{> modules/modals/modals }}
+    <hr class="c-hr c-m-bottom-md c-m-top-md"> {{> modules/media/media }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/navigation/header/header }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/list-group/list-group }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/pagination/pagination }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/progress/progress }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/switches/switches }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/table/table }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/tabs/tabs }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/tooltips-popovers/tooltips-popovers }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/typography/typography }}
+
+    <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/modals/modals }}
 
   </main>
 
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="./demo-js/dropdown.js"></script>
 </body>
+
 </html>

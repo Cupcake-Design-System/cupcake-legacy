@@ -3,15 +3,15 @@
     @include media-breakpoint-up($breakpoint) {
       $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-      .c#{$infix}-text-left {
+      .c#{$infix}-text-left.c#{$infix}-text-left {
         text-align: left;
       }
 
-      .c#{$infix}-text-right {
+      .c#{$infix}-text-right.c#{$infix}-text-right {
         text-align: right;
       }
 
-      .c#{$infix}-text-center {
+      .c#{$infix}-text-center.c#{$infix}-text-center {
         text-align: center;
       }
     }

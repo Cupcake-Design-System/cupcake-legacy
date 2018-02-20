@@ -241,10 +241,10 @@ gulp.task('northstar-scrape', function(done) {
    runSequence('tokens:northstar', done);
 });
 
-gulp.task('variables:bookbuild', function(cb) {
+gulp.task('variables:default', function(cb) {
   var options = {
-    title: `Cupcake Bookbuild Settings`,
-    output: bases.flavors + `bookbuild/_variables-STOCK.scss`,
+    title: `Cupcake Default Condensed Settings`,
+    output: bases.flavors + `default-condensed/_variables-STOCK.scss`,
     sort: [
       'global-non-tokens'
     ]
