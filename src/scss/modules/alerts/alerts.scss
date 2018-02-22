@@ -7,19 +7,19 @@
   @include alert-base;
 
   &-primary {
-    @include alert-style($alert-primary-bg, $alert-primary-color);
+    @include alert-style($alert-primary-bg, $alert-primary-color, $alert-primary-icon-color);
   }
 
   &-danger {
-    @include alert-style($alert-danger-bg, $alert-danger-color);
+    @include alert-style($alert-danger-bg, $alert-danger-color, $alert-danger-icon-color);
   }
 
   &-warning {
-    @include alert-style($alert-warning-bg, $alert-warning-color);
+    @include alert-style($alert-warning-bg, $alert-warning-color, $alert-warning-icon-color);
   }
 
   &-success {
-    @include alert-style($alert-success-bg, $alert-success-color);
+    @include alert-style($alert-success-bg, $alert-success-color, $alert-success-icon-color);
   }
 
   &-sm {
