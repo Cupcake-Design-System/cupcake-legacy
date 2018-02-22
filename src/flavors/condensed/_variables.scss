@@ -63,7 +63,7 @@ $global-font-family: $font-body-font-family;
 $alert-border: 1px solid;
 $alert-margin: 0 0 1rem 0;
 $alert-padding: 6px;
-$alert-top-padding: 8px 10px;
+$alert-top-padding: 8px;
 $alert-font-size: 11px;
 $alert-font-family: $global-font-family;
 $alert-font-weight: bold;
@@ -77,9 +77,9 @@ $alert-danger-color: $danger;
 $alert-warning-bg: $color-warning-0;
 $alert-warning-color: $warning;
 $alert-radius: $global-radius;
-$alert-shadows: false;
-$alert-style: 'outline';
-$alert-icon-width: 40px;
+$alert-icon-width: 15px;
+$alert-icon-padding: 30px;
+$alert-top-icon-padding: 30px;
 
 // 3. Avatars
 // ----------
