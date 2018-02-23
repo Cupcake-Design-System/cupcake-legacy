@@ -1,3 +1,14 @@
+## Release [1.3.2](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.1...1.3.2) :rocket:
+**23 February 2018**
+
+### Merged
+- fix alert colors **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/208)**
+
+### Commits
+- changelog update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9b7b35891c62091183923781c9505f78a4592b6d)**
+- Release 1.3.2 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cc8e1a432bb0e2e60b021ef4918b847435f5b9d9)**
+- adding updated alert vars to condensed flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7bbc76e82a55b3dab84c069ccb2341ed633f6f0e)**
+
 ## Release [1.3.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.0...1.3.1) :rocket:
 **20 February 2018**
 
