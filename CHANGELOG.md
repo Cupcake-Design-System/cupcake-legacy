@@ -1,3 +1,12 @@
+## Release [1.4.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.4...1.4.0) :rocket:
+**27 February 2018**
+
+### Commits
+- Release 1.4.0 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/eb0e9878f878ab987e611dec57d5e55a7ab74d53)**
+- pre-bump **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f6ca801e5d7857ecf8cbb1d9caee39768b9b134a)**
+- button fix before version bump **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/53467cbca70912350b8a333c7b0b65a3d0c43f12)**
+
+
 ## Release [1.3.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.3...1.3.4) :rocket:
 **27 February 2018**
 
