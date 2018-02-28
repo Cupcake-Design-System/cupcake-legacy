@@ -1,3 +1,12 @@
+## Release [1.3.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.3...1.3.4) :rocket:
+**27 February 2018**
+
+### Commits
+- Changelog update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6e1272c1c4b5a78ceed31ec0b9add19e3040487e)**
+- Release 1.3.4 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a6da4f39ab86741dbac6580f9d7e8e4f49cd809f)**
+- white-label condensed variable patch **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/92c3661f0984cbf3376ff6124846ba74f47c1dfd)**
+- release-it task update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c13a0c9b3e3f9e445519eec33849abd6a160ba1f)**
+
 ## Release [1.3.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.2...1.3.3) :rocket:
 **27 February 2018**
 
