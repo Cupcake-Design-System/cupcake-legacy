@@ -1,7 +1,7 @@
 {
     "pkgFiles": ["package.json"],
     "buildCommand": "gulp build",
-    "beforeChangelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false",
+    "beforeChangelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false -o CHANGELOG.md",
     "changelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false",
     "dist": {
         "baseDir": null
