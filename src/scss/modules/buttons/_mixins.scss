@@ -59,6 +59,7 @@
 
   @if $white-label == true {
     &:hover {
+      background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     }
   }
