@@ -175,7 +175,7 @@ $alert-close-font-size  : 12px !default;
 
 @mixin alert-style($bg, $color, $icon-color, $style: $alert-style) {
   @if $white-label == true {
-    background-color: lighten($color, 54);
+    background-color: white;
     border-color: $color;
     color: $color;
   }
