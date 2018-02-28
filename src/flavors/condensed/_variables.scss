@@ -1,85 +1,24 @@
-//  Cupcake Default-Condensed Settings
+//  Cupcak-Condensed Settings
+//  These should ONLY adjust sizing sizing (exception is currently table styles)
 //  --------------------------
-//
-//  Table of Contents:
-//
-//   1. Global Non-Tokens
-//   2. Alerts
-//   3. Avatars
-//   4. Badges
-//   5. Borders
-//   6. Box
-//   7. Breadcrumbs
-//   8. Buttons
-//   9. Cards
-//  10. Checkboxes
-//  11. Dropdown
-//  12. File Upload
-//  13. Footer
-//  14. Form Inputs
-//  15. Header
-//  16. Header Legacy
-//  17. List Groups
-//  18. Lists
-//  19. Loaders
-//  20. Media Object
-//  21. Modals
-//  22. Notifications
-//  23. Pagination
-//  24. Progress
-//  25. Radius
-//  26. Shadows
-//  27. Spacing
-//  28. Switches
-//  29. Tables
-//  30. Tabs
-//  31. Toast Alerts
-//  32. Tooltips & Popovers
-//  33. Typography
+
+@import "../../scss/config/global";
 
 
 // 1. Global Non-Tokens
 // --------------------
-
-$white-label: true;
-$primary: $color-primary-7;
-$success: $color-success-7;
-$warning: $color-warning-7;
-$danger: $color-danger-7;
-$default: $color-gray-1;
-$secondary: $color-gray-1;
-$disabled: $color-gray-3;
-$black: #0a0a0a;
-$white: #ffffff;
-$global-radius: $radius-sm;
-$global-border-color: $color-gray-4;
-$global-text-color: $font-body-color;
 $global-font-size: 12px;
-$global-font-family: $font-body-font-family;
 
 // 2. Alerts
 // ---------
 
-$alert-border: 1px solid;
-$alert-margin: 0 0 1rem 0;
 $alert-padding: 6px;
-$alert-top-padding: 8px;
+$alert-top-padding: 7px;
 $alert-font-size: 11px;
-$alert-font-family: $global-font-family;
-$alert-font-weight: bold;
-$alert-font-color: $color-gray-7;
-$alert-primary-bg: $color-primary-0;
-$alert-primary-color: $primary;
-$alert-success-bg: $color-success-0;
-$alert-success-color: $success;
-$alert-danger-bg: $color-danger-0;
-$alert-danger-color: $danger;
-$alert-warning-bg: $color-warning-0;
-$alert-warning-color: $warning;
-$alert-radius: $global-radius;
-$alert-icon-width: 15px;
-$alert-icon-padding: 30px;
-$alert-top-icon-padding: 30px;
+$alert-icon-width: 14px;
+$alert-top-icon-padding : 28px;
+$alert-icon-padding     : 28px;
+
 
 // 3. Avatars
 // ----------
@@ -88,99 +27,45 @@ $avatar-size: 2.5rem;
 $avatar-fs: 12px;
 $avatar-status-margin: 1px;
 $avatar-status-size: 8px;
-$avatar-primary: $primary;
-$avatar-secondary: $secondary;
-$avatar-success: $success;
-$avatar-danger: $danger;
-$avatar-warning: $warning;
 
 // 4. Badges
 // ---------
 
-$badge-padding: .25em .4em .15em;
+$badge-padding: .15em .4em .2em;
 $badge-border-width: 1px;
 $badge-border-style: solid;
-$badge-border-radius: $global-radius;
-$badge-border-radius-rounded: 30em;
 $badge-font-size: 10px;
-$badge-font-weight: normal;
 $badge-line-height: 1;
 $badge-xs: 8px;
 $badge-sm: 9px;
 $badge-lg: 18px;
 $badge-xl: 20px;
-$badge-color: $white;
-$badge-primary: $primary;
-$badge-secondary: $color-gray-1;
-$badge-success: $success;
-$badge-danger: $danger;
-$badge-warning: $warning;
-
 
 // 7. Breadcrumbs
 // --------------
 
 $breadcrumb-padding: 0;
-$breadcrumb-color: $color-gray-9;
-$breadcrumb-color-active: $breadcrumb-color;
 $breadcrumb-font-size: 11px;
 $breadcrumb-font-weight: bold;
-$breadcrumb-divider-padding: 0 12px;
+$breadcrumb-divider-padding: 0 10px;
 $breadcrumb-divider-font-size: 0.75rem;
-$breadcrumb-divider-color: $color-gray-3;
 $breadcrumb-divider-content: "\f105";
 
 // 8. Buttons
 // ----------
 
-$btn-font-family: Arial, Helvetica, Sans-Serif;
 $btn-font-size: 12px;
-$btn-v-align: baseline;
 $btn-line-height: 1;
 $btn-default-padding-v: 6px;
-$btn-default-padding-h: 16px;
-$btn-font-weight: bold;
-$btn-border-width: 1px;
-$btn-bd: 1px solid transparent;
-$btn-radius: 3px;
-$btn-shadow-active: inset 0 1px 2px rgba(black, 0.3);
-$btn-shadow-focus: 0 0 1px 1px white, 0 0 2px 3px $color-primary-4;
-$btn-active-selected: false;
-$btn-shadow: true;
-$btn-shadow-inset: 0 1px rgba(white, .1), inset 0 0 0 1px rgba(white, .08), 0 1px 2px rgba(black, .25);
-$btn-shadow-secondary: 0 1px 0 0 rgba(33, 37, 41, 0.1);
-$btn-gradient: false;
-$btn-border: true;
-$btn-disabled-c: $color-gray-5;
-$btn-disabled-bg: $color-gray-1;
-$btn-disabled-bd: 1px solid $color-gray-3;
-$btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
-$btn-disabled-opacity: 1;
-$btn-default-c: $color-gray-6;
-$btn-primary-bg: $primary;
-$btn-primary-disabled: $color-primary-2;
-$btn-primary-hover: $color-primary-6;
-$btn-secondary-bg: $color-gray-1;
-$btn-secondary-disabled: $color-gray-2;
-$btn-secondary-bg-hover: $color-gray-0;
-$btn-secondary-bg-active: false;
-$btn-secondary-c: $color-gray-7;
-$btn-secondary-bd: $color-gray-4;
-$btn-success-bg: $success;
-$btn-success-disabled: $color-success-2;
-$btn-success-hover: $color-success-6;
-$btn-warning-bg: $warning;
-$btn-danger-bg: $danger;
-$btn-danger-disabled: $color-danger-2;
-$btn-danger-hover: $color-danger-6;
-$btn-link-font-weight: $btn-font-weight;
-$btn-xs-font: 10px;
-$btn-xs-padding: 4px 8px 3px;
-$btn-sm-font: 12px;
-$btn-sm-padding: 6px 16px;
-$btn-lg-font: 16px;
-$btn-lg-padding: 12px 32px 11px;
-$btn-xl-font: 18px;
+$btn-default-padding-h: 22px;
+$bt-c: $color-gray-6;
+$btn-xs-font: 9px;
+$btn-xs-padding: 3px 6px 2px;
+$btn-sm-font: 11px;
+$btn-sm-padding: 4px 16px;
+$btn-lg-font: 14px;
+$btn-lg-padding: 10px 30px 9px;
+$btn-xl-font: 16px;
 $btn-xl-padding: 18px 40px;
 $btn-box-width: 30px;
 $btn-box-width-xs: 20px;
@@ -194,33 +79,14 @@ $btn-icon-dropdown-width: 45px;
 // --------
 
 $card-header-font-size: 14px;
-$card-header-font-weight: bold;
 $card-body-font-size: 12px;
-$card-body-font-color: $color-gray-6;
 $card-title-font-size: 16px;
-$card-title-font-weight: bold;
 $card-title-margin: .25rem 0;
 $card-subtitle-font-size: 14px;
-$card-subtitle-font-color: $color-gray-6;
-$card-text-color: $global-text-color;
 $card-menu-font-size: 100%;
-$card-header-icon-color: $secondary;
-$card-header-icon-hover-color: lighten($secondary, 10%);
-$card-header-text-color: $global-text-color;
-$card-border: 1px solid $color-gray-2;
-$card-border-radius: $global-radius;
 $card-min-width: 250px;
-$card-bg: $white;
 $card-padding-v: 0.5rem;
 $card-padding-h: 0.75rem;
-$card-shadow: 0 2px 4px 0 rgba(33, 37, 41, 0.05);
-$card-shadow-hover: $card-shadow;
-$card-transition: none;
-$card-header-border-bottom: 1px solid rgba(177, 177, 177, 0.15);
-$card-primary: $primary;
-$card-success: $success;
-$card-danger: $danger;
-$card-warning: $warning;
 $card-group-margin: 15px;
 $card-deck-base-card-width: 100%;
 $card-deck-base-card-height: 350px;
@@ -242,11 +108,6 @@ $checkbox-size: 18px;
 $checkbox-size-sm: 12px;
 $checkbox-size-lg: 24px;
 $checkbox-size-xl: 30px;
-$checkbox-icon-bd: 1px solid $global-border-color;
-$checkbox-icon-radius: 2px;
-$checkbox-transition: all 0.2s;
-$checkbox-disabled: $color-gray-3;
-$checkbox-disabled-opacity: 0.5;
 
 // 11. Dropdown
 // ------------
@@ -254,90 +115,37 @@ $checkbox-disabled-opacity: 0.5;
 $dropdown-glued: true;
 $dropdown-list-margin: 0;
 $dropdown-list-padding: 0;
-$dropdown-padding: .75rem 1rem;
-$dropdown-border: 1px solid $color-gray-2;
-$dropdown-color: $color-gray-7;
-$dropdown-color-hover: $primary;
-$dropdown-background-color: $white;
-$dropdown-background-hover: $color-gray-1;
-$dropdown-box-shadow: 0 0 4px rgba(0, 0, 0, 0.06);
-$dropdown-font-family: arial;
+$dropdown-padding: .5rem .75rem;
 $dropdown-font-size: 12px;
-$dropdown-font-weight: bold;
 $dropdown-width: 200px;
-$dropdown-radius: $global-radius;
 $dropdown-divider-margin: 0;
-$dropdown-grid-item-padding: 12px;
-$dropdown-grid-padding: 8px;
-
-// 12. File Upload
-// ---------------
-
-$file-upload-padding: 0.5rem 1rem;
-$file-upload-margin: 0.5rem;
-$file-upload-color: $color-primary-6;
-$file-upload-bg: $color-primary-0;
-$file-upload-bd: 2px dashed $color-primary-6;
-$file-upload-bd-radius: 6px;
-$file-upload-fs: 0.8rem;
-$file-upload-fa-fs: 1.25rem;
+$dropdown-grid-item-padding: 10px;
+$dropdown-grid-padding: 6px;
 
 // 13. Footer
 // ----------
 
-$footer-font-size: 12px;
-$footer-color: $color-gray-6;
-$footer-color-link: $color-gray-8;
-$footer-background-color: $color-gray-0;
-$footer-padding: 18px 15px;
-$footer-trans-font-size: 12px;
-$footer-trans-color: $black;
+$footer-font-size: 10px;
+$footer-padding: 15px;
+$footer-trans-font-size: 10px;
+$footer-height: 40px;
 
 // 14. Form Inputs
 // ---------------
 
 $control-font-size: 12px;
-$control-color: $font-body-color;
-$control-font-weight: normal;
 $control-line-height: 1.166667;
-$control-placeholder-c: $color-gray-5;
-$control-placeholder-hover-c: $control-placeholder-c;
-$control-background: $white;
 $control-padding-v: 6px;
 $control-padding-h: 7px;
 $control-height: 30px;
-$control-border: $global-border-color;
 $control-border-width: 1px;
 $control-border-radius: 2px;
-$control-border-radius-rounded: 30em;
-$control-shadow: inset 0 1px 1px 0 rgba(33, 37, 41, .1);
-$control-shadow-disabled: none;
-$control-transition: border-color 0.1s ease-in;
-$control-hover: $primary;
-$control-hover-border: $color-gray-5;
-$control-active: $primary;
-$control-active-border: $primary;
 $control-icon-padding: 32px;
-$control-icon-color: $color-gray-7;
-$control-disabled-border: $color-gray-2;
-$control-disabled-background: $color-gray-0;
-$control-hint-color: #8d8d97;
 $control-hint-font-size: 85%;
-$control-hint-transition: all 0.2s ease;
 $control-label-padding: $control-padding-v 0;
-$control-addon-background: #eeeeee;
 $control-element-padding: 1em 0;
 $control-element-label-padding: 0 0 $control-padding-v 0;
 $control-select-padding-r: 1em;
-$control-select-background-pos: 99% 50%;
-$control-select-background: $color-gray-0;
-$control-select-background-hover: $color-gray-1;
-$control-select-background-active: $color-gray-2;
-$control-select-border-c: $color-gray-4;
-$control-select-shadow: 0 1px 0 0 rgba(33, 37, 41, 0.1);
-$control-select-shadow-active: inset 0 1px 0 1px $color-gray-4;
-$control-results-border: 1px solid rgb(204, 204, 204);
-$control-results-shadow: 2px 5px 4px rgba(0, 0, 0, .05);
 $fieldset-padding: 0;
 $fieldset-margin: $control-padding-v 0;
 $fieldset-width: 100%;
@@ -356,133 +164,48 @@ $control-sm-height: 25px;
 $control-lg-height: 40px;
 $control-xl-height: 50px;
 $control-group-padding: 1em;
-$control-success-c: $success;
-$control-success-bg: false;
-$control-warning-c: $warning;
-$control-warning-bg: false;
-$control-danger-c: $danger;
-$control-danger-bg: false;
+
+
+$select-padding      : $control-padding-v $control-padding-h;
+$select-padding-sm   : $control-sm-padding;
+$select-padding-lg   : $control-lg-padding;
+$select-padding-xl   : $control-xl-padding;
+$select-font-size    : 12px;
+$select-font-size-sm : $control-sm;
+$select-font-size-lg : $control-lg;
+$select-font-size-xl : $control-xl;
+$select-height       : $control-height;
+$select-height-sm    : $control-sm-height;
+$select-height-lg    : $control-lg-height;
+$select-height-xl    : $control-xl-height;
+
 
 // 15. Header
 // ----------
-
-$white: #ffffff;
-$header-bottom-border: $color-gray-1;
-$header-bg: #ffffff;
-$header-bg-hover: rgba(0, 0, 0, 0.03);
-$header-inverse-bg: $color-gray-7;
-$header-inverse-bg-hover: rgba(0, 0, 0, 0.05);
-$header-text-color: #adb5bd;
-$header-inverse-text-color: #ffffff;
-$header-inverse-borders: rgba(255, 255, 255, 0.1);
-$header-borders: rgba(0, 0, 0, 0.06);
 $header-logo-max-width: 120px;
 $header-height: 50px;
 $header-logo-width: 85px;
-
-// 16. Header Legacy
-// -----------------
-
-$header-legacy-bg: #0082de;
-$header-legacy-tabs-bg: #324655;
-$header-legacy-tabs-bg-hover: hsla(0, 0%, 9%, .4);
-$header-legacy-text: #ffffff;
-
-// 17. List Groups
-// ---------------
-
-$ui-list-radius: true;
-$ui-list-shadows: false;
-$ui-list-box-shadow: inset 0 1px rgba($white, 0.1), inset 0 0 0 1px rgba($white, 0.08), 0 0 7px rgba($black, 0.15);
-$ui-list-noborder-spacing: 10px;
-$ui-list-item-padding: 12px 16px;
-$ui-list-item-noborder-spacing: 8px;
-$ui-list-img-size: $avatar-size;
-$ui-list-left-margin-t: 3px;
-$ui-list-left-body-spacing: 15px;
-$ui-list-fs: 16px;
-$ui-list-margin: 0;
-$ui-list-inset-after-offset: 72px;
-$ui-list-a-list-item-bd: 1px solid $color-gray-3;
-$ui-list-a-list-item-bg-c: $color-orange-0;
-$ui-list-a-list-item-bg-hover: $color-gray-2;
-
-
-// 19. Loaders
-// -----------
-
-$c-color-loader-indicator: white;
-$c-color-btn-progress-bar: white;
-$c-btn-in-progress-text-color: white;
-$c-degree-loader-indicator: 140deg;
-$c-bg-full-loader: white;
-$c-degree-btn-in-progress-indicator: -45deg;
-$c-loader-indicator: linear-gradient($c-degree-loader-indicator, rgba($c-color-loader-indicator, 0), rgba($c-color-loader-indicator, .6) 50%, rgba($c-color-loader-indicator, 0) 100%);
-$c-loader-movement: c-loader-iteration 2s infinite;
-$c-color-loader-bar: #dee2e6;
-$c-btn-in-progress-color-bg: #f0f0f0;
-$c-btn-in-progress-color-bg-primary: #b3d9ee;
-$c-btn-in-progress-color-bg-success: #b6eed7;
-$c-btn-in-progress-color-bg-danger: #f8c9c5;
-$c-btn-in-progress-color-bg-warning: #fce7be;
-$c-btn-in-progress-color-bg-info: #c8e6ee;
-$c-height-of-bar: 10px;
-$c-border-radius-bar: 2px;
-$c-btn-bd-default-disabled: #d9d9d9;
-$c-overlay-loader-color: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .2) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .2) 50%, rgba($c-color-btn-progress-bar, .2) 75%, transparent 75%, transparent), $primary;
-$c-btn-progress-default-color: $global-text-color;
-$c-btn-in-progress-bg: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg;
-$c-btn-in-progress-bg-primary: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-primary;
-$c-btn-in-progress-bg-success: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-success;
-$c-btn-in-progress-bg-danger: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-danger;
-$c-btn-in-progress-bg-warning: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-warning;
-$c-btn-in-progress-bg-info: linear-gradient($c-degree-btn-in-progress-indicator, rgba($c-color-btn-progress-bar, .6) 25%, transparent 25%, transparent 50%, rgba($c-color-btn-progress-bar, .6) 50%, rgba($c-color-btn-progress-bar, .6) 75%, transparent 75%, transparent), $c-btn-in-progress-color-bg-info;
-$c-btn-in-progress-bg-size: 40px;
-$c-btn-in-progress-anim-params: 2s linear infinite;
-$c-full-page-loader-animation: spin 2s infinite linear;
-$c-full-page-loader-size: 60px;
-$c-full-loader-indicator-logo-sizes: 100px 100px;
 
 // 20. Media Object
 // ----------------
 
 $media-padding: 12px 8px;
 $media-margin: 0 8px;
-$media-color: $color-gray-7;
-$media-stripe-bg: $color-gray-0;
-$media-hover-bg: $media-stripe-bg;
-$media-header-bg: $color-gray-0;
-$media-new-bg: $color-primary-0;
-$media-border: $color-gray-2;
-$media-action-color: $color-gray-6;
+
 
 // 21. Modals
 // ----------
 
-$modals-z-index: 1050;
 $modals-dialog-top-magin: 30px;
 $modals-confirmation-margin-top: 140px;
 $modals-confirmation-width: 400px;
 $modals-width: 600px;
-$modals-border-radius: .3rem;
-$modals-shadow: 0 6px 20px 0 rgba($global-text-color, 0.8);
-$modals-border: 1px solid $color-gray-3;
-$modals-transition: opacity .35s;
-$modals-close-absolute: false;
 $modals-close-size: 30px;
 $modals-close-padding: 0 2px;
-$modals-close-color: $color-gray-6;
 $modals-close-font-size: 1.5rem;
-$modals-default-color: $global-text-color;
 $modals-body-font-size: 12px;
 $modals-title-font-size: 14px;
-$modals-title-font-weight: $font-header-sm-font-weight;
-$modals-close-button-transform-degrees: 45deg;
-$modals-background-color: #ffffff;
-$modals-backdrop-background-color: #000000;
 $modals-confirmation-icon-fs: 17px;
-$modals-confirmation-icon-danger-c: $color-danger-8;
-$modals-confirmation-icon-info-c: $color-primary-4;
 $modals-confirmation-icon-margin: 16px 0 12px;
 $modals-confirmation-title-fs: $font-header-sm-font-size;
 $modals-confirmation-title-weight: $font-header-sm-font-weight;
@@ -493,14 +216,19 @@ $modal-body-padding: 12px;
 $modal-header-padding: 8px 12px;
 $modal-footer-padding: 8px 12px;
 
+// 20. Media Object
+// ----------------
+
+$media-padding: 8px;
+$media-margin: 0 6px;
+
+
 // 22. Notifications
 // -----------------
 
-$notify-z-index: 99999;
 $notify-min-width: 390px;
 $notify-width: 25vw;
 $notify-screen-spacing: 16px;
-$notify-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 // 23. Pagination
 // --------------
@@ -511,81 +239,30 @@ $pagination-item-spacing: 4px;
 $pagination-font-size: 12px;
 $pagination-font-size-sm: 12px;
 $pagination-font-size-lg: 14px;
-$pagination-item-padding: 2px 8px;
+$pagination-item-padding: 0 6px;
 $pagination-item-padding-sm: 1px;
-$pagination-item-padding-lg: 3px 9px;
+$pagination-item-padding-lg: 1px 7px;
 $pagination-item-current-padding: 3px;
-$pagination-item-border-radius: $global-radius;
-$pagination-item-color: #0a0a0a;
-$pagination-item-bg: $color-gray-1;
-$pagination-item-current-bg: $primary;
-$pagination-item-current-color: $white;
-$pagination-item-color-disabled: #d8d8d8;
-$pagination-item-color-sm: #0a0a0a;
-$pagination-item-color-hover-sm: $primary;
-$pagination-item-current-color-sm: $primary;
+
+
+$popover-padding             : 4px 8px !default;
+$popover-fs                  : 12px !default;
 
 // 24. Progress
 // ------------
 
 $progress-height: 1.5rem;
 $progress-height-sm: .75rem;
-$progress-height-lg: 3rem;
-$progress-background: $color-gray-1;
+$progress-height-lg: 2.25rem;
 $progress-margin-bottom: 1rem;
-$progress-radius: $global-radius;
-$progress-primary: $primary;
-$progress-success: $success;
 
-// 25. Radius
-// ----------
-
-$border-radius-none: $radius-square;
-$border-radius-sm: $radius-sm;
-$border-radius-md: $radius-md;
-$border-radius-lg: $radius-lg;
-$border-radius-round: $radius-round;
-
-// 26. Shadows
-// -----------
-
-$shadow-xs: 0 1.5px 3px rgba(0, 0, 0, .24), 1px 3px 8px rgba(0, 0, 0, .05);
-$shadow-sm: 0 4px 7px rgba(0, 0, 0, .23),   0 8px 25px rgba(0, 0, 0, .05);
-$shadow-md: 0 7px 10px rgba(0, 0, 0, .3),  0 10px 50px rgba(0, 0, 0, .12);
-$shadow-lg: 0 10px 15px rgba(0, 0, 0, .28), 0 15px 60px rgba(0, 0, 0, .18);
-$shadow-xl: 0 16px 20px rgba(0, 0, 0, .29), 0 20px 65px rgba(0, 0, 0, .18);
-
-// 27. Spacing
-// -----------
-
-$space-none: $spacing-none;
-$space-xs: $spacing-xs;
-$space-sm: $spacing-sm;
-$space-md: $spacing-md;
-$space-lg: $spacing-lg;
-$space-xl: $spacing-xl;
-$space-xxl: $spacing-xxl;
-$space-xxxl: $spacing-xxxl;
-
-// 28. Switches
-// ------------
-
-$switch-style: "default";
-$default-switch-height: 1.95rem;
-$default-switch-radius: rem-calc(50);
-$default-switch-font-size: rem-calc(10);
-$large-switch-font-size: rem-calc(15);
-$switch-label-off: $color-gray-2;
-$switch-label-on: $white;
-$switch-handle: $white;
-$switch-disabled: $color-primary-0;
 
 // 29. Tables
 // ----------
 
 $table-line-height: 1.5;
 $table-background: #f2f7fa;
-$table-border-color: $white;
+$table-border-color: white;
 $table-border-radius: 0;
 $table-border: 1px solid white;
 $table-head-border-color: $color-gray-3;
@@ -619,26 +296,13 @@ $table-state-danger: lighten($danger, 20%);
 
 // 30. Tabs
 // --------
-
-$tabs-borders: 1px solid $global-border-color;
-$tabs-border-radius: $global-radius;
-$tabs-full-width-border: true;
-$tabs-color: $color-gray-5;
-$tabs-color-hover: $primary;
-$tabs-color-active: $primary;
-$tabs-color-disabled: $color-gray-3;
-$tabs-font-weight: bold;
-$tabs-default-link-padding: 6px 10px;
+$tab-link-padding: 6px 10px;
 $tabs-bordered-link-padding: 4px 10px;
 $tabs-toggle-link-padding: 4px 10px;
-$tabs-default-space-between: 0;
+$tab-space-between: 0;
 $tabs-bordered-space-between: 3px;
 $tabs-link-border-bottom: 2px;
-$tabs-bg: $color-gray-1;
-$tabs-bg-hover: lighten($tabs-bg, 5%);
-$tabs-bg-active: lighten($tabs-bg, 5%);
-$tabs-font-size-default: 12px;
-$tabs-hover-transition: all 0.4s ease 0s;
+$tabs-font-siz: 12px;
 $tab-font-size-xs: 8px;
 $tab-font-size-sm: 10px;
 $tab-font-size-lg: 18px;
@@ -647,77 +311,14 @@ $tab-font-size-lg: 18px;
 // ----------------
 
 $toast-alert-fs: 12px;
-$toast-alert-font-weight: bold;
-$toast-alert-color: $color-gray-9;
-$toast-alert-color-variant: true;
-$toast-alert-border: $color-gray-3;
-$toast-alert-radius: $global-radius;
 $toast-alert-margin: 0 0 1rem 0;
 $toast-alert-padding: 10px 27px 10px 35px;
-$toast-alert-shadow: 0 8px 12px 0 rgba(33, 37, 41, 0.15);
-$toast-alert-bar-bg: $color-gray-8;
-$toast-alert-bar-bd: 1px solid $color-gray-9;
-$toast-alert-bar-position: bottom;
 $toast-alert-bar-size: 3px;
-$toast-alert-danger-color: $danger;
-$toast-alert-warning-color: $warning;
-$toast-alert-success-color: $success;
-$toast-alert-info-color: $primary;
-$toast-alert-danger-bar-bg: $danger;
-$toast-alert-warning-bar-bg: $warning;
-$toast-alert-success-bar-bg: $success;
-$toast-alert-info-bar-bg: $primary;
-$toast-alert-danger-bar-bd: darken($danger, 5);
-$toast-alert-warning-bar-bd: darken($warning, 5);
-$toast-alert-success-bar-bd: darken($success, 5);
-$toast-alert-info-bar-bd: darken($primary, 5);
 $toast-alert-close-size: 30px;
 $toast-alert-close-fs: 17px;
-$toast-alert-close-c: $color-gray-4;
-$toast-alert-close-hover-c: $color-gray-9;
-$toast-alert-close-transition: color .15s linear;
 $toast-alert-icon-top: 14px;
 $toast-alert-icon-left: 14px;
 $toast-alert-icon-size: 12px;
-
-// 32. Tooltips & Popovers
-// -----------------------
-
-$popover-default-bg: $color-gray-9;
-$popover-default-bd: $color-gray-9;
-$popover-default-color: $white;
-$popover-invert-bg: $white;
-$popover-invert-bd: $color-gray-9;
-$popover-invert-color: $color-gray-9;
-$popover-contextual-fw: bold;
-$popover-success-bg: $success;
-$popover-success-bd: $success;
-$popover-success-color: $white;
-$popover-primary-bg: $primary;
-$popover-primary-bd: $primary;
-$popover-primary-color: $white;
-$popover-warning-bg: $warning;
-$popover-warning-bd: $warning;
-$popover-warning-color: $white;
-$popover-danger-bg: $danger;
-$popover-danger-bd: $danger;
-$popover-danger-color: $white;
-$popover-css-transition-style: cubic-bezier(0.73, 0.01, 0, 1);
-$popover-css-border-width: 4px;
-$popover-css-z-index: 110000;
-$popover-css-arrow-position: 6px;
-
-// 33. Typography
-// --------------
-
-$paragraph-margin: 0;
-$text-strong: 700;
-$text-small: 80%;
-$anchor-color: $primary;
-$anchor-color-hover: lighten($primary, 5);
-$anchor-decoration-hover: none;
-$anchor-color-active: darken($primary, 5);
-$anchor-color-disabled: $disabled;
 
 $font-header-xs-font-size: 14px;
 $font-header-xs-line-height: 16px;
