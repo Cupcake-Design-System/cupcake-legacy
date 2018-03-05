@@ -261,38 +261,11 @@ $progress-margin-bottom: 1rem;
 // ----------
 
 $table-line-height: 1.5;
-$table-background: #f2f7fa;
-$table-border-color: white;
-$table-border-radius: 0;
-$table-border: 1px solid white;
-$table-head-border-color: $color-gray-3;
-$table-head-border-width: 0 0 1px;
-$table-head-border-vertical: 1px solid $color-gray-1;
-$table-padding: 3px 9px;
+$table-padding: 3px 9px 2px;
 $table-padding-sm: 5px 10px 7px;
-$table-row-hover: $color-primary-1;
-$table-row-stripe-hover: $table-row-hover;
-$table-head-cell-hover: white;
-$table-hover-background-img-body-pos: 2px center;
-$table-striped-background: #e9f1f7;
-$table-stripe: 'even';
-$table-head-background          : white;
-$table-transparent-head-background: white;
-$table-foot-background: $color-gray-1;
-$table-head-font-color: $color-gray-7;
-$table-foot-font-color: $color-gray-6;
 $table-header-font-size: 10px;
-$table-header-footer-font-weight: bold;
 $table-cell-font-size: 10px;
 $table-sm-font-size: 13px;
-$table-shadow: 0;
-$show-header-for-stacked: false;
-$table-state-selected: $color-primary-0;
-$table-state-active: #fafad2;
-$table-state-starred: $color-warning-0;
-$table-state-success: lighten($success, 20%);
-$table-state-warning: lighten($warning, 20%);
-$table-state-danger: lighten($danger, 20%);
 
 // 30. Tabs
 // --------
