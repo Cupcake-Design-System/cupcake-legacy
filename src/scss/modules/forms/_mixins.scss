@@ -44,6 +44,11 @@
     border-color: $control-active-border;
   }
 
+  // in separete selector beacause it breakes ie11
+  &:focus-within {
+    border-color: $control-active-border;
+  }
+
   &[disabled],
   &-disabled {
     &,
