@@ -92,7 +92,13 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+  @if variable-exists(text-strong) {
+    font-weight: $text-strong;
+  }
+
+  @else {
+    font-weight: bold;
+  }
 }
 
 dfn {
@@ -230,7 +236,13 @@ textarea {
 }
 
 optgroup {
-  font-weight: bold;
+  @if variable-exists(text-strong) {
+    font-weight: $text-strong;
+  }
+
+  @else {
+    font-weight: bold;
+  }
 }
 
 table {
