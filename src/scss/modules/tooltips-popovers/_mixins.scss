@@ -63,7 +63,7 @@
   // for popper.js
   &[x-placement^="top"] > &-arrow,
   &[x-placement^="bottom"] > &-arrow {
-    margin: 0 $popover-bd-radius;
+    margin: 0 $popover-bd-radius; // required by popper.js
 
     &::after {
       @include horizontal-center;
@@ -72,7 +72,7 @@
 
   &[x-placement^="left"] > &-arrow,
   &[x-placement^="right"] > &-arrow {
-    margin: $popover-bd-radius 0;
+    margin: $popover-bd-radius 0; // required by popper.js
 
     &::after {
       @include vertical-center;
@@ -140,6 +140,7 @@
   background: $bg;
   border: 1px solid $bd;
 
+  &[x-placement^="top"] > .c-popover-arrow,
   &.c-popover-top > .c-popover-arrow {
     border-color: $bd transparent transparent;
 
@@ -148,6 +149,7 @@
     }
   }
 
+  &[x-placement^="bottom"] > .c-popover-arrow,
   &.c-popover-bottom > .c-popover-arrow {
     border-color: transparent transparent $bd;
 
@@ -156,6 +158,8 @@
     }
   }
 
+  &[x-placement^="left"] > .c-popover-arrow,
+  &[x-placement^="right"] > .c-popover-arrow,
   &.c-popover-left > .c-popover-arrow,
   &.c-popover-right > .c-popover-arrow {
     border-color: transparent $bd transparent;
