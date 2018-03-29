@@ -76,6 +76,7 @@ select.c-input:not([multiple]) {
 }
 
 // for backwards compatibility. Remove in future.
+.c-select-xs,
 .c-select-sm,
 .c-select-lg,
 .c-select-xl {
@@ -84,6 +85,7 @@ select.c-input:not([multiple]) {
 
 // for backwards compatibility. Remove in future.
 .c-select,
+.c-select-xs,
 .c-select-sm,
 .c-select-lg,
 .c-select-xl {
@@ -116,6 +118,14 @@ select.c-input:not([multiple]) {
 
 
 // select sizes
+.c-select-xs,
+select.c-input:not([multiple]).c-input-xs {
+  height: $control-xs-height;
+  padding: $select-padding-xs;
+  padding-right: $select-padding-r;
+  font-size: $select-font-size-xs;
+}
+
 .c-select-sm,
 select.c-input:not([multiple]).c-input-sm {
   height: $control-sm-height;
