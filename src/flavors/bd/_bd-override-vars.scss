@@ -145,6 +145,8 @@ $select-background-hover : linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 2
 $select-box-shadow       : 0 0 transparent;
 $select-box-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 $select-box-shadow-focus : $btn-shadow-focus;
+$select-error-c          : #965650;
+$select-error-fw         : 600;
 
 $select-padding      : 6px 8px;
 $select-padding-sm   : 3px 8px;
