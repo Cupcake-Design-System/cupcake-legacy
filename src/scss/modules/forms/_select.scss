@@ -75,6 +75,17 @@ select.c-input:not([multiple]) {
   @include select;
 }
 
+.c-select-error,
+select.c-input-error:not([multiple]) {
+  color: $select-error-c;
+  font-weight: $select-error-fw;
+  border-color: $select-error-bd;
+
+  option {
+    color: $select-color;
+  }
+}
+
 // for backwards compatibility. Remove in future.
 .c-select-xs,
 .c-select-sm,
