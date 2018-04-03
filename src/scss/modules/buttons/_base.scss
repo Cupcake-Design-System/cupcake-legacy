@@ -26,6 +26,7 @@
     }
 
     &-disabled,
+    &.c-btn-disabled,
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-primary-bg, .5));
@@ -46,6 +47,7 @@
     }
 
     &-disabled,
+    &.c-btn-disabled,
     &[disabled] {
       @include btn-disabled($btn-disabled-bg, $btn-disabled-bd, $btn-disabled-c, $btn-disabled-text-shadow);
     }
@@ -59,6 +61,7 @@
     }
 
     &-disabled,
+    &.c-btn-disabled,
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-success-bg, .5));
@@ -78,6 +81,7 @@
     }
 
     &-disabled,
+    &.c-btn-disabled,
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-danger-bg, .5));
@@ -114,7 +118,9 @@
     box-shadow: none;
   }
 
-  &-disabled {
+  &.c-btn-disabled,
+  &-disabled,
+  &[disabled] {
     &,
     &:hover,
     &:focus,
@@ -122,6 +128,7 @@
       background: transparent;
       color: $btn-disabled-c;
       line-height: 1;
+      border-color: transparent;
       cursor: not-allowed;
       appearance: none;
       box-shadow: none;
@@ -170,10 +177,5 @@
 
   &-danger {
     @include btn-link-style($danger);
-  }
-
-  &[disabled] {
-    opacity: 0.8;
-    color: $btn-disabled-c;
   }
 }
