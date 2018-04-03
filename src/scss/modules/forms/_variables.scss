@@ -185,6 +185,8 @@ $select-box-shadow   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
 $select-border-radius: $control-border-radius !default;
 /// $select-padding
 $select-padding      : 7px 10px !default;
+/// $select-padding-xs
+$select-padding-xs   : 3px 10px !default;
 /// $select-padding-sm
 $select-padding-sm   : 3px 10px !default;
 /// $select-padding-lg
@@ -193,6 +195,8 @@ $select-padding-lg   : 9px 20px !default;
 $select-padding-xl   : 11px 20px !default;
 /// $select-font-size
 $select-font-size    : 12px !default;
+/// $select-font-size-xs
+$select-font-size-xs : 10px !default;
 /// $select-font-size-sm
 $select-font-size-sm : 11px !default;
 /// $select-font-size-lg
