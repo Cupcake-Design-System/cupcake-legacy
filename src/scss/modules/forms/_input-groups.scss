@@ -21,21 +21,23 @@
   }
 
   .c-btn {
-    border-radius: 0;
-
     &:focus,
     &:active {
       z-index: 2;
     }
 
     &:first-child {
-      border-top-left-radius: $control-border-radius;
-      border-bottom-left-radius: $control-border-radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     &:last-child {
-      border-top-right-radius: $control-border-radius;
-      border-bottom-right-radius: $control-border-radius;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
     }
   }
 
@@ -48,17 +50,20 @@
 
     .c-input {
       height: 100%;
-      border-radius: 0;
     }
 
     &:first-child .c-input {
-      border-top-left-radius: $control-border-radius;
-      border-bottom-left-radius: $control-border-radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     &:last-child .c-input {
-      border-top-right-radius: $control-border-radius;
-      border-bottom-right-radius: $control-border-radius;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) .c-input {
+      border-radius: 0;
     }
   }
 }
