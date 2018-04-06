@@ -102,3 +102,18 @@ i.c-bg-warning {
 i.c-bg-danger {
   background-color: $danger;
 }
+
+
+.c-radio {
+  input:disabled:checked {
+    + i {
+      &::before {
+        background: $checkbox-disabled;
+      }
+
+      &::after {
+        background: $color-gray-5;
+      }
+    }
+  }
+}

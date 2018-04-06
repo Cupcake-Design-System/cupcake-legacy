@@ -100,6 +100,13 @@ $checkbox-disabled-opacity: 0.5 !default;
       & + i::before {
         opacity: $checkbox-disabled-opacity;
         cursor: not-allowed;
+        border: 1px solid $color-gray-5;
+      }
+    }
+
+    &[disabled]:checked {
+      & + i::after {
+        color: $color-gray-5;
       }
     }
   }
