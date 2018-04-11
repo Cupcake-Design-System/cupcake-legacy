@@ -139,6 +139,9 @@ $control-warning-bg : #fcfbe7;
 $control-danger-c   : #e98f88;
 $control-danger-bg  : #fff6f5;
 
+$control-disabled-border     : #d9d9d9;
+$control-disabled-background : #f9f9f9;
+
 $select-font-size        : $font-body-font-size;
 $select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $select-background-hover : linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #ffffff, #ededed);

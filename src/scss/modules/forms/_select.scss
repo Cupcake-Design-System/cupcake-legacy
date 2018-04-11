@@ -62,7 +62,6 @@
     &:active {
       @include input-disabled;
 
-      opacity: 0.5;
       background: $select-background-img-disabled $select-background-pos no-repeat, $control-disabled-background;
       box-shadow: none;
       cursor: not-allowed;
