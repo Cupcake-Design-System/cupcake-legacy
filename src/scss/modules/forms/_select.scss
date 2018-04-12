@@ -2,7 +2,6 @@
 @mixin select {
   $_dropdown-arrow: $select-background-img $select-background-pos no-repeat;
 
-  position: relative;
   display: block;
   width: 100%;
   height: $control-height;
@@ -33,6 +32,10 @@
   &-inline {
     display: inline;
     width: auto;
+  }
+
+  .c-input-icon + & {
+    padding-left: $control-icon-padding;
   }
 
   &:focus {
