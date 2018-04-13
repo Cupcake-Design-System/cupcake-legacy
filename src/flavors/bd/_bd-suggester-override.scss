@@ -3,13 +3,13 @@
     margin: 2px;
     padding: 4px 16px 4px 3px;
     font-size: inherit;
-    
+
     .c-close {
       top: 5px;
       font-size: 12px;
     }
   }
-  
+
   &.c-bg-gray-2:not(.c-bg-warning) {
     background: #79bde9;
     color: #ffffff;
@@ -17,7 +17,6 @@
 }
 
 .c-suggester {
-
   .c-suggester-filter-list,
   .view-all {
     background: #f9f9f9;
@@ -64,5 +63,15 @@
   li.cupcake-suggester-container-tree-item label.checked,
   li.cupcake-suggester-container-tree-item.has-children > a {
     font-weight: normal;
+  }
+
+  .c-suggester-clear-icon {
+    .fa-times-circle {
+      font-size: 1em;
+
+      &::before {
+        content: "\f00d";
+      }
+    }
   }
 }
