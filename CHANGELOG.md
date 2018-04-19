@@ -1,3 +1,38 @@
+## Release [1.4.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.2...1.4.3) :rocket:
+**6 April 2018**
+
+### Merged
+- Improvements of border-radius for button and input groups (to prevent extra overrides in branding package) **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/221)**
+
+### Commits
+- adding quick disabled state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2276aae0ebaf506420817c53c80cbfbed187f647)**
+- fixed border-radius for input groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/329935a18e74c8e88d3a42af58279ce02aba3e2f)**
+- fixed border-radius for button groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c32cb98098bfd155ee2c76df251ef80559e5a4c6)**
+- Release 1.4.3 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9f51868b2aa8f7ff93077c3d15b74c06216c8386)**
+
+## Release [1.4.2](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.0...1.4.2) :rocket:
+**3 April 2018**
+
+### Merged
+- error state for select **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/220)**
+- make c-btn-disabled class to work with main buttons **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/219)**
+- add c-select-xs **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/218)**
+- add x-placement to popover color mixin **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/215)**
+
+### Commits
+- Release 1.4.1 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4beef7377c1f58bf332c58e8ac7d2e7501013660)**
+- remove arial from BD-flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/082d236fd30be87987d3d54d1b5d73f1f83d8855)**
+- removed all color variables from condensed flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2977558d3ad5c09e9ea963731392d2101a0ae61f)**
+- flavor specific strong text in reset.css **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/155038548a15c73c598b8cd3d9aedb0f8b3f8d99)**
+- allow white-label for file upload **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6be9d48132b22193ef3bf79eb36428b282879232)**
+- BD, do not set color in text sizes and headers. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c99780f716eaf5bf57d71a7204e156602c127bf0)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/804c93492d37e133f32bb514efb02f2d26757e19)**
+- condensed modal padding fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4d005230ee475ba48b4c96a65b427d71d65f13d3)**
+- focus within functionality for c-input **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b7910320b678a79cb64f35c88b59f85968649ac9)**
+- add packages to gitignore **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4920c1432f2ff90d6e8c82cbc512aadc6ddc561a)**
+- Release 1.4.2 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/893245bd4de3079038e799bf8a2dfc7678324089)**
+- fix modal jumping in IE11 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2036908cf5798d00b1cbc60812ab58f188e059f3)**
+
 ## Release [1.4.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.3.4...1.4.0) :rocket:
 **28 February 2018**
 
