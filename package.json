@@ -17,7 +17,8 @@
     "deploy": "gulp deploy",
     "test": "gulp lint",
     "changelog": "auto-changelog --template changelog-template.hbs --commit-limit false",
-    "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
+    "list-selectors-BD": "list-selectors ./dist/bd.css -p -i classes stdout > bd-class.json",
+    "list-selectors": "list-selectors ./dist/default.css -p -i classes stdout > cupcake-class.json",
     "visual": "npm run reference && npm run compare",
     "reference": "backstop reference",
     "compare": "backstop test"
