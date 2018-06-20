@@ -30,14 +30,18 @@
   background: $bg;
   color: $color;
 
-  @if $border == false {
-    border-color: transparent;
-    background-size: 100% calc(100% + 2px);
-    background-position-y: -1px;
+  @if $white-label == true {
+    border-color: darken($bg, 15);
   }
 
   @else {
-    border-color: darken($bg, 5%) darken($bg, 5%) darken($bg, 4%);
+    border-color: $border;
+  }
+
+  @if $btn-border == false {
+    border-color: transparent;
+    background-size: 100% calc(100% + 2px);
+    background-position-y: -1px;
   }
 
   @if $btn-gradient == true {
@@ -48,12 +52,12 @@
   &.c-btn-active {
     background: $bg;
 
-    @if $border == false {
+    @if $btn-border == false {
       border-color: transparent;
     }
 
     @else {
-      border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+      border-color: $border;
     }
   }
 

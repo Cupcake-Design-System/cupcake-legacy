@@ -55,6 +55,8 @@
 .c-dropdown-grid {
   @include dropdown-grid;
 
+  width: $dropdown-width;
+
   li a,
   .c-dropdown-item {
     @include dropdown-grid-item;

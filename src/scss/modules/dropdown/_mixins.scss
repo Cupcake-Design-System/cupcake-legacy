@@ -42,7 +42,10 @@ $dropdown-font-size       : 12px !default;
 $dropdown-font-weight     : bold !default;
 
 /// $dropdown-width  
-$dropdown-width           : 200px !default;
+$dropdown-width-sm           : 200px !default;
+
+/// $dropdown-width  
+$dropdown-width           : 300px !default;
 
 /// $dropdown-radius 
 $dropdown-radius          : $global-radius !default;
@@ -106,7 +109,6 @@ $dropdown-grid-padding: 8px !default;
   border: $dropdown-border;
   box-shadow: $dropdown-box-shadow;
   z-index: 1000;
-  min-width: $dropdown-width;
   display: flex;
   flex-wrap: wrap;
   padding: $dropdown-grid-padding;
