@@ -2,128 +2,186 @@
 /// @group form inputs
 ////
 
+
 /// $control-font-size 
-$control-font-size              : 12px !default;
+$control-font-size            : 12px !default;
+
 /// $control-color 
-$control-color                  : $font-body-color !default;
+$control-color                : $color-gray-9 !default;
+
 /// $control-font-weight
-$control-font-weight            : normal !default;
+$control-font-weight          : normal !default;
+
 /// $control-line-height
-$control-line-height            : 1.166667 !default;  //line height optimized for IE compatibility
+$control-line-height          : 1.166667 !default;  //line height optimized for IE compatibility
+
 /// $control-placeholder-c
-$control-placeholder-c          : $color-gray-5 !default;
+$control-placeholder-c        : $color-gray-5 !default;
+
 /// $control-placeholder-hover-c
-$control-placeholder-hover-c    : $control-placeholder-c !default;
+$control-placeholder-hover-c  : $control-placeholder-c !default;
+
 /// $control-background 
-$control-background             : $white !default;
+$control-background           : $white !default;
+
 /// $control-padding-v
-$control-padding-v              : 7px !default;
+$control-padding-v            : 7px !default;
+
 /// $control-padding-h 
-$control-padding-h              : 8px !default;
+$control-padding-h            : 8px !default;
+
 /// $control-height
-$control-height                 : 30px !default;
+$control-height               : 30px !default;
+
 /// $control-border 
-$control-border                 : $global-border-color !default;
+$control-border               : $color-gray-4 !default;
+
 /// $control-border-width 
-$control-border-width           : 1px !default;
+$control-border-width         : 1px !default;
+
 /// $control-border-radius 
-$control-border-radius          : 2px !default;
+$control-border-radius        : 2px !default;
+
 /// $control-border-radius-rounded 
-$control-border-radius-rounded  : 30em !default;
+$control-border-radius-rounded: 30em !default;
+
 /// $control-shadow 
-$control-shadow                 : inset 0 1px 1px 0 rgba(33, 37, 41, .1) !default;
+$control-shadow               : none !default;
+
+/// $control-shadow 
+$control-focused-shadow       : inset 0 1px 2px 0 rgba(33, 37, 41, 0.08) !default;
+
 /// $control-shadow-disabled 
-$control-shadow-disabled        : none !default;
+$control-shadow-disabled      : none !default;
+
 /// $control-transition 
-$control-transition             : border-color 0.1s ease-in !default;
+$control-transition           : border-color 0.1s ease-in !default;
+
 /// $control-hover  
-$control-hover                  : $primary !default;
+$control-hover                : $primary !default;
+
 /// $control-hover-border
-$control-hover-border           : $color-gray-5 !default;
+$control-hover-border         : $color-gray-5 !default;
+
 /// $control-active  
-$control-active                 : $primary !default;
+$control-active               : $primary !default;
+
 /// //$control-active-background 
-//$control-active-background      : $primary !default;
+//$control-active-background  : $primary !default;
 
 /// $control-active-border  
-$control-active-border          : $primary !default;
+$control-active-border        : $primary !default;
 
 /// $control-icon-padding
-$control-icon-padding           : 26px !default;
+$control-icon-padding         : 26px !default;
 
 /// $control-icon-color
-$control-icon-color             : $color-gray-7 !default;
+$control-icon-color           : $color-gray-9 !default;
 
 /// $control-disabled-border 
-$control-disabled-border        : $color-gray-2 !default;
+$control-disabled-border      : transparent !default;
+
 /// $control-disabled-background
-$control-disabled-background    : $color-gray-0 !default;
+$control-disabled-background  : $color-gray-3 !default;
+
 /// $control-hint-color 
-$control-hint-color             : #8d8d97 !default;
+$control-hint-color           : $color-gray-6 !default;
+
 /// $control-hint-font-size 
-$control-hint-font-size         : 85% !default;
+$control-hint-font-size       : 85% !default;
+
 /// $control-hint-transition 
-$control-hint-transition        : all 0.2s ease !default;
+$control-hint-transition      : all 0.2s ease !default;
+
 /// $control-label-padding  
-$control-label-padding          : $control-padding-v 0 !default;
+$control-label-padding        : $control-padding-v 0 !default;
+
 /// $control-addon-background 
-$control-addon-background       : #eeeeee !default;
+$control-addon-background     : #eeeeee !default;
+
 /// $control-element-padding 
-$control-element-padding        : 1em 0 !default;
+$control-element-padding      : 1em 0 !default;
+
 /// $control-element-label-padding 
-$control-element-label-padding  : 0 0 $control-padding-v 0 !default;
+$control-element-label-padding: 0 0 $control-padding-v 0 !default;
+
 /// $control-results-border         
-$control-results-border         : 1px solid rgb(204, 204, 204) !default;
+$control-results-border       : 1px solid rgb(204, 204, 204) !default;
+
 /// $control-results-shadow         
-$control-results-shadow         : 2px 5px 4px rgba(0, 0, 0, .05) !default;
+$control-results-shadow       : 2px 5px 4px rgba(0, 0, 0, .05) !default;
+
 /// $fieldset-padding              
-$fieldset-padding               : 0 !default;
+$fieldset-padding             : 0 !default;
+
 /// $fieldset-margin                
-$fieldset-margin                : $control-padding-v 0 !default;
+$fieldset-margin              : $control-padding-v 0 !default;
+
 /// $fieldset-width                 
-$fieldset-width                 : 100% !default;
+$fieldset-width               : 100% !default;
+
 /// $fieldset-border                
-$fieldset-border                : 0 !default;
+$fieldset-border              : 0 !default;
+
 /// $fieldset-legend-padding        
-$fieldset-legend-padding        : 0.3em 0 !default;
+$fieldset-legend-padding      : 0.3em 0 !default;
+
 /// $control-xs
-$control-xs: 9px !default;
+$control-xs                   : 9px !default;
+
 /// $control-sm
-$control-sm: 11px !default;
+$control-sm                   : 11px !default;
+
 /// $control-lg
-$control-lg: 16px !default;
+$control-lg                   : 16px !default;
+
 /// $control-xl
-$control-xl: 18px !default;
+$control-xl                   : 18px !default;
+
 /// $control-xs-padding
-$control-xs-padding: 2px 5px !default;
+$control-xs-padding           : 2px 5px !default;
+
 /// $control-sm-padding
-$control-sm-padding: 6px 7px 5px !default;
+$control-sm-padding           : 6px 7px 5px !default;
+
 /// $control-lg-padding
-$control-lg-padding: 10px !default;
+$control-lg-padding           : 10px !default;
+
 /// $control-xl-padding
-$control-xl-padding: 14px !default;
+$control-xl-padding           : 14px !default;
+
 /// $control-xs-height
-$control-xs-height: 20px !default;
+$control-xs-height            : 20px !default;
+
 /// $control-sm-height
-$control-sm-height: 25px !default;
+$control-sm-height            : 25px !default;
+
 /// $control-lg-height
-$control-lg-height: 40px !default;
+$control-lg-height            : 40px !default;
+
 /// $control-xl-height
-$control-xl-height: 50px !default;
+$control-xl-height            : 50px !default;
+
 /// $control-group-padding
-$control-group-padding: 1em !default;
+$control-group-padding        : 1em !default;
+
 /// $control-success-c
-$control-success-c: $success !default;
+$control-success-c            : $success !default;
+
 /// $control-success-bg
-$control-success-bg: false !default;
+$control-success-bg           : false !default;
+
 /// $control-warning-c
-$control-warning-c: $warning !default;
+$control-warning-c            : $warning !default;
+
 /// $control-warning-bg
-$control-warning-bg: false !default;
+$control-warning-bg           : false !default;
+
 /// $control-danger-c
-$control-danger-c: $danger !default;
+$control-danger-c             : $danger !default;
+
 /// $control-danger-bg
-$control-danger-bg: false !default;
+$control-danger-bg            : false !default;
 
 
 // FORM SIZES
@@ -175,61 +233,90 @@ $control-ng-validation:
 
 /// $select-border-color
 $select-border-color : $color-gray-4 !default;
+
 /// $select-background
-$select-background   : $color-gray-0 !default;
+$select-background   : $color-gray-1 !default;
+
 /// $select-color
-$select-color        : $color-gray-7 !default;
+$select-color        : $color-gray-9 !default;
+
 /// $select-box-shadow
-$select-box-shadow   : 0 1px 0 0 rgba(33, 37, 41, 0.1) !default;
+$select-box-shadow   : none !default;
+
 /// $select-border-radius
 $select-border-radius: $control-border-radius !default;
+
 /// $select-error-c
 $select-error-c      : $danger !default;
+
 /// $select-error-fw
 $select-error-fw     : normal !default;
+
 /// $select-error-bd
 $select-error-bd     : $control-danger-c !default;
+
 /// $select-padding
 $select-padding      : 7px 10px !default;
+
 /// $select-padding-xs
 $select-padding-xs   : 3px 10px !default;
+
 /// $select-padding-sm
 $select-padding-sm   : 3px 10px !default;
+
 /// $select-padding-lg
 $select-padding-lg   : 9px 20px !default;
+
 /// $select-padding-xl
 $select-padding-xl   : 11px 20px !default;
+
 /// $select-font-size
 $select-font-size    : 12px !default;
+
 /// $select-font-size-xs
 $select-font-size-xs : 10px !default;
+
 /// $select-font-size-sm
 $select-font-size-sm : 11px !default;
+
 /// $select-font-size-lg
 $select-font-size-lg : 14px !default;
+
 /// $select-font-size-xl
 $select-font-size-xl : 18px !default;
+
 /// $select-height
 $select-height       : $control-height !default;
+
 /// $select-height-sm
 $select-height-sm    : $control-sm-height !default;
+
 /// $select-height-lg
 $select-height-lg    : $control-lg-height !default;
+
 /// $select-height-xl
 $select-height-xl    : $control-xl-height !default;
-/// $select-padding-r   
+
+/// $select-padding-r              
 $select-padding-r        : 22px !default;
+
 // $select-background-img  
 $select-background-img   : url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+
 // $select-background-img  
 $select-background-img-disabled : url("data:image/gif;base64,R0lGODlhDwAUAIABAMzMzP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") !default;
+
 /// $select-background-pos  
 $select-background-pos   : right 6px top 50% !default;
+
 /// $select-background-hover  
-$select-background-hover : $color-gray-1 !default;
+$select-background-hover : $color-gray-0 !default;
+
 /// $select-background-active
 $select-background-active: $color-gray-2 !default;
+
 /// $select-box-shadow-active
-$select-box-shadow-active: inset 0 1px 0 1px $color-gray-4 !default;
+$select-box-shadow-active: inset 0 1px 0 1px $color-gray-3 !default;
+
 /// $select-box-shadow-focus
 $select-box-shadow-focus : 0 0 1px 2px rgba($color-primary-4, .5) !default;
