@@ -26,7 +26,7 @@
 
 // Button Style
 
-@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: white) {
+@mixin btn-style($bg, $bg-hover, $border: $btn-border, $color: white) {
   background: $bg;
   color: $color;
 
@@ -50,7 +50,7 @@
 
   &:active,
   &.c-btn-active {
-    background: $active;
+    background: $bg;
 
     @if $btn-border == false {
       border-color: transparent;
@@ -254,14 +254,14 @@
 
 // Button Link Style
 
-@mixin btn-link-style($color, $hover:lighten($color, 10), $active:darken($color, 10) ) {
+@mixin btn-link-style($color) {
   color: $color;
 
   &:hover {
-    color: $hover;
+    color: lighten($color, 10);
   }
 
   &:active {
-    color: $active;
+    color: darken($color, 10);
   }
 }

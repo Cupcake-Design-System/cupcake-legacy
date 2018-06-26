@@ -19,7 +19,7 @@
   }
 
   &-primary {
-    @include btn-style($btn-primary-bg, $btn-primary-hover, $btn-primary-bd, $btn-primary-bd);
+    @include btn-style($btn-primary-bg, $btn-primary-hover, $btn-primary-bd);
 
     &-outline {
       @include btn-outline($btn-primary-bg);
@@ -54,7 +54,7 @@
   }
 
   &-success {
-    @include btn-style($btn-success-bg, $btn-success-hover, $btn-success-bd, $btn-success-bd);
+    @include btn-style($btn-success-bg, $btn-success-hover, $btn-success-bd);
 
     &-outline {
       @include btn-outline($btn-success-bg);
@@ -74,7 +74,7 @@
   }
 
   &-warning {
-    @include btn-style($btn-warning-bg, $btn-warning-hover, $btn-warning-bd, $btn-warning-bd);
+    @include btn-style($btn-warning-bg, $btn-warning-hover, $btn-warning-bd);
 
     &-outline {
       @include btn-outline($btn-warning-bg);
@@ -94,7 +94,7 @@
   }
 
   &-danger {
-    @include btn-style($btn-danger-bg, $btn-danger-hover, $btn-danger-bd, $btn-danger-bd);
+    @include btn-style($btn-danger-bg, $btn-danger-hover, $btn-danger-bd);
 
     &-outline {
       @include btn-outline($btn-danger-bg);
@@ -130,11 +130,11 @@
   font-weight: $btn-link-font-weight;
 
   &:hover {
-    color: $color-primary-7;
+    color: lighten($primary, 10);
   }
 
   &:active {
-    color: $color-primary-9;
+    color: darken($primary, 10);
     box-shadow: none;
   }
 
@@ -146,7 +146,7 @@
     &:focus,
     &:active {
       background: transparent;
-      color: $color-gray-6;
+      color: $btn-disabled-c;
       line-height: 1;
       border-color: transparent;
       cursor: not-allowed;
@@ -188,18 +188,18 @@
 .c-btn-link {
   &-secondary,
   &-default {
-    @include btn-link-style($color-gray-8);
+    @include btn-link-style($color-gray-7);
   }
 
   &-success {
-    @include btn-link-style($color-success-8, $color-success-7, $color-success-9);
+    @include btn-link-style($success);
   }
 
   &-warning {
-    @include btn-link-style($color-warning-8, $color-warning-7, $color-warning-9);
+    @include btn-link-style($warning);
   }
 
   &-danger {
-    @include btn-link-style($color-danger-8, $color-danger-7, $color-danger-9);
+    @include btn-link-style($danger);
   }
 }
