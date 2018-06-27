@@ -1,4 +1,4 @@
-## Release [Unreleased](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.5...HEAD) :rocket:
+## Release [1.4.6](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.5...1.4.6) :rocket:
 **27 June 2018**
 
 ### Merged
@@ -11,7 +11,24 @@
 - testing: selectors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f28499e90b76fc09b85610bac32b0a47d56bef15)**
 - Revert &quot;button-tweaks&quot; **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/31cdbb3db1ef64837737bac8f3a82f3c778b9de5)**
 - button-tweaks **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/3797b7a636be5fca80119271d6875ba87a797b6b)**
-- Stylelint update broke one of their rules **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1bf8b9d0fe8b35036ea45192c860d8b18c47037e)**
+- Stylelint update broke one of their rules TODO: Fix in config repo **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1bf8b9d0fe8b35036ea45192c860d8b18c47037e)**
+- Release 1.4.6 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/22a588980c03e644ac516cc92ad80def33811bc1)**
+
+## Release [1.4.5](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.3...1.4.5) :rocket:
+**19 April 2018**
+
+### Merged
+- fix - select error was not working with xs,sm,lg.. etc. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/226)**
+- adjust select element according to invision **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/224)**
+- remove card body and subtitle color definition **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/223)**
+- new styles for suggester, bd flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/225)**
+
+### Commits
+- Release 1.4.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/67bdc4c2c8c2392592327d34d125271b2cc194f2)**
+- add an icon to select element **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8383e6eb0e7992f4799633fb459078ca7e44a62b)**
+- return stylings for clear-icon **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f5073f815d633588575cb3a2226f54c5e60e7cce)**
+- fixed issues **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ff5c7a07b0e7603b4d93b219abf186e676324711)**
+- remove card body and subtitle color defenition **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bfbe15b6e36f6edcbe8f955b7c0148550eb26076)**
 
 ## Release [1.4.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.2...1.4.3) :rocket:
 **6 April 2018**
@@ -215,21 +232,17 @@
 - added yarn.lock to gitignore **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2495487c0c9415992e177586b52f9025bb27f852)**
 - fix lint **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d87af14e9383219afa52f478d89e6a1059687a43)**
 
-## Release [1.4.5](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.3...1.4.5) :rocket:
-**19 April 2018**
+## Release [1.1.7](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.6...1.1.7) :rocket:
+**4 November 2017**
 
 ### Merged
-- fix - select error was not working with xs,sm,lg.. etc. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/226)**
-- adjust select element according to invision **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/224)**
-- remove card body and subtitle color definition **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/223)**
-- new styles for suggester, bd flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/225)**
+- Layout updates **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/163)**
 
 ### Commits
-- Release 1.4.5 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/67bdc4c2c8c2392592327d34d125271b2cc194f2)**
-- add an icon to select element **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8383e6eb0e7992f4799633fb459078ca7e44a62b)**
-- return stylings for clear-icon **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f5073f815d633588575cb3a2226f54c5e60e7cce)**
-- fixed issues **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ff5c7a07b0e7603b4d93b219abf186e676324711)**
-- remove card body and subtitle color defenition **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bfbe15b6e36f6edcbe8f955b7c0148550eb26076)**
+- hot-fix flex syntax regression **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bd71cdd5959abd62fd6794f378b33c84bc29ff59)**
+- Release 1.1.6 changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/046aaaeb458384071a6c2b8d5753a780ac71ac2b)**
+- Release 1.1.7 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1a92ed3e9b2d08bc5a33800e5d0b52b5d79ea401)**
+- Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a77aa3d20c99179b4ab5118ecd152335a772721d)**
 
 ## Release [1.1.6](https://code.ipreo.com/Ipreo/cupcake/compare/1.1.5...1.1.6) :rocket:
 **3 November 2017**
@@ -416,9 +429,10 @@
 ### Commits
 - base styles for new tables design **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/27576d7960381f286e508f0178970b1adbf146a8)**
 - update table designs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4d2469cb42770048022ed3bfc9f2b55aae8f4e57)**
-- used existing select form inputs **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4ae82c0321a91b02326dde08172d5fd32a31a20c)**
+- add table line-height; remove padding classes on cells with sm btn; add table icon btns; add fancy hover background on rows and head cells; adjust btn vars. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a94e68525027490036b81f8263b121fd810d3950)**
+- used existing select form inputs fix input padding to follow padding for groups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/4ae82c0321a91b02326dde08172d5fd32a31a20c)**
 - added starred state. removed old sass map - $table-colors. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/706af4bee37f2de29f56d801aff7060450e34519)**
-- c-btn-secondary active fix: **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c494b7704943fa3716e032d8ad0b811df1b7f6bc)**
+- c-btn-secondary active fix: #61 closed **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c494b7704943fa3716e032d8ad0b811df1b7f6bc)**
 - Update CHANGELOG.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5d7f552e00ed2528fecf2cf0788c0582d6cbfa40)**
 - Release 0.1.8 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/502854621635199e2cd421ea4dcc72a470e6b6d9)**
 
@@ -497,7 +511,7 @@
 - variables in strong, small tags. remove h1 from reset. **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/23)**
 
 ### Commits
-- create invisionapp page. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bc0213f83caf2b3c3939f21f30df3e0d91837b0d)**
+- create invisionapp page. styles adjustments according to the page. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bc0213f83caf2b3c3939f21f30df3e0d91837b0d)**
 - Added elements to invision page. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dc84a27c3186d8bc161ecadfa72a1cfe579e8133)**
 - init stylelinting **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c79a2eef07502729bd0179c35ef7cb2003cbb1de)**
 - add loaders **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a908124606b8de85e4f8e4d201a5d0e7227f7493)**
@@ -612,11 +626,11 @@
 - updated gulpfile based on structure conversations **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bf37ae7fce0f3d28c36d2a69b98115370acfb7ba)**
 - updated .gitignore and gulpfile **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/06f20ec633bcb4c267a76c57109b491926bed30c)**
 - Merge **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d0a2daae01d8da52df0f240c13d31eea40a72769)**
-- Fixed package.json **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50697fcf56d6d525c5b0f461b5dd44bf37c0d97e)**
+- Fixed package.json - removed badge margin - change global btn size to c- prefix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/50697fcf56d6d525c5b0f461b5dd44bf37c0d97e)**
 - Update package.json **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ce9931f761fe37a90f7c8888c479e43456e1b0dc)**
 - Gulp and c- prefix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/fc1dbeb3486e79290fcfd961bac5f53069c37192)**
 - changed copy npm task. **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6f346696340ee151100b01530492108ff76d50f3)**
-- - removed dist **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/09ce4131ecf7af1d1f31d1aae5dd4c7b9fb4765f)**
+- - removed dist - made fonts global - cleaned up compiled **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/09ce4131ecf7af1d1f31d1aae5dd4c7b9fb4765f)**
 - Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/566f53d73a5581eb09103867fdee984c20d29fc3)**
 - logo-fix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8bc6c002e204a2b7c92ae84af95c7d55227dfd0c)**
 - Update README.md **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/815bce05d7e7c6e6425c0f999cd4a68cdf64a41e)**
