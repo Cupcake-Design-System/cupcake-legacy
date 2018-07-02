@@ -63,7 +63,7 @@
   }
 
   &-col-2 {
-    width: 200px;
+    width: $dropdown-width-sm;
 
     li a,
     .c-dropdown-item {
@@ -72,7 +72,7 @@
   }
 
   &-col-4 {
-    width: 400px;
+    width: $dropdown-width + 100px;
 
     li a,
     .c-dropdown-item {
@@ -85,5 +85,5 @@
   right: 0;
   left: auto;
   position: absolute;
-  min-width: 300px;
+  min-width: $dropdown-width;
 }
