@@ -48,6 +48,7 @@ $avatar-sizes:
   display: inline-block;
   width: $avatar-size;
   height: $avatar-size;
+  flex-shrink: 0;
   line-height: $avatar-size;
   color: $white;
   background: $avatar-secondary;

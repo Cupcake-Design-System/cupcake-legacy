@@ -40,6 +40,7 @@ $media-action-color     : $color-gray-6 !default;
 @mixin media-body {
   flex: 1;
   min-width: 1px;
+  flex-basis: auto; // fix for IE, when media is inside flexbox container
 
   > * {
     margin-bottom: 0;
