@@ -72,7 +72,7 @@
   }
 
   &-col-4 {
-    width: 400px;
+    width: $dropdown-width + 100px;
 
     li a,
     .c-dropdown-item {
