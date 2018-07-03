@@ -28,16 +28,19 @@ $white            : #ffffff !default;
 /// $global-radius
 $global-radius    : $radius-sm !default;
 
-/// $border-default 
+/// $global-border-color 
 $global-border-color: $color-gray-4 !default;
 
-/// $text-default 
+/// $global-bg-color 
+$global-bg-color: $color-gray-1 !default;
+
+/// $global-text-color 
 $global-text-color: $font-body-color !default;
 
-/// $default-font-size
+/// $global-font-size
 $global-font-size: $font-body-font-size !default;
 
-/// $default-font-family
+/// $global-font-family
 $global-font-family: $font-body-font-family !default;
 
 

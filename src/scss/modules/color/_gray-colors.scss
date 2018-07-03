@@ -77,6 +77,10 @@ $gray-map: (
   .c-bg-white {
     background-color: $white;
   }
+
+  .c-bg-body {
+    background-color: $global-bg-color;
+  }
 }
 
 $color-gray-0: color(gray, 0);
