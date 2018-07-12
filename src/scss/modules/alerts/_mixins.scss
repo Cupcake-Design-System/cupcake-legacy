@@ -178,9 +178,7 @@ $alert-close-font-size  : 12px !default;
     background-color: white;
     border-color: $color;
     color: $color;
-  }
-
-  @else {
+  } @else {
     background-color: $bg;
     border-color: $color;
     color: $color;
@@ -199,9 +197,7 @@ $alert-close-font-size  : 12px !default;
         color: $color;
       }
     }
-  }
-
-  @else {
+  } @else {
     .c-alert-close,
     .c-alert-link {
       color: lighten($font-body-color, 20%);

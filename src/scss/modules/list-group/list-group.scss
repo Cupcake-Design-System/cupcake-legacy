@@ -56,17 +56,13 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
 
   @if $ui-list-radius == true {
     border-radius: $global-radius;
-  }
-
-  @else {
+  } @else {
     border-radius: 0;
   }
 
   @if $ui-list-shadows == true {
     box-shadow: $ui-list-box-shadow;
-  }
-
-  @else {
+  } @else {
     box-shadow: none;
   }
 
@@ -80,9 +76,7 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
     &:first-child {
       @if $ui-list-radius == true {
         border-radius: $global-radius $global-radius 0 0;
-      }
-
-      @else {
+      } @else {
         border-radius: 0;
       }
     }
@@ -90,9 +84,7 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
     &:last-child {
       @if $ui-list-radius == true {
         border-radius: 0 0 $global-radius $global-radius;
-      }
-
-      @else {
+      } @else {
         border-radius: 0;
       }
 
@@ -155,9 +147,7 @@ $ui-list-a-list-item-bg-hover     : $color-gray-2 !default;
   &:last-child {
     @if $ui-list-radius == true {
       border-radius: 0 0 $global-radius $global-radius;
-    }
-
-    @else {
+    } @else {
       border-radius: 0;
     }
 

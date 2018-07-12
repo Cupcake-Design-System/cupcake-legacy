@@ -30,9 +30,7 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-primary-bg, .5));
-      }
-
-      @else {
+      } @else {
         @include btn-disabled($btn-primary-disabled, $color: $color-gray-6);
       }
     }
@@ -65,9 +63,7 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-success-bg, .5));
-      }
-
-      @else {
+      } @else {
         @include btn-disabled($btn-success-disabled, $color: $color-gray-6);
       }
     }
@@ -85,9 +81,7 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-warning-bg, .5));
-      }
-
-      @else {
+      } @else {
         @include btn-disabled($btn-warning-disabled, $color: $color-gray-6);
       }
     }
@@ -105,9 +99,7 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-danger-bg, .5));
-      }
-
-      @else {
+      } @else {
         @include btn-disabled($btn-danger-disabled, $color: $color-gray-6);
       }
     }
