@@ -32,9 +32,7 @@
 
   @if $white-label == true {
     border-color: darken($bg, 15);
-  }
-
-  @else {
+  } @else {
     border-color: $border;
   }
 
@@ -54,9 +52,7 @@
 
     @if $btn-border == false {
       border-color: transparent;
-    }
-
-    @else {
+    } @else {
       border-color: $border;
     }
   }
@@ -66,9 +62,7 @@
       background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     }
-  }
-
-  @else {
+  } @else {
     &:hover {
       background-color: $bg-hover;
       background-image: none;
@@ -116,19 +110,13 @@
   @if $size == sm {
     font-size: $btn-sm-font;
     padding: $btn-sm-padding;
-  }
-
-  @elseif $size == md {
+  } @else if $size == md {
     font-size: $btn-md-font;
     padding: $btn-md-padding;
-  }
-
-  @elseif $size == lg {
+  } @else if $size == lg {
     font-size: $btn-lg-font;
     padding: $btn-lg-padding;
-  }
-
-  @elseif $size == xl {
+  } @else if $size == xl {
     font-size: $btn-xl-font;
     padding: $btn-xl-padding;
   }
@@ -201,9 +189,7 @@
 
   @if $btn-shadow == true {
     box-shadow: $btn-shadow-secondary;
-  }
-
-  @else {
+  } @else {
     box-shadow: none;
   }
 

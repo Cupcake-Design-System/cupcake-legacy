@@ -8,13 +8,9 @@
   @each $key, $num in $map {
     @if $prev-num == null {
       // Do nothing
-    }
-
-    @else if not comparable($prev-num, $num) {
+    } @else if not comparable($prev-num, $num) {
       @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-
-    @else if $prev-num >= $num {
+    } @else if $prev-num >= $num {
       @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
     }
     $prev-key: $key;
@@ -66,9 +62,7 @@
     @media (min-width: $min) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
@@ -80,9 +74,7 @@
     @media (max-width: $max) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
@@ -104,13 +96,9 @@
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  }
-
-  @else if $max == null {
+  } @else if $max == null {
     @include media-breakpoint-up($name);
-  }
-
-  @else if $min == null {
+  } @else if $min == null {
     @include media-breakpoint-down($name);
   }
 }

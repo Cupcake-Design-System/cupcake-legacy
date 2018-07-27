@@ -5,25 +5,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  @else if($pos == top) {
+  } @else if($pos == top) {
     left: 50%;
     transform: translate(-50%, 0);
-  }
-
-  @else if($pos == left) {
+  } @else if($pos == left) {
     top: 50%;
     transform: translate(0, -50%);
-  }
-
-  @else if($pos == right) {
+  } @else if($pos == right) {
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
-  }
-
-  @else if($pos == bottom) {
+  } @else if($pos == bottom) {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);

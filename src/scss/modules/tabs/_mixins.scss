@@ -130,9 +130,7 @@ $tab-font-size-lg: 20px !default;
 
     @if $tabs-full-width-border {
       border-bottom-color: $tabs-color-active;
-    }
-
-    @else {
+    } @else {
       border-bottom-color: $tabs-color;
     }
   }

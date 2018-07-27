@@ -94,9 +94,7 @@ b,
 strong {
   @if variable-exists(text-strong) {
     font-weight: $text-strong;
-  }
-
-  @else {
+  } @else {
     font-weight: bold;
   }
 }
@@ -238,9 +236,7 @@ textarea {
 optgroup {
   @if variable-exists(text-strong) {
     font-weight: $text-strong;
-  }
-
-  @else {
+  } @else {
     font-weight: bold;
   }
 }
