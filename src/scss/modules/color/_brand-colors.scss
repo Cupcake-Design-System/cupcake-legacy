@@ -68,11 +68,23 @@ $brand-map: (
       color: $color;
     }
 
+    .c-text-#{$name}-hover:hover {
+      color: $color;
+    }
+
     .c-bg-#{$name} {
       background-color: $color;
     }
 
+    .c-bg-#{$name}-hover:hover {
+      background-color: $color;
+    }
+
     .c-bd-#{$name} {
+      border-color: $color;
+    }
+
+    .c-bd-#{$name}-hover:hover {
       border-color: $color;
     }
   }
@@ -83,14 +95,34 @@ $brand-map: (
         color: $tone_value;
       }
 
+      .c-text-#{$palette}-#{$tone_name}-hover:hover {
+        color: $tone_value;
+      }
+
       .c-bg-#{$palette}-#{$tone_name} {
+        background-color: $tone_value;
+      }
+
+      .c-bg-#{$palette}-#{$tone_name}-hover:hover {
         background-color: $tone_value;
       }
 
       .c-bd-#{$palette}-#{$tone_name} {
         border-color: $tone_value;
       }
+
+      .c-bd-#{$palette}-#{$tone_name}-hover:hover {
+        border-color: $tone_value;
+      }
     }
+  }
+
+  .c-bg-selected {
+    background-color: $global-bg-selected-color;
+  }
+  
+  .c-bg-hover:hover {
+    background-color: $global-bg-hover-color;
   }
 
   .c-bg-none {

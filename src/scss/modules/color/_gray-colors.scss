@@ -35,11 +35,23 @@ $gray-map: (
           color: $tone_value;
         }
 
+        .c-text-#{$palette}-hover:hover {
+          color: $tone_value;
+        }
+
         .c-bg-#{$palette} {
           background-color: $tone_value;
         }
 
+        .c-bg-#{$palette}-hover:hover {
+          background-color: $tone_value;
+        }
+
         .c-bd-#{$palette} {
+          border-color: $tone_value;
+        }
+
+        .c-bd-#{$palette}-hover:hover {
           border-color: $tone_value;
         }
       }
@@ -52,11 +64,23 @@ $gray-map: (
         color: $tone_value;
       }
 
+      .c-text-#{$palette}-#{$tone_name}-hover:hover {
+        color: $tone_value;
+      }
+
       .c-bg-#{$palette}-#{$tone_name} {
         background-color: $tone_value;
       }
 
+      .c-bg-#{$palette}-#{$tone_name}-hover:hover {
+        background-color: $tone_value;
+      }
+
       .c-bd-#{$palette}-#{$tone_name} {
+        border-color: $tone_value;
+      }
+      
+      .c-bd-#{$palette}-#{$tone_name}-hover:hover {
         border-color: $tone_value;
       }
     }
