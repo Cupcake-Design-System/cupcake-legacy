@@ -255,12 +255,16 @@ $table-states: ("selected", $table-state-selected)
 @mixin table-header-cell-draggable {
   th:hover {
     background: $table-head-cell-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
+    cursor: move;  //IE fallback
+    cursor: grab;
   }  
 }
 
 @mixin table-row-draggable {
   tbody tr:hover {
     background: $table-row-hover $table-hover-background-img no-repeat $table-hover-background-img-body-pos;
+    cursor: move;  //IE fallback
+    cursor: grab;
   }
 }
 
