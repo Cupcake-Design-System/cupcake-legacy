@@ -2,6 +2,8 @@
 **2 July 2018**
 
 ### Commits
+- changelog update **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f369cb602c4eb3c8e21b51f4621512d11707ccdf)**
+- changelog **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6256b665a1d62a0d9663c86efae2d43a321aae1f)**
 - dropdown width hotfix **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/04b9ea66e78f4d517d13f9caa5f24cc05362b1d4)**
 - Release 1.4.7 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d36c609a666e82285389c607f0942e2cc3d5565e)**
 
