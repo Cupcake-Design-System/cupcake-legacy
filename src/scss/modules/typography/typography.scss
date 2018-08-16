@@ -190,6 +190,6 @@ small,
 }
 
 .c-text-muted {
-  color: inherit;
-  opacity: 0.6;
+  color: $text-muted-color;
+  opacity: $text-muted-opeacity;
 }

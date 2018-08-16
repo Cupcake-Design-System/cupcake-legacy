@@ -53,8 +53,16 @@
     $breakpoint: nth(map-keys($breakpoints), $i);
     $max-width:  nth(map-values($breakpoints), $i);
 
-    @media (max-width: $max-width) {
-      @include hidden($breakpoint);
+    @if $next-index <= length($breakpoints) {
+      $max-width: nth(map-values($breakpoints), $next-index) - 1px;
+
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @include hidden($breakpoint);
+      }
+    } @else {
+      @media (min-width: $min-width) {
+        @include hidden($breakpoint);
+      }
     }
   }
 }

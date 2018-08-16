@@ -23,9 +23,7 @@
   &-link {
     @if $pagination-gradients == true {
       @include linear-gradient(to bottom, lighten($pagination-item-bg, 6%), $pagination-item-bg 66%, darken($pagination-item-bg, 4%));
-    }
-
-    @else {
+    } @else {
       background: $pagination-item-bg;
     }
 
@@ -138,9 +136,7 @@
   &-link {
     @if $pagination-gradients == true {
       @include linear-gradient(to bottom, lighten($pagination-item-bg, 6%), $pagination-item-bg 66%, darken($pagination-item-bg, 4%));
-    }
-
-    @else {
+    } @else {
       background: $pagination-item-bg;
     }
 

@@ -19,7 +19,7 @@
   }
 
   &-primary {
-    @include btn-style($btn-primary-bg, $btn-primary-hover);
+    @include btn-style($btn-primary-bg, $btn-primary-hover, $btn-primary-bd, $btn-primary-bd);
 
     &-outline {
       @include btn-outline($btn-primary-bg);
@@ -30,10 +30,8 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-primary-bg, .5));
-      }
-
-      @else {
-        @include btn-disabled($btn-primary-disabled);
+      } @else {
+        @include btn-disabled($btn-primary-disabled, $color: $color-gray-6);
       }
     }
   }
@@ -49,12 +47,12 @@
     &-disabled,
     &.c-btn-disabled,
     &[disabled] {
-      @include btn-disabled($btn-disabled-bg, $btn-disabled-bd, $btn-disabled-c, $btn-disabled-text-shadow);
+      @include btn-disabled($btn-secondary-disabled, $color: $color-gray-6);
     }
   }
 
   &-success {
-    @include btn-style($btn-success-bg, $btn-success-hover);
+    @include btn-style($btn-success-bg, $btn-success-hover, $btn-success-bd, $btn-success-bd);
 
     &-outline {
       @include btn-outline($btn-success-bg);
@@ -65,16 +63,32 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-success-bg, .5));
+      } @else {
+        @include btn-disabled($btn-success-disabled, $color: $color-gray-6);
       }
+    }
+  }
 
-      @else {
-        @include btn-disabled($btn-success-disabled);
+  &-warning {
+    @include btn-style($btn-warning-bg, $btn-warning-hover, $btn-warning-bd, $btn-warning-bd);
+
+    &-outline {
+      @include btn-outline($btn-warning-bg);
+    }
+
+    &-disabled,
+    &.c-btn-disabled,
+    &[disabled] {
+      @if $white-label == true {
+        @include btn-disabled(rgba($btn-warning-bg, .5));
+      } @else {
+        @include btn-disabled($btn-warning-disabled, $color: $color-gray-6);
       }
     }
   }
 
   &-danger {
-    @include btn-style($btn-danger-bg, $btn-danger-hover);
+    @include btn-style($btn-danger-bg, $btn-danger-hover, $btn-danger-bd, $btn-danger-bd);
 
     &-outline {
       @include btn-outline($btn-danger-bg);
@@ -85,10 +99,8 @@
     &[disabled] {
       @if $white-label == true {
         @include btn-disabled(rgba($btn-danger-bg, .5));
-      }
-
-      @else {
-        @include btn-disabled($btn-danger-disabled);
+      } @else {
+        @include btn-disabled($btn-danger-disabled, $color: $color-gray-6);
       }
     }
   }
@@ -110,11 +122,11 @@
   font-weight: $btn-link-font-weight;
 
   &:hover {
-    color: lighten($primary, 10);
+    color: $color-primary-7;
   }
 
   &:active {
-    color: darken($primary, 10);
+    color: $color-primary-9;
     box-shadow: none;
   }
 
@@ -126,7 +138,7 @@
     &:focus,
     &:active {
       background: transparent;
-      color: $btn-disabled-c;
+      color: $color-gray-6;
       line-height: 1;
       border-color: transparent;
       cursor: not-allowed;
@@ -168,14 +180,18 @@
 .c-btn-link {
   &-secondary,
   &-default {
-    @include btn-link-style($color-gray-7);
+    @include btn-link-style($color-gray-8);
   }
 
   &-success {
-    @include btn-link-style($success);
+    @include btn-link-style($color-success-8, $color-success-7, $color-success-9);
+  }
+
+  &-warning {
+    @include btn-link-style($color-warning-8, $color-warning-7, $color-warning-9);
   }
 
   &-danger {
-    @include btn-link-style($danger);
+    @include btn-link-style($color-danger-8, $color-danger-7, $color-danger-9);
   }
 }

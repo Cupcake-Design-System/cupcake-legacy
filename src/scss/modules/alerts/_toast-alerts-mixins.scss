@@ -130,9 +130,7 @@ $toast-alert-icon-size: 12px !default;
       height: $toast-alert-bar-size;
       border: $toast-alert-bar-bd;
       border-radius: 0 0 $toast-alert-radius $toast-alert-radius;
-    }
-
-    @else {
+    } @else {
       left: 0;
       top: 0;
       bottom: 0;
@@ -205,9 +203,7 @@ $toast-alert-icon-size: 12px !default;
     @if $white-label == true {
       background: $bg;
       border-color: $bg;
-    }
-
-    @else {
+    } @else {
       background: $bg;
       border-color: $bd;
     }

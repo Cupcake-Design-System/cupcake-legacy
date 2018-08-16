@@ -1,6 +1,6 @@
 {
   "name": "@ipreo/cupcake",
-  "version": "1.4.5",
+  "version": "1.4.8",
   "description": "Ipreo CSS framework.",
   "main": "dist/default.css",
   "repository": {
@@ -17,7 +17,8 @@
     "deploy": "gulp deploy",
     "test": "karma start",
     "changelog": "auto-changelog --template changelog-template.hbs --commit-limit false",
-    "list-selectors": "list-selectors ./dist/bd.css -p -i classes stdout > reports/class.json",
+    "list-selectors-BD": "list-selectors ./dist/bd.css -p -i classes stdout > bd-class.json",
+    "list-selectors": "list-selectors ./dist/default.css -p -i classes stdout > cupcake-class.json",
     "visual": "npm run reference && npm run compare",
     "reference": "backstop reference",
     "compare": "backstop test",
@@ -27,6 +28,7 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
+    "@ipreo/cupcake-stylelint-config": "1.1.0",
     "auto-changelog": "^1.1.0",
     "autoprefixer": "^7.2.1",
     "backstopjs": "^3.0.32",
@@ -76,10 +78,10 @@
     "run-sequence": "^2.2.0",
     "seed-barista": "^1.0.4",
     "source-sans-pro": "^2.0.10",
-    "stylelint": "^8.3.1",
-    "stylelint-config-standard": "^18.0.0",
-    "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-scss": "^2.2.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-declaration-use-variable": "^1.6.1",
+    "stylelint-scss": "^3.1.3",
     "surge": "^0.19.0",
     "vinyl-paths": "^2.1.0"
   },
