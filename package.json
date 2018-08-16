@@ -32,7 +32,6 @@
     "autoprefixer": "^7.2.1",
     "backstopjs": "^3.0.32",
     "browser-sync": "^2.18.13",
-    "browserify": "^16.2.0",
     "chai": "^4.1.2",
     "chai-jquery": "^2.0.0",
     "colors": "^1.1.2",
