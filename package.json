@@ -21,8 +21,7 @@
     "list-selectors": "list-selectors ./dist/default.css -p -i classes stdout > cupcake-class.json",
     "visual": "npm run reference && npm run compare",
     "reference": "backstop reference",
-    "compare": "backstop test",
-    "cypress:open": "cypress open"
+    "compare": "backstop test"
   },
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"
@@ -37,7 +36,6 @@
     "chai": "^4.1.2",
     "chai-jquery": "^2.0.0",
     "colors": "^1.1.2",
-    "cypress": "^2.1.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",
@@ -74,9 +72,7 @@
     "list-selectors": "^2.0.0",
     "mocha": "^5.1.1",
     "octophant": "^1.0.1",
-    "quixote": "^0.14.0",
     "run-sequence": "^2.2.0",
-    "seed-barista": "^1.0.4",
     "source-sans-pro": "^2.0.10",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^18.2.0",
@@ -84,9 +80,5 @@
     "stylelint-scss": "^3.1.3",
     "surge": "^0.19.0",
     "vinyl-paths": "^2.1.0"
-  },
-  "dependencies": {
-    "hex-to-rgb": "^1.0.1",
-    "hex2rgb": "^2.2.0"
   }
 }
