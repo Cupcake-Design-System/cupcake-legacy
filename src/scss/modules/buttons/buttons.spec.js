@@ -11,8 +11,7 @@ describe('Default Button', () => {
     it('should have correct styles', () => {
         expect($defaultBtn.css('height'), 'button height').to.equal('30px');
         expect($defaultBtn.css('color'), 'text color').to.equal(toRgb('#212529'));
-        expect($defaultBtn.css('background-color'), 'background').to.equal(toRgb('#F8F9FA'));
-        expect($defaultBtn.css('border'), 'border').to.equal('1px solid grey');
+        expect($defaultBtn.css('background-color'), 'background').to.equal(toRgb('#f1f3f5'));
     });
 });
 
@@ -27,8 +26,7 @@ describe('Primary Button', () => {
     
     it('should have correct styles', () => {
         expect($primaryBtn.css('color'), 'text-color').to.equal(toRgb('#ffffff'));
-        expect($primaryBtn.css('background-color'), 'background').to.equal(toRgb('#1C7CD6'));
-        // expect($primaryBtn.css('border'), 'border').to.equal('1px solid grey');
+        expect($primaryBtn.css('background-color'), 'background').to.equal(toRgb('#1b6ec2'));
     });
 });
 
