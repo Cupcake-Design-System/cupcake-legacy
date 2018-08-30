@@ -58,6 +58,9 @@
 
   .c-dropdown-list {
     padding: 0;
+    margin: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   li.cupcake-suggester-container-tree-item label.checked,
