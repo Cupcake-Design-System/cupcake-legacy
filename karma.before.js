@@ -1,4 +1,3 @@
-
 window.toRgb = function (hex) {
     hex = hex.replace(/^#/, '');
     let num = parseInt(hex, 16);
@@ -8,15 +7,12 @@ window.toRgb = function (hex) {
 
 window.$testContainer = $('<div class="c-body-text" data-test-container></div>');
 
-before((done) => {
-    $('head').append('<link rel="stylesheet" href="/base/dist/default.css">');
-
+beforeEach((done) => {
     $('body').append($testContainer);
-
     done();
 });
 
 afterEach((done) => {
-    $testContainer.empty();
+    // $testContainer.empty();
     done();
 });

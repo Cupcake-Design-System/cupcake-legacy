@@ -1,16 +1,64 @@
 module.exports = function (config) {
     config.set({
         frameworks: ['mocha', 'chai', 'jquery-3.2.1'],
-        plugins: ['karma-mocha', 'karma-chai', 'karma-jquery', 'karma-chrome-launcher', 'karma-firefox-launcher'],
+        plugins: [
+            'karma-mocha',
+            'karma-chai',
+            'karma-jquery',
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
+            'karma-mocha-reporter'
+        ],
         basePath: '',
-        files: ['karma.before.js', 'src/scss/modules/**/*.spec.js', 'src/scss/modules/**/*.html', 'dist/*.css'],
-        reporters: ['progress'],
+        client: {
+            args: [
+                config.bd ? ['--bd'] : []
+            ]
+        },
+        files: flavorSetUp(process.argv),
+        reporters: ['dots', 'mocha'],
+        mochaReporter: {
+            colors: {
+                success: 'green',
+                info: 'blue',
+                warning: 'cyan',
+                error: 'red'
+            },
+            symbols: {
+                success: '+',
+                info: '#',
+                warning: '!',
+                error: 'x'
+            }
+        },
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         browsers: ['Chrome', 'Firefox'],
         autoWatch: false,
-        singleRun: true,
+        singleRun: false,
         concurrency: Infinity
     });
+}
+
+function flavorSetUp(args) {
+    let specPath = 'src/scss/modules/**/*.spec.js',
+        assetsPath = 'dist/default.min.css';
+
+    if (args.includes('--bd')) {
+        specPath = 'src/flavors/bd/tests/**/*.spec.js';
+        assetsPath = 'dist/bd.min.css'; 
+    }
+
+    let files = [
+        'karma.before.js',
+        specPath,
+        {
+            pattern: assetsPath,
+            watched: false,
+            served: true
+        }
+    ];
+
+    return files;
 }
