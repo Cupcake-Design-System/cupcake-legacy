@@ -45,7 +45,7 @@ function flavorSetUp(args) {
     let specPath = 'src/scss/modules/**/*.spec.js',
         assetsPath = 'dist/default.min.css';
 
-    if (args.includes('--bd')) {
+    if (~args.indexOf('--bd')) {
         specPath = 'src/flavors/bd/tests/**/*.spec.js';
         assetsPath = 'dist/bd.min.css'; 
     }

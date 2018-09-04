@@ -13,6 +13,5 @@ beforeEach((done) => {
 });
 
 afterEach((done) => {
-    // $testContainer.empty();
     done();
 });
