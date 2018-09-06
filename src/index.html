@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="BAM">
   <title>Test</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
   <script>
     var flavor = location.search.replace(/(^\?)/g, '') || 'default';
     document.write('<link media="all" rel="stylesheet" href="' + flavor + '.css">');
@@ -47,6 +47,14 @@
 
     {{> modules/alerts/alerts }}
 
+
+    <hr class="c-hr c-m-bottom-md c-m-top-md">
+    <h3 class="c-header-md">File Upload</h3>
+          <div class="c-file-upload">
+          
+          File Upload
+          <button class="c-btn c-btn-sm c-btn-primary"> Button </button>
+          </div>
     <hr class="c-hr c-m-bottom-md c-m-top-md"> {{> modules/avatar/avatar }}
 
     <hr class="c-hr c-m-bottom-lg c-m-top-lg"> {{> modules/badges/badges }}

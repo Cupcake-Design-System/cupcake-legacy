@@ -26,18 +26,20 @@
 
 // Button Style
 
-@mixin btn-style($bg, $bg-hover, $border: $btn-border, $color: white) {
+@mixin btn-style($bg, $bg-hover, $border: $btn-border, $active:$bg, $color: white) {
   background: $bg;
   color: $color;
 
-  @if $border == false {
+  @if $white-label == true {
+    border-color: darken($bg, 15);
+  } @else {
+    border-color: $border;
+  }
+
+  @if $btn-border == false {
     border-color: transparent;
     background-size: 100% calc(100% + 2px);
     background-position-y: -1px;
-  }
-
-  @else {
-    border-color: darken($bg, 5%) darken($bg, 5%) darken($bg, 4%);
   }
 
   @if $btn-gradient == true {
@@ -46,24 +48,21 @@
 
   &:active,
   &.c-btn-active {
-    background: $bg;
+    background: $active;
 
-    @if $border == false {
+    @if $btn-border == false {
       border-color: transparent;
-    }
-
-    @else {
-      border-color: darken($bg, 15%) darken($bg, 10%) darken($bg, 10%);
+    } @else {
+      border-color: $border;
     }
   }
 
   @if $white-label == true {
     &:hover {
+      background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
     }
-  }
-
-  @else {
+  } @else {
     &:hover {
       background-color: $bg-hover;
       background-image: none;
@@ -111,19 +110,13 @@
   @if $size == sm {
     font-size: $btn-sm-font;
     padding: $btn-sm-padding;
-  }
-
-  @elseif $size == md {
+  } @else if $size == md {
     font-size: $btn-md-font;
     padding: $btn-md-padding;
-  }
-
-  @elseif $size == lg {
+  } @else if $size == lg {
     font-size: $btn-lg-font;
     padding: $btn-lg-padding;
-  }
-
-  @elseif $size == xl {
+  } @else if $size == xl {
     font-size: $btn-xl-font;
     padding: $btn-xl-padding;
   }
@@ -196,9 +189,7 @@
 
   @if $btn-shadow == true {
     box-shadow: $btn-shadow-secondary;
-  }
-
-  @else {
+  } @else {
     box-shadow: none;
   }
 
@@ -249,14 +240,14 @@
 
 // Button Link Style
 
-@mixin btn-link-style($color) {
+@mixin btn-link-style($color, $hover:lighten($color, 10), $active:darken($color, 10) ) {
   color: $color;
 
   &:hover {
-    color: lighten($color, 10);
+    color: $hover;
   }
 
   &:active {
-    color: darken($color, 10);
+    color: $active;
   }
 }

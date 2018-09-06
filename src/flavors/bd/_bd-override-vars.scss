@@ -2,6 +2,9 @@
 
 $primary: $color-brand;
 $global-radius: 2px;
+$global-bg-color: #f2f2f2;
+$global-bg-selected-color: #fafad2;
+$global-bg-hover-color: #eaf7ff;
 $spacing-global-gutter: 1.5rem;
 
 $black: $font-body-color;
@@ -12,6 +15,8 @@ $font-body-lg-color: $font-body-color;
 $paragraph-margin: 0 0 10px;
 $text-strong: 600;
 $text-small: 85%;
+$text-muted-opeacity: 1;
+$text-muted-color: #8d8d97;
 
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
@@ -139,12 +144,17 @@ $control-warning-bg : #fcfbe7;
 $control-danger-c   : #e98f88;
 $control-danger-bg  : #fff6f5;
 
+$control-disabled-border     : #d9d9d9;
+$control-disabled-background : #f9f9f9;
+
 $select-font-size        : $font-body-font-size;
 $select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $select-background-hover : linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #ffffff, #ededed);
 $select-box-shadow       : 0 0 transparent;
 $select-box-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 $select-box-shadow-focus : $btn-shadow-focus;
+$select-error-c          : #965650;
+$select-error-fw         : 600;
 
 $select-padding      : 6px 8px;
 $select-padding-sm   : 3px 8px;
@@ -161,8 +171,6 @@ $card-title-font-size:         14px;
 $card-title-font-weight:       600;
 $card-title-margin:            0 0 11px;
 $card-body-font-size:          rem-calc(14);
-$card-body-font-color:         $font-body-color;
-$card-subtitle-font-color:     $font-body-color;
 
 $card-padding-v:               10px;
 $card-padding-h:               15px;
@@ -186,8 +194,8 @@ $table-border-color             : $color-dividers;
 $table-head-border-color        : #8d8d97;
 $table-head-border-width        : 0 0 2px;
 $table-head-border-vertical     : none;
-$table-head-cell-hover          : none;
-$table-hover-background-img     : none;
+$table-head-cell-hover          : white;
+$table-hover-background-img     : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDUgOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTEuMiAoNTc1MTkpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmljb25fZHJhZ2FibGVfY29sPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IkRvY3VtZW50YXRpb24iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJUYWJsZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NzMuMDAwMDAwLCAtNDcwLjAwMDAwMCkiIGZpbGw9IiM4RDhEOTciPgogICAgICAgICAgICA8ZyBpZD0iSWNvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ1LjAwMDAwMCwgNDAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkhlYWRlcnMtQ2FzZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYyNS4wMDAwMDAsIDYwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJUYWJsZS1IZWFkZXIiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMywxMCBMNSwxMCBMNSwxMiBMMywxMiBMMywxMCBaIE02LDEwIEw4LDEwIEw4LDEyIEw2LDEyIEw2LDEwIFogTTMsMTMgTDUsMTMgTDUsMTUgTDMsMTUgTDMsMTMgWiBNNiwxMyBMOCwxMyBMOCwxNSBMNiwxNSBMNiwxMyBaIE0zLDE2IEw1LDE2IEw1LDE4IEwzLDE4IEwzLDE2IFogTTYsMTYgTDgsMTYgTDgsMTggTDYsMTggTDYsMTYgWiIgaWQ9Imljb25fZHJhZ2FibGVfY29sIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 $table-padding                  : 5px 10px 6px;
 $table-padding-sm               : 5px 10px 6px;
 $table-row-hover                : #eaf7ff;
@@ -315,3 +323,49 @@ $toast-alert-info-bar-bg: $alert-primary-bg;
 
 $notify-width: 20vw;
 $notify-min-width: 265px;
+
+
+// --- overrides for tokens BEGIN --- //
+
+$font-blockquote-author-color: #414152;
+$font-blockquote-author-font-weight: 600;
+$font-blockquote-author-font-family: Source Sans Pro;
+$font-block-quote-quote-color: #414152;
+$font-block-quote-quote-font-family: Source Sans Pro;
+
+$font-ordered-list-font-size: 14px;
+$font-ordered-list-color: #414152;
+$font-ordered-list-font-weight: 400;
+$font-ordered-list-font-family: Source Sans Pro;
+
+$font-body-xl-font-size: 22px;
+$font-body-xl-line-height: 35px;
+$font-body-xl-color: #414152;
+$font-body-xl-font-weight: 400;
+$font-body-xl-font-family: Source Sans Pro;
+
+$font-body-xxl-font-size: 30px;
+$font-body-xxl-line-height: 35px;
+$font-body-xxl-color: #414152;
+$font-body-xxl-font-weight: 400;
+$font-body-xxl-font-family: Source Sans Pro;
+
+$font-body-lg-font-size: 18px;
+$font-body-lg-line-height: 25px;
+$font-body-lg-color: #414152;
+$font-body-lg-font-weight: 400;
+$font-body-lg-font-family: Source Sans Pro;
+
+$font-body-md-font-size: 15px;
+$font-body-md-line-height: 20px;
+$font-body-md-color: #414152;
+$font-body-md-font-weight: 400;
+$font-body-md-font-family: Source Sans Pro;
+
+$font-body-xs-font-size: 12px;
+$font-body-xs-line-height: 15px;
+$font-body-xs-color: #414152;
+$font-body-xs-font-weight: 400;
+$font-body-xs-font-family: Source Sans Pro;
+
+// --- overrides for tokens END --- //

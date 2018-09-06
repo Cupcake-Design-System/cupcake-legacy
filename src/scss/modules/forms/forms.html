@@ -1,6 +1,12 @@
 <section id="forms">
 <h3 class="c-header-md">Forms</h3>
 
+<select class="c-input c-input-xs">
+  <option>SM Select</option>
+  <option>Option</option>
+  <option>Option</option>
+</select>
+<br>
 <select class="c-input c-input-sm">
   <option>SM Select</option>
   <option>Option</option>
@@ -25,11 +31,33 @@
   <option>Option</option>
 </select>
 <br>
-<select disabled="disabled" class="c-input c-input-xl">
-  <option>Disabled Select</option>
-  <option>Option</option>
-  <option>Option</option>
-</select>
+
+<div class="c-row c-row-justify-end">
+	<div class="c-col c-col-2">
+		<div class="c-input-container">
+			<i class="c-input-icon fa fa-exclamation-circle c-text-danger"></i>
+			<select class="c-input">
+				<option>Select with an icon</option>
+				<option>Option</option>
+				<option>Option</option>
+			</select>
+		</div>
+	</div>
+	<div class="c-col c-col-2">
+		<select disabled="disabled" class="c-input">
+		  <option>Disabled Select</option>
+		  <option>Option</option>
+		  <option>Option</option>
+		</select>
+	</div>
+	<div class="c-col c-col-2">
+		<select class="c-input c-input-error">
+			<option>I`m error</option>
+			<option>Option</option>
+			<option>Option</option>
+		</select>
+	</div>
+</div>
 
 <br>
 <input class="c-input" type="text" id="general-input-1" placeholder="General input">
@@ -258,6 +286,12 @@
 		<button type="button" class="c-btn c-btn-default c-btn-lg"><i class="fa fa-cloud-download"></i></button>
 		<button type="button" class="c-btn c-btn-default c-btn-lg"><i class="fa fa-bell"></i></button>
 	</div>
+</div>
+
+<div class="c-input-container">
+    <input type="text" id="forms-input-warning" placeholder="With Icon" class="c-input">
+    <i class="fal fa-calendar c-input-icon"></i>
+  </div>
 </div>
 
 </section>

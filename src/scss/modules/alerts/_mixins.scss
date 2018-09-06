@@ -174,9 +174,15 @@ $alert-close-font-size  : 12px !default;
 /* stylelint-enable */
 
 @mixin alert-style($bg, $color, $icon-color, $style: $alert-style) {
-  background-color: $bg;
-  border-color: $color;
-  color: $color;
+  @if $white-label == true {
+    background-color: white;
+    border-color: $color;
+    color: $color;
+  } @else {
+    background-color: $bg;
+    border-color: $color;
+    color: $color;
+  }
 
   .c-alert-icon {
     color: $icon-color;
@@ -191,9 +197,7 @@ $alert-close-font-size  : 12px !default;
         color: $color;
       }
     }
-  }
-
-  @else {
+  } @else {
     .c-alert-close,
     .c-alert-link {
       color: lighten($font-body-color, 20%);

@@ -73,7 +73,6 @@
 
   &-subtitle {
     font-size: $card-subtitle-font-size;
-    color: $card-subtitle-font-color;
 
     @if $card-title-margin {
       margin: $card-title-margin;
@@ -82,7 +81,6 @@
 
   &-body {
     font-size: $card-body-font-size;
-    color: $card-body-font-color;
   }
 }
 

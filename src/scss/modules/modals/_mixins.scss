@@ -187,6 +187,7 @@ $modal-footer-padding: 10px 20px !default;
   &-body {
     position: relative;
     flex: 1 1 auto;
+    min-height: 1px; // IE11 fix.
     padding: $modal-body-padding;
 
     @include font-body;

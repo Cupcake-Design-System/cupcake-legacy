@@ -12,3 +12,4 @@ dist
 .publish/
 test/*
 yarn.lock
+packages
