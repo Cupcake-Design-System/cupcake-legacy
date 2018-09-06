@@ -48,9 +48,7 @@ textarea.c-input {
       @if $bg {
         border-color: $color;
         background-color: $control-background;
-      }
-
-      @else {
+      } @else {
         border-color: $control-active-border;
       }
     }
