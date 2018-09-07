@@ -16,6 +16,13 @@
   }
 }
 
+.c-suggester-list-result {
+  .c-suggester-item a {
+    padding: 8px 12px;
+    line-height: 1;
+  }
+}
+
 .c-suggester {
   .c-suggester-filter-list,
   .view-all {
