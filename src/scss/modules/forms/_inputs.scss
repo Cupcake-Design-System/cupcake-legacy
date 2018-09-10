@@ -47,7 +47,7 @@ textarea.c-input {
     &:focus {
       @if $bg {
         border-color: $color;
-        background-color: transparent;
+        background-color: $control-background;
       } @else {
         border-color: $control-active-border;
       }
