@@ -65,6 +65,9 @@ $btn-disabled-bg         : $color-gray-1 !default;
 /// $btn-disabled-bd         
 $btn-disabled-bd         : 1px solid $color-gray-3 !default;
 
+/// $btn-disabled-bd-colored         
+$btn-disabled-bd-colored         : false !default;
+
 /// $btn-disabled-text-shadow
 $btn-disabled-text-shadow: 0 1px 1px rgba(255, 255, 255, 1) !default;
 

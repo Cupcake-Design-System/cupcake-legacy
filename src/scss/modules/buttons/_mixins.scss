@@ -169,7 +169,6 @@
   &:active {
     top: 0;
     background: $bg;
-    border: $bd;
     text-shadow: $shadow;
     color: $color;
     line-height: 1;
@@ -177,6 +176,10 @@
     appearance: none;
     box-shadow: none;
     opacity: $btn-disabled-opacity;
+
+    @if $btn-disabled-bd-colored == false {
+      border: $bd;
+    }
   }
 }
 

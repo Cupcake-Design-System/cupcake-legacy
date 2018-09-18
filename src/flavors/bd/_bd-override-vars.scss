@@ -30,6 +30,7 @@ $btn-font-size: $font-body-font-size;
 $btn-default-c: $font-body-color;
 $btn-secondary-c: $font-body-color;
 $btn-secondary-bg-active: #e6e6e6;
+$btn-secondary-disabled: $color-gray-0;
 $btn-v-align: baseline;
 $btn-default-padding-v: 7px;
 $btn-default-padding-h: 15px;
@@ -40,7 +41,7 @@ $btn-shadow-focus:  0 0 3px 1px #79bde9;
 
 $btn-active-selected: #9494a1;
 $btn-shadow: false;
-$btn-white-label: true;
+$white-label: true;
 
 $btn-gradient: true;
 
@@ -49,6 +50,7 @@ $btn-border: false;
 $btn-disabled-c: rgba($font-body-color, 0.35);
 $btn-disabled-bg: $color-gray-0;
 $btn-disabled-bd: 1px solid $color-gray-3;
+$btn-disabled-bd-colored: true;
 $btn-disabled-text-shadow: none;
 $btn-disabled-opacity: 1;
 
