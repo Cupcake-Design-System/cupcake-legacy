@@ -32,7 +32,7 @@ describe('BD Primary Button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($primaryBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($primaryBtn.css('height'), 'button height').to.equal('30px');
         expect($primaryBtn.css('color'), 'text-color').to.equal(toRgb('#ffffff'));
         expect($primaryBtn.css('background-color'), 'background').to.equal(toRgb('#0079bd'))
         expect($primaryBtn.css('background-image'), 'background-image').to.equal($primaryBgImg);
@@ -51,7 +51,7 @@ describe('BD Default Button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($defaultBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($defaultBtn.css('height'), 'button height').to.equal('30px');
         expect($defaultBtn.css('color'), 'text color').to.equal(toRgb('#414152'));
         expect($defaultBtn.css('background-color'), 'background').to.equal(toRgb('#f1f3f5'));
         expect($defaultBtn.css('background-image'), 'background-image').to.equal($defaultBgImg);
@@ -70,7 +70,7 @@ describe('BD success button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($successBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($successBtn.css('height'), 'button height').to.equal('30px');
         expect($successBtn.css('color'), 'text color').to.equal(toRgb('#ffffff'));
         expect($successBtn.css('background-color'), 'background').to.equal(toRgb('#37b24d'));
         expect($successBtn.css('background-image'), 'background-image').to.equal($successBgImg);
@@ -88,7 +88,7 @@ describe('BD Warning button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($warningBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($warningBtn.css('height'), 'button height').to.equal('30px');
         expect($warningBtn.css('color'), 'text color').to.equal(toRgb('#ffffff'));
         expect($warningBtn.css('background-color'), 'background').to.equal(toRgb('#f08c00'));
         expect($warningBtn.css('background-image'), 'background-image').to.equal($warningBgImg);
@@ -107,7 +107,7 @@ describe('BD Danger Button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($dangerBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($dangerBtn.css('height'), 'button height').to.equal('30px');
         expect($dangerBtn.css('color'), 'text color').to.equal(toRgb('#ffffff'));
         expect($dangerBtn.css('background-color'), 'background').to.equal(toRgb('#f03e3e'));
         expect($dangerBtn.css('background-image'), 'background-image').to.equal($dangerBgImg);
@@ -126,7 +126,7 @@ describe('BD Secondary Button', () => {
     });
 
     it('should have correct styles', () => {
-        expect($secondaryBtn.css('height'), 'button height').to.equal('29.6px');
+        expect($secondaryBtn.css('height'), 'button height').to.equal('30px');
         expect($secondaryBtn.css('color'), 'text color').to.equal(toRgb('#414152'));
         expect($secondaryBtn.css('background-color'), 'background').to.equal(toRgb('#f1f3f5'));
         expect($secondaryBtn.css('background-image'), 'background-image').to.equal($secondaryBgImg);
