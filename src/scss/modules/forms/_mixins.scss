@@ -25,6 +25,10 @@
   appearance: none;
   transition: $control-transition;
 
+  &::-ms-clear {
+    display: none;
+  }
+
   &::placeholder {
     color: $control-placeholder-c;
     transition: $control-transition;
