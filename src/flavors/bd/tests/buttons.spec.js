@@ -60,7 +60,7 @@ describe('BD Default Button', () => {
 });
 
 // c-btn c-btn-success
-describe('BD success button', () => {
+describe('BD Success button', () => {
     let $successBtn = $('<button class="c-btn c-btn-success">Button</button>');
     let $successBgImg = 'linear-gradient(' + toRgb('#43c55a') + ', ' + toRgb('#37b24d') + ' 66%, ' + toRgb('#32a246') + ')';
 
