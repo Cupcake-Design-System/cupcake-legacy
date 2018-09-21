@@ -171,12 +171,24 @@ $font-header-xs-font-family: Source Sans Pro;
   font-family: $font-header-xs-font-family;
 }
 
+// Spacing
+$spacing-xs: .3125rem;
+$spacing-sm: .625rem;
+$spacing-md: .9375rem;
+$spacing-lg: 1.875rem;
+$spacing-xl: 3.75rem;
+$spacing-xxl: 7.5rem;
+$spacing-xxxl: 15rem;
+$spacing-global-padding: .9375rem;
+$spacing-global-margin: .9375rem;
+
 // Sizing
 $sizing-y: 4px;
 $sizing-blur: 9px;
 $sizing-spread: 1px;
 $sizing-000: 0;
-$sizing-global-gutter: 14px;
+$sizing-global-gutter: 15px;
+$sizing-container-fixed-max-width: 1275px;
 
 // Shadows
 $shadow-tooltip-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2),0 0 0 1px rgba(0, 0, 0, 0.1);
