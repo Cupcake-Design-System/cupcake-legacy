@@ -1,3 +1,34 @@
+// Spacing (margin & padding based on 5px grid)
+$spacing-xs: .3125rem;
+$spacing-sm: .625rem;
+$spacing-md: .9375rem;
+$spacing-lg: 1.875rem;
+$spacing-xl: 3.75rem;
+$spacing-xxl: 7.5rem;
+$spacing-xxxl: 15rem;
+$spacing-global-padding: .9375rem;
+$spacing-global-margin: .9375rem;
+
+$space-none: $spacing-none;
+$space-xs: $spacing-xs;
+$space-sm: $spacing-sm;
+$space-md: $spacing-md;
+$space-lg: $spacing-lg;
+$space-xl: $spacing-xl;
+$space-xxl: $spacing-xxl;
+$space-xxxl: $spacing-xxxl;
+
+$space-values : (
+  0   : $space-none,
+  xs  : $space-xs,
+  sm  : $space-sm,
+  md  : $space-md,
+  lg  : $space-lg,
+  xl  : $space-xl,
+  xxl : $space-xxl,
+  xxxl: $space-xxxl,
+);
+
 // Colors: Default went to a different set of orange variables - this to keep bd accurate
 $color-warning-0: #fff9db;
 $color-warning-1: #fff3bf;
@@ -11,7 +42,6 @@ $color-warning-9: #e67700;
 $color-warning-8: #f08c00;
 $success          : $color-success-7;
 $danger           : $color-danger-7;
-
 
 // Other Colors
 $color-bd-text: #414152;
@@ -170,17 +200,6 @@ $font-header-xs-font-family: Source Sans Pro;
   font-weight: $font-header-xs-font-weight;
   font-family: $font-header-xs-font-family;
 }
-
-// Spacing
-$spacing-xs: .3125rem;
-$spacing-sm: .625rem;
-$spacing-md: .9375rem;
-$spacing-lg: 1.875rem;
-$spacing-xl: 3.75rem;
-$spacing-xxl: 7.5rem;
-$spacing-xxxl: 15rem;
-$spacing-global-padding: .9375rem;
-$spacing-global-margin: .9375rem;
 
 // Sizing
 $sizing-y: 4px;
