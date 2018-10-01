@@ -30,7 +30,7 @@
   background: $bg;
   color: $color;
 
-  @if $white-label == true {
+  @if $btn-white-label == true {
     border-color: darken($bg, 15);
   } @else {
     border-color: $border;
@@ -57,7 +57,7 @@
     }
   }
 
-  @if $white-label == true {
+  @if $btn-white-label == true {
     &:hover {
       background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
