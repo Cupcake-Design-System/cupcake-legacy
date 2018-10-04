@@ -1,16 +1,20 @@
 {
     "pkgFiles": ["package.json"],
     "buildCommand": "gulp build",
-    "beforeChangelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false",
-    "changelogCommand": "auto-changelog --template changelog-template.hbs --commit-limit false -o CHANGELOG.md",
+    "beforeChangelogCommand": "auto-changelog",
+    "safeBump": false,
+    "src": {
+        "commitMessage": "Release %s 🚀",
+        "tagAnnotation": "Release %s 🚀"
+    },
     "dist": {
         "baseDir": null
     },
     "github": {
         "release": true,
-        "releaseName": "Release %s",
+        "releaseName": "Release %s 🚀",
         "preRelease": false,
         "draft": false,
         "tokenRef": "GITHUB_TOKEN"
-    }    
+    }
 }

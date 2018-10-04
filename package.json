@@ -17,19 +17,26 @@
     "deploy": "gulp deploy",
     "test": "karma start --auto-watch --no-single-run && karma run",
     "test:bd": "karma start --auto-watch --no-single-run --bd && karma run",
-    "changelog": "auto-changelog --template changelog-template.hbs --commit-limit false",
+    "release": "release-it",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "list-selectors-BD": "list-selectors ./dist/bd.css -p -i classes stdout > bd-class.json",
     "list-selectors": "list-selectors ./dist/default.css -p -i classes stdout > cupcake-class.json",
     "visual": "npm run reference && npm run compare",
     "reference": "backstop reference",
     "compare": "backstop test"
   },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "changelog-template.hbs",
+    "commitLimit": false,
+    "package": true
+  },
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
     "@ipreo/cupcake-stylelint-config": "1.1.0",
-    "auto-changelog": "^1.1.0",
+    "auto-changelog": "^1.8.0",
     "autoprefixer": "^7.2.1",
     "backstopjs": "^3.0.32",
     "browser-sync": "^2.18.13",
@@ -73,6 +80,7 @@
     "list-selectors": "^2.0.0",
     "mocha": "^5.1.1",
     "octophant": "^1.0.1",
+    "release-it": "^7.6.1",
     "run-sequence": "^2.2.0",
     "source-sans-pro": "^2.0.10",
     "stylelint": "^9.3.0",
