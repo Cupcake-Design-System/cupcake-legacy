@@ -88,8 +88,6 @@ $dropdown-font-weight      : normal;
 $dropdown-radius           : 4px;
 $dropdown-divider-margin   : 5px;
 
-$select-color              : $font-body-color;
-
 $popover-bd-c          : rgba(0, 0, 0, 0.18);
 $popover-shadow        : $dropdown-box-shadow;
 $popover-color         : $font-body-color;
@@ -168,6 +166,8 @@ $select-font-size-sm : 13px;
 $select-font-size-lg : 15px;
 $select-font-size-xl : 16px;
 
+$select-color              : $font-body-color;
+$select-background-img     : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNXB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9IjAgMCAxNSAyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5pY19jYXJldF9kb3duPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxnIGlkPSJJY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iR3JvdXAtMiI+ICAgICAgICAgICAgPHJlY3QgaWQ9IkJveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjIwIj48L3JlY3Q+ICAgICAgICAgICAgPHBvbHlnb24gaWQ9Ik1hc2siIGZpbGw9IiM0MTQxNTIiIHBvaW50cz0iMTIgOSA4IDEzIDQgOSI+PC9wb2x5Z29uPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+");
 
 $card-header-font-size:        rem-calc(15);
 $card-header-font-weight:      600;
