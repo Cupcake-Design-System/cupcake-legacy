@@ -29,6 +29,12 @@ $media-border           : $color-gray-2 !default;
 /// $media-action-color    
 $media-action-color     : $color-gray-6 !default;
 
+/// $media-action-width
+$media-action-width: inherit !default;
+
+/// $media-action-height 
+$media-action-height: $media-action-width !default;
+
 
 @mixin media {
   display: flex;
@@ -60,6 +66,8 @@ $media-action-color     : $color-gray-6 !default;
   opacity: 0;
   transition: .5s;
   color: $media-action-color;
+  width: $media-action-width;
+  height: $media-action-height;
 
   .c-media:hover & {
     opacity: 1;
