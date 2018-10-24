@@ -68,6 +68,8 @@ $media-action-height: $media-action-width !default;
   color: $media-action-color;
   width: $media-action-width;
   height: $media-action-height;
+  line-height: $media-action-height;
+  text-align: center;
 
   .c-media:hover & {
     opacity: 1;
