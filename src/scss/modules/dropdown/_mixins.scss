@@ -64,7 +64,8 @@ $link-colors:
   '[class*="primary"]',
   '[class*="success"]',
   '[class*="warning"]',
-  '[class*="danger"]';
+  '[class*="danger"]',
+  '.c-text-muted';
 
 @mixin dropdown-list {
   display: none;
