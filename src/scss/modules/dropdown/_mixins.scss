@@ -97,6 +97,23 @@ $link-colors:
     background: $dropdown-background-hover;
     text-decoration: none;
   }
+
+  &-selected {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 5px;
+      top: 35%;
+      right: 10px;
+      transform: rotate(45deg);
+      border-style: solid;
+      border-width: 0 1px 1px 0;
+      border-color: $dropdown-color;
+    }
+  }
 }
 
 @mixin not($ignoreList...) {
