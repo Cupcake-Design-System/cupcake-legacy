@@ -49,8 +49,15 @@
 .c-dropdown-list > li > a,
 .c-dropdown-item {
   @include dropdown-item;
-}
 
+  @include not($link-colors) {
+    color: $dropdown-color;
+
+    &:hover {
+      color: $dropdown-color-hover;
+    }
+  }
+}
 
 .c-dropdown-grid {
   @include dropdown-grid;

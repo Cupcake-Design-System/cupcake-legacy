@@ -2,25 +2,25 @@
 /// @group dropdown
 ////
 
-/// $dropdown-glued           
+/// $dropdown-glued
 $dropdown-glued           : true !default;
 
-/// $dropdown-list-margin    
+/// $dropdown-list-margin
 $dropdown-list-margin     : 0 !default;
 
-/// $dropdown-list-padding   
+/// $dropdown-list-padding
 $dropdown-list-padding    : 0 !default;
 
-/// $dropdown-padding        
+/// $dropdown-padding
 $dropdown-padding         : .75rem 1rem !default;
 
-/// $dropdown-border          
+/// $dropdown-border
 $dropdown-border          : 1px solid $color-gray-2 !default;
 
-/// $dropdown-color          
+/// $dropdown-color
 $dropdown-color           : $color-gray-7 !default;
 
-/// $dropdown-color-hover    
+/// $dropdown-color-hover
 $dropdown-color-hover     : $primary !default;
 
 /// $dropdown-background-color:
@@ -29,28 +29,28 @@ $dropdown-background-color: $white !default;
 /// $dropdown-background-hover:
 $dropdown-background-hover: $color-gray-1 !default;
 
-/// $dropdown-box-shadow 
+/// $dropdown-box-shadow
 $dropdown-box-shadow      : 0 0 4px rgba(0, 0, 0, 0.06) !default;
 
 /// $dropdown-font-family
 $dropdown-font-family     : arial !default;
 
-/// $dropdown-font-size 
+/// $dropdown-font-size
 $dropdown-font-size       : 12px !default;
 
-/// $dropdown-font-weight 
+/// $dropdown-font-weight
 $dropdown-font-weight     : bold !default;
 
-/// $dropdown-width  
+/// $dropdown-width
 $dropdown-width-sm           : 200px !default;
 
-/// $dropdown-width  
+/// $dropdown-width
 $dropdown-width           : 300px !default;
 
 /// $dropdown-radius 
 $dropdown-radius          : $global-radius !default;
 
-/// $dropdown-divider-margin 
+/// $dropdown-divider-margin
 $dropdown-divider-margin  : 0 !default;
 
 /// $dropdown-grid-item-padding
@@ -59,6 +59,13 @@ $dropdown-grid-item-padding: 12px !default;
 /// $dropdown-grid-padding
 $dropdown-grid-padding: 8px !default;
 
+/// $link-colors
+$link-colors:
+  '[class*="primary"]',
+  '[class*="success"]',
+  '[class*="warning"]',
+  '[class*="danger"]',
+  '.c-text-muted';
 
 @mixin dropdown-list {
   display: none;
@@ -84,16 +91,29 @@ $dropdown-grid-padding: 8px !default;
   font-size: $dropdown-font-size;
   padding: $dropdown-padding;
   font-weight: $dropdown-font-weight;
-  color: $dropdown-color;
   text-decoration: none;
 
   &:hover {
-    color: $dropdown-color-hover;
     background: $dropdown-background-hover;
     text-decoration: none;
   }
 }
 
+@mixin not($ignoreList...) {
+  @if (length($ignoreList) == 1) {
+    $ignoreList: nth($ignoreList, 1);
+  }
+
+  $exludeList: '';
+
+  @each $not in $ignoreList {
+    $exludeList: $exludeList + ':not(#{$not})';
+  }
+
+  &#{$exludeList} {
+    @content;
+  }
+}
 
 @mixin dropdown-grid {
   position: absolute;
