@@ -87,6 +87,7 @@ $link-colors:
 }
 
 @mixin dropdown-item {
+  position: relative;
   display: block;
   font-size: $dropdown-font-size;
   padding: $dropdown-padding;
@@ -96,6 +97,21 @@ $link-colors:
   &:hover {
     background: $dropdown-background-hover;
     text-decoration: none;
+  }
+
+  &-selected {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 5px;
+      top: calc(50% - 3px);
+      right: 10px;
+      transform: rotate(45deg) translateY(-50%);
+      border-style: solid;
+      border-width: 0 1px 1px 0;
+      border-color: $dropdown-color;
+    }
   }
 }
 
