@@ -15,11 +15,6 @@ describe('BD Buttons', () => {
             expect($btn.css('font-size'), 'font-size').to.equal('14px');
             expect($btn.css('font-weight'), 'font-weight').to.equal('600');
         });
-
-        after((done) => {
-            $testContainer.empty();
-            done();
-        });
     });
 
     // c-btn c-btn-primary
