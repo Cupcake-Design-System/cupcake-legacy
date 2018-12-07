@@ -1,3 +1,32 @@
+## Release [1.4.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.9...1.4.10) :rocket:
+**7 December 2018**
+
+### Merged
+- adjust bd alerts colors and add unit tests for bd alerts **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/265)**
+- Tasks/uxd 27 uxd 31 tests buttons **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/266)**
+- UXD-38 styles for media objects, bd override **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/260)**
+- removed &quot;test container cleaning&quot;, added placeholder for bd alerts tests **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/264)**
+- Tasks/uxd 20 selected state for dropdown **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/263)**
+- fix: &#x27;a&#x27; color in dropdowns can be set with text modifier classes UXD-14 **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/261)**
+- fixed font-size in BD-suggester header **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/262)**
+- fix: select color for BD flavor **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/259)**
+
+### Commits
+- added tests for disabled BD buttons **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5e3b829dc218871742fe197f307033c8159cf42b)**
+- add unit tests for bd alerts **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/93397d136d111e2c3f19ebc8f4105ff5f191e299)**
+- disabled buttons &amp; buttons sizes tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0c4e9e9fd5922a8c405cc6eee01f7db205596268)**
+- demo page: dropdown with c-text-[primary, success, warning, danger] **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d57999ec47f5e4378f47283c796f8a450b9052df)**
+- added c-dropdown-item-selected to demo page **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cee224d1c1ed090b67a8a2b45544d210e6562767)**
+- improved toRgb: added alpha channel parameter **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ae5daf68aacfa85dac5a948012061741c707c358)**
+- UXD-20: added c-dropdown-item-selected **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/99a2f771955f9de1a88b4ed047be1f2aac8e2586)**
+- adjust alert colors **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/9981a1e7f657c7ab11f15f5a06df30328eeb00fe)**
+- fixed check mark positionong after review: UXD-20 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5e8121ff281d8b37a799c81091f726918b1fa5fd)**
+- UXD-38 center align for media action, main text color for media in bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1bf3b138bf20712ddf42703402f44651995d63b7)**
+- fix: select caret for BD **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b0c20cf1e9e1234d0cb7543e436f71a6a1674ce2)**
+- &quot;c-text-muted&quot; UXD-42 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f1c2e1b5ff2d697daeba00ad0cc4b7540a15eb16)**
+- added &quot;c-text-muted&quot; to the dropdown&#x27;s link **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/8ee9e1f0ba076d38e3f5cedd200b70a5d291a809)**
+- &quot;c-text-muted&quot; UXD-42 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/aa0bfc2b5a9ba0df128fc72aace0fd17b786cd60)**
+
 ## Release [1.4.9](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.8...1.4.9) :rocket:
 **4 October 2018**
 
@@ -19,8 +48,9 @@
 - fix #241 [BD Flavour] c-input-error focus state background **[View Fix](https://code.ipreo.com/Ipreo/cupcake/issues/241)**
 
 ### Commits
-- removed &quot;sizing-container-fixed-max-width&quot; BD override **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dca0ce0cd75a82d27ee3256ac1dca8bdaf7c42d7)**
+- Release 1.4.9 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/05b93f9f0e77407f1bd1abd6ea03802be0db4c8c)**
 - marge lates changes from master **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e996cfaa877abfa0bf5ae3ec94caddc6fb488af6)**
+- UXD-35: body text adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/37215cfc671964540e6cb3c0c4ef729828bf0969)**
 - bd body text size adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/27d59117f7275f305519a173fd3aecb97d3758f5)**
 - UXD-32: changed margin &amp; padding modifiers based on 5px grid: BD only **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/496e151eeba598f3f1ad2f91f17eb6ce56c0aa30)**
 - adjusted c-m-*, c-p-* sizing to 5px **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d6971e223d5b527130b00be43d570d1fced26b42)**
@@ -29,8 +59,8 @@
 - unit tests for default, primary, ..., btns: regular size, default state **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/6afcc78d2ba9b7e6a1ca7a693fdc81f115a133db)**
 - bd buttons  unit tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/00b1f18bb995e3b43f4c5ae68d1df4838860f637)**
 - base buttonf default tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/533230dc838e5c93e422c3b7ed883b17b06f62db)**
-- fix lint **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2b6e4f912d5cbadbcfb1cff5cc18558ef2039f66)**
-- UXD-35: body text adjustments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/37215cfc671964540e6cb3c0c4ef729828bf0969)**
+- removed &quot;sizing-container-fixed-max-width&quot; BD override **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/dca0ce0cd75a82d27ee3256ac1dca8bdaf7c42d7)**
+- merge **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1774aa41cf20341a6a38dc536e560f8d00be2410)**
 - removed comment **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0e9adda9d1270e55673de07711bf57efba41c713)**
 - set up BD unit tests/test for BD buttons: primary &amp; default **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5a0c226baee595fafe15230feb6ad3b3b581a284)**
 - fixed tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e62f07373885e3e9b05a618e1711f566cb177e4f)**
@@ -40,7 +70,7 @@
 - more cleanups **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/464688084640ffee54ace7aba395cef5181be647)**
 - remove cypress **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/bdd272938fbdda139a6c3863e05da2074510fbde)**
 - other frameworks cleanup **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c1cbce9d515a8762414929edef9d7ef33dede1a2)**
-- merge **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/1774aa41cf20341a6a38dc536e560f8d00be2410)**
+- fix lint **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2b6e4f912d5cbadbcfb1cff5cc18558ef2039f66)**
 
 ## Release [1.4.8](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.7...1.4.8) :rocket:
 **7 August 2018**
