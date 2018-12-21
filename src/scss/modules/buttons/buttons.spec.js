@@ -15,11 +15,6 @@ describe('Buttons', () => {
             expect($btn.css('font-size'), 'font-size').to.equal('12px');
             expect($btn.css('font-weight'), 'font-weight').to.equal('700');
         });
-
-        after((done) => {
-            $testContainer.empty();
-            done();
-        });
     });
 
     // c-btn c-btn-primary
