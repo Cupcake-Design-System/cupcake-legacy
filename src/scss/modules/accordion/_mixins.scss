@@ -2,11 +2,8 @@
 /// @group accordion
 ////
 
-/// $ui-accordion-radius
-$ui-accordion-radius: true !default;
-
-/// $ui-accordion-item-padding
-$ui-accordion-item-padding: 12px 16px !default;
+/// $ui-accordion-item-panel-padding
+$ui-accordion-item-panel-padding: 0 16px !default;
 
 /// $ui-accordion-left-body-spacing
 $ui-accordion-left-body-spacing: 15px !default;
@@ -37,7 +34,7 @@ $arrow-rotate-deg: 90deg !default;
   .c-accordion-group {
     padding-left: 0;
     padding-right: 0;
-    color: rgb(134, 142, 150);
+    color: $color-gray-6;
 
     @include accordion-item;
   }
@@ -54,7 +51,7 @@ $arrow-rotate-deg: 90deg !default;
       @include expand($hide-panel);
 
       height: auto;
-      padding: 0 16px;
+      padding: $ui-accordion-item-panel-padding;
       transition: max-height 0.15s;
       overflow: hidden;
     }

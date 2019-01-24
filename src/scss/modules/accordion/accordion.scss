@@ -5,12 +5,12 @@
 .c-accordion-group-bordered {
   .c-accordion-group-item {
     &-info {
-      border-top: 1px solid $ui-accordion-a-accordion-item-bg-hover;
+      border-top: $ui-accordion-a-accordion-item-border;
     }
 
     &:last-child {
       & .c-accordion-group-item-info {
-        border-bottom: 1px solid $ui-accordion-a-accordion-item-bg-hover;
+        border-bottom: $ui-accordion-a-accordion-item-border;
       }
     }
   }
