@@ -1,0 +1,112 @@
+////
+/// @group accordion
+////
+
+/// $ui-accordion-radius
+$ui-accordion-radius: true !default;
+
+/// $ui-accordion-item-padding
+$ui-accordion-item-padding: 12px 16px !default;
+
+/// $ui-accordion-left-body-spacing
+$ui-accordion-left-body-spacing: 15px !default;
+
+/// $ui-accordion-a-accordion-item-border
+$ui-accordion-a-accordion-item-border: 1px solid $color-gray-3 !default;
+
+/// $ui-accordion-a-accordion-item-bg-hover
+$ui-accordion-a-accordion-item-bg-hover: $color-gray-2 !default;
+
+// data to show/hide panel
+$show-panel: 500em !default;
+$hide-panel: 0 !default;
+
+// data to rotate arrow
+$arrow-rotate-deg: 90deg !default;
+
+@mixin expand($state) {
+  max-height: $state;
+  transition: max-heigth 1s;
+}
+
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin accordion-group {
+  .c-accordion-group {
+    padding-left: 0;
+    padding-right: 0;
+    color: rgb(134, 142, 150);
+
+    @include accordion-item;
+  }
+}
+
+@mixin accordion-item {
+  &-item {
+    position: relative;
+    cursor: pointer;
+
+    @include checker;
+
+    &-panel {
+      @include expand($hide-panel);
+
+      height: auto;
+      padding: 0 16px;
+      transition: max-height 0.15s;
+      overflow: hidden;
+    }
+
+    &-info {
+      @extend .c-list-group-item;
+    }
+
+    &:first-child {
+      @extend .c-list-group-item:first-child;
+    }
+
+    &:last-child {
+      @extend .c-list-group-item:last-child;
+    }
+
+    &:focus > &-info,
+    &:hover > &-info {
+      background-color: $color-gray-1;
+      border-color: $ui-accordion-a-accordion-item-bg-hover;
+      border-bottom-color: $ui-accordion-a-accordion-item-bg-hover;
+    }
+
+    &-right {
+      padding-left: $ui-accordion-left-body-spacing;
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      color: $color-gray-7;
+
+      & > i {
+        transition: transform 0.15s;
+      }
+    }
+  }
+}
+
+@mixin checker {
+  &-checker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &:checked ~ .c-accordion-group-item-panel {
+      @include expand($show-panel);
+    }
+
+    &:checked ~ .c-accordion-group-item-info {
+      & i {
+        @include rotate($arrow-rotate-deg);
+      }
+    }
+  }
+}

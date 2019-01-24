@@ -1,0 +1,17 @@
+@import 'mixins';
+
+@include accordion-group;
+
+.c-accordion-group-bordered {
+  .c-accordion-group-item {
+    &-info {
+      border-top: 1px solid $ui-accordion-a-accordion-item-bg-hover;
+    }
+
+    &:last-child {
+      & .c-accordion-group-item-info {
+        border-bottom: 1px solid $ui-accordion-a-accordion-item-bg-hover;
+      }
+    }
+  }
+}
