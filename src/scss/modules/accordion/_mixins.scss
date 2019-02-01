@@ -2,40 +2,58 @@
 /// @group accordion
 ////
 
-/// $ui-accordion-item-panel-padding
-$ui-accordion-item-panel-padding: 0 16px !default;
+/// $accordion-item-border
+$accordion-item-border: 1px solid $color-gray-3 !default;
 
-/// $ui-accordion-left-body-spacing
-$ui-accordion-left-body-spacing: 15px !default;
+/// $accordion-item-first-child-border
+$accordion-item-first-child-border: $accordion-item-border !default;
 
-/// $ui-accordion-a-accordion-item-border
-$ui-accordion-a-accordion-item-border: 1px solid $color-gray-3 !default;
+/// $accordion-item-last-child-border
+$accordion-item-last-child-border: $accordion-item-border !default;
 
-/// $ui-accordion-a-accordion-item-bg-hover
-$ui-accordion-a-accordion-item-bg-hover: $color-gray-2 !default;
+/// $accordion-item-content-padding
+$accordion-item-content-padding: 0 16px !default;
 
-// data to show/hide panel
-$show-panel: 500em !default;
-$hide-panel: 0 !default;
+/// $accordion-item-panel-bd-color-hover
+$accordion-item-panel-bd-color-hover: $color-gray-2 !default;
 
-// data to rotate arrow
+/// $accordion-item-panel-bg
+$accordion-item-panel-bg: $color-gray-1 !default;
+
+/// $accordion-item-panel-bg-hover
+$accordion-item-panel-bg-hover: $color-gray-0 !default;
+
+/// $accordion-item-panel-opened-bg
+$accordion-item-panel-opened-bg: inherit !default;
+
+/// $accordion-item-right-part-spacing
+$accordion-item-right-part-spacing: 15px !default;
+
+/// $accordion-item-arrow-color
+$accordion-item-arrow-color: $color-gray-7 !default;
+
+/// data to show/hide panel
+$show-content: 500px !default;
+$hide-content: 0 !default;
+
+/// data to rotate arrow
 $arrow-rotate-deg: 90deg !default;
 
 @mixin expand($state) {
   max-height: $state;
-  transition: max-heigth 1s;
+  transition: max-height 0.35s;
 }
 
 @mixin rotate($deg) {
   transform: rotate($deg);
 }
 
-@mixin accordion-group {
-  .c-accordion-group {
+@mixin accordion {
+  .c-accordion {
     padding-left: 0;
     padding-right: 0;
-    color: $color-gray-6;
 
+    @include trigger;
     @include accordion-item;
   }
 }
@@ -44,43 +62,35 @@ $arrow-rotate-deg: 90deg !default;
   &-item {
     position: relative;
     cursor: pointer;
-
-    @include checker;
-
-    &-panel {
-      @include expand($hide-panel);
+  
+    &-content {
+      @include expand($hide-content);
 
       height: auto;
-      padding: $ui-accordion-item-panel-padding;
+      padding: $accordion-item-content-padding;
+      background: $accordion-item-panel-bg;
       transition: max-height 0.15s;
-      overflow: hidden;
+      overflow: auto;
     }
 
-    &-info {
-      @extend .c-list-group-item;
-    }
-
-    &:first-child {
-      @extend .c-list-group-item:first-child;
-    }
-
-    &:last-child {
-      @extend .c-list-group-item:last-child;
-    }
-
-    &:focus > &-info,
-    &:hover > &-info {
-      background-color: $color-gray-1;
-      border-color: $ui-accordion-a-accordion-item-bg-hover;
-      border-bottom-color: $ui-accordion-a-accordion-item-bg-hover;
+    &:focus > &-panel,
+    &:hover > &-panel {
+      background-color: $accordion-item-panel-bg-hover;
+      border-color: $accordion-item-panel-bd-color-hover;
+      border-bottom-color: $accordion-item-panel-bd-color-hover;
     }
 
     &-right {
-      padding-left: $ui-accordion-left-body-spacing;
+      padding-left: $accordion-item-right-part-spacing;
       display: flex;
       flex-grow: 1;
       justify-content: flex-end;
-      color: $color-gray-7;
+      align-items: center;
+      color: $accordion-item-arrow-color;
+
+      & > * {
+        margin-left: $accordion-item-right-part-spacing;
+      }
 
       & > i {
         transition: transform 0.15s;
@@ -89,18 +99,22 @@ $arrow-rotate-deg: 90deg !default;
   }
 }
 
-@mixin checker {
-  &-checker {
+@mixin trigger {
+  &-trigger {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
 
-    &:checked ~ .c-accordion-group-item-panel {
-      @include expand($show-panel);
+    &:checked ~ .c-accordion-item-panel {
+      background: $accordion-item-panel-opened-bg;
     }
 
-    &:checked ~ .c-accordion-group-item-info {
+    &:checked ~ .c-accordion-item-content {
+      @include expand($show-content);
+    }
+
+    &:checked ~ .c-accordion-item-panel {
       & i {
         @include rotate($arrow-rotate-deg);
       }

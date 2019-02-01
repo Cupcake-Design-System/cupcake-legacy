@@ -327,6 +327,13 @@ $notify-width: 20vw;
 $notify-min-width: 265px;
 
 
+$accordion-item-panel-bg: none;
+$accordion-item-panel-bg-hover: $color-gray-1;
+$accordion-item-panel-opened-bg: $color-gray-1;
+$accordion-item-first-child-border: none;
+$accordion-item-last-child-border: none;
+
+
 // --- overrides for tokens BEGIN --- //
 
 $font-blockquote-author-color: #414152;
