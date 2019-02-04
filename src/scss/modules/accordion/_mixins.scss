@@ -63,6 +63,11 @@ $arrow-rotate-deg: 90deg !default;
     position: relative;
     cursor: pointer;
   
+    &-panel {
+      @extend .c-media;
+      @extend .c-media-middle;
+    }
+
     &-content {
       @include expand($hide-content);
 
