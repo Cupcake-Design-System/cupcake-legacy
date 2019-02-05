@@ -39,11 +39,6 @@ $hide-content: 0 !default;
 /// data to rotate arrow
 $arrow-rotate-deg: 90deg !default;
 
-@mixin expand($state) {
-  max-height: $state;
-  transition: max-height 0.35s;
-}
-
 @mixin rotate($deg) {
   transform: rotate($deg);
 }
@@ -52,9 +47,12 @@ $arrow-rotate-deg: 90deg !default;
   .c-accordion {
     padding-left: 0;
     padding-right: 0;
+    backface-visibility: hidden;
 
     @include trigger;
     @include accordion-item;
+
+    animation: delay .65s ease-out;
   }
 }
 
@@ -69,13 +67,10 @@ $arrow-rotate-deg: 90deg !default;
     }
 
     &-content {
-      @include expand($hide-content);
-
-      height: auto;
       padding: $accordion-item-content-padding;
       background: $accordion-item-panel-bg;
-      transition: max-height 0.15s;
-      overflow: auto;
+      overflow: hidden;
+      animation: slide-up .25s ease-in forwards;
     }
 
     &:focus > &-panel,
@@ -116,7 +111,10 @@ $arrow-rotate-deg: 90deg !default;
     }
 
     &:checked ~ .c-accordion-item-content {
-      @include expand($show-content);
+      height: auto;
+      overflow: auto;
+      max-height: 500px;
+      animation: slide-down .25s ease-in;
     }
 
     &:checked ~ .c-accordion-item-panel {
@@ -124,5 +122,73 @@ $arrow-rotate-deg: 90deg !default;
         @include rotate($arrow-rotate-deg);
       }
     }
+  }
+}
+
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+
+  10% {
+    opacity: .75;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform-origin: top;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform-origin: top;
+    transform: rotateX(0deg);
+    max-height: 500px;
+  }
+
+  20% {
+    max-height: 400px;
+  }
+
+  30% {
+    max-height: 300px;
+  }
+
+  40% {
+    max-height: 200px;
+  }
+
+  50% {
+    max-height: 100px;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    max-height: 0;
+  }
+}
+
+
+@keyframes delay {
+  0% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
