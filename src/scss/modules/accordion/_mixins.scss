@@ -118,7 +118,7 @@ $arrow-rotate-deg: 90deg !default;
     }
 
     &:checked ~ .c-accordion-item-panel {
-      & i {
+      & .c-accordion-carret i {
         @include rotate($arrow-rotate-deg);
       }
     }
