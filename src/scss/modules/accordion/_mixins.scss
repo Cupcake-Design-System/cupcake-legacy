@@ -33,7 +33,7 @@ $accordion-item-right-part-spacing: 15px !default;
 $accordion-item-arrow-color: $color-gray-7 !default;
 
 /// data to show/hide panel
-$show-content: 500px !default;
+$show-content: 500em !default;
 $hide-content: 0 !default;
 
 /// data to rotate arrow
@@ -45,9 +45,9 @@ $arrow-rotate-deg: 90deg !default;
 
 @mixin accordion {
   .c-accordion {
-    padding-left: 0;
-    padding-right: 0;
     backface-visibility: hidden;
+
+    @extend .c-p-horizontal-0;
 
     @include trigger;
     @include accordion-item;
@@ -81,11 +81,11 @@ $arrow-rotate-deg: 90deg !default;
     }
 
     &-right {
-      padding-left: $accordion-item-right-part-spacing;
       display: flex;
       flex-grow: 1;
       justify-content: flex-end;
       align-items: center;
+      padding-left: $accordion-item-right-part-spacing;
       color: $accordion-item-arrow-color;
 
       & > * {
@@ -113,7 +113,7 @@ $arrow-rotate-deg: 90deg !default;
     &:checked ~ .c-accordion-item-content {
       height: auto;
       overflow: auto;
-      max-height: 500px;
+      max-height: $show-content;
       animation: slide-down .25s ease-in;
     }
 
@@ -125,7 +125,6 @@ $arrow-rotate-deg: 90deg !default;
   }
 }
 
-
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -133,12 +132,8 @@ $arrow-rotate-deg: 90deg !default;
     transform: rotateX(-90deg);
   }
 
-  10% {
+  50% {
     opacity: .75;
-  }
-
-  30% {
-    opacity: 1;
   }
 
   100% {
@@ -149,35 +144,32 @@ $arrow-rotate-deg: 90deg !default;
 
 @keyframes slide-up {
   0% {
+    max-height: $show-content;
     transform-origin: top;
     transform: rotateX(0deg);
-    max-height: 500px;
   }
 
-  20% {
-    max-height: 400px;
+  25% {
+    max-height: $show-content / 50;
   }
 
-  30% {
-    max-height: 300px;
-  }
-
-  40% {
-    max-height: 200px;
-  }
 
   50% {
-    max-height: 100px;
+    max-height: $show-content / 75;
+  }
+
+
+  75% {
+    max-height: $show-content / 150;
   }
 
   100% {
+    max-height: 0;
     opacity: 0;
     transform-origin: top;
     transform: rotateX(-90deg);
-    max-height: 0;
   }
 }
-
 
 @keyframes delay {
   0% {
