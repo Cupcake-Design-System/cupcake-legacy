@@ -1,0 +1,186 @@
+////
+/// @group accordion
+////
+
+/// $accordion-item-border
+$accordion-item-border: 1px solid $color-gray-3 !default;
+
+/// $accordion-item-first-child-border
+$accordion-item-first-child-border: $accordion-item-border !default;
+
+/// $accordion-item-last-child-border
+$accordion-item-last-child-border: $accordion-item-border !default;
+
+/// $accordion-item-content-padding
+$accordion-item-content-padding: 0 16px !default;
+
+/// $accordion-item-panel-bd-color-hover
+$accordion-item-panel-bd-color-hover: $color-gray-2 !default;
+
+/// $accordion-item-panel-bg
+$accordion-item-panel-bg: $color-gray-1 !default;
+
+/// $accordion-item-panel-bg-hover
+$accordion-item-panel-bg-hover: $color-gray-0 !default;
+
+/// $accordion-item-panel-opened-bg
+$accordion-item-panel-opened-bg: inherit !default;
+
+/// $accordion-item-right-part-spacing
+$accordion-item-right-part-spacing: 15px !default;
+
+/// $accordion-item-arrow-color
+$accordion-item-arrow-color: $color-gray-7 !default;
+
+/// data to show/hide panel
+$show-content: 500em !default;
+$hide-content: 0 !default;
+
+/// data to rotate arrow
+$arrow-rotate-deg: 90deg !default;
+
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+@mixin accordion {
+  .c-accordion {
+    backface-visibility: hidden;
+
+    @extend .c-p-horizontal-0;
+
+    @include trigger;
+    @include accordion-item;
+
+    animation: delay .65s ease-out;
+  }
+}
+
+@mixin accordion-item {
+  &-item {
+    position: relative;
+    cursor: pointer;
+  
+    &-panel {
+      @extend .c-media;
+      @extend .c-media-middle;
+    }
+
+    &-content {
+      padding: $accordion-item-content-padding;
+      background: $accordion-item-panel-bg;
+      overflow: hidden;
+      animation: slide-up .25s ease-in forwards;
+    }
+
+    &:focus > &-panel,
+    &:hover > &-panel {
+      background-color: $accordion-item-panel-bg-hover;
+      border-color: $accordion-item-panel-bd-color-hover;
+      border-bottom-color: $accordion-item-panel-bd-color-hover;
+    }
+
+    &-right {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+      padding-left: $accordion-item-right-part-spacing;
+      color: $accordion-item-arrow-color;
+
+      & > * {
+        margin-left: $accordion-item-right-part-spacing;
+      }
+
+      & > i {
+        transition: transform 0.15s;
+      }
+    }
+  }
+}
+
+@mixin trigger {
+  &-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &:checked ~ .c-accordion-item-panel {
+      background: $accordion-item-panel-opened-bg;
+    }
+
+    &:checked ~ .c-accordion-item-content {
+      height: auto;
+      overflow: auto;
+      max-height: $show-content;
+      animation: slide-down .25s ease-in;
+    }
+
+    &:checked ~ .c-accordion-item-panel {
+      & .c-accordion-caret i {
+        @include rotate($arrow-rotate-deg);
+      }
+    }
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+
+  50% {
+    opacity: .75;
+  }
+
+  100% {
+    transform-origin: top;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    max-height: $show-content;
+    transform-origin: top;
+    transform: rotateX(0deg);
+  }
+
+  25% {
+    max-height: $show-content / 50;
+  }
+
+
+  50% {
+    max-height: $show-content / 75;
+  }
+
+
+  75% {
+    max-height: $show-content / 150;
+  }
+
+  100% {
+    max-height: 0;
+    opacity: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes delay {
+  0% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
