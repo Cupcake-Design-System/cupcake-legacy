@@ -144,23 +144,21 @@ $arrow-rotate-deg: 90deg !default;
 
 @keyframes slide-up {
   0% {
-    max-height: $show-content;
+    max-height: 300px;
     transform-origin: top;
     transform: rotateX(0deg);
   }
 
   25% {
-    max-height: $show-content / 50;
+    max-height: 150px;
   }
-
 
   50% {
-    max-height: $show-content / 75;
+    max-height: 100px;
   }
 
-
   75% {
-    max-height: $show-content / 150;
+    max-height: 50px;
   }
 
   100% {
