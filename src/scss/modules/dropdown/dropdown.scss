@@ -59,6 +59,17 @@
   }
 }
 
+.c-dropdown-heading,
+.c-dropdown-list > li > a.c-dropdown-heading {
+  @include dropdown-item;
+
+  @extend .c-text-muted;
+
+  text-transform: uppercase;
+  font-size: $dropdown-heading-font-size;
+  font-weight: $dropdown-heading-font-weight;
+}
+
 .c-dropdown-grid {
   @include dropdown-grid;
 

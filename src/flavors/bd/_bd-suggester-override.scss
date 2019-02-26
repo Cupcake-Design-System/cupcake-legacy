@@ -78,6 +78,7 @@
   .c-suggester-clear-icon {
     .fa-times-circle {
       font-size: 1em;
+      vertical-align: unset;
 
       &::before {
         content: "\f00d";
