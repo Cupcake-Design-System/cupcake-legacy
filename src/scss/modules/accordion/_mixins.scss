@@ -117,7 +117,8 @@ $arrow-rotate-deg: 90deg !default;
       animation: slide-down .25s ease-in;
     }
 
-    &:checked ~ .c-accordion-item-panel {
+    &:checked ~ .c-accordion-item-panel,
+    &:checked ~ .c-accordion-item {
       & .c-accordion-caret i {
         @include rotate($arrow-rotate-deg);
       }
