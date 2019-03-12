@@ -1,3 +1,30 @@
+## Release [1.4.11](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.10...1.4.11) :rocket:
+**12 March 2019**
+
+### Merged
+- Breadcrumb bd ihs fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/277)**
+- init ihs colors **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/276)**
+- suggester clear icon fix (bd), group headng for dropdown **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/275)**
+- fixed slide up animation **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/274)**
+- Uxd 37n **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/271)**
+- Selected dropdown item icon fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/269)**
+- unit tests for &quot;c-text-ellipsis&quot; &amp; long text truncation **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/268)**
+
+### Commits
+- UXD-37: create accordion component **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/215b5c0763f83ed71b63fab8426e8808005e1041)**
+- corrected regarding review comments **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/44f5999cd19f94713039723369c07f7f39e21f44)**
+- revert html view, and fixed variables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7677375cb3e062d1c4a3d0b3106567af2b71f2d3)**
+- adjusted accordion expand/collapse functionality **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7e1dcf568cfd4d4a9ee2113188501a5438bf182f)**
+- accordion **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/52e69c6c72cfbbf554b9f160d1e53a7230f5c31a)**
+- change layout for addition icons **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7a56404f62eef6c22b6157017ef077544bfa31a5)**
+- changed classes added reuse styles **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e00b9e78fdc0fd72c49ed7bb939c0ef0c9c7ba74)**
+- accordion animation **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/e562a203b404959cfc929521ce41c3c069974497)**
+- fixed typo **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/08948cdfb1290d7fba8c252d242ead877ac0c9c0)**
+- bd-ihs variables fixed **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/802727e717ae8657680aaba288d7e5cb1133edac)**
+- tiny fix for selected dropdown item icon position **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/776110d95c48e344e37733656b4e58ca7514a936)**
+- UXD-20: tiny fix for selected dropdown item icon position **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/371663bdccbdb82152ee8ab104361bd6bea4826c)**
+- UXD-20: tiny fix for selected dropdown item icon **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c30fbc43b86f55aab09a113718c1deb7293d9aca)**
+
 ## Release [1.4.10](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.9...1.4.10) :rocket:
 **7 December 2018**
 
@@ -15,6 +42,7 @@
 - added tests for disabled BD buttons **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/5e3b829dc218871742fe197f307033c8159cf42b)**
 - add unit tests for bd alerts **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/93397d136d111e2c3f19ebc8f4105ff5f191e299)**
 - disabled buttons &amp; buttons sizes tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/0c4e9e9fd5922a8c405cc6eee01f7db205596268)**
+- Release 1.4.10 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/76f2febd7cd19b8dbea63828a894a1c9436c54e2)**
 - demo page: dropdown with c-text-[primary, success, warning, danger] **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d57999ec47f5e4378f47283c796f8a450b9052df)**
 - added c-dropdown-item-selected to demo page **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/cee224d1c1ed090b67a8a2b45544d210e6562767)**
 - improved toRgb: added alpha channel parameter **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/ae5daf68aacfa85dac5a948012061741c707c358)**
