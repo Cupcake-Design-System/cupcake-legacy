@@ -53,7 +53,7 @@
   .c-header-item {
     border-color: $header-inverse-borders;
 
-    & a {
+    .c-header-item-link {
       color: $header-inverse-text-color;
 
       &:hover {
