@@ -1,5 +1,9 @@
 
 @mixin misc-helpers {
+  .c-cursor-default {
+    cursor: default;
+  }
+
   .c-cursor-pointer {
     cursor: pointer;
   }
@@ -24,5 +28,26 @@
 
   .c-full-width {
     width: 100%;
+  }
+
+  .c-p-static {
+    position: static;
+  }
+
+  .c-p-relative {
+    position: relative;
+  }
+
+  .c-p-absolute {
+    position: absolute;
+  }
+
+  .c-p-fixed {
+    position: fixed;
+  }
+
+  .c-no-underline,
+  .c-no-underline:hover {
+    text-decoration: none;
   }
 }
