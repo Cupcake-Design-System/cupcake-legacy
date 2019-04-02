@@ -1,5 +1,9 @@
 
 @mixin misc-helpers {
+  .c-cursor-default {
+    cursor: default;
+  }
+
   .c-cursor-pointer {
     cursor: pointer;
   }
@@ -24,5 +28,58 @@
 
   .c-full-width {
     width: 100%;
+  }
+
+  .c-p-static {
+    position: static;
+  }
+
+  .c-p-relative {
+    position: relative;
+  }
+
+  .c-p-absolute {
+    position: absolute;
+  }
+
+  .c-p-fixed {
+    position: fixed;
+  }
+
+  .c-no-underline,
+  .c-no-underline:hover {
+    text-decoration: none;
+  }
+
+  .c-overflow-visible {
+    overflow: visible;
+  }
+
+  .c-overflow-scroll {
+    overflow: scroll;
+  }
+
+  .c-overflow-auto {
+    overflow: auto;
+  }
+
+  .c-overflow-auto-x {
+    overflow-x: auto;
+  }
+
+  .c-overflow-auto-y {
+    overflow-y: auto;
+  }
+
+  .c-overflow-hidden {
+    overflow: hidden;
+  }
+
+  .c-overflow-hidden-x {
+    overflow-x: hidden;
+  }
+
+  .c-overflow-hidden-y {
+    overflow-y: hidden;
   }
 }
