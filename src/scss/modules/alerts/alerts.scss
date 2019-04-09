@@ -33,7 +33,7 @@
 
 .c-alert-top {
   border-radius: $alert-top-radius;
-  padding: $alert-top-padding;
+  padding: $alert-top-padding-vertical $alert-top-padding-horizontal;
   border-left-width: 0;
   border-right-width: 0;
   border-top-width: 0;
@@ -43,9 +43,9 @@
     padding-left: $alert-top-icon-padding;
 
     .c-alert-icon {
-      top: $alert-top-padding;
-      left: $alert-top-padding;
-      bottom: $alert-top-padding;
+      top: $alert-top-padding-horizontal;
+      left: $alert-top-padding-horizontal;
+      bottom: $alert-top-padding-horizontal;
       width: $alert-icon-width;
     }
   }
