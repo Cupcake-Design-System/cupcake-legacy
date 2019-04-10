@@ -16,10 +16,10 @@ describe('BD Alerts', () => {
         });
 
         it('should have correct styles', () => {
-            expect($alertTopDefault.css('padding'), 'padding').to.equal('8px 8px 8px 29px');
+            expect($alertTopDefault.css('padding'), 'padding').to.equal('6px 8px 6px 29px');
             expect($alertTopDefault.css('font-size'), 'font-size').to.equal('14px');
             expect($alertTopDefault.css('font-weight'), 'font-weight').to.equal('400');
-            expect($alertTopDefault.css('line-height'), 'line-height').to.equal('14px');
+            expect($alertTopDefault.css('line-height'), 'line-height').to.equal('18px');
             expect($alertTopDefault.css('border-radius'), 'border-radius').to.equal('2px');
             expect($alertTopDefault.css('border-width'), 'border-width').to.equal('0px');
             expect($alertTopDefault.css('color'), 'color').to.equal(toRgb('#414152'));
@@ -150,7 +150,7 @@ describe('BD Alerts', () => {
         });
 
         it('should have correct styles', () => {
-            expect($alertPrimary.css('padding'), 'padding').to.equal('8px');
+            expect($alertPrimary.css('padding'), 'padding').to.equal('6px 8px');
             expect($alertPrimary.css('color'), 'color').to.equal(toRgb('#414152'));
             expect($alertPrimary.css('background-color'), 'background-color').to.equal(toRgb('#cdecf5'));
         });

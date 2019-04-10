@@ -2,104 +2,110 @@
 /// @group alerts
 ////
 
-/// $alert-border:   
-$alert-border           : 1px solid !default;
+/// $alert-border:
+$alert-border             : 1px solid !default;
 
 /// $alert-margin
-$alert-margin           : 0 0 1rem 0 !default;
+$alert-margin             : 0 0 1rem 0 !default;
 
-/// $alert-padding
-$alert-padding          : 9px !default;
+/// $alert-padding-vertical
+$alert-padding-vertical   : 9px !default;
 
-/// $alert-top-padding
-$alert-top-padding      : 18px !default;
+/// $alert-padding-horizontal
+$alert-padding-horizontal : $alert-padding-vertical !default;
+
+/// $alert-top-padding-horizontal
+$alert-top-padding-horizontal: 18px !default;
+
+/// $alert-top-padding-vertical
+$alert-top-padding-vertical: $alert-top-padding-horizontal !default;
 
 /// $alert-font-size
-$alert-font-size        : 12px !default;
+$alert-font-size          : 12px !default;
 
 /// $alert-line-height
-$alert-line-height      : 14px !default;
+$alert-line-height        : 14px !default;
 
 /// $alert-font-family
-$alert-font-family      : $global-font-family !default;
+$alert-font-family        : $global-font-family !default;
 
 /// $alert-font-weight
-$alert-font-weight      : normal !default;
+$alert-font-weight        : normal !default;
 
 /// $alert-default-bg
-$alert-default-bg       : $color-gray-1 !default;
+$alert-default-bg         : $color-gray-1 !default;
 
 /// $alert-default-color
-$alert-default-color       : $color-gray-7 !default;
+$alert-default-color      : $color-gray-7 !default;
 
 /// $alert-default-icon-color
-$alert-default-icon-color       : $color-gray-7 !default;
+$alert-default-icon-color : $color-gray-7 !default;
 
 /// $alert-primary-bg
-$alert-primary-bg       : $color-primary-0 !default;
+$alert-primary-bg         : $color-primary-0 !default;
 
 /// $alert-primary-color
-$alert-primary-color    : $primary !default;
+$alert-primary-color      : $primary !default;
 
 /// $alert-primary-icon-color
-$alert-primary-icon-color    : $primary !default;
+$alert-primary-icon-color : $primary !default;
 
 /// $alert-success-bg
-$alert-success-bg       : $color-success-0 !default;
+$alert-success-bg         : $color-success-0 !default;
 
 /// $alert-success-color
-$alert-success-color    : $success !default;
+$alert-success-color      : $success !default;
 
 /// $alert-success-icon-color
-$alert-success-icon-color    : $success !default;
+$alert-success-icon-color : $success !default;
 
 /// $alert-danger-bg 
-$alert-danger-bg        : $color-danger-0 !default;
+$alert-danger-bg          : $color-danger-0 !default;
 
 /// $alert-danger-color
-$alert-danger-color     : $danger !default;
+$alert-danger-color       : $danger !default;
 
 /// $alert-danger-icon-color
-$alert-danger-icon-color     : $danger !default;
+$alert-danger-icon-color  : $danger !default;
 
 /// $alert-warning-bg
-$alert-warning-bg       : $color-warning-0 !default;
+$alert-warning-bg         : $color-warning-0 !default;
 
 /// $alert-warning-color
-$alert-warning-color    : $warning !default;
+$alert-warning-color      : $warning !default;
 
 /// $alert-warning-icon-color
-$alert-warning-icon-color    : $warning !default;
+$alert-warning-icon-color : $warning !default;
 
 /// $alert-radius
-$alert-radius           : $global-radius !default;
+$alert-radius             : $global-radius !default;
 
 /// $alert-top-radius
-$alert-top-radius       : 0 !default;
+$alert-top-radius         : 0 !default;
 
 /// $alert-style 
-$alert-style            : 'color-close' !default;
+$alert-style              : 'color-close' !default;
 
 /// $alert-shadows
-$alert-shadows          : 0 1px 0 0 transparentize($color-gray-9, 0.9) !default;
+$alert-shadows            : 0 1px 0 0 transparentize($color-gray-9, 0.9) !default;
 
 /// $alert-icon-width
-$alert-icon-width       : 12px !default;
+$alert-icon-width         : 12px !default;
 
 /// $alert-icon-padding
-$alert-icon-padding     : 30px !default;
+$alert-icon-padding       : 30px !default;
 
 /// $alert-top-icon-padding
-$alert-top-icon-padding : 42px !default;
+$alert-top-icon-padding   : 42px !default;
 
 /// $alert-close-font-size
-$alert-close-font-size  : 12px !default;
+$alert-close-font-size    : 12px !default;
 
 
 @mixin alert-base() {
   position: relative;
   margin: $alert-margin;
-  padding: $alert-padding;
+  padding: $alert-padding-vertical $alert-padding-horizontal;
   background-color: $alert-default-bg;
   color: $alert-default-color;
   border: $alert-border;
@@ -111,7 +117,7 @@ $alert-close-font-size  : 12px !default;
   line-height: $alert-line-height;
 
   &.c-alert-dismissible {
-    padding-right: $alert-padding * 4;
+    padding-right: $alert-padding-vertical * 4;
   }
 
   .c-alert-close {
@@ -146,9 +152,9 @@ $alert-close-font-size  : 12px !default;
 
   .c-alert-icon {
     position: absolute;
-    top: $alert-padding;
-    left: $alert-padding;
-    bottom: $alert-padding;
+    top: $alert-padding-horizontal;
+    left: $alert-padding-horizontal;
+    bottom: $alert-padding-horizontal;
     width: $alert-icon-width;
     font-size: $alert-icon-width;
     color: $alert-default-icon-color;
