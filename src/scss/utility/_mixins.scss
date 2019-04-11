@@ -143,7 +143,20 @@
   }
 }
 
+@function inverse-side($side) {
+  @if $side == top {
+    @return bottom;
+  } @else if $side == bottom {
+    @return top;
+  } @else if $side == left {
+    @return right;
+  }
+
+  @return left;
+}
+
 @mixin linear-gradient($gradientLine, $colorStops...) {
+  background-color: nth($colorStops, 1);
   background-image: linear-gradient($gradientLine, $colorStops);
 
   @if length($gradientLine) == 2 {
