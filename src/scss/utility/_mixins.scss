@@ -143,14 +143,37 @@
   }
 }
 
-@mixin linear-gradient($gradientLine, $colorStops...) {
-  background-image: linear-gradient($gradientLine, $colorStops);
-
-  @if length($gradientLine) == 2 {
-    background-image: linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
-  } @else {
-    background-image: linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
+@function inverse-side($side) {
+  @if $side == top {
+    @return bottom;
+  } @else if $side == bottom {
+    @return top;
+  } @else if $side == left {
+    @return right;
   }
+
+  @return left;
+}
+
+
+// convert outdated syntax in gradient direction
+@function convert-gradient-direction($direction) {
+  $d: null;
+
+  @if nth($direction, 1) != "to" {
+    @each $pos in $direction {
+      $d: append($d, inverse-side($pos), space);
+    }
+    $d: to + ' ' + $d;
+  } @else {
+    $d: $direction;
+  }
+
+  @return $d;
+}
+
+@mixin linear-gradient($gradientLine, $colorStops...) {
+  background-image: linear-gradient(convert-gradient-direction($gradientLine), $colorStops);
 }
 
 @mixin hover {
