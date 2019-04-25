@@ -15,16 +15,18 @@ $color-primary-9: darken($primary, 12);  // #005859
 
 $popover-primary-bg   : $color-primary-0;
 $popover-primary-color: $color-primary-9;
-$control-active-border: $primary;
+$control-active-border: $color-primary-5;
 $table-row-hover      : $color-primary-0;
 $tabs-color: $primary;
+
+$btn-active-selected: #587474;
 
 $alert-primary-color: $color-primary-9;
 $alert-primary-icon-color: $primary;
 $alert-primary-bg: $color-primary-0;
 $toast-alert-info-bar-bg: $color-primary-0;
-$btn-shadow-focus:  0 0 3px 1px $color-primary-3;
-$select-box-shadow-focus : $color-primary-3;
+$btn-shadow-focus:  0 0 3px 1px $color-primary-6;
+$select-box-shadow-focus : $color-primary-6;
 $anchor-color: $primary;
 $anchor-color-hover: $primary;
 $anchor-color-active: $color-primary-5;
