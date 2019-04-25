@@ -1,88 +1,14 @@
 .c-suggester-pill {
-  &#{&}#{&}#{&}#{&}#{&} {
-    margin: 2px;
-    padding: 4px 16px 4px 3px;
-    font-size: inherit;
-
-    .c-close {
-      top: 5px;
-      font-size: 12px;
-    }
-  }
-
   &.c-bg-gray-2:not(.c-bg-warning) {
     background: $color-primary-6;
-    color: #ffffff;
-  }
-}
-
-.c-suggester-list-result {
-  .c-suggester-item a {
-    padding: 8px 12px;
-    line-height: 1;
   }
 }
 
 .c-suggester {
   .c-suggester-filter-list,
   .view-all {
-    background: #f9f9f9;
-    font-size: 14px;
-
     a {
       color: $primary;
-    }
-  }
-
-  .c-suggester-list-result,
-  .c-results-tree-view {
-    font-size: 14px;
-  }
-
-  .c-suggester-item-header {
-    font-size: 12px;
-    line-height: 20px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #d9d9d9;
-
-    span {
-      font-weight: 600;
-      color: $control-hint-color;
-    }
-  }
-
-  .cupcake-suggester-container-tree-item {
-    .c-suggester-item.selected {
-      color: #414152;
-      background: $table-state-selected;
-    }
-  }
-
-  .c-suggester-item a.selected {
-    color: #414152;
-    background: $table-state-selected;
-  }
-
-  .c-dropdown-list {
-    padding: 0;
-    margin: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  li.cupcake-suggester-container-tree-item label.checked,
-  li.cupcake-suggester-container-tree-item.has-children > a {
-    font-weight: normal;
-  }
-
-  .c-suggester-clear-icon {
-    .fa-times-circle {
-      font-size: 1em;
-      vertical-align: unset;
-
-      &::before {
-        content: "\f00d";
-      }
     }
   }
 }
