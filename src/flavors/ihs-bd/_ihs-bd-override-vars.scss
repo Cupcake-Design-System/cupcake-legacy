@@ -2,16 +2,16 @@ $primary: #009596;
 $color-brand: $primary;
 
 // Primary
-$color-primary-0: lighten($primary, 65);
-$color-primary-1: lighten($primary, 50);
-$color-primary-2: lighten($primary, 40);
-$color-primary-3: lighten($primary, 30);
-$color-primary-4: lighten($primary, 20);
-$color-primary-5: lighten($primary, 12);
-$color-primary-6: lighten($primary, 6);
-$color-primary-7: $primary;
-$color-primary-8: darken($primary, 6);
-$color-primary-9: darken($primary, 12);
+$color-primary-0: lighten($primary, 65); // #e3ffff
+$color-primary-1: lighten($primary, 50); // #96feff
+$color-primary-2: lighten($primary, 40); // #63feff
+$color-primary-3: lighten($primary, 30); // #30feff
+$color-primary-4: lighten($primary, 20); // #00fafc
+$color-primary-5: lighten($primary, 12); // #00d2d3
+$color-primary-6: lighten($primary, 6);  // #00b3b5
+$color-primary-7: $primary;              // #009596
+$color-primary-8: darken($primary, 6);   // #007777
+$color-primary-9: darken($primary, 12);  // #005859
 
 $popover-primary-bg   : $color-primary-0;
 $popover-primary-color: $color-primary-9;
@@ -29,3 +29,6 @@ $anchor-color: $primary;
 $anchor-color-hover: $primary;
 $anchor-color-active: $color-primary-5;
 $modals-confirmation-icon-info-c: $color-primary-6;
+
+$btn-gradient-from-to: true;
+$btn-primary-hover       : $color-primary-6;
