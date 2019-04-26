@@ -1,3 +1,9 @@
+## Release [1.4.13-beta.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.0...1.4.13-beta.1) :rocket:
+**26 April 2019**
+
+### Merged
+- adjusted primary colors scheme **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/284)**
+
 ## Release [1.4.13-beta.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.12...1.4.13-beta.0) :rocket:
 **26 April 2019**
 
@@ -8,6 +14,7 @@
 - additional helper classes **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/280)**
 
 ### Commits
+- Release 1.4.13-beta.0 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/11ad20d10f999708a9ff5d9a6202a035545838c5)**
 - fixed icons paddings and updated tests **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/f0ef2d9b86290e78d93de645c502ccaad04c1822)**
 - box-shadow for btn on focus, suggester pills **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/d3e1b6c67940e3b8a1653c0770117d5707c02e87)**
 - ihs-bd-suggester pills color override **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/453b76de2766c0d2b919f00c227f6916a1241d05)**
