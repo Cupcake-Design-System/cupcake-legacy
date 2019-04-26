@@ -1,0 +1,14 @@
+.c-suggester-pill {
+  &.c-bg-gray-2:not(.c-bg-warning) {
+    background: $color-primary-6;
+  }
+}
+
+.c-suggester {
+  .c-suggester-filter-list,
+  .view-all {
+    a {
+      color: $primary;
+    }
+  }
+}

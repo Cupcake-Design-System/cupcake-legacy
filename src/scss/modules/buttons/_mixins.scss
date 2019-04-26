@@ -57,7 +57,7 @@
     }
   }
 
-  @if $btn-white-label == true {
+  @if $btn-white-label == true and $btn-gradient-from-to == false {
     &:hover {
       background-color: lighten($bg, 5%);
       background-image: radial-gradient(farthest-corner, rgba(white, 0.15), rgba(white, 0.1));
@@ -68,8 +68,20 @@
       background-image: none;
     }
   }
-}
 
+  @if $btn-white-label == true and $btn-gradient-from-to == true {
+    background-image: linear-gradient($bg, darken($bg, 6));
+  
+    &:hover {
+      background-color: $bg;
+      background-image: radial-gradient(farthest-corner, rgba($bg, .15), rgba(255, 255, 255, .15));
+    }
+
+    &:active {
+      background: darken($bg, 6);
+    }
+  }
+}
 
 //Button Outline
 
