@@ -1,6 +1,6 @@
 {
   "name": "@ipreo/cupcake",
-  "version": "1.4.12",
+  "version": "1.4.13-beta.0",
   "description": "Ipreo CSS framework.",
   "main": "dist/default.css",
   "repository": {
