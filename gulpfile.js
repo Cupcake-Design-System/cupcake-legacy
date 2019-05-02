@@ -168,6 +168,55 @@ gulp.task('flavors', function() {
     .pipe(reload({stream:true}))    
 });
 
+gulp.task('flavors:variables', function () {
+  const path = require('path');
+  const clone = require('gulp-clone');
+  const rename = require('gulp-rename');
+  const transform = require('gulp-transform');
+  const flatten = require('sass-flatten');
+  const es = require('event-stream');
+
+  function toLess(content) {
+    return content
+      .replace(/\/s[ca]ss\//g, '/less/') // file structure
+      .replace(/\.scss/g, '.less') // file extension
+      .replace(/@mixin /g, '.')
+      .replace(/@include /g, '.')
+      .replace(/\$(\w+)/g, "@$1")
+      .replace(/@extend ([\w\-\.]+);/g, "&:extend( $1 );")
+      .replace(/ !default/g, '')
+      .replace(/#{([^}]+)}/g, "~\"$1\"")
+      .replace(/~\"@(\w+)\"/g, "@{$1}")
+      .replace(/adjust-hue\(/g, 'spin(')
+
+      .replace(
+        /(@if)([^{]+)({)/g, function (match, m1, m2, m3) {
+          var result = '& when';
+          result += m2.replace(/==/g, '=');
+          result += m3;
+          return result;
+        });
+  };
+
+  const scssContent = gulp
+    .src(`${bases.flavors}**/_variables.scss`)
+    .pipe(transform('utf8', (content, file) => flatten(content, path.dirname(file.path))))
+    .pipe(rename(function (filePath) {
+      filePath.basename = `${filePath.dirname}.variables`;
+      filePath.dirname = '';
+    }));
+
+  const scss = scssContent
+    .pipe(gulp.dest(bases.dist));
+
+  const less = scssContent
+    .pipe(clone())
+    .pipe(transform('utf8', content => toLess(content)))
+    .pipe(rename(filePath => filePath.extname = '.less'))
+    .pipe(gulp.dest(bases.dist));
+
+  return es.merge(scss, less);
+});
 
 gulp.task('styles:build', function() {
   return gulp.src(bases.dist + '**/*.css')
@@ -322,10 +371,10 @@ gulp.task('extract:bg', function() {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
+  runSequence('clean:dist', 'html', 'lint', 'styles', 'flavors', 'flavors:variables', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', 'browser-sync', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'html', 'styles', 'flavors', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', done);
+  runSequence('clean:dist', 'html', 'styles', 'flavors', 'flavors:variables', 'copy', 'fonts', 'styles:build', 'styles:flatten', 'clean:leftovers', done);
 });
 

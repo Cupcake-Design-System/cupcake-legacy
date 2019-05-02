@@ -18,17 +18,6 @@ $space-xl: $spacing-xl;
 $space-xxl: $spacing-xxl;
 $space-xxxl: $spacing-xxxl;
 
-$space-values : (
-  0   : $space-none,
-  xs  : $space-xs,
-  sm  : $space-sm,
-  md  : $space-md,
-  lg  : $space-lg,
-  xl  : $space-xl,
-  xxl : $space-xxl,
-  xxxl: $space-xxxl,
-);
-
 // Colors: Default went to a different set of orange variables - this to keep bd accurate
 $color-warning-0: #fff9db;
 $color-warning-1: #fff3bf;
