@@ -312,7 +312,7 @@ gulp.task('variables:default', function(cb) {
 gulp.task('variables:bd', function(cb) {
   var options = {
     title: `Cupcake BD Settings`,
-    output: bases.flavors + `bd/_variables.scss`,
+    output: bases.flavors + `bd/_variables_generated.scss`,
     sort: [
       'global-non-tokens'
     ]
