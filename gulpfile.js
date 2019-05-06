@@ -180,6 +180,13 @@ gulp.task('flavors:variables', function () {
     return content
       .replace(/\/s[ca]ss\//g, '/less/') // file structure
       .replace(/\.scss/g, '.less') // file extension
+      // scss to less map structure
+      .replace(/\$([\w-]+)\s*:\s*\(([\w\W]+?)\)/g, function (match, m1, m2) {
+        return `#${m1}() {${m2.replace(/\$([\w-]+),/g, "@$1;")}}`;
+      })
+      .replace(/rgba\((\D+),(.+)\)/g, function(match, m1, m2){
+        return `fade(${m1}, ${parseFloat(m2)*100}%)`
+      })
       .replace(/@mixin /g, '.')
       .replace(/@include /g, '.')
       .replace(/\$(\w+)/g, "@$1")
@@ -188,7 +195,6 @@ gulp.task('flavors:variables', function () {
       .replace(/#{([^}]+)}/g, "~\"$1\"")
       .replace(/~\"@(\w+)\"/g, "@{$1}")
       .replace(/adjust-hue\(/g, 'spin(')
-
       .replace(
         /(@if)([^{]+)({)/g, function (match, m1, m2, m3) {
           var result = '& when';
@@ -199,10 +205,11 @@ gulp.task('flavors:variables', function () {
   };
 
   const scssContent = gulp
-    .src(`${bases.flavors}**/_variables.scss`)
+    .src([`${bases.flavors}**/_variables.scss`, `${bases.scss}/config/default.scss`])
     .pipe(transform('utf8', (content, file) => flatten(content, path.dirname(file.path))))
     .pipe(rename(function (filePath) {
-      filePath.basename = `${filePath.dirname}.variables`;
+      const name = filePath.dirname === '.' ? filePath.basename : filePath.dirname;
+      filePath.basename = `${name}.variables`;
       filePath.dirname = '';
     }));
 
