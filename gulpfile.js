@@ -165,7 +165,7 @@ gulp.task('flavors', function() {
     .pipe(addFooter(metaFooter))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
-    .pipe(reload({stream:true}))    
+    .pipe(reload({stream:true}))
 });
 
 gulp.task('flavors:variables', function () {
@@ -205,10 +205,10 @@ gulp.task('flavors:variables', function () {
   };
 
   const scssContent = gulp
-    .src([`${bases.flavors}**/_variables.scss`, `${bases.scss}/config/default.scss`])
+    .src([`${bases.flavors}**/_variables.scss`, `${bases.scss}/config/_variables.scss`])
     .pipe(transform('utf8', (content, file) => flatten(content, path.dirname(file.path))))
     .pipe(rename(function (filePath) {
-      const name = filePath.dirname === '.' ? filePath.basename : filePath.dirname;
+      const name = filePath.dirname === '.' ? 'default' : filePath.dirname;
       filePath.basename = `${name}.variables`;
       filePath.dirname = '';
     }));
