@@ -1,20 +1,67 @@
 $primary: #009596;
+$success: #1d825e;
+$warning: #d1a218;
+$danger: #e64a36;
 $color-brand: $primary;
 
 // Primary
-$color-primary-0: desaturate(lighten($primary, 65), 15);
-$color-primary-1: desaturate(lighten($primary, 60), 25);
-$color-primary-2: desaturate(lighten($primary, 50), 20);
-$color-primary-3: desaturate(lighten($primary, 30), 20);
-$color-primary-4: desaturate(lighten($primary, 20), 20);
-$color-primary-5: lighten($primary, 12);
-$color-primary-6: lighten($primary, 6);
-$color-primary-7: $primary;
-$color-primary-8: darken($primary, 6);
-$color-primary-9: darken($primary, 12);
+$color-primary-0: desaturate(lighten($primary, 65), 15); // #e5fdfd
+$color-primary-1: desaturate(lighten($primary, 60), 25); // #d0f8f8
+$color-primary-2: desaturate(lighten($primary, 50), 20); // #a1f4f5
+$color-primary-3: desaturate(lighten($primary, 30), 20); // #45e9ea
+$color-primary-4: desaturate(lighten($primary, 20), 20); // #19e1e3
+$color-primary-5: lighten($primary, 12);                 // #00d2d3
+$color-primary-6: lighten($primary, 6);                  // #00b3b5
+$color-primary-7: $primary;                              // #009596
+$color-primary-8: darken($primary, 6);                   // #007777
+$color-primary-9: darken($primary, 12);                  // #005859
+
+// Success
+$color-success-0: lighten($success, 65);                 // #effbf7;
+$color-success-1: saturate(lighten($success, 61), 15);   // #dbfbf0;
+$color-success-2: saturate(lighten($success, 50), 15);   // #a9f5da;
+$color-success-3: saturate(lighten($success, 30), 10);   // #53e5b1;
+$color-success-4: lighten($success, 20);                 // #33d299;
+$color-success-5: lighten($success, 13);                 // #29b885;
+$color-success-6: lighten($success, 6);                  // #239b70;
+$color-success-7: $success;                              // #1d825e;
+$color-success-8: saturate(darken($success, 6), 10);     // #116f4e;
+$color-success-9: saturate(darken($success, 10), 10);    // #0e5e41;
+
+// Warning
+$color-warning-0: saturate(lighten($warning, 48), 12);    // #fef6e0;
+$color-warning-1: saturate(lighten($warning, 42), 22);    // #ffefc0;
+$color-warning-2: saturate(lighten($warning, 31), 22);    // #ffe188;
+$color-warning-3: saturate(lighten($warning, 20), 22);    // #ffd350;
+$color-warning-4: saturate(lighten($warning, 15), 10);    // #f4c741;
+$color-warning-5: saturate(lighten($warning, 8), 2);      // #e9b829;
+$color-warning-6: saturate(lighten($warning, 3), 2);      // #deaf25;
+$color-warning-7: $warning;                               // #d1a218;
+$color-warning-8: saturate(darken($warning, 7), 10);      // #bb8e0a;
+$color-warning-9: saturate(darken($warning, 12), 10);     // #a37c09;
+
+// Danger
+$color-danger-0: lighten($danger, 41);                // #fdf1f0;
+$color-danger-1: saturate(lighten($danger, 35), 15);  // #fdd6d1;
+$color-danger-2: saturate(lighten($danger, 28), 15);  // #fcb8af;
+$color-danger-3: saturate(lighten($danger, 21), 18);  // #fd988b;
+$color-danger-4: saturate(lighten($danger, 14), 10);  // #f67d6e;
+$color-danger-5: saturate(lighten($danger, 9), 10);   // #f46856;
+$color-danger-6: saturate(lighten($danger, 5), 8);    // #f15845;
+$color-danger-7: $danger;                             // #e64a36;
+$color-danger-8: desaturate(darken($danger, 7), 2);   // #da331e;
+$color-danger-9: desaturate(darken($danger, 14), 5);  // #b82e1d;
 
 $popover-primary-bg   : $color-primary-0;
 $popover-primary-color: $color-primary-9;
+$popover-success-bg   : $color-success-0;
+$popover-success-color: $color-success-7;
+$popover-primary-color: $color-primary-7;
+$popover-warning-bg   : $color-warning-0;
+$popover-warning-color: $color-warning-9;
+$popover-danger-bg    : $color-danger-0;
+$popover-danger-color : $color-danger-8;
+
 $control-active-border: $color-primary-5;
 $table-row-hover      : $color-primary-0;
 $tabs-color: $primary;
@@ -33,3 +80,42 @@ $anchor-color-active: $color-primary-5;
 $modals-confirmation-icon-info-c: $color-primary-6;
 
 $btn-primary-hover       : $color-primary-6;
+
+$control-success-c  : $color-success-5;
+$control-success-bg : $color-success-0;
+$control-warning-c  : $color-warning-5;
+$control-warning-bg : $color-warning-0;
+$control-danger-c   : $color-danger-4;
+$control-danger-bg  : $color-danger-0;
+
+$select-error-c          : $color-danger-9;
+$select-color              : $font-body-color;
+
+$table-row-hover                : #eaf7ff;
+$table-row-stripe-hover         : $table-row-hover;
+$table-striped-background       : #f9f9f9;
+
+$table-head-background          : white;
+$table-foot-background          : white;
+$table-head-font-color          : $font-body-color;
+
+$table-foot-font-color          : $font-body-color;
+$table-state-selected           : #fafad2;
+
+$alert-danger-color: $color-danger-9;
+$alert-warning-color: $color-warning-8;
+$alert-success-color: $color-success-8;
+$alert-danger-icon-color: $color-danger-9;
+$alert-warning-icon-color: $color-warning-8;
+$alert-success-icon-color: $color-success-8;
+$alert-primary-icon-color: $color-primary-8;
+
+$alert-primary-bg: $color-primary-0;
+$alert-success-bg: $color-success-1;
+$alert-danger-bg: $color-danger-0;
+$alert-warning-bg: $color-warning-0;
+
+$toast-alert-danger-bar-bg: $alert-danger-bg;
+$toast-alert-warning-bar-bg: $alert-warning-bg;
+$toast-alert-success-bar-bg: $alert-success-bg;
+$toast-alert-info-bar-bg: $alert-primary-bg;

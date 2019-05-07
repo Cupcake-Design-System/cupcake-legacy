@@ -1,37 +1,19 @@
 @import "tokens";
 @import "variables";
 
-// $primary: $color-brand;
 $global-radius: 2px;
-// $global-bg-color: #f2f2f2;
-// $global-bg-selected-color: #fafad2;
-// $global-bg-hover-color: #eaf7ff;
 $spacing-global-gutter: 1.5rem;
-
-// $black: $font-body-color;
-// $white: white;
-
-// $font-body-lg-color: $font-body-color;
 
 $paragraph-margin: 0 0 10px;
 $text-strong: 600;
 $text-small: 85%;
 $text-muted-opeacity: 1;
-// $text-muted-color: #8d8d97;
 
-// $anchor-color: $primary;
-// $anchor-color-hover: $primary;
 $anchor-decoration-hover: underline;
-// $anchor-color-active: $color-primary-3;
-// $anchor-color-disabled: $color-gray-6;
 
 
 $btn-font-family: $font-body-font-family;
 $btn-font-size: $font-body-font-size;
-// $btn-default-c: $font-body-color;
-// $btn-secondary-c: $font-body-color;
-// $btn-secondary-bg-active: #e6e6e6;
-// $btn-secondary-disabled: $color-gray-0;
 $btn-v-align: baseline;
 $btn-default-padding-v: 7px;
 $btn-default-padding-h: 15px;
@@ -40,7 +22,6 @@ $btn-font-weight: 600;
 $btn-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 $btn-shadow-focus:  0 0 3px 1px #79bde9;
 
-// $btn-active-selected: #9494a1;
 $btn-shadow: false;
 $btn-white-label: true;
 
@@ -49,8 +30,6 @@ $btn-gradient-from-to: false;
 
 $btn-border: false;
 
-// $btn-disabled-c: rgba($font-body-color, 0.35);
-// $btn-disabled-bg: $color-gray-0;
 $btn-disabled-bd: 1px solid $color-gray-3;
 $btn-disabled-bd-colored: true;
 $btn-disabled-text-shadow: none;
@@ -73,16 +52,11 @@ $btn-box-width-sm        : 30px;
 $btn-box-width-lg        : 40px;
 $btn-box-width-xl        : 45px;
 
-
 $dropdown-glued            : false;
 $dropdown-list-margin      : 2px 0 0;
 $dropdown-list-padding     : 5px 0;
 $dropdown-padding          : 5px 15px;
 $dropdown-border           : 1px solid rgba(0, 0, 0, 0.18);
-// $dropdown-color            : $font-body-color;
-// $dropdown-color-hover      : $font-body-color;
-// $dropdown-background-color : white;
-// $dropdown-background-hover : $color-gray-0;
 $dropdown-box-shadow       : 0 4px 9px 0 rgba(0, 0, 0, 0.2);
 $dropdown-font-family      : $font-body-font-family;
 $dropdown-font-size        : $font-body-font-size;
@@ -90,34 +64,12 @@ $dropdown-font-weight      : normal;
 $dropdown-radius           : 4px;
 $dropdown-divider-margin   : 5px;
 
-// $popover-bd-c          : rgba(0, 0, 0, 0.18);
 $popover-shadow        : $dropdown-box-shadow;
-// $popover-color         : $font-body-color;
 $popover-bd-radius     : 6px;
 $popover-contextual-fw : normal;
 
-// $popover-success-bg   : #e6f8dd;
-// $popover-success-bd   : rgba(0, 0, 0, 0.17);
-// $popover-success-color: #42721f;
-// $popover-primary-bg   : $color-primary-0;
-// $popover-primary-bd   : rgba(0, 0, 0, 0.17);
-// $popover-primary-color: $color-primary-7;
-// $popover-warning-bg   : #fef7e3;
-// $popover-warning-bd   : rgba(0, 0, 0, 0.17);
-// $popover-warning-color: #866c28;
-// $popover-danger-bg    : #fde9e8;
-// $popover-danger-bd    : rgba(0, 0, 0, 0.17);
-// $popover-danger-color : #965650;
-
-
 $control-font-size           : $font-body-font-size;
 $control-line-height         : 1.15;
-// $control-placeholder-c       : rgba($font-body-color, 0.6);
-// $control-placeholder-hover-c : $font-body-color;
-
-// $control-border           : $color-gray-3; //#d9d9d9
-// $control-hover-border     : #bababa;
-// $control-active-border    : #52afe4;
 
 $control-padding-v        : 6px;
 $control-padding-h        : 8px;
@@ -127,7 +79,6 @@ $control-shadow-disabled  : $control-shadow;
 $control-transition       : border-color 0.1s ease-in, color 0.1s ease-in, background 0.1s ease-in;
 
 $control-icon-padding     : 26px;
-// $control-icon-color       : $color-bd-text-light;
 
 $control-xs  : 12px;
 $control-sm  : 13px;
@@ -141,23 +92,12 @@ $control-xl-padding: 10px 12px;
 $control-lg-height: 35px;
 $control-xl-height: 40px;
 
-// $control-success-c  : #4daa0b;
-// $control-success-bg : #f3f8ef;
-// $control-warning-c  : #f8c000;
-// $control-warning-bg : #fcfbe7;
-// $control-danger-c   : #e98f88;
-// $control-danger-bg  : #fff6f5;
-
-// $control-disabled-border     : #d9d9d9;
-// $control-disabled-background : #f9f9f9;
-
 $select-font-size        : $font-body-font-size;
 $select-background       : linear-gradient(white, #f1f3f5 66%, #e5e9ed);
 $select-background-hover : linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #ffffff, #ededed);
 $select-box-shadow       : 0 0 transparent;
 $select-box-shadow-active: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 $select-box-shadow-focus : $btn-shadow-focus;
-// $select-error-c          : #965650;
 $select-error-fw         : 600;
 
 $select-padding      : 6px 8px;
@@ -182,8 +122,6 @@ $card-padding-v:               10px;
 $card-padding-h:               15px;
 
 $card-menu-font-size:          $font-body-font-size;
-// $card-header-icon-color:       $color-gray-4;
-// $card-header-icon-hover-color: darken($color-gray-4, 28%);
 $card-header-border-bottom:    1px solid $color-dividers;
 
 $card-border:                  none;
@@ -194,38 +132,23 @@ $card-transition:              box-shadow 0.15s ease-in;
 
 
 $table-line-height              : 1.4;
-// $table-background               : white;
 $table-border                   : 0;
-// $table-border-color             : $color-dividers;
-// $table-head-border-color        : #8d8d97;
 $table-head-border-width        : 0 0 2px;
 $table-head-border-vertical     : none;
-// $table-head-cell-hover          : white;
 $table-hover-background-img     : url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNXB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDUgOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTEuMiAoNTc1MTkpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmljb25fZHJhZ2FibGVfY29sPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IkRvY3VtZW50YXRpb24iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJUYWJsZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NzMuMDAwMDAwLCAtNDcwLjAwMDAwMCkiIGZpbGw9IiM4RDhEOTciPgogICAgICAgICAgICA8ZyBpZD0iSWNvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ1LjAwMDAwMCwgNDAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkhlYWRlcnMtQ2FzZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYyNS4wMDAwMDAsIDYwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJUYWJsZS1IZWFkZXIiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMywxMCBMNSwxMCBMNSwxMiBMMywxMiBMMywxMCBaIE02LDEwIEw4LDEwIEw4LDEyIEw2LDEyIEw2LDEwIFogTTMsMTMgTDUsMTMgTDUsMTUgTDMsMTUgTDMsMTMgWiBNNiwxMyBMOCwxMyBMOCwxNSBMNiwxNSBMNiwxMyBaIE0zLDE2IEw1LDE2IEw1LDE4IEwzLDE4IEwzLDE2IFogTTYsMTYgTDgsMTYgTDgsMTggTDYsMTggTDYsMTYgWiIgaWQ9Imljb25fZHJhZ2FibGVfY29sIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
 $table-padding                  : 5px 10px 6px;
 $table-padding-sm               : 5px 10px 6px;
-// $table-row-hover                : #eaf7ff;
-// $table-row-stripe-hover         : $table-row-hover;
-// $table-striped-background       : #f9f9f9;
 $table-stripe                   : odd;
-// $table-head-background          : white;
-// $table-foot-background          : white;
-// $table-head-font-color          : $font-body-color;
 $table-header-font-size         : 12px;
 $table-cell-font-size           : $font-body-font-size;
-// $table-foot-font-color          : $font-body-color;
 $table-header-footer-font-weight: 600;
 $table-sm-font-size             : 13px;
 $table-shadow                   : none;
 $show-header-for-stacked        : false;
-// $table-state-selected           : #fafad2;
 
 
 $tabs-borders: 1px solid $color-gray-4;
 $tabs-full-width-border: false;
-// $tabs-color: $primary;
-// $tabs-color-active: $font-body-color;
-// $tabs-color-disabled: $color-gray-6;
 $tabs-font-weight: 600;
 
 $tabs-default-link-padding: rem-calc(4 0);
@@ -236,9 +159,6 @@ $tabs-default-space-between: rem-calc(15);
 $tabs-bordered-space-between: rem-calc(3);
 
 $tabs-link-border-bottom: 2px;
-// $tabs-bg: transparent;
-// $tabs-bg-hover: $color-gray-1;
-// $tabs-bg-active: $color-gray-1;
 $tabs-font-size-default: rem-calc(14);
 $tabs-hover-tranisition: all 0.4s ease 0s;
 
@@ -257,17 +177,13 @@ $modal-body-padding: 15px 30px;
 $modal-footer-padding: 15px 30px;
 $modals-border: none;
 $modals-close-absolute: true;
-// $modals-close-color: #000000;
 $modals-title-font-size: $font-header-lg-font-size;
 $modals-title-font-weight: $font-header-lg-font-weight;
 $modals-confirmation-title-fs: $font-header-lg-font-size;
 $modals-confirmation-title-weight: $font-header-lg-font-weight;
 
 $box-border-radius: 4px;
-// $box-border-color: rgba(0, 0, 0, 0.18);
-// $box-bg: white;
 $box-padding: 10px 15px;
-// $box-text-color: $font-body-color;
 $box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
 
 
@@ -278,21 +194,6 @@ $c-full-page-loader-animation: false;
 $c-full-page-loader-size: 80px;
 $c-full-loader-indicator-logo-sizes: inherit;
 
-// $alert-danger-color: #965650;
-// $alert-warning-color: #866c28;
-// $alert-success-color: #42721f;
-// $alert-primary-color: #414152;
-// $alert-default-color: #414152;
-// $alert-danger-icon-color: #d75248;
-// $alert-warning-icon-color: #d7ad3b;
-// $alert-success-icon-color: #51a71c;
-// $alert-primary-icon-color: #62a2b5;
-// $alert-default-icon-color: #414152;
-// $alert-default-bg: #f1f3f5;
-// $alert-primary-bg: #cdecf5;
-// $alert-success-bg: #e6f8dd;
-// $alert-danger-bg: #fde9e8;
-// $alert-warning-bg: #fef7e3;
 $alert-padding-horizontal: 8px;
 $alert-padding-vertical: 6px;
 $alert-top-padding-horizontal: 8px;
@@ -307,14 +208,11 @@ $alert-icon-padding: 27px;
 $alert-top-icon-padding: 29px;
 $alert-style: 'grey';
 
-// $toast-alert-border: rgba(0, 0, 0, 0.1);
-// $toast-alert-color: $font-body-color;
 $toast-alert-color-variant: false;
 $toast-alert-font-weight: $font-body-font-weight;
 $toast-alert-margin: 0 0 15px 0;
 $toast-alert-padding: 9px 20px 10px 40px;
 $toast-alert-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
-// $toast-alert-bar-bg: $alert-default-bg;
 $toast-alert-bar-bd: none;
 $toast-alert-bar-shadow: none;
 $toast-alert-bar-position: left;
@@ -325,18 +223,11 @@ $toast-alert-close-size: 20px;
 $toast-alert-icon-top: 11px;
 $toast-alert-icon-left: 9px;
 
-// $toast-alert-danger-bar-bg: $alert-danger-bg;
-// $toast-alert-warning-bar-bg: $alert-warning-bg;
-// $toast-alert-success-bar-bg: $alert-success-bg;
-// $toast-alert-info-bar-bg: $alert-primary-bg;
-
 $notify-width: 20vw;
 $notify-min-width: 265px;
 
 
 $accordion-item-panel-bg: none;
-// $accordion-item-panel-bg-hover: $color-gray-1;
-// $accordion-item-panel-opened-bg: $color-gray-1;
 $accordion-item-first-child-border: none;
 $accordion-item-last-child-border: none;
 
