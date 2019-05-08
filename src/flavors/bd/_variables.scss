@@ -1,3 +1,26 @@
+// Colors: Default went to a different set of orange variables - this to keep bd accurate
+$color-warning-0: #fff9db;
+$color-warning-1: #fff3bf;
+$color-warning-2: #ffec99;
+$color-warning-3: #ffe066;
+$color-warning-4: #ffd43b;
+$color-warning-5: #fcc419;
+$color-warning-6: #fab005;
+$color-warning-7: #f59f00;
+$color-warning-8: #f08c00;
+$color-warning-9: #e67700;
+$success          : $color-success-7;
+$danger           : $color-danger-7;
+$warning: $color-warning-8;
+
+$color-bd-text: #414152;
+$color-brand: #0079bd;
+$color-dividers: #e6e6e6;
+$color-s-1: rgba(0, 0, 0, 0.2);
+$color-s-2: rgba(0, 0, 0, 0.1);
+$color-bd-text-light: #8d8d97;
+$font-body-color: #414152;
+
 $primary: $color-brand;
 $global-bg-color: #f2f2f2;
 $global-bg-selected-color: #fafad2;
@@ -129,5 +152,3 @@ $toast-alert-info-bar-bg: $alert-primary-bg;
 
 $accordion-item-panel-bg-hover: $color-gray-1;
 $accordion-item-panel-opened-bg: $color-gray-1;
-
-
