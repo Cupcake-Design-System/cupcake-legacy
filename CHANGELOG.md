@@ -1,8 +1,25 @@
+## Release [1.4.13-beta.2](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.1...1.4.13-beta.2) :rocket:
+**8 May 2019**
+
+### Merged
+- feat: include flavor vars in bundle **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/285)**
+- c-full-page-loader user select fix **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/286)**
+
+### Commits
+- extracted only colors to variables (default &amp; bd) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c40ae415eb2977291cd6508bead3e2a4e1c4d661)**
+- ihs-bd variables (success, warning, danger) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7cef9f0664bf6af7991416ccc2946acb97e542cc)**
+- fix: variables extraction **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/db66ac8bf1440da3a2f7666905c4f20c035f9653)**
+- extracted ihs-bd colors to variables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2177a1fcbd59905d479a06ba8520eaa857abdcde)**
+- chore: rename generated file name **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a8afc784a8b7224cf524fe9ac598a8b89f2a1823)**
+
 ## Release [1.4.13-beta.1](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.0...1.4.13-beta.1) :rocket:
 **26 April 2019**
 
 ### Merged
 - adjusted primary colors scheme **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/284)**
+
+### Commits
+- Release 1.4.13-beta.1 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a84225a8e362c190f6937d929862eb597a9c4196)**
 
 ## Release [1.4.13-beta.0](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.12...1.4.13-beta.0) :rocket:
 **26 April 2019**
