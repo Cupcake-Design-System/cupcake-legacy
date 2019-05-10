@@ -1,3 +1,9 @@
+## Release [1.4.13-beta.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.2...1.4.13-beta.3) :rocket:
+**10 May 2019**
+
+### Merged
+- include missing variables in bundle **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/287)**
+
 ## Release [1.4.13-beta.2](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.1...1.4.13-beta.2) :rocket:
 **8 May 2019**
 
@@ -9,6 +15,7 @@
 - extracted only colors to variables (default &amp; bd) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/c40ae415eb2977291cd6508bead3e2a4e1c4d661)**
 - ihs-bd variables (success, warning, danger) **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/7cef9f0664bf6af7991416ccc2946acb97e542cc)**
 - fix: variables extraction **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/db66ac8bf1440da3a2f7666905c4f20c035f9653)**
+- Release 1.4.13-beta.2 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b436c89ef810cfde5477f6c0ef72bb9e70b82df5)**
 - extracted ihs-bd colors to variables **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2177a1fcbd59905d479a06ba8520eaa857abdcde)**
 - chore: rename generated file name **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/a8afc784a8b7224cf524fe9ac598a8b89f2a1823)**
 
