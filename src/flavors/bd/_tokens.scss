@@ -29,34 +29,12 @@ $space-values : (
   xxxl: $space-xxxl,
 );
 
-// Colors: Default went to a different set of orange variables - this to keep bd accurate
-$color-warning-0: #fff9db;
-$color-warning-1: #fff3bf;
-$color-warning-2: #ffec99;
-$color-warning-3: #ffe066;
-$color-warning-4: #ffd43b;
-$color-warning-5: #fcc419;
-$color-warning-6: #fab005;
-$color-warning-7: #f59f00;
-$color-warning-9: #e67700;
-$color-warning-8: #f08c00;
-$success          : $color-success-7;
-$danger           : $color-danger-7;
-
-// Other Colors
-$color-bd-text: #414152;
-$color-brand: #0079bd;
-$color-dividers: #e6e6e6;
-$color-s-1: rgba(0, 0, 0, 0.2);
-$color-s-2: rgba(0, 0, 0, 0.1);
-$color-bd-text-light: #8d8d97;
 
 // Font Styles:
 
 // body font style
 $font-body-font-size: 14px;
 $font-body-line-height: 20px;
-$font-body-color: #414152;
 $font-body-font-style: normal;
 $font-body-font-weight: 400;
 $font-body-font-family: Source Sans Pro;
