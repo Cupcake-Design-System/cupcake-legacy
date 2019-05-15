@@ -45,7 +45,7 @@
     text-transform: uppercase;
     border-bottom: 1px solid #d9d9d9;
 
-    span {
+    span:not(.c-link) {
       font-weight: 600;
       color: $control-hint-color;
     }
