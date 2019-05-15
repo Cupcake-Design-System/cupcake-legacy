@@ -91,10 +91,6 @@ $control-danger-bg  : $color-danger-0;
 $select-error-c          : $color-danger-9;
 $select-color              : $font-body-color;
 
-$table-row-hover                : #eaf7ff;
-$table-row-stripe-hover         : $table-row-hover;
-$table-striped-background       : #f9f9f9;
-
 $table-head-background          : white;
 $table-foot-background          : white;
 $table-head-font-color          : $font-body-color;
@@ -120,4 +116,5 @@ $toast-alert-warning-bar-bg: $alert-warning-bg;
 $toast-alert-success-bar-bg: $alert-success-bg;
 $toast-alert-info-bar-bg: $alert-primary-bg;
 
-$btn-secondary-bg-active: #e6e6e6;
+$global-bg-hover-color: $color-primary-0;
+$table-row-hover: $color-primary-0;
