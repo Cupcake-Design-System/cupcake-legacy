@@ -118,3 +118,16 @@ $toast-alert-info-bar-bg: $alert-primary-bg;
 
 $global-bg-hover-color: $color-primary-0;
 $table-row-hover: $color-primary-0;
+$c-btn-in-progress-color-bg-primary: rgba($primary, .75);
+
+$btn-secondary-bg: #f8f9fa;
+$btn-secondary-bd: #d8d8d8;
+$btn-secondary-bg-hover: #fcfcfd;
+$btn-secondary-bg-active: #e6e6e6;
+
+$select-background: $btn-secondary-bg;
+$select-background-hover : $btn-secondary-bg-hover;
+$select-background-active: $btn-secondary-bg-active;
+$select-box-shadow-active: inset 0 1px 0 1px $color-gray-3;
+$select-box-shadow-focus : $btn-shadow-focus;
+$select-border-color: $btn-secondary-bd;
