@@ -1,3 +1,9 @@
+## Release [1.4.13-beta.5](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.4...1.4.13-beta.5) :rocket:
+**16 May 2019**
+
+### Merged
+- suggester pill variable **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/289)**
+
 ## Release [1.4.13-beta.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.3...1.4.13-beta.4) :rocket:
 **16 May 2019**
 
@@ -6,6 +12,7 @@
 
 ### Commits
 - flat buttons for ihs-bd flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/142f055bd69b2f8c4f2ecb87e80ac6848ee43b58)**
+- Release 1.4.13-beta.4 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/550dc2abd383c61563e2525c39ee30d2d12eb98f)**
 - flat buttons ihs-bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/29c1fd6d2e05d619c93fd475eabbb2c63237602b)**
 - fixed hover variables for tables ihs-bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b6eef5f4a87606f5effd52552ef3c6abe6d7fc04)**
 
