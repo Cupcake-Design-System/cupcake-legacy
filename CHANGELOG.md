@@ -1,8 +1,22 @@
+## Release [1.4.13-beta.4](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.3...1.4.13-beta.4) :rocket:
+**16 May 2019**
+
+### Merged
+- Ihs bd flat buttons **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/288)**
+
+### Commits
+- flat buttons for ihs-bd flavor **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/142f055bd69b2f8c4f2ecb87e80ac6848ee43b58)**
+- flat buttons ihs-bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/29c1fd6d2e05d619c93fd475eabbb2c63237602b)**
+- fixed hover variables for tables ihs-bd **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/b6eef5f4a87606f5effd52552ef3c6abe6d7fc04)**
+
 ## Release [1.4.13-beta.3](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.2...1.4.13-beta.3) :rocket:
 **10 May 2019**
 
 ### Merged
 - include missing variables in bundle **[View Merge](https://code.ipreo.com/Ipreo/cupcake/pull/287)**
+
+### Commits
+- Release 1.4.13-beta.3 🚀 **[View Commit](https://code.ipreo.com/Ipreo/cupcake/commit/2653c5f2389700010c5fd2cd6c416b3ecdb7bd77)**
 
 ## Release [1.4.13-beta.2](https://code.ipreo.com/Ipreo/cupcake/compare/1.4.13-beta.1...1.4.13-beta.2) :rocket:
 **8 May 2019**
