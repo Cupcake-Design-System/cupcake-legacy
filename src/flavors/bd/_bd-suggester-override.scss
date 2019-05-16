@@ -11,7 +11,7 @@
   }
 
   &.c-bg-gray-2:not(.c-bg-warning) {
-    background: #79bde9;
+    background: $c-suggester-pill-bg;
     color: #ffffff;
   }
 }
