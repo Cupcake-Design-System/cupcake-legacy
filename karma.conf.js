@@ -36,8 +36,10 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
         browsers: ['Chrome'],
         autoWatch: false,
-        singleRun: false,
-        concurrency: Infinity
+        singleRun: true,
+        concurrency: Infinity,
+        captureConsole: false,
+        captureTimeout: 4000
     });
 }
 
