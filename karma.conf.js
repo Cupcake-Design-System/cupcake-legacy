@@ -36,18 +36,23 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
         browsers: ['Chrome'],
         autoWatch: false,
-        singleRun: false,
-        concurrency: Infinity
+        singleRun: true,
+        concurrency: Infinity,
+        captureConsole: false,
+        captureTimeout: 4000
     });
 }
 
 function flavorSetUp(args) {
-    let specPath = 'src/scss/modules/**/*.spec.js',
-        assetsPath = 'dist/default.min.css';
+    let specPath,
+        assetsPath;
 
     if (~args.indexOf('--bd')) {
         specPath = 'src/flavors/bd/tests/**/*.spec.js';
         assetsPath = 'dist/bd.min.css'; 
+    } else if (~args.indexOf('--default')) {
+        specPath = 'src/scss/modules/**/*.spec.js',
+        assetsPath = 'dist/default.min.css';
     }
 
     let files = [
