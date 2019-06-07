@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const ncp = require('ncp').ncp;
 
 const cdnArtifactsFolder = path.join(process.cwd(), './dist/cdn');
 if (!fs.existsSync(cdnArtifactsFolder)) {
@@ -14,6 +15,9 @@ if (fs.existsSync(builtArtifactsFolder)) {
   copyFile('default.min.css', 'default.min.css');
   copyFile('ihs-bd.min.css', 'ihs-bd.min.css');
   copyFile('ihs.min.css', 'ihs.min.css');
+  ncp('./dist/fonts', './dist/cdn/fonts', function (err) {
+    if (err) { return console.error(err); }
+  });
 }
 
 function copyFile(from, to) {
