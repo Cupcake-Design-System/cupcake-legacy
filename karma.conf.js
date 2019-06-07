@@ -44,12 +44,15 @@ module.exports = function (config) {
 }
 
 function flavorSetUp(args) {
-    let specPath = 'src/scss/modules/**/*.spec.js',
-        assetsPath = 'dist/default.min.css';
+    let specPath,
+        assetsPath;
 
     if (~args.indexOf('--bd')) {
         specPath = 'src/flavors/bd/tests/**/*.spec.js';
         assetsPath = 'dist/bd.min.css'; 
+    } else if (~args.indexOf('--default')) {
+        specPath = 'src/scss/modules/**/*.spec.js',
+        assetsPath = 'dist/default.min.css';
     }
 
     let files = [
