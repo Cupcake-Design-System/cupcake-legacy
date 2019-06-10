@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.14](https://code.ipreo.com/Ipreo/cupcake/compare/v1.4.13...v1.4.14) (2019-06-10)
+
+
+
 ### [1.4.13](https://code.ipreo.com/Ipreo/cupcake/compare/v1.4.13-beta.7...v1.4.13) (2019-06-10)
 
 
