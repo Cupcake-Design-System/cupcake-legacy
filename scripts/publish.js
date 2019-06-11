@@ -13,6 +13,7 @@ const package = {
 };
 
 const distFolder = 'dist';
+const packageFolder = path.dirname(distFolder).split(path.sep).pop();
 const fullPackageName = package.name + "@" + package.version;
 
 npm.load({}, () => {
@@ -22,7 +23,7 @@ npm.load({}, () => {
         } else {
             teamcityLog(`Publishing ${fullPackageName}`);
 
-            npm.commands.publish([distFolder], (err) => {
+            npm.commands.publish([packageFolder], (err) => {
                 if (err)
                     console.log(err);
                 else
