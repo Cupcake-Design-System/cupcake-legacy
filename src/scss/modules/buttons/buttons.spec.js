@@ -13,7 +13,7 @@ describe('Buttons', () => {
             expect($btn.css('line-height'), 'line-height').to.equal('12px');
             expect($btn.css('border-radius'), 'border-radius').to.equal('2px');
             expect($btn.css('font-size'), 'font-size').to.equal('12px');
-            expect($btn.css('font-weight'), 'font-weight').to.equal('700');
+            expect($btn.css('font-weight'), 'font-weight').to.equal('600');
         });
     });
 

@@ -85,7 +85,7 @@ $toast-alert-info-bar-bd: darken($primary, 5) !default;
 $toast-alert-close-size: 30px !default;
 
 /// $toast-alert-close-size 
-$toast-alert-close-fs: 17px !default;
+$toast-alert-close-fs: 11px !default;
 
 /// $toast-alert-close-c 
 $toast-alert-close-c: $color-gray-4 !default;
@@ -140,58 +140,20 @@ $toast-alert-icon-size: 12px !default;
   }
 
   &-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: $toast-alert-close-size;
-    height: $toast-alert-close-size;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: $color-gray-4;
     font-size: $toast-alert-close-fs;
-    font-weight: 900;
-    color: $toast-alert-close-c;
+    position: absolute;
+    top: 1px;
+    right: 6px;
     transition: $toast-alert-close-transition;
-    cursor: pointer;
 
     &:hover {
       color: $toast-alert-close-hover-c;
     }
   }
-
-  // Alert Icon
-  &::after {
-    content: '!';
-    font-family: Arial, Helvetica, sans-serif; // alert icon using regular symbols so we setting font for them.
-    position: absolute;
-    top: $toast-alert-icon-top;
-    left: $toast-alert-icon-left;
-    width: $toast-alert-icon-size;
-    height: $toast-alert-icon-size;
-    line-height: $toast-alert-icon-size;
-    color: white;
-    background: $toast-alert-color;
-    text-align: center;
-    border-radius: 50%;
-    font-weight: 900;
-    font-size: $toast-alert-icon-size / 1.25;
-    text-indent: -0.5px;
-  }
 }
 
-@mixin toast-alert-info-icon() {
-  &::after {
-    content: 'i';
-  }
-}
-
-@mixin taost-alert-success-icon() {
-  &::after {
-    content: 'L';
-    transform: scaleX(-1) rotate(-45deg);
-    font-size: $toast-alert-icon-size / 1.333;
-  }
-}
+// Alert Icon
 
 @mixin toast-alert-style($color, $bd, $bg) {
   @if $toast-alert-color-variant {
@@ -210,7 +172,7 @@ $toast-alert-icon-size: 12px !default;
   }
 
   // icon color
-  &::after {
-    background: $color;
+  &-icon {
+    color: $color;
   }
 }
