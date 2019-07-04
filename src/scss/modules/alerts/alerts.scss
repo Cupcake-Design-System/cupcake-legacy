@@ -72,10 +72,4 @@
     @include toast-alert-style($toast-alert-info-color, $toast-alert-info-bar-bd, $toast-alert-info-bar-bg);
     @include toast-alert-info-icon;
   }
-
-  &-icon {
-    position: absolute;
-    left: 8px;
-    top: 11px;
-  }
 }

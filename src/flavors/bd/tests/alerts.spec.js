@@ -164,9 +164,6 @@ describe('BD Toast Alerts', () => {
             <div class="c-toast-alert">
                 <button href="javascript:void(0)" class="c-toast-alert-close">×</button>
                 Default Toast Alert
-                <a href="javascript:void(0)" class="c-toast-alert-close" data-dismiss="c-toast-alert" aria-hidden="true">
-    				<i class="fa fa-times" aria-hidden="true"></i>
-    			</a>
             </div>
         `);
 
@@ -217,10 +214,8 @@ describe('BD Toast Alerts', () => {
     describe('BD Danger Toast Alert', () => {
         let $toastAlertDanger = $(`
                 <div class="c-toast-alert c-toast-alert-danger">
+                    <button href="javascript:void(0)" class="c-toast-alert-close">×</button>
                     Danger Toast Alert
-                    <a href="javascript:void(0)" class="c-toast-alert-close" data-dismiss="c-toast-alert" aria-hidden="true">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </a>
                 </div>
             `);
 
@@ -238,10 +233,8 @@ describe('BD Toast Alerts', () => {
     describe('BD Info Toast Alert', () => {
         let $toastAlertInfo = $(`
                     <div class="c-toast-alert c-toast-alert-info">
+                        <button href="javascript:void(0)" class="c-toast-alert-close">×</button>
                         Info Toast Alert
-                        <a href="javascript:void(0)" class="c-toast-alert-close" data-dismiss="c-toast-alert" aria-hidden="true">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </a>
                     </div>
                 `);
 
@@ -260,10 +253,8 @@ describe('BD Toast Alerts', () => {
     describe('BD Success Toast Alert', () => {
         let $toastAlertSuccess = $(`
                         <div class="c-toast-alert c-toast-alert-success">
+                            <button href="javascript:void(0)" class="c-toast-alert-close">×</button>
                             Success Toast Alert
-                            <a href="javascript:void(0)" class="c-toast-alert-close" data-dismiss="c-toast-alert" aria-hidden="true">
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </a>
                         </div>
                     `);
 
@@ -282,10 +273,8 @@ describe('BD Toast Alerts', () => {
     describe('BD Warning Toast Alert', () => {
         let $toastAlertWarning = $(`
                             <div class="c-toast-alert c-toast-alert-warning">
+                                <button href="javascript:void(0)" class="c-toast-alert-close">×</button>
                                 Warning Toast Alert
-                                <a href="javascript:void(0)" class="c-toast-alert-close" data-dismiss="c-toast-alert" aria-hidden="true">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </a>
                             </div>
                         `);
 

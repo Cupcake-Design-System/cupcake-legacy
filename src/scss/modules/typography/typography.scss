@@ -70,6 +70,7 @@
 }
 
 
+.c-text-extralight,
 .c-text-light {
   font-weight: 300;
 }
@@ -78,6 +79,11 @@
 .c-text-bold {
   font-weight: $text-strong;
   line-height: inherit;
+}
+
+.c-text-extrabold,
+.c-text-heavy {
+  font-weight: 600;
 }
 
 .c-a,
