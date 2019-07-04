@@ -85,7 +85,7 @@ $toast-alert-info-bar-bd: darken($primary, 5) !default;
 $toast-alert-close-size: 30px !default;
 
 /// $toast-alert-close-size 
-$toast-alert-close-fs: 11px !default;
+$toast-alert-close-fs: 17px !default;
 
 /// $toast-alert-close-c 
 $toast-alert-close-c: $color-gray-4 !default;
@@ -140,11 +140,17 @@ $toast-alert-icon-size: 12px !default;
   }
 
   &-close {
-    color: $color-gray-4;
-    font-size: $toast-alert-close-fs;
     position: absolute;
     top: 0;
-    right: 6px;
+    right: 0;
+    width: $toast-alert-close-size;
+    height: $toast-alert-close-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $toast-alert-close-fs;
+    font-weight: 600;
+    color: $toast-alert-close-c;
     transition: $toast-alert-close-transition;
     cursor: pointer;
 

@@ -187,10 +187,12 @@ describe('BD Toast Alerts', () => {
 
             //c-toast-alert-close
             expect($toastAlertDefault.find('.c-toast-alert-close').css('position'), 'close icon position').to.equal('absolute');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('top'), 'close icon width').to.equal('1px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('right'), 'close icon height').to.equal('6px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('width'), 'close icon width').to.equal('20px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('height'), 'close icon height').to.equal('20px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('top'), 'close icon top').to.equal('0px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('right'), 'close icon right').to.equal('0px');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('color'), 'close icon color').to.equal(toRgb('#ced4da'));
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('font-size'), 'close icon font-size').to.equal('11px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('font-size'), 'close icon font-size').to.equal('17px');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('cursor'), 'close icon cursor').to.equal('pointer');
 
             //c-toast-alert::before
