@@ -53,6 +53,9 @@ function flavorSetUp(args) {
     } else if (~args.indexOf('--default')) {
         specPath = 'src/scss/modules/**/*.spec.js',
         assetsPath = 'dist/default.min.css';
+    } else if (~args.indexOf('--ihs-bd')) {
+        specPath = 'src/flavors/ihs-bd/tests/**/*.spec.js';
+        assetsPath = 'dist/ihs-bd.min.css'; 
     }
 
     let files = [
