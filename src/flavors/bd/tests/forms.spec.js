@@ -74,7 +74,7 @@ describe('BD Forms', () => {
     });
 
     describe('BD Input', () => {
-        let $input = $('<div class="c-input"></div>');
+        let $input = $('<input class="c-input">');
     
         before((done) => {
             $testContainer.append($input);
@@ -100,7 +100,7 @@ describe('BD Forms', () => {
     });
 
     describe('BD Input Sizes and Types', () => {
-        let $input = $('<div class="c-input"></div>');
+        let $input = $('<input class="c-input">');
     
         before((done) => {
             $testContainer.append($input);
@@ -250,8 +250,7 @@ describe('BD Forms', () => {
             });
         
             it('should have correct styles', () => { 
-                expect($inputInline.css('display'), 'display').to.equal('flex');
-                expect($inputInline.css('align-items'), 'align-items').to.equal('center');
+                expect($inputInline.css('display'), 'display').to.equal('inline');
             });
         });
     });
