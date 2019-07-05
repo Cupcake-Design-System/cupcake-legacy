@@ -240,5 +240,19 @@ describe('BD Forms', () => {
                 expect(window.getComputedStyle(document.querySelector(".c-input-addon"), ':last-child').getPropertyValue('border-left-width'), 'border-left-width').to.equal('0px');
             });
         });
+
+        describe('BD Input Inline', () => {
+            let $inputInline= $('<input class="c-input c-input-inline">');
+        
+            before((done) => {
+                $testContainer.append($inputInline);
+                done();
+            });
+        
+            it('should have correct styles', () => { 
+                expect($inputInline.css('display'), 'display').to.equal('flex');
+                expect($inputInline.css('align-items'), 'align-items').to.equal('center');
+            });
+        });
     });
 })
