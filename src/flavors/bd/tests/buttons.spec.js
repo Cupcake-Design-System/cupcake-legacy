@@ -155,6 +155,42 @@ describe('BD Buttons', () => {
       expect($defaultBtnDisabled.css('color'), 'text color').to.equal(toRgb('#868e96'));
       expect($defaultBtnDisabled.css('background-color'), 'background').to.equal(toRgb('#f8f9fa'));
       expect($defaultBtnDisabled.css('border'), 'border').to.equal('1px solid ' + toRgb('#ced4da'));
+      expect($defaultBtnDisabled.css('text-shadow'), 'text-shadow').to.equal('none');
+      expect($defaultBtnDisabled.css('cursor'), 'cursor').to.equal('not-allowed');
+      expect($defaultBtnDisabled.css('box-shadow'), 'box-shadow').to.equal('none');
+      expect($defaultBtnDisabled.css('opacity'), 'opacity').to.equal('1');
+    });
+  });
+
+  // c-btn c-btn-primary-outline
+  describe('BD Button Primary Outline', () => {
+    let $primaryBtnOutline = $('<button class="c-btn c-btn-primary-outline">Button</button>');
+
+    before((done) => {
+      $testContainer.append($primaryBtnOutline);
+      done();
+    });
+
+    it('should have correct styles', () => {
+      expect($primaryBtnOutline.css('background-color'), 'background-color').to.equal('rgba(0, 0, 0, 0)');
+      expect($primaryBtnOutline.css('color'), 'color').to.equal(toRgb('#0079bd'));
+      expect($primaryBtnOutline.css('border'), 'border').to.equal('1px solid ' + toRgb('#0079bd'));
+      expect($primaryBtnOutline.css('box-shadow'), 'box-shadow').to.equal('none');
+    });
+  });
+
+  // c-btn c-btn-block
+  describe('BD Button Block', () => {
+    let $btnBlock = $('<button class="c-btn c-btn-block">Button</button>');
+
+    before((done) => {
+      $testContainer.append($btnBlock);
+      done();
+    });
+
+    it('should have correct styles', () => {
+      expect($btnBlock.css('display'), 'display').to.equal('block');
+      expect($btnBlock.css('text-align'), 'text-align').to.equal('center');
     });
   });
 
