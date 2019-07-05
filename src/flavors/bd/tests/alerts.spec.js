@@ -186,9 +186,10 @@ describe('BD Toast Alerts', () => {
             expect($toastAlertDefault.find('.c-toast-alert-close').css('position'), 'close icon position').to.equal('absolute');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('width'), 'close icon width').to.equal('20px');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('height'), 'close icon height').to.equal('20px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('top'), 'close icon top').to.equal('0px');
+            expect($toastAlertDefault.find('.c-toast-alert-close').css('right'), 'close icon right').to.equal('0px');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('color'), 'close icon color').to.equal(toRgb('#ced4da'));
             expect($toastAlertDefault.find('.c-toast-alert-close').css('font-size'), 'close icon font-size').to.equal('17px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('font-weight'), 'close icon font-weight').to.equal('900');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('cursor'), 'close icon cursor').to.equal('pointer');
 
             //c-toast-alert::before
@@ -202,7 +203,6 @@ describe('BD Toast Alerts', () => {
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('content'), 'icon content').to.equal('"!"');
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('font-family'), 'icon font-family').to.equal('Arial, Helvetica, sans-serif');
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('font-size'), 'icon font-size').to.equal('9.6px');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('font-weight'), 'icon font-weight').to.equal('900');
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('line-height'), 'icon line-height').to.equal('12px');
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('width'), 'icon width').to.equal('12px');
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('height'), 'icon height').to.equal('12px');
