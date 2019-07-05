@@ -1,6 +1,9 @@
 describe('BD List Group', () => {
     describe('BD List Group', () => {
-        let $listGroup = $(`<div class="c-list-group"></div>`);
+        let $listGroup = $(`<div class="c-list-group">
+                                <div class="c-list-group-item">Item</div>
+                                <div class="c-list-group-item">Item</div>
+                            </div>`);
 
         before((done) => {
             $testContainer.append($listGroup);
@@ -17,7 +20,10 @@ describe('BD List Group', () => {
     });
 
     describe('BD List Group bordered', () => {
-        let $listGroupBordered = $(`<div class="c-list-group c-list-group-bordered"></div>`);
+        let $listGroupBordered = $(`<div class="c-list-group c-list-group-bordered">
+                                        <div class="c-list-group-item">Item</div>
+                                        <div class="c-list-group-item">Item</div>
+                                    </div>`);
 
         before((done) => {
             $testContainer.append($listGroupBordered);
@@ -85,7 +91,10 @@ describe('BD List Group', () => {
     });
 
     describe('BD Media List', () => {
-        let $listMediaList = $(`<div class="c-media-list"></div>`);
+        let $listMediaList = $(`<div class="c-media-list">
+                                    <div class="c-media">Item</div>
+                                    <div class="c-media">Item</div>
+                                </div>`);
 
         before((done) => {
             $testContainer.append($listMediaList);
