@@ -1,82 +1,161 @@
-describe('BD Switchers', () => {
-    describe('BD Switcher', () => {
-      let $switcher = $(`<label class="c-switch"></label>`);
+describe('BD Switches', () => {
+    describe('BD Switch', () => {
+      let $switch = $(`<label class="c-switch"></label>`);
   
         before((done) => {
-            $testContainer.append($switcher);
+            $testContainer.append($switch);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcher.css('display'), 'display').to.equal('inline-block');
-            expect($switcher.css('position'), 'position').to.equal('relative');
-            expect($switcher.css('margin'), 'margin').to.equal('4px 0px');
-            expect($switcher.css('width'), 'width').to.equal('62.3906px');
-            expect($switcher.css('height'), 'height').to.equal('31.1875px');
-            expect($switcher.css('cursor'), 'cursor').to.equal('pointer');
-            expect($switcher.css('border-radius'), 'border-radius').to.equal('50px');
-            expect($switcher.css('box-shadow'), 'box-shadow').to.equal('rgb(255, 255, 255) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px inset');
+            expect($switch.css('display'), 'display').to.equal('inline-block');
+            expect($switch.css('position'), 'position').to.equal('relative');
+            expect($switch.css('margin'), 'margin').to.equal('4px 0px');
+            expect($switch.css('width'), 'width').to.equal('62.3906px');
+            expect($switch.css('height'), 'height').to.equal('31.1875px');
+            expect($switch.css('cursor'), 'cursor').to.equal('pointer');
+            expect($switch.css('border-radius'), 'border-radius').to.equal('50px');
+            expect($switch.css('box-shadow'), 'box-shadow').to.equal('rgb(255, 255, 255) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px inset');
         });
     
         it('Extra small should have correct styles', () => {
-            $switcher.addClass('c-switch-xs');
-            expect($switcher.css('width'), 'width').to.equal('30px');
-            expect($switcher.css('height'), 'height').to.equal('15px');
+            $switch.addClass('c-switch-xs');
+            expect($switch.css('width'), 'width').to.equal('30px');
+            expect($switch.css('height'), 'height').to.equal('15px');
         });
     
         it('Small should have correct styles', () => {
-            $switcher.addClass('c-switch-sm');
-            expect($switcher.css('width'), 'width').to.equal('40px');
-            expect($switcher.css('height'), 'height').to.equal('20px');
+            $switch.addClass('c-switch-sm');
+            expect($switch.css('width'), 'width').to.equal('40px');
+            expect($switch.css('height'), 'height').to.equal('20px');
         });
     
         it('Large should have correct styles', () => {
-            $switcher.addClass('c-switch-lg');
-            expect($switcher.css('width'), 'width').to.equal('80px');
-            expect($switcher.css('height'), 'height').to.equal('40px');
+            $switch.addClass('c-switch-lg');
+            expect($switch.css('width'), 'width').to.equal('80px');
+            expect($switch.css('height'), 'height').to.equal('40px');
         });
     });
     
-    describe('BD Switcher Input', () => {
-        let $switcherInput = $(`<input class="c-switch-input" type="checkbox">`);
+    describe('BD Switch Input', () => {
+        let $switchInput = $(`<input class="c-switch-input" type="checkbox">`);
     
         before((done) => {
-            $testContainer.append($switcherInput);
+            $testContainer.append($switchInput);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherInput.css('position'), 'position').to.equal('absolute');
-            expect($switcherInput.css('top'), 'top').to.equal('0px');
-            expect($switcherInput.css('left'), 'left').to.equal('0px');
-            expect($switcherInput.css('opacity'), 'opacity').to.equal('0');
+            expect($switchInput.css('position'), 'position').to.equal('absolute');
+            expect($switchInput.css('top'), 'top').to.equal('0px');
+            expect($switchInput.css('left'), 'left').to.equal('0px');
+            expect($switchInput.css('opacity'), 'opacity').to.equal('0');
         });
     });
     
-    describe('BD Switcher Label', () => {
-        let $switcherLabel = $(`<span class="c-switch-label"></span>`);
+    describe('BD Switch Label', () => {
+        let $switchLabel = $(`<span class="c-switch-label"></span>`);
     
         before((done) => {
-            $testContainer.append($switcherLabel);
+            $testContainer.append($switchLabel);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherLabel.css('position'), 'position').to.equal('relative');
-            expect($switcherLabel.css('display'), 'display').to.equal('block');
-            expect($switcherLabel.css('text-transform'), 'text-transform').to.equal('uppercase');
-            expect($switcherLabel.css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.1)');
-            expect($switcherLabel.css('box-shadow'), 'box-shadow').to.equal('none');
-            expect($switcherLabel.css('transition-duration'), 'transition-duration').to.equal('0.25s');
-            expect($switcherLabel.css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
+            expect($switchLabel.css('position'), 'position').to.equal('relative');
+            expect($switchLabel.css('display'), 'display').to.equal('block');
+            expect($switchLabel.css('text-transform'), 'text-transform').to.equal('uppercase');
+            expect($switchLabel.css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.1)');
+            expect($switchLabel.css('box-shadow'), 'box-shadow').to.equal('none');
+            expect($switchLabel.css('transition-duration'), 'transition-duration').to.equal('0.25s');
+            expect($switchLabel.css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
         });
     });
     
-    describe('BD Switcher Label PseudoElements', () => {
-        let $switcherLabel = $(`<label class="c-switch"><span class="c-switch-label"></span></label>`);
+    describe('BD Switch Label Primary', () => {
+        let $switchLabelPrimary = $(`<label class="c-switch c-switch-primary">
+                                        <input type="checkbox" class="c-switch-input" checked=""><span class="c-switch-label"></span>
+                                    </label>`);
     
         before((done) => {
-            $testContainer.append($switcherLabel);
+            $testContainer.append($switchLabelPrimary);
+            done();
+        });
+    
+        it('should have correct styles', () => {
+            expect(window.getComputedStyle(document.querySelector('.c-switch-primary > .c-switch-input:checked ~ .c-switch-label')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#0079bd'));
+        });
+    });
+    
+    describe('BD Switch Label Success', () => {
+        let $switchLabelSuccess = $(`<label class="c-switch c-switch-success">
+                                        <input type="checkbox" class="c-switch-input" checked=""><span class="c-switch-label"></span>
+                                    </label>`);
+    
+        before((done) => {
+            $testContainer.append($switchLabelSuccess);
+            done();
+        });
+    
+        it('should have correct styles', () => {
+            expect(window.getComputedStyle(document.querySelector('.c-switch-success > .c-switch-input:checked ~ .c-switch-label')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#37b24d'));
+        });
+    });
+    
+    describe('BD Switch Label Warning', () => {
+        let $switchLabelWarning = $(`<label class="c-switch c-switch-warning">
+                                        <input type="checkbox" class="c-switch-input" checked=""><span class="c-switch-label"></span>
+                                    </label>`);
+    
+        before((done) => {
+            $testContainer.append($switchLabelWarning);
+            done();
+        });
+    
+        it('should have correct styles', () => {
+            expect(window.getComputedStyle(document.querySelector('.c-switch-warning > .c-switch-input:checked ~ .c-switch-label')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#f08c00'));
+        });
+    });
+    
+    describe('BD Switch Label Danger', () => {
+        let $switchLabelDanger = $(`<label class="c-switch c-switch-danger">
+                                        <input type="checkbox" class="c-switch-input" checked=""><span class="c-switch-label"></span>
+                                    </label>`);
+    
+        before((done) => {
+            $testContainer.append($switchLabelDanger);
+            done();
+        });
+    
+        it('should have correct styles', () => {
+            expect(window.getComputedStyle(document.querySelector('.c-switch-danger > .c-switch-input:checked ~ .c-switch-label')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#f03e3e'));
+        });
+    });
+    
+    describe('BD Switch Label Disabled', () => {
+        let $switchLabelDisabled = $(`<label class="c-switch c-switch-disabled">
+                                        <span class="c-switch-label"></span><span class="c-switch-handle"></span>
+                                    </label>`);
+    
+        before((done) => {
+            $testContainer.append($switchLabelDisabled);
+            done();
+        });
+    
+        it('should have correct styles', () => {
+            expect($switchLabelDisabled.css('pointer-events'), 'pointer-events').to.equal('none');
+            expect($switchLabelDisabled.css('background-color'), 'background-color').to.equal(toRgb('#e8f7ff'));
+            expect($switchLabelDisabled.css('opacity'), 'opacity').to.equal('0.5');
+            expect($switchLabelDisabled.find('span').css('pointer-events'), 'pointer-events').to.equal('none');
+            expect($switchLabelDisabled.find('span').css('background-color'), 'background-color').to.equal(toRgb('#e8f7ff'));
+        });
+    });
+    
+    describe('BD Switch Label PseudoElements', () => {
+        let $switchLabel = $(`<label class="c-switch"><span class="c-switch-label"></span></label>`);
+    
+        before((done) => {
+            $testContainer.append($switchLabel);
             done();
         });
     
@@ -93,164 +172,164 @@ describe('BD Switchers', () => {
         });
 
         it('Extra small should have correct styles', () => {
-            $switcherLabel.addClass('c-switch-xs');
-            expect($switcherLabel.find('span').css('font-size'), 'font-size').to.equal('5px');
+            $switchLabel.addClass('c-switch-xs');
+            expect($switchLabel.find('span').css('font-size'), 'font-size').to.equal('5px');
         });
 
         it('Small should have correct styles', () => {
-            $switcherLabel.addClass('c-switch-sm');
-            expect($switcherLabel.find('span').css('font-size'), 'font-size').to.equal('8px');
+            $switchLabel.addClass('c-switch-sm');
+            expect($switchLabel.find('span').css('font-size'), 'font-size').to.equal('8px');
             expect(window.getComputedStyle(document.querySelector('.c-switch-sm .c-switch-label'), ':after').getPropertyValue('left'), 'left').to.equal('4px');
             expect(window.getComputedStyle(document.querySelector('.c-switch-sm .c-switch-label'), ':after').getPropertyValue('margin-top'), 'margin-top').to.equal('-2.8px');
         });
 
         it('Large should have correct styles', () => {
-            $switcherLabel.addClass('c-switch-lg');
-            $switcherLabel.removeClass('c-switch-sm');
-            expect($switcherLabel.find('span').css('font-size'), 'font-size').to.equal('13.3333px');
+            $switchLabel.addClass('c-switch-lg');
+            $switchLabel.removeClass('c-switch-sm');
+            expect($switchLabel.find('span').css('font-size'), 'font-size').to.equal('13.3333px');
         });
     });
     
-    describe('BD Switcher Handle', () => {
-        let $switcherHandle = $(`<span class="c-switch-handle"></span>`);
+    describe('BD Switch Handle', () => {
+        let $switchHandle = $(`<span class="c-switch-handle"></span>`);
     
         before((done) => {
-            $testContainer.append($switcherHandle);
+            $testContainer.append($switchHandle);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherHandle.css('position'), 'position').to.equal('absolute');
-            expect($switcherHandle.css('width'), 'width').to.equal('28px');
-            expect($switcherHandle.css('height'), 'height').to.equal('27.1875px');
-            expect($switcherHandle.css('border-radius'), 'border-radius').to.equal('50px');
-            expect($switcherHandle.css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 1px 1px 5px 0px');
-            expect($switcherHandle.css('transition-property'), 'transition-property').to.equal('left');
-            expect($switcherHandle.css('transition-duration'), 'transition-duration').to.equal('0.15s');
-            expect($switcherHandle.css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
+            expect($switchHandle.css('position'), 'position').to.equal('absolute');
+            expect($switchHandle.css('width'), 'width').to.equal('28px');
+            expect($switchHandle.css('height'), 'height').to.equal('27.1875px');
+            expect($switchHandle.css('border-radius'), 'border-radius').to.equal('50px');
+            expect($switchHandle.css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 1px 1px 5px 0px');
+            expect($switchHandle.css('transition-property'), 'transition-property').to.equal('left');
+            expect($switchHandle.css('transition-duration'), 'transition-duration').to.equal('0.15s');
+            expect($switchHandle.css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
         });
     });
     
-    describe('BD Switcher Checked', () => {
-        let $switcherChecked = $(`<label class="c-switch"> 
+    describe('BD Switch Checked', () => {
+        let $switchChecked = $(`<label class="c-switch"> 
                                         <input class="c-switch-input" type="checkbox" checked><span class="c-switch-handle"></span> 
                                     </label>`);
     
         before((done) => {
-            $testContainer.append($switcherChecked);
+            $testContainer.append($switchChecked);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherChecked.find('span').css('left'), 'left').to.equal('32px');
-            expect($switcherChecked.find('span').css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.3) -1px 1px 5px 0px');
+            expect($switchChecked.find('span').css('left'), 'left').to.equal('32px');
+            expect($switchChecked.find('span').css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.3) -1px 1px 5px 0px');
         });
     });
     
-    describe('BD Switcher Handle Sizes', () => {
-        let $switcherHandleDefault = $(`<label class="c-switch">
+    describe('BD Switch Handle Sizes', () => {
+        let $switchHandleDefault = $(`<label class="c-switch">
                                             <input class="c-switch-input" type="checkbox" checked> <span class="c-switch-handle"></span>
                                         </label>`);
     
         before((done) => {
-            $testContainer.append($switcherHandleDefault);
+            $testContainer.append($switchHandleDefault);
             done();
         });
     
         it('Extra small should have correct styles', () => {
-            $switcherHandleDefault.addClass('c-switch-xs');
-            expect($switcherHandleDefault.find('span').css('position'), 'position').to.equal('absolute');
-            expect($switcherHandleDefault.find('span').css('width'), 'width').to.equal('11.7969px');
-            expect($switcherHandleDefault.find('span').css('height'), 'height').to.equal('11px');
-            expect($switcherHandleDefault.find('span').css('left'), 'left').to.equal('16.6px');
+            $switchHandleDefault.addClass('c-switch-xs');
+            expect($switchHandleDefault.find('span').css('position'), 'position').to.equal('absolute');
+            expect($switchHandleDefault.find('span').css('width'), 'width').to.equal('11.7969px');
+            expect($switchHandleDefault.find('span').css('height'), 'height').to.equal('11px');
+            expect($switchHandleDefault.find('span').css('left'), 'left').to.equal('16.6px');
         });
     
         it('Small should have correct styles', () => {
-            $switcherHandleDefault.addClass('c-switch-sm');
-            expect($switcherHandleDefault.find('span').css('position'), 'position').to.equal('absolute');
-            expect($switcherHandleDefault.find('span').css('width'), 'width').to.equal('16.7969px');
-            expect($switcherHandleDefault.find('span').css('height'), 'height').to.equal('16px');
-            expect($switcherHandleDefault.find('span').css('left'), 'left').to.equal('21.6px');
+            $switchHandleDefault.addClass('c-switch-sm');
+            expect($switchHandleDefault.find('span').css('position'), 'position').to.equal('absolute');
+            expect($switchHandleDefault.find('span').css('width'), 'width').to.equal('16.7969px');
+            expect($switchHandleDefault.find('span').css('height'), 'height').to.equal('16px');
+            expect($switchHandleDefault.find('span').css('left'), 'left').to.equal('21.6px');
         });
     });
     
-    describe('BD Switcher Square', () => {
-        let $switcherSquare = $(`<label class="c-switch-square"></label>`);
+    describe('BD Switch Square', () => {
+        let $switchSquare = $(`<label class="c-switch-square"></label>`);
     
         before((done) => {
-            $testContainer.append($switcherSquare);
+            $testContainer.append($switchSquare);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherSquare.css('position'), 'position').to.equal('relative');
-            expect($switcherSquare.css('display'), 'display').to.equal('inline-block');
-            expect($switcherSquare.css('margin'), 'margin').to.equal('4px 0px');
-            expect($switcherSquare.css('cursor'), 'cursor').to.equal('pointer');
-            expect($switcherSquare.css('font-size'), 'font-size').to.equal('10px');
-            expect($switcherSquare.css('width'), 'width').to.equal('62.3906px');
-            expect($switcherSquare.css('height'), 'height').to.equal('31.1875px');
-            expect($switcherSquare.css('border-radius'), 'border-radius').to.equal('2px');
-            expect($switcherSquare.css('background-color'), 'background-color').to.equal(toRgb('#fbfbfb'));
+            expect($switchSquare.css('position'), 'position').to.equal('relative');
+            expect($switchSquare.css('display'), 'display').to.equal('inline-block');
+            expect($switchSquare.css('margin'), 'margin').to.equal('4px 0px');
+            expect($switchSquare.css('cursor'), 'cursor').to.equal('pointer');
+            expect($switchSquare.css('font-size'), 'font-size').to.equal('10px');
+            expect($switchSquare.css('width'), 'width').to.equal('62.3906px');
+            expect($switchSquare.css('height'), 'height').to.equal('31.1875px');
+            expect($switchSquare.css('border-radius'), 'border-radius').to.equal('2px');
+            expect($switchSquare.css('background-color'), 'background-color').to.equal(toRgb('#fbfbfb'));
         });
     
         it('Small should have correct styles', () => {
-            $switcherSquare.addClass('c-switch-sm');
-            expect($switcherSquare.css('width'), 'width').to.equal('40px');
-            expect($switcherSquare.css('height'), 'height').to.equal('20px');
+            $switchSquare.addClass('c-switch-sm');
+            expect($switchSquare.css('width'), 'width').to.equal('40px');
+            expect($switchSquare.css('height'), 'height').to.equal('20px');
         });
     
         it('Large should have correct styles', () => {
-            $switcherSquare.addClass('c-switch-lg');
-            expect($switcherSquare.css('width'), 'width').to.equal('80px');
-            expect($switcherSquare.css('height'), 'height').to.equal('40px');
+            $switchSquare.addClass('c-switch-lg');
+            expect($switchSquare.css('width'), 'width').to.equal('80px');
+            expect($switchSquare.css('height'), 'height').to.equal('40px');
         });
     });
     
-    describe('BD Switcher Square Handle', () => {
-        let $switcherHandleSquare = $(`<label class="c-switch-square">
+    describe('BD Switch Square Handle', () => {
+        let $switchHandleSquare = $(`<label class="c-switch-square">
                                             <input class="c-switch-input" type="checkbox" checked><span class="c-switch-handle"></span>
                                         </label>`);
     
         before((done) => {
-            $testContainer.append($switcherHandleSquare);
+            $testContainer.append($switchHandleSquare);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherHandleSquare.find('span').css('position'), 'position').to.equal('absolute');
-            expect($switcherHandleSquare.find('span').css('width'), 'width').to.equal('20px');
-            expect($switcherHandleSquare.find('span').css('height'), 'height').to.equal('20px');
-            expect($switcherHandleSquare.find('span').css('left'), 'left').to.equal('36px');
-            expect($switcherHandleSquare.find('span').css('transition-property'), 'transition-property').to.equal('left');
-            expect($switcherHandleSquare.find('span').css('transition-duration'), 'transition-duration').to.equal('0.15s');
-            expect($switcherHandleSquare.find('span').css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
-            expect($switcherHandleSquare.find('span').css('border-radius'), 'border-radius').to.equal('2px');
-            expect($switcherHandleSquare.find('span').css('box-shadow'), 'box-shadow').to.equal('none');
-            expect($switcherHandleSquare.find('span').css('background-color'), 'background-color').to.equal(toRgb('#fbfbfb'));
-            expect($switcherHandleSquare.find('span').css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.2)');
+            expect($switchHandleSquare.find('span').css('position'), 'position').to.equal('absolute');
+            expect($switchHandleSquare.find('span').css('width'), 'width').to.equal('20px');
+            expect($switchHandleSquare.find('span').css('height'), 'height').to.equal('20px');
+            expect($switchHandleSquare.find('span').css('left'), 'left').to.equal('36px');
+            expect($switchHandleSquare.find('span').css('transition-property'), 'transition-property').to.equal('left');
+            expect($switchHandleSquare.find('span').css('transition-duration'), 'transition-duration').to.equal('0.15s');
+            expect($switchHandleSquare.find('span').css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
+            expect($switchHandleSquare.find('span').css('border-radius'), 'border-radius').to.equal('2px');
+            expect($switchHandleSquare.find('span').css('box-shadow'), 'box-shadow').to.equal('none');
+            expect($switchHandleSquare.find('span').css('background-color'), 'background-color').to.equal(toRgb('#fbfbfb'));
+            expect($switchHandleSquare.find('span').css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.2)');
         });
 
         it('Small should have correct styles', () => {
-            $switcherHandleSquare.addClass('c-switch-sm');
-            expect($switcherHandleSquare.find('span').css('width'), 'width').to.equal('16.7969px');
-            expect($switcherHandleSquare.find('span').css('height'), 'height').to.equal('16px');
-            expect($switcherHandleSquare.find('span').css('left'), 'left').to.equal('21.6px');
+            $switchHandleSquare.addClass('c-switch-sm');
+            expect($switchHandleSquare.find('span').css('width'), 'width').to.equal('16.7969px');
+            expect($switchHandleSquare.find('span').css('height'), 'height').to.equal('16px');
+            expect($switchHandleSquare.find('span').css('left'), 'left').to.equal('21.6px');
         });
 
         it('Large should have correct styles', () => {
-            $switcherHandleSquare.addClass('c-switch-lg');
-            expect($switcherHandleSquare.find('span').css('width'), 'width').to.equal('32px');
-            expect($switcherHandleSquare.find('span').css('height'), 'height').to.equal('31.1875px');
-            expect($switcherHandleSquare.find('span').css('left'), 'left').to.equal('41.6px');
+            $switchHandleSquare.addClass('c-switch-lg');
+            expect($switchHandleSquare.find('span').css('width'), 'width').to.equal('32px');
+            expect($switchHandleSquare.find('span').css('height'), 'height').to.equal('31.1875px');
+            expect($switchHandleSquare.find('span').css('left'), 'left').to.equal('41.6px');
         });
     });
     
-    describe('BD Switcher Square Handle before', () => {
-        let $switcherHandleSquareBefore = $(`<label class="c-switch-square"><span class="c-switch-handle"></span></label>`);
+    describe('BD Switch Square Handle before', () => {
+        let $switchHandleSquareBefore = $(`<label class="c-switch-square"><span class="c-switch-handle"></span></label>`);
     
         before((done) => {
-            $testContainer.append($switcherHandleSquareBefore);
+            $testContainer.append($switchHandleSquareBefore);
             done();
         });
     
@@ -272,110 +351,110 @@ describe('BD Switchers', () => {
         });
     });
     
-    describe('BD Switcher Material', () => {
-        let $switcherMaterial = $(`<label class="c-switch-material"></label>`);
+    describe('BD Switch Material', () => {
+        let $switchMaterial = $(`<label class="c-switch-material"></label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterial);
+            $testContainer.append($switchMaterial);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherMaterial.css('position'), 'position').to.equal('relative');
-            expect($switcherMaterial.css('display'), 'display').to.equal('inline-block');
-            expect($switcherMaterial.css('margin'), 'margin').to.equal('4px 0px');
-            expect($switcherMaterial.css('cursor'), 'cursor').to.equal('pointer');
-            expect($switcherMaterial.css('font-size'), 'font-size').to.equal('10px');
-            expect($switcherMaterial.css('width'), 'width').to.equal('33px');
-            expect($switcherMaterial.css('height'), 'height').to.equal('15px');
-            expect($switcherMaterial.css('background-color'), 'background-color').to.equal('rgba(51, 51, 51, 0.02)');
-            expect($switcherMaterial.css('border-radius'), 'border-radius').to.equal('50px');
+            expect($switchMaterial.css('position'), 'position').to.equal('relative');
+            expect($switchMaterial.css('display'), 'display').to.equal('inline-block');
+            expect($switchMaterial.css('margin'), 'margin').to.equal('4px 0px');
+            expect($switchMaterial.css('cursor'), 'cursor').to.equal('pointer');
+            expect($switchMaterial.css('font-size'), 'font-size').to.equal('10px');
+            expect($switchMaterial.css('width'), 'width').to.equal('33px');
+            expect($switchMaterial.css('height'), 'height').to.equal('15px');
+            expect($switchMaterial.css('background-color'), 'background-color').to.equal('rgba(51, 51, 51, 0.02)');
+            expect($switchMaterial.css('border-radius'), 'border-radius').to.equal('50px');
         });
 
         it('Small should have correct styles', () => {
-            $switcherMaterial.addClass('c-switch-sm');
-            expect($switcherMaterial.css('width'), 'width').to.equal('32px');
-            expect($switcherMaterial.css('height'), 'height').to.equal('8px');
+            $switchMaterial.addClass('c-switch-sm');
+            expect($switchMaterial.css('width'), 'width').to.equal('32px');
+            expect($switchMaterial.css('height'), 'height').to.equal('8px');
         });
     });
 
-    describe('BD Switcher Material Large', () => {
-        let $switcherMaterial = $(`<label class="c-switch-material c-switch-lg"></label>`);
+    describe('BD Switch Material Large', () => {
+        let $switchMaterial = $(`<label class="c-switch-material c-switch-lg"></label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterial);
+            $testContainer.append($switchMaterial);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($switcherMaterial.css('width'), 'width').to.equal('80px');
+            expect($switchMaterial.css('width'), 'width').to.equal('80px');
             expect(window.getComputedStyle(document.querySelector('.c-switch-material + .c-switch-lg')).getPropertyValue('height'), 'height').to.equal('16px');
         });
     });
 
-    describe('BD Switcher Material Handle', () => {
-        let $switcherMaterialHandle = $(`<label class="c-switch-material"><span class="c-switch-handle"></span></label>`);
+    describe('BD Switch Material Handle', () => {
+        let $switchMaterialHandle = $(`<label class="c-switch-material"><span class="c-switch-handle"></span></label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterialHandle);
+            $testContainer.append($switchMaterialHandle);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($switcherMaterialHandle.find('span').css('position'), 'position').to.equal('absolute');
-            expect($switcherMaterialHandle.find('span').css('transition-property'), 'transition-property').to.equal('left');
-            expect($switcherMaterialHandle.find('span').css('transition-duration'), 'transition-duration').to.equal('0.15s');
-            expect($switcherMaterialHandle.find('span').css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
-            expect($switcherMaterialHandle.find('span').css('width'), 'width').to.equal('17px');
-            expect($switcherMaterialHandle.find('span').css('height'), 'height').to.equal('17px');
-            expect($switcherMaterialHandle.find('span').css('border-radius'), 'border-radius').to.equal('50px');
-            expect($switcherMaterialHandle.find('span').css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.15)');
-            expect($switcherMaterialHandle.find('span').css('box-shadow'), 'box-shadow').to.equal('none');
+            expect($switchMaterialHandle.find('span').css('position'), 'position').to.equal('absolute');
+            expect($switchMaterialHandle.find('span').css('transition-property'), 'transition-property').to.equal('left');
+            expect($switchMaterialHandle.find('span').css('transition-duration'), 'transition-duration').to.equal('0.15s');
+            expect($switchMaterialHandle.find('span').css('transition-timing-function'), 'transition-timing-function').to.equal('ease-out');
+            expect($switchMaterialHandle.find('span').css('width'), 'width').to.equal('17px');
+            expect($switchMaterialHandle.find('span').css('height'), 'height').to.equal('17px');
+            expect($switchMaterialHandle.find('span').css('border-radius'), 'border-radius').to.equal('50px');
+            expect($switchMaterialHandle.find('span').css('border'), 'border').to.equal('1px solid rgba(51, 51, 51, 0.15)');
+            expect($switchMaterialHandle.find('span').css('box-shadow'), 'box-shadow').to.equal('none');
         });
     });
     
-    describe('BD Switcher Material Checked', () => {
-        let $switcherMaterialChecked = $(`<label class="c-switch-material">
+    describe('BD Switch Material Checked', () => {
+        let $switchMaterialChecked = $(`<label class="c-switch-material">
                                                 <input class="c-switch-input" type="checkbox" checked><span class="c-switch-handle"></span>
                                             </label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterialChecked);
+            $testContainer.append($switchMaterialChecked);
             done();
         });
     
         it('should have correct styles', () => {
-            expect($switcherMaterialChecked.find('span').css('left'), 'left').to.equal('17px');
+            expect($switchMaterialChecked.find('span').css('left'), 'left').to.equal('17px');
         });
     });
 
-    describe('BD Switcher Material Checked Small', () => {
-        let $switcherMaterialCheckedSmall = $(`<label class="c-switch-material c-switch-sm">
+    describe('BD Switch Material Checked Small', () => {
+        let $switchMaterialCheckedSmall = $(`<label class="c-switch-material c-switch-sm">
                                                     <input class="c-switch-input" type="checkbox" checked><span class="c-switch-handle"></span>
                                                 </label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterialCheckedSmall);
+            $testContainer.append($switchMaterialCheckedSmall);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($switcherMaterialCheckedSmall.find('span').css('left'), 'left').to.equal('16px');
+            expect($switchMaterialCheckedSmall.find('span').css('left'), 'left').to.equal('16px');
         });
     });
 
-    describe('BD Switcher Material Checked Large', () => {
-        let $switcherMaterialCheckedLarge = $(`<label class="c-switch-material c-switch-lg">
+    describe('BD Switch Material Checked Large', () => {
+        let $switchMaterialCheckedLarge = $(`<label class="c-switch-material c-switch-lg">
                                                     <input class="c-switch-input" type="checkbox" checked><span class="c-switch-handle"></span>
                                                 </label>`);
     
         before((done) => {
-            $testContainer.append($switcherMaterialCheckedLarge);
+            $testContainer.append($switchMaterialCheckedLarge);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($switcherMaterialCheckedLarge.find('span').css('left'), 'left').to.equal('48px');
+            expect($switchMaterialCheckedLarge.find('span').css('left'), 'left').to.equal('48px');
         });
     });
 })
