@@ -87,6 +87,7 @@
     "lint-staged": "^6.0.0",
     "list-selectors": "^2.0.0",
     "mocha": "^5.1.1",
+    "natives": "^1.1.6",
     "ncp": "^2.0.0",
     "npm": "^6.9.0",
     "octophant": "^1.0.1",
