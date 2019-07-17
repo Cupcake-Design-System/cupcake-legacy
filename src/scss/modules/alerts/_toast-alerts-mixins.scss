@@ -149,7 +149,7 @@ $toast-alert-icon-size: 12px !default;
     align-items: center;
     justify-content: center;
     font-size: $toast-alert-close-fs;
-    font-weight: 900;
+    font-weight: 600;
     color: $toast-alert-close-c;
     transition: $toast-alert-close-transition;
     cursor: pointer;
@@ -173,7 +173,7 @@ $toast-alert-icon-size: 12px !default;
     background: $toast-alert-color;
     text-align: center;
     border-radius: 50%;
-    font-weight: 900;
+    font-weight: 600;
     font-size: $toast-alert-icon-size / 1.25;
     text-indent: -0.5px;
   }
