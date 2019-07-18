@@ -7,7 +7,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('should have correct styles', () => {
             expect($table.css('text-align'), 'text-align').to.equal('left');
             expect($table.css('line-height'), 'line-height').to.equal('19.6px');
             expect($table.css('border-radius'), 'border-radius').to.equal('2px');
@@ -23,7 +23,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('should have correct styles', () => {
             expect($tableThead.find('thead').css('color'), 'color').to.equal(toRgb('#414152'));
             expect($tableThead.find('thead').css('border-style'), 'border-style').to.equal('solid');
             expect($tableThead.find('thead').css('border-color'), 'border-color').to.equal(toRgb('#8d8d97'));
@@ -40,7 +40,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('should have correct styles', () => {
             expect($tableTbody.find('tbody').css('font-size'), 'font-size').to.equal('14px');
             expect($tableTbody.find('tbody').css('border-style'), 'border-style').to.equal('none');
         });
@@ -57,7 +57,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('should have correct styles', () => {
             expect($tableTheadTr.find('tr').css('background-position'), 'background-position').to.equal('0px 0px');
         });
     });
@@ -85,7 +85,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('should have correct styles', () => {
             expect($tableTh.find('th').css('font-size'), 'font-size').to.equal('12px');
             expect($tableTh.find('th').css('text-align'), 'text-align').to.equal('left');
             expect($tableTh.find('th').css('vertical-align'), 'vertical-align').to.equal('middle');
@@ -109,7 +109,7 @@ describe('BD Table styles', () => {
             done();
         });
     
-        it('The first child should have correct styles', () => {
+        it('odd should have correct styles', () => {
             expect(window.getComputedStyle(document.querySelector('.c-table:not(.c-table-transparent) tbody tr:nth-child(2n+1)')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#f9f9f9'));
         });
     });
