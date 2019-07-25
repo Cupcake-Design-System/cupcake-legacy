@@ -1,108 +1,261 @@
 describe('BD Accordions', () => {
-  describe('BD Accordion', () => {
-    let $Accordion = $('<div class="accordion c-accordion-bordered"></div>');
-
-    before((done) => {
-      $testContainer.append($Accordion);
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($Accordion.css('padding-left'), 'padding-left').to.equal('0px');
-      expect($Accordion.css('padding-right'), 'padding-right').to.equal('0px');
-    })
-  });
-
-  describe('BD Accordion-trigger-group', () => {
-    let $AccordionTriggerGroup = $(`<div>
-                                      <input class="c-accordion-trigger" checked=""><div class="c-accordion-item-content"></div>
-                                    </div>`);
-    before((done) => {
-      $testContainer.append($AccordionTriggerGroup);
-      done();
-    });
-
-    it.only('should have correct styles', () => {
-      expect($AccordionTriggerGroup.find('.c-accordion-trigger').css('position'), 'position').to.equal('absolute');
-      expect($AccordionTriggerGroup.find('.c-accordion-trigger').css('top'), 'top').to.equal('0px');
-      expect($AccordionTriggerGroup.find('.c-accordion-trigger').css('left'), 'left').to.equal('0px');
-      expect($AccordionTriggerGroup.find('.c-accordion-trigger').css('opacity'), 'opacity').to.equal('0');
-      expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content').getPropertyValue('height'), 'height').to.equal('auto'));
-      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content').getPropertyValue('overflow'), 'overflow').to.equal('auto'));
-      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content').getPropertyValue('max-height'), 'max-height').to.equal('500em'));
-    })
-  })
-
-  describe('BD Accordion-panel', () => {
-    let $AccordionPanel = $('<div class="c-accordion-item-panel"></div>');
-
-    before((done) => {
-      $testContainer.append($AccordionPanel);
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($AccordionPanel.css('display'), 'display').to.equal('flex');
-      expect($AccordionPanel.css('align-items'), 'align-items').to.equal('center');
-      expect($AccordionPanel.css('padding'), 'padding').to.equal('10px');
-    });
-  });
-
-  describe('BD Accordion-panel-bordered', () => {
-    let $AccordionPanelBordered = $(`<div class="c-accordion c-accordion-bordered">
-                                        <label class="c-accordion-item">
-                                            <div class="c-accordion-item-panel"></div>
+  describe('BD Accordion label toggle', () => {
+    let $AccordionLabelToggle = $(` <div class="c-accordion c-accordion-bordered">
+                                      <div class="c-accordion-item-group">
+                                        <input type="checkbox" class="c-accordion-trigger" id="accordion-item-1"/>
+                                        <label class="c-accordion-item" for="accordion-item-1">
+                                          <div class="c-accordion-item-panel">
+                                            <span class="c-avatar c-avatar-primary" data-text="JS"></span>
+                                            <div class="c-accordion-item-body">
+                                              <div class="c-text-md c-text-bold">Joseph Santos</div>
+                                              <div class="c-text-sm c-p-top-xs">Systems Administrator</div>
+                                            </div>
+                                            <div class="c-accordion-item-right">
+                                              <i class="fa fa-envelope c-text-muted" aria-hidden="true"></i>
+                                              <i class="fa fa-pencil" aria-hidden="true"></i>
+                                              <span class="c-accordion-caret">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                              </span>
+                                            </div>
+                                          </div>
                                         </label>
-                                      </div>`);
+                                        <div class="c-accordion-item-content">
+                                          <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                            earum, pariatur laudantium ea labore placeat, velit optio
+                                            molestiae molestias reiciendis error saepe asperiores ab
+                                            praesentium quis natus consectetur libero ut.
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>`);
+
+    describe('BD Accordion-trigger', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelToggle);
+        done();
+      });
+
+      it('should have correct styles', () => {
+        expect($AccordionLabelToggle.find('.c-accordion-trigger').css('position'), 'position').to.equal('absolute');
+        expect($AccordionLabelToggle.find('.c-accordion-trigger').css('top'), 'top').to.equal('0px');
+        expect($AccordionLabelToggle.find('.c-accordion-trigger').css('left'), 'left').to.equal('0px');
+        expect($AccordionLabelToggle.find('.c-accordion-trigger').css('opacity'), 'opacity').to.equal('0');
+      });
+    });
+
+    describe('BD Accordion-panel', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelToggle);
+        done();
+      });
+  
+      it('should have correct styles', () => {
+        expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('border-top'), 'border-top').to.equal('1px solid ' + toRgb('#dee2e6'));
+        expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('display'), 'display').to.equal('flex');
+        expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('align-items'), 'align-items').to.equal('center');
+        expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('padding'), 'padding').to.equal('10px');
+      });
+    });
+    
+    describe('BD Accordion-content', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelToggle);
+        done();
+      });
+      
+      it('should have correct styles', () => {
+        expect($AccordionLabelToggle.find('.c-accordion-item-content').css('padding'), 'padding').to.equal('0px 16px');
+        expect($AccordionLabelToggle.find('.c-accordion-item-content').css('overflow'), 'overflow').to.equal('hidden');
+        expect($AccordionLabelToggle.find('.c-accordion-item-content').css('max-height'), 'max-height').to.equal('0px');
+        expect($AccordionLabelToggle.find('.c-accordion-item-content').css('height'), 'height').to.equal('0px');
+      });
+    });
+
+    describe('BD Accordion-item-right', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelToggle);
+        done();
+      });
+  
+      it('should have correct styles', () => {
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('display'), 'display').to.equal('flex');
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('flex-grow'), 'flex-grow').to.equal('1');
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('justify-content'), 'justify-content').to.equal('flex-end');
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('align-items'), 'align-items').to.equal('center');
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('padding-left'), 'padding-left').to.equal('15px');
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').css('color'), 'color').to.equal(toRgb('#495057'));
+        expect($AccordionLabelToggle.find('.c-accordion-item-right').find('*').css('margin-left'), 'margin-left').to.equal('15px');
+      });
+    });
+  });
+
+  describe('BD Accordion label&body toggle', () => {
+    let $AccordionLabelBodyToggle = $(`<div class="c-accordion c-accordion-bordered">
+                                          <label class="c-accordion-item">
+                                            <input type="checkbox" class="c-accordion-trigger">
+                                            <div class="c-accordion-item-panel">
+                                              <div class="c-accordion-item-body">
+                                                <div class="c-text-md c-text-bold">Joseph Santos</div>
+                                                <div class="c-text-sm c-p-top-xs">Systems Administrator</div>
+                                              </div>
+                                              <div class="c-accordion-item-right">
+                                                <span class="c-accordion-caret">
+                                                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                                </span>
+                                              </div>
+                                            </div>
+                                            <div class="c-accordion-item-content">
+                                              <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                                earum, pariatur laudantium ea labore placeat, velit optio
+                                                molestiae molestias reiciendis error saepe asperiores ab
+                                                praesentium quis natus consectetur libero ut.
+                                              </p>
+                                            </div>
+                                          </label>
+                                        </div>`);
+
+    describe('BD Accordion-trigger', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelBodyToggle);
+        done();
+      });
+
+      it('should have correct styles', () => {
+        expect($AccordionLabelBodyToggle.find('.c-accordion-trigger').css('position'), 'position').to.equal('absolute');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-trigger').css('top'), 'top').to.equal('0px');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-trigger').css('left'), 'left').to.equal('0px');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-trigger').css('opacity'), 'opacity').to.equal('0');
+      });
+    });
+
+    describe('BD Accordion-panel', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelBodyToggle);
+        done();
+      });
+  
+      it('should have correct styles', () => {
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('border-top'), 'border-top').to.equal('1px solid ' + toRgb('#dee2e6'));
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('display'), 'display').to.equal('flex');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('align-items'), 'align-items').to.equal('center');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('padding'), 'padding').to.equal('10px');
+        expect(window.getComputedStyle(document.querySelector('.c-accordion-item:last-child > .c-accordion-item-panel')).getPropertyValue('border-bottom'), 'border-bottom').to.equal('none');
+      });
+    });
+    
+    describe('BD Accordion-content', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelBodyToggle);
+        done();
+      });
+      
+      it('should have correct styles', () => {
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-content').css('padding'), 'padding').to.equal('0px 16px');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-content').css('overflow'), 'overflow').to.equal('hidden');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-content').css('max-height'), 'max-height').to.equal('0px');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-content').css('height'), 'height').to.equal('0px');
+      });
+    });
+
+    describe('BD Accordion-item-right', () => {
+      before((done) => {
+        $testContainer.append($AccordionLabelBodyToggle);
+        done();
+      });
+  
+      it('should have correct styles', () => {
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('display'), 'display').to.equal('flex');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('flex-grow'), 'flex-grow').to.equal('1');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('justify-content'), 'justify-content').to.equal('flex-end');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('align-items'), 'align-items').to.equal('center');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('padding-left'), 'padding-left').to.equal('15px');
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').css('color'), 'color').to.equal(toRgb('#495057'));
+        expect($AccordionLabelBodyToggle.find('.c-accordion-item-right').find('*').css('margin-left'), 'margin-left').to.equal('15px');
+        // expect(window.getComputedStyle(document.querySelector('.c-accordion-item-right .c-accordion-caret > i')).getPropertyValue('transition'), 'transition').to.equal('transform 0.15s');
+      });
+    });
+  });
+  
+  describe('BD Accordion label toggle checked', () => {
+    let $AccordionLabelToggleChecked = $(`<div class="c-accordion c-accordion-bordered">
+                                            <div class="c-accordion-item-group">
+                                              <input type="checkbox" class="c-accordion-trigger" id="accordion-item-2" checked="">
+                                              <label class="c-accordion-item" for="accordion-item-2">
+                                                <div class="c-accordion-item-panel">
+                                                  <span class="c-avatar c-avatar-danger" data-text="JS"></span>
+                                                  <div class="c-accordion-item-body">
+                                                    <div class="c-text-md c-text-bold">Joseph Santos</div>
+                                                    <div class="c-text-sm c-p-top-xs">Systems Administrator</div>
+                                                  </div>
+                                                  <div class="c-accordion-item-right">
+                                                    <i class="fa fa-envelope c-text-muted" aria-hidden="true"></i>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                    <span class="c-accordion-caret">
+                                                      <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                              </label>
+                                              <div class="c-accordion-item-content">
+                                                <p>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                                  earum, pariatur laudantium ea labore placeat, velit optio
+                                                  molestiae molestias reiciendis error saepe asperiores ab
+                                                  praesentium quis natus consectetur libero ut.
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>`);
 
     before((done) => {
-      $testContainer.append($AccordionPanelBordered);
+      $testContainer.append($AccordionLabelToggleChecked);
       done();
     });
     
     it('should have correct styles', () => {
-      expect($AccordionPanelBordered.find('.c-accordion-item-panel').css('border-top'), 'border-top').to.equal('1px solid ' + toRgb('#dee2e6'));
+      expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('overflow'), 'overflow').to.equal('auto');
+      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('height'), 'height').to.equal('auto');
+      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('max-height'), 'max-height').to.equal('500em');
     });
   });
-
-  describe('BD Accordion-content', () => {
-    let $AccordionContent = $('<div class="c-accordion-item-content"></div>');
-
-    before((done) => {
-      $testContainer.append($AccordionContent);
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($AccordionContent.css('padding'), 'padding').to.equal('0px 16px');
-      expect($AccordionContent.css('overflow'), 'overflow').to.equal('hidden');
-      expect($AccordionContent.css('max-height'), 'max-height').to.equal('0px');
-      expect($AccordionContent.css('height'), 'height').to.equal('0px');
-    });
-  });
-
-  describe('BD Accordion-item-right', () => {
-    let $AccordionItemRight = $(`<div class="c-accordion-item-right">
-                                    <span class="c-accordion-caret">
-                                      <i class="fa fa-caret-right" aria-hidden="true"></i>
-                                    </span>
-                                  </div>`);
-
-    before((done) => {
-      $testContainer.append($AccordionItemRight);
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($AccordionItemRight.css('display'), 'display').to.equal('flex');
-      expect($AccordionItemRight.css('flex-grow'), 'flex-grow').to.equal('1');
-      expect($AccordionItemRight.css('justify-content'), 'justify-content').to.equal('flex-end');
-      expect($AccordionItemRight.css('align-items'), 'align-items').to.equal('center');
-      expect($AccordionItemRight.css('padding-left'), 'padding-left').to.equal('15px');
-      expect($AccordionItemRight.css('color'), 'color').to.equal(toRgb('#495057'));
-      expect($AccordionItemRight.find('*').css('margin-left'), 'margin-left').to.equal('15px');
-    });
-  });
-
   
+  describe('BD Accordion label&body toggle checked', () => {
+    let $AccordionLabelBodyToggleChecked = $(`<div class="c-accordion c-accordion-bordered">
+                                                <label class="c-accordion-item">
+                                                  <input type="checkbox" class="c-accordion-trigger" checked="">
+                                                  <div class="c-accordion-item-panel">
+                                                    <div class="c-accordion-item-body">
+                                                      <div class="c-text-md c-text-bold">Joseph Santos</div>
+                                                      <div class="c-text-sm c-p-top-xs">Systems Administrator</div>
+                                                    </div>
+                                                    <div class="c-accordion-item-right">
+                                                      <span class="c-accordion-caret">
+                                                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="c-accordion-item-content">
+                                                    <p>
+                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                                      earum, pariatur laudantium ea labore placeat, velit optio
+                                                      molestiae molestias reiciendis error saepe asperiores ab
+                                                      praesentium quis natus consectetur libero ut.
+                                                    </p>
+                                                  </div>
+                                                </label>
+                                              </div>`);
+
+    before((done) => {
+      $testContainer.append($AccordionLabelBodyToggleChecked);
+      done();
+    });
+    
+    it('should have correct styles', () => {
+      expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('overflow'), 'overflow').to.equal('auto');
+      // expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('height'), 'height').to.equal('auto');
+      // expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('max-height'), 'max-height').to.equal('500em');
+    });
+  });
 });
