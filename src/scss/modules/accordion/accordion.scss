@@ -2,22 +2,16 @@
 
 @include accordion;
 
-.c-accordion-bordered {
-  .c-accordion-item {
-    &-panel {
-      border-top: $accordion-item-border;
-    }
+.c-accordion-bordered .c-accordion-item-group {
+  .c-accordion-item-panel {
+    border-top: $accordion-item-border;
+  }
 
-    &:first-child {
-      & .c-accordion-item-panel {
-        border-top: $accordion-item-first-child-border;
-      }
-    }
+  &:first-child .c-accordion-item-panel {
+    border-top: $accordion-item-first-child-border;
+  }
 
-    &:last-child {
-      & .c-accordion-item-panel {
-        border-bottom: $accordion-item-last-child-border;
-      }
-    }
+  &:last-child .c-accordion-item-panel {
+    border-bottom: $accordion-item-last-child-border;
   }
 }
