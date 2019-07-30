@@ -91,7 +91,7 @@ $arrow-rotate-deg: 90deg !default;
         margin-left: $accordion-item-right-part-spacing;
       }
 
-      & > i {
+      & .c-accordion-caret > i {
         transition: transform 0.15s;
       }
     }

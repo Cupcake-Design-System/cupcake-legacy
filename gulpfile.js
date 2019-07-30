@@ -274,7 +274,13 @@ gulp.src(bases.app + 'img/*')
 });
 
 gulp.task('fonts', function(){
-  return gulp.src(['./node_modules/source-sans-pro/**/*', '!./node_modules/source-sans-pro/package.json'])
+  return gulp.src(['./node_modules/source-sans-pro/**/SourceSansPro-It.*', 
+                   './node_modules/source-sans-pro/**/SourceSansPro-Light.*', 
+                   './node_modules/source-sans-pro/**/SourceSansPro-LightIt.*', 
+                   './node_modules/source-sans-pro/**/SourceSansPro-Regular.*', 
+                   './node_modules/source-sans-pro/**/SourceSansPro-Semibold.*', 
+                   './node_modules/source-sans-pro/**/SourceSansPro-SemiboldIt.*',
+                   '!./node_modules/source-sans-pro/package.json'])
   .pipe(gulp.dest(bases.dist + 'fonts'))
   .pipe(reload({stream:true}));
 });

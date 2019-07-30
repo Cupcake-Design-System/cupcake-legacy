@@ -1,6 +1,6 @@
 {
   "name": "@ipreo/cupcake",
-  "version": "1.4.18",
+  "version": "1.4.19",
   "description": "Ipreo CSS framework.",
   "main": "dist/default.css",
   "repository": {
@@ -14,13 +14,12 @@
     "deploy:surge": "npm run deploy:dist && npm run deploy:tests",
     "precommit": "lint-staged",
     "build": "gulp build",
-    "build:prod": "gulp build && npm run copy-cdn-artifacts",
+    "build:prod": "gulp build",
     "deploy": "gulp deploy",
     "test": "npm run test:default && npm run test:bd && npm run test:ihs-bd",
     "test:default": "karma start --default",
     "test:bd": "karma start --bd",
     "test:ihs-bd": "karma start --ihs-bd",
-    "copy-cdn-artifacts": "node ./scripts/copy-cdn-artifacts.js",
     "publish": "node ./scripts/publish.js",
     "release": "standard-version",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
