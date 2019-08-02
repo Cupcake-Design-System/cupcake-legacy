@@ -1,5 +1,8 @@
 describe('BD File uploader', () => {
-    let $fileUpload = $('<div class="c-file-upload"></div>');
+    let $fileUpload = $(`<div class="c-file-upload">
+                            File Upload
+                            <button class="c-btn c-btn-sm c-btn-primary">Button</button>
+                        </div>`);
 
     before((done) => {
         $testContainer.append($fileUpload);
