@@ -50,7 +50,6 @@ describe('BD Accordions', () => {
       });
   
       it('should have correct styles', () => {
-        // expect(window.getComputedStyle(document.querySelector('.c-accordion-item-group .c-accordion-item-panel:not(:first-child)')).getPropertyValue('border-top'), 'border-top').to.equal('1px solid ' + toRgb('#dee2e6'));
         expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('display'), 'display').to.equal('flex');
         expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('align-items'), 'align-items').to.equal('center');
         expect($AccordionLabelToggle.find('.c-accordion-item-panel').css('padding'), 'padding').to.equal('10px');
@@ -137,7 +136,6 @@ describe('BD Accordions', () => {
       });
   
       it('should have correct styles', () => {
-        // expect(window.getComputedStyle(document.querySelector('.c-accordion-item:not(:first-child) .c-accordion-item-panel')).getPropertyValue('border-top'), 'border-top').to.equal('1px solid ' + toRgb('#dee2e6'));
         expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('display'), 'display').to.equal('flex');
         expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('align-items'), 'align-items').to.equal('center');
         expect($AccordionLabelBodyToggle.find('.c-accordion-item-panel').css('padding'), 'padding').to.equal('10px');
@@ -214,8 +212,6 @@ describe('BD Accordions', () => {
     
     it('should have correct styles', () => {
       expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('overflow'), 'overflow').to.equal('auto');
-      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('height'), 'height').to.equal('auto');
-      // expect(window.getComputedStyle(document.querySelector('.c-accordion-trigger:checked ~ .c-accordion-item-content')).getPropertyValue('max-height'), 'max-height').to.equal('500em');
     });
   });
   
@@ -252,8 +248,6 @@ describe('BD Accordions', () => {
     
     it('should have correct styles', () => {
       expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('overflow'), 'overflow').to.equal('auto');
-      // expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('height'), 'height').to.equal('auto');
-      // expect($AccordionLabelBodyToggleChecked.find('.c-accordion-trigger:checked ~ .c-accordion-item-content').css('max-height'), 'max-height').to.equal('500em');
     });
   });
 });
