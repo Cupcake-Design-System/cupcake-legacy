@@ -79,9 +79,9 @@ describe('BD Badges', () => {
         };
       
         for (let $size in $badgeSizes) {
-            let $badge = $('<div class="c-badge c-badge-' + $size + '">' + $size + ' information' +
-                                '<a class="c-badge-link" href="#"><i class="fa fa-close"></i></a>' +
-                            '</div>'),
+            let $badge = $(`<div class="c-badge c-badge-${$size}">${$size} information
+                                <a class="c-badge-link" href="#"><i class="fa fa-close"></i></a>
+                            </div>`),
                 $badgeStyles = $badgeSizes[$size],
                 $badgeSize = $size,
                 testParameters = [$badge, $badgeStyles, $badgeSize];
@@ -128,7 +128,7 @@ describe('BD Badges', () => {
         };
       
         for (let $size in $badgeSizes) {
-            let $badge = $('<div class="c-badge c-badge-rounded c-badge-' + $size + '"></div>'),
+            let $badge = $(`<div class="c-badge c-badge-rounded c-badge-${$size}"></div>`),
                 $badgeStyles = $badgeSizes[$size],
                 $badgeSize = $size,
                 testParameters = [$badge, $badgeStyles, $badgeSize];
@@ -158,7 +158,7 @@ describe('BD Badges', () => {
         };
       
         for (let $status in $badgeColors) {
-            let $badge = $('<div class="c-badge c-badge-' + $status + '">' + $status + '</div>'),
+            let $badge = $(`<div class="c-badge c-badge-${$status}">${$status}</div>`),
                 $badgeColorValue = $badgeColors[$status],
                 $badgeStatus = $status,
                 testParameters = [$badge, $badgeColorValue, $badgeStatus];
@@ -187,7 +187,7 @@ describe('BD Badges', () => {
         };
       
         for (let $status in $badgeColors) {
-            let $badge = $('<div class="c-badge c-rounded c-badge-' + $status + '"></div>'),
+            let $badge = $(`<div class="c-badge c-rounded c-badge-${$status}"></div>`),
                 $badgeColorValue = $badgeColors[$status],
                 $badgeStatus = $status,
                 testParameters = [$badge, $badgeColorValue, $badgeStatus];
@@ -216,7 +216,7 @@ describe('BD Badges', () => {
         };
       
         for (let $status in $badgeOutline) {
-            let $badge = $('<div class="c-badge c-badge-' + $status + '-outline">' + $status + ' outline</div>'),
+            let $badge = $(`<div class="c-badge c-badge-${$status}-outline">${$status} outline</div>`),
                 $badgeColorValue = $badgeOutline[$status],
                 $badgeStatus = $status,
                 testParameters = [$badge, $badgeColorValue, $badgeStatus];
