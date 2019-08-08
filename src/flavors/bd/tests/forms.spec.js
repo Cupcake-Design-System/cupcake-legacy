@@ -1,6 +1,10 @@
 describe('BD Forms', () => {
     describe('BD Select', () => {
-        let $select = $('<select class="c-input"></select>');
+        let $select = $(`<select class="c-input">
+                            <option>Select</option>
+                            <option>Option</option>
+                            <option>Option</option>
+                        </select>`);
     
         before((done) => {
             $testContainer.append($select);
@@ -23,45 +27,96 @@ describe('BD Forms', () => {
             expect($select.css('cursor'), 'cursor').to.equal('pointer');
             expect($select.css('color'), 'color').to.equal(toRgb('#414152'));
         });
+    });
 
-        it('xs should have correct styles', () => {   
-            $select.addClass('c-input-xs');
-            expect($select.css('height'), 'height').to.equal('20px');
-            expect($select.css('padding'), 'padding').to.equal('3px 22px 3px 10px');
-            expect($select.css('font-size'), 'font-size').to.equal('10px');
+    // select c-input xs, sm, lg, xl
+    describe('BD Select Sizes ', () => {
+        let $selectSizes = {
+            'xs': {
+                'height': '20px',
+                'padding': '3px 22px 3px 10px',
+                'fontSize': '10px'
+            },
+            'sm': {
+                'height': '25px',
+                'padding': '3px 22px 3px 8px',
+                'fontSize': '13px'
+            },
+            'lg': {
+                'height': '35px',
+                'padding': '8px 22px 8px 8px',
+                'fontSize': '15px'
+            },
+            'xl': {
+                'height': '40px',
+                'padding': '10px 22px 10px 8px',
+                'fontSize': '16px'
+            }
+        };
+    
+        for (let $size in $selectSizes) {
+            let $select = $('<select class="c-input c-input-' + $size + '">' +
+                                '<option>' + $size + ' Select</option>' +
+                                '<option>Option</option>' +
+                                '<option>Option</option>' +
+                            '</select>'),
+                $selectStyles = $selectSizes[$size],
+                $selectSize = $size,
+                testParameters = [$select, $selectStyles, $selectSize];
+        
+            before((done) => {
+                $testContainer.append($select);
+                done();
+            });
+        
+            testSelectSizes(...testParameters);
+        }
+    
+        function testSelectSizes($select, $selectStyles, $selectSize) {
+            it($selectSize + ' select should have correct styles', () => {
+                expect($select.css('height'), 'height').to.equal($selectStyles.height);
+                expect($select.css('padding'), 'padding').to.equal($selectStyles.padding);
+                expect($select.css('font-size'), 'font size').to.equal($selectStyles.fontSize);
+            });
+        }
+    });
+    
+    describe('BD Select with icon', () => {
+        let $select = $(`<div class="c-input-container">
+                            <i class="c-input-icon fa fa-exclamation-circle"></i>
+                            <select class="c-input">
+                                <option>Select with an icon</option>
+                                <option>Option</option>
+                                <option>Option</option>
+                            </select>
+                        </div>`);
+    
+        before((done) => {
+            $testContainer.append($select);
+            done();
         });
+    
+        it('should have correct styles', () => {   
 
-        it('sm should have correct styles', () => {   
-            $select.addClass('c-input-sm');
-            expect($select.css('height'), 'height').to.equal('25px');
-            expect($select.css('padding'), 'padding').to.equal('3px 22px 3px 8px');
-            expect($select.css('font-size'), 'font-size').to.equal('13px');
-        });
+            //c-input-container
+            expect($select.css('position'), 'position').to.equal('relative');
 
-        it('lg should have correct styles', () => {   
-            $select.addClass('c-input-lg');
-            expect($select.css('height'), 'height').to.equal('35px');
-            expect($select.css('padding'), 'padding').to.equal('8px 22px 8px 8px');
-            expect($select.css('font-size'), 'font-size').to.equal('15px');
-        });
+            //c-input-icon
+            expect($select.find('i').css('position'), 'position').to.equal('absolute');
+            expect($select.find('i').css('left'), 'left').to.equal('8px');
+            expect($select.find('i').css('color'), 'color').to.equal(toRgb('#8d8d97'));
 
-        it('xl should have correct styles', () => {   
-            $select.addClass('c-input-xl');
-            expect($select.css('height'), 'height').to.equal('40px');
-            expect($select.css('padding'), 'padding').to.equal('10px 22px 10px 8px');
-            expect($select.css('font-size'), 'font-size').to.equal('16px');
-        });
-
-        it('Error should have correct styles', () => {   
-            $select.addClass('c-input-error');
-            expect($select.css('color'), 'color').to.equal(toRgb('#965650'));
-            expect($select.css('font-weight'), 'font-weight').to.equal('600');
-            expect($select.css('border-color'), 'border-color').to.equal(toRgb('#e98f88'));
+            //c-input
+            expect(window.getComputedStyle(document.querySelector(".c-input-icon + .c-select, .c-input-icon + select.c-input:not([multiple])")).getPropertyValue('padding-left'), 'padding-left').to.equal('26px');
         });
     });
 
     describe('BD Select Disabled', () => {
-        let $selectDisabled = $('<select class="c-input" disabled></select>');
+        let $selectDisabled = $(`<select class="c-input" disabled>
+                                    <option>Disabled select</option>
+                                    <option>Option</option>
+                                    <option>Option</option>
+                                </select>`);
     
         before((done) => {
             $testContainer.append($selectDisabled);
@@ -73,8 +128,27 @@ describe('BD Forms', () => {
         });
     });
 
+    describe('BD Select Error', () => {
+        let $selectError = $(`<select class="c-input c-input-error">
+                                <option>I'm error</option>
+                                <option>Option</option>
+                                <option>Option</option>
+                            </select>`);
+    
+        before((done) => {
+            $testContainer.append($selectError);
+            done();
+        });
+
+        it('should have correct styles', () => {
+            expect(window.getComputedStyle(document.querySelector("select.c-input-error:not([multiple])")).getPropertyValue('color'), 'color').to.equal(toRgb('#965650'));
+            expect(window.getComputedStyle(document.querySelector("select.c-input-error:not([multiple])")).getPropertyValue('font-weight'), 'font-weight').to.equal('600');
+            expect(window.getComputedStyle(document.querySelector("select.c-input-error:not([multiple])")).getPropertyValue('border-color'), 'border-color').to.equal(toRgb('#e98f88'));
+        });
+    });
+
     describe('BD Input', () => {
-        let $input = $('<input class="c-input">');
+        let $input = $('<input class="c-input" type="text" placeholder="General input">');
     
         before((done) => {
             $testContainer.append($input);
@@ -99,50 +173,82 @@ describe('BD Forms', () => {
         });
     });
 
-    describe('BD Input Sizes and Types', () => {
-        let $input = $('<input class="c-input">');
+    // c-input sm, lg, xl
+    describe('BD Select Sizes ', () => {
+        let $selectSizes = {
+            'sm': {
+                'height': '25px'
+            },
+            'lg': {
+                'height': '35px'
+            },
+            'xl': {
+                'height': '40px'
+            }
+        };
     
-        before((done) => {
-            $testContainer.append($input);
-            done();
-        });
+        for (let $size in $selectSizes) {
+            let $select = $('<input class="c-input c-input-' + $size + ' type="text" placeholder="' + $size + ' input">'),
+                $selectStyles = $selectSizes[$size],
+                $selectSize = $size,
+                testParameters = [$select, $selectStyles, $selectSize];
+        
+            before((done) => {
+                $testContainer.append($select);
+                done();
+            });
+        
+            testSelectSizes(...testParameters);
+        }
+    
+        function testSelectSizes($select, $selectStyles, $selectSize) {
+            it($selectSize + ' select should have correct styles', () => {
+                expect($select.css('height'), 'height').to.equal($selectStyles.height);
+            });
+        }
+    });
 
-        it('sm should have correct styles', () => {   
-            $input.addClass('c-input-sm');
-            expect($input.css('height'), 'height').to.equal('25px');
-        });
-
-        it('lg should have correct styles', () => {   
-            $input.addClass('c-input-lg');
-            expect($input.css('height'), 'height').to.equal('35px');
-        });
-
-        it('xl should have correct styles', () => {   
-            $input.addClass('c-input-xl');
-            expect($input.css('height'), 'height').to.equal('40px');
-        });
-
-        it('Success should have correct styles', () => {   
-            $input.addClass('c-input-success');
-            expect($input.css('border-color'), 'border-color').to.equal(toRgb('#4daa0b'));
-            expect($input.css('background-color'), 'background-color').to.equal(toRgb('#f3f8ef'));
-        });
-
-        it('Warning should have correct styles', () => {   
-            $input.addClass('c-input-warning');
-            expect($input.css('border-color'), 'border-color').to.equal(toRgb('#f8c000'));
-            expect($input.css('background-color'), 'background-color').to.equal(toRgb('#fcfbe7'));
-        });
-
-        it('Error should have correct styles', () => {   
-            $input.addClass('c-input-error');
-            expect($input.css('border-color'), 'border-color').to.equal(toRgb('#e98f88'));
-            expect($input.css('background-color'), 'background-color').to.equal(toRgb('#fff6f5'));
-        });
+    // c-input-success, c-input-warning, c-input-error
+    describe('BD Success, Warning, Error Inputs', () => {
+        let $inputColors = {
+            'success': {
+                'borderColor': toRgb('#4daa0b'),
+                'backgroundColor': toRgb('#f3f8ef')
+            },
+            'warning': {
+                'borderColor': toRgb('#f8c000'),
+                'backgroundColor': toRgb('#fcfbe7')
+            },
+            'error': {
+                'borderColor': toRgb('#e98f88'),
+                'backgroundColor': toRgb('#fff6f5')
+            },
+        };
+    
+        for (let $status in $inputColors) {
+            let $input = $('<input class="c-input c-input-' + $status + ' type="text" placeholder="' + $status + '">'),
+                $inputColorValue = $inputColors[$status],
+                $inputStatus = $status,
+                testParameters = [$input, $inputColorValue, $inputStatus];
+    
+            before((done) => {
+                $testContainer.append($input);
+                done();
+            });
+    
+            testInputs(...testParameters);
+        }
+    
+        function testInputs($input, $inputColorValues, $inputStatus) {
+            it($inputStatus + ' input should have correct styles', () => {
+                expect($input.css('border-color'), 'border-color').to.equal($inputColorValues.borderColor);
+                expect($input.css('background-color'), 'background-color').to.equal($inputColorValues.backgroundColor);
+            });
+        }
     });
 
     describe('BD Input Disabled', () => {
-        let $inputDisabled = $('<input class="c-input" disabled>');
+        let $inputDisabled = $('<input class="c-input" type="text" placeholder="Disabled" disabled>');
     
         before((done) => {
             $testContainer.append($inputDisabled);
@@ -156,7 +262,14 @@ describe('BD Forms', () => {
     });
 
     describe('BD Input Label', () => {
-        let $inputLabel = $('<label class="c-input-label"></label>');
+        let $inputLabel = $(`<div class="c-row">
+                                <div class="c-col c-col-md-3 c-text-right">
+                                    <label class="c-input-label" for="size-input-2-sm">Default Label: <sup class="c-text-danger">*</sup></label>
+                                </div>
+                                <div class="c-col">
+                                    <input class="c-input c-input-sm" type="text" id="size-input-2-sm" placeholder="Small input">
+                                </div>
+                            </div>`);
     
         before((done) => {
             $testContainer.append($inputLabel);
@@ -164,15 +277,20 @@ describe('BD Forms', () => {
         });
 
         it('should have correct styles', () => {   
-            expect($inputLabel.css('display'), 'display').to.equal('block');
-            expect($inputLabel.css('padding'), 'padding').to.equal('5px 0px');
-            expect($inputLabel.css('color'), 'color').to.equal(toRgb('#212529'));
-            expect($inputLabel.css('font-size'), 'font-size').to.equal('14px'); 
+            expect($inputLabel.find('label').css('display'), 'display').to.equal('block');
+            expect($inputLabel.find('label').css('padding'), 'padding').to.equal('5px 0px');
+            expect($inputLabel.find('label').css('color'), 'color').to.equal(toRgb('#212529'));
+            expect($inputLabel.find('label').css('font-size'), 'font-size').to.equal('14px'); 
         });
     });
 
     describe('BD Hint', () => {
-        let $inputHint = $('<span class="c-hint"></span>');
+        let $inputHint = $(`<div class="c-input-container">
+                                <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$">
+                                <span class="c-hint c-hint-success">
+                                    <i class="fa fa-check"></i> This username is silly but available!
+                                </span>
+                            </div>`);
     
         before((done) => {
             $testContainer.append($inputHint);
@@ -180,38 +298,74 @@ describe('BD Forms', () => {
         });
 
         it('should have correct styles', () => {
-            expect($inputHint.css('position'), 'position').to.equal('absolute');
-            expect($inputHint.css('transform'), 'transform').to.equal('matrix(0.8, 0, 0, 0.8, 0, 0)');
-            expect($inputHint.css('transform-origin'), 'transform-origin').to.equal('0px 0px');
-            expect($inputHint.css('margin-top'), 'margin-top').to.equal('8px'); 
-            expect($inputHint.css('pointer-events'), 'pointer-events').to.equal('none');
-            expect($inputHint.css('transition'), 'transition').to.equal('all 0.2s ease 0s');
-        });
-
-        it('Static should have correct styles', () => {
-            $inputHint.addClass('c-hint-static');
-            expect($inputHint.css('opacity'), 'opacity').to.equal('1');
-            expect($inputHint.css('transform'), 'transform').to.equal('matrix(0.9, 0, 0, 0.9, 0, 0)');
-        });
-
-        it('Success should have correct styles', () => {
-            $inputHint.addClass('c-hint-success');
-            expect($inputHint.css('color'), 'color').to.equal(toRgb('#4daa0b'));
-        });
-
-        it('Warning should have correct styles', () => {
-            $inputHint.addClass('c-hint-warning');
-            expect($inputHint.css('color'), 'color').to.equal(toRgb('#f8c000'));
-        });
-
-        it('Error should have correct styles', () => {
-            $inputHint.addClass('c-hint-error');
-            expect($inputHint.css('color'), 'color').to.equal(toRgb('#e98f88'));
+            expect($inputHint.find('span').css('position'), 'position').to.equal('absolute');
+            expect($inputHint.find('span').css('transform-origin'), 'transform-origin').to.equal('0px 0px');
+            expect($inputHint.find('span').css('margin-top'), 'margin-top').to.equal('8px'); 
+            expect($inputHint.find('span').css('pointer-events'), 'pointer-events').to.equal('none');
+            expect($inputHint.find('span').css('transition'), 'transition').to.equal('all 0.2s ease 0s');
+            expect($inputHint.find('span').css('opacity'), 'opacity').to.equal('0');
         });
     });
 
-    describe('BD Input Group', () => {
-        let $inputGroup = $('<div class="c-input-group"></div>');
+    // c-hint-success, c-hint-warning, c-hint-error
+    describe('BD Success, Warning, Error Input hints', () => {
+        let $inputColors = {
+            'success': toRgb('#4daa0b'),
+            'warning': toRgb('#f8c000'),
+            'error': toRgb('#e98f88')
+        };
+    
+        for (let $status in $inputColors) {
+            let $input = $('<div class="c-input-container">' +
+                                '<input class="c-input c-input-' + $status + '" type="text" placeholder="Text input" value="$J-Money$">' +
+                                '<span class="c-hint c-hint-' + $status + '">' +
+                                    '<i class="fa fa-check"></i> This username is silly but available!' +
+                                '</span>' +
+                            '</div>'),
+                $inputColorValue = $inputColors[$status],
+                $inputStatus = $status,
+                testParameters = [$input, $inputColorValue, $inputStatus];
+    
+            before((done) => {
+                $testContainer.append($input);
+                done();
+            });
+    
+            testInputs(...testParameters);
+        }
+    
+        function testInputs($input, $inputColorValues, $inputStatus) {
+            it($inputStatus + ' input should have correct styles', () => {
+                expect($input.find('span').css('color'), 'color').to.equal($inputColorValues);
+            });
+        }
+    });
+
+    describe('BD Hint static', () => {
+        let $inputHint = $(`<div class="c-input-container">
+                                <input class="c-input c-input-success" type="text" placeholder="Text input" value="$J-Money$">
+                                <span class="c-hint c-hint-static c-hint-success">
+                                    <i class="fa fa-check"></i> This username is silly but available!
+                                </span>
+                            </div>`);
+    
+        before((done) => {
+            $testContainer.append($inputHint);
+            done();
+        });
+
+        it('should have correct styles', () => {
+            expect($inputHint.find('span').css('opacity'), 'opacity').to.equal('1');
+        });
+    });
+
+    describe('BD Input Group left', () => {
+        let $inputGroup = $(`<div class="c-input-group">
+                                <button class="c-btn c-btn-primary">Action</button>
+                                <div class="c-input-container">
+                                    <input type="text" class="c-input" placeholder="text" id="input-group-1">
+                                </div>
+                            </div>`);
     
         before((done) => {
             $testContainer.append($inputGroup);
@@ -220,38 +374,78 @@ describe('BD Forms', () => {
     
         it('should have correct styles', () => { 
             expect($inputGroup.css('display'), 'display').to.equal('flex');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:first-child")).getPropertyValue('border-top-right-radius'), 'border-top-right-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:first-child")).getPropertyValue('border-bottom-right-radius'), 'border-bottom-right-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container:not(:first-child)")).getPropertyValue('margin-left'), 'margin-left').to.equal('-1px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container")).getPropertyValue('flex'), 'flex').to.equal('1 0 auto');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container")).getPropertyValue('z-index'), 'z-index').to.equal('1');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container:last-child .c-input")).getPropertyValue('border-top-left-radius'), 'border-top-left-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container:last-child .c-input")).getPropertyValue('border-bottom-left-radius'), 'border-bottom-left-radius').to.equal('0px');
         });
+    });
 
-        describe('BD Input Addon', () => {
-            let $inputAddon = $('<div class="c-input-addon">@</div>');
-        
-            before((done) => {
-                $testContainer.append($inputAddon);
-                done();
-            });
-        
-            it('should have correct styles', () => { 
-                expect($inputAddon.css('display'), 'display').to.equal('flex');
-                expect($inputAddon.css('align-items'), 'align-items').to.equal('center');
-                expect($inputAddon.css('padding'), 'padding').to.equal('0px 8px');
-                expect($inputAddon.css('font-size'), 'font-size').to.equal('14px');
-                expect(window.getComputedStyle(document.querySelector(".c-input-addon"), ':last-child').getPropertyValue('border-radius'), 'border-radius').to.equal('0px 2px 2px 0px');
-                expect(window.getComputedStyle(document.querySelector(".c-input-addon"), ':last-child').getPropertyValue('margin-right'), 'margin-right').to.equal('0px');
-                expect(window.getComputedStyle(document.querySelector(".c-input-addon"), ':last-child').getPropertyValue('border-left-width'), 'border-left-width').to.equal('0px');
-            });
+    describe('BD Input Group right', () => {
+        let $inputGroup = $(`<div class="c-input-group">
+                                <div class="c-input-container">
+                                    <input type="text" class="c-input" placeholder="text">
+                                </div>
+                                <button class="c-btn c-btn-primary c-btn-xs">Action</button>
+                                <button class="c-btn c-btn-primary c-btn-xs c-btn-box"><i class="fa fa-caret-down"></i></button>
+                            </div>`);
+    
+        before((done) => {
+            $testContainer.append($inputGroup);
+            done();
         });
+    
+        it('should have correct styles', () => { 
+            expect($inputGroup.css('display'), 'display').to.equal('flex');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:not(:first-child):not(:last-child)")).getPropertyValue('border-radius'), 'border-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:not(:first-child)")).getPropertyValue('margin-left'), 'margin-left').to.equal('-1px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:last-child")).getPropertyValue('border-top-left-radius'), 'border-top-left-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-btn:last-child")).getPropertyValue('border-bottom-left-radius'), 'border-bottom-left-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container:first-child .c-input")).getPropertyValue('border-top-right-radius'), 'border-top-right-radius').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-group .c-input-container:first-child .c-input")).getPropertyValue('border-bottom-right-radius'), 'border-bottom-right-radius').to.equal('0px');
+        });
+    });
 
-        describe('BD Input Inline', () => {
-            let $inputInline= $('<input class="c-input c-input-inline">');
-        
-            before((done) => {
-                $testContainer.append($inputInline);
-                done();
-            });
-        
-            it('should have correct styles', () => { 
-                expect($inputInline.css('display'), 'display').to.equal('inline');
-            });
+    describe('BD Input Addon', () => {
+        let $inputAddon = $(`<div class="c-input-group">
+                                <div class="c-input-addon">@</div>
+                                <div class="c-input-container">
+                                    <input type="text" class="c-input">
+                                </div>
+                                <div class="c-input-addon">.00</div>
+                            </div>`);
+    
+        before((done) => {
+            $testContainer.append($inputAddon);
+            done();
+        });
+    
+        it('should have correct styles', () => { 
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon")).getPropertyValue('display'), 'display').to.equal('flex');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon")).getPropertyValue('align-items'), 'align-items').to.equal('center');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon")).getPropertyValue('padding'), 'padding').to.equal('0px 8px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon")).getPropertyValue('font-size'), 'font-size').to.equal('14px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon")).getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#dee2e6'));
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon:first-child")).getPropertyValue('border-radius'), 'border-radius').to.equal('2px 0px 0px 2px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon:last-child")).getPropertyValue('border-radius'), 'border-radius').to.equal('0px 2px 2px 0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon:last-child")).getPropertyValue('margin-right'), 'margin-right').to.equal('0px');
+            expect(window.getComputedStyle(document.querySelector(".c-input-addon:last-child")).getPropertyValue('border-left-width'), 'border-left-width').to.equal('0px');
+        });
+    });
+
+    describe('BD Input Inline', () => {
+        let $inputInline= $('<input class="c-input c-input-inline" type="text" placeholder="Inline input">');
+    
+        before((done) => {
+            $testContainer.append($inputInline);
+            done();
+        });
+    
+        it('should have correct styles', () => { 
+            expect($inputInline.css('display'), 'display').to.equal('inline');
         });
     });
 })
