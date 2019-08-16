@@ -1,280 +1,291 @@
 describe('BD Typography', () => {
-    describe('BD Body Text XXL', () => {
-        let $bodyTextXXL = $(`<div class="c-body-text-xxl">Text</div>`);
+
+    // c-header sizes xs, sm, md, lg, xl, xxl
+    describe('BD Header Sizes ', () => {
+        let $headerSizes = {
+            'xs': {
+                'lineHeight': '20px',
+                'fontSize': '12px',
+                'fontWeight': '600'
+            },
+            'sm': {
+                'lineHeight': '20px',
+                'fontSize': '14px',
+                'fontWeight': '600'
+            },
+            'md': {
+                'lineHeight': '20px',
+                'fontSize': '15px',
+                'fontWeight': '600'
+            },
+            'lg': {
+                'lineHeight': '25px',
+                'fontSize': '18px',
+                'fontWeight': '600'
+            },
+            'xl': {
+                'lineHeight': '35px',
+                'fontSize': '22px',
+                'fontWeight': '400'
+            },
+            'xxl': {
+                'lineHeight': '35px',
+                'fontSize': '30px',
+                'fontWeight': '400'
+            }
+        };
+
+        for (let $size in $headerSizes) {
+            let $header = $(`<div class="c-header-${$size}">c-header-${$size}</div>`),
+                $headerStyles = $headerSizes[$size],
+                $headerSize = $size,
+                testParameters = [$header, $headerStyles, $headerSize];
+
+            before((done) => {
+                $testContainer.append($header);
+                done();
+            });
+
+            testHeaderSizes(...testParameters);
+        }
+
+        function testHeaderSizes($header, $headerStyles, $headerSize) {
+            it($headerSize + ' header should have correct styles', () => {
+                expect($header.css('font-size'), 'font size').to.equal($headerStyles.fontSize);
+                expect($header.css('line-height'), 'line-height').to.equal($headerStyles.lineHeight);
+                expect($header.css('font-style'), 'font-style').to.equal('normal');
+                expect($header.css('color'), 'color').to.equal(toRgb('#414152'));
+                expect($header.css('font-weight'), 'font-weight').to.equal($headerStyles.fontWeight);
+                expect($header.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            });
+        }
+    });
+
+    // c-body-text sizes xs, sm, md, lg, xl, xxl
+    describe('BD Body Text Sizes ', () => {
+        let $bodyTextSizes = {
+            'xs': {
+                'lineHeight': '15px',
+                'fontSize': '12px'
+            },
+            'sm': {
+                'lineHeight': '15px',
+                'fontSize': '13px'
+            },
+            'md': {
+                'lineHeight': '20px',
+                'fontSize': '14px'
+            },
+            'lg': {
+                'lineHeight': '25px',
+                'fontSize': '18px'
+            },
+            'xl': {
+                'lineHeight': '35px',
+                'fontSize': '24px'
+            },
+            'xxl': {
+                'lineHeight': '35px',
+                'fontSize': '30px'
+            }
+        };
+
+        for (let $size in $bodyTextSizes) {
+            let $bodyText = $(`<div class="c-body-text-${$size}">c-body-text-${$size}</div>`),
+                $bodyTextStyles = $bodyTextSizes[$size],
+                $bodyTextSize = $size,
+                testParameters = [$bodyText, $bodyTextStyles, $bodyTextSize];
+
+            before((done) => {
+                $testContainer.append($bodyText);
+                done();
+            });
+
+            testbodyTextSizes(...testParameters);
+        }
+
+        function testbodyTextSizes($bodyText, $bodyTextStyles, $bodyTextSize) {
+            it($bodyTextSize + ' body-text should have correct styles', () => {
+                expect($bodyText.css('font-size'), 'font size').to.equal($bodyTextStyles.fontSize);
+                expect($bodyText.css('line-height'), 'line-height').to.equal($bodyTextStyles.lineHeight);
+                expect($bodyText.css('font-style'), 'font-style').to.equal('normal');
+                expect($bodyText.css('color'), 'color').to.equal(toRgb('#414152'));
+                expect($bodyText.css('font-weight'), 'font-weight').to.equal('400');
+                expect($bodyText.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            });
+        }
+    });
+
+    // c-text-primary, c-text-success, c-text-warning, c-text-danger
+    describe('BD Primary, Success, Warning, Danger Text', () => {
+
+        let $textColors = {
+            'primary': toRgb('#0079bd'),
+            'success': toRgb('#37b24d'),
+            'warning': toRgb('#f08c00'),
+            'danger': toRgb('#f03e3e')
+        };
+
+        for (let $status in $textColors) {
+            let $text = $(`<div class="c-body-text c-text-${$status}">${$status}-color text</div>`),
+                $textColorValue = $textColors[$status],
+                $textStatus = $status,
+                testParameters = [$text, $textColorValue, $textStatus];
+
+            before((done) => {
+                $testContainer.append($text);
+                done();
+            });
+
+            testText(...testParameters);
+        }
+
+        function testText($text, $textColorValues, $textStatus) {
+            it($textStatus + ' text should have correct styles', () => {
+                expect($text.css('color'), 'color').to.equal($textColorValues);
+            });
+        }
+    });
+
+    // c-text-left, c-text-center, c-text-right, c-text-justify
+    describe('BD Left, Center, Right, Justify Text', () => {
+
+        let $textAligns = {
+            'left': 'left',
+            'center': 'center',
+            'right': 'right',
+            'justify': 'justify'
+        };
+
+        for (let $status in $textAligns) {
+            let $text = $(`<div class="c-body-text c-text-${$status}">${$status} aligned text</div>`),
+                $textAlignValue = $textAligns[$status],
+                $textStatus = $status,
+                testParameters = [$text, $textAlignValue, $textStatus];
+
+            before((done) => {
+                $testContainer.append($text);
+                done();
+            });
+
+            testText(...testParameters);
+        }
+
+        function testText($text, $textAlignValues, $textStatus) {
+            it($textStatus + ' text should have correct styles', () => {
+                expect($text.css('text-align'), 'text-align').to.equal($textAlignValues);
+            });
+        }
+    });
+
+    // c-text-lowercase, c-text-uppercase, c-text-capitalize
+    describe('BD lowercase, uppercase, capitalize Text', () => {
+
+        let $textTransforms = {
+            'lowercase': 'lowercase',
+            'uppercase': 'uppercase',
+            'capitalize': 'capitalize'
+        };
+
+        for (let $status in $textTransforms) {
+            let $text = $(`<div class="c-body-text c-text-${$status}">c-text-${$status}</div>`),
+                $textTransformValue = $textTransforms[$status],
+                $textStatus = $status,
+                testParameters = [$text, $textTransformValue, $textStatus];
+
+            before((done) => {
+                $testContainer.append($text);
+                done();
+            });
+
+            testText(...testParameters);
+        }
+
+        function testText($text, $textTransformValues, $textStatus) {
+            it($textStatus + ' text should have correct styles', () => {
+                expect($text.css('text-transform'), 'text-transform').to.equal($textTransformValues);
+            });
+        }
+    });
+
+    describe('BD Shadow Text', () => {
+        let $text = $(`<div class="c-body-text c-text-shadow">c-text-shadow</div>`);
 
         before((done) => {
-            $testContainer.append($bodyTextXXL);
+            $testContainer.append($text);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($bodyTextXXL.css('font-size'), 'font-size').to.equal('30px');
-            expect($bodyTextXXL.css('line-height'), 'line-height').to.equal('35px');
-            expect($bodyTextXXL.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextXXL.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextXXL.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextXXL.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            expect($text.css('text-shadow'), 'text-shadow').to.equal('rgba(0, 0, 0, 0.1) 0px 1px 0px');
         });
     });
 
-    describe('BD Body Text XL', () => {
-        let $bodyTextXL = $(`<div class="c-body-text-xl">Text</div>`);
+    describe('BD Ellipsis Text', () => {
+        let $text = $(`<div class="c-body-text c-text-ellipsis">c-text-ellipsis: lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse, sdfdsfewr
+                            corporis cupiditate atque enim repellat distinctio expedita ex id dignissimos itaque assumenda modi. Saepe iure harum veritatis perferendis 
+                            suscipit incidunt.Neque asdfdsf
+                        </div>`);
 
         before((done) => {
-            $testContainer.append($bodyTextXL);
+            $testContainer.append($text);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($bodyTextXL.css('font-size'), 'font-size').to.equal('24px');
-            expect($bodyTextXL.css('line-height'), 'line-height').to.equal('35px');
-            expect($bodyTextXL.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextXL.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextXL.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextXL.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            expect($text.css('white-space'), 'white-space').to.equal('nowrap');
+            expect($text.css('overflow'), 'overflow').to.equal('hidden');
+            expect($text.css('text-overflow'), 'text-overflow').to.equal('ellipsis');
         });
     });
 
-    describe('BD Body Text LG', () => {
-        let $bodyTextLG = $(`<div class="c-body-text-lg">Text</div>`);
+    describe('BD Nowrap Text', () => {
+        let $text = $(`<div class="c-body-text c-text-nowrap">c-text-nowrap</div>`);
 
         before((done) => {
-            $testContainer.append($bodyTextLG);
+            $testContainer.append($text);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($bodyTextLG.css('font-size'), 'font-size').to.equal('18px');
-            expect($bodyTextLG.css('line-height'), 'line-height').to.equal('25px');
-            expect($bodyTextLG.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextLG.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextLG.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextLG.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            expect($text.css('white-space'), 'white-space').to.equal('nowrap');
         });
     });
 
-    describe('BD Body Text MD', () => {
-        let $bodyTextMD = $(`<div class="c-body-text-md">Text</div>`);
+    describe('BD Italic Text', () => {
+        let $text = $(`<div class="c-body-text c-text-italic">c-text-italic</div>`);
 
         before((done) => {
-            $testContainer.append($bodyTextMD);
+            $testContainer.append($text);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($bodyTextMD.css('font-size'), 'font-size').to.equal('14px');
-            expect($bodyTextMD.css('line-height'), 'line-height').to.equal('20px');
-            expect($bodyTextMD.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextMD.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextMD.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextMD.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            expect($text.css('font-style'), 'font-style').to.equal('italic');
         });
     });
 
-    describe('BD Body Text', () => {
-        let $bodyText = $(`<div class="c-body-text">Text</div>`);
+    describe('BD Bold Text', () => {
+        let $text = $(`<div class="c-body-text c-text-bold">c-text-bold</div>`);
 
         before((done) => {
-            $testContainer.append($bodyText);
+            $testContainer.append($text);
             done();
         });
 
         it('should have correct styles', () => {
-            expect($bodyText.css('font-size'), 'font-size').to.equal('14px');
-            expect($bodyText.css('line-height'), 'line-height').to.equal('20px');
-            expect($bodyText.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyText.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyText.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyText.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-
-        it('Primary should have correct styles', () => {
-            $bodyText.addClass('c-text-primary');
-            expect($bodyText.css('color'), 'color').to.equal(toRgb('#0079bd'));
-        });
-
-        it('Success should have correct styles', () => {
-            $bodyText.addClass('c-text-success');
-            expect($bodyText.css('color'), 'color').to.equal(toRgb('#37b24d'));
-        });
-
-        it('Warning should have correct styles', () => {
-            $bodyText.addClass('c-text-warning');
-            expect($bodyText.css('color'), 'color').to.equal(toRgb('#f08c00'));
-        });
-
-        it('Danger should have correct styles', () => {
-            $bodyText.addClass('c-text-danger');
-            expect($bodyText.css('color'), 'color').to.equal(toRgb('#f03e3e'));
-        });
-
-        it('Left should have correct styles', () => {
-            $bodyText.addClass('c-text-left');
-            expect($bodyText.css('text-align'), 'text-align').to.equal('left');
-        });
-
-        it('Center should have correct styles', () => {
-            $bodyText.addClass('c-text-center');
-            expect($bodyText.css('text-align'), 'text-align').to.equal('center');
-        });
-
-        it('Right should have correct styles', () => {
-            $bodyText.removeClass('c-text-center');
-            $bodyText.addClass('c-text-right');
-            expect($bodyText.css('text-align'), 'text-align').to.equal('right');
-        });
-
-        it('Italic should have correct styles', () => {
-            $bodyText.addClass('c-text-italic');
-            expect($bodyText.css('font-style'), 'font-style').to.equal('italic');
-        });
-
-        it('Bold should have correct styles', () => {
-            $bodyText.addClass('c-text-bold');
-            expect($bodyText.css('font-weight'), 'font-weight').to.equal('600');
-        });
-    });
-
-    describe('BD Body Text SM', () => {
-        let $bodyTextSM = $(`<div class="c-body-text-sm">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($bodyTextSM);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($bodyTextSM.css('font-size'), 'font-size').to.equal('13px');
-            expect($bodyTextSM.css('line-height'), 'line-height').to.equal('15px');
-            expect($bodyTextSM.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextSM.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextSM.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextSM.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Body Text XS', () => {
-        let $bodyTextXS = $(`<div class="c-body-text-xs">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($bodyTextXS);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($bodyTextXS.css('font-size'), 'font-size').to.equal('12px');
-            expect($bodyTextXS.css('line-height'), 'line-height').to.equal('15px');
-            expect($bodyTextXS.css('font-weight'), 'font-weight').to.equal('400');
-            expect($bodyTextXS.css('font-style'), 'font-style').to.equal('normal');
-            expect($bodyTextXS.css('color'), 'color').to.equal(toRgb('#414152'));
-            expect($bodyTextXS.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header XXL', () => {
-        let $headerXXL = $(`<div class="c-header-xxl">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerXXL);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerXXL.css('font-size'), 'font-size').to.equal('30px');
-            expect($headerXXL.css('line-height'), 'line-height').to.equal('35px');
-            expect($headerXXL.css('font-weight'), 'font-weight').to.equal('400');
-            expect($headerXXL.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerXXL.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header XL', () => {
-        let $headerXL = $(`<div class="c-header-xl">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerXL);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerXL.css('font-size'), 'font-size').to.equal('22px');
-            expect($headerXL.css('line-height'), 'line-height').to.equal('35px');
-            expect($headerXL.css('font-weight'), 'font-weight').to.equal('400');
-            expect($headerXL.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerXL.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header LG', () => {
-        let $headerLG = $(`<div class="c-header-lg">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerLG);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerLG.css('font-size'), 'font-size').to.equal('18px');
-            expect($headerLG.css('line-height'), 'line-height').to.equal('25px');
-            expect($headerLG.css('font-weight'), 'font-weight').to.equal('600');
-            expect($headerLG.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerLG.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header MD', () => {
-        let $headerMD = $(`<div class="c-header-md">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerMD);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerMD.css('font-size'), 'font-size').to.equal('15px');
-            expect($headerMD.css('line-height'), 'line-height').to.equal('20px');
-            expect($headerMD.css('font-weight'), 'font-weight').to.equal('600');
-            expect($headerMD.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerMD.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header SM', () => {
-        let $headerSM = $(`<div class="c-header-sm">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerSM);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerSM.css('font-size'), 'font-size').to.equal('14px');
-            expect($headerSM.css('line-height'), 'line-height').to.equal('20px');
-            expect($headerSM.css('font-weight'), 'font-weight').to.equal('600');
-            expect($headerSM.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerSM.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
-        });
-    });
-
-    describe('BD Header XS', () => {
-        let $headerXS = $(`<div class="c-header-xs">Text</div>`);
-
-        before((done) => {
-            $testContainer.append($headerXS);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect($headerXS.css('font-size'), 'font-size').to.equal('12px');
-            expect($headerXS.css('line-height'), 'line-height').to.equal('20px');
-            expect($headerXS.css('font-weight'), 'font-weight').to.equal('600');
-            expect($headerXS.css('font-style'), 'font-style').to.equal('normal');
-            expect($headerXS.css('font-family'), 'font-family').to.equal('"Source Sans Pro"');
+            $text.addClass('c-text-bold');
+            expect($text.css('font-weight'), 'font-weight').to.equal('600');
         });
     });
 
     describe('BD Ordered List', () => {
-        let $OList = $(`<ol class="c-ol"><li>Text</li></ol>`);
+        let $OList = $(`<ol class="c-ol">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ol>`);
 
         before((done) => {
             $testContainer.append($OList);
@@ -296,7 +307,12 @@ describe('BD Typography', () => {
     });
 
     describe('BD Unordered List', () => {
-        let $UList = $(`<ul class="c-ul"><li>Text</li></ul>`);
+        let $UList = $(`<ul class="c-ul">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>`);
 
         before((done) => {
             $testContainer.append($UList);
@@ -314,12 +330,17 @@ describe('BD Typography', () => {
             expect($UList.css('padding'), 'padding').to.equal('0px');
             expect($UList.css('list-style-position'), 'list-style-position').to.equal('outside');
             expect($UList.find('li').css('margin-left'), 'margin-left').to.equal('20px');
-            expect($UList.css('list-style-type'), 'list-style-type').to.equal('disc');
+            expect($UList.find('li').css('list-style-type'), 'list-style-type').to.equal('disc');
         });
     });
 
     describe('BD Description  List', () => {
-        let $DList = $(`<ul class="c-ol"><li>Text</li></ul>`);
+        let $DList = $(`<ul class="c-ol">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>`);
 
         before((done) => {
             $testContainer.append($DList);
