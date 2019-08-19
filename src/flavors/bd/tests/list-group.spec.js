@@ -3,7 +3,7 @@ describe('BD List Group', () => {
         let $listGroup = $(`<div class="c-list-group c-list-group-bordered">
                                 <div class="c-list-group-item">
                                     <div class="c-list-group-body">							
-                                    <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                    <div class="c-text-md c-text-bold">List Group</div>						
                                     <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                     <div href="" class="c-list-group-item-right">
@@ -12,7 +12,7 @@ describe('BD List Group', () => {
                                 </div>
                                 <div class="c-list-group-item c-list-group-item-active">
                                     <div class="c-list-group-body">							
-                                        <div class="c-text-md c-text-bold c-text-white">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold c-text-white">List Group</div>						
                                         <div class="c-text-sm c-text-gray-0 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                     <div href="" class="c-list-group-item-right">
@@ -21,7 +21,7 @@ describe('BD List Group', () => {
                                 </div>
                                 <div class="c-list-group-item">
                                     <div class="c-list-group-body">							
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">List Group</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                     <div href="" class="c-list-group-item-right">
@@ -30,7 +30,7 @@ describe('BD List Group', () => {
                                 </div>
                                 <div class="c-list-group-item">
                                     <div class="c-list-group-body">							
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">List Group</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                     <div href="" class="c-list-group-item-right">
@@ -64,6 +64,8 @@ describe('BD List Group', () => {
             expect(window.getComputedStyle(document.querySelector('.c-list-group-item'), ':first-child').getPropertyValue('padding'), 'padding').to.equal('12px 16px');
             expect(window.getComputedStyle(document.querySelector('.c-list-group-item'), ':first-child').getPropertyValue('border-radius'), 'border-radius').to.equal('2px 2px 0px 0px');
             expect(window.getComputedStyle(document.querySelector('.c-list-group-bordered .c-list-group-item')).getPropertyValue('border-bottom'), 'border-bottom').to.equal('1px solid ' + toRgb('#e9ecef'));
+
+            // c-list-group-item-active
             expect(window.getComputedStyle(document.querySelector('.c-list-group-item.c-list-group-item-active')).getPropertyValue('border-color'), 'border-color').to.equal(toRgb('#e9ecef'));
             expect(window.getComputedStyle(document.querySelector('.c-list-group-item.c-list-group-item-active')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#0079bd'));
             expect(window.getComputedStyle(document.querySelector('.c-list-group-item.c-list-group-item-active')).getPropertyValue('color'), 'color').to.equal(toRgb('#ffffff'));
@@ -83,78 +85,30 @@ describe('BD List Group', () => {
 
     describe('BD Media List', () => {
         let $listMedia = $(`<div class="c-media-list c-media-list-hover c-media-list-divided c-media-list-bordered">
-                                    <div class="c-media">
-                                        <div class="c-media-body">						
-                                            <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                            <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
-                                        </div>
-                                        
-                                            <i class="fa fa-grav fa-2x c-shake c-text-danger" aria-hidden="true"></i>
-                                        
-                                    </div>
-                                    <div class="c-media">
-                                        <div class="c-media-body">						
-                                            <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                            <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
-                                        </div>
-                                            <i class="fa fa-connectdevelop c-spin fa-2x " aria-hidden="true"></i>					
-                                    </div>
-                                    <div class="c-media c-media-new">
-                                        <div class="c-media-body">						
-                                            <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                            <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
-                                        </div>
-                                            <i class="fa fa-meetup fa-2x c-pulse c-text-success-9" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="c-media">
-                                        <div class="c-media-body">						
-                                            <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                            <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
-                                        </div>
-                                            <i class="fa fa-ravelry fa-2x c-spin c-text-warning-9" aria-hidden="true"></i>
-                                    </div>					
-                                </div>`);
-
-        before((done) => {
-            $testContainer.append($listMedia);
-            done();
-        });
-
-        it('should have correct styles', () => {
-            expect(window.getComputedStyle(document.querySelector('.c-media-list')).getPropertyValue('padding-left'), 'padding-left').to.equal('0px');
-            expect(window.getComputedStyle(document.querySelector('.c-media-list')).getPropertyValue('list-style-type'), 'list-style-type').to.equal('none');
-
-            // c-media-list-bordered
-            expect(window.getComputedStyle(document.querySelector('.c-media-list-bordered')).getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#e9ecef'));
-        });
-    });
-
-    describe('BD Media', () => {
-        let $listMedia = $(`<div class="c-media-list c-media-list-hover c-media-list-divided c-media-list-bordered">
                                 <div class="c-media">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">Media List</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                         <i class="fa fa-grav fa-2x c-shake c-text-danger" aria-hidden="true"></i>
                                 </div>
                                 <div class="c-media">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">Media List</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                         <i class="fa fa-connectdevelop c-spin fa-2x " aria-hidden="true"></i>					
                                 </div>
                                 <div class="c-media c-media-new">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">Media List</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                         <i class="fa fa-meetup fa-2x c-pulse c-text-success-9" aria-hidden="true"></i>
                                 </div>
                                 <div class="c-media">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Annabelle Administrator</div>						
+                                        <div class="c-text-md c-text-bold">Media List</div>						
                                         <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
                                     </div>
                                         <i class="fa fa-ravelry fa-2x c-spin c-text-warning-9" aria-hidden="true"></i>
@@ -167,9 +121,11 @@ describe('BD List Group', () => {
         });
 
         it('should have correct styles', () => {
-            expect($listMedia.css('border'), 'border').to.equal('1px solid ' + toRgb('#e9ecef'));
             expect($listMedia.css('padding-left'), 'padding-left').to.equal('0px');
             expect($listMedia.css('list-style-type'), 'list-style-type').to.equal('none');
+
+            // c-media-list-bordered
+            expect(window.getComputedStyle(document.querySelector('.c-media-list-bordered')).getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#e9ecef'));
 
             // c-media
             expect(window.getComputedStyle(document.querySelector('.c-media')).getPropertyValue('display'), 'display').to.equal('flex');
@@ -193,8 +149,8 @@ describe('BD List Group', () => {
         let $listMedia = $(`<div class="c-media-list c-media-list-bordered c-media-list-divided c-media-list-hover">
                                 <div class="c-media c-media-middle">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs">  Consectetur adipiscing elit. Consectetur adipiscing elit.</div>
+                                        <div class="c-text-md c-text-bold">Media Middle</div>						
+                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs">Media Middle</div>
                                     </div>
                                     
                                         <i class="fa fa-caret-right c-text-gray-5" aria-hidden="true"></i>
@@ -202,22 +158,22 @@ describe('BD List Group', () => {
                                 </div>
                                 <div class="c-media c-media-middle">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
+                                        <div class="c-text-md c-text-bold">Media Middle</div>						
+                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs">Media Middle</div>
                                     </div>
                                         <i class="fa fa-caret-right c-text-gray-5" aria-hidden="true"></i>					
                                 </div>
                                 <div class="c-media c-media-middle">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
+                                        <div class="c-text-md c-text-bold">Media Middle</div>						
+                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs">Media Middle</div>
                                     </div>
                                         <i class="fa fa-caret-right c-text-gray-5" aria-hidden="true"></i>
                                 </div>
                                 <div class="c-media c-media-middle">
                                     <div class="c-media-body">						
-                                        <div class="c-text-md c-text-bold">Mauris at pellentesque</div>						
-                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs"> Consectetur adipiscing elit.  Consectetur adipiscing elit.</div>
+                                        <div class="c-text-md c-text-bold">Media Middle</div>						
+                                        <div class="c-text-sm c-text-gray-6 c-p-top-xs">Media Middle</div>
                                     </div>
                                         <i class="fa fa-caret-right c-text-gray-5" aria-hidden="true"></i>
                                 </div>					
