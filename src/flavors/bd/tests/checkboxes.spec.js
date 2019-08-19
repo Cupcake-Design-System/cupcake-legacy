@@ -1,210 +1,264 @@
 describe('BD Checkboxes', () => {
-  describe('BD Primary Checkbox', () => {
-    let $defaultCheckbox = $('<label class="c-control c-checkbox"><input type="checkbox" name="radio"><i class="c-bg-primary"></i>c-checkbox</label>');
+  describe('BD Checkbox sizes', () => {
+    let checkboxSizes = {
+        'sm': {
+          'width': '12px',
+          'height': '12px',
+          'margin': '0px 12px -2px 0px',
+          'customCheckbox': {
+            'left': '4px',
+            'top': '1px',
+            'width': '4px',
+            'height': '8px',
+            'border-bottom': '1px solid rgb(255, 255, 255)',
+            'border-right': '1px solid rgb(255, 255, 255)'
+          }
+        },
+        'lg': {
+          'width': '14px',
+          'height': '14px',
+          'margin': '0px 14px -2px 0px',
+          'customCheckbox': {
+            'left': '5px',
+            'top': '2px',
+            'width': '5px',
+            'height': '9px',
+            'border-bottom': '2px solid rgb(255, 255, 255)',
+            'border-right': '2px solid rgb(255, 255, 255)'
+          }
+        },
+        'xl': {
+          'width': '26px',
+          'height': '26px',
+          'margin': '0px 26px -2px 0px',
+          'customCheckbox': {
+            'left': '9px',
+            'top': '3px',
+            'width': '9px',
+            'height': '17px',
+            'border-bottom': '3px solid rgb(255, 255, 255)',
+            'border-right': '3px solid rgb(255, 255, 255)'
+          }
+        }
+    };
+  
+    for (let size in checkboxSizes) {
+      let $checkbox = $(`<label class="c-checkbox-${size}">
+                          <input type="checkbox" name="radio" checked="">
+                          <i class="c-bg-primary"></i>                     
+	                        c-checkbox-${size}
+                        </label>`),
+          checkboxStyles = checkboxSizes[size];
+  
+      before((done) => {
+          $testContainer.append($checkbox);
+          done();
+      });
+  
+      testCheckboxSizes(checkboxStyles, size);
+    }
+  
+    function testCheckboxSizes(checkboxStyles, checkboxSize) {
+      let checkboxInputStyles = checkboxStyles['customCheckbox'];
 
-    before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
-    });
-
-    it('should have correct styles when unchecked', () => {
-        expect($defaultCheckbox.css('height'), 'checkbox height').to.equal('12px');      
-        expect($defaultCheckbox.find('.c-bg-primary').css('background-color'), 'background').to.equal(toRgb('#0079bd'));      
-        expect(window.getComputedStyle(document.querySelector('.c-checkbox i'), ':before').getPropertyValue('border-radius'), 'border-radius').to.equal('2px'); 
-        expect(window.getComputedStyle(document.querySelector('.c-checkbox i'), ':before').getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#ced4da'));  
-        expect(window.getComputedStyle(document.querySelector('.c-checkbox i'), ':after').getPropertyValue('top'), 'check sign not exist').to.equal('auto'); 
-    });
-
-    it('should have correct styles when checked', () => {
-      $defaultCheckbox.click();
-      expect(window.getComputedStyle(document.querySelector('.c-checkbox i'), ':after').getPropertyValue('top'), 'check sign exist').to.equal('1px');
-    });
+      it(`${checkboxSize} checkbox should have correct styles`, () => {
+        expect(window.getComputedStyle(document.querySelector(`.c-checkbox-${checkboxSize} input`)).getPropertyValue('width'), 'width').to.equal(checkboxStyles.width);
+        expect(window.getComputedStyle(document.querySelector(`.c-checkbox-${checkboxSize} input`)).getPropertyValue('height'), 'height').to.equal(checkboxStyles.height);
+        expect(window.getComputedStyle(document.querySelector(`.c-checkbox-${checkboxSize} i`)).getPropertyValue('margin'), 'margin').to.equal(checkboxStyles.margin);
+      });
+      
+      it(`${checkboxSize} checkbox should have correct styles when checked`, () => {
+        for(let style in checkboxInputStyles) {
+          expect(window.getComputedStyle(document.querySelector(`.c-checkbox-${checkboxSize} i`), ':after').getPropertyValue(style), `check sign ${style}`).to.equal(checkboxInputStyles[style]);
+          }
+        });
+    }
   });
 
-  describe('BD Success Checkbox', () => {
-    let $defaultCheckbox = $('<label class="c-control c-checkbox"><input type="checkbox" name="radio"><i class="c-bg-success"></i>c-checkbox</label>');
+  describe('BD Checkbox types', () => {
+    let checkboxTypes = {
+      'primary': {
+        'bg': '#0079bd',
+      },
+      'success': {
+        'bg': '#37b24d'
+      }, 
+      'warning': {
+        'bg': '#f08c00',
+      },
+      'danger': {
+        'bg': '#f03e3e',
+      }
+    };
 
-    before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
-    });
+    for (let type in checkboxTypes) {
+      let $checkbox = $(`<label class="c-checkbox">
+                            <input type="checkbox" name="radio" checked="">
+                            <i class="c-bg-${type}"></i>
+                          </label>`),
+    
+          checkboxStyles = checkboxTypes[type];
 
-    it('should have correct color', () => {
-        expect($defaultCheckbox.find('.c-bg-success').css('background-color'), 'background').to.equal(toRgb('#37b24d'));      
-    });
-  });
+      before((done) => {
+          $testContainer.append($checkbox);
+          done();
+      });
 
-  describe('BD Warning Checkbox', () => {
-    let $defaultCheckbox = $('<label class="c-control c-checkbox"><input type="checkbox" name="radio"><i class="c-bg-warning"></i>c-checkbox</label>');
+      testCheckboxBgColor($checkbox, checkboxStyles, type);
+    }
 
-    before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
-    });
-
-    it('should have correct color', () => {
-        expect($defaultCheckbox.find('.c-bg-warning').css('background-color'), 'background').to.equal(toRgb('#f08c00'));      
-    });
-  });
-
-  describe('BD Danger Checkbox', () => {
-    let $defaultCheckbox = $('<label class="c-control c-checkbox"><input type="checkbox" name="radio"><i class="c-bg-danger"></i>c-checkbox</label>');
-
-    before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
-    });
-
-    it('should have correct color', () => {
-        expect($defaultCheckbox.find('.c-bg-danger').css('background-color'), 'background').to.equal(toRgb('#f03e3e'));      
-    });
+    function testCheckboxBgColor($checkbox, checkboxStyles, checkboxType) {
+      it(`${checkboxType} checkbox should have correct styles`, () => {
+        expect($checkbox.find(`.c-bg-${checkboxType}`).css('background-color'), 'background').to.equal(toRgb(checkboxStyles.bg));
+      });
+    }
   });
 
   describe('BD Disabled Checkbox', () => {
-    let $defaultCheckbox = $('<label class="c-control c-checkbox"><input type="checkbox" name="radio" disabled><i class="c-bg-danger"></i>c-checkbox</label>');
+    let $defaultCheckbox = $(`<label class="c-control c-checkbox">
+                                <input type="checkbox" name="radio" disabled>
+                                <i class="c-bg-danger"></i>c-checkbox
+                              </label>`);
 
     before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
+      $testContainer.append($defaultCheckbox);
+      done();
     });
 
-    it('should have correct color', () => {
-        expect(window.getComputedStyle(document.querySelector('.c-checkbox input[disabled]+i'), ':before').getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#dee2e6')); 
-        expect(window.getComputedStyle(document.querySelector('.c-checkbox input[disabled]+i'), ':before').getPropertyValue('opacity'), 'opacity').to.equal('0.5'); 
-  
-    });
-    it('should have cursor disabled', () => {
+    it('should have correct styles', () => {
+      expect(window.getComputedStyle(document.querySelector('.c-checkbox input[disabled]+i'), ':before').getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#dee2e6'));
+      expect(window.getComputedStyle(document.querySelector('.c-checkbox input[disabled]+i'), ':before').getPropertyValue('opacity'), 'opacity').to.equal('0.5'); 
       expect(window.getComputedStyle(document.querySelector('.c-checkbox input[disabled]+i'), ':before').getPropertyValue('cursor'), 'cursor').to.equal('not-allowed'); 
-      
-    });
-  });
-
-  describe('BD Checkbox sizes', () => {
-    let $defaultCheckbox = $('<label class=""><input type="checkbox" name="radio"><i class="c-bg-danger"></i>c-checkbox</label>');
-
-    before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
-    });
-
-    it('sm checkbox should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-sm c-checkbox c-checkbox-sm');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('12px');
-    });
-
-    it('lg checkbox should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-lg c-checkbox c-checkbox-lg');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('14px');
-    });
-
-    it('xl checkbox should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-xl c-checkbox c-checkbox-xl');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('26px');
     });
   });
 });
 
 describe('BD RadioButtons', () => {
-  describe('BD Primary RadioButtons', () => {
-    let $defaultRadioButton = $('<label class="c-control c-radio"><input type="radio" name="radio"><i class="c-bg-primary"></i>c-radio</label>');
-
-    before((done) => {
-        $testContainer.append($defaultRadioButton);
-        done();
-    });
-
-    it('should have correct styles when unchecked', () => {
-        expect($defaultRadioButton.css('height'), 'checkbox height').to.equal('12px');      
-        expect($defaultRadioButton.find('.c-bg-primary').css('background-color'), 'background').to.equal(toRgb('#0079bd'));      
-        expect(window.getComputedStyle(document.querySelector('.c-radio i'), ':before').getPropertyValue('border-radius'), 'border-radius').to.equal('50%'); 
-        expect(window.getComputedStyle(document.querySelector('.c-radio i'), ':before').getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#ced4da'));  
-        expect(window.getComputedStyle(document.querySelector('.c-radio i'), ':after').getPropertyValue('top'), 'check sign not exist').to.equal('auto'); 
-    });
-
-    it('should have correct styles when checked', () => {
-      $defaultRadioButton.click();
-      expect(window.getComputedStyle(document.querySelector('.c-radio i'), ':after').getPropertyValue('top'), 'check sign exist').to.equal('4px');
-    });
-  });
-
-  describe('BD Success RadioButton', () => {
-    let $defaultRadioButton = $('<label class="c-control c-radio"><input type="radio" name="radio"><i class="c-bg-success"></i>c-radio</label>');
-
-    before((done) => {
-        $testContainer.append($defaultRadioButton);
-        done();
-    });
-
-    it('should have correct color', () => {
-        expect($defaultRadioButton.find('.c-bg-success').css('background-color'), 'background').to.equal(toRgb('#37b24d'));      
-    });
-  });
-
-  describe('BD Warning RadioButton', () => {
-    let $defaultRadioButton = $('<label class="c-control c-radio"><input type="radio" name="radio"><i class="c-bg-warning"></i>c-radio</label>');
-
-    before((done) => {
-        $testContainer.append($defaultRadioButton);
-        done();
-    });
-
-    it('should have correct color', () => {
-        expect($defaultRadioButton.find('.c-bg-warning').css('background-color'), 'background').to.equal(toRgb('#f08c00'));      
-    });
-  });
-
-  describe('BD Danger RadioButton', () => {
-    let $defaultRadioButton = $('<label class="c-control c-radio"><input type="radio" name="radio"><i class="c-bg-danger"></i>c-radio</label>');
-
-    before((done) => {
-        $testContainer.append($defaultRadioButton);
-        done();
-    });
-
-    it('should have correct color', () => {
-        expect($defaultRadioButton.find('.c-bg-danger').css('background-color'), 'background').to.equal(toRgb('#f03e3e'));      
-    });
-  });
-
-  describe('BD Disabled RadioButton', () => {
-    let $defaultRadioButton = $('<label class="c-control c-radio"><input type="radio" name="radio" disabled><i class="c-bg-danger"></i>c-radio</label>');
-
-    before((done) => {
-        $testContainer.append($defaultRadioButton);
-        done();
-    });
-
-    it('should have correct color', () => {
-      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#dee2e6')); 
-      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('opacity'), 'opacity').to.equal('0.5'); 
-
-    });
-    it('should have cursor disabled', () => {
-      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('cursor'), 'cursor').to.equal('not-allowed');    
-    });
-  });
-
   describe('BD RadioButton sizes', () => {
-    let $defaultCheckbox = $('<label class=""><input type="checkbox" name="radio"><i class="c-bg-danger"></i>c-checkbox</label>');
+    let radiobuttonSizes = {
+        'sm': {
+          'width': '12px',
+          'height': '12px',
+          'margin': '0px 12px -2px 0px',
+          'customRadiobutton': {
+            'left': '4px',
+            'top': '4px',
+            'width': '4px',
+            'height': '4px',
+          }
+        },
+        'lg': {
+          'width': '14px',
+          'height': '14px',
+          'margin': '0px 14px -2px 0px',
+          'customRadiobutton': {
+            'left': '5px',
+            'top': '5px',
+            'width': '5px',
+            'height': '5px',
+          }
+        },
+        'xl': {
+          'width': '26px',
+          'height': '26px',
+          'margin': '0px 26px -2px 0px',
+          'customRadiobutton': {
+            'left': '9px',
+            'top': '9px',
+            'width': '9px',
+            'height': '9px',
+          }
+        }
+    };
+  
+    for (let size in radiobuttonSizes) {
+      let $radiobutton = $(`<label class="c-radio-${size}">
+                              <input type="radio" name="radio" checked="">
+                              <i class="c-bg-primary"></i>                           
+	                            c-radio-${size}
+                            </label>`),
+          radiobuttonStyles = radiobuttonSizes[size];
+  
+      before((done) => {
+          $testContainer.append($radiobutton);
+          done();
+      });
+  
+      testradiobuttonSizes($radiobutton, radiobuttonStyles, size);
+    }
+  
+    function testradiobuttonSizes($radiobutton, radiobuttonStyles, radiobuttonSize) {
+      let radiobuttonInputStyles = radiobuttonStyles['customRadiobutton'];
+
+      it(`${radiobuttonSize} radiobutton should have correct styles`, () => {
+        expect(window.getComputedStyle(document.querySelector(`.c-radio-${radiobuttonSize} input`)).getPropertyValue('width'), 'width').to.equal(radiobuttonStyles.width);
+        expect(window.getComputedStyle(document.querySelector(`.c-radio-${radiobuttonSize} input`)).getPropertyValue('height'), 'height').to.equal(radiobuttonStyles.height);
+        expect(window.getComputedStyle(document.querySelector(`.c-radio-${radiobuttonSize} i`)).getPropertyValue('margin'), 'margin').to.equal(radiobuttonStyles.margin);
+      });
+      
+      it(`${radiobuttonSize} radiobutton should have correct styles when checked`, () => {
+        $radiobutton.click();
+        for(let style in radiobuttonInputStyles) {
+          expect(window.getComputedStyle(document.querySelector(`.c-radio-${radiobuttonSize} i`), ':after').getPropertyValue(style), `check sign ${style}`).to.equal(radiobuttonInputStyles[style]);
+          }
+        });
+    }
+  });
+
+  describe('BD radiobutton types', () => {
+    let radiobuttonTypes = {
+      'primary': {
+        'bg': '#0079bd',
+      },
+      'success': {
+        'bg': '#37b24d'
+      }, 
+      'warning': {
+        'bg': '#f08c00',
+      },
+      'danger': {
+        'bg': '#f03e3e',
+      }
+    };
+
+    for (let type in radiobuttonTypes) {
+      let $radiobutton = $(`<label class="c-radio">
+                            <input type="radio" name="radio" checked="">
+                            <i class="c-bg-${type}"></i>
+                          </label>`),
+    
+          radiobuttonStyles = radiobuttonTypes[type];
+
+      before((done) => {
+          $testContainer.append($radiobutton);
+          done();
+      });
+
+      testradiobuttonBgColor($radiobutton, radiobuttonStyles, type);
+    }
+
+    function testradiobuttonBgColor($radiobutton, radiobuttonStyles, radiobuttonType) {
+      it(`${radiobuttonType} radiobutton should have correct styles`, () => {
+        expect($radiobutton.find(`.c-bg-${radiobuttonType}`).css('background-color'), 'background').to.equal(toRgb(radiobuttonStyles.bg));
+      });
+    }
+  });
+
+  describe('BD Disabled radiobutton', () => {
+    let $defaultRadiobutton = $(`<label class="c-radio">
+                                <input type="radio" name="radio" disabled>
+                                <i class="c-bg-danger"></i>
+                              </label>`);
 
     before((done) => {
-        $testContainer.append($defaultCheckbox);
-        done();
+      $testContainer.append($defaultRadiobutton);
+      done();
     });
 
-    it('sm RadioButton should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-sm c-radio c-radio-sm');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('12px');
-    });
-
-    it('lg RadioButton should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-lg c-radio c-radio-lg');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('14px');
-    });
-
-    it('xl RadioButton should have proper size', () => {
-      $defaultCheckbox.addClass('c-control-xl c-radio c-radio-xl');
-      expect($defaultCheckbox.find('input').css('height'), 'checkbox height').to.equal('26px');
+    it('should have correct styles', () => {
+      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#dee2e6'));
+      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('opacity'), 'opacity').to.equal('0.5'); 
+      expect(window.getComputedStyle(document.querySelector('.c-radio input[disabled]+i'), ':before').getPropertyValue('cursor'), 'cursor').to.equal('not-allowed'); 
     });
   });
 });
