@@ -23,7 +23,6 @@ describe('BD Tooltips and Popovers', () => {
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before', ':after').getPropertyValue('opacity'), 'opacity').to.equal('0');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before').getPropertyValue('position'), 'position').to.equal('absolute');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before').getPropertyValue('top'), 'top').to.equal('-2px');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before', ':after').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -4, -8)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before').getPropertyValue('z-index'), 'z-index').to.equal('110000');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before', ':after').getPropertyValue('backface-visibility'), 'backface-visibility').to.equal('hidden');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':before', ':after').getPropertyValue('transition'), 'transition').to.equal('opacity 0.1s cubic-bezier(0.73, 0.01, 0, 1) 0s, transform 0.6s cubic-bezier(0.73, 0.01, 0, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.73, 0.01, 0, 1) 0s');
@@ -41,7 +40,6 @@ describe('BD Tooltips and Popovers', () => {
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('overflow'), 'overflow').to.equal('hidden');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('pointer-events'), 'pointer-events').to.equal('none');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('text-align'), 'text-align').to.equal('center');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -45, 12)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('white-space'), 'white-space').to.equal('nowrap');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('z-index'), 'z-index').to.equal('100000');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip]'), ':after').getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#212529'));
@@ -49,7 +47,7 @@ describe('BD Tooltips and Popovers', () => {
     });
 
     
-    describe('BD Tooltip bottom', () => {
+    describe('BD Tooltip down', () => {
         let $tooltipDown = $(`<span data-tooltip="Tooltip Text" class="c-btn c-btn-secondary c-m-horizontal-md" data-tooltip-conf="bottom">
                                 <i class="fa fa-hand-o-up" aria-hidden="true"></i>
                                 Down
@@ -71,8 +69,6 @@ describe('BD Tooltips and Popovers', () => {
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="bottom"]'), ':before').getPropertyValue('border-right-color'), 'border-right-color').to.equal('rgba(0, 0, 0, 0)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="bottom"]'), ':before').getPropertyValue('border-bottom-color'), 'border-bottom-color').to.equal(toRgb('#212529'));
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="bottom"]'), ':before').getPropertyValue('border-left-color'), 'border-left-color').to.equal('rgba(0, 0, 0, 0)');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="bottom"]'), ':before').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -4, 4)');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="bottom"]'), ':after').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -45.5, -12)');
         });
     });
 
@@ -98,8 +94,6 @@ describe('BD Tooltips and Popovers', () => {
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="right"]'), ':before').getPropertyValue('border-right-color'), 'border-right-color').to.equal(toRgb('#212529'));
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="right"]'), ':before').getPropertyValue('border-bottom-color'), 'border-bottom-color').to.equal('rgba(0, 0, 0, 0)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="right"]'), ':before').getPropertyValue('border-left-color'), 'border-left-color').to.equal('rgba(0, 0, 0, 0)');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="right"]'), ':before').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, 5, -4)');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="right"]'), ':after').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -12, -13.5)');
         });
     });
 
@@ -125,8 +119,6 @@ describe('BD Tooltips and Popovers', () => {
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="left"]'), ':before').getPropertyValue('border-right-color'), 'border-right-color').to.equal('rgba(0, 0, 0, 0)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="left"]'), ':before').getPropertyValue('border-bottom-color'), 'border-bottom-color').to.equal('rgba(0, 0, 0, 0)');
             expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="left"]'), ':before').getPropertyValue('border-left-color'), 'border-left-color').to.equal(toRgb('#212529'));
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="left"]'), ':before').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, -10, -4)');
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="left"]'), ':after').getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, 12, -13.5)');
         });
     });
 
