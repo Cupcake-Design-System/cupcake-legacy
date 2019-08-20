@@ -1,71 +1,91 @@
 describe('BD Progress', () => {
-    describe('BD Progress Wrapper', () => {
-        let $progressWrapper = $(`<div class="c-progress"></div>`);
 
-        before((done) => {
-            $testContainer.append($progressWrapper);
-            done();
-        });
+    // c-progress-primary c-progress-meter, c-progress-success c-progress-meter
+    describe('BD Primary, Success meter', () => {
 
-        it('should have correct styles', () => {
-            expect($progressWrapper.css('background-color'), 'background-color').to.equal(toRgb('#f1f3f5'));
-            expect($progressWrapper.css('height'), 'height').to.equal('32px');
-            expect($progressWrapper.css('border-radius'), 'border-radius').to.equal('2px');
-            expect($progressWrapper.css('margin-bottom'), 'margin-bottom').to.equal('16px');
-        });
+        let $progressColors = {
+            'primary': { 
+                'backgroundColor': toRgb('#0079bd'),
+                'gradientStart': toRgb('#008ddc'),
+                'gradientCenter': toRgb('#0079bd'),
+                'gradientEnd': toRgb('#006ca9'),
+                'borderColor': toRgb('#0069a4')
+            },
+            'success': { 
+                'backgroundColor': toRgb('#37b24d'),
+                'gradientStart': toRgb('#43c55a'),
+                'gradientCenter': toRgb('#37b24d'),
+                'gradientEnd': toRgb('#32a246'),
+                'borderColor': toRgb('#319f45')
+            }
+        };
 
-        it('Small should have correct styles', () => {
-            $progressWrapper.addClass('c-progress-sm');
-            expect($progressWrapper.css('height'), 'height').to.equal('12px');
-        });
+        for (let $status in $progressColors) {
+            let $progress = $(`<div class="c-progress c-progress-${$status}"><div class="c-progress-meter" style="width: 30%"></div></div>`),
+                $progressColorValue = $progressColors[$status],
+                $progressStatus = $status,
+                testParameters = [$progress, $progressColorValue, $progressStatus];
 
-        it('Large should have correct styles', () => {
-            $progressWrapper.addClass('c-progress-lg');
-            expect($progressWrapper.css('height'), 'height').to.equal('48px');
-        });
+            before((done) => {
+                $testContainer.append($progress);
+                done();
+            });
+
+            testProgress(...testParameters);
+        }
+
+        function testProgress($progress, $progressColors, $progressStatus) {
+            it($progressStatus + ' progress should have correct styles', () => {
+                expect($progress.css('background-color'), 'background-color').to.equal(toRgb('#f1f3f5'));
+                expect($progress.css('height'), 'height').to.equal('32px');
+                expect($progress.css('border-radius'), 'border-radius').to.equal('2px');
+                expect($progress.css('margin-bottom'), 'margin-bottom').to.equal('16px');
+            
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('display'), 'display').to.equal('block');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('position'), 'position').to.equal('relative');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('border-radius'), 'border-radius').to.equal('2px');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('background-image'), 'background-image').to.equal(`linear-gradient(${$progressColors.gradientStart}, ${$progressColors.gradientCenter} 66%, ${$progressColors.gradientEnd})`);
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('background-color'), 'background-color').to.equal($progressColors.backgroundColor);
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter`)).getPropertyValue('border'), 'border').to.equal('1px solid ' + $progressColors.borderColor);
+            });
+        }
     });
-    
-    describe('BD Progress Meter', () => {
-        let $progressMeter = $(`<div class="c-progress"><div class="c-progress-meter"></div></div>`);
 
-        before((done) => {
-            $testContainer.append($progressMeter);
-            done();
-        });
+    // c-progress-sm c-progress-meter, c-progress-lg c-progress-meter
+    describe('BD Small, Large meter', () => {
 
-        it('Primary should have correct styles', () => {
-            $progressMeter.addClass('c-progress-primary');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('display'), 'display').to.equal('block');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('position'), 'position').to.equal('relative');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('border-radius'), 'border-radius').to.equal('2px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#0079bd'));
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('background-image'), 'background-image').to.equal('linear-gradient(' + toRgb('#008ddc') + ', ' + toRgb('#0079bd') + ' 66%, ' + toRgb('#006ca9') + ')');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#0069a4'));
-        });
+        let $progressSizes = {
+            'sm': '12px',
+            'lg': '48px'
+        };
 
-        it('Success should have correct styles', () => {
-            $progressMeter.addClass('c-progress-success');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('display'), 'display').to.equal('block');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('position'), 'position').to.equal('relative');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('border-radius'), 'border-radius').to.equal('2px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#37b24d'));
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('background-image'), 'background-image').to.equal('linear-gradient(' + toRgb('#43c55a') + ', ' + toRgb('#37b24d') + ' 66%, ' + toRgb('#32a246') + ')');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('border'), 'border').to.equal('1px solid ' + toRgb('#319f45'));
-        });
-
-        it('Small should have correct styles', () => {
-            $progressMeter.addClass('c-progress-sm');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('height'), 'height').to.equal('12px');
-        });
-
-        it('large should have correct styles', () => {
-            $progressMeter.addClass('c-progress-lg');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter')).getPropertyValue('height'), 'height').to.equal('48px');
-        });
+        for (let $size in $progressSizes) {
+            let $progress = $(`<div class="c-progress c-progress-primary c-progress-${$size}"><div class="c-progress-meter" style="width: 30%"></div></div>`),
+                $progressStyles = $progressSizes[$size],
+                $progressSize = $size,
+                testParameters = [$progress, $progressStyles, $progressSize];
+      
+            before((done) => {
+                $testContainer.append($progress);
+                done();
+            });
+      
+            testProgressSizes(...testParameters);
+        }
+      
+        function testProgressSizes($progress, $progressStyleValues, $progressSize) {
+            it($progressSize + ' progress should have correct styles', () => {
+                expect($progress.css('height'), 'height').to.equal($progressStyleValues);
+            });
+        }
     });
     
     describe('BD Progress Meter Text', () => {
-        let $progressMeterText = $(`<div class="c-progress"><span class="c-progress-meter"><p class="c-progress-meter-text"></p></span></div>`);
+        let $progressMeterText = $(`<div class="c-progress c-progress-primary">
+                                        <span class="c-progress-meter" style="width: 45%">
+                                            <p class="c-progress-meter-text">45%</p>
+                                        </span>
+                                    </div>`);
 
         before((done) => {
             $testContainer.append($progressMeterText);
@@ -73,26 +93,88 @@ describe('BD Progress', () => {
         });
 
         it('should have correct styles', () => {
-            $progressMeterText.addClass('c-progress-primary');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('position'), 'position').to.equal('absolute');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('transform'), 'transform').to.equal('matrix(1, 0, 0, 1, 0, 0)');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('margin'), 'margin').to.equal('0px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('font-size'), 'font-size').to.equal('12px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('white-space'), 'white-space').to.equal('nowrap');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('border-radius'), 'border-radius').to.equal('2px');
-        });
-
-        it('Small should have correct styles', () => {
-            $progressMeterText.addClass('c-progress-sm');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('font-size'), 'font-size').to.equal('8px');
-        });
-
-        it('Large should have correct styles', () => {
-            $progressMeterText.addClass('c-progress-lg');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-text')).getPropertyValue('font-size'), 'font-size').to.equal('16px');
+            expect($progressMeterText.find('p').css('position'), 'position').to.equal('absolute');
+            expect($progressMeterText.find('p').css('color'), 'color').to.equal(toRgb('#ffffff'));
+            expect($progressMeterText.find('p').css('margin'), 'margin').to.equal('0px');
+            expect($progressMeterText.find('p').css('font-size'), 'font-size').to.equal('12px');
+            expect($progressMeterText.find('p').css('white-space'), 'white-space').to.equal('nowrap');
+            expect($progressMeterText.find('p').css('border-radius'), 'border-radius').to.equal('2px');
         });
     });
     
+    // c-progress-sm c-progress-meter-text, c-progress-lg c-progress-meter-text
+    describe('BD Small, Large meter text', () => {
+
+        let $progressSizes = {
+            'sm': '8px',
+            'lg': '16px'
+        };
+
+        for (let $size in $progressSizes) {
+            let $progress = $(`<div class="c-progress c-progress-primary c-progress-${$size}">
+                                    <div class="c-progress-meter" style="width: 45%">
+                                        <p class="c-progress-meter-text">45%</p>
+                                    </div>
+                                </div>`),
+                $progressStyles = $progressSizes[$size],
+                $progressSize = $size,
+                testParameters = [$progress, $progressStyles, $progressSize];
+      
+            before((done) => {
+                $testContainer.append($progress);
+                done();
+            });
+      
+            testProgressSizes(...testParameters);
+        }
+      
+        function testProgressSizes($progress, $progressStyleValues, $progressSize) {
+            it($progressSize + ' progress should have correct styles', () => {
+                expect($progress.find('p').css('font-size'), 'font-size').to.equal($progressStyleValues);
+            });
+        }
+    });
+
+    // c-progress-primary c-progress-meter-animated, c-progress-success c-progress-meter-animated
+    describe('BD Primary, Success meter', () => {
+
+        let $progressColors = {
+            'primary': { 
+                'gradientFirstColor': toRgb('#0079bd'),
+                'gradientSecondColor': toRgb('#00588a')
+            },
+            'success': {
+                'gradientFirstColor': toRgb('#37b24d'),
+                'gradientSecondColor': toRgb('#2b8b3c')
+            }
+        };
+
+        for (let $status in $progressColors) {
+            let $progress = $(`<div class="c-progress c-progress-${$status}"><div class="c-progress-meter-animated" style="width: 65%"></div></div>`),
+                $progressColorValue = $progressColors[$status],
+                $progressStatus = $status,
+                testParameters = [$progress, $progressColorValue, $progressStatus];
+
+            before((done) => {
+                $testContainer.append($progress);
+                done();
+            });
+
+            testProgress(...testParameters);
+        }
+
+        function testProgress($progress, $progressColors, $progressStatus) {
+            it($progressStatus + ' progress should have correct styles', () => {
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('height'), 'height').to.equal('32px');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('background-size'), 'background-size').to.equal('48px 48px');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('background-image'), 'background-image').to.equal(`linear-gradient(135deg, ${$progressColors.gradientFirstColor} 25%, ${$progressColors.gradientSecondColor} 25%, ${$progressColors.gradientSecondColor} 50%, ${$progressColors.gradientFirstColor} 50%, ${$progressColors.gradientFirstColor} 75%, ${$progressColors.gradientSecondColor} 75%)`);
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('animation-name'), 'animation-name').to.equal('stripes');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('animation-duration'), 'animation-duration').to.equal('3s');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('animation-timing-function'), 'animation-timing-function').to.equal('linear');
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressStatus} .c-progress-meter-animated`)).getPropertyValue('animation-iteration-count'), 'animation-iteration-count').to.equal('infinite');
+            });
+        }
+    });
     describe('BD Progress Meter Animated', () => {
         let $progressMeterAnimated = $(`<div class="c-progress"><div class="c-progress-meter-animated"></div></div>`);
 
@@ -100,37 +182,43 @@ describe('BD Progress', () => {
             $testContainer.append($progressMeterAnimated);
             done();
         });
+    });
 
-        it('Primary should have correct styles', () => {
-            $progressMeterAnimated.addClass('c-progress-primary');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-size'), 'background-size').to.equal('48px 48px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-image'), 'background-image').to.equal('linear-gradient(135deg, ' + toRgb('#0079bd') + ' 25%, ' + toRgb('#00588a') + ' 25%, ' + toRgb('#00588a') + ' 50%, ' + toRgb('#0079bd') + ' 50%, ' + toRgb('#0079bd') + ' 75%, ' + toRgb('#00588a') + ' 75%)');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-name'), 'animation-name').to.equal('stripes');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-duration'), 'animation-duration').to.equal('3s');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-timing-function'), 'animation-timing-function').to.equal('linear');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-iteration-count'), 'animation-iteration-count').to.equal('infinite');
-        });
+    // c-progress-sm c-progress-meter-animated, c-progress-lg c-progress-meter-animated
+    describe('BD Small, Large meter animated', () => {
 
-        it('Success should have correct styles', () => {
-            $progressMeterAnimated.addClass('c-progress-success');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-size'), 'background-size').to.equal('48px 48px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-image'), 'background-image').to.equal('linear-gradient(135deg, ' + toRgb('#37b24d') + ' 25%, ' + toRgb('#2b8b3c') + ' 25%, ' + toRgb('#2b8b3c') + ' 50%, ' + toRgb('#37b24d') + ' 50%, ' + toRgb('#37b24d') + ' 75%, ' + toRgb('#2b8b3c') + ' 75%)');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-name'), 'animation-name').to.equal('stripes');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-duration'), 'animation-duration').to.equal('3s');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-timing-function'), 'animation-timing-function').to.equal('linear');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('animation-iteration-count'), 'animation-iteration-count').to.equal('infinite');
-        });
+        let $progressSizes = {
+            'sm': {
+                'height': '12px',
+                'backgroundSize': '12px 12px'
+            },
+            'lg': {
+                'height': '48px',
+                'backgroundSize': '48px 48px'
+            },
+        };
 
-        it('Small should have correct styles', () => {
-            $progressMeterAnimated.addClass('c-progress-sm');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('height'), 'height').to.equal('12px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-size'), 'background-size').to.equal('12px 12px');
-        });
-
-        it('Large should have correct styles', () => {
-            $progressMeterAnimated.addClass('c-progress-lg');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('height'), 'height').to.equal('48px');
-            expect(window.getComputedStyle(document.querySelector('.c-progress-meter-animated')).getPropertyValue('background-size'), 'background-size').to.equal('48px 48px');
-        });
+        for (let $size in $progressSizes) {
+            let $progress = $(`<div class="c-progress c-progress-primary c-progress-${$size}">
+                                    <div class="c-progress-meter-animated" style="width: 65%"></div>
+                                </div>`),
+                $progressStyles = $progressSizes[$size],
+                $progressSize = $size,
+                testParameters = [$progress, $progressStyles, $progressSize];
+      
+            before((done) => {
+                $testContainer.append($progress);
+                done();
+            });
+      
+            testProgressSizes(...testParameters);
+        }
+      
+        function testProgressSizes($progress, $progressStyles, $progressSize) {
+            it($progressSize + ' progress should have correct styles', () => {
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressSize} .c-progress-meter-animated`)).getPropertyValue('height'), 'height').to.equal($progressStyles.height);
+                expect(window.getComputedStyle(document.querySelector(`.c-progress-${$progressSize} .c-progress-meter-animated`)).getPropertyValue('background-size'), 'background-size').to.equal($progressStyles.backgroundSize);
+            });
+        }
     });
 })
