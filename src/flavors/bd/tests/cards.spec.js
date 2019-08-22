@@ -1,4 +1,4 @@
-describe.only('BD Card', () => {
+describe('BD Card', () => {
     describe('BD Base Card ', () => {
         let $card = $(`<div class="c-card">
                             <header class="c-card-header">
@@ -204,7 +204,7 @@ describe.only('BD Card', () => {
 
     });
 
-    describe.only('BD Card Types', () => {
+    describe('BD Card Types', () => {
         let $wrapper = $(`<div class="c-card-group-collapsed"></div>`),
             cardTypes = {
             'primary': {
