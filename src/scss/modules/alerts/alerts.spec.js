@@ -18,22 +18,15 @@ describe('Alerts', () => {
         it('should have correct styles', () => {
             expect($alertTopDefault.css('padding'), 'padding').to.equal('18px 18px 18px 42px');
             expect($alertTopDefault.css('font-size'), 'font-size').to.equal('12px');
-            expect($alertTopDefault.css('font-weight'), 'font-weight').to.equal('400');
             expect($alertTopDefault.css('line-height'), 'line-height').to.equal('14px');
             expect($alertTopDefault.css('border-radius'), 'border-radius').to.equal('0px');
             expect($alertTopDefault.css('border-width'), 'border-width').to.equal('0px 0px 1px');
             expect($alertTopDefault.css('color'), 'color').to.equal(toRgb('#495057'));
-            expect($alertTopDefault.css('background-color'), 'background-color').to.equal(toRgb('#f1f3f5'));
 
             //c-alert-close
             expect($alertTopDefault.find('.c-alert-close').css('color'), 'close icon color').to.equal(toRgb('#78838e'));
-            expect($alertTopDefault.find('.c-alert-close').css('font-size'), 'close icon font-size').to.equal('12px');
-            expect($alertTopDefault.find('.c-alert-close').css('float'), 'close icon float').to.equal('right');
-            expect($alertTopDefault.find('.c-alert-close').css('opacity'), 'close icon opacity').to.equal('0.6');
-            expect($alertTopDefault.find('.c-alert-close').css('cursor'), 'close icon cursor').to.equal('pointer');
 
             //c-alert-icon
-            expect($alertTopDefault.find('.c-alert-icon').css('position'), 'alert icon position').to.equal('absolute');
             expect($alertTopDefault.find('.c-alert-icon').css('font-size'), 'alert icon font-size').to.equal('12px');
             expect($alertTopDefault.find('.c-alert-icon').css('color'), 'alert icon color').to.equal(toRgb('#495057'));
             expect($alertTopDefault.find('.c-alert-icon').css('top'), 'alert icon top').to.equal('18px');
@@ -175,7 +168,6 @@ describe('Toast Alerts', () => {
         it('should have correct styles', () => {
             expect($toastAlertDefault.css('padding'), 'padding').to.equal('19px 27px 19px 40px');
             expect($toastAlertDefault.css('margin'), 'margin').to.equal('0px 0px 16px');
-            expect($toastAlertDefault.css('background-color'), 'background-color').to.equal(toRgb('#ffffff'));
             expect($toastAlertDefault.css('color'), 'color').to.equal(toRgb('#212529'));
             expect($toastAlertDefault.css('font-size'), 'font-size').to.equal('12px');
             expect($toastAlertDefault.css('font-weight'), 'font-weight').to.equal('700');
@@ -183,14 +175,8 @@ describe('Toast Alerts', () => {
             expect($toastAlertDefault.css('box-shadow'), 'box-shadow').to.equal('rgba(33, 37, 41, 0.15) 0px 8px 12px 0px, rgb(222, 226, 230) 0px 0px 0px 1px');
 
             //c-toast-alert-close
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('position'), 'close icon position').to.equal('absolute');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('width'), 'close icon width').to.equal('30px');
             expect($toastAlertDefault.find('.c-toast-alert-close').css('height'), 'close icon height').to.equal('30px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('top'), 'close icon top').to.equal('0px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('right'), 'close icon right').to.equal('0px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('color'), 'close icon color').to.equal(toRgb('#ced4da'));
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('font-size'), 'close icon font-size').to.equal('17px');
-            expect($toastAlertDefault.find('.c-toast-alert-close').css('cursor'), 'close icon cursor').to.equal('pointer');
 
             //c-toast-alert::before
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':before').getPropertyValue('background-color'), 'icon area background').to.equal(toRgb('#343a40'));
@@ -200,14 +186,6 @@ describe('Toast Alerts', () => {
             //c-toast-alert::after
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('color'), 'icon color').to.equal(toRgb('#ffffff'));
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('background-color'), 'icon background').to.equal(toRgb('#212529'));
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('content'), 'icon content').to.equal('"!"');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('font-family'), 'icon font-family').to.equal('Arial, Helvetica, sans-serif');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('font-size'), 'icon font-size').to.equal('9.6px');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('line-height'), 'icon line-height').to.equal('12px');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('width'), 'icon width').to.equal('12px');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('height'), 'icon height').to.equal('12px');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('border-radius'), 'icon border-radius').to.equal('50%');
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert'), ':after').getPropertyValue('text-align'), 'icon text-align').to.equal('center');
         });
     });
 
@@ -246,7 +224,6 @@ describe('Toast Alerts', () => {
         it('should have correct styles', () => {
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert-info'), ':before').getPropertyValue('background-color'), 'icon area background').to.equal(toRgb('#1b6ec2'));
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert-info'), ':after').getPropertyValue('background-color'), 'icon background').to.equal(toRgb('#1b6ec2'));
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert-info'), ':after').getPropertyValue('content'), 'icon content').to.equal('"i"');
         });
     });
 
@@ -266,7 +243,6 @@ describe('Toast Alerts', () => {
         it('should have correct styles', () => {
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert-success'), ':before').getPropertyValue('background-color'), 'icon area background').to.equal(toRgb('#2f9e44'));
             expect(window.getComputedStyle(document.querySelector('.c-toast-alert-success'), ':after').getPropertyValue('background-color'), 'icon background').to.equal(toRgb('#2f9e44'));
-            expect(window.getComputedStyle(document.querySelector('.c-toast-alert-success'), ':after').getPropertyValue('content'), 'icon content').to.equal('"L"');
         });
     });
 

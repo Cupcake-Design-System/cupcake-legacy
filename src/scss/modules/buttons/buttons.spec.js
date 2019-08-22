@@ -12,7 +12,6 @@ describe('Buttons', () => {
     it('should have correct styles', () => {
       expect($defaultBtn.css('padding'), 'padding').to.equal('8px 24px');
       expect($defaultBtn.css('line-height'), 'line-height').to.equal('12px');
-      expect($defaultBtn.css('border-radius'), 'border-radius').to.equal('2px');
       expect($defaultBtn.css('font-size'), 'font-size').to.equal('12px');
       expect($defaultBtn.css('font-weight'), 'font-weight').to.equal('700');
 
@@ -20,7 +19,6 @@ describe('Buttons', () => {
       expect($defaultBtn.css('height'), 'button height').to.equal('30px');
       expect($defaultBtn.css('color'), 'text color').to.equal(toRgb('#212529'));
       expect($defaultBtn.css('background-color'), 'background').to.equal(toRgb('#f1f3f5'));
-      expect($defaultBtn.css('border'), 'border').to.equal(`1px solid ${toRgb('#ced4da')}`);
     });
   });
 
@@ -34,10 +32,7 @@ describe('Buttons', () => {
     });
 
     it('should have correct styles', () => {
-      expect($secondaryBtn.css('height'), 'button height').to.equal('30px');
       expect($secondaryBtn.css('color'), 'text color').to.equal(toRgb('#212529'));
-      expect($secondaryBtn.css('background-color'), 'background').to.equal(toRgb('#f1f3f5'));
-      expect($secondaryBtn.css('border'), 'border').to.equal(`1px solid ${toRgb('#ced4da')}`);
     });
   });
 
@@ -72,8 +67,6 @@ describe('Buttons', () => {
       });
 
       it(`${type} btn should have correct styles`, () => {
-        expect($btn.css('height'), 'button height').to.equal('30px');
-        expect($btn.css('color'), 'text color').to.equal(toRgb('#ffffff'));
         expect($btn.css('background-color'), 'background').to.equal(styles.background);
         expect($btn.css('border'), 'border').to.equal(`1px solid ${styles.borderColor}`);
       });
@@ -91,13 +84,8 @@ describe('Buttons', () => {
     });
 
     it('should have correct styles', () => {
-      expect($defaultBtnDisabled.css('color'), 'text color').to.equal(toRgb('#868e96'));
       expect($defaultBtnDisabled.css('background-color'), 'background').to.equal(toRgb('#dee2e6'));
       expect($defaultBtnDisabled.css('border'), 'border').to.equal(`1px solid ${toRgb('#dee2e6')}`);
-      expect($defaultBtnDisabled.css('text-shadow'), 'text-shadow').to.equal('none');
-      expect($defaultBtnDisabled.css('cursor'), 'cursor').to.equal('not-allowed');
-      expect($defaultBtnDisabled.css('box-shadow'), 'box-shadow').to.equal('none');
-      expect($defaultBtnDisabled.css('opacity'), 'opacity').to.equal('1');
     });
   });
 
@@ -112,44 +100,12 @@ describe('Buttons', () => {
     });
 
     it('should have correct styles', () => {
-      expect($btnLink.css('position'), 'position').to.equal('relative');
-      expect($btnLink.css('display'), 'display').to.equal('inline-block');
-      expect($btnLink.css('vertical-align'), 'vertical-align').to.equal('baseline');
-      expect($btnLink.css('white-space'), 'white-space').to.equal('nowrap');
-      expect($btnLink.css('outline-width'), 'outline-width').to.equal('0px');
       expect($btnLink.css('line-height'), 'line-height').to.equal('12px');
       expect($btnLink.css('padding'), 'padding').to.equal('8px 24px');
       expect($btnLink.css('font-size'), 'font-size').to.equal('12px');
       expect($btnLink.css('font-family'), 'font-family').to.equal('Arial, Helvetica, sans-serif');
-      expect($btnLink.css('text-align'), 'text-align').to.equal('center');
-      expect($btnLink.css('text-decoration-line'), 'text-decoration-line').to.equal('none');
-      expect($btnLink.css('border'), 'border').to.equal('1px solid rgba(0, 0, 0, 0)');
-      expect($btnLink.css('border-radius'), 'border-radius').to.equal('2px');
-      expect($btnLink.css('cursor'), 'cursor').to.equal('pointer');
       expect($btnLink.css('color'), 'color').to.equal(toRgb('#1b6ec2'));
-      expect($btnLink.css('box-shadow'), 'box-shadow').to.equal('none');
       expect($btnLink.css('font-weight'), 'font-weight').to.equal('700');
-    });
-  });
-
-  // c-btn-link disabled
-  describe('Button Link disabled', () => {
-    let $btnLink = $('<button class="c-btn-link" disabled>Disabled Link</button>');
-
-    before((done) => {
-      $testContainer.append($btnLink);
-      $testContainer.append('<br>');
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($btnLink.css('background-position'), 'background-position').to.equal('0px 0px');
-      expect($btnLink.css('color'), 'color').to.equal(toRgb('#868e96'));
-      expect($btnLink.css('border-color'), 'border-color').to.equal('rgba(0, 0, 0, 0)');
-      expect($btnLink.css('cursor'), 'cursor').to.equal('not-allowed');
-      expect($btnLink.css('box-shadow'), 'box-shadow').to.equal('none');
-      expect($btnLink.css('appearance'), 'appearance').to.equal('none');
-      expect($btnLink.css('opacity'), 'opacity').to.equal('1');
     });
   });
 
@@ -212,29 +168,12 @@ describe('Buttons', () => {
       });
 
       it(`${type} outline should have correct styles`, () => {
-        expect($bntOutline.css('background-color'), 'background-color').to.equal('rgba(0, 0, 0, 0)');
         expect($bntOutline.css('color'), 'color').to.equal(styles.color);
         expect($bntOutline.css('border'), 'border').to.equal(`1px solid ${styles.borderColor}`);
-        expect($bntOutline.css('box-shadow'), 'box-shadow').to.equal('none');
       });
     }
   });
-
-  // c-btn c-btn-block
-  describe('Button Block', () => {
-    let $btnBlock = $('<button class="c-btn c-btn-block c-btn-primary">Button</button>');
-
-    before((done) => {
-      $testContainer.append($btnBlock);
-      done();
-    });
-
-    it('should have correct styles', () => {
-      expect($btnBlock.css('display'), 'display').to.equal('block');
-      expect($btnBlock.css('text-align'), 'text-align').to.equal('center');
-    });
-  });
-
+ 
   // c-btn c-btn-box
   describe('Button Box', () => {
     let $btnBox = $(`<button class="c-btn c-btn-box c-btn-primary"><i class="fa fa-exclamation-circle"></i></button>`);
@@ -246,9 +185,6 @@ describe('Buttons', () => {
 
     it('should have correct styles', () => {
       expect($btnBox.css('width'), 'width').to.equal('30px');
-      expect($btnBox.css('padding-left'), 'padding-left').to.equal('0px');
-      expect($btnBox.css('padding-right'), 'padding-right').to.equal('0px');
-      expect($btnBox.css('text-align'), 'text-align').to.equal('center');
     });
   });
 
@@ -263,11 +199,6 @@ describe('Buttons', () => {
 
     it('should have correct styles', () => {
       expect($btnCircle.css('width'), 'width').to.equal('30px');
-      expect($btnCircle.css('padding-left'), 'padding-left').to.equal('0px');
-      expect($btnCircle.css('padding-right'), 'padding-right').to.equal('0px');
-      expect($btnCircle.css('text-align'), 'text-align').to.equal('center');
-      expect($btnCircle.css('overflow'), 'overflow').to.equal('hidden');
-      expect($btnCircle.css('border-radius'), 'border-radius').to.equal('100%');
     });
   });
 
