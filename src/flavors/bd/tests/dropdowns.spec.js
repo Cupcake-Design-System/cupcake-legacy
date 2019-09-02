@@ -173,7 +173,7 @@ describe('BD Dropdowns', () => {
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('font-size'), 'font-size').to.equal('14px');
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('background-clip'), 'background-clip').to.equal('padding-box');
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('border'), 'border').to.equal('1px solid rgba(0, 0, 0, 0.18)');
-            expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 4px 9px 0px');
+            expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 4px 10px 0px');
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('width'), 'width').to.equal('300px');
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('z-index'), 'z-index').to.equal('1000');
             expect(window.getComputedStyle(document.querySelector('.c-dropdown-grid')).getPropertyValue('background-color'), 'background-color').to.equal(toRgb('#ffffff'));
