@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.20](https://code.ipreo.com/Ipreo/cupcake/compare/v1.4.19...v1.4.20) (2019-09-04)
+
+
+### Bug Fixes
+
+* make c-text-justify work properly ([34ddd0d](https://code.ipreo.com/Ipreo/cupcake/commit/34ddd0d))
+* make c-text-justify work properly ([6a2fe30](https://code.ipreo.com/Ipreo/cupcake/commit/6a2fe30))
+* remove blur effect on popover in default flavor, IE ([db79c1b](https://code.ipreo.com/Ipreo/cupcake/commit/db79c1b))
+* remove blur effect on suggester popup in bd flavor, IE ([0834791](https://code.ipreo.com/Ipreo/cupcake/commit/0834791))
+
+
+### Features
+
+* add missing examples of typography classes to the Cupcake demo ([f7f7dab](https://code.ipreo.com/Ipreo/cupcake/commit/f7f7dab))
+
+
+
 ### [1.4.19](https://code.ipreo.com/Ipreo/cupcake/compare/v1.4.18...v1.4.19) (2019-07-18)
 
 
