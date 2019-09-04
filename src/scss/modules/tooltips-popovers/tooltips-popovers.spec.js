@@ -27,7 +27,7 @@ describe('Tooltips and Popovers', () => {
         });
 
         it('should have correct styles', () => {
-            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="shadow"]'), ':after').getPropertyValue('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 0px 9px 0px');
+            expect(window.getComputedStyle(document.querySelector('[data-tooltip][data-tooltip-conf*="shadow"]'), ':after').getPropertyValue('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 0px 10px 0px');
         });
     });
 
@@ -93,7 +93,7 @@ describe('Tooltips and Popovers', () => {
             expect($popover.css('color'), 'color').to.equal(toRgb('#495057'));
             expect($popover.css('border'), 'border').to.equal(`1px solid ${toRgb('#ced4da')}`);
             expect($popover.css('border-radius'), 'border-radius').to.equal('3px');
-            expect($popover.css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 0px 9px 0px');
+            expect($popover.css('box-shadow'), 'box-shadow').to.equal('rgba(0, 0, 0, 0.2) 0px 0px 10px 0px');
         });
     });
 
