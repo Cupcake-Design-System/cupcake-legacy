@@ -15,7 +15,9 @@ describe('BD Breadcrumb', () => {
         expect($breadcrumb.css('flex-wrap'), 'flex-wrap').to.equal('wrap');
         expect($breadcrumb.css('padding'), 'padding').to.equal('0px');
         expect($breadcrumb.css('margin'), 'margin').to.equal('0px');
-        expect($breadcrumb.css('list-style'), 'list-style').to.equal('none outside none');
+        expect($breadcrumb.css('list-style-position'), 'list-style-position').to.equal('outside');
+        expect($breadcrumb.css('list-style-image'), 'list-style-image').to.equal('none');
+        expect($breadcrumb.css('list-style-type'), 'list-style-type').to.equal('none');
         expect($breadcrumb.css('background-color'), 'background-color').to.equal('rgba(0, 0, 0, 0)');
         expect($breadcrumb.css('font-size'), 'font-size').to.equal('12px');
         expect($breadcrumb.css('color'), 'color').to.equal(toRgb('#212529'));
