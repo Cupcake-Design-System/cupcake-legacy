@@ -175,15 +175,7 @@ describe('BD Progress', () => {
             });
         }
     });
-    describe('BD Progress Meter Animated', () => {
-        let $progressMeterAnimated = $(`<div class="c-progress"><div class="c-progress-meter-animated"></div></div>`);
-
-        before((done) => {
-            $testContainer.append($progressMeterAnimated);
-            done();
-        });
-    });
-
+    
     // c-progress-sm c-progress-meter-animated, c-progress-lg c-progress-meter-animated
     describe('BD Small, Large meter animated', () => {
 
