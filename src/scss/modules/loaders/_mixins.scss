@@ -261,6 +261,7 @@ $c-full-loader-indicator-logo-sizes: 100px 100px !default;
     right: 0;
     bottom: 0;
     content: '';
+    z-index: 10;
   }
 
   &::after {
@@ -273,6 +274,7 @@ $c-full-loader-indicator-logo-sizes: 100px 100px !default;
     margin-left: -($c-full-page-loader-size / 2);
     margin-top: -($c-full-page-loader-size / 2);
     background: $c-full-page-loader-indicator no-repeat center center;
+    z-index: 10;
 
     @if $c-full-page-loader-animation {
       animation: $c-full-page-loader-animation;
