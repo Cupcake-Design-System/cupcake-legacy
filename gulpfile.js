@@ -154,7 +154,6 @@ gulp.task('styles', function() {
 gulp.task('flavors', function() {
   return gulp.src(bases.flavors + '**/*.scss')
     .pipe(plumber({errorHandler: onError}))
-    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
     .pipe(cleanCSS({format: 'beautify', rebase: false}))
@@ -163,7 +162,6 @@ gulp.task('flavors', function() {
     }))
     .pipe(addHeader(metaHeader + '/* flavor: <%= filename %> */\n\n'))
     .pipe(addFooter(metaFooter))
-    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}))
 });

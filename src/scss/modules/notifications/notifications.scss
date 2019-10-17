@@ -2,6 +2,8 @@
 /// @group notifications
 ////
 
+/* stylelint-disable */
+
 /// $notify-z-index       
 $notify-z-index       : 99999 !default;
 
@@ -84,3 +86,5 @@ $notify-transition    : all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !default;
 .c-notify-logs {
   @include ipreo-notify-logs-base;
 }
+
+/* stylelint-enable */
